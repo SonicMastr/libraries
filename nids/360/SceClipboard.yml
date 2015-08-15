@@ -1,0 +1,9 @@
+modules:
+  SceClipboard:
+    nid: 0x00000000
+    libraries:
+      SceClipboard:
+        nid: 0x00000000
+        functions:
+          sceClipboardGetText: 0x5BB10CC2
+          sceClipboardSetText: 0x43A94D3E

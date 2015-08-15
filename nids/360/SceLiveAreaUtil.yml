@@ -1,0 +1,15 @@
+modules:
+  SceLiveAreaUtil:
+    nid: 0x00000000
+    libraries:
+      SceLiveAreaUtil:
+        nid: 0x00000000
+        functions:
+          sceLiveAreaGetFrameRevision: 0xD6EE2214
+          sceLiveAreaGetFrameUserData: 0xD6FD367F
+          sceLiveAreaGetRevision: 0x833F5D0A
+          sceLiveAreaGetStatus: 0x7FE5B83F
+          sceLiveAreaReplaceAllAsync: 0x18066BA9
+          sceLiveAreaReplaceAllSync: 0x29C65C0B
+          sceLiveAreaUpdateFrameAsync: 0xD330285D
+          sceLiveAreaUpdateFrameSync: 0xCFCEDE95

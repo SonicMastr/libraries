@@ -1,0 +1,19 @@
+modules:
+  SceIofilemgr:
+    nid: 0x00000000
+    libraries:
+      SceIofilemgr:
+        nid: 0x00000000
+        functions:
+          sceIoClose: 0xC70B8886
+          sceIoDclose: 0x422A221A
+          sceIoGetPriority: 0xF2A472A1
+          sceIoGetProcessDefaultPriority: 0x0DC4F1BB
+          sceIoGetThreadDefaultPriority: 0xA176CD03
+          sceIoLseek32: 0x49252B9B
+          sceIoRead: 0xFDB32293
+          sceIoSetPriority: 0x14B2D56C
+          sceIoSetProcessDefaultPriority: 0x7F2ABBAF
+          sceIoSetThreadDefaultPriority: 0x49312108
+          sceIoSyncByFd: 0x16512F59
+          sceIoWrite: 0x34EFD876

@@ -1,0 +1,9 @@
+modules:
+  SceCoredump:
+    nid: 0x00000000
+    libraries:
+      SceCoredump:
+        nid: 0x00000000
+        functions:
+          sceCoredumpRegisterCoredumpHandler: 0x031DC61E
+          sceCoredumpUnregisterCoredumpHandler: 0x6037A2C3

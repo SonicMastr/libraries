@@ -1,0 +1,16 @@
+modules:
+  SceAudio:
+    nid: 0x00000000
+    libraries:
+      SceAudio:
+        nid: 0x00000000
+        functions:
+          sceAudioOutGetAdopt: 0x12FB1767
+          sceAudioOutGetConfig: 0x9C8EDAEA
+          sceAudioOutGetRestSample: 0x9A5370C4
+          sceAudioOutOpenPort: 0x5BC341E4
+          sceAudioOutOutput: 0x02DB3F5F
+          sceAudioOutReleasePort: 0x69E2E6B5
+          sceAudioOutSetAlcMode: 0x940CE469
+          sceAudioOutSetConfig: 0xB8BA0D07
+          sceAudioOutSetVolume: 0x64167F11

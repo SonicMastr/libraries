@@ -1,0 +1,17 @@
+modules:
+  SceProcessmgr:
+    nid: 0x00000000
+    libraries:
+      SceProcessmgr:
+        nid: 0x00000000
+        functions:
+          sceKernelGetStderr: 0xFA5E3ADA
+          sceKernelGetStdin: 0xC1727F59
+          sceKernelGetStdout: 0xE5AA625C
+          sceKernelLibcClock: 0x9E45DA09
+          sceKernelLibcGettimeofday: 0x4B879059
+          sceKernelLibcGmtime_r: 0xBCA437CD
+          sceKernelLibcLocaltime_r: 0x94F041ED
+          sceKernelLibcMktime: 0x890BDC39
+          sceKernelLibcTime: 0x0039BE45
+          sceKernelPowerTick: 0x2252890C

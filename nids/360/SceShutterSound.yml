@@ -1,0 +1,8 @@
+modules:
+  SceShutterSound:
+    nid: 0x00000000
+    libraries:
+      SceShutterSound:
+        nid: 0x00000000
+        functions:
+          sceShutterSoundPlay: 0x7FFB6D79

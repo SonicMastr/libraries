@@ -1,0 +1,13 @@
+modules:
+  SceIme:
+    nid: 0x00000000
+    libraries:
+      SceIme:
+        nid: 0x00000000
+        functions:
+          sceImeClose: 0x889A8421
+          sceImeOpen: 0x0E050613
+          sceImeSetCaret: 0xD8342D2A
+          sceImeSetPreeditGeometry: 0x7B1EFAA5
+          sceImeSetText: 0xF3BD9A76
+          sceImeUpdate: 0x71D6898A

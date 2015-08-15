@@ -1,0 +1,14 @@
+modules:
+  SceTouch:
+    nid: 0x00000000
+    libraries:
+      SceTouch:
+        nid: 0x00000000
+        functions:
+          sceTouchDisableTouchForce: 0x41194411
+          sceTouchEnableTouchForce: 0xB18370C2
+          sceTouchGetPanelInfo: 0x10A2CA25
+          sceTouchGetSamplingState: 0x26531526
+          sceTouchPeek: 0xFF082DF0
+          sceTouchRead: 0x169A1D58
+          sceTouchSetSamplingState: 0x1B9C5D14

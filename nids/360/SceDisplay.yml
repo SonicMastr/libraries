@@ -1,0 +1,19 @@
+modules:
+  SceDisplay:
+    nid: 0x00000000
+    libraries:
+      SceDisplay:
+        nid: 0x00000000
+        functions:
+          sceDisplayGetRefreshRate: 0xA08CA60D
+          sceDisplayGetVcount: 0xB6FDE0BA
+          sceDisplayRegisterVblankStartCallback: 0x6BDF4C4D
+          sceDisplayUnregisterVblankStartCallback: 0x98436A80
+          sceDisplayWaitSetFrameBuf: 0x9423560C
+          sceDisplayWaitSetFrameBufCB: 0x814C90AF
+          sceDisplayWaitSetFrameBufMulti: 0x7D9864A8
+          sceDisplayWaitSetFrameBufMultiCB: 0x3E796EF5
+          sceDisplayWaitVblankStart: 0x5795E898
+          sceDisplayWaitVblankStartCB: 0x78B41B92
+          sceDisplayWaitVblankStartMulti: 0xDD0A13B8
+          sceDisplayWaitVblankStartMultiCB: 0x05F27764

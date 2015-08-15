@@ -1,0 +1,10 @@
+modules:
+  SceModulemgr:
+    nid: 0x00000000
+    libraries:
+      SceModulemgr:
+        nid: 0x00000000
+        functions:
+          sceKernelGetModuleIdByAddr: 0xF5798C7C
+          sceKernelGetModuleInfo: 0x36585DAF
+          sceKernelGetModuleList: 0x2EF2581F

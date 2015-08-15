@@ -1,0 +1,28 @@
+modules:
+  SceVideodecUser:
+    nid: 0x00000000
+    libraries:
+      SceVideodecUser:
+        nid: 0x00000000
+        functions:
+          sceAvcdecCreateDecoder: 0xE82BB69B
+          sceAvcdecCsc: 0xB2A428DB
+          sceAvcdecCscInternal: 0xC300BF46
+          sceAvcdecDecode: 0xD6190A06
+          sceAvcdecDecodeAvailableSize: 0x441673E3
+          sceAvcdecDecodeFlush: 0x25F31020
+          sceAvcdecDecodeStop: 0x9648D853
+          sceAvcdecDeleteDecoder: 0x8A0E359E
+          sceAvcdecQueryDecoderMemSize: 0x97E95EDB
+          sceM4vdecCreateDecoder: 0x17C6AC9E
+          sceM4vdecCsc: 0xB4BC325B
+          sceM4vdecDecode: 0x624664DB
+          sceM4vdecDecodeAvailableSize: 0xA8CF1942
+          sceM4vdecDecodeFlush: 0x7C460D75
+          sceM4vdecDecodeStop: 0x87CFD23B
+          sceM4vdecDeleteDecoder: 0x0EB2E4E7
+          sceM4vdecQueryDecoderMemSize: 0xC67C1A80
+          sceVideodecInitLibrary: 0xF1AF65A3
+          sceVideodecInitLibraryWithUnmapMem: 0x230A78FF
+          sceVideodecQueryMemSize: 0x6731BB2D
+          sceVideodecTermLibrary: 0x3A5F4924

@@ -1,0 +1,11 @@
+modules:
+  SceGameUpdate:
+    nid: 0x00000000
+    libraries:
+      SceGameUpdate:
+        nid: 0x00000000
+        functions:
+          sceGameUpdateAbort: 0x14116007
+          sceGameUpdateInit: 0x2F401247
+          sceGameUpdateRun: 0x3C616238
+          sceGameUpdateTerm: 0x48D879BA

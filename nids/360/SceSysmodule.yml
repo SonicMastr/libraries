@@ -1,0 +1,10 @@
+modules:
+  SceSysmodule:
+    nid: 0x00000000
+    libraries:
+      SceSysmodule:
+        nid: 0x00000000
+        functions:
+          sceSysmoduleIsLoaded: 0x53099B7A
+          sceSysmoduleLoadModule: 0x79A0160A
+          sceSysmoduleUnloadModule: 0x31D87805
