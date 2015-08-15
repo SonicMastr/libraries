@@ -1,9 +1,9 @@
 modules:
   SceLibKernel:
-    nid: 0x00000000
+    nid: 0x00000051
     libraries:
       SceLibKernel:
-        nid: 0x00000000
+        nid: 0x00000052
         functions:
           SceKernelStackChkGuard: 0x4458BCF3
           __sce_aeabi_idiv0: 0x4373B548

@@ -1,9 +1,9 @@
 modules:
   SceIme:
-    nid: 0x00000000
+    nid: 0x00000049
     libraries:
       SceIme:
-        nid: 0x00000000
+        nid: 0x0000004A
         functions:
           sceImeClose: 0x889A8421
           sceImeOpen: 0x0E050613

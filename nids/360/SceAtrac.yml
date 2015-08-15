@@ -1,9 +1,9 @@
 modules:
   SceAtrac:
-    nid: 0x00000000
+    nid: 0x00000007
     libraries:
       SceAtrac:
-        nid: 0x00000000
+        nid: 0x00000008
         functions:
           sceAtracAddStreamData: 0x53656F1C
           sceAtracCreateDecoderGroup: 0x01BFB98C

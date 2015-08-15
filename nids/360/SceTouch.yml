@@ -1,9 +1,9 @@
 modules:
   SceTouch:
-    nid: 0x00000000
+    nid: 0x000000E5
     libraries:
       SceTouch:
-        nid: 0x00000000
+        nid: 0x000000E6
         functions:
           sceTouchDisableTouchForce: 0x41194411
           sceTouchEnableTouchForce: 0xB18370C2

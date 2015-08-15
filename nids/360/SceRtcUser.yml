@@ -1,9 +1,9 @@
 modules:
   SceRtcUser:
-    nid: 0x00000000
+    nid: 0x000000A9
     libraries:
       SceRtcUser:
-        nid: 0x00000000
+        nid: 0x000000AA
         functions:
           sceRtcCheckValid: 0xD7622935
           sceRtcCompareTick: 0xC7385158

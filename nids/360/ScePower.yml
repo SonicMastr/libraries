@@ -1,9 +1,9 @@
 modules:
   ScePower:
-    nid: 0x00000000
+    nid: 0x0000009B
     libraries:
       ScePower:
-        nid: 0x00000000
+        nid: 0x0000009C
         functions:
           scePowerGetArmClockFrequency: 0xABC6F88F
           scePowerGetBatteryFullCapacity: 0xFD18A0FF

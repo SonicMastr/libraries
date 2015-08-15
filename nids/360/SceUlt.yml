@@ -1,9 +1,9 @@
 modules:
   SceUlt:
-    nid: 0x00000000
+    nid: 0x000000E7
     libraries:
       SceUlt:
-        nid: 0x00000000
+        nid: 0x000000E8
         functions:
           _sceUltConditionVariableCreate: 0xD76A156C
           _sceUltConditionVariableOptParamInitialize: 0x0603FCC1

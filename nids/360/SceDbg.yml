@@ -1,9 +1,9 @@
 modules:
   SceDbg:
-    nid: 0x00000000
+    nid: 0x00000027
     libraries:
       SceDbg:
-        nid: 0x00000000
+        nid: 0x00000028
         functions:
           sceDbgAssertionHandler: 0x1AF3678B
           sceDbgLoggingHandler: 0x6605AB19

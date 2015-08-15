@@ -1,9 +1,9 @@
 modules:
   SceIofilemgr:
-    nid: 0x00000000
+    nid: 0x0000004B
     libraries:
       SceIofilemgr:
-        nid: 0x00000000
+        nid: 0x0000004C
         functions:
           sceIoClose: 0xC70B8886
           sceIoDclose: 0x422A221A

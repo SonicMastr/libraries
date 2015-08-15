@@ -1,9 +1,9 @@
 modules:
   SceDisplayUser:
-    nid: 0x00000000
+    nid: 0x00000033
     libraries:
       SceDisplayUser:
-        nid: 0x00000000
+        nid: 0x00000034
         functions:
           sceDisplayGetFrameBuf: 0x42AE6BBC
           sceDisplaySetFrameBuf: 0x7A410B64

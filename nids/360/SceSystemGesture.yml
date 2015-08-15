@@ -1,9 +1,9 @@
 modules:
   SceSystemGesture:
-    nid: 0x00000000
+    nid: 0x000000DF
     libraries:
       SceSystemGesture:
-        nid: 0x00000000
+        nid: 0x000000E0
         functions:
           sceSystemGestureCreateTouchRecognizer: 0xC3367370
           sceSystemGestureFinalizePrimitiveTouchRecognizer: 0xB3875104

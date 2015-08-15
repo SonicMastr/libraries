@@ -1,9 +1,9 @@
 modules:
   SceThreadmgr:
-    nid: 0x00000000
+    nid: 0x000000E1
     libraries:
       SceThreadmgr:
-        nid: 0x00000000
+        nid: 0x000000E2
         functions:
           sceKernelCancelCallback: 0x30741EF2
           sceKernelChangeActiveCpuMask: 0x001173F8

@@ -1,9 +1,9 @@
 modules:
   SceLiveAreaUtil:
-    nid: 0x00000000
+    nid: 0x00000061
     libraries:
       SceLiveAreaUtil:
-        nid: 0x00000000
+        nid: 0x00000062
         functions:
           sceLiveAreaGetFrameRevision: 0xD6EE2214
           sceLiveAreaGetFrameUserData: 0xD6FD367F

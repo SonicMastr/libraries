@@ -1,9 +1,9 @@
 modules:
   SceNetCtl:
-    nid: 0x00000000
+    nid: 0x00000075
     libraries:
       SceNetCtl:
-        nid: 0x00000000
+        nid: 0x00000076
         functions:
           sceNetCtlAdhocDisconnect: 0xED43B79A
           sceNetCtlAdhocGetInAddr: 0x7118C99D

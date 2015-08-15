@@ -1,9 +1,9 @@
 modules:
   SceFiber:
-    nid: 0x00000000
+    nid: 0x00000037
     libraries:
       SceFiber:
-        nid: 0x00000000
+        nid: 0x00000038
         functions:
           _sceFiberAttachContextAndRun: 0x7D0C7DDB
           _sceFiberAttachContextAndSwitch: 0xE00B9AFE

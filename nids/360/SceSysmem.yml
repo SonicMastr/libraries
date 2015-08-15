@@ -1,9 +1,9 @@
 modules:
   SceSysmem:
-    nid: 0x00000000
+    nid: 0x000000DB
     libraries:
       SceSysmem:
-        nid: 0x00000000
+        nid: 0x000000DC
         functions:
           sceKernelAllocMemBlock: 0xB9D5EBDE
           sceKernelFindMemBlockByAddr: 0xA33B99D1

@@ -1,8 +1,8 @@
 modules:
   SceRtc:
-    nid: 0x00000000
+    nid: 0x000000A7
     libraries:
       SceRtc:
-        nid: 0x00000000
+        nid: 0x000000A8
         functions:
           sceRtcGetAccumulativeTime: 0x258BE8EC

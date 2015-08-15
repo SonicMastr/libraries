@@ -1,9 +1,9 @@
 modules:
   SceSas:
-    nid: 0x00000000
+    nid: 0x000000AB
     libraries:
       SceSas:
-        nid: 0x00000000
+        nid: 0x000000AC
         functions:
           sceSasCore: 0x7A4672B2
           sceSasCoreWithMix: 0xBD496983

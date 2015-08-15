@@ -1,9 +1,9 @@
 modules:
   SceNet:
-    nid: 0x00000000
+    nid: 0x00000071
     libraries:
       SceNet:
-        nid: 0x00000000
+        nid: 0x00000072
         functions:
           sceNetAccept: 0x1ADF9BB1
           sceNetBind: 0x1296A94B

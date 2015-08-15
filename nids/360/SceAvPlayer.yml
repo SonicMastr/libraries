@@ -1,9 +1,9 @@
 modules:
   SceAvPlayer:
-    nid: 0x00000000
+    nid: 0x00000011
     libraries:
       SceAvPlayer:
-        nid: 0x00000000
+        nid: 0x00000012
         functions:
           sceAvPlayerAddSource: 0xBC83C8FD
           sceAvPlayerClose: 0x7AA29B2D

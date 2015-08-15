@@ -1,9 +1,9 @@
 modules:
   SceSsl:
-    nid: 0x00000000
+    nid: 0x000000D7
     libraries:
       SceSsl:
-        nid: 0x00000000
+        nid: 0x000000D8
         functions:
           sceSslFreeSslCertName: 0xC73687E4
           sceSslGetIssuerName: 0x412711E5

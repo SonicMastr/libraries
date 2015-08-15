@@ -1,9 +1,9 @@
 modules:
   SceAppMgr:
-    nid: 0x00000000
+    nid: 0x00000001
     libraries:
       SceAppMgr:
-        nid: 0x00000000
+        nid: 0x00000002
         functions:
           sceAppMgrAcquireBgmPort: 0xAFCEAB96
           sceAppMgrReleaseBgmPort: 0xF3717E37

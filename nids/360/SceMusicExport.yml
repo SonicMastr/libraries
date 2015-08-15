@@ -1,8 +1,8 @@
 modules:
   SceMusicExport:
-    nid: 0x00000000
+    nid: 0x0000006B
     libraries:
       SceMusicExport:
-        nid: 0x00000000
+        nid: 0x0000006C
         functions:
           sceMusicExportFromFile: 0x08000579

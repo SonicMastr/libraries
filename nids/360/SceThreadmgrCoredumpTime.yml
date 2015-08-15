@@ -1,8 +1,8 @@
 modules:
   SceThreadmgrCoredumpTime:
-    nid: 0x00000000
+    nid: 0x000000E3
     libraries:
       SceThreadmgrCoredumpTime:
-        nid: 0x00000000
+        nid: 0x000000E4
         functions:
           sceKernelExitThread: 0x0C8A38E1

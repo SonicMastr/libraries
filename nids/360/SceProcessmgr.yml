@@ -1,9 +1,9 @@
 modules:
   SceProcessmgr:
-    nid: 0x00000000
+    nid: 0x0000009D
     libraries:
       SceProcessmgr:
-        nid: 0x00000000
+        nid: 0x0000009E
         functions:
           sceKernelGetStderr: 0xFA5E3ADA
           sceKernelGetStdin: 0xC1727F59

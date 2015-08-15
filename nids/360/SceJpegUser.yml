@@ -1,9 +1,9 @@
 modules:
   SceJpegUser:
-    nid: 0x00000000
+    nid: 0x0000004F
     libraries:
       SceJpegUser:
-        nid: 0x00000000
+        nid: 0x00000050
         functions:
           sceJpegCreateSplitDecoder: 0x123B4734
           sceJpegCsc: 0x6263AEC2

@@ -1,9 +1,9 @@
 modules:
   SceScreenShot:
-    nid: 0x00000000
+    nid: 0x000000AD
     libraries:
       SceScreenShot:
-        nid: 0x00000000
+        nid: 0x000000AE
         functions:
           sceScreenShotCapture: 0xD509FB08
           sceScreenShotDisable: 0x50AE9FF9

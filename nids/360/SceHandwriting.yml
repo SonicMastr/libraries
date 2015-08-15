@@ -1,9 +1,9 @@
 modules:
   SceHandwriting:
-    nid: 0x00000000
+    nid: 0x00000041
     libraries:
       SceHandwriting:
-        nid: 0x00000000
+        nid: 0x00000042
         functions:
           sceHandwritingGetBufferSize: 0x4C3A8D49
           sceHandwritingInit: 0x446F171E

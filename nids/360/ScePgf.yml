@@ -1,9 +1,9 @@
 modules:
   ScePgf:
-    nid: 0x00000000
+    nid: 0x00000097
     libraries:
       ScePgf:
-        nid: 0x00000000
+        nid: 0x00000098
         functions:
           sceFontClose: 0x4A7293E9
           sceFontDoneLib: 0x07EE1733
