@@ -1,5 +1,5 @@
 modules:
-  SceLibLocation:
+  SceLocation:
     nid: 0x00000053
     libraries:
       SceLibLocation:

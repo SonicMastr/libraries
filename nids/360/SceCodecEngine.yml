@@ -1,0 +1,11 @@
+modules:
+  SceCodecEngine:
+    nid: 0x00000019
+    libraries:
+      SceCodecEngineUser:
+        nid: 0x0000001A
+        functions:
+          sceCodecEngineAllocMemoryFromUnmapMemBlock: 0x1A3A53E5
+          sceCodecEngineCloseUnmapMemBlock: 0x95EA3B3E
+          sceCodecEngineFreeMemoryFromUnmapMemBlock: 0x6A31831D
+          sceCodecEngineOpenUnmapMemBlock: 0xF0B4C892

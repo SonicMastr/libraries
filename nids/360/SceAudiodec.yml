@@ -1,5 +1,5 @@
 modules:
-  SceAudiodecUser:
+  SceAudiodec:
     nid: 0x0000000D
     libraries:
       SceAudiodecUser:

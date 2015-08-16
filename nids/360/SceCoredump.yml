@@ -7,3 +7,7 @@ modules:
         functions:
           sceCoredumpRegisterCoredumpHandler: 0x031DC61E
           sceCoredumpUnregisterCoredumpHandler: 0x6037A2C3
+      SceCoredumpNounlink:
+        nid: 0x00000020
+        functions:
+          sceCoredumpWriteUserData: 0xDF335DCF

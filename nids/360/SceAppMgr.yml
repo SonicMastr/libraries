@@ -8,3 +8,10 @@ modules:
           sceAppMgrAcquireBgmPort: 0xAFCEAB96
           sceAppMgrReleaseBgmPort: 0xF3717E37
           sceAppMgrSetInfobarState: 0xAD9022A1
+      SceAppMgrUser:
+        nid: 0x00000004
+        functions:
+          _sceAppMgrGetAppState: 0x5E86319A
+          sceAppMgrLoadExec: 0xE6774ABC
+          sceAppMgrReceiveSystemEvent: 0x10B5765F
+          sceAppMgrSetNetworkDisconnectionWarningDialogState: 0xE352B29C

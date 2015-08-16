@@ -1,5 +1,5 @@
 modules:
-  SceVideodecUser:
+  SceVideodec:
     nid: 0x000000E9
     libraries:
       SceVideodecUser:

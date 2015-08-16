@@ -1,5 +1,5 @@
 modules:
-  SceLibLocationExtension:
+  SceLocationExtension:
     nid: 0x00000055
     libraries:
       SceLibLocationExtension:
