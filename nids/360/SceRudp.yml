@@ -1,5 +1,5 @@
 modules:
-  SceLibRudp:
+  SceRudp:
     nid: 0x00000057
     libraries:
       SceLibRudp:
