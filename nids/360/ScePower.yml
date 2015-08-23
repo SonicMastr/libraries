@@ -10,11 +10,15 @@ modules:
           scePowerGetBatteryLifePercent: 0x2085D15D
           scePowerGetBatteryLifeTime: 0x8EFB3FA2
           scePowerGetBatteryRemainCapacity: 0x94F5A53F
+          scePowerGetBusClockFrequency: 0x478FE6F5
+          scePowerGetGpuClockFrequency: 0x1B04A1D6
           scePowerIsBatteryCharging: 0x1E490401
           scePowerIsLowBattery: 0xD3075926
           scePowerIsPowerOnline: 0x87440F5E
           scePowerIsSuspendRequired: 0x78A1A796
           scePowerRegisterCallback: 0x04B7766E
           scePowerSetArmClockFrequency: 0x74DB5AE5
+          scePowerSetBusClockFrequency: 0xB8D7B3FB
           scePowerSetConfigurationMode: 0x3CE187B6
+          scePowerSetGpuClockFrequency: 0x717DB06C
           scePowerUnregisterCallback: 0xDFA8BAF8
