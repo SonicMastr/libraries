@@ -1,9 +1,9 @@
 modules:
   SceSulpha:
-    nid: 0x000000D9
+    nid: 0x000000D4
     libraries:
       SceSulpha:
-        nid: 0x000000DA
+        nid: 0x000000D5
         functions:
           sceSulphaAgentsGetNeededMemory: 0xC5752B6B
           sceSulphaAgentsRegister: 0x7ADB454D

@@ -1,9 +1,9 @@
 modules:
   SceJpegEnc:
-    nid: 0x0000004D
+    nid: 0x00000046
     libraries:
       SceJpegEncUser:
-        nid: 0x0000004E
+        nid: 0x00000047
         functions:
           sceJpegEncoderCsc: 0x824A7D4F
           sceJpegEncoderEncode: 0xC60DE94C

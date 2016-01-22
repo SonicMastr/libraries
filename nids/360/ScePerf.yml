@@ -1,9 +1,9 @@
 modules:
   ScePerf:
-    nid: 0x00000095
+    nid: 0x0000008D
     libraries:
       ScePerf:
-        nid: 0x00000096
+        nid: 0x0000008E
         functions:
           _pLibPerfCaptureFlagPtr: 0x936A5F31
           _sceCpuRazorPopFiberUserMarker: 0x453AED06

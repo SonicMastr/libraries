@@ -1,9 +1,9 @@
 modules:
   SceAudioenc:
-    nid: 0x0000000F
+    nid: 0x0000000E
     libraries:
       SceAudioencUser:
-        nid: 0x00000010
+        nid: 0x0000000F
         functions:
           sceAudioencClearContext: 0x9386F42D
           sceAudioencCreateEncoder: 0x64C04AE8

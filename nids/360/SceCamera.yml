@@ -1,9 +1,9 @@
 modules:
   SceCamera:
-    nid: 0x00000013
+    nid: 0x00000014
     libraries:
       SceCamera:
-        nid: 0x00000014
+        nid: 0x00000015
         functions:
           sceCameraClose: 0xCD6E1CFC
           sceCameraGetAntiFlicker: 0x9FDACB99

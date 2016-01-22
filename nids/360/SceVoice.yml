@@ -1,9 +1,9 @@
 modules:
   SceVoice:
-    nid: 0x000000EB
+    nid: 0x000000E0
     libraries:
       SceVoice:
-        nid: 0x000000EC
+        nid: 0x000000E1
         functions:
           sceVoiceCheckTopology: 0x874054CE
           sceVoiceConnectIPortToOPort: 0x698BDAAE

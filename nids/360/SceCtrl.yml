@@ -1,15 +1,17 @@
 modules:
   SceCtrl:
-    nid: 0x00000023
+    nid: 0x00000021
     libraries:
       SceCtrl:
-        nid: 0x00000024
+        nid: 0x00000022
         functions:
           sceCtrlClearRapidFire: 0xD8294C9C
           sceCtrlGetSamplingMode: 0xEC752AAF
           sceCtrlPeekBufferNegative: 0x104ED1A7
           sceCtrlPeekBufferPositive: 0xA9C3CED6
+          sceCtrlPeekBufferPositive2: 0x15F81E8C
           sceCtrlReadBufferNegative: 0x15F96FB0
           sceCtrlReadBufferPositive: 0x67E7AB83
+          sceCtrlSetButtonIntercept: 0x433D71F4
           sceCtrlSetRapidFire: 0xE9CB69C8
           sceCtrlSetSamplingMode: 0xA497B150

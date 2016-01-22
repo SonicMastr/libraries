@@ -1,9 +1,9 @@
 modules:
   SceGameUpdate:
-    nid: 0x0000003D
+    nid: 0x00000036
     libraries:
       SceGameUpdate:
-        nid: 0x0000003E
+        nid: 0x00000037
         functions:
           sceGameUpdateAbort: 0x14116007
           sceGameUpdateInit: 0x2F401247

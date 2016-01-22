@@ -1,16 +1,16 @@
 modules:
   SceKernel:
-    nid: 0x00000051
+    nid: 0x00000048
     libraries:
       SceCpu:
-        nid: 0x00000022
+        nid: 0x00000049
       SceDebugLed:
-        nid: 0x0000002A
+        nid: 0x0000004A
         functions:
           sceKernelGetGPI: 0x14F582CF
           sceKernelSetGPO: 0x78E702D3
       SceDipsw:
-        nid: 0x00000030
+        nid: 0x0000004B
         functions:
           sceKernelCheckDipsw: 0x1C783FB2
           sceKernelClearDipsw: 0x800EDCC1
@@ -18,20 +18,29 @@ modules:
       SceIofilemgr:
         nid: 0x0000004C
         functions:
+          sceIoCancel: 0xCEF48835
           sceIoClose: 0xC70B8886
+          sceIoCloseAsync: 0x8EA3616A
+          sceIoComplete: 0xD1C49D2F
           sceIoDclose: 0x422A221A
+          sceIoFlockForSystem: 0x3E98E422
           sceIoGetPriority: 0xF2A472A1
           sceIoGetProcessDefaultPriority: 0x0DC4F1BB
           sceIoGetThreadDefaultPriority: 0xA176CD03
           sceIoLseek32: 0x49252B9B
           sceIoRead: 0xFDB32293
+          sceIoReadAsync: 0x773EBD45
           sceIoSetPriority: 0x14B2D56C
+          sceIoSetPriorityForSystem: 0x27373135
           sceIoSetProcessDefaultPriority: 0x7F2ABBAF
           sceIoSetThreadDefaultPriority: 0x49312108
+          sceIoSetThreadDefaultPriorityForSystem: 0xB9C9C9CF
           sceIoSyncByFd: 0x16512F59
+          sceIoSyncByFdAsync: 0x7E1367CB
           sceIoWrite: 0x34EFD876
+          sceIoWriteAsync: 0xE0D63D2A
       SceLibKernel:
-        nid: 0x00000052
+        nid: 0x0000004D
         functions:
           SceKernelStackChkGuard: 0x4458BCF3
           __sce_aeabi_idiv0: 0x4373B548
@@ -47,6 +56,7 @@ modules:
           sceClibMemcmpConstTime: 0x100091AF
           sceClibMemcpy: 0x14E9DBD7
           sceClibMemcpyChk: 0x1F94EF45
+          sceClibMemcpy_safe: 0x2E3B02A1
           sceClibMemmove: 0x736753C8
           sceClibMemmoveChk: 0xA18068FC
           sceClibMemset: 0x632980D7
@@ -193,6 +203,7 @@ modules:
           sceKernelCancelTimer: 0x9CCF768C
           sceKernelChangeCurrentThreadAttr: 0x36833F93
           sceKernelCheckThreadStack: 0x84092FD0
+          sceKernelCloseModule: 0x657FA50E
           sceKernelCreateCond: 0x50572FDA
           sceKernelCreateEventFlag: 0x8516D040
           sceKernelCreateLwCond: 0x48C7EAE6
@@ -217,6 +228,7 @@ modules:
           sceKernelGetLwCondInfoById: 0x971F1DE8
           sceKernelGetLwMutexInfo: 0xF7D8F1FC
           sceKernelGetLwMutexInfoById: 0x4846613D
+          sceKernelGetModuleInfoByAddr: 0xD11A5103
           sceKernelGetMsgPipeInfo: 0x4046D16B
           sceKernelGetMutexInfo: 0x9A6C43CA
           sceKernelGetOpenPsId: 0x261E2C34
@@ -248,6 +260,7 @@ modules:
           sceKernelLockReadRWLockCB: 0x2D4A62B7
           sceKernelLockWriteRWLock: 0x67A187BB
           sceKernelLockWriteRWLockCB: 0xA4777082
+          sceKernelOpenModule: 0x4F2D8B15
           sceKernelPMonThreadGetCounter: 0x99B2BF15
           sceKernelPollEvent: 0x241F3634
           sceKernelPollEventFlag: 0x1FBB0FE1
@@ -297,36 +310,50 @@ modules:
           sceKernelWaitThreadEndCB: 0xC54941ED
           sceSblACMgrIsGameProgram: 0x963F4A99
       SceModulemgr:
-        nid: 0x00000066
+        nid: 0x0000004E
         functions:
           sceKernelGetModuleIdByAddr: 0xF5798C7C
           sceKernelGetModuleInfo: 0x36585DAF
           sceKernelGetModuleList: 0x2EF2581F
+          sceKernelGetSystemSwVersion: 0x5182E212
       SceProcessmgr:
-        nid: 0x0000009E
+        nid: 0x0000004F
         functions:
           sceKernelGetStderr: 0xFA5E3ADA
           sceKernelGetStdin: 0xC1727F59
           sceKernelGetStdout: 0xE5AA625C
+          sceKernelIsCDialogAvailable: 0x143BC4D6
+          sceKernelIsGameBudget: 0xCE0F02F0
           sceKernelLibcClock: 0x9E45DA09
           sceKernelLibcGettimeofday: 0x4B879059
           sceKernelLibcGmtime_r: 0xBCA437CD
           sceKernelLibcLocaltime_r: 0x94F041ED
           sceKernelLibcMktime: 0x890BDC39
           sceKernelLibcTime: 0x0039BE45
+          sceKernelPowerLock: 0x7AA73378
           sceKernelPowerTick: 0x2252890C
+          sceKernelPowerUnlock: 0x466C0CBD
+          sceKernelRegisterProcessTerminationCallback: 0x5EC77870
+          sceKernelUnregisterProcessTerminationCallback: 0x973A4527
       SceSysmem:
-        nid: 0x000000DC
+        nid: 0x00000050
         functions:
           sceKernelAllocMemBlock: 0xB9D5EBDE
+          sceKernelAllocMemBlockForVM: 0xE2D7E137
+          sceKernelCloseMemBlock: 0xB680E3A0
+          sceKernelCloseVMDomain: 0xD6CA56CA
           sceKernelFindMemBlockByAddr: 0xA33B99D1
           sceKernelFreeMemBlock: 0xA91E15EE
           sceKernelGetFreeMemorySize: 0x87CC580B
           sceKernelGetMemBlockBase: 0xB8EF5818
           sceKernelGetMemBlockInfoByAddr: 0x4010AD65
           sceKernelGetMemBlockInfoByRange: 0x006F3DB4
+          sceKernelGetModelForCDialog: 0xA2CB322F
+          sceKernelOpenMemBlock: 0x8EB8DFBB
+          sceKernelOpenVMDomain: 0x9CA3EB2B
+          sceKernelSyncVMDomain: 0x19D2A81A
       SceThreadmgr:
-        nid: 0x000000E2
+        nid: 0x00000051
         functions:
           sceKernelCancelCallback: 0x30741EF2
           sceKernelChangeActiveCpuMask: 0x001173F8
@@ -361,6 +388,7 @@ modules:
           sceKernelDeleteTimer: 0xAB1E42C4
           sceKernelExitDeleteThread: 0x1D17DECF
           sceKernelGetCallbackCount: 0x038644D5
+          sceKernelGetMsgPipeCreatorId: 0x70E2A6D2
           sceKernelGetProcessId: 0x9DCB4B7A
           sceKernelGetThreadStackFreeSize: 0x4F8A3DA0
           sceKernelGetThreadmgrUIDClass: 0xC9678F7F
@@ -397,6 +425,6 @@ modules:
           sceKernelUnregisterCallbackFromEvent: 0x18462B11
           sceKernelUnregisterCallbackFromEventAll: 0x888A7361
       SceThreadmgrCoredumpTime:
-        nid: 0x000000E4
+        nid: 0x00000052
         functions:
           sceKernelExitThread: 0x0C8A38E1

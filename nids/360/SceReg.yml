@@ -1,0 +1,31 @@
+modules:
+  SceReg:
+    nid: 0x0000009D
+    libraries:
+      SceRegMgr:
+        nid: 0x0000009E
+        functions:
+          sceRegMgrGetKeyBin: 0x0B98D646
+          sceRegMgrGetKeyInt: 0x16DDF3DC
+          sceRegMgrGetKeyStr: 0xE188382F
+          sceRegMgrSetKeyBin: 0x566A1793
+          sceRegMgrSetKeyInt: 0xD72EA399
+          sceRegMgrSetKeyStr: 0x41D320C5
+      SceRegMgrForGame:
+        nid: 0x0000009F
+        functions:
+          sceRegMgrSystemParamGetBin: 0x7FFE2CDF
+          sceRegMgrSystemParamGetInt: 0x347C1BDB
+          sceRegMgrSystemParamGetStr: 0x877ADB3F
+          sceRegMgrSystemParamSetBin: 0xD5A73557
+          sceRegMgrSystemParamSetInt: 0xC8F73311
+          sceRegMgrSystemParamSetStr: 0xCB3246E3
+      SceRegMgrForSDK:
+        nid: 0x000000A0
+        functions:
+          sceRegMgrUtilityGetBin: 0xEFCFA182
+          sceRegMgrUtilityGetInt: 0x8154D696
+          sceRegMgrUtilityGetStr: 0x1FE8949E
+          sceRegMgrUtilitySetBin: 0x7304DC12
+          sceRegMgrUtilitySetInt: 0xB370A2CF
+          sceRegMgrUtilitySetStr: 0x4898C1E2

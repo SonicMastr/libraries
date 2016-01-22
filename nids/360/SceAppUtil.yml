@@ -1,9 +1,9 @@
 modules:
   SceAppUtil:
-    nid: 0x00000005
+    nid: 0x00000003
     libraries:
       SceAppUtil:
-        nid: 0x00000006
+        nid: 0x00000004
         functions:
           sceAppUtilAddCookieWebBrowser: 0xC97D5D9E
           sceAppUtilAddcontMount: 0x53B2C020
@@ -47,3 +47,7 @@ modules:
           sceAppUtilStoreBrowse: 0x85FA94EE
           sceAppUtilSystemParamGetInt: 0x5DFB9CA0
           sceAppUtilSystemParamGetString: 0x6E6AA267
+      SceAppUtilCache:
+        nid: 0x00000005
+        functions:
+          sceAppUtilCacheMount: 0x0AA56143

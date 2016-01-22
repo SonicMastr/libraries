@@ -1,9 +1,9 @@
 modules:
   SceHttp:
-    nid: 0x00000047
+    nid: 0x00000040
     libraries:
       SceHttp:
-        nid: 0x00000048
+        nid: 0x00000041
         functions:
           sceHttpAbortRequest: 0xEA61662F
           sceHttpAbortRequestForce: 0x3D44A6E5

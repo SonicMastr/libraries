@@ -1,9 +1,9 @@
 modules:
   SceFios2:
-    nid: 0x00000039
+    nid: 0x00000032
     libraries:
       SceFios2:
-        nid: 0x0000003A
+        nid: 0x00000033
         functions:
           sceFiosArchiveGetDecompressorThreadCount: 0x716BB121
           sceFiosArchiveGetMountBufferSize: 0x15857180

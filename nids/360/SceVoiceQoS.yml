@@ -1,9 +1,9 @@
 modules:
   SceVoiceQoS:
-    nid: 0x000000ED
+    nid: 0x000000E2
     libraries:
       SceVoiceQoS:
-        nid: 0x000000EE
+        nid: 0x000000E3
         functions:
           sceVoiceQoSConnect: 0xE0C5CEEE
           sceVoiceQoSCreateLocalEndpoint: 0xAAB54BE4

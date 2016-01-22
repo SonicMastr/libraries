@@ -1,9 +1,9 @@
 modules:
   SceRudp:
-    nid: 0x00000057
+    nid: 0x000000A4
     libraries:
       SceLibRudp:
-        nid: 0x00000058
+        nid: 0x000000A5
         functions:
           sceRudpActivate: 0xF1151D91
           sceRudpBind: 0x8B766108

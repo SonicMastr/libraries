@@ -1,9 +1,9 @@
 modules:
   SceAudiodec:
-    nid: 0x0000000D
+    nid: 0x0000000C
     libraries:
       SceAudiodecUser:
-        nid: 0x0000000E
+        nid: 0x0000000D
         functions:
           sceAudiodecClearContext: 0xF72F9B64
           sceAudiodecCreateDecoder: 0x4DFD3AAA

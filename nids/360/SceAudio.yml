@@ -1,9 +1,9 @@
 modules:
   SceAudio:
-    nid: 0x00000009
+    nid: 0x00000008
     libraries:
       SceAudio:
-        nid: 0x0000000A
+        nid: 0x00000009
         functions:
           sceAudioOutGetAdopt: 0x12FB1767
           sceAudioOutGetConfig: 0x9C8EDAEA

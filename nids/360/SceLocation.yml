@@ -1,9 +1,9 @@
 modules:
   SceLocation:
-    nid: 0x00000053
+    nid: 0x00000059
     libraries:
       SceLibLocation:
-        nid: 0x00000054
+        nid: 0x0000005A
         functions:
           sceLocationCancelGetLocation: 0x71503251
           sceLocationClose: 0x14FE76E8

@@ -1,17 +1,40 @@
 modules:
   SceAppMgr:
-    nid: 0x00000001
+    nid: 0x00000000
     libraries:
       SceAppMgr:
-        nid: 0x00000002
+        nid: 0x00000001
         functions:
+          _sceAppMgrConvertVs0UserDrivePath: 0x19B76D11
+          _sceAppMgrLaunchAppByUri: 0x37CE3984
+          _sceAppMgrLaunchAppByUri2: 0x4B45EAC0
+          _sceAppMgrSaveDataDataSave: 0xB81777B7
           sceAppMgrAcquireBgmPort: 0xAFCEAB96
+          sceAppMgrIsDevelopmentMode: 0x7D4F8F83
+          sceAppMgrIsGameProgram: 0xFFF8F7F0
           sceAppMgrReleaseBgmPort: 0xF3717E37
           sceAppMgrSetInfobarState: 0xAD9022A1
+          sceAppMgrSetInfobarStateForCommonDialog: 0xD6758B4E
       SceAppMgrUser:
-        nid: 0x00000004
+        nid: 0x00000002
         functions:
           _sceAppMgrGetAppState: 0x5E86319A
+          sceAppMgrAppDataMount: 0x291AFBDC
+          sceAppMgrAppDataMountById: 0xE8BD32BD
+          sceAppMgrAppParamGetString: 0x0C733AE2
+          sceAppMgrConvertVs0UserDrivePath: 0xADAA658E
+          sceAppMgrGetDevInfo: 0x67705391
+          sceAppMgrGetRawPath: 0x0E8D27E8
+          sceAppMgrGetVs0UserDataDrive: 0xC0631748
+          sceAppMgrGetVs0UserModuleDrive: 0x906154DE
+          sceAppMgrLaunchAppByName2: 0x42945D67
+          sceAppMgrLaunchAppByUri: 0x003C634F
+          sceAppMgrLaunchAppByUri2: 0x0ED6AF54
           sceAppMgrLoadExec: 0xE6774ABC
+          sceAppMgrMmsMount: 0xF4730BA8
+          sceAppMgrPspSaveDataRootMount: 0xC94B7E24
           sceAppMgrReceiveSystemEvent: 0x10B5765F
+          sceAppMgrSaveDataDataSave: 0x84DE76C7
           sceAppMgrSetNetworkDisconnectionWarningDialogState: 0xE352B29C
+          sceAppMgrWorkDirMount: 0x9B3BB24D
+          sceAppMgrWorkDirMountById: 0x80E86E42

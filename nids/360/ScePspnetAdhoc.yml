@@ -1,9 +1,9 @@
 modules:
   ScePspnetAdhoc:
-    nid: 0x0000009F
+    nid: 0x00000095
     libraries:
       ScePspnetAdhoc:
-        nid: 0x000000A0
+        nid: 0x00000096
         functions:
           sceNetAdhocGetPdpStat: 0x02098B69
           sceNetAdhocGetPtpStat: 0xE45F0801

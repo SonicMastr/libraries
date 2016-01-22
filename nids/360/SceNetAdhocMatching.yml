@@ -1,9 +1,9 @@
 modules:
   SceNetAdhocMatching:
-    nid: 0x00000073
+    nid: 0x0000006B
     libraries:
       SceNetAdhocMatching:
-        nid: 0x00000074
+        nid: 0x0000006C
         functions:
           sceNetAdhocMatchingAbortSendData: 0xFE77831E
           sceNetAdhocMatchingCancelTarget: 0x04FF010C

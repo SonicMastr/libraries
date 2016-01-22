@@ -1,13 +1,13 @@
 modules:
   SceRtc:
-    nid: 0x000000A7
+    nid: 0x000000A1
     libraries:
       SceRtc:
-        nid: 0x000000A8
+        nid: 0x000000A2
         functions:
           sceRtcGetAccumulativeTime: 0x258BE8EC
       SceRtcUser:
-        nid: 0x000000AA
+        nid: 0x000000A3
         functions:
           sceRtcCheckValid: 0xD7622935
           sceRtcCompareTick: 0xC7385158

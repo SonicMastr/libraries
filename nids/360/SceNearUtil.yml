@@ -1,9 +1,9 @@
 modules:
   SceNearUtil:
-    nid: 0x0000006F
+    nid: 0x00000067
     libraries:
       SceNearUtil:
-        nid: 0x00000070
+        nid: 0x00000068
         functions:
           sceNearCloseDiscoveredGiftImage: 0x88A68D20
           sceNearCloseReceivedGiftData: 0x2F35C196

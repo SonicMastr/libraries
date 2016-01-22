@@ -1,0 +1,10 @@
+modules:
+  SceBt:
+    nid: 0x00000012
+    libraries:
+      SceBt:
+        nid: 0x00000013
+        functions:
+          sceBtReadEvent: 0x26BAC23D
+          sceBtRegisterCallback: 0xA23FB154
+          sceBtUnregisterCallback: 0x605EF71F

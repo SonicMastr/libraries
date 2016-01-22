@@ -1,14 +1,21 @@
 modules:
   SceTouch:
-    nid: 0x000000E5
+    nid: 0x000000DA
     libraries:
       SceTouch:
-        nid: 0x000000E6
+        nid: 0x000000DB
         functions:
+          sceTouchActivateRegion: 0xBD59D652
+          sceTouchClearRegion: 0x2D94EAEA
           sceTouchDisableTouchForce: 0x41194411
           sceTouchEnableTouchForce: 0xB18370C2
           sceTouchGetPanelInfo: 0x10A2CA25
+          sceTouchGetPixelDensity: 0xF0704CF3
           sceTouchGetSamplingState: 0x26531526
           sceTouchPeek: 0xFF082DF0
+          sceTouchPeekRegion: 0x04440622
+          sceTouchPeekRegionExt: 0x2CF6D7E2
           sceTouchRead: 0x169A1D58
+          sceTouchSetRegion: 0x6134DFBE
           sceTouchSetSamplingState: 0x1B9C5D14
+          sceTouchSetSamplingStateExt: 0x13CDFC43

@@ -1,9 +1,9 @@
 modules:
   SceVideodec:
-    nid: 0x000000E9
+    nid: 0x000000DE
     libraries:
       SceVideodecUser:
-        nid: 0x000000EA
+        nid: 0x000000DF
         functions:
           sceAvcdecCreateDecoder: 0xE82BB69B
           sceAvcdecCsc: 0xB2A428DB
