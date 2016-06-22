@@ -3,7 +3,7 @@ modules:
     nid: 0x00000097
     libraries:
       ScePvf:
-        nid: 0x00000098
+        nid: 0x68D59260
         functions:
           __scePvfSetFt2DoneLibCHook: 0x58142D71
           __scePvfSetFt2LibCHook: 0x997161C3

@@ -3,7 +3,7 @@ modules:
     nid: 0x000000D6
     libraries:
       SceSysmodule:
-        nid: 0x000000D7
+        nid: 0x03FCF19D
         functions:
           _sceSysmoduleLoadModuleInternalWithArg: 0xC3C26339
           _sceSysmoduleUnloadModuleInternalWithArg: 0xA2F40C4C

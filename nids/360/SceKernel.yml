@@ -3,20 +3,20 @@ modules:
     nid: 0x00000048
     libraries:
       SceCpu:
-        nid: 0x00000049
+        nid: 0x45265161
       SceDebugLed:
-        nid: 0x0000004A
+        nid: 0xAE004C0A
         functions:
           sceKernelGetGPI: 0x14F582CF
           sceKernelSetGPO: 0x78E702D3
       SceDipsw:
-        nid: 0x0000004B
+        nid: 0xB36D5922
         functions:
           sceKernelCheckDipsw: 0x1C783FB2
           sceKernelClearDipsw: 0x800EDCC1
           sceKernelSetDipsw: 0x817053D4
       SceIofilemgr:
-        nid: 0x0000004C
+        nid: 0xF2FF276E
         functions:
           sceIoCancel: 0xCEF48835
           sceIoClose: 0xC70B8886
@@ -40,7 +40,7 @@ modules:
           sceIoWrite: 0x34EFD876
           sceIoWriteAsync: 0xE0D63D2A
       SceLibKernel:
-        nid: 0x0000004D
+        nid: 0xCAE9ACE6
         functions:
           SceKernelStackChkGuard: 0x4458BCF3
           __sce_aeabi_idiv0: 0x4373B548
@@ -310,14 +310,14 @@ modules:
           sceKernelWaitThreadEndCB: 0xC54941ED
           sceSblACMgrIsGameProgram: 0x963F4A99
       SceModulemgr:
-        nid: 0x0000004E
+        nid: 0xEAED1616
         functions:
           sceKernelGetModuleIdByAddr: 0xF5798C7C
           sceKernelGetModuleInfo: 0x36585DAF
           sceKernelGetModuleList: 0x2EF2581F
           sceKernelGetSystemSwVersion: 0x5182E212
       SceProcessmgr:
-        nid: 0x0000004F
+        nid: 0x2DD91812
         functions:
           sceKernelGetStderr: 0xFA5E3ADA
           sceKernelGetStdin: 0xC1727F59
@@ -336,7 +336,7 @@ modules:
           sceKernelRegisterProcessTerminationCallback: 0x5EC77870
           sceKernelUnregisterProcessTerminationCallback: 0x973A4527
       SceSysmem:
-        nid: 0x00000050
+        nid: 0x37FE725A
         functions:
           sceKernelAllocMemBlock: 0xB9D5EBDE
           sceKernelAllocMemBlockForVM: 0xE2D7E137
@@ -353,7 +353,7 @@ modules:
           sceKernelOpenVMDomain: 0x9CA3EB2B
           sceKernelSyncVMDomain: 0x19D2A81A
       SceThreadmgr:
-        nid: 0x00000051
+        nid: 0x859A24B1
         functions:
           sceKernelCancelCallback: 0x30741EF2
           sceKernelChangeActiveCpuMask: 0x001173F8

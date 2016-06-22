@@ -3,7 +3,7 @@ modules:
     nid: 0x00000016
     libraries:
       SceClipboard:
-        nid: 0x00000017
+        nid: 0x6B346AA8
         functions:
           sceClipboardGetText: 0x5BB10CC2
           sceClipboardSetText: 0x43A94D3E

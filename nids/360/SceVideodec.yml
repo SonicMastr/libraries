@@ -3,7 +3,7 @@ modules:
     nid: 0x000000DE
     libraries:
       SceVideodecUser:
-        nid: 0x000000DF
+        nid: 0x163C3727
         functions:
           sceAvcdecCreateDecoder: 0xE82BB69B
           sceAvcdecCsc: 0xB2A428DB

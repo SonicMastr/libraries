@@ -3,7 +3,7 @@ modules:
     nid: 0x00000067
     libraries:
       SceNearUtil:
-        nid: 0x00000068
+        nid: 0x560D1608
         functions:
           sceNearCloseDiscoveredGiftImage: 0x88A68D20
           sceNearCloseReceivedGiftData: 0x2F35C196

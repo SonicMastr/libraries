@@ -3,7 +3,7 @@ modules:
     nid: 0x0000000A
     libraries:
       SceAudioIn:
-        nid: 0x0000000B
+        nid: 0xF8DC61A3
         functions:
           sceAudioInGetAdopt: 0x566AC433
           sceAudioInGetStatus: 0x2F940377

@@ -3,7 +3,7 @@ modules:
     nid: 0x00000044
     libraries:
       SceJpegUser:
-        nid: 0x00000045
+        nid: 0x880BF710
         functions:
           sceJpegCreateSplitDecoder: 0x123B4734
           sceJpegCsc: 0x6263AEC2

@@ -3,7 +3,7 @@ modules:
     nid: 0x00000014
     libraries:
       SceCamera:
-        nid: 0x00000015
+        nid: 0xDA91B3ED
         functions:
           sceCameraClose: 0xCD6E1CFC
           sceCameraGetAntiFlicker: 0x9FDACB99

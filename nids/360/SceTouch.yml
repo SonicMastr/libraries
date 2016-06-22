@@ -3,7 +3,7 @@ modules:
     nid: 0x000000DA
     libraries:
       SceTouch:
-        nid: 0x000000DB
+        nid: 0x3E4F4A81
         functions:
           sceTouchActivateRegion: 0xBD59D652
           sceTouchClearRegion: 0x2D94EAEA

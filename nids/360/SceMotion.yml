@@ -3,7 +3,7 @@ modules:
     nid: 0x0000005F
     libraries:
       SceMotion:
-        nid: 0x00000060
+        nid: 0xDC571B3F
         functions:
           sceMotionGetAngleThreshold: 0x499B6C87
           sceMotionGetBasicOrientation: 0x4F28BFE0

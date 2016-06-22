@@ -3,7 +3,7 @@ modules:
     nid: 0x0000006F
     libraries:
       SceNgs:
-        nid: 0x00000070
+        nid: 0xB01598D9
         functions:
           sceNgsAT9GetSectionDetails: 0x2A9FA501
           sceNgsModuleGetNumPresets: 0x5C71FE09

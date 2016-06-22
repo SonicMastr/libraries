@@ -3,7 +3,7 @@ modules:
     nid: 0x00000042
     libraries:
       SceIme:
-        nid: 0x00000043
+        nid: 0xD2553017
         functions:
           sceImeClose: 0x889A8421
           sceImeOpen: 0x0E050613

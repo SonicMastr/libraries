@@ -3,7 +3,7 @@ modules:
     nid: 0x00000021
     libraries:
       SceCtrl:
-        nid: 0x00000022
+        nid: 0xD197E3C7
         functions:
           sceCtrlClearRapidFire: 0xD8294C9C
           sceCtrlGetSamplingMode: 0xEC752AAF

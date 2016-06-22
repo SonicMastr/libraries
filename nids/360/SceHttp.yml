@@ -3,7 +3,7 @@ modules:
     nid: 0x00000040
     libraries:
       SceHttp:
-        nid: 0x00000041
+        nid: 0xE8F15CDE
         functions:
           sceHttpAbortRequest: 0xEA61662F
           sceHttpAbortRequestForce: 0x3D44A6E5

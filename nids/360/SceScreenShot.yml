@@ -3,7 +3,7 @@ modules:
     nid: 0x000000A8
     libraries:
       SceScreenShot:
-        nid: 0x000000A9
+        nid: 0xF26FC97D
         functions:
           sceScreenShotCapture: 0xD509FB08
           sceScreenShotDisable: 0x50AE9FF9

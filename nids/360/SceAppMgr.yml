@@ -3,7 +3,7 @@ modules:
     nid: 0x00000000
     libraries:
       SceAppMgr:
-        nid: 0x00000001
+        nid: 0x8AF17416
         functions:
           _sceAppMgrConvertVs0UserDrivePath: 0x19B76D11
           _sceAppMgrLaunchAppByUri: 0x37CE3984
@@ -16,7 +16,7 @@ modules:
           sceAppMgrSetInfobarState: 0xAD9022A1
           sceAppMgrSetInfobarStateForCommonDialog: 0xD6758B4E
       SceAppMgrUser:
-        nid: 0x00000002
+        nid: 0xA6605D6F
         functions:
           _sceAppMgrGetAppState: 0x5E86319A
           sceAppMgrAppDataMount: 0x291AFBDC

@@ -3,7 +3,7 @@ modules:
     nid: 0x00000069
     libraries:
       SceNet:
-        nid: 0x0000006A
+        nid: 0x6BF8B2A2
         functions:
           sceNetAccept: 0x1ADF9BB1
           sceNetBind: 0x1296A94B

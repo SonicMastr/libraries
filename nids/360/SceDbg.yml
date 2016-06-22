@@ -3,7 +3,7 @@ modules:
     nid: 0x00000025
     libraries:
       SceDbg:
-        nid: 0x00000026
+        nid: 0x623DF986
         functions:
           sceDbgAssertionHandler: 0x1AF3678B
           sceDbgLoggingHandler: 0x6605AB19

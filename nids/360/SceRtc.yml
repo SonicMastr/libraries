@@ -3,11 +3,11 @@ modules:
     nid: 0x000000A1
     libraries:
       SceRtc:
-        nid: 0x000000A2
+        nid: 0x3503487E
         functions:
           sceRtcGetAccumulativeTime: 0x258BE8EC
       SceRtcUser:
-        nid: 0x000000A3
+        nid: 0x6704D3C6
         functions:
           sceRtcCheckValid: 0xD7622935
           sceRtcCompareTick: 0xC7385158

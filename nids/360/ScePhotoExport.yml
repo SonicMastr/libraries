@@ -3,7 +3,7 @@ modules:
     nid: 0x00000091
     libraries:
       ScePhotoExport:
-        nid: 0x00000092
+        nid: 0x79166BD9
         functions:
           scePhotoExportFromData: 0x70512321
           scePhotoExportFromFile: 0x84FD9FC5

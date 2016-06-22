@@ -3,7 +3,7 @@ modules:
     nid: 0x0000002B
     libraries:
       SceDisplay:
-        nid: 0x0000002C
+        nid: 0x5ED8F994
         functions:
           sceDisplayGetRefreshRate: 0xA08CA60D
           sceDisplayGetVcount: 0xB6FDE0BA
@@ -18,7 +18,7 @@ modules:
           sceDisplayWaitVblankStartMulti: 0xDD0A13B8
           sceDisplayWaitVblankStartMultiCB: 0x05F27764
       SceDisplayUser:
-        nid: 0x0000002D
+        nid: 0x4FAACD11
         functions:
           sceDisplayGetFrameBuf: 0x42AE6BBC
           sceDisplaySetFrameBuf: 0x7A410B64

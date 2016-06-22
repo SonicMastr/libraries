@@ -3,7 +3,7 @@ modules:
     nid: 0x00000046
     libraries:
       SceJpegEncUser:
-        nid: 0x00000047
+        nid: 0x3748BFD3
         functions:
           sceJpegEncoderCsc: 0x824A7D4F
           sceJpegEncoderEncode: 0xC60DE94C

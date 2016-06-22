@@ -3,7 +3,7 @@ modules:
     nid: 0x00000003
     libraries:
       SceAppUtil:
-        nid: 0x00000004
+        nid: 0x48E01D74
         functions:
           sceAppUtilAddCookieWebBrowser: 0xC97D5D9E
           sceAppUtilAddcontMount: 0x53B2C020

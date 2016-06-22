@@ -3,7 +3,7 @@ modules:
     nid: 0x00000038
     libraries:
       SceGxm:
-        nid: 0x00000039
+        nid: 0xF76B66BD
         functions:
           sceGxmAddRazorGpuCaptureBuffer: 0xE9E81073
           sceGxmBeginCommandList: 0x944D3F83
