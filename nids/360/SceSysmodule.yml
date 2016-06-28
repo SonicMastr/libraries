@@ -8,7 +8,7 @@ modules:
           sceSysmoduleIsLoaded: 0x53099B7A
           sceSysmoduleIsLoadedInternal: 0x09A4AF1D
           sceSysmoduleLoadModule: 0x79A0160A
-          sceSysmoduleLoadModuleInternal: 0x09A4AF1D
+          sceSysmoduleLoadModuleInternal: 0x2399BF45
           sceSysmoduleLoadModuleInternalWithArg: 0xC3C26339
           sceSysmoduleUnloadModule: 0x31D87805
           sceSysmoduleUnloadModuleInternal: 0xFF206B19
