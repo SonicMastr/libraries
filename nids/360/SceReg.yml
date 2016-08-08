@@ -3,7 +3,7 @@ modules:
     nid: 0x0000009D
     libraries:
       SceRegMgr:
-        nid: 0x0000009E
+        nid: 0xC436F916
         functions:
           sceRegMgrGetKeyBin: 0x0B98D646
           sceRegMgrGetKeyInt: 0x16DDF3DC
@@ -12,7 +12,7 @@ modules:
           sceRegMgrSetKeyInt: 0xD72EA399
           sceRegMgrSetKeyStr: 0x41D320C5
       SceRegMgrForGame:
-        nid: 0x0000009F
+        nid: 0x0B351269
         functions:
           sceRegMgrSystemParamGetBin: 0x7FFE2CDF
           sceRegMgrSystemParamGetInt: 0x347C1BDB
@@ -21,7 +21,7 @@ modules:
           sceRegMgrSystemParamSetInt: 0xC8F73311
           sceRegMgrSystemParamSetStr: 0xCB3246E3
       SceRegMgrForSDK:
-        nid: 0x000000A0
+        nid: 0x67E45817
         functions:
           sceRegMgrUtilityGetBin: 0xEFCFA182
           sceRegMgrUtilityGetInt: 0x8154D696

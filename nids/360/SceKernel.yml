@@ -425,6 +425,6 @@ modules:
           sceKernelUnregisterCallbackFromEvent: 0x18462B11
           sceKernelUnregisterCallbackFromEventAll: 0x888A7361
       SceThreadmgrCoredumpTime:
-        nid: 0x00000052
+        nid: 0x5E8D0E22
         functions:
           sceKernelExitThread: 0x0C8A38E1
