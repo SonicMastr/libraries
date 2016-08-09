@@ -12,6 +12,7 @@ modules:
           sceCtrlPeekBufferPositive2: 0x15F81E8C
           sceCtrlReadBufferNegative: 0x15F96FB0
           sceCtrlReadBufferPositive: 0x67E7AB83
+          sceCtrlSetActuator: 0xDBCAA0C9
           sceCtrlSetButtonIntercept: 0x433D71F4
           sceCtrlSetRapidFire: 0xE9CB69C8
           sceCtrlSetSamplingMode: 0xA497B150
