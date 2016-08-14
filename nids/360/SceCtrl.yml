@@ -14,5 +14,6 @@ modules:
           sceCtrlReadBufferPositive: 0x67E7AB83
           sceCtrlSetActuator: 0xDBCAA0C9
           sceCtrlSetButtonIntercept: 0x433D71F4
+          sceCtrlSetLightBar: 0xDA11D433
           sceCtrlSetRapidFire: 0xE9CB69C8
           sceCtrlSetSamplingMode: 0xA497B150
