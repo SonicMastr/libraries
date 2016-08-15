@@ -309,6 +309,10 @@ modules:
           sceKernelWaitThreadEnd: 0xDDB395A9
           sceKernelWaitThreadEndCB: 0xC54941ED
           sceSblACMgrIsGameProgram: 0x963F4A99
+      SceLibRng:
+        nid: 0xF9AC7CF8
+        functions:
+          sceKernelGetRandomNumber: 0xB2700165
       SceModulemgr:
         nid: 0xEAED1616
         functions:
