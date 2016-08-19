@@ -6,6 +6,7 @@ modules:
         nid: 0x8AF17416
         functions:
           _sceAppMgrConvertVs0UserDrivePath: 0x19B76D11
+          _sceAppMgrLaunchAppByName2ForShell: 0xC6BA9596
           _sceAppMgrLaunchAppByUri: 0x37CE3984
           _sceAppMgrLaunchAppByUri2: 0x4B45EAC0
           _sceAppMgrSaveDataDataSave: 0xB81777B7
