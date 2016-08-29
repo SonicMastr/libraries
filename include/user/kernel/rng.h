@@ -1,6 +1,10 @@
 #ifndef _PSP2_KERNEL_RNG_H_
 #define _PSP2_KERNEL_RNG_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /***
  * Fills the output buffer with random data.
  *
@@ -11,4 +15,8 @@
 */
 int sceKernelGetRandomNumber(void *output, unsigned size);
 
+#ifdef __cplusplus
+}
 #endif
+
+#endif /* _PSP2_KERNEL_RNG_H_ */
