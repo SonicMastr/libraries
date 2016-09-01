@@ -5,20 +5,41 @@ modules:
       ScePower:
         nid: 0x1082DA7F
         functions:
+          scePowerBatteryUpdateInfo: 0x27F3292C
+          scePowerCancelRequest: 0xDB62C9CF
           scePowerGetArmClockFrequency: 0xABC6F88F
+          scePowerGetBatteryChargingStatus: 0xB4432BC8
+          scePowerGetBatteryCycleCount: 0x008A54B9
+          scePowerGetBatteryElec: 0x862AE1A6
           scePowerGetBatteryFullCapacity: 0xFD18A0FF
           scePowerGetBatteryLifePercent: 0x2085D15D
           scePowerGetBatteryLifeTime: 0x8EFB3FA2
           scePowerGetBatteryRemainCapacity: 0x94F5A53F
+          scePowerGetBatterySOH: 0xA88A2B65
+          scePowerGetBatteryTemp: 0x28E12023
+          scePowerGetBatteryVolt: 0x483CE86B
           scePowerGetBusClockFrequency: 0x478FE6F5
+          scePowerGetCaseTemp: 0x525592E4
           scePowerGetGpuClockFrequency: 0x1B04A1D6
+          scePowerGetGpuXbarClockFrequency: 0x0A750DEE
+          scePowerGetUsingWireless: 0xD541FF03
           scePowerIsBatteryCharging: 0x1E490401
+          scePowerIsBatteryExist: 0x0AFD0D8B
           scePowerIsLowBattery: 0xD3075926
           scePowerIsPowerOnline: 0x87440F5E
+          scePowerIsRequest: 0x7FA406DD
           scePowerIsSuspendRequired: 0x78A1A796
           scePowerRegisterCallback: 0x04B7766E
+          scePowerRequestColdReset: 0x0442D852
+          scePowerRequestDisplayOff: 0x160EB506
+          scePowerRequestDisplayOn: 0x3EA75C88
+          scePowerRequestStandby: 0x2B7C7CF4
+          scePowerRequestSuspend: 0xAC32C9CC
           scePowerSetArmClockFrequency: 0x74DB5AE5
           scePowerSetBusClockFrequency: 0xB8D7B3FB
           scePowerSetConfigurationMode: 0x3CE187B6
           scePowerSetGpuClockFrequency: 0x717DB06C
+          scePowerSetGpuXbarClockFrequency: 0xA7739DBE
+          scePowerSetIdleTimerCount: 0xB11EF149
+          scePowerSetUsingWireless: 0x4D695C1F
           scePowerUnregisterCallback: 0xDFA8BAF8
