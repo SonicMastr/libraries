@@ -396,6 +396,7 @@ modules:
           sceKernelGetProcessId: 0x9DCB4B7A
           sceKernelGetSystemTimeWide: 0xF4EE4FA9
           sceKernelGetThreadStackFreeSize: 0x4F8A3DA0
+          sceKernelGetThreadTLSAddr: 0xBACA6891
           sceKernelGetThreadmgrUIDClass: 0xC9678F7F
           sceKernelGetTimerBaseWide: 0x5DBC1960
           sceKernelGetTimerTimeWide: 0x3EFD3165
