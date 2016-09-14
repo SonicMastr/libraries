@@ -3,6 +3,6 @@ modules:
     nid: 0x00000063
     libraries:
       SceMusicExport:
-        nid: 0x00000064
+        nid: 0xF2E30EED
         functions:
           sceMusicExportFromFile: 0x08000579
