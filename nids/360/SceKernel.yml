@@ -352,6 +352,7 @@ modules:
           sceKernelGetMemBlockBase: 0xB8EF5818
           sceKernelGetMemBlockInfoByAddr: 0x4010AD65
           sceKernelGetMemBlockInfoByRange: 0x006F3DB4
+          sceKernelGetModel: 0xD0D4F729
           sceKernelGetModelForCDialog: 0xA2CB322F
           sceKernelOpenMemBlock: 0x8EB8DFBB
           sceKernelOpenVMDomain: 0x9CA3EB2B
