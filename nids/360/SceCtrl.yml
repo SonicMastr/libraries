@@ -6,14 +6,24 @@ modules:
         nid: 0xD197E3C7
         functions:
           sceCtrlClearRapidFire: 0xD8294C9C
+          sceCtrlDisconnect: 0x16D26DC7
+          sceCtrlGetBatteryInfo: 0x8F9B1CE5
+          sceCtrlGetButtonIntercept: 0x6FAFAD05
+          sceCtrlGetControllerPortInfo: 0x324F1B66
           sceCtrlGetSamplingMode: 0xEC752AAF
           sceCtrlPeekBufferNegative: 0x104ED1A7
           sceCtrlPeekBufferPositive: 0xA9C3CED6
           sceCtrlPeekBufferPositive2: 0x15F81E8C
+          sceCtrlPeekBufferPositiveExt: 0xA59454D3
+          sceCtrlPeekBufferPositiveExt2: 0x860BF292
           sceCtrlReadBufferNegative: 0x15F96FB0
           sceCtrlReadBufferPositive: 0x67E7AB83
+          sceCtrlReadBufferPositive2: 0xC4226A3E
+          sceCtrlReadBufferPositiveExt2: 0xA7178860
           sceCtrlSetActuator: 0xDBCAA0C9
           sceCtrlSetButtonIntercept: 0x433D71F4
           sceCtrlSetLightBar: 0xDA11D433
           sceCtrlSetRapidFire: 0xE9CB69C8
           sceCtrlSetSamplingMode: 0xA497B150
+          sceCtrlSetSamplingModeExt: 0xB1DC4378
+          sceCtrlSingleControllerMode: 0x031BE396
