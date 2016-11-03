@@ -1,0 +1,8 @@
+modules:
+  SceSblSsMgr:
+    nid: 0xFDDD93FA
+    libraries:
+      SceSblSsMgrForDriver:
+        nid: 0x61E9428D
+        functions:
+          sceKernelGetRandomNumber: 0x4F9BFBE5

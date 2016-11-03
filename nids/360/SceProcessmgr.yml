@@ -1,0 +1,27 @@
+modules:
+  SceProcessmgr:
+    nid: 0xF019E1DA
+    libraries:
+      SceProcessmgr:
+        nid: 0x2DD91812
+        functions:
+          sceKernelGetStderr: 0xFA5E3ADA
+          sceKernelGetStdin: 0xC1727F59
+          sceKernelGetStdout: 0xE5AA625C
+          sceKernelIsCDialogAvailable: 0x143BC4D6
+          sceKernelIsGameBudget: 0xCE0F02F0
+          sceKernelLibcClock: 0x9E45DA09
+          sceKernelLibcGettimeofday: 0x4B879059
+          sceKernelLibcGmtime_r: 0xBCA437CD
+          sceKernelLibcLocaltime_r: 0x94F041ED
+          sceKernelLibcMktime: 0x890BDC39
+          sceKernelLibcTime: 0x0039BE45
+          sceKernelPowerLock: 0x7AA73378
+          sceKernelPowerTick: 0x2252890C
+          sceKernelPowerUnlock: 0x466C0CBD
+          sceKernelRegisterProcessTerminationCallback: 0x5EC77870
+          sceKernelUnregisterProcessTerminationCallback: 0x973A4527
+      SceProcessmgrForKernel:
+        nid: 0x7A69DE86
+        functions:
+          sceKernelGetProcessKernelBuf: 0xB9E68092

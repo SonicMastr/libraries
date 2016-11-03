@@ -1,0 +1,8 @@
+modules:
+  SceStdio:
+    nid: 0x771A73C0
+    libraries:
+      SceDebugForDriver:
+        nid: 0x88758561
+        functions:
+          printf: 0x391B74B7

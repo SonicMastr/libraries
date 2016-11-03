@@ -1,0 +1,29 @@
+modules:
+  SceKernelModulemgr:
+    nid: 0x726C6635
+    libraries:
+      SceModulemgr:
+        nid: 0xEAED1616
+        functions:
+          sceKernelGetModuleIdByAddr: 0xF5798C7C
+          sceKernelGetModuleInfo: 0x36585DAF
+          sceKernelGetModuleList: 0x2EF2581F
+          sceKernelGetSystemSwVersion: 0x5182E212
+      SceModulemgrForDriver:
+        nid: 0xD4A60A52
+        functions:
+          sceKernelGetSystemSwVersion: 0x5182E212
+          sceKernelLoadModule: 0x86D8D634
+          sceKernelLoadStartModule: 0x189BFBBB
+          sceKernelLoadStartModuleForPid: 0x9D953C22
+          sceKernelLoadStartSharedModuleForPid: 0xE2ADEF8D
+          sceKernelStartModule: 0x0675B682
+          sceKernelStopUnloadModule: 0x100DAEB9
+          sceKernelUnloadModule: 0x728E72A6
+      SceModulemgrForKernel:
+        nid: 0xC445FA63
+        functions:
+          sceKernelGetModuleInfo: 0xD269F915
+          sceKernelGetModuleInternal: 0xFE303863
+          sceKernelGetModuleList: 0x97CF7B4E
+          sceKernelLoadModuleForPid: 0xFA21D8CB
