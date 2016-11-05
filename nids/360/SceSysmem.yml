@@ -20,8 +20,6 @@ modules:
       SceSysclibForDriver:
         nid: 0x7EE45391
         functions:
-          __aeabi_uidiv: 0xA9FF1205
-          __aeabi_uidivmod: 0xA46CB7DE
           memcmp: 0xF939E83D
           memcpy: 0x40C88316
           memset: 0x0AB9BF5C
