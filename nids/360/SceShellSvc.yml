@@ -1,0 +1,11 @@
+modules:
+  SceShellSvc:
+    nid: 0x821DC423
+    libraries:
+      SceShellUtil:
+        nid: 0xD2B1C8AE
+        functions:
+          sceShellUtilInitEvents: 0xE8AD11EC
+          sceShellUtilLock: 0xA9537233
+          sceShellUtilRegisterEventHandler: 0x7B5EDFE7
+          sceShellUtilUnlock: 0x21A6CF54
