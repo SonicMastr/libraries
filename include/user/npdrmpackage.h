@@ -28,6 +28,8 @@ typedef struct {
  * @param identifier - arbitrary value [0, 6) ORed with (1 << 8) or 0.
  *                     If it is set to 0, the function just checks the header
  *                     and doesn't create the context.
+ *
+ * @return 0 on success, != 0 on error
  */
 int _sceNpDrmPackageCheck(const void *buffer, SceSize size, int zero, unsigned int identifier);
 
@@ -37,6 +39,8 @@ int _sceNpDrmPackageCheck(const void *buffer, SceSize size, int zero, unsigned i
  * @param buffer - The buffer containing the content of the PKG.
  * @param size - The size of the buffer. The minimum confirmed value is 0x20.
  * @param opt - The options.
+ *
+ * @return 0 on success, != 0 on error
  */
 int _sceNpDrmPackageDecrypt(void * restrict buffer, SceSize size, _sceNpDrmPackageDecrypt_opt * restrict opt);
 	
