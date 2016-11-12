@@ -18,7 +18,9 @@ modules:
           sceKernelLoadStartModuleForPid: 0x9D953C22
           sceKernelLoadStartSharedModuleForPid: 0xE2ADEF8D
           sceKernelStartModule: 0x0675B682
-          sceKernelStopUnloadModule: 0x100DAEB9
+          sceKernelStopModule: 0x100DAEB9
+          sceKernelStopUnloadModule: 0x03B30B7E
+          sceKernelStopUnloadModuleForPid: 0x49A3EDC7
           sceKernelUnloadModule: 0x728E72A6
       SceModulemgrForKernel:
         nid: 0xC445FA63
@@ -27,3 +29,5 @@ modules:
           sceKernelGetModuleInternal: 0xFE303863
           sceKernelGetModuleList: 0x97CF7B4E
           sceKernelLoadModuleForPid: 0xFA21D8CB
+          sceKernelStopModuleForPid: 0x7BB4CE54
+          sceKernelUnloadModuleForPid: 0x5972E2CC
