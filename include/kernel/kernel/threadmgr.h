@@ -100,7 +100,7 @@ typedef enum SceThreadStatus
 } SceThreadStatus;
 
 /**
- * Create a thread
+ * \brief Create a thread
  *
  * @par Example:
  * @code
@@ -1066,3 +1066,7 @@ int sceKernelRunWithStack(int stack_size, int (*to_call)(void *), void *args);
 #endif
 
 #endif /* _PSP2_KERNEL_THREADMGR_H_ */
+
+/**
+ * @}
+ */

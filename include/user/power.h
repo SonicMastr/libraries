@@ -3,6 +3,7 @@
 
 #include <psp2/types.h>
 
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -167,4 +168,6 @@ int scePowerSetGpuXbarClockFrequency(int freq);
 
 #endif /* _PSP2_POWER_H_ */
 
-/** @} */
+/**
+ * \}
+ */
