@@ -20,3 +20,5 @@ int sceKernelGetRandomNumber(void *output, unsigned size);
 #endif
 
 #endif /* _PSP2_KERNEL_RNG_H_ */
+
+/** \} */

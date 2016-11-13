@@ -152,3 +152,5 @@ int sceKernelMapBlockUserVisible(SceUID uid);
 #endif
 
 #endif
+
+/** \} */

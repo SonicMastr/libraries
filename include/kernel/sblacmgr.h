@@ -17,3 +17,5 @@ int sceSblACMgrIsDevelopmentMode(void);
 #endif
 
 #endif /* _PSP2_KERNEL_SBLACMGR_H_ */
+
+/** \} */

@@ -83,3 +83,5 @@ int sceSysmoduleIsLoaded(SceUInt16 id);
 #endif
 
 #endif /* _PSP2_SYSMODULE_H_ */
+
+/** \} */

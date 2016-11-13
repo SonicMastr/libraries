@@ -111,3 +111,5 @@ int sceKernelGetModel();
 #endif
 
 #endif
+
+/** \} */

@@ -168,6 +168,4 @@ int scePowerSetGpuXbarClockFrequency(int freq);
 
 #endif /* _PSP2_POWER_H_ */
 
-/**
- * \}
- */
+/** \} */
