@@ -1,10 +1,95 @@
 modules:
   SceBt:
-    nid: 0x00000012
+    nid: 0xED3D9A39
     libraries:
       SceBt:
-        nid: 0x00000013
+        nid: 0x9785DB68
         functions:
+          sceBtAvrcpReadVolume: 0x01000531
+          sceBtAvrcpSendButton: 0x9F8724E7
+          sceBtAvrcpSendVolume: 0xC5C7003B
+          sceBtAvrcpSetPlayStatus: 0x0DADD51A
+          sceBtAvrcpSetTitle: 0xDD3947B9
+          sceBtDeleteRegisteredInfo: 0xACC959A0
+          sceBtFreqAudio: 0x376DE456
+          sceBtGetConfiguration: 0x9D619F35
+          sceBtGetConnectingInfo: 0xD9B65CAA
+          sceBtGetDeviceName: 0x80977A26
+          sceBtGetInfoForTest: 0xF7756C1F
+          sceBtGetLastError: 0x4E159A08
+          sceBtGetRegisteredInfo: 0xB6C9A094
+          sceBtGetStatusForTest: 0x48A27F7E
+          sceBtHfpGetCurrentPhoneNumber: 0xB0CD46A4
+          sceBtHfpRequest: 0xD924787E
+          sceBtHidGetReportDescriptor: 0x95614634
+          sceBtHidTransfer: 0x88B34B5B
+          sceBtPairingOOB: 0xCBC4FF55
+          sceBtPushBip: 0xE4EA1E59
+          sceBtPushOpp: 0xED78EEC3
           sceBtReadEvent: 0x26BAC23D
+          sceBtRecvAudio: 0x469DD0DA
+          sceBtRecvBip: 0xCEF8F261
+          sceBtRecvOpp: 0xA865A081
+          sceBtRecvSpp: 0x112A61AC
           sceBtRegisterCallback: 0xA23FB154
+          sceBtReplyPinCode: 0xA4FD7F9A
+          sceBtReplyUserConfirmation: 0xCAABAAC8
+          sceBtSendAudio: 0xE30602A4
+          sceBtSendL2capEchoRequestForTest: 0xCA304973
+          sceBtSendSpp: 0x1FBA44DE
+          sceBtSetConfiguration: 0x9B1F2964
+          sceBtSetContentProtection: 0x5F9ABEAE
+          sceBtSetInquiryResultForTest: 0x2BADF3A9
+          sceBtSetInquiryScan: 0x78855913
+          sceBtSetL2capEchoResponseBufferForTest: 0xB624CFFC
+          sceBtSetStatusForTest: 0x32DA3573
+          sceBtStartAudio: 0x3679D50F
+          sceBtStartConnect: 0xFF3C57EB
+          sceBtStartDisconnect: 0x18286FFF
+          sceBtStartInquiry: 0xA5CDDB17
+          sceBtStopAudio: 0xE423D1CC
+          sceBtStopInquiry: 0xF1C4D466
           sceBtUnregisterCallback: 0x605EF71F
+      SceBtForDriver:
+        nid: 0xD48CA62D
+        functions:
+          sceBtAvrcpReadVolume: 0xC9C70056
+          sceBtAvrcpSendButton: 0xEC5F8519
+          sceBtAvrcpSendVolume: 0x7689DA3D
+          sceBtAvrcpSetTitle: 0x91EF55AD
+          sceBtDeleteRegisteredInfo: 0xE6F659E0
+          sceBtFreqAudio: 0xDA20DCC8
+          sceBtGetConfiguration: 0x94C66A3B
+          sceBtGetDeviceName: 0x633F784C
+          sceBtGetInfoForTest: 0x2C9DD7BB
+          sceBtGetLastError: 0xAD31A43E
+          sceBtGetRegisteredInfo: 0xF86D25E2
+          sceBtGetStatusForTest: 0x83781649
+          sceBtHfpGetCurrentPhoneNumber: 0x7BC66D6D
+          sceBtHfpRequest: 0x6E49D11D
+          sceBtPushBip: 0x7FF77792
+          sceBtPushOpp: 0x21C788E2
+          sceBtReadEvent: 0x5ABB9A9D
+          sceBtRecvAudio: 0xCD7C0492
+          sceBtRecvBip: 0xE8E95977
+          sceBtRecvOpp: 0x8008AA2C
+          sceBtRecvSpp: 0xC09D9E7C
+          sceBtRegisterCallback: 0x120AC1F7
+          sceBtReplyPinCode: 0xBB69A62A
+          sceBtReplyUserConfirmation: 0xB5FA291C
+          sceBtSendAudio: 0x47F19727
+          sceBtSendL2capEchoRequestForTest: 0xE3A66814
+          sceBtSendSpp: 0x92241DFB
+          sceBtSetConfiguration: 0xEBDCC992
+          sceBtSetContentProtection: 0x08632086
+          sceBtSetInquiryResultForTest: 0x1C26F878
+          sceBtSetInquiryScan: 0x4F5A852E
+          sceBtSetL2capEchoResponseBufferForTest: 0x0B7D8E0E
+          sceBtSetStatusForTest: 0x9C195411
+          sceBtStartAudio: 0x8D47CABD
+          sceBtStartConnect: 0x6059113A
+          sceBtStartDisconnect: 0x50710281
+          sceBtStartInquiry: 0x9DC7E7E5
+          sceBtStopAudio: 0xCAE5A9F3
+          sceBtStopInquiry: 0x6A1D9598
+          sceBtUnregisterCallback: 0xBF72E1BE
