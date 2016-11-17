@@ -97,3 +97,4 @@ int sceKernelStopUnloadModuleForPid(SceUID pid, SceUID modid, SceSize args, void
 #endif
 
 #endif /* _PSP2_KERNEL_MODULEMGR_H_ */
+

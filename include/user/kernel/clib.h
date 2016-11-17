@@ -29,3 +29,4 @@ void *sceClibMemmove(void *, const void *, SceSize);
 #endif
 
 #endif /* _PSP2_KERNEL_CLIB_H_ */
+
