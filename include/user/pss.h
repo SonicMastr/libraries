@@ -18,4 +18,3 @@ void pss_code_mem_unlock(void);
 
 #endif /* _PSP2_PSS_H_ */
 
-/** \} */

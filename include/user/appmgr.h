@@ -141,4 +141,3 @@ int sceAppMgrUmount(const char *mount_point);
 
 #endif /* _PSP2_APPMGR_H_ */
 
-/** \} */

@@ -71,4 +71,3 @@ int sceShellUtilUnlock(int type);
 
 #endif /* _PSP2_SHELLUTIL_H_ */
 
-/** \} */

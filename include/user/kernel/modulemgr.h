@@ -89,4 +89,3 @@ int sceKernelGetSystemSwVersion(SceKernelFwInfo *data);
 
 #endif /* _PSP2_KERNEL_MODULEMGR_H_ */
 
-/** \} */

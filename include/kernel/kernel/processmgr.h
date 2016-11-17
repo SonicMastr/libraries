@@ -15,4 +15,3 @@ void *sceKernelGetProcessKernelBuf(SceUID pid);
 
 #endif /* _PSP2_KERNEL_PROCESSMGR_H_ */
 
-/** \} */

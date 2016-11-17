@@ -19,4 +19,3 @@ int sceClibVsnprintf(char *, SceSize, const char *, va_list);
 
 #endif /* _PSP2_KERNEL_CLIB_H_ */
 
-/** \} */

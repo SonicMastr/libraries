@@ -1047,4 +1047,3 @@ void *sceKernelGetTLSAddr(int key);
 
 #endif /* _PSP2_KERNEL_THREADMGR_H_ */
 
-/** \} */

@@ -85,4 +85,3 @@ int sceIoIoctlAsync(SceUID fd, unsigned int cmd, void *indata, int inlen, void *
 
 #endif /* _PSP2_IO_DEVCTRL_H_ */
 
-/** \} */

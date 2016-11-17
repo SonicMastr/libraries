@@ -1067,4 +1067,3 @@ int sceKernelRunWithStack(int stack_size, int (*to_call)(void *), void *args);
 
 #endif /* _PSP2_KERNEL_THREADMGR_H_ */
 
-/** \} */

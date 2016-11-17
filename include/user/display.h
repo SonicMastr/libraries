@@ -154,4 +154,3 @@ int sceDisplayUnregisterVblankStartCallback(SceUID uid);
 
 #endif /* _PSP2_DISPLAY_H_ */
 
-/** \} */
