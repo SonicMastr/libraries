@@ -1,0 +1,15 @@
+modules:
+  ScePromoterUtil:
+    nid: 0xB31C2D5C
+    libraries:
+      ScePromoterUtil:
+        nid: 0x31F237B6
+        functions:
+          scePromoterUtilityDeletePkg: 0x7D46752F
+          scePromoterUtilityExit: 0xC95D24A6
+          scePromoterUtilityGetResult: 0x49B473F0
+          scePromoterUtilityGetState: 0xABEC74D2
+          scePromoterUtilityInit: 0x93451536
+          scePromoterUtilityPromotePkg: 0x716C81F4
+          scePromoterUtilityPromotePkgWithRif: 0x86641BC6
+          scePromoterUtilityUpdateLiveArea: 0x17D73ECA
