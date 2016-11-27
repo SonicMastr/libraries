@@ -97,12 +97,16 @@ modules:
         nid: 0xE2C40624
         functions:
           sceKernelCreateCallback: 0x1C41614C
+          sceKernelCreateEventFlag: 0x4336BAA4
           sceKernelCreateThread: 0xC6674E7D
+          sceKernelDelayThread: 0x4B675D05
+          sceKernelDelayThreadCB: 0x9C0180E1
           sceKernelDeleteCallback: 0x3A7E17F6
           sceKernelDeleteThread: 0xAC834F3F
           sceKernelGetProcessId: 0x9DCB4B7A
           sceKernelGetSystemTimeWide: 0xF4EE4FA9
           sceKernelStartThread: 0x21F5419B
+          sceKernelWaitEventFlagCB: 0x8A35F714
           sceKernelWaitThreadEnd: 0x3E20216F
       SceThreadmgrForKernel:
         nid: 0xA8CA0EFD
