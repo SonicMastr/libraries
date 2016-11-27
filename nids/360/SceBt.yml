@@ -19,6 +19,7 @@ modules:
           sceBtGetLastError: 0x4E159A08
           sceBtGetRegisteredInfo: 0xB6C9A094
           sceBtGetStatusForTest: 0x48A27F7E
+          sceBtGetVidPid: 0xBE01ACE7
           sceBtHfpGetCurrentPhoneNumber: 0xB0CD46A4
           sceBtHfpRequest: 0xD924787E
           sceBtHidGetReportDescriptor: 0x95614634
@@ -56,17 +57,22 @@ modules:
           sceBtAvrcpReadVolume: 0xC9C70056
           sceBtAvrcpSendButton: 0xEC5F8519
           sceBtAvrcpSendVolume: 0x7689DA3D
+          sceBtAvrcpSetPlayStatus: 0xC5E7349C
           sceBtAvrcpSetTitle: 0x91EF55AD
           sceBtDeleteRegisteredInfo: 0xE6F659E0
           sceBtFreqAudio: 0xDA20DCC8
           sceBtGetConfiguration: 0x94C66A3B
+          sceBtGetConnectingInfo: 0xE9936446
           sceBtGetDeviceName: 0x633F784C
           sceBtGetInfoForTest: 0x2C9DD7BB
           sceBtGetLastError: 0xAD31A43E
           sceBtGetRegisteredInfo: 0xF86D25E2
           sceBtGetStatusForTest: 0x83781649
+          sceBtGetVidPid: 0x780A5557
           sceBtHfpGetCurrentPhoneNumber: 0x7BC66D6D
           sceBtHfpRequest: 0x6E49D11D
+          sceBtHidGetReportDescriptor: 0x06CB4ABA
+          sceBtHidTransfer: 0xF9DCEC77
           sceBtPushBip: 0x7FF77792
           sceBtPushOpp: 0x21C788E2
           sceBtReadEvent: 0x5ABB9A9D
