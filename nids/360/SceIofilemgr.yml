@@ -38,5 +38,6 @@ modules:
           sceIoMkdir: 0x7F710B25
           sceIoOpen: 0x75192972
           sceIoRead: 0xE17EFC03
+          sceIoRemove: 0x0D7BB3E1
           sceIoRename: 0xDC0C4997
           sceIoWrite: 0x21EE91F0
