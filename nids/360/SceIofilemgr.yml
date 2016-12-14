@@ -31,6 +31,7 @@ modules:
         functions:
           sceIoChstat: 0x7D42B8DC
           sceIoClose: 0xF99DD8A3
+          sceIoDevctl: 0x16882FC4
           sceIoDopen: 0x463B25CC
           sceIoDread: 0x20CF5FC7
           sceIoGetstat: 0x75C96D25
