@@ -20,17 +20,21 @@ modules:
       SceSysclibForDriver:
         nid: 0x7EE45391
         functions:
+          __stack_chk_fail: 0xB997493D
+          memchr: 0x60DAEA30
           memcmp: 0xF939E83D
           memcpy: 0x40C88316
+          memmove: 0x6CC9C1A1
           memset: 0x0AB9BF5C
           rshift: 0x1D89F6C0
-          sceKernelStackCheckFail: 0xB997493D
           snprintf: 0xAE7A8981
+          sprintf: 0x3DDBE2E1
           strchr: 0x38463759
           strcmp: 0x0B33BC43
           strlen: 0xCFC6A9AC
           strncat: 0xA1D1C32C
           strncmp: 0x12CEE649
+          strncpy: 0x6D286146
           strnlen: 0xCD4BD884
           strrchr: 0x7F0E0835
           strstr: 0x1304A69D
