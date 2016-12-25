@@ -261,7 +261,17 @@ typedef struct {
 typedef struct {
 	// mac0 is at *(unsigned int *)&data[0x08];
 	// mac1 is at *(unsigned int *)&data[0x0C];
-	unsigned char data[0x10];
+	union {
+		unsigned char data[0x10];
+		struct {
+			unsigned char id;
+			unsigned char unk1;
+			unsigned short unk2;
+			unsigned int unk3;
+			unsigned int mac0;
+			unsigned int mac1;
+		};
+	};
 } SceBtEvent;
 
 typedef void (*SceBtCallback)(int r0, int r1, int r2, int r3);
@@ -283,7 +293,7 @@ int sceBtAvrcpSendButton(int r0, int r1, int r2, int r3);
 int sceBtAvrcpSendVolume(int r0, int r1, int r2, int r3);
 int sceBtAvrcpSetPlayStatus(int r0, int r1, int r2, int r3);
 int sceBtAvrcpSetTitle(int r0, int r1, int r2, int r3);
-int sceBtDeleteRegisteredInfo(int r0, int r1, int r2, int r3);
+int sceBtDeleteRegisteredInfo(unsigned int mac0, unsigned int mac1);
 int sceBtFreqAudio(int r0, int r1, int r2, int r3);
 int sceBtGetConfiguration(void); // returns 0x0 BT disabled, 0x9 if enabled
 int sceBtGetConnectingInfo(unsigned int mac0, unsigned int mac1); // 1 = disconnected?, 2 = connecting?, 5 = connected?
