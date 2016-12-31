@@ -42,6 +42,8 @@ modules:
           sceCtrlReadBufferNegative: 0x8D4E0DD1
           sceCtrlReadBufferPositive: 0x9B96A1AA
           sceCtrlRegisterNotifyCallBack: 0xE170883E
+          sceCtrlSetAnalogEmulation: 0x06577FE8
+          sceCtrlSetButtonEmulation: 0x1E750326
           sceCtrlSetButtonIntercept: 0x06AA5E1A
           sceCtrlSetIdleCancelKey: 0x0A679512
           sceCtrlSetIdleCancelThreshold: 0x345E74FD
