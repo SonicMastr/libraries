@@ -21,8 +21,8 @@ modules:
         nid: 0x7290B21C
         functions:
           sceKernelNotifySuspendCallback: 0xD4622EA8
+          sceKernelPowerTick: 0xE0489831
           sceKernelRegisterSuspendCallback: 0x04C05D10
-          sceKernelResetAutoSuspendTimer: 0xE0489831
           sceKernelUnregisterSuspendCallback: 0xDD61D621
       SceSysclibForDriver:
         nid: 0x7EE45391
