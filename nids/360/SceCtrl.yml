@@ -1,6 +1,6 @@
 modules:
   SceCtrl:
-    nid: 0x00000021
+    nid: 0x3BAF0220
     libraries:
       SceCtrl:
         nid: 0xD197E3C7
@@ -27,3 +27,26 @@ modules:
           sceCtrlSetSamplingMode: 0xA497B150
           sceCtrlSetSamplingModeExt: 0xB1DC4378
           sceCtrlSingleControllerMode: 0x031BE396
+      SceCtrlForDriver:
+        nid: 0x7823A5D1
+        functions:
+          sceCtrlChangePortAssign: 0x53381364
+          sceCtrlClearRapidFire: 0xED138A26
+          sceCtrlGetActiveControllerPort: 0xFA88D837
+          sceCtrlGetButtonIntercept: 0x6BEB1CD7
+          sceCtrlGetControllerPortInfo: 0xF11D0D30
+          sceCtrlGetSamplingMode: 0x145B13BC
+          sceCtrlIsBdRemoconConnected: 0x5B849B22
+          sceCtrlPeekBufferNegative: 0x19895843
+          sceCtrlPeekBufferPositive: 0xEA1D3A34
+          sceCtrlReadBufferNegative: 0x8D4E0DD1
+          sceCtrlReadBufferPositive: 0x9B96A1AA
+          sceCtrlRegisterNotifyCallBack: 0xE170883E
+          sceCtrlSetButtonIntercept: 0x06AA5E1A
+          sceCtrlSetIdleCancelKey: 0x0A679512
+          sceCtrlSetIdleCancelThreshold: 0x345E74FD
+          sceCtrlSetRapidFire: 0xA248CDAE
+          sceCtrlSetSamplingMode: 0x80F5E418
+          sceCtrlSetTurnOffInterval: 0xED8F0129
+          sceCtrlSetVibrationSetting: 0x4D8FE670
+          sceCtrlUnregisterNotifyCallBack: 0x9DAB51C4

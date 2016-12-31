@@ -1,6 +1,6 @@
 modules:
   SceTouch:
-    nid: 0x000000DA
+    nid: 0x7DAC4DEC
     libraries:
       SceTouch:
         nid: 0x3E4F4A81
@@ -19,3 +19,7 @@ modules:
           sceTouchSetRegion: 0x6134DFBE
           sceTouchSetSamplingState: 0x1B9C5D14
           sceTouchSetSamplingStateExt: 0x13CDFC43
+      SceTouchForDriver:
+        nid: 0xA4A7DAFC
+        functions:
+          sceTouchSetTouchEmulationData: 0xA32529B8

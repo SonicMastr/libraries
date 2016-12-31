@@ -1,6 +1,6 @@
 modules:
   SceDisplay:
-    nid: 0x0000002B
+    nid: 0x3F05296F
     libraries:
       SceDisplay:
         nid: 0x5ED8F994

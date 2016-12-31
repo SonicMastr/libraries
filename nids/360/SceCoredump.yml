@@ -1,13 +1,13 @@
 modules:
   SceCoredump:
-    nid: 0x0000001E
+    nid: 0x3E0F5EBD
     libraries:
       SceCoredump:
-        nid: 0x0000001F
+        nid: 0xA143A77F
         functions:
           sceCoredumpRegisterCoredumpHandler: 0x031DC61E
           sceCoredumpUnregisterCoredumpHandler: 0x6037A2C3
       SceCoredumpNounlink:
-        nid: 0x00000020
+        nid: 0x2646E9D8
         functions:
           sceCoredumpWriteUserData: 0xDF335DCF
