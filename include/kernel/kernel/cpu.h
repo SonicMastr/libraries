@@ -81,7 +81,7 @@ int sceKernelCpuEnableInterrupts(int flags);
 
 /**
  * @brief      Flush L1 dcache and L2
- * 
+ *
  * Note: symbols currently does not work on 3.x, need to find new ones.
  *
  * @param      ptr   The pointer
@@ -100,6 +100,16 @@ int sceKernelCpuDcacheAndL2Flush(void *ptr, size_t len);
  * @return     Zero on success
  */
 int sceKernelCpuDcacheFlush(void *ptr, size_t len);
+
+/**
+ * @brief      Writeback a range of L1 dcache (not sure if L2 too)
+ *
+ * @param      ptr   The pointer
+ * @param[in]  len   The length
+ *
+ * @return     Zero on success
+ */
+int sceKernelCpuDcacheWritebackRange(void *ptr, size_t len);
 
 /**
  * @brief      Flush L1 icache and L2
@@ -123,7 +133,7 @@ int sceKernelCpuDcacheAndL2AndDMAFlush(void *ptr, size_t len);
 
 /**
  * @brief      MMU permission bypassing memcpy
- * 
+ *
  * This works by writing to the DACR before and after the memcpy.
  *
  * @param      dst   The destination

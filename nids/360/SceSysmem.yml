@@ -7,6 +7,7 @@ modules:
         functions:
           sceKernelCpuDcacheAndL2AndDMAFlush: 0x364E68A4
           sceKernelCpuDcacheAndL2Flush: 0x9CB9F0CE
+          sceKernelCpuDcacheWritebackRange: 0x103872A5
           sceKernelCpuDisableInterrupts: 0x821FC0EE
           sceKernelCpuEnableInterrupts: 0xF5BAD43B
       SceCpuForKernel:
