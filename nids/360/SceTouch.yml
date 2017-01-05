@@ -22,4 +22,5 @@ modules:
       SceTouchForDriver:
         nid: 0xA4A7DAFC
         functions:
+          sceTouchSetRegion: 0x7985B164
           sceTouchSetTouchEmulationData: 0xA32529B8
