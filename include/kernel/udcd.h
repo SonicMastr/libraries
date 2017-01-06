@@ -478,7 +478,7 @@ int sceUdcdDeactivate(void);
   *
   * @return OR'd SCE_UDCD_STATUS_* constants
   */
-int sceUdcdGetState(void);
+int sceUdcdGetDeviceState(void);
 
 /**
   * Get state of a specific USB driver
