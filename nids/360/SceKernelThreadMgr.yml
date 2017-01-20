@@ -102,10 +102,12 @@ modules:
           sceKernelDelayThread: 0x4B675D05
           sceKernelDelayThreadCB: 0x9C0180E1
           sceKernelDeleteCallback: 0x3A7E17F6
+          sceKernelDeleteEventFlag: 0x71ECB352
           sceKernelDeleteThread: 0xAC834F3F
           sceKernelGetProcessId: 0x9DCB4B7A
           sceKernelGetSystemTimeWide: 0xF4EE4FA9
           sceKernelStartThread: 0x21F5419B
+          sceKernelWaitEventFlag: 0x0C1D3F20
           sceKernelWaitEventFlagCB: 0x8A35F714
           sceKernelWaitThreadEnd: 0x3E20216F
       SceThreadmgrForKernel:
