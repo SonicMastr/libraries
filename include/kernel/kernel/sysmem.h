@@ -48,7 +48,7 @@ typedef struct SceKernelAllocMemBlockKernelOpt {
   SceUInt32 field_54;
 } SceKernelAllocMemBlockKernelOpt;
 
-typedef struct SceKernelMemPoolCreateOpt {
+typedef struct SceKernelHeapCreateOpt {
   SceSize size;
   SceUInt32 uselock;
   SceUInt32 field_8;
@@ -56,7 +56,7 @@ typedef struct SceKernelMemPoolCreateOpt {
   SceUInt32 field_10;
   SceUInt32 field_14;
   SceUInt32 field_18;
-} SceKernelMemPoolCreateOpt;
+} SceKernelHeapCreateOpt;
 
 typedef struct SceCreateUidObjOpt {
   SceUInt32 flags;
@@ -106,10 +106,10 @@ int sceKernelFreeMemBlock(SceUID uid);
 */
 int sceKernelGetMemBlockBase(SceUID uid, void **basep);
 
-SceUID sceKernelMemPoolCreate(const char *name, SceSize size, SceKernelMemPoolCreateOpt *opt);
-int sceKernelMemPoolDestroy(SceUID pool);
-void *sceKernelMemPoolAlloc(SceUID pool, SceSize size);
-void sceKernelMemPoolFree(SceUID pool, void *ptr);
+SceUID sceKernelCreateHeap(const char *name, SceSize size, SceKernelHeapCreateOpt *opt);
+int sceKernelDeleteHeap(SceUID uid);
+void *sceKernelAllocHeapMemory(SceUID uid, SceSize size);
+void sceKernelFreeHeapMemory(SceUID uid, void *ptr);
 
 int sceKernelMemcpyUserToKernelForPid(SceUID pid, void *dst, uintptr_t src, size_t len);
 int sceKernelMemcpyUserToKernel(void *dst, uintptr_t src, size_t len);
