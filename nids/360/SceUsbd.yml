@@ -21,8 +21,10 @@ modules:
           sceUsbdOpenDefaultPipe: 0x4A26DDCC
           sceUsbdOpenPipe: 0xF94521A6
           sceUsbdReceiveEvent: 0x16FEE05D
+          sceUsbdRegisterCallback: 0x9A820167
           sceUsbdRegisterCompositeLdd: 0x2A7C0263
           sceUsbdRegisterLdd: 0x6AD28166
           sceUsbdResetDevice: 0xDEB3BE59
           sceUsbdTransferData: 0x716048C1
+          sceUsbdUnregisterCallback: 0x0585EA80
           sceUsbdUnregisterLdd: 0x473692CC
