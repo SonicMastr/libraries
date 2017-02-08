@@ -1,6 +1,8 @@
 #ifndef _PSP2_USBD_H_
 #define _PSP2_USBD_H_
 
+#include <psp2/kernel/threadmgr.h>
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -19,8 +21,19 @@ extern "C" {
 #define SCE_USBD_ERROR_PIPE 0x80240009
 #define SCE_USBD_ERROR_TIMEOUT 0x80240007
 
-int sceUsbdInit(int *);
-int sceUsbdEnd();
+typedef struct SceUsbdDeviceInfo {
+	unsigned int unk0;
+	unsigned int unk1;
+	unsigned int unk2;
+} SceUsbdDeviceInfo; /* size = 0xC */
+
+typedef struct SceUsbdDeviceAddress {
+	unsigned int unk0;
+	unsigned short unk1;
+} SceUsbdDeviceAddress; /* size = 0x6 */
+
+int sceUsbdInit(SceUID *uid);
+int sceUsbdEnd(SceUID uid);
 
 int sceUsbdRegisterCallback(SceUID cbid, int);
 int sceUsbdUnregisterCallback(SceUID cbid);
@@ -32,10 +45,10 @@ int sceUsbdOpenDefaultPipe();
 int sceUsbdOpenPipe();
 int sceUsbdClosePipe();
 
-int sceUsbdGetDeviceList();
-int sceUsbdGetDescriptor();
-int sceUsbdGetDescriptorSize();
-int sceUsbdGetDeviceLocation();
+int sceUsbdGetDeviceList(SceUID uid, unsigned int num, SceUsbdDeviceInfo *info);
+int sceUsbdGetDescriptor(SceUID uid, unsigned int descriptor_id, void *descriptor, unsigned int size);
+int sceUsbdGetDescriptorSize(SceUID uid, unsigned int descriptor_id);
+int sceUsbdGetDeviceAddress(SceUID uid, int, SceUsbdDeviceAddress *addr);
 int sceUsbdGetDeviceSpeed();
 int sceUsbdGetTransferStatus();
 int sceUsbdGetIsochTransferStatus();
