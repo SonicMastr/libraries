@@ -17,6 +17,14 @@ modules:
           sceDisplayWaitVblankStartCB: 0x78B41B92
           sceDisplayWaitVblankStartMulti: 0xDD0A13B8
           sceDisplayWaitVblankStartMultiCB: 0x05F27764
+      SceDisplayForDriver:
+        nid: 0x9FED47AC
+        functions:
+          sceDisplayGetFrameBuf: 0xEEDA2E54
+          sceDisplayGetFrameBufDimensions: 0x5AFE6CD3
+          sceDisplayGetFrameBufInternal: 0x19F94C63
+          sceDisplaySetFrameBuf: 0x289D82FE
+          sceDisplaySetFrameBufInternal: 0x16466675
       SceDisplayUser:
         nid: 0x4FAACD11
         functions:
