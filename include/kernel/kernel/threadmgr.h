@@ -992,7 +992,6 @@ typedef enum SceKernelIdListType {
 SceKernelIdListType sceKernelGetThreadmgrUIDClass(SceUID uid);
 
 
-
 typedef struct  SceKernelLwMutexWork {
   SceInt64 data[4];
 } SceKernelLwMutexWork;
@@ -1018,7 +1017,6 @@ int sceKernelCreateLwCond(SceKernelLwCondWork *pWork, const char *pName, unsigne
 int sceKernelDeleteLwCond(SceKernelLwCondWork *pWork);
 int sceKernelSignalLwCond(SceKernelLwCondWork *pWork);
 int sceKernelWaitLwCond(SceKernelLwCondWork *pWork,  unsigned int *pTimeout);
-
 
 
 /**

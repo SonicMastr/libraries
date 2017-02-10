@@ -31,11 +31,9 @@ int scePromoterUtilityExit(void);
 /**
  * Delete a package from the LiveArea.
  *
- * @param[in] *titleid
- *
  * @return 0 on success.
  */
-int scePromoterUtilityDeletePkg(const char *titleid);
+int scePromoterUtilityDeletePkg(void *unk);
 
 /**
  * Update the LiveArea ressources of an app

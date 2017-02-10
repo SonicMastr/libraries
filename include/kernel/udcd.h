@@ -514,7 +514,6 @@ int sceUdcdWaitState(unsigned int state, unsigned int waitMode, SceUInt *timeout
 int sceUdcdWaitCancel(void);
 
 
-
 /**
  * Register a USB driver.
  *
