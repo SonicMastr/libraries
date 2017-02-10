@@ -80,29 +80,7 @@ int sceKernelCpuDisableInterrupts(void);
 int sceKernelCpuEnableInterrupts(int flags);
 
 /**
- * @brief      Flush L1 dcache and L2
- *
- * Note: symbols currently does not work on 3.x, need to find new ones.
- *
- * @param      ptr   The pointer
- * @param[in]  len   The length
- *
- * @return     Zero on success
- */
-int sceKernelCpuDcacheAndL2Flush(void *ptr, size_t len);
-
-/**
- * @brief      Flush L2 dcache without L2
- *
- * @param      ptr   The pointer
- * @param[in]  len   The length
- *
- * @return     Zero on success
- */
-int sceKernelCpuDcacheFlush(void *ptr, size_t len);
-
-/**
- * @brief      Writeback a range of L1 dcache (not sure if L2 too)
+ * @brief      Writeback a range of L1 dcache (without L2)
  *
  * @param      ptr   The pointer
  * @param[in]  len   The length
@@ -112,24 +90,54 @@ int sceKernelCpuDcacheFlush(void *ptr, size_t len);
 int sceKernelCpuDcacheWritebackRange(void *ptr, size_t len);
 
 /**
- * @brief      Flush L1 icache and L2
+ * @brief      Writeback and invalidate a range of L1 dcache (without L2)
  *
  * @param      ptr   The pointer
  * @param[in]  len   The length
  *
  * @return     Zero on success
  */
-int sceKernelCpuIcacheAndL2Flush(void *ptr, size_t len);
+int sceKernelCpuDcacheWritebackInvalidateRange(void *ptr, size_t len);
 
 /**
- * @brief      Flush L1 dcache and L2 for DMA operations
+ * @brief      Writeback a range of L1 dcache and L2
  *
  * @param      ptr   The pointer
  * @param[in]  len   The length
  *
  * @return     Zero on success
  */
-int sceKernelCpuDcacheAndL2AndDMAFlush(void *ptr, size_t len);
+int sceKernelCpuDcacheAndL2WritebackRange(void *ptr, size_t len);
+
+/**
+ * @brief      Writeback and invalidate a range of L1 and L2 dcache
+ *
+ * @param      ptr   The pointer
+ * @param[in]  len   The length
+ *
+ * @return     Zero on success
+ */
+int sceKernelCpuDcacheAndL2InvalidateRange(void *ptr, size_t len);
+
+/**
+ * @brief      Writeback and invalidate a range of L1 icache and L2
+ *
+ * @param      ptr   The pointer
+ * @param[in]  len   The length
+ *
+ * @return     Zero on success
+ */
+int sceKernelCpuIcacheAndL2WritebackInvalidateRange(void *ptr, size_t len);
+
+/**
+ * @brief      Writeback and invalidate a range of L1 dcache and L2
+ *
+ * @param      ptr   The pointer
+ * @param[in]  len   The length
+ *
+ * @return     Zero on success
+ */
+int sceKernelCpuDcacheAndL2WritebackInvalidateRange(void *ptr, size_t len);
 
 /**
  * @brief      MMU permission bypassing memcpy
