@@ -1,0 +1,8 @@
+modules:
+  SceLowio:
+    nid: 0x17E0D8DF
+    libraries:
+      SceGpioForDriver:
+        nid: 0xF0EF5743
+        functions:
+          sceGpioQueryIntr: 0x010DC295
