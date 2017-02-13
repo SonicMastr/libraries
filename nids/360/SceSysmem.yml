@@ -5,16 +5,17 @@ modules:
       SceCpuForDriver:
         nid: 0x40ECDB0E
         functions:
-          sceKernelCpuDcacheAndL2AndDMAFlush: 0x364E68A4
-          sceKernelCpuDcacheAndL2Flush: 0x9CB9F0CE
-          sceKernelCpuDcacheWritebackRange: 0x103872A5
+          sceKernelCpuDcacheAndL2InvalidateRange: 0x02796361
+          sceKernelCpuDcacheAndL2WritebackInvalidateRange: 0x364E68A4
+          sceKernelCpuDcacheAndL2WritebackRange: 0x103872A5
+          sceKernelCpuDcacheWritebackRange: 0x9CB9F0CE
           sceKernelCpuDisableInterrupts: 0x821FC0EE
           sceKernelCpuEnableInterrupts: 0xF5BAD43B
       SceCpuForKernel:
         nid: 0x54BF2BAB
         functions:
-          sceKernelCpuDcacheFlush: 0x6BA2E51C
-          sceKernelCpuIcacheAndL2Flush: 0x19F17BD0
+          sceKernelCpuDcacheWritebackInvalidateRange: 0x6BA2E51C
+          sceKernelCpuIcacheAndL2WritebackInvalidateRange: 0x19F17BD0
           sceKernelCpuRestoreContext: 0x0A4F0FB9
           sceKernelCpuSaveContext: 0x211B89DA
           sceKernelCpuUnrestrictedMemcpy: 0x8C683DEC
