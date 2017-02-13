@@ -1,0 +1,23 @@
+modules:
+  SceKernelIntrMgr:
+    nid: 0x73B1F972
+    libraries:
+      SceIntrmgrForDriver:
+        nid: 0x9DF04041
+        functions:
+          sceKernelClearIntrPending: 0x4DC48A01
+          sceKernelDisableSubIntr: 0x259C6D9E
+          sceKernelEnableSubIntr: 0x901E41D8
+          sceKernelGetIntrMasked: 0x6EC07C56
+          sceKernelIsIntrAllowedInCurrentContext: 0x182EE3E3
+          sceKernelIsIntrPending: 0xA269003D
+          sceKernelMaskIntr: 0x180435EC
+          sceKernelRegisterIntrHandler: 0x5C1FEB29
+          sceKernelRegisterSubIntrHandler: 0x96576C18
+          sceKernelReleaseIntrHandler: 0xD6009B98
+          sceKernelSetIntrMasked: 0x7117E827
+          sceKernelSetIntrPriority: 0x71020E29
+          sceKernelSetIntrTarget: 0x973BACCC
+          sceKernelTriggerSGI: 0x29F62500
+          sceKernelTriggerSubIntr: 0xCC94B294
+          sceKernelUnmaskIntr: 0x7117E827
