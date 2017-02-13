@@ -50,6 +50,7 @@ int sceKernelRegisterSubIntrHandler(int intr_code, int subintr_code, const char 
 	SceKernelSubIntrHandler handler, void *register_arg);
 int sceKernelTriggerSubIntr(int intr_code, int subintr_code, void *subintr_arg);
 int sceKernelEnableSubIntr(int intr_code, int subintr_code);
+int sceKernelDisableSubIntr(int intr_code, int subintr_code);
 
 #ifdef __cplusplus
 }
