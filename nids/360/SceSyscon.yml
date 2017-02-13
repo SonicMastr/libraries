@@ -1,0 +1,8 @@
+modules:
+  SceSyscon:
+    nid: 0x5358BA05
+    libraries:
+      SceSysconForDriver:
+        nid: 0x60A35F64
+        functions:
+          sceSysconCmdSync: 0x6E517D22

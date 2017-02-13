@@ -101,12 +101,14 @@ modules:
           sceKernelCreateCallback: 0x1C41614C
           sceKernelCreateEventFlag: 0x4336BAA4
           sceKernelCreateMutex: 0xFBAA026E
+          sceKernelCreateSema: 0x30E93C31
           sceKernelCreateThread: 0xC6674E7D
           sceKernelDelayThread: 0x4B675D05
           sceKernelDelayThreadCB: 0x9C0180E1
           sceKernelDeleteCallback: 0x3A7E17F6
           sceKernelDeleteEventFlag: 0x71ECB352
           sceKernelDeleteMutex: 0x0A912340
+          sceKernelDeleteSema: 0x16A35E58
           sceKernelDeleteThread: 0xAC834F3F
           sceKernelExitDeleteThread: 0x1D17DECF
           sceKernelExitThread: 0x0C8A38E1
@@ -122,4 +124,5 @@ modules:
           sceKernelUnlockMutex: 0x1E82E5D0
           sceKernelWaitEventFlag: 0x0C1D3F20
           sceKernelWaitEventFlagCB: 0x8A35F714
+          sceKernelWaitSema: 0x3C8B55A9
           sceKernelWaitThreadEnd: 0x3E20216F
