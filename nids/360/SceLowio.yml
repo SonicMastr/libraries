@@ -5,4 +5,9 @@ modules:
       SceGpioForDriver:
         nid: 0xF0EF5743
         functions:
+          sceGpioAcquireIntr: 0x35AAD77A
+          sceGpioPortClear: 0xF6310435
+          sceGpioPortSet: 0xD454A584
           sceGpioQueryIntr: 0x010DC295
+          sceGpioSetIntrMode: 0xBBEA1DDC
+          sceGpioSetPortMode: 0x372022A4
