@@ -96,7 +96,10 @@ modules:
       SceThreadmgrForDriver:
         nid: 0xE2C40624
         functions:
+          sceKernelCancelCallback: 0xC040EC1C
           sceKernelCancelMutex: 0x7204B846
+          sceKernelChangeThreadPriority: 0x63DAB420
+          sceKernelClearEvent: 0x9C335818
           sceKernelClearEventFlag: 0x4F1DA3BE
           sceKernelCreateCallback: 0x1C41614C
           sceKernelCreateEventFlag: 0x4336BAA4
@@ -110,20 +113,48 @@ modules:
           sceKernelDeleteMutex: 0x0A912340
           sceKernelDeleteSema: 0x16A35E58
           sceKernelDeleteThread: 0xAC834F3F
+          sceKernelEnterProcess: 0x0486F239
           sceKernelExitDeleteThread: 0x1D17DECF
           sceKernelExitThread: 0x0C8A38E1
+          sceKernelGetCallbackCount: 0x0892D8DF
           sceKernelGetProcessId: 0x9DCB4B7A
           sceKernelGetSystemTimeLow: 0x47F6DE49
           sceKernelGetSystemTimeWide: 0xF4EE4FA9
+          sceKernelGetThreadCpuAffinityMask: 0x83DC703D
           sceKernelGetThreadCurrentPriority: 0x01414F0B
+          sceKernelGetThreadStackFreeSize: 0x7B278A0B
+          sceKernelGetThreadTLSAddr: 0x66EEA46A
           sceKernelGetThreadmgrUIDClass: 0x0A20775A
+          sceKernelGetTimerBaseWide: 0xA6D11DD3
+          sceKernelGetTimerTimeWide: 0xC1286004
           sceKernelInitializeFastMutex: 0xAF8E1266
           sceKernelLockMutex: 0x16AC80C5
+          sceKernelNotifyCallback: 0xC3E00919
+          sceKernelPollEventFlag: 0x76C6555B
+          sceKernelPollSema: 0x4FDDFE24
+          sceKernelPulseEvent: 0x2427C81B
+          sceKernelRegisterCallbackToEvent: 0x832A7E0C
           sceKernelRunWithStack: 0xE54FD746
+          sceKernelSetEvent: 0x9EA3A45C
           sceKernelSetEventFlag: 0xD4780C3E
+          sceKernelSetTimerTimeWide: 0x85195A16
+          sceKernelSignalCond: 0xAC616150
+          sceKernelSignalCondAll: 0x6EC78CD0
+          sceKernelSignalCondTo: 0x61533DA9
+          sceKernelSignalSema: 0xD270498B
           sceKernelStartThread: 0x21F5419B
+          sceKernelStartTimer: 0x84C4CE4D
+          sceKernelStopTimer: 0x474F214B
+          sceKernelTryLockReadRWLock: 0xFC2B5A50
+          sceKernelTryLockWriteRWLock: 0xA96F2E5A
           sceKernelUnlockMutex: 0x1E82E5D0
+          sceKernelUnlockReadRWLock: 0xDE1B9EEE
+          sceKernelUnlockWriteRWLock: 0x94A73797
+          sceKernelUnregisterCallbackFromEvent: 0x2E48D81C
+          sceKernelUnregisterCallbackFromEventAll: 0x8DADBD16
+          sceKernelUnregisterThreadEventHandler: 0x2C8ED6F0
           sceKernelWaitEventFlag: 0x0C1D3F20
           sceKernelWaitEventFlagCB: 0x8A35F714
           sceKernelWaitSema: 0x3C8B55A9
           sceKernelWaitThreadEnd: 0x3E20216F
+          sceKernelWaitThreadEndCB: 0x9EF4F62C
