@@ -5,4 +5,31 @@ modules:
       SceSysconForDriver:
         nid: 0x60A35F64
         functions:
+          sceSysconBeginConfigstorageTransaction: 0xA4968B8C
+          sceSysconClearTemperatureLog: 0x3843D657
           sceSysconCmdSync: 0x6E517D22
+          sceSysconCommitConfigstorageTransaction: 0x7B9B3617
+          sceSysconCtrlManualChargeMode: 0xC6A2C9EF
+          sceSysconEnableHibernateIO: 0x4946538A
+          sceSysconEndConfigstorageTransaction: 0xFCC3E8EE
+          sceSysconGetHardwareInfo: 0xCBD6D8BC
+          sceSysconGetHardwareInfo2: 0x965C68C3
+          sceSysconGetLogInfo: 0x701535FC
+          sceSysconGetManualChargeMode: 0x4FEC564C
+          sceSysconGetManufacturesStatus: 0x3E09A1F4
+          sceSysconGetTemperatureLog: 0x3B354824
+          sceSysconGetUsbDetStatus: 0xEF810687
+          sceSysconHasWWAN: 0xCBD6D8BC
+          sceSysconIduModeClear: 0x34574496
+          sceSysconIduModeSet: 0x956D07CB
+          sceSysconIsDownLoaderMode: 0x9ADD60D2
+          sceSysconIsIduMode: 0xCBD6D8BC
+          sceSysconIsMCEmuCapable: 0xCBD6D8BC
+          sceSysconIsShowMode: 0xCBD6D8BC
+          sceSysconLoadConfigstorageScript: 0x89C5CFD6
+          sceSysconLogReadData: 0x487D97F3
+          sceSysconLogStart: 0x4E55CF5E
+          sceSysconLogStartWaiting: 0x9C0B1E61
+          sceSysconShowModeClear: 0x8D7724C0
+          sceSysconShowModeSet: 0x6D65B70F
+          sceSysconVerifyConfigstorageScript: 0xCC6F90A8

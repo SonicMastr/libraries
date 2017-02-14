@@ -9,11 +9,20 @@ modules:
       SceRtcForDriver:
         nid: 0x0351D827
         functions:
+          sceRtcGetAlarmTick: 0xC838275A
+          sceRtcGetCurrentSecureTick: 0x401C0954
+          sceRtcGetSecureAlarmTick: 0xBD53731C
           sceRtcIsAlarmed: 0xCD295F0C
           sceRtcIsSecureAlarmed: 0xE39F2ABE
           sceRtcRegisterCallback: 0x5220870D
           sceRtcRegisterSecureAlarmCallback: 0xCF84DFC0
+          sceRtcSetAlarmTick: 0xD610C646
           sceRtcSetConf: 0xACFE5A9F
+          sceRtcSetCurrentDebugNetworkTick: 0xAAB6053F
+          sceRtcSetCurrentNetworkTick: 0x162E486E
+          sceRtcSetCurrentSecureTick: 0x7D431C87
+          sceRtcSetCurrentTick: 0x70A78CD2
+          sceRtcSetSecureAlarmTick: 0x8333790D
           sceRtcUnregisterCallback: 0x9546C68B
           sceRtcUnregisterSecureAlarmCallback: 0xEDDC2325
       SceRtcUser:

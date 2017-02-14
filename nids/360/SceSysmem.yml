@@ -33,6 +33,7 @@ modules:
       SceSblAIMgrForDriver:
         nid: 0xFD00C69A
         functions:
+          sceSblAimgrGetSMI: 0x47D9CF13
           sceSblAimgrIsCEX: 0xD78B04A2
           sceSblAimgrIsDEX: 0xF4B98F66
           sceSblAimgrIsDolce: 0x71608CA3
@@ -44,6 +45,7 @@ modules:
       SceSysclibForDriver:
         nid: 0x7EE45391
         functions:
+          __muldi3: 0x7554AB04
           __stack_chk_fail: 0xB997493D
           memchr: 0x60DAEA30
           memcmp: 0xF939E83D
@@ -135,3 +137,5 @@ modules:
           sceSysrootIsSafeMode: 0x834439A7
           sceSysrootIsUpdateMode: 0xB0E1FC67
           sceSysrootIsUsbEnumWakeup: 0x79C9AE10
+          sceSysrootUseExternalStorage: 0x55392965
+          sceSysrootUseInternalStorage: 0x50FE3B4D

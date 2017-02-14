@@ -5,6 +5,7 @@ modules:
       SceIdStorageForDriver:
         nid: 0xE1AC6D7C
         functions:
+          sceIdStorageCreateAtomicLeaves: 0x99ACCB71
           sceIdStorageCreateLeaf: 0x08A471A6
           sceIdStorageDeleteLeaf: 0x2C97AB36
           sceIdStorageFlush: 0x3AD32523

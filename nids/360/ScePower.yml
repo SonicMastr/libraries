@@ -47,3 +47,14 @@ modules:
           scePowerSetIdleTimerCount: 0xB11EF149
           scePowerSetUsingWireless: 0x4D695C1F
           scePowerUnregisterCallback: 0xDFA8BAF8
+      ScePowerForDriver:
+        nid: 0x1590166F
+        functions:
+          scePowerGetWakeupFactor: 0x9F26222A
+          scePowerRequestColdReset: 0x0442D852
+          scePowerRequestHibernate: 0x08951418
+          scePowerSetBatteryFakeStatus: 0x0C6973B8
+          scePowerSetMipsClockFrequency: 0xFFC84E69
+          scePowerSetPowerSwMode: 0xC1853BA7
+          scePowerSetPsButtonPushTime: 0xCF8F0529
+          scePowerSetStandbyButtonPushTime: 0x675A84ED
