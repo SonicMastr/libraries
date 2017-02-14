@@ -1,7 +1,11 @@
 modules:
   ScePower:
-    nid: 0x00000093
+    nid: 0x5EAE6AEC
     libraries:
+      SceLedForDriver:
+        nid: 0x282C1323
+        functions:
+          sceLedSetMode: 0xEA24BE03
       ScePower:
         nid: 0x1082DA7F
         functions:
