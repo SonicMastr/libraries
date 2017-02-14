@@ -17,6 +17,7 @@ modules:
           sceKernelLoadStartModule: 0x189BFBBB
           sceKernelLoadStartModuleForPid: 0x9D953C22
           sceKernelLoadStartSharedModuleForPid: 0xE2ADEF8D
+          sceKernelSearchModuleByName: 0xBBE1771C
           sceKernelStartModule: 0x0675B682
           sceKernelStopModule: 0x100DAEB9
           sceKernelStopUnloadModule: 0x03B30B7E

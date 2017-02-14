@@ -116,6 +116,7 @@ modules:
           sceKernelGetSystemTimeLow: 0x47F6DE49
           sceKernelGetSystemTimeWide: 0xF4EE4FA9
           sceKernelGetThreadCurrentPriority: 0x01414F0B
+          sceKernelGetThreadmgrUIDClass: 0x0A20775A
           sceKernelInitializeFastMutex: 0xAF8E1266
           sceKernelLockMutex: 0x16AC80C5
           sceKernelRunWithStack: 0xE54FD746

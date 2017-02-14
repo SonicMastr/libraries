@@ -26,6 +26,21 @@ modules:
           sceKernelPowerTick: 0xE0489831
           sceKernelRegisterSuspendCallback: 0x04C05D10
           sceKernelUnregisterSuspendCallback: 0xDD61D621
+      SceKernelUtilsForDriver:
+        nid: 0x496AD8B4
+        functions:
+          sceKernelDeflateDecompress: 0x8AF1FAD4
+      SceSblAIMgrForDriver:
+        nid: 0xFD00C69A
+        functions:
+          sceSblAimgrIsCEX: 0xD78B04A2
+          sceSblAimgrIsDEX: 0xF4B98F66
+          sceSblAimgrIsDolce: 0x71608CA3
+          sceSblAimgrIsGenuineDolce: 0xC6E83F34
+          sceSblAimgrIsGenuineVITA: 0x963CA644
+          sceSblAimgrIsTest: 0x3B638885
+          sceSblAimgrIsTool: 0x274663A0
+          sceSblAimgrIsVITA: 0x4273B97B
       SceSysclibForDriver:
         nid: 0x7EE45391
         functions:
@@ -37,7 +52,6 @@ modules:
           memset: 0x0AB9BF5C
           rshift: 0x1D89F6C0
           snprintf: 0xAE7A8981
-          sprintf: 0x3DDBE2E1
           strchr: 0x38463759
           strcmp: 0x0B33BC43
           strlen: 0xCFC6A9AC
@@ -104,6 +118,7 @@ modules:
           sceKernelStrncpyUserToKernel: 0xDB3EC244
           sceKernelStrnlenUserForPid: 0x9929EB07
           sceKernelSwitchVmaForPid: 0x6F2ACDAE
+          sceKernelUnmapMemBlock: 0xFFCD9B60
       SceSysmemForKernel:
         nid: 0x63A519E5
         functions:

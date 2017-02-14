@@ -6,6 +6,16 @@ modules:
         nid: 0x3503487E
         functions:
           sceRtcGetAccumulativeTime: 0x258BE8EC
+      SceRtcForDriver:
+        nid: 0x0351D827
+        functions:
+          sceRtcIsAlarmed: 0xCD295F0C
+          sceRtcIsSecureAlarmed: 0xE39F2ABE
+          sceRtcRegisterCallback: 0x5220870D
+          sceRtcRegisterSecureAlarmCallback: 0xCF84DFC0
+          sceRtcSetConf: 0xACFE5A9F
+          sceRtcUnregisterCallback: 0x9546C68B
+          sceRtcUnregisterSecureAlarmCallback: 0xEDDC2325
       SceRtcUser:
         nid: 0x6704D3C6
         functions:
