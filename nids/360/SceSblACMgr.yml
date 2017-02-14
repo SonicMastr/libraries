@@ -5,6 +5,7 @@ modules:
       SceSblACMgrForDriver:
         nid: 0x9AD8E213
         functions:
+          sceSblACMgrHasCapability: 0xC2D1F2FC
           sceSblACMgrIsDevelopmentMode: 0xE87D1777
           sceSblACMgrIsGameProgram: 0x1298C647
           sceSblACMgrIsNonGameProgram: 0x6C5AB07F
