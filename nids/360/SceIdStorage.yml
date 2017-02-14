@@ -1,0 +1,22 @@
+modules:
+  SceIdStorage:
+    nid: 0x4BDAF254
+    libraries:
+      SceIdStorageForDriver:
+        nid: 0xE1AC6D7C
+        functions:
+          sceIdStorageCreateLeaf: 0x08A471A6
+          sceIdStorageDeleteLeaf: 0x2C97AB36
+          sceIdStorageFlush: 0x3AD32523
+          sceIdStorageFormat: 0x958089DB
+          sceIdStorageGetFreeLeaves: 0x37833CB8
+          sceIdStorageGetLeafSize: 0xEB830733
+          sceIdStorageIsDirty: 0xB9069BAD
+          sceIdStorageIsFormatted: 0xFEFA40C2
+          sceIdStorageIsReadOnly: 0x2D633688
+          sceIdStorageLookup: 0x6FE062D1
+          sceIdStorageReadLeaf: 0xEB00C509
+          sceIdStorageRestart: 0x60B647A5
+          sceIdStorageUnformat: 0xF4BCB3EE
+          sceIdStorageUpdate: 0x683AAC10
+          sceIdStorageWriteLeaf: 0x1FA4D135

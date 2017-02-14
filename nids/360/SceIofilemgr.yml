@@ -31,23 +31,33 @@ modules:
         functions:
           sceIoChstat: 0x7D42B8DC
           sceIoChstatByFd: 0xDF57A75F
+          sceIoClearErrorEvent: 0x40B933C7
           sceIoClose: 0xF99DD8A3
+          sceIoCreateErrorEvent: 0x3C0343DB
+          sceIoCreateMountEvent: 0x2DFA192F
           sceIoDclose: 0x19C81DD6
+          sceIoDeleteErrorEvent: 0xC6158F8D
+          sceIoDeleteMountEvent: 0x43DB0AE4
           sceIoDevctl: 0x16882FC4
           sceIoDopen: 0x463B25CC
           sceIoDread: 0x20CF5FC7
+          sceIoFlock: 0x16336A0D
+          sceIoGetProcessDefaultPriorityForSystem: 0xCE397158
           sceIoGetstat: 0x75C96D25
           sceIoGetstatByFd: 0x462F059B
           sceIoLseek: 0x62090481
           sceIoMkdir: 0x7F710B25
+          sceIoMount: 0xD070BC48
           sceIoOpen: 0x75192972
           sceIoRead: 0xE17EFC03
           sceIoReadAsync: 0x69047C81
           sceIoRemove: 0x0D7BB3E1
           sceIoRename: 0xDC0C4997
           sceIoRmdir: 0x1CC9C634
+          sceIoSetProcessDefaultPriorityForSystem: 0xABE65071
           sceIoSync: 0xDDF78594
           sceIoSyncByFd: 0x338DCD68
           sceIoSyncByFdAsync: 0x041209CF
+          sceIoUmount: 0x20574100
           sceIoWrite: 0x21EE91F0
           sceIoWriteAsync: 0xA1BD13D0

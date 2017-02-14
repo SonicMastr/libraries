@@ -7,6 +7,7 @@ modules:
         functions:
           sceUsbdRegisterCompositeLdd: 0x6E53D7F4
           sceUsbdRegisterDriver: 0x1EC94F18
+          sceUsbdSuspendPhase2: 0xD7AA730D
       SceUsbdForUser:
         nid: 0xC3AEAB67
         functions:

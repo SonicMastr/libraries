@@ -148,6 +148,13 @@ int scePowerRequestStandby(void);
 int scePowerRequestSuspend(void);
 
 /**
+ * Request display off
+ *
+ * @return always 0
+ */
+int scePowerRequestDisplayOff(void);
+
+/**
  * Sets CPU clock frequency
  *
  * @param freq - Frequency to set in Mhz
