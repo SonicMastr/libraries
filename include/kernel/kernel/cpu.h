@@ -110,6 +110,27 @@ int sceKernelCpuDcacheInvalidateRange(void *ptr, size_t len);
 int sceKernelCpuDcacheWritebackInvalidateRange(void *ptr, size_t len);
 
 /**
+ * @brief      Invalidate all the L1 dcache (without L2)
+ *
+ * @return     Zero on success
+ */
+int sceKernelCpuDcacheInvalidateAll(void);
+
+/**
+ * @brief      Writeback all the L1 dcache (without L2)
+ *
+ * @return     Zero on success
+ */
+int sceKernelCpuDcacheWritebackAll(void);
+
+/**
+ * @brief      Writeback and invalidate all the L1 dcache (without L2)
+ *
+ * @return     Zero on success
+ */
+int sceKernelCpuDcacheWritebackInvalidateAll(void);
+
+/**
  * @brief      Writeback a range of L1 dcache and L2
  *
  * @param      ptr   The pointer

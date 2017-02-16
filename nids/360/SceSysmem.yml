@@ -15,6 +15,9 @@ modules:
       SceCpuForKernel:
         nid: 0x54BF2BAB
         functions:
+          sceKernelCpuDcacheInvalidateAll: 0x2F3BF020
+          sceKernelCpuDcacheWritebackAll: 0x73A30DB2
+          sceKernelCpuDcacheWritebackInvalidateAll: 0x76DAB4D0
           sceKernelCpuDcacheWritebackInvalidateRange: 0x6BA2E51C
           sceKernelCpuIcacheAndL2WritebackInvalidateRange: 0x19F17BD0
           sceKernelCpuIcacheInvalidateAll: 0x264DA250
