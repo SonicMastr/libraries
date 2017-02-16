@@ -8,6 +8,7 @@ modules:
           sceKernelCpuDcacheAndL2InvalidateRange: 0x02796361
           sceKernelCpuDcacheAndL2WritebackInvalidateRange: 0x364E68A4
           sceKernelCpuDcacheAndL2WritebackRange: 0x103872A5
+          sceKernelCpuDcacheInvalidateRange: 0x8B4C26DF
           sceKernelCpuDcacheWritebackRange: 0x9CB9F0CE
           sceKernelCpuDisableInterrupts: 0x821FC0EE
           sceKernelCpuEnableInterrupts: 0xF5BAD43B
@@ -16,6 +17,8 @@ modules:
         functions:
           sceKernelCpuDcacheWritebackInvalidateRange: 0x6BA2E51C
           sceKernelCpuIcacheAndL2WritebackInvalidateRange: 0x19F17BD0
+          sceKernelCpuIcacheInvalidateAll: 0x264DA250
+          sceKernelCpuIcacheInvalidateRange: 0xF4C7F578
           sceKernelCpuRestoreContext: 0x0A4F0FB9
           sceKernelCpuSaveContext: 0x211B89DA
           sceKernelCpuUnrestrictedMemcpy: 0x8C683DEC

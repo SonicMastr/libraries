@@ -90,6 +90,16 @@ int sceKernelCpuEnableInterrupts(int flags);
 int sceKernelCpuDcacheWritebackRange(void *ptr, size_t len);
 
 /**
+ * @brief      Invalidate a range of L1 dcache (without L2)
+ *
+ * @param      ptr   The pointer
+ * @param[in]  len   The length
+ *
+ * @return     Zero on success
+ */
+int sceKernelCpuDcacheInvalidateRange(void *ptr, size_t len);
+
+/**
  * @brief      Writeback and invalidate a range of L1 dcache (without L2)
  *
  * @param      ptr   The pointer
@@ -110,7 +120,7 @@ int sceKernelCpuDcacheWritebackInvalidateRange(void *ptr, size_t len);
 int sceKernelCpuDcacheAndL2WritebackRange(void *ptr, size_t len);
 
 /**
- * @brief      Writeback and invalidate a range of L1 and L2 dcache
+ * @brief      Writeback and invalidate a range of L1 dcache and L2
  *
  * @param      ptr   The pointer
  * @param[in]  len   The length
@@ -118,16 +128,6 @@ int sceKernelCpuDcacheAndL2WritebackRange(void *ptr, size_t len);
  * @return     Zero on success
  */
 int sceKernelCpuDcacheAndL2InvalidateRange(void *ptr, size_t len);
-
-/**
- * @brief      Writeback and invalidate a range of L1 icache and L2
- *
- * @param      ptr   The pointer
- * @param[in]  len   The length
- *
- * @return     Zero on success
- */
-int sceKernelCpuIcacheAndL2WritebackInvalidateRange(void *ptr, size_t len);
 
 /**
  * @brief      Writeback and invalidate a range of L1 dcache and L2
@@ -138,6 +138,33 @@ int sceKernelCpuIcacheAndL2WritebackInvalidateRange(void *ptr, size_t len);
  * @return     Zero on success
  */
 int sceKernelCpuDcacheAndL2WritebackInvalidateRange(void *ptr, size_t len);
+
+/**
+ * @brief      Invalidate a range of L1 icache (without L2)
+ *
+ * @param      ptr   The pointer
+ * @param[in]  len   The length
+ *
+ * @return     Zero on success
+ */
+int sceKernelCpuIcacheInvalidateRange(void *ptr, size_t len);
+
+/**
+ * @brief      Invalidate all the L1 icache (without L2)
+ *
+ * @return     Zero on success
+ */
+int sceKernelCpuIcacheInvalidateAll(void);
+
+/**
+ * @brief      Writeback and invalidate a range of L1 icache and L2
+ *
+ * @param      ptr   The pointer
+ * @param[in]  len   The length
+ *
+ * @return     Zero on success
+ */
+int sceKernelCpuIcacheAndL2WritebackInvalidateRange(void *ptr, size_t len);
 
 /**
  * @brief      MMU permission bypassing memcpy
