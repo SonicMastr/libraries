@@ -91,13 +91,17 @@ modules:
       SceSysmemForDriver:
         nid: 0x6F25E18A
         functions:
+          sceKernelAllocHeapMemory: 0x7B4CB60A
           sceKernelAllocMemBlock: 0xC94850C9
           sceKernelCreateClass: 0x61317102
+          sceKernelCreateHeap: 0x9328E0E8
           sceKernelCreateUserUid: 0xBF209859
+          sceKernelDeleteHeap: 0xD6437637
           sceKernelDeleteUid: 0x047D32F2
           sceKernelDeleteUserUid: 0x84A4AF5E
           sceKernelFindMemBlockByAddr: 0x8A1742F6
           sceKernelFirstDifferentIntUserForPid: 0x8334454F
+          sceKernelFreeHeapMemory: 0x3EBCE343
           sceKernelFreeMemBlock: 0x009E1C61
           sceKernelGetMemBlockBase: 0xA841EDDA
           sceKernelGetObjForUid: 0x00ED6C14
@@ -108,10 +112,6 @@ modules:
           sceKernelKernelUidForUserUid: 0x45D22597
           sceKernelMapBlockUserVisible: 0x58D21746
           sceKernelMapUserBlock: 0x7D4F8B5F
-          sceKernelMemPoolAlloc: 0x7B4CB60A
-          sceKernelMemPoolCreate: 0x9328E0E8
-          sceKernelMemPoolDestroy: 0xD6437637
-          sceKernelMemPoolFree: 0x3EBCE343
           sceKernelMemcpyKernelToUser: 0x6D88EF8A
           sceKernelMemcpyKernelToUserForPid: 0x6B825479
           sceKernelMemcpyKernelToUserForPidUnchecked: 0xFED82F2D
