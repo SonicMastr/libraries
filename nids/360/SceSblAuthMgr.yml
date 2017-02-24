@@ -1,0 +1,11 @@
+modules:
+  SceSblAuthMgr:
+    nid: 0xEA5DFC93
+    libraries:
+      SceSblAuthMgrForDriver:
+        nid: 0x4EB2B1BB
+      SceSblAuthMgrForKernel:
+        nid: 0x7ABF5135
+        functions:
+          sceSblAuthMgrClearDmac5Key: 0xF2BB723E
+          sceSblAuthMgrSetDmac5Key: 0x122ACDEA

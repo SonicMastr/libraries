@@ -147,6 +147,8 @@ int sceKernelGetProcessTitleId(SceUID pid, char *titleid, size_t len);
 
 int sceKernelMapBlockUserVisible(SceUID uid);
 
+int sceKernelGetPaddr(void *addr, uintptr_t *paddr);
+
 #ifdef __cplusplus
 }
 #endif
