@@ -2,9 +2,9 @@ modules:
   SceStdio:
     nid: 0x771A73C0
     libraries:
-      SceDebugForDriver:
-        nid: 0x88758561
+      SceStdio:
+        nid: 0x8997609C
         functions:
-          printf: 0x391B74B7
-          sceDebugDisableInfoDump: 0xF857CDD6
-          sceDebugSetHandlers: 0x10067B7B
+          sceKernelStderr: 0x35EE7CF5
+          sceKernelStdin: 0x54237407
+          sceKernelStdout: 0x9033E9BD

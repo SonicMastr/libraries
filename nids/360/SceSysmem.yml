@@ -25,6 +25,15 @@ modules:
           sceKernelCpuRestoreContext: 0x0A4F0FB9
           sceKernelCpuSaveContext: 0x211B89DA
           sceKernelCpuUnrestrictedMemcpy: 0x8C683DEC
+      SceDebugForDriver:
+        nid: 0x88758561
+        functions:
+          printf: 0x391B74B7
+      SceDebugForKernel:
+        nid: 0x88C17370
+        functions:
+          sceDebugDisableInfoDump: 0xF857CDD6
+          sceDebugSetHandlers: 0x10067B7B
       SceKernelSuspendForDriver:
         nid: 0x7290B21C
         functions:
