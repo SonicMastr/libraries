@@ -84,16 +84,21 @@ modules:
         functions:
           sceKernelAllocMemBlock: 0xB9D5EBDE
           sceKernelAllocMemBlockForVM: 0xE2D7E137
+          sceKernelAllocUnmapMemBlock: 0xEC636BCB
+          sceKernelCheckModelCapability: 0x0144FBD9
           sceKernelCloseMemBlock: 0xB680E3A0
           sceKernelCloseVMDomain: 0xD6CA56CA
           sceKernelFindMemBlockByAddr: 0xA33B99D1
           sceKernelFreeMemBlock: 0xA91E15EE
+          sceKernelFreeMemBlockForVM: 0x4EA13FEA
           sceKernelGetFreeMemorySize: 0x87CC580B
           sceKernelGetMemBlockBase: 0xB8EF5818
           sceKernelGetMemBlockInfoByAddr: 0x4010AD65
           sceKernelGetMemBlockInfoByRange: 0x006F3DB4
           sceKernelGetModel: 0xD0D4F729
           sceKernelGetModelForCDialog: 0xA2CB322F
+          sceKernelGetSubbudgetInfo: 0x832B4A65
+          sceKernelIsPSVitaTV: 0x1453A5E5
           sceKernelOpenMemBlock: 0x8EB8DFBB
           sceKernelOpenVMDomain: 0x9CA3EB2B
           sceKernelSyncVMDomain: 0x19D2A81A
