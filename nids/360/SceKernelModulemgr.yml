@@ -5,10 +5,13 @@ modules:
       SceModulemgr:
         nid: 0xEAED1616
         functions:
+          sceKernelGetAllowedSdkVersionOnSystem: 0x4397FC4E
+          sceKernelGetLibraryInfoByNID: 0xEAEB1312
           sceKernelGetModuleIdByAddr: 0xF5798C7C
           sceKernelGetModuleInfo: 0x36585DAF
           sceKernelGetModuleList: 0x2EF2581F
           sceKernelGetSystemSwVersion: 0x5182E212
+          sceKernelIsCalledFromSysModule: 0x85E6D2BB
       SceModulemgrForDriver:
         nid: 0xD4A60A52
         functions:
