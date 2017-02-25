@@ -106,6 +106,16 @@ int sceKernelFreeMemBlock(SceUID uid);
 */
 int sceKernelGetMemBlockBase(SceUID uid, void **basep);
 
+/**
+ * Changes the block type
+ *
+ * @param[in] uid - SceUID of the memory block to change
+ * @param[in] type - Type of the memory to change to
+ *
+ * @return 0 on success, < 0 on error.
+ */
+int sceKernelRemapBlock(SceUID uid, SceKernelMemBlockType type);
+
 SceUID sceKernelCreateHeap(const char *name, SceSize size, SceKernelHeapCreateOpt *opt);
 int sceKernelDeleteHeap(SceUID uid);
 void *sceKernelAllocHeapMemory(SceUID uid, SceSize size);
