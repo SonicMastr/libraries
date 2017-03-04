@@ -1,0 +1,28 @@
+modules:
+  SceNpDrm:
+    nid: 0xE7E2CE05
+    libraries:
+      SceNpDrmForDriver:
+        nid: 0xD84DC44A
+        functions:
+          sceNpDrmCheckActData: 0x9265B350
+          sceNpDrmEbootSigConvert: 0xA29B75F9
+          sceNpDrmEbootSigGenMultiDisc: 0x39A7A666
+          sceNpDrmEbootSigGenPs1: 0x6D9223E1
+          sceNpDrmEbootSigGenPsp: 0x90B1A6D3
+          sceNpDrmEbootSigVerify: 0x7A319692
+          sceNpDrmGetFixedRifName: 0x5D73448C
+          sceNpDrmGetLegacyDocKey: 0x4E321BDE
+          sceNpDrmGetRifInfo: 0xDB406EAE
+          sceNpDrmGetRifName: 0xDF62F3B8
+          sceNpDrmGetRifNameForInstall: 0x17573133
+          sceNpDrmPspEbootSigGen: 0xEF387FC4
+          sceNpDrmPspEbootVerify: 0xB6CA3A2C
+          sceNpDrmRemoveActData: 0x8B85A509
+          sceNpDrmUpdateAccountId: 0x116FC0D6
+          sceNpDrmUpdateDebugSettings: 0xA91C7443
+      SceNpDrmPackage:
+        nid: 0x88514DB2
+        functions:
+          _sceNpDrmPackageCheck: 0xA1D885FA
+          _sceNpDrmPackageDecrypt: 0xD6F05ACC
