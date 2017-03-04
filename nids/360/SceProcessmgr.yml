@@ -24,4 +24,5 @@ modules:
       SceProcessmgrForKernel:
         nid: 0x7A69DE86
         functions:
+          sceKernelGetProcessAuthid: 0xE4C83B0D
           sceKernelGetProcessKernelBuf: 0xB9E68092
