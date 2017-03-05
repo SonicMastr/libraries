@@ -2,6 +2,17 @@ modules:
   SceNpDrm:
     nid: 0xE7E2CE05
     libraries:
+      SceNpDrm:
+        nid: 0xF2799B1B
+        functions:
+          _sceNpDrmCheckActData: 0xFEEBCD62
+          _sceNpDrmCheckDrmReset: 0x4458812B
+          _sceNpDrmGetFixedRifName: 0xE935B0FC
+          _sceNpDrmGetRifInfo: 0xE8343660
+          _sceNpDrmGetRifName: 0xB8C5DA7C
+          _sceNpDrmGetRifNameForInstall: 0xD312424D
+          _sceNpDrmPresetRifProvisionalFlag: 0x2523F57F
+          _sceNpDrmRemoveActData: 0x507D06A6
       SceNpDrmForDriver:
         nid: 0xD84DC44A
         functions:
@@ -16,6 +27,9 @@ modules:
           sceNpDrmGetRifInfo: 0xDB406EAE
           sceNpDrmGetRifName: 0xDF62F3B8
           sceNpDrmGetRifNameForInstall: 0x17573133
+          sceNpDrmGetRifPspKey: 0xDACB71F4
+          sceNpDrmGetRifVitaKey: 0x723322B5
+          sceNpDrmPresetRifProvisionalFlag: 0xC070FE89
           sceNpDrmPspEbootSigGen: 0xEF387FC4
           sceNpDrmPspEbootVerify: 0xB6CA3A2C
           sceNpDrmRemoveActData: 0x8B85A509
@@ -26,3 +40,11 @@ modules:
         functions:
           _sceNpDrmPackageCheck: 0xA1D885FA
           _sceNpDrmPackageDecrypt: 0xD6F05ACC
+          _sceNpDrmPackageInstallFinished: 0x6896EAF2
+          _sceNpDrmPackageInstallStarted: 0xCEC18DA4
+          _sceNpDrmPackageTransform: 0x0567DCA1
+          _sceNpDrmPackageUninstallFinished: 0x23A28861
+          _sceNpDrmPackageUninstallStarted: 0x4901C3E6
+          sceNpDrmPackageInstallOngoing: 0xED0471FE
+          sceNpDrmPackageIsGameExist: 0xB9337914
+          sceNpDrmPackageUninstallOngoing: 0xF1FF6193
