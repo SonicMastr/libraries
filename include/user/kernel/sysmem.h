@@ -33,7 +33,7 @@ enum {
 };
 
 /***
- * Allocates a new memoy block
+ * Allocates a new memory block
  *
  * @param[in] name - Name for the memory block
  * @param[in] type - Type of the memory to allocate
@@ -45,7 +45,7 @@ enum {
 SceUID sceKernelAllocMemBlock(const char *name, SceKernelMemBlockType type, int size, SceKernelAllocMemBlockOpt *optp);
 
 /***
- * Frees new memoy block
+ * Frees new memory block
  *
  * @param[in] uid - SceUID of the memory block to free
  *
@@ -54,7 +54,7 @@ SceUID sceKernelAllocMemBlock(const char *name, SceKernelMemBlockType type, int 
 int sceKernelFreeMemBlock(SceUID uid);
 
 /***
- * Gets the base address of a memoy block
+ * Gets the base address of a memory block
  *
  * @param[in] uid - SceUID of the memory block to free
  * @param[out] basep - Base address of the memory block identified by SceUID

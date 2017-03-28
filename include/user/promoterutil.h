@@ -38,7 +38,7 @@ int scePromoterUtilityExit(void);
 int scePromoterUtilityDeletePkg(const char *titleid);
 
 /**
- * Update the LiveArea ressources of an app
+ * Update the LiveArea resources of an app
  *
  * @param[in] *args - see ::ScePromoterUtilityLAUpdate
  *
