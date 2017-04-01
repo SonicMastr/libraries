@@ -8,19 +8,45 @@ modules:
           sceTouchActivateRegion: 0xBD59D652
           sceTouchClearRegion: 0x2D94EAEA
           sceTouchDisableTouchForce: 0x41194411
+          sceTouchDisableTouchForceExt: 0xED25DFDC
+          sceTouchEnableIdleTimerCancelSetting: 0x012EAE3A
           sceTouchEnableTouchForce: 0xB18370C2
+          sceTouchEnableTouchForceExt: 0xA3FE877B
+          sceTouchGetDeviceInfo: 0xD7889B91
           sceTouchGetPanelInfo: 0x10A2CA25
           sceTouchGetPixelDensity: 0xF0704CF3
+          sceTouchGetProcessInfo: 0xAB364C23
           sceTouchGetSamplingState: 0x26531526
+          sceTouchGetSamplingStateExt: 0xDC8671EA
           sceTouchPeek: 0xFF082DF0
+          sceTouchPeek2: 0x3AD3D0A1
           sceTouchPeekRegion: 0x04440622
           sceTouchPeekRegionExt: 0x2CF6D7E2
           sceTouchRead: 0x169A1D58
+          sceTouchRead2: 0x39401BEA
+          sceTouchReadRegion: 0x93B5635B
+          sceTouchReadRegionExt: 0x9F0ACAF9
+          sceTouchSetProcessPrivilege: 0x609EA489
           sceTouchSetRegion: 0x6134DFBE
+          sceTouchSetRegionAttr: 0x08DD4C7C
           sceTouchSetSamplingState: 0x1B9C5D14
           sceTouchSetSamplingStateExt: 0x13CDFC43
       SceTouchForDriver:
         nid: 0xA4A7DAFC
         functions:
+          sceTouchActivateRegion: 0xC7F0DAA0
+          sceTouchDisableTouchForce: 0xCDE79889
+          sceTouchEnableIdleTimerCancelSetting: 0xEBF4C86A
+          sceTouchEnableTouchForce: 0xE41B4BF8
+          sceTouchGetDeviceInfo: 0xFD2E0278
+          sceTouchGetPanelInfo: 0x937DB4C0
+          sceTouchGetProcessInfo: 0x4DF3A37C
+          sceTouchGetSamplingState: 0x174D0333
+          sceTouchPeek: 0xBAD1960B
+          sceTouchPeekRegion: 0x9B3F7207
+          sceTouchRead: 0x70C8AACE
+          sceTouchReadRegion: 0x9A91F624
           sceTouchSetRegion: 0x7985B164
+          sceTouchSetRegionAttr: 0x10A998DE
+          sceTouchSetSamplingState: 0x1247257A
           sceTouchSetTouchEmulationData: 0xA32529B8
