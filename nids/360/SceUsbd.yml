@@ -7,6 +7,7 @@ modules:
         functions:
           sceUsbdControlTransfer: 0x2E05660F
           sceUsbdGetDescriptor: 0xBC3EF82B
+          sceUsbdGetEndpointId: 0x1CDBFF9F
           sceUsbdRegisterCompositeLdd: 0x6E53D7F4
           sceUsbdRegisterDriver: 0x1EC94F18
           sceUsbdSuspendPhase2: 0xD7AA730D
