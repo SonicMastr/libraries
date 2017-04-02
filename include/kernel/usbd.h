@@ -38,6 +38,18 @@ typedef struct SceUsbdDeviceDescriptor {
 	unsigned char  bNumConfigurations;
 } SceUsbdDeviceDescriptor; /* size = 20 */
 
+struct SceUsbdEndpointDescriptor {
+	unsigned char  bLength;
+	unsigned char  bDescriptorType;
+	unsigned char  bEndpointAddress;
+	unsigned char  bmAttributes;
+	unsigned short wMaxPacketSize;
+	unsigned char  bInterval;
+
+	unsigned char *extra;   /* Extra descriptors */
+	int extraLength;
+} SceUsbdEndpointDescriptor; /* size 16 */
+
 typedef struct SceUsbdDeviceAddress {
 	unsigned int unk0;
 	unsigned short unk1;
@@ -51,10 +63,24 @@ typedef struct SceUsbdDriver {
 	struct SceUsbdDriver *next;
 } SceUsbdDriver; /* size = 0x14 */
 
+typedef struct SceUsbdControlTransferRequest {
+	unsigned char bmRequestType;
+	unsigned char bRequest;
+	unsigned short wValue;
+	unsigned short wIndex;
+	unsigned short wLength;
+} SceUsbdControlTransferRequest; /* size = 0x08 */
+
 int sceUsbdRegisterDriver(const SceUsbdDriver *driver);
 int sceUsbdRegisterCompositeLdd(const SceUsbdDriver *driver);
 int sceUsbdUnregisterDriver(const SceUsbdDriver *driver);
 void *sceUsbdGetDescriptor(int device_id, int index, unsigned char bDescriptorType);
+int sceUsbdGetEndpointId(int device_id, SceUsbdEndpointDescriptor *endpoint);
+int sceUsbdControlTransfer(int endpoint_id,
+	const SceUsbdControlTransferRequest *req,
+	unsigned char *buffer,
+	int (*cb)(int, int, int),
+	void *user_data);
 
 #ifdef __cplusplus
 }

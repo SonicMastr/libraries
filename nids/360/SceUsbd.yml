@@ -5,6 +5,7 @@ modules:
       SceUsbdForDriver:
         nid: 0xA0EBCA41
         functions:
+          sceUsbdControlTransfer: 0x2E05660F
           sceUsbdGetDescriptor: 0xBC3EF82B
           sceUsbdRegisterCompositeLdd: 0x6E53D7F4
           sceUsbdRegisterDriver: 0x1EC94F18
