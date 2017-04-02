@@ -74,8 +74,13 @@ typedef struct SceUsbdControlTransferRequest {
 int sceUsbdRegisterDriver(const SceUsbdDriver *driver);
 int sceUsbdRegisterCompositeLdd(const SceUsbdDriver *driver);
 int sceUsbdUnregisterDriver(const SceUsbdDriver *driver);
+
 void *sceUsbdGetDescriptor(int device_id, int index, unsigned char bDescriptorType);
-int sceUsbdGetEndpointId(int device_id, SceUsbdEndpointDescriptor *endpoint);
+
+// endpoint = NULL to open the default control endpoint
+int sceUsbdOpenEndpoint(int device_id, SceUsbdEndpointDescriptor *endpoint);
+int sceUsbdCloseEndpoint(int endpoint_id);
+
 int sceUsbdControlTransfer(int endpoint_id,
 	const SceUsbdControlTransferRequest *req,
 	unsigned char *buffer,
