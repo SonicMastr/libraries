@@ -8,6 +8,7 @@ modules:
           sceUsbdCloseEndpoint: 0xF304DC5C
           sceUsbdControlTransfer: 0x2E05660F
           sceUsbdGetDescriptor: 0xBC3EF82B
+          sceUsbdInterruptTransfer: 0xA0BF85B8
           sceUsbdOpenEndpoint: 0x1CDBFF9F
           sceUsbdRegisterCompositeLdd: 0x6E53D7F4
           sceUsbdRegisterDriver: 0x1EC94F18
