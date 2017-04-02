@@ -50,14 +50,18 @@ modules:
           sceCtrlGetActiveControllerPort: 0xFA88D837
           sceCtrlGetButtonIntercept: 0x6BEB1CD7
           sceCtrlGetControllerPortInfo: 0xF11D0D30
+          sceCtrlGetIdleCancelKey: 0x30801AE9
+          sceCtrlGetIdleCancelThreshold: 0xB9402CEF
           sceCtrlGetSamplingMode: 0x145B13BC
           sceCtrlIsBdRemoconConnected: 0x5B849B22
+          sceCtrlNotifyCallBacks: 0x6E183B9B
           sceCtrlPeekBufferNegative: 0x19895843
           sceCtrlPeekBufferPositive: 0xEA1D3A34
           sceCtrlReadBufferNegative: 0x8D4E0DD1
           sceCtrlReadBufferPositive: 0x9B96A1AA
           sceCtrlRegisterNotifyCallBack: 0xE170883E
           sceCtrlSetAnalogEmulation: 0x06577FE8
+          sceCtrlSetBdRemoconConnected: 0xAA36F578
           sceCtrlSetButtonEmulation: 0x1E750326
           sceCtrlSetButtonIntercept: 0x06AA5E1A
           sceCtrlSetIdleCancelKey: 0x0A679512
