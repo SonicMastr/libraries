@@ -1,0 +1,9 @@
+modules:
+  SceAVConfig:
+    nid: 0x222DDEB1
+    libraries:
+      SceAVConfig:
+        nid: 0x79E0F03F
+        functions:
+          sceAVConfigGetDisplayMaxBrightness: 0x6ABA67F4
+          sceAVConfigSetDisplayBrightness: 0xE0C1B743
