@@ -56,9 +56,7 @@ modules:
           sceCtrlIsBdRemoconConnected: 0x5B849B22
           sceCtrlNotifyCallBacks: 0x6E183B9B
           sceCtrlPeekBufferNegative: 0x19895843
-          sceCtrlPeekBufferNegativeExt: 0x01E13BCC
           sceCtrlPeekBufferPositive: 0xEA1D3A34
-          sceCtrlPeekBufferPositiveExt: 0x01E13928
           sceCtrlReadBufferNegative: 0x8D4E0DD1
           sceCtrlReadBufferPositive: 0x9B96A1AA
           sceCtrlRegisterNotifyCallBack: 0xE170883E
