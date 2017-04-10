@@ -6,7 +6,11 @@ modules:
         nid: 0xF0EF5743
         functions:
           sceGpioAcquireIntr: 0x35AAD77A
+          sceGpioGetIntrMode: 0xE97A3B31
+          sceGpioGetPortMode: 0xC4CB78E2
           sceGpioPortClear: 0xF6310435
+          sceGpioPortRead: 0x129DF5AC
+          sceGpioPortReset: 0xA1B5A462
           sceGpioPortSet: 0xD454A584
           sceGpioQueryIntr: 0x010DC295
           sceGpioSetIntrMode: 0xBBEA1DDC

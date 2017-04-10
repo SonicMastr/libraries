@@ -200,6 +200,26 @@ int sceKernelCpuIcacheAndL2WritebackInvalidateRange(void *ptr, size_t len);
  */
 int sceKernelCpuUnrestrictedMemcpy(void *dst, const void *src, size_t len);
 
+/**
+ * @brief      Suspend all interrupts (disables IRQs)
+ *
+ * @param[in]  addr   Mutex associated to the suspend-resume pair
+ *
+ * @return     The current state of the interrupt controller, to be used with sceKernelCpuResumeIntr.
+ */
+int sceKernelCpuSuspendIntr(int *addr);
+
+/**
+ * @brief      Resume all interrupts (enables IRQs)
+ *
+ * @param[in]  addr   Mutex associated to the suspend-resume pair
+ * @param[in]  prev_state   State obtained from sceKernelCpuSuspendIntr
+ *
+ * @return     The previous state of the interrupt controller.
+ */
+int sceKernelCpuResumeIntr(int *addr, int prev_state);
+
+
 #ifdef __cplusplus
 }
 #endif
