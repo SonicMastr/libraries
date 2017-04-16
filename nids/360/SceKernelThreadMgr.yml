@@ -1,6 +1,6 @@
 modules:
   SceKernelThreadMgr:
-    nid: 0xA09CFA5C
+    nid: 0xF46ED7B2
     libraries:
       SceCpu:
         nid: 0x45265161

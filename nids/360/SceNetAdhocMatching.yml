@@ -1,6 +1,6 @@
 modules:
   SceNetAdhocMatching:
-    nid: 0x0000006B
+    nid: 0xF2F9C205
     libraries:
       SceNetAdhocMatching:
         nid: 0x00962A4A

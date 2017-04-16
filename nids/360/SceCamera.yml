@@ -1,6 +1,6 @@
 modules:
   SceCamera:
-    nid: 0x00000014
+    nid: 0xEC26CAF9
     libraries:
       SceCamera:
         nid: 0xDA91B3ED

@@ -1,6 +1,6 @@
 modules:
   SceIofilemgr:
-    nid: 0x3E244C17
+    nid: 0x9642948C
     libraries:
       SceIofilemgr:
         nid: 0xF2FF276E

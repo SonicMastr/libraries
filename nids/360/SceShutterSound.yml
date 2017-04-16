@@ -1,6 +1,6 @@
 modules:
   SceShutterSound:
-    nid: 0x000000CC
+    nid: 0x9B8396F9
     libraries:
       SceShutterSound:
         nid: 0x877181ED

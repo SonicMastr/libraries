@@ -1,6 +1,6 @@
 modules:
   SceUsbSerial:
-    nid: 0xF8D9930F
+    nid: 0xB3C543D4
     libraries:
       SceUsbSerial:
         nid: 0x2820117D

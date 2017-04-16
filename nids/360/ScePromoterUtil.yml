@@ -1,6 +1,6 @@
 modules:
   ScePromoterUtil:
-    nid: 0xB31C2D5C
+    nid: 0x770E22E0
     libraries:
       ScePromoterUtil:
         nid: 0x31F237B6

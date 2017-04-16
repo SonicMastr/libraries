@@ -1,6 +1,6 @@
 modules:
   SceLibKernel:
-    nid: 0x00000048
+    nid: 0xF9C9C52F
     libraries:
       SceLibKernel:
         nid: 0xCAE9ACE6

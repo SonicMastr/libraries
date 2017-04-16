@@ -1,6 +1,6 @@
 modules:
   SceSysmem:
-    nid: 0xB93950C6
+    nid: 0x3380B323
     libraries:
       SceCpuForDriver:
         nid: 0x40ECDB0E

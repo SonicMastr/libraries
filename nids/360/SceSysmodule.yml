@@ -1,6 +1,6 @@
 modules:
   SceSysmodule:
-    nid: 0x000000D6
+    nid: 0x0958E8D1
     libraries:
       SceSysmodule:
         nid: 0x03FCF19D

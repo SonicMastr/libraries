@@ -1,6 +1,6 @@
 modules:
   SceNgs:
-    nid: 0x0000006F
+    nid: 0x90671548
     libraries:
       SceNgs:
         nid: 0xB01598D9

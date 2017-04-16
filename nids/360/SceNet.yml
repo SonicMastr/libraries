@@ -1,6 +1,6 @@
 modules:
   SceNet:
-    nid: 0x5A7BCCDA
+    nid: 0x30BFE75C
     libraries:
       SceNet:
         nid: 0x6BF8B2A2

@@ -3,7 +3,7 @@ modules:
     nid: 0x00000018
     libraries:
       SceCodecEngineUser:
-        nid: 0x00000019
+        nid: 0x469AB062
         functions:
           sceCodecEngineAllocMemoryFromUnmapMemBlock: 0x1A3A53E5
           sceCodecEngineCloseUnmapMemBlock: 0x95EA3B3E

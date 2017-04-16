@@ -1,6 +1,6 @@
 modules:
   SceRtc:
-    nid: 0x000000A1
+    nid: 0x1E923AD1
     libraries:
       SceRtc:
         nid: 0x3503487E

@@ -1,6 +1,6 @@
 modules:
   SceVoiceQoS:
-    nid: 0x000000E2
+    nid: 0x9A89A62B
     libraries:
       SceVoiceQoS:
         nid: 0x650551BC

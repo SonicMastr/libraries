@@ -1,6 +1,6 @@
 modules:
   SceAppMgr:
-    nid: 0x00000000
+    nid: 0xDBB29DB7
     libraries:
       SceAppMgr:
         nid: 0x8AF17416

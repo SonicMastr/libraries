@@ -1,6 +1,6 @@
 modules:
   SceProcessmgr:
-    nid: 0xF019E1DA
+    nid: 0x8B8A6263
     libraries:
       SceProcessmgr:
         nid: 0x2DD91812

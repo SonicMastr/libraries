@@ -1,6 +1,6 @@
 modules:
   SceSblAuthMgr:
-    nid: 0xEA5DFC93
+    nid: 0x1773372D
     libraries:
       SceSblAuthMgrForDriver:
         nid: 0x4EB2B1BB

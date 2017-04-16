@@ -1,6 +1,6 @@
 modules:
   SceHandwriting:
-    nid: 0x0000003A
+    nid: 0x18983E63
     libraries:
       SceHandwriting:
         nid: 0x2AA55635

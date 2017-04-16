@@ -1,6 +1,6 @@
 modules:
   SceIme:
-    nid: 0x00000042
+    nid: 0x80AE930F
     libraries:
       SceIme:
         nid: 0xD2553017

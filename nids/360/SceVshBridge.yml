@@ -1,6 +1,6 @@
 modules:
   SceVshBridge:
-    nid: 0x000000E3
+    nid: 0xA2BE1892
     libraries:
       SceVshBridge:
         nid: 0x35C5ACD4

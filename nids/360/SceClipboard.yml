@@ -1,6 +1,6 @@
 modules:
   SceClipboard:
-    nid: 0x00000016
+    nid: 0xB4042D2E
     libraries:
       SceClipboard:
         nid: 0x6B346AA8

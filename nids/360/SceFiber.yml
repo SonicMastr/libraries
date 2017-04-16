@@ -1,6 +1,6 @@
 modules:
   SceFiber:
-    nid: 0x00000030
+    nid: 0x5BA67C8A
     libraries:
       SceFiber:
         nid: 0xF88DAA70

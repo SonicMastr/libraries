@@ -1,6 +1,6 @@
 modules:
   SceVoice:
-    nid: 0x000000E0
+    nid: 0xF5F3E7CA
     libraries:
       SceVoice:
         nid: 0xCE56E214

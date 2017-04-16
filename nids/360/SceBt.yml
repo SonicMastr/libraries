@@ -1,6 +1,6 @@
 modules:
   SceBt:
-    nid: 0xED3D9A39
+    nid: 0xF56868B7
     libraries:
       SceBt:
         nid: 0x9785DB68

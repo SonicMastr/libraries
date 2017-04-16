@@ -1,6 +1,6 @@
 modules:
   SceNearUtil:
-    nid: 0x00000067
+    nid: 0xFE577596
     libraries:
       SceNearUtil:
         nid: 0x560D1608

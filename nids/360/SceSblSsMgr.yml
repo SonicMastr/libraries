@@ -1,6 +1,6 @@
 modules:
   SceSblSsMgr:
-    nid: 0xFDDD93FA
+    nid: 0x4E913538
     libraries:
       SceSblSsMgrForDriver:
         nid: 0x61E9428D

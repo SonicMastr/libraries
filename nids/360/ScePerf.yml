@@ -1,6 +1,6 @@
 modules:
   ScePerf:
-    nid: 0x0000008D
+    nid: 0xA2727E86
     libraries:
       ScePerf:
         nid: 0x447F047D

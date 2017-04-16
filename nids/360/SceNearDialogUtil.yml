@@ -1,9 +1,9 @@
 modules:
   SceNearDialogUtil:
-    nid: 0x00000065
+    nid: 0x102F200B
     libraries:
       SceNearDialogUtil:
-        nid: 0x00000066
+        nid: 0x65408075
         functions:
           sceNearDialogAbort: 0x7790BDB4
           sceNearDialogGetResult: 0xD46E5257

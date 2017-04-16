@@ -1,6 +1,6 @@
 modules:
   SceScreenShot:
-    nid: 0x000000A8
+    nid: 0x56675E0A
     libraries:
       SceScreenShot:
         nid: 0xF26FC97D

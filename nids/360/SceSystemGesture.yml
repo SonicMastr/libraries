@@ -1,6 +1,6 @@
 modules:
   SceSystemGesture:
-    nid: 0x000000D8
+    nid: 0xCC78BA95
     libraries:
       SceSystemGesture:
         nid: 0xAF3FE2D3

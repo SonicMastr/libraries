@@ -1,6 +1,6 @@
 modules:
   SceUlt:
-    nid: 0x000000DC
+    nid: 0xDC2996DB
     libraries:
       SceUlt:
         nid: 0x220668A5

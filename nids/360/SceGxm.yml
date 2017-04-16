@@ -1,6 +1,6 @@
 modules:
   SceGxm:
-    nid: 0x00000038
+    nid: 0x0D0AA0CB
     libraries:
       SceGxm:
         nid: 0xF76B66BD

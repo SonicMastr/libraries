@@ -1,6 +1,6 @@
 modules:
   SceAppUtil:
-    nid: 0x00000003
+    nid: 0xCE3E25D4
     libraries:
       SceAppUtil:
         nid: 0x48E01D74
@@ -48,6 +48,6 @@ modules:
           sceAppUtilSystemParamGetInt: 0x5DFB9CA0
           sceAppUtilSystemParamGetString: 0x6E6AA267
       SceAppUtilCache:
-        nid: 0x00000005
+        nid: 0xE96B941B
         functions:
           sceAppUtilCacheMount: 0x0AA56143
