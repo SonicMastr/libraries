@@ -141,7 +141,43 @@ typedef struct {
 SceUID sceKernelKernelUidForUserUid(SceUID pid, SceUID user_uid);
 SceUID sceKernelCreateUserUid(SceUID pid, SceUID kern_uid);
 SceUID sceKernelCreateUidObj(SceClass *cls, const char *name, SceCreateUidObjOpt *opt, SceObjectBase **obj);
+
+/**
+ * Gets an object from a UID.
+ * 
+ * This retains the object internally! You must call `sceKernelUidRelease` 
+ * after you are done using it.
+ *
+ * @param[in]  uid   The uid
+ * @param      cls   The class
+ * @param      obj   The object
+ *
+ * @return 0 on success, < 0 on error.
+ */
 int sceKernelGetObjForUid(SceUID uid, SceClass *cls, SceObjectBase **obj);
+
+/**
+ * Retains an object referenced by the UID.
+ * 
+ * This increases the internal reference count.
+ *
+ * @param[in]  uid   The uid
+ *
+ * @return 0 on success, < 0 on error.
+ */
+int sceKernelUidRetain(SceUID uid);
+
+/**
+ * Releases an object referenced by the UID.
+ * 
+ * This decreases the internal reference count.
+ *
+ * @param[in]  uid   The uid
+ *
+ * @return 0 on success, < 0 on error.
+ */
+int sceKernelUidRelease(SceUID uid);
+
 SceClass *sceKernelGetUidClass(void);
 typedef int (*SceClassCallback)(void *item);
 int sceKernelCreateClass(SceClass *cls, const char *name, void *uidclass, size_t itemsize, SceClassCallback create, SceClassCallback destroy);
@@ -158,6 +194,8 @@ int sceKernelGetProcessTitleId(SceUID pid, char *titleid, size_t len);
 int sceKernelMapBlockUserVisible(SceUID uid);
 
 int sceKernelGetPaddr(void *addr, uintptr_t *paddr);
+
+int sceSysrootIsManufacturingMode(void);
 
 #ifdef __cplusplus
 }
