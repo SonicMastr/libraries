@@ -174,6 +174,8 @@ modules:
           sceKernelStrncpyUserToKernel: 0xDB3EC244
           sceKernelStrnlenUserForPid: 0x9929EB07
           sceKernelSwitchVmaForPid: 0x6F2ACDAE
+          sceKernelUidRelease: 0x149885C4
+          sceKernelUidRetain: 0x0F5C84B7
           sceKernelUnmapMemBlock: 0xFFCD9B60
       SceSysmemForKernel:
         nid: 0x63A519E5
@@ -191,5 +193,4 @@ modules:
           sceSysrootIsSafeMode: 0x834439A7
           sceSysrootIsUpdateMode: 0xB0E1FC67
           sceSysrootIsUsbEnumWakeup: 0x79C9AE10
-          sceSysrootUseExternalStorage: 0x55392965
           sceSysrootUseInternalStorage: 0x50FE3B4D
