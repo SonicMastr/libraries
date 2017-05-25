@@ -1,0 +1,9 @@
+modules:
+  SceHid:
+    nid: 0x76B8FA74
+    libraries:
+      SceHid:
+        nid: 0xE23FAD62
+        functions:
+          sceHidKeyboardEnumerate: 0x34BDFACE
+          sceHidKeyboardRead: 0x224A8AD8
