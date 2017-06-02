@@ -700,10 +700,12 @@ int sceNetSocket(const char *name, int domain, int type, int protocol);
 int sceNetAccept(int s, SceNetSockaddr *addr, unsigned int *addrlen);
 int sceNetBind(int s, const SceNetSockaddr *addr, unsigned int addrlen);
 int sceNetListen(int s, int backlog);
-int sceNetRecv(int s, void *buf, unsigned int len, int flags);
 int sceNetRecvfrom(int s, void *buf, unsigned int len, int flags, SceNetSockaddr *from, unsigned int *fromlen);
-int sceNetSend(int s, const void *msg, unsigned int len, int flags);
 int sceNetSendto(int s, const void *msg, unsigned int len, int flags, const SceNetSockaddr *to, unsigned int tolen);
+
+#define sceNetRecv(s, buf, len, flags) sceNetRecvfrom(s, buf, len, flags, NULL, 0)
+#define sceNetSend(s, msg, len, flags) sceNetSendto(s, msg, len, flags, NULL, 0)
+
 int sceNetSetsockopt(int s, int level, int optname, const void *optval, unsigned int optlen);
 int sceNetSocketClose(int s);
 
