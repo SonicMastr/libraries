@@ -60,6 +60,7 @@ modules:
           sceCtrlReadBufferNegative: 0x8D4E0DD1
           sceCtrlReadBufferPositive: 0x9B96A1AA
           sceCtrlRegisterNotifyCallBack: 0xE170883E
+          sceCtrlRegisterVirtualControllerDriver: 0x18823EEA
           sceCtrlSetAnalogEmulation: 0x06577FE8
           sceCtrlSetBdRemoconConnected: 0xAA36F578
           sceCtrlSetButtonEmulation: 0x1E750326
