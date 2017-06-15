@@ -9,8 +9,8 @@ extern "C" {
 
 /** Parameters for scePromoterUtilityUpdateLiveArea() */
 typedef struct ScePromoterUtilityLAUpdate {
-	char titleid[12]; //!< Target app.
-	char path[128]; //!< Directory of extracted LA update data.
+	char titleid[12];  //!< Target app.
+	char path[128];    //!< Directory of extracted LA update data.
 } ScePromoterUtilityLAUpdate;
 
 /**

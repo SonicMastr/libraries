@@ -5,10 +5,10 @@
 extern "C" {
 #endif
 
-enum {
-	SCE_USBSTOR_VSTOR_TYPE_FAT		= 0,
-	SCE_USBSTOR_VSTOR_TYPE_CDROM	= 5,
-};
+typedef enum SceUsbstorVstorType {
+	SCE_USBSTOR_VSTOR_TYPE_FAT     = 0,
+	SCE_USBSTOR_VSTOR_TYPE_CDROM   = 5
+} SceUsbstorVstorType;
 
 /**
  * Set image file path
@@ -32,11 +32,11 @@ int sceUsbstorVStorSetDeviceInfo(const char *name, const char *version);
 /**
  * Start USB virtual storage
  *
- * @param[in] type - One of ::UsbStorVstorType
+ * @param[in] type - One of ::SceUsbStorVstorType
  *
  * @return 0 on success, < 0 on error.
 */
-int sceUsbstorVStorStart(int type);
+int sceUsbstorVStorStart(SceUsbStorVstorType type);
 
 /**
  * Stop USB virtual storage
