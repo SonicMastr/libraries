@@ -15,3 +15,10 @@ modules:
           sceGpioQueryIntr: 0x010DC295
           sceGpioSetIntrMode: 0xBBEA1DDC
           sceGpioSetPortMode: 0x372022A4
+      SceI2cForDriver:
+        nid: 0xE14BEF6E
+        functions:
+          sceI2cSetDebugHandlers: 0xA2C7CE62
+          sceI2cTransferRead: 0xD1D0A9A4
+          sceI2cTransferWrite: 0xCA94A759
+          sceI2cTransferWriteRead: 0x0A40B7BF

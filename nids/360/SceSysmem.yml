@@ -194,3 +194,10 @@ modules:
           sceSysrootIsUpdateMode: 0xB0E1FC67
           sceSysrootIsUsbEnumWakeup: 0x79C9AE10
           sceSysrootUseInternalStorage: 0x50FE3B4D
+      SceUartForKernel:
+        nid: 0xC03DBE40
+        functions:
+          sceUartInit: 0xA9C74212
+          sceUartRead: 0x9BBF1255
+          sceUartReadAvailable: 0x38DB7629
+          sceUartWrite: 0x41973874
