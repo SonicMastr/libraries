@@ -42,6 +42,7 @@ modules:
           sceMotionDevGetDeviceInfo: 0x3E4BCBC0
           sceMotionDevIsReady: 0x10AAC8EA
           sceMotionDevRead: 0x3A3407B5
+          sceMotionDevRegisterVirtualMotionDriver: 0x7FD06731
           sceMotionDevSamplingStart: 0xC02C85AB
           sceMotionDevSamplingStop: 0xFD0B0785
           sceMotionDevSetSamplingMode: 0xDBAF611A

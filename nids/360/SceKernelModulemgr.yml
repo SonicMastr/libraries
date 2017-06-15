@@ -33,6 +33,8 @@ modules:
           sceKernelGetModuleInternal: 0xFE303863
           sceKernelGetModuleList: 0x97CF7B4E
           sceKernelLoadModuleForPid: 0xFA21D8CB
+          sceKernelMountBootfs: 0x01360661
           sceKernelStartModuleForPid: 0x6DF745D5
           sceKernelStopModuleForPid: 0x7BB4CE54
+          sceKernelUmountBootfs: 0x9C838A6B
           sceKernelUnloadModuleForPid: 0x5972E2CC

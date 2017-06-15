@@ -93,6 +93,9 @@ SceUID sceKernelUnloadModuleForPid(SceUID pid, SceUID modid, int flags, SceKerne
 int sceKernelStopModuleForPid(SceUID pid, SceUID modid, SceSize args, void *argp, int flags, SceKernelULMOption *option, int *status);
 int sceKernelStopUnloadModuleForPid(SceUID pid, SceUID modid, SceSize args, void *argp, int flags, SceKernelULMOption *option, int *status);
 
+int sceKernelMountBootfs(const char *bootImagePath);
+int sceKernelUmountBootfs(void);
+
 #ifdef __cplusplus
 }
 #endif

@@ -187,6 +187,7 @@ modules:
         functions:
           sceKernelGetProcessTitleId: 0xEC3124A3
           sceKernelGetSysrootBuffer: 0x3E455842
+          sceSysrootIsAuCodecIcConexant: 0x46E72428
           sceSysrootIsBsodReboot: 0x4373AC96
           sceSysrootIsExternalBootMode: 0x89D19090
           sceSysrootIsManufacturingMode: 0x55392965
