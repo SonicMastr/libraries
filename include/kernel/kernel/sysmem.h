@@ -144,8 +144,8 @@ SceUID sceKernelCreateUidObj(SceClass *cls, const char *name, SceCreateUidObjOpt
 
 /**
  * Gets an object from a UID.
- * 
- * This retains the object internally! You must call `sceKernelUidRelease` 
+ *
+ * This retains the object internally! You must call `sceKernelUidRelease`
  * after you are done using it.
  *
  * @param[in]  uid   The uid
@@ -158,7 +158,7 @@ int sceKernelGetObjForUid(SceUID uid, SceClass *cls, SceObjectBase **obj);
 
 /**
  * Retains an object referenced by the UID.
- * 
+ *
  * This increases the internal reference count.
  *
  * @param[in]  uid   The uid
@@ -169,7 +169,7 @@ int sceKernelUidRetain(SceUID uid);
 
 /**
  * Releases an object referenced by the UID.
- * 
+ *
  * This decreases the internal reference count.
  *
  * @param[in]  uid   The uid
