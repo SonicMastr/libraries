@@ -197,6 +197,8 @@ int sceKernelGetPaddr(void *addr, uintptr_t *paddr);
 
 int sceSysrootIsManufacturingMode(void);
 
+int sceDebugPrintf(const char *fmt, ...);
+
 #ifdef __cplusplus
 }
 #endif
