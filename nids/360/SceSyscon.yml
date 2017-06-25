@@ -23,13 +23,9 @@ modules:
           sceSysconGetTemperatureLog: 0x3B354824
           sceSysconGetTimeStamp: 0x4D588A0A
           sceSysconGetUsbDetStatus: 0xEF810687
-          sceSysconHasWWAN: 0xCBD6D8BC
           sceSysconIduModeClear: 0x34574496
           sceSysconIduModeSet: 0x956D07CB
           sceSysconIsDownLoaderMode: 0x9ADD60D2
-          sceSysconIsIduMode: 0xCBD6D8BC
-          sceSysconIsMCEmuCapable: 0xCBD6D8BC
-          sceSysconIsShowMode: 0xCBD6D8BC
           sceSysconLoadConfigstorageScript: 0x89C5CFD6
           sceSysconLogReadData: 0x487D97F3
           sceSysconLogStart: 0x4E55CF5E
