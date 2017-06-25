@@ -1,7 +1,7 @@
-#ifndef _PSP2_IO_DEVCTRL_H_
-#define _PSP2_IO_DEVCTRL_H_
+#ifndef _PSP2_IO_DEVCTL_H_
+#define _PSP2_IO_DEVCTL_H_
 
-#include <psp2/types.h>
+#include <psp2kern/types.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -29,5 +29,5 @@ int sceIoDevctl(const char *dev, unsigned int cmd, void *indata, int inlen, void
 }
 #endif
 
-#endif /* _PSP2_IO_DEVCTRL_H_ */
+#endif /* _PSP2_IO_DEVCTL_H_ */
 
