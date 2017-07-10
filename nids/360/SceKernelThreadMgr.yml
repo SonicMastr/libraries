@@ -15,6 +15,12 @@ modules:
           sceKernelCheckDipsw: 0x1C783FB2
           sceKernelClearDipsw: 0x800EDCC1
           sceKernelSetDipsw: 0x817053D4
+      SceDipswForDriver:
+        nid: 0xC9E26388
+        functions:
+          sceKernelCheckDipsw: 0xA98FC2FD
+          sceKernelClearDipsw: 0xF1F3E9FE
+          sceKernelSetDipsw: 0x82E45FBF
       SceThreadmgr:
         nid: 0x859A24B1
         functions:
