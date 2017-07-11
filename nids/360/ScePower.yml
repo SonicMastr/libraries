@@ -53,6 +53,8 @@ modules:
           scePowerGetPowerSwMode: 0x165CE085
           scePowerGetWakeupFactor: 0x9F26222A
           scePowerRequestColdReset: 0x0442D852
+          scePowerRequestDisplayOff: 0x160EB506
+          scePowerRequestDisplayOn: 0x3EA75C88
           scePowerRequestHibernate: 0x08951418
           scePowerRequestSoftReset: 0x2875994B
           scePowerRequestStandby: 0x2B7C7CF4
