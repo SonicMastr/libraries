@@ -54,6 +54,9 @@ modules:
           scePowerGetWakeupFactor: 0x9F26222A
           scePowerRequestColdReset: 0x0442D852
           scePowerRequestHibernate: 0x08951418
+          scePowerRequestSoftReset: 0x2875994B
+          scePowerRequestStandby: 0x2B7C7CF4
+          scePowerRequestSuspend: 0xAC32C9CC
           scePowerSetBatteryFakeStatus: 0x0C6973B8
           scePowerSetMipsClockFrequency: 0xFFC84E69
           scePowerSetPowerSwMode: 0xC1853BA7
