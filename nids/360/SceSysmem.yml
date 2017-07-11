@@ -36,6 +36,9 @@ modules:
         nid: 0x88C17370
         functions:
           sceDebugDisableInfoDump: 0xF857CDD6
+          sceDebugGetPutcharHandler: 0xE783518C
+          sceDebugPutchar: 0x82D2EDCE
+          sceDebugRegisterPutcharHandler: 0xE6115A72
           sceDebugSetHandlers: 0x10067B7B
       SceKernelSuspendForDriver:
         nid: 0x7290B21C

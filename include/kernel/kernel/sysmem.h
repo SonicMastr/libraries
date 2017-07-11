@@ -211,6 +211,14 @@ int sceDebugPrintf(const char *fmt, ...);
 
 int sceDebugPrintf2(int unk0, int unk1, const char *fmt, ...);
 
+int sceDebugSetHandlers(int (*func)(void *args, char c), void *args);
+
+int sceDebugRegisterPutcharHandler(int (*func)(void *args, char c), void *args);
+
+void *sceDebugGetPutcharHandler(void);
+
+int sceDebugPutchar(int character);
+
 #ifdef __cplusplus
 }
 #endif
