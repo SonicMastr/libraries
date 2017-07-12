@@ -34,6 +34,8 @@ modules:
           sceSysconResetDevice: 0x8A95D35C
           sceSysconSendCommand: 0xE26488B9
           sceSysconSetDebugHandlers: 0xF245CD6F
+          sceSysconSetLowBatteryCallback: 0x3F0DB7C0
+          sceSysconSetThermalAlertCallback: 0x773B8126
           sceSysconShowModeClear: 0x8D7724C0
           sceSysconShowModeSet: 0x6D65B70F
           sceSysconVerifyConfigstorageScript: 0xCC6F90A8
