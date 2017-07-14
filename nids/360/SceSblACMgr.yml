@@ -9,4 +9,5 @@ modules:
           sceSblACMgrIsDevelopmentMode: 0xE87D1777
           sceSblACMgrIsGameProgram: 0x1298C647
           sceSblACMgrIsNonGameProgram: 0x6C5AB07F
+          sceSblACMgrIsPspEmu: 0xFD00C72A
           sceSblACMgrIsShell: 0x8612B243
