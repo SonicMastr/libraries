@@ -20,12 +20,14 @@ modules:
       SceDisplayForDriver:
         nid: 0x9FED47AC
         functions:
+          sceDisplayGetActualViewportConf: 0x40ACFE51
           sceDisplayGetFrameBuf: 0xEEDA2E54
           sceDisplayGetFrameBufDimensions: 0x5AFE6CD3
           sceDisplayGetFrameBufInternal: 0x19F94C63
           sceDisplayRegisterFrameBufCallback: 0x6E22990E
           sceDisplaySetFrameBuf: 0x289D82FE
           sceDisplaySetFrameBufInternal: 0x16466675
+          sceDisplaySetViewportConf: 0xEE5EB52D
       SceDisplayUser:
         nid: 0x4FAACD11
         functions:
