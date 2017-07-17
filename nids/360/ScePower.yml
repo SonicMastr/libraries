@@ -62,6 +62,7 @@ modules:
           scePowerGetBatteryVolt: 0x483CE86B
           scePowerGetBusClockFrequency: 0x478FE6F5
           scePowerGetCaseTemp: 0x525592E4
+          scePowerGetGpuXbarClockFrequency: 0x0A750DEE
           scePowerGetIdleTimer: 0xEDC13FE5
           scePowerGetPowerSwMode: 0x165CE085
           scePowerGetResumeCount: 0x0074EF9B
@@ -79,8 +80,11 @@ modules:
           scePowerRequestSoftReset: 0x2875994B
           scePowerRequestStandby: 0x2B7C7CF4
           scePowerRequestSuspend: 0xAC32C9CC
+          scePowerSetArmClockFrequency: 0x74DB5AE5
           scePowerSetBatteryFakeStatus: 0x0C6973B8
           scePowerSetBusClockFrequency: 0xB8D7B3FB
+          scePowerSetGpuClockFrequency: 0x264C24FC
+          scePowerSetGpuXbarClockFrequency: 0xA7739DBE
           scePowerSetIdleCallback: 0x1BA2FCAE
           scePowerSetMipsClockFrequency: 0xFFC84E69
           scePowerSetPowerSwMode: 0xC1853BA7

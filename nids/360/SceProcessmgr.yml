@@ -21,6 +21,19 @@ modules:
           sceKernelPowerUnlock: 0x466C0CBD
           sceKernelRegisterProcessTerminationCallback: 0x5EC77870
           sceKernelUnregisterProcessTerminationCallback: 0x973A4527
+      SceProcessmgrForDriver:
+        nid: 0x746EC971
+        functions:
+          sceKernelCreateProcessLocalStorage: 0x3801D7D6
+          sceKernelGetPidProcessLocalStorageAddr: 0xAF80F39C
+          sceKernelGetProcessInfo: 0x0AFF3EAE
+          sceKernelGetProcessLocalStorageAddr: 0xEE694840
+          sceKernelGetProcessTimeCore: 0xEC283166
+          sceKernelGetProcessTimeLowCore: 0x02179E12
+          sceKernelGetProcessTimeWideCore: 0x82D94BE9
+          sceKernelGetRemoteProcessTime: 0xC074EB31
+          sceKernelIsCDialogAvailable: 0x2F6020B7
+          sceKernelIsGameBudget: 0xF7A8BB25
       SceProcessmgrForKernel:
         nid: 0x7A69DE86
         functions:
