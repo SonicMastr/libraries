@@ -25,6 +25,7 @@ typedef struct SceI2cDebugHandlers {
 } SceI2cDebugHandlers;
 
 int sceI2cInit(int bus);
+int sceI2cReset(int bus);
 int sceI2cTransferRead(int bus, unsigned int addr, unsigned char *buffer, int size);
 int sceI2cTransferWrite(int bus, unsigned int addr, const unsigned char *buffer, int size);
 int sceI2cTransferWriteRead(int bus,

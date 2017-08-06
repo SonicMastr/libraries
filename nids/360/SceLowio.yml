@@ -19,6 +19,7 @@ modules:
         nid: 0xE14BEF6E
         functions:
           sceI2cInit: 0x9CF8F3D6
+          sceI2cReset: 0x76D277AB
           sceI2cSetDebugHandlers: 0xA2C7CE62
           sceI2cTransferRead: 0xD1D0A9A4
           sceI2cTransferWrite: 0xCA94A759

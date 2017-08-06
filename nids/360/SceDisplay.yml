@@ -24,10 +24,18 @@ modules:
           sceDisplayGetFrameBuf: 0xEEDA2E54
           sceDisplayGetFrameBufDimensions: 0x5AFE6CD3
           sceDisplayGetFrameBufInternal: 0x19F94C63
+          sceDisplayGetResolutionInfoInternal: 0xB3C6D647
           sceDisplayRegisterFrameBufCallback: 0x6E22990E
+          sceDisplayRegisterVblankStartCallback: 0x7FB0BD28
+          sceDisplaySetBrightness: 0x9E3C6DC6
           sceDisplaySetFrameBuf: 0x289D82FE
           sceDisplaySetFrameBufInternal: 0x16466675
+          sceDisplaySetInvertColors: 0x19140ACD
           sceDisplaySetViewportConf: 0xEE5EB52D
+          sceDisplayUnregisterVblankStartCallback: 0xB027433E
+          sceDisplayWaitVblankStart: 0x984C27E7
+          sceDisplayWaitVblankStartMulti: 0x40F1469C
+          sceDisplayWaitVblankStartMultiCB: 0x46F186C3
       SceDisplayUser:
         nid: 0x4FAACD11
         functions:
