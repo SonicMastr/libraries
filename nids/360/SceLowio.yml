@@ -24,3 +24,18 @@ modules:
           sceI2cTransferRead: 0xD1D0A9A4
           sceI2cTransferWrite: 0xCA94A759
           sceI2cTransferWriteRead: 0x0A40B7BF
+      ScePervasiveForDriver:
+        nid: 0xE692C727
+        functions:
+          scePervasiveGpioClockDisable: 0xEB176898
+          scePervasiveGpioClockEnable: 0x2F195C97
+          scePervasiveGpioResetDisable: 0x78C34032
+          scePervasiveGpioResetEnable: 0x731A097D
+          scePervasiveSpiClockDisable: 0xA85BF98A
+          scePervasiveSpiClockEnable: 0xDFD96BFC
+          scePervasiveSpiResetDisable: 0xE4B145AE
+          scePervasiveSpiResetEnable: 0x7B16F900
+          scePervasiveUartClockDisable: 0x18DD8043
+          scePervasiveUartClockEnable: 0xEFD084D8
+          scePervasiveUartResetDisable: 0xA7CE7DCC
+          scePervasiveUartResetEnable: 0x788B6C61
