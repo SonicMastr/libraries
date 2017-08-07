@@ -28,6 +28,7 @@ modules:
           sceDisplayRegisterFrameBufCallback: 0x6E22990E
           sceDisplayRegisterVblankStartCallback: 0x7FB0BD28
           sceDisplaySetBrightness: 0x9E3C6DC6
+          sceDisplaySetDisplayColorSpaceMode: 0x8D79D187
           sceDisplaySetFrameBuf: 0x289D82FE
           sceDisplaySetFrameBufInternal: 0x16466675
           sceDisplaySetInvertColors: 0x19140ACD
