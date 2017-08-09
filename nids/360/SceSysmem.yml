@@ -190,7 +190,8 @@ modules:
         nid: 0x3691DA45
         functions:
           sceKernelGetProcessTitleId: 0xEC3124A3
-          sceKernelGetSysrootBuffer: 0x3E455842
+          sceKernelGetSysbase: 0x3E455842
+          sceKernelGetSysrootBuffer: 0x9DB56D1F
           sceSysrootIsAuCodecIcConexant: 0x46E72428
           sceSysrootIsBsodReboot: 0x4373AC96
           sceSysrootIsExternalBootMode: 0x89D19090

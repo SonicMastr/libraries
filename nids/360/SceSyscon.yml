@@ -15,6 +15,7 @@ modules:
           sceSysconCtrlManualChargeMode: 0xC6A2C9EF
           sceSysconEnableHibernateIO: 0x4946538A
           sceSysconEndConfigstorageTransaction: 0xFCC3E8EE
+          sceSysconGetBaryon: 0xFF86F4C5
           sceSysconGetHardwareInfo: 0xCBD6D8BC
           sceSysconGetHardwareInfo2: 0x965C68C3
           sceSysconGetLogInfo: 0x701535FC
@@ -39,3 +40,4 @@ modules:
           sceSysconShowModeClear: 0x8D7724C0
           sceSysconShowModeSet: 0x6D65B70F
           sceSysconVerifyConfigstorageScript: 0xCC6F90A8
+          sceSysconWaitInitialized: 0x55DF1C9B

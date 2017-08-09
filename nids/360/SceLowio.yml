@@ -27,6 +27,10 @@ modules:
       ScePervasiveForDriver:
         nid: 0xE692C727
         functions:
+          scePervasiveDsiClockDisable: 0x25AE181E
+          scePervasiveDsiClockEnable: 0xBC42C72F
+          scePervasiveDsiResetDisable: 0xFFB43AC2
+          scePervasiveDsiResetEnable: 0xE3FC1C8D
           scePervasiveGpioClockDisable: 0xEB176898
           scePervasiveGpioClockEnable: 0x2F195C97
           scePervasiveGpioResetDisable: 0x78C34032
