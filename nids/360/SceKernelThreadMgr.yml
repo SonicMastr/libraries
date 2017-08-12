@@ -153,6 +153,7 @@ modules:
           sceKernelStartThread: 0x21F5419B
           sceKernelStartTimer: 0x84C4CE4D
           sceKernelStopTimer: 0x474F214B
+          sceKernelTryLockMutex: 0x270993A6
           sceKernelTryLockReadRWLock: 0xFC2B5A50
           sceKernelTryLockWriteRWLock: 0xA96F2E5A
           sceKernelUnlockMutex: 0x1E82E5D0
