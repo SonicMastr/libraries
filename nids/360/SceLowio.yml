@@ -35,6 +35,11 @@ modules:
           scePervasiveGpioClockEnable: 0x2F195C97
           scePervasiveGpioResetDisable: 0x78C34032
           scePervasiveGpioResetEnable: 0x731A097D
+          scePervasiveMsifClockDisable: 0x2A9778CD
+          scePervasiveMsifClockEnable: 0x7704C013
+          scePervasiveMsifResetDisable: 0xCB0F15CD
+          scePervasiveMsifResetEnable: 0xA3569FF1
+          scePervasiveRemovableMemoryGetCardInsertState: 0x551EEE82
           scePervasiveSpiClockDisable: 0xA85BF98A
           scePervasiveSpiClockEnable: 0xDFD96BFC
           scePervasiveSpiResetDisable: 0xE4B145AE
