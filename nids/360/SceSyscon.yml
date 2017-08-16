@@ -11,11 +11,15 @@ modules:
           sceSysconCmdExecAsync: 0xC2224E82
           sceSysconCmdSync: 0x6E517D22
           sceSysconCommitConfigstorageTransaction: 0x7B9B3617
+          sceSysconCtrlHdmiCecPower: 0x62155962
           sceSysconCtrlLED: 0x04EC7579
           sceSysconCtrlManualChargeMode: 0xC6A2C9EF
+          sceSysconCtrlMsPower: 0x710A7CF0
+          sceSysconCtrlSdPower: 0xBE1ADE4F
           sceSysconEnableHibernateIO: 0x4946538A
           sceSysconEndConfigstorageTransaction: 0xFCC3E8EE
-          sceSysconGetBaryon: 0xFF86F4C5
+          sceSysconGetBaryonTimestamp: 0x4D588A0A
+          sceSysconGetBaryonVersion: 0xFF86F4C5
           sceSysconGetHardwareInfo: 0xCBD6D8BC
           sceSysconGetHardwareInfo2: 0x965C68C3
           sceSysconGetLogInfo: 0x701535FC
