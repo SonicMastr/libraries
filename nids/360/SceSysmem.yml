@@ -43,10 +43,10 @@ modules:
       SceKernelSuspendForDriver:
         nid: 0x7290B21C
         functions:
-          sceKernelNotifySuspendCallback: 0xD4622EA8
           sceKernelPowerTick: 0xE0489831
-          sceKernelRegisterSuspendCallback: 0x04C05D10
-          sceKernelUnregisterSuspendCallback: 0xDD61D621
+          sceKernelRegisterSysEventHandler: 0x04C05D10
+          sceKernelSysEventDispatch: 0xD4622EA8
+          sceKernelUnregisterSysEventHandler: 0xDD61D621
       SceKernelUtilsForDriver:
         nid: 0x496AD8B4
         functions:
