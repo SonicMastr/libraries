@@ -79,6 +79,11 @@ int sceDisplayGetFrameBuf(SceDisplayFrameBuf *pParam, int sync);
 */
 int sceDisplayGetFrameBufDimensions(int *width, int *height);
 
+/**
+ * Wait for vertical blank start
+ */
+int sceDisplayWaitVblankStart(void);
+
 #ifdef __cplusplus
 }
 #endif
