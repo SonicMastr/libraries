@@ -7,11 +7,11 @@
 extern "C" {
 #endif
 
-enum {
-	SCE_CTRL_ERROR_INVALID_ARG	= 0x80340001,
-	SCE_CTRL_ERROR_PRIV_REQUIRED	= 0x80340002,
-	SCE_CTRL_ERROR_FATAL		= 0x803400FF
-};
+typedef enum SceCtrlErrorCode {
+	SCE_CTRL_ERROR_INVALID_ARG	    = 0x80340001,
+	SCE_CTRL_ERROR_PRIV_REQUIRED    = 0x80340002,
+	SCE_CTRL_ERROR_FATAL            = 0x803400FF
+} SceCtrlErrorCode;
 
 /** Enumeration for the digital controller buttons.
  * @note - L1/R1/L3/R3 only can bind using ::sceCtrlReadBufferPositiveExt2 
@@ -43,7 +43,7 @@ typedef enum SceCtrlButtons {
 
 /** Enumeration for the controller types. */
 enum  SceCtrlExternalInputMode {
-	SCE_CTRL_TYPE_UNPAIRED  = 0,
+	SCE_CTRL_TYPE_UNPAIRED  = 0, //!< Unpaired controller
 	SCE_CTRL_TYPE_PHY       = 1, //!< Physical controller for VITA
 	SCE_CTRL_TYPE_VIRT      = 2, //!< Virtual controller for PSTV
 	SCE_CTRL_TYPE_DS3       = 4, //!< DualShock 3
@@ -51,14 +51,14 @@ enum  SceCtrlExternalInputMode {
 };
 
 /** Controller mode. */
-enum SceCtrlPadInputMode {
+typedef enum SceCtrlPadInputMode {
 	/** Digital buttons only. */
 	SCE_CTRL_MODE_DIGITAL = 0,
 	/** Digital buttons + Analog support. */
 	SCE_CTRL_MODE_ANALOG = 1,
 	/** Same as ::SCE_CTRL_MODE_ANALOG, but with larger range for analog sticks. */
 	SCE_CTRL_MODE_ANALOG_WIDE = 2
-};
+} SceCtrlPadInputMode;
 
 /** Returned controller data */
 typedef struct SceCtrlData {
@@ -96,9 +96,9 @@ typedef struct SceCtrlRapidFireRule {
 
 /** Structure to pass as argument to ::sceCtrlSetActuator */
 typedef struct SceCtrlActuator {
-	unsigned char small; //!< Vibration strength of the small motor
-	unsigned char large; //!< Vibration strength of the large motor
-	uint8_t unk[6]; //!< Unknown
+	unsigned char small;  //!< Vibration strength of the small motor
+	unsigned char large;  //!< Vibration strength of the large motor
+	uint8_t       unk[6]; //!< Unknown
 } SceCtrlActuator;
 
 /** Structure to pass as argument to ::sceCtrlGetControllerPortInfo */
@@ -127,7 +127,7 @@ typedef struct SceCtrlVirtualControllerDriver {
 /**
  * Set the controller mode.
  *
- * @param[in] mode - One of ::CtrlMode.
+ * @param[in] mode - One of ::SceCtrlPadInputMode.
  *
  * @return The previous mode, <0 on error.
  */
@@ -136,7 +136,7 @@ int sceCtrlSetSamplingMode(int mode);
 /**
  * Get the current controller mode.
  *
- * @param[out] pMode - Return value, see ::CtrlMode.
+ * @param[out] pMode - Return value, see ::SceCtrlPadInputMode.
  *
  * @return The current mode, <0 on error.
  */

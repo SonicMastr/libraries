@@ -40,7 +40,7 @@ static inline void sceKernelCpuSaveContext(int context[3]) {
 /**
  * @brief      Restore process context
  *
- * @param      context  The context, can be from `sceKernelGetPidContext`
+ * @param      context  The context, can be from ::sceKernelGetPidContext
  */
 static inline void sceKernelCpuRestoreContext(int context[3]) {
   int cpsr;
@@ -205,7 +205,7 @@ int sceKernelCpuUnrestrictedMemcpy(void *dst, const void *src, size_t len);
  *
  * @param[in]  addr   Mutex associated to the suspend-resume pair
  *
- * @return     The current state of the interrupt controller, to be used with sceKernelCpuResumeIntr.
+ * @return     The current state of the interrupt controller, to be used with ::sceKernelCpuResumeIntr.
  */
 int sceKernelCpuSuspendIntr(int *addr);
 
@@ -213,7 +213,7 @@ int sceKernelCpuSuspendIntr(int *addr);
  * @brief      Resume all interrupts (enables IRQs)
  *
  * @param[in]  addr   Mutex associated to the suspend-resume pair
- * @param[in]  prev_state   State obtained from sceKernelCpuSuspendIntr
+ * @param[in]  prev_state   State obtained from ::sceKernelCpuSuspendIntr.
  *
  * @return     The previous state of the interrupt controller.
  */
