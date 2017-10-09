@@ -1,6 +1,6 @@
 modules:
   SceAudioIn:
-    nid: 0x0000000A
+    nid: 0x3DFB6F18
     libraries:
       SceAudioIn:
         nid: 0xF8DC61A3

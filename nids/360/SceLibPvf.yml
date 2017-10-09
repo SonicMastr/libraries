@@ -1,6 +1,6 @@
 modules:
-  ScePvf:
-    nid: 0x00000097
+  SceLibPvf:
+    nid: 0x820F86E8
     libraries:
       ScePvf:
         nid: 0x68D59260
