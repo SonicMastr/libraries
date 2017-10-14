@@ -54,6 +54,7 @@ modules:
           scePowerBatteryUpdateInfo: 0x27F3292C
           scePowerCancelRequest: 0xDB62C9CF
           scePowerEncodeUBattery: 0x3951AF53
+          scePowerGetArmClockFrequency: 0xABC6F88F
           scePowerGetBatteryChargingStatus: 0xB4432BC8
           scePowerGetBatteryLifePercent: 0x2085D15D
           scePowerGetBatteryLifeTime: 0x8EFB3FA2
@@ -62,6 +63,8 @@ modules:
           scePowerGetBatteryVolt: 0x483CE86B
           scePowerGetBusClockFrequency: 0x478FE6F5
           scePowerGetCaseTemp: 0x525592E4
+          scePowerGetDeviceCount: 0x475BCC82
+          scePowerGetGpuClockFrequency: 0xC63DACD5
           scePowerGetGpuXbarClockFrequency: 0x0A750DEE
           scePowerGetIdleTimer: 0xEDC13FE5
           scePowerGetPowerSwMode: 0x165CE085

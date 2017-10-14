@@ -116,6 +116,7 @@ modules:
           strtol: 0xAB77C5AA
           tolower: 0x0021DAF9
           toupper: 0xA685DCB1
+          vsnprintf: 0x3DDBE2E1
       SceSysmem:
         nid: 0x37FE725A
         functions:
