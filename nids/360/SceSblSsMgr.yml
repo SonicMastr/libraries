@@ -5,7 +5,4 @@ modules:
       SceSblSsMgrForDriver:
         nid: 0x61E9428D
         functions:
-          SceSblSsMgrForDriver_37DD5CBF_ecb_encrypt_unkflag: 0x37DD5CBF
           sceKernelGetRandomNumber: 0x4F9BFBE5
-          sceSblSsMgrDecryptAesKeyMsif: 0x934DB6B5
-          sceSblSsMgrExecuteDmac5Command0x04Size: 0x4DD1B2E5
