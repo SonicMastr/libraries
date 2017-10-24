@@ -1,6 +1,6 @@
 modules:
-  SceLibNetCtl:
-    nid: 0xFA4A5948
+  SceNetCtl:
+    nid: 0x0000006D
     libraries:
       SceNetCtl:
         nid: 0xC6083AE1

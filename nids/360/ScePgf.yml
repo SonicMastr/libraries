@@ -1,6 +1,6 @@
 modules:
-  SceLibPgf:
-    nid: 0xB40B26E9
+  ScePgf:
+    nid: 0x0000008F
     libraries:
       ScePgf:
         nid: 0x9F3504F2

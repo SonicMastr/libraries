@@ -1,6 +1,6 @@
 modules:
-  SceLibRudp:
-    nid: 0x0B6F819A
+  SceRudp:
+    nid: 0x000000A4
     libraries:
       SceLibRudp:
         nid: 0x32910D11

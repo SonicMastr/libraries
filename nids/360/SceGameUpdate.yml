@@ -1,6 +1,6 @@
 modules:
-  SceLibGameUpdate:
-    nid: 0x0207A645
+  SceGameUpdate:
+    nid: 0x00000036
     libraries:
       SceGameUpdate:
         nid: 0x2DD9A62D

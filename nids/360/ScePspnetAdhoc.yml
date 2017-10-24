@@ -1,6 +1,6 @@
 modules:
-  SceLibPspnetAdhoc:
-    nid: 0x321EF128
+  ScePspnetAdhoc:
+    nid: 0x00000095
     libraries:
       ScePspnetAdhoc:
         nid: 0x19C6AFDC

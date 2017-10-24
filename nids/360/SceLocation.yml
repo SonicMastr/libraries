@@ -1,6 +1,6 @@
 modules:
-  SceLibLocation:
-    nid: 0x6015DE69
+  SceLocation:
+    nid: 0x00000059
     libraries:
       SceLibLocation:
         nid: 0x924D86D7

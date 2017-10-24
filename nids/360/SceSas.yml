@@ -1,6 +1,6 @@
 modules:
-  SceSasUser:
-    nid: 0xBDF706EB
+  SceSas:
+    nid: 0x000000A6
     libraries:
       SceSas:
         nid: 0xEE47EC43

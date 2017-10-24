@@ -1,6 +1,6 @@
 modules:
-  SceLiveAreaUtil:
-    nid: 0x6D180EF6
+  SceLiveArea:
+    nid: 0x00000057
     libraries:
       SceLiveAreaUtil:
         nid: 0x5303CB07
