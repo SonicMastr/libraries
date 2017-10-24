@@ -1,0 +1,11 @@
+modules:
+  SceSblSmschedProxy:
+    nid: 0x254B02B3
+    libraries:
+      SceSblSmSchedProxyForKernel:
+        nid: 0x15F25C84
+        functions:
+          sceSblSmSchedCallFunc: 0x723B382F
+          sceSblSmSchedProxyGetStatus: 0x27EB92F1
+          sceSblSmSchedProxyInvoke: 0x1916509B
+          sceSblSmSchedProxyWait: 0xF35EFC1A

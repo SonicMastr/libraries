@@ -2,6 +2,18 @@ modules:
   SceLowio:
     nid: 0x17E0D8DF
     libraries:
+      SceDsiForDriver:
+        nid: 0xEC897883
+        functions:
+          SceDsiForDriver_114D1413_disable_bus: 0x114D1413
+          SceDsiForDriver_3FB0DF1F_dcs_read: 0x3FB0DF1F
+          SceDsiForDriver_4DF9E924_get_pixelclock: 0x4DF9E924
+          SceDsiForDriver_5BE5AA9B_enable_bus: 0x5BE5AA9B
+          SceDsiForDriver_7640F607_disable_bus: 0x7640F607
+          SceDsiForDriver_78E6E3CF_set_pixel_size: 0x78E6E3CF
+          SceDsiForDriver_97BFEA76_set_VIC: 0x97BFEA76
+          SceDsiForDriver_B3A70C05_get_dimensions_for_vic: 0xB3A70C05
+          SceDsiForDriver_C2E85919_control_unk: 0xC2E85919
       SceGpioForDriver:
         nid: 0xF0EF5743
         functions:
@@ -24,9 +36,27 @@ modules:
           sceI2cTransferRead: 0xD1D0A9A4
           sceI2cTransferWrite: 0xCA94A759
           sceI2cTransferWriteRead: 0x0A40B7BF
+      SceIftuForDriver:
+        nid: 0xCAFCFE50
+        functions:
+          SceIftuForDriver_0D7C02F7_init_plane: 0x0D7C02F7
+          SceIftuForDriver_0FCBF457_set_csc2: 0x0FCBF457
+          SceIftuForDriver_357EAE24_set_alpha: 0x357EAE24
+          SceIftuForDriver_7CE0C4DA_set_source_fb: 0x7CE0C4DA
+          SceIftuForDriver_AF19FD85_set_alpha_control_value: 0xAF19FD85
+          SceIftuForDriver_C11F30B3_plane_disable: 0xC11F30B3
+          SceIftuForDriver_D64F4C6B_set_csc1: 0xD64F4C6B
+          SceIftuForDriver_E6EE2C6B_set_dst_conversion: 0xE6EE2C6B
       ScePervasiveForDriver:
         nid: 0xE692C727
         functions:
+          ScePervasiveForDriver_07F2A738_iftu2_clock_enable: 0x07F2A738
+          ScePervasiveForDriver_243D0E78_get_dsi_clock_info: 0x243D0E78
+          ScePervasiveForDriver_5AFE0AF0_iftu2_clock_disable: 0x5AFE0AF0
+          ScePervasiveForDriver_5E20D7D5_sdif_unk: 0x5E20D7D5
+          ScePervasiveForDriver_91C80C41_set_dsi_bus_pixelclock: 0x91C80C41
+          ScePervasiveForDriver_E6728E30_sdif_unk: 0xE6728E30
+          ScePervasiveForDriver_E92E28FF_iftu2_reset_exit: 0xE92E28FF
           scePervasiveDsiClockDisable: 0x25AE181E
           scePervasiveDsiClockEnable: 0xBC42C72F
           scePervasiveDsiResetDisable: 0xFFB43AC2
