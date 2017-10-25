@@ -21,6 +21,7 @@ modules:
           sceUdcdGetDeviceState: 0xE054B5E4
           sceUdcdGetDrvState: 0xC0CA5DDB
           sceUdcdRegister: 0x4E55244D
+          sceUdcdRegisterToBus: 0x64675918
           sceUdcdReqCancelAll: 0x38787672
           sceUdcdReqRecv: 0xC60A74B2
           sceUdcdReqSend: 0x1ED0E89E

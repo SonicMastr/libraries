@@ -152,6 +152,7 @@ modules:
           sceKernelDeleteUid: 0x047D32F2
           sceKernelDeleteUserUid: 0x84A4AF5E
           sceKernelFindMemBlockByAddr: 0x8A1742F6
+          sceKernelFindMemBlockByAddrForPid: 0x857F1D5A
           sceKernelFirstDifferentIntUserForPid: 0x8334454F
           sceKernelFreeHeapMemory: 0x3EBCE343
           sceKernelFreeMemBlock: 0x009E1C61
