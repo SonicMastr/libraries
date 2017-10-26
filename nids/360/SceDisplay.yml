@@ -31,6 +31,7 @@ modules:
         functions:
           sceDisplayGetActualViewportConf: 0x40ACFE51
           sceDisplayGetFrameBuf: 0xEEDA2E54
+          sceDisplayGetFrameBufInfoForPid: 0x3BC165EF
           sceDisplayGetFrameBufInternal: 0x19F94C63
           sceDisplayGetMaximumFrameBufResolution: 0x5AFE6CD3
           sceDisplayGetPrimaryHead: 0xC8E554C5
