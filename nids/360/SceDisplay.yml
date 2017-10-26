@@ -27,6 +27,7 @@ modules:
           sceDisplayGetResolutionInfoInternal: 0xB3C6D647
           sceDisplayGetVcountForDisplay: 0x8B5DA27B
           sceDisplayRegisterFrameBufCallback: 0x6E22990E
+          sceDisplayRegisterFrameBufCallbackForDisplay: 0xFA7CE579
           sceDisplayRegisterVblankStartCallback: 0x7FB0BD28
           sceDisplayRegisterVblankStartCallbackForDisplay: 0x4AE2A2B1
           sceDisplaySetBrightness: 0x9E3C6DC6

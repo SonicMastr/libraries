@@ -199,6 +199,21 @@ int sceDisplayUnregisterVblankStartCallback(SceUID uid);
 int sceDisplayUnregisterVblankStartCallbackForDisplay(int display, SceUID uid);
 
 /**
+ * Register callback to be used when the framebuffer changes
+ *
+ * @param[in] uid - Callback UID
+ */
+int sceDisplayRegisterFrameBufCallback(SceUID uid);
+
+/**
+ * Register callback to be used when the framebuffer changes for a display
+ *
+ * @param[in] display - Display index
+ * @param[in] uid - Callback UID
+ */
+int sceDisplayRegisterFrameBufCallbackForDisplay(int display, SceUID uid);
+
+/**
  * Enable/disable color inversion for a display.
  *
  * @param[in] display - Display index
