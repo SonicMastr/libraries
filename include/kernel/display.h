@@ -82,6 +82,11 @@ int sceDisplayGetFrameBuf(SceDisplayFrameBuf *pParam, int sync);
 int sceDisplayGetFrameBufDimensions(int *width, int *height);
 
 /**
+ * Primary display index
+ */
+int sceDisplayGetPrimaryHead(void);
+
+/**
  * Number of vertical blank pulses up to now for a display
  *
  * @param[in] display - Display index
