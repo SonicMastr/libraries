@@ -25,9 +25,9 @@ modules:
         nid: 0x746EC971
         functions:
           sceKernelCreateProcessLocalStorage: 0x3801D7D6
-          sceKernelGetPidProcessLocalStorageAddr: 0xAF80F39C
           sceKernelGetProcessInfo: 0x0AFF3EAE
           sceKernelGetProcessLocalStorageAddr: 0xEE694840
+          sceKernelGetProcessLocalStorageAddrForPid: 0xAF80F39C
           sceKernelGetProcessTimeCore: 0xEC283166
           sceKernelGetProcessTimeLowCore: 0x02179E12
           sceKernelGetProcessTimeWideCore: 0x82D94BE9
