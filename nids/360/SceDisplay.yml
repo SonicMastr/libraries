@@ -5,11 +5,17 @@ modules:
       SceDisplay:
         nid: 0x5ED8F994
         functions:
-          sceDisplayGetFrameBufDimensions: 0x2EBFC7CB
+          _sceDisplayGetFrameBuf: 0xA753B0CA
+          _sceDisplayGetFrameBufInternal: 0x86A8E436
+          _sceDisplayGetMaximumFrameBufResolution: 0x2EBFC7CB
+          _sceDisplayGetResolutionInfoInternal: 0xFEFEB240
+          _sceDisplaySetFrameBuf: 0xF51523CB
+          _sceDisplaySetFrameBufForCompat: 0x45BCB941
+          _sceDisplaySetFrameBufInternal: 0x7A8CB78E
           sceDisplayGetPrimaryHead: 0x7178FADA
           sceDisplayGetRefreshRate: 0xA08CA60D
           sceDisplayGetVcount: 0xB6FDE0BA
-          sceDisplayGetVcountForDisplay: 0x9686859E
+          sceDisplayGetVcountInternal: 0x9686859E
           sceDisplayRegisterVblankStartCallback: 0x6BDF4C4D
           sceDisplayUnregisterVblankStartCallback: 0x98436A80
           sceDisplayWaitSetFrameBuf: 0x9423560C
@@ -25,15 +31,15 @@ modules:
         functions:
           sceDisplayGetActualViewportConf: 0x40ACFE51
           sceDisplayGetFrameBuf: 0xEEDA2E54
-          sceDisplayGetFrameBufDimensions: 0x5AFE6CD3
           sceDisplayGetFrameBufInternal: 0x19F94C63
+          sceDisplayGetMaximumFrameBufResolution: 0x5AFE6CD3
           sceDisplayGetPrimaryHead: 0xC8E554C5
           sceDisplayGetResolutionInfoInternal: 0xB3C6D647
-          sceDisplayGetVcountForDisplay: 0x8B5DA27B
+          sceDisplayGetVcountInternal: 0x8B5DA27B
           sceDisplayRegisterFrameBufCallback: 0x6E22990E
-          sceDisplayRegisterFrameBufCallbackForDisplay: 0xFA7CE579
+          sceDisplayRegisterFrameBufCallbackInternal: 0xFA7CE579
           sceDisplayRegisterVblankStartCallback: 0x7FB0BD28
-          sceDisplayRegisterVblankStartCallbackForDisplay: 0x4AE2A2B1
+          sceDisplayRegisterVblankStartCallbackInternal: 0x4AE2A2B1
           sceDisplaySetBrightness: 0x9E3C6DC6
           sceDisplaySetDisplayColorSpaceMode: 0x8D79D187
           sceDisplaySetFrameBuf: 0x289D82FE
@@ -41,21 +47,26 @@ modules:
           sceDisplaySetInvertColors: 0x19140ACD
           sceDisplaySetViewportConf: 0xEE5EB52D
           sceDisplayUnregisterVblankStartCallback: 0x4B27191F
-          sceDisplayUnregisterVblankStartCallbackForDisplay: 0xB027433E
+          sceDisplayUnregisterVblankStartCallbackInternal: 0xB027433E
           sceDisplayWaitSetFrameBuf: 0x1C0C9C4A
           sceDisplayWaitSetFrameBufCB: 0x9D7F203C
           sceDisplayWaitSetFrameBufMulti: 0xE6D27E0A
           sceDisplayWaitSetFrameBufMultiCB: 0x863EACBE
           sceDisplayWaitVblankStart: 0x984C27E7
           sceDisplayWaitVblankStartCB: 0x46F186C3
-          sceDisplayWaitVblankStartCBForDisplay: 0x8F3C0E19
-          sceDisplayWaitVblankStartForDisplay: 0xB80CA224
+          sceDisplayWaitVblankStartCBInternal: 0x8F3C0E19
+          sceDisplayWaitVblankStartInternal: 0xB80CA224
           sceDisplayWaitVblankStartMulti: 0x40F1469C
           sceDisplayWaitVblankStartMultiCB: 0x77ED8B3A
-          sceDisplayWaitVblankStartMultiCBForDisplay: 0x61421AAF
-          sceDisplayWaitVblankStartMultiForDisplay: 0x32287576
+          sceDisplayWaitVblankStartMultiCBInternal: 0x61421AAF
+          sceDisplayWaitVblankStartMultiInternal: 0x32287576
       SceDisplayUser:
         nid: 0x4FAACD11
         functions:
           sceDisplayGetFrameBuf: 0x42AE6BBC
+          sceDisplayGetFrameBufInternal: 0x5213F74B
+          sceDisplayGetMaximumFrameBufResolution: 0x8848ADDD
+          sceDisplayGetResolutionInfoInternal: 0x0BFB78C6
           sceDisplaySetFrameBuf: 0x7A410B64
+          sceDisplaySetFrameBufForCompat: 0x8C36B628
+          sceDisplaySetFrameBufInternal: 0x89F86A1E

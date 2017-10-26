@@ -72,14 +72,14 @@ int sceDisplaySetFrameBuf(const SceDisplayFrameBuf *pParam, int sync);
 int sceDisplayGetFrameBuf(SceDisplayFrameBuf *pParam, int sync);
 
 /**
- * Get current framebuffer dimensions
+ * Get maximum framebuffer resolution
  *
- * @param[out] width - Framebuffer width
- * @param[out] height - Framebuffer height
+ * @param[out] width - Maximum width
+ * @param[out] height - Maximum height
  *
  * @return 0 on success, < 0 on error.
 */
-int sceDisplayGetFrameBufDimensions(int *width, int *height);
+int sceDisplayGetMaximumFrameBufResolution(int *width, int *height);
 
 /**
  * Primary display index
@@ -91,7 +91,7 @@ int sceDisplayGetPrimaryHead(void);
  *
  * @param[in] display - Display index
  */
-int sceDisplayGetVcountForDisplay(int display);
+int sceDisplayGetVcountInternal(int display);
 
 /**
  * Wait for vertical blank start
@@ -103,7 +103,7 @@ int sceDisplayWaitVblankStart(void);
  *
  * @param[in] display - Display index
  */
-int sceDisplayWaitVblankStartForDisplay(int display);
+int sceDisplayWaitVblankStartInternal(int display);
 
 /**
  * Wait for vertical blank start with callback
@@ -115,7 +115,7 @@ int sceDisplayWaitVblankStartCB(void);
  *
  * @param[in] display - Display index
  */
-int sceDisplayWaitVblankStartCBForDisplay(int display);
+int sceDisplayWaitVblankStartCBInternal(int display);
 
 /**
  * Wait for vertical blank start after specified number of vertical periods
@@ -130,7 +130,7 @@ int sceDisplayWaitVblankStartMulti(unsigned int vcount);
  * @param[in] display - Display index
  * @param[in] vcount - Number of vertical periods before waiting for vertical blank start
  */
-int sceDisplayWaitVblankStartMultiForDisplay(int display, unsigned int vcount);
+int sceDisplayWaitVblankStartMultiInternal(int display, unsigned int vcount);
 
 /**
  * Wait for vertical blank start with callback after specified number of vertical periods
@@ -145,7 +145,7 @@ int sceDisplayWaitVblankStartMultiCB(unsigned int vcount);
  * @param[in] display - Display index
  * @param[in] vcount - Number of vertical periods before waiting for vertical blank start
  */
-int sceDisplayWaitVblankStartMultiCBForDisplay(int display, unsigned int vcount);
+int sceDisplayWaitVblankStartMultiCBInternal(int display, unsigned int vcount);
 
 /**
  * Wait for vertical blank start since last update of framebuffer
@@ -186,7 +186,7 @@ int sceDisplayRegisterVblankStartCallback(SceUID uid);
  * @param[in] display - Display index
  * @param[in] uid - Callback UID
  */
-int sceDisplayRegisterVblankStartCallbackForDisplay(int display, SceUID uid);
+int sceDisplayRegisterVblankStartCallbackInternal(int display, SceUID uid);
 
 /**
  * Unregister callback used at each vertical blank start
@@ -201,7 +201,7 @@ int sceDisplayUnregisterVblankStartCallback(SceUID uid);
  * @param[in] display - Display index
  * @param[in] uid - Callback UID
  */
-int sceDisplayUnregisterVblankStartCallbackForDisplay(int display, SceUID uid);
+int sceDisplayUnregisterVblankStartCallbackInternal(int display, SceUID uid);
 
 /**
  * Register callback to be used when the framebuffer changes
@@ -216,7 +216,7 @@ int sceDisplayRegisterFrameBufCallback(SceUID uid);
  * @param[in] display - Display index
  * @param[in] uid - Callback UID
  */
-int sceDisplayRegisterFrameBufCallbackForDisplay(int display, SceUID uid);
+int sceDisplayRegisterFrameBufCallbackInternal(int display, SceUID uid);
 
 /**
  * Enable/disable color inversion for a display.
