@@ -82,7 +82,9 @@ int sceDisplayGetFrameBuf(SceDisplayFrameBuf *pParam, int sync);
 int sceDisplayGetFrameBufDimensions(int *width, int *height);
 
 /**
- * Number of vertical blank pulses up to now
+ * Number of vertical blank pulses up to now for display
+ *
+ * @param[in] display - Display index
  */
 int sceDisplayGetVcountForDisplay(int display);
 
@@ -92,9 +94,23 @@ int sceDisplayGetVcountForDisplay(int display);
 int sceDisplayWaitVblankStart(void);
 
 /**
+ * Wait for vertical blank start for display
+ *
+ * @param[in] display - Display index
+ */
+int sceDisplayWaitVblankStartForDisplay(int display);
+
+/**
  * Wait for vertical blank start with callback
  */
 int sceDisplayWaitVblankStartCB(void);
+
+/**
+ * Wait for vertical blank start with callback for display
+ *
+ * @param[in] display - Display index
+ */
+int sceDisplayWaitVblankStartCBForDisplay(int display);
 
 /**
  * Wait for vertical blank start after specified number of vertical periods
@@ -104,11 +120,27 @@ int sceDisplayWaitVblankStartCB(void);
 int sceDisplayWaitVblankStartMulti(unsigned int vcount);
 
 /**
+ * Wait for vertical blank start after specified number of vertical periods for display
+ *
+ * @param[in] display - Display index
+ * @param[in] vcount - Number of vertical periods before waiting for vertical blank start
+ */
+int sceDisplayWaitVblankStartMultiForDisplay(int display, unsigned int vcount);
+
+/**
  * Wait for vertical blank start with callback after specified number of vertical periods
  *
  * @param[in] vcount - Number of vertical periods before waiting for vertical blank start
  */
 int sceDisplayWaitVblankStartMultiCB(unsigned int vcount);
+
+/**
+ * Wait for vertical blank start with callback after specified number of vertical periods for display
+ *
+ * @param[in] display - Display index
+ * @param[in] vcount - Number of vertical periods before waiting for vertical blank start
+ */
+int sceDisplayWaitVblankStartMultiCBForDisplay(int display, unsigned int vcount);
 
 /**
  * Wait for vertical blank start since last update of framebuffer

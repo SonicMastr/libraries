@@ -43,8 +43,12 @@ modules:
           sceDisplayWaitSetFrameBufMultiCB: 0x863EACBE
           sceDisplayWaitVblankStart: 0x984C27E7
           sceDisplayWaitVblankStartCB: 0x46F186C3
+          sceDisplayWaitVblankStartCBForDisplay: 0x8F3C0E19
+          sceDisplayWaitVblankStartForDisplay: 0xB80CA224
           sceDisplayWaitVblankStartMulti: 0x40F1469C
           sceDisplayWaitVblankStartMultiCB: 0x77ED8B3A
+          sceDisplayWaitVblankStartMultiCBForDisplay: 0x61421AAF
+          sceDisplayWaitVblankStartMultiForDisplay: 0x32287576
       SceDisplayUser:
         nid: 0x4FAACD11
         functions:
