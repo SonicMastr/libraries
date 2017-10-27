@@ -90,13 +90,13 @@ typedef struct SceKernelAddrPair {
 	uint32_t length;                //!< Length
 } SceKernelAddrPair;
 
-typedef struct SceKernelPaddrListReq {
-	uint32_t size;                  //!< sizeof(SceKernelPaddrListReq)
+typedef struct SceKernelPaddrList {
+	uint32_t size;                  //!< sizeof(SceKernelPaddrList)
 	uint32_t list_size;             //!< Size in elements of the list array
 	uint32_t ret_length;            //!< Total physical size of the memory pairs
 	uint32_t ret_count;             //!< Number of elements of list filled by sceKernelGetPaddrList
 	SceKernelAddrPair *list;        //!< Array of physical addresses and their lengths pairs
-} SceKernelPaddrListReq;
+} SceKernelPaddrList;
 
 typedef struct SceKernelProcessContext {
 	SceUInt32 TTBR1;
@@ -235,8 +235,25 @@ int sceKernelGetProcessTitleId(SceUID pid, char *titleid, size_t len);
 
 int sceKernelMapBlockUserVisible(SceUID uid);
 
+/**
+ * Get the physical address of a given virtual address
+ *
+ * @param[in] addr - The virtual address
+ * @param[out] paddr - The physical address
+ *
+ * @return 0 on success, < 0 on error.
+ */
 int sceKernelGetPaddr(void *addr, uintptr_t *paddr);
-int sceKernelGetPaddrList(const SceKernelAddrPair *input, SceKernelPaddrListReq *req)
+
+/**
+ * Get the physical address list of a given virtual address range
+ *
+ * @param[in] input - The virtual address range
+ * @param[out] list - The list of physical addresses
+ *
+ * @return 0 on success, < 0 on error.
+ */
+int sceKernelGetPaddrList(const SceKernelAddrPair *input, SceKernelPaddrList *list);
 
 int sceSysrootIsManufacturingMode(void);
 
