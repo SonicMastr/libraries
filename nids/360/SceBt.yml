@@ -14,16 +14,24 @@ modules:
           sceBtFreqAudio: 0x376DE456
           sceBtGetConfiguration: 0x9D619F35
           sceBtGetConnectingInfo: 0xD9B65CAA
+          sceBtGetDeviceId: 0xBE01ACE7
           sceBtGetDeviceName: 0x80977A26
           sceBtGetInfoForTest: 0xF7756C1F
           sceBtGetLastError: 0x4E159A08
           sceBtGetRegisteredInfo: 0xB6C9A094
           sceBtGetStatusForTest: 0x48A27F7E
-          sceBtGetVidPid: 0xBE01ACE7
           sceBtHfpGetCurrentPhoneNumber: 0xB0CD46A4
           sceBtHfpRequest: 0xD924787E
           sceBtHidGetReportDescriptor: 0x95614634
           sceBtHidTransfer: 0x88B34B5B
+          sceBtHidVuGetReportFeature: 0x3F353762
+          sceBtHidVuGetReportInput: 0x3CE546C2
+          sceBtHidVuReadEvent: 0x847B87A3
+          sceBtHidVuRegisterCallback: 0x12CD34CC
+          sceBtHidVuSetInterruptOutput: 0xFCDA0ED1
+          sceBtHidVuSetReportFeature: 0x26F68B2F
+          sceBtHidVuSetReportOutput: 0x6FBD1E7E
+          sceBtHidVuUnregisterCallback: 0xE15FA065
           sceBtPairingOOB: 0xCBC4FF55
           sceBtPushBip: 0xE4EA1E59
           sceBtPushOpp: 0xED78EEC3
