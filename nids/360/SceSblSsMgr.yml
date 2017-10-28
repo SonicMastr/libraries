@@ -6,3 +6,12 @@ modules:
         nid: 0x61E9428D
         functions:
           sceKernelGetRandomNumber: 0x4F9BFBE5
+          sceSblAimgrGetConsoleId: 0xFC6CDD68
+          sceSblAimgrGetPscode: 0xE0DC2587
+          sceSblAimgrGetPscode2: 0x9A9676D0
+          sceSblAimgrGetVisibleId: 0x04843835
+          sceSblSsCreatePassPhrase: 0xB8B298FD
+          sceSblSsDecryptWithPortability: 0x934DB6B5
+          sceSblSsEncryptWithPortability: 0x21EC51F6
+          sceSblSsGetNvsData: 0xFDD6D5DE
+          sceSblSsSetNvsData: 0x249ADB07

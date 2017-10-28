@@ -205,16 +205,22 @@ modules:
           sceAppMgrCheckPfsMounted: 0x0B1BEEE0
           sceAppMgrCloudDataClearMcId: 0xEC408FEF
           sceAppMgrCloudDataCreateHeader: 0xED87F191
+          sceAppMgrCloudDataDstCreateMount: 0xB3816B42
           sceAppMgrCloudDataGetMcId: 0x1286AF64
           sceAppMgrCloudDataSetMcId: 0x0B94BB90
+          sceAppMgrCloudDataSetupKey: 0x2FAA6ABD
+          sceAppMgrCloudDataSrcMount: 0x6D4D6FFE
           sceAppMgrCloudDataVerifyHeader: 0x55D48190
           sceAppMgrDebugSettingNotifyUpdate: 0x7554330F
+          sceAppMgrFakeSaveDataCreateMount: 0x12FC3FA8
           sceAppMgrGameDataMount: 0xCE356B2D
           sceAppMgrGetPfsProcessStatus: 0xE72D2A4A
           sceAppMgrGetSystemDataFile: 0xAEC49533
+          sceAppMgrIsExclusiveProcessRunning: 0xA888C2DC
           sceAppMgrLaunchAppByPath: 0xB0A37065
           sceAppMgrLoadSafeMemory: 0xFAF3DAAA
           sceAppMgrLocalBackupGetOfflineId: 0x61B13981
+          sceAppMgrLocalBackupVerifyOfflineHeader: 0x62E98C42
           sceAppMgrRegisterPath: 0xB53FB98E
           sceAppMgrSaveDataLocalBackupTargetGetList: 0x9B3F7D66
           sceAppMgrSaveDataLocalBackupTargetRemoveItem: 0xC4EF95BB

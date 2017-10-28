@@ -29,6 +29,7 @@ modules:
           sceNpDrmGetRifNameForInstall: 0x17573133
           sceNpDrmGetRifPspKey: 0xDACB71F4
           sceNpDrmGetRifVitaKey: 0x723322B5
+          sceNpDrmIsLooseAccountBind: 0xFC84CA1A
           sceNpDrmPresetRifProvisionalFlag: 0xC070FE89
           sceNpDrmPspEbootSigGen: 0xEF387FC4
           sceNpDrmPspEbootVerify: 0xB6CA3A2C

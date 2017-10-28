@@ -81,6 +81,18 @@ modules:
           sceZlibDecompress: 0x900148DB
           sceZlibGetCompressedData: 0x01EB6C45
           sceZlibGetInfo: 0x5B9BCD75
+      SceQafMgrForDriver:
+        nid: 0x4E29D3B6
+        functions:
+          sceSblQafMgrIsAllowControlIduAutoUpdate: 0xF8BFEE48
+          sceSblQafMgrIsAllowDtcpIpReset: 0xE8B8F31F
+          sceSblQafMgrIsAllowKeepCoreFile: 0xC1EA75C8
+          sceSblQafMgrIsAllowLoadMagicGate: 0x36E5312E
+          sceSblQafMgrIsAllowMarlinTest: 0x10283EB8
+          sceSblQafMgrIsAllowNearTest: 0x9644171D
+          sceSblQafMgrIsAllowPSPEmuShowQAInfo: 0xB7B195B2
+          sceSblQafMgrIsAllowRemotePlayDebug: 0xBFD5E463
+          sceSblQafMgrIsAllowSystemAppDebug: 0xCAD47130
       SceSblAIMgrForDriver:
         nid: 0xFD00C69A
         functions:

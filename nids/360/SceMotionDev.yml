@@ -41,6 +41,7 @@ modules:
         functions:
           sceMotionDevGetDeviceInfo: 0x3E4BCBC0
           sceMotionDevIsReady: 0x10AAC8EA
+          sceMotionDevNoiseFilterIsAvailable: 0x11A17A96
           sceMotionDevRead: 0x3A3407B5
           sceMotionDevRegisterVirtualMotionDriver: 0x7FD06731
           sceMotionDevSamplingStart: 0xC02C85AB

@@ -20,6 +20,7 @@ modules:
           sceSysconEndConfigstorageTransaction: 0xFCC3E8EE
           sceSysconGetBaryonTimestamp: 0x4D588A0A
           sceSysconGetBaryonVersion: 0xFF86F4C5
+          sceSysconGetBatteryCalibData: 0x9ADC9936
           sceSysconGetHardwareInfo: 0xCBD6D8BC
           sceSysconGetHardwareInfo2: 0x965C68C3
           sceSysconGetLogInfo: 0x701535FC
