@@ -46,6 +46,12 @@ modules:
           _sceNpDrmPackageTransform: 0x0567DCA1
           _sceNpDrmPackageUninstallFinished: 0x23A28861
           _sceNpDrmPackageUninstallStarted: 0x4901C3E6
+          _sceNpDrmSaveDataFormatFinished: 0xC75A775B
+          _sceNpDrmSaveDataFormatStarted: 0x97BB85BD
+          _sceNpDrmSaveDataInstallFinished: 0x640C1724
+          _sceNpDrmSaveDataInstallStarted: 0x4665E75A
           sceNpDrmPackageInstallOngoing: 0xED0471FE
           sceNpDrmPackageIsGameExist: 0xB9337914
           sceNpDrmPackageUninstallOngoing: 0xF1FF6193
+          sceNpDrmSaveDataFormatOngoing: 0x200D2DE4
+          sceNpDrmSaveDataInstallOngoing: 0xA5E0F38C

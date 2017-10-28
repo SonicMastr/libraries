@@ -11,6 +11,7 @@ modules:
           sceKernelGetModuleInfo: 0x36585DAF
           sceKernelGetModuleList: 0x2EF2581F
           sceKernelGetSystemSwVersion: 0x5182E212
+          sceKernelInhibitLoadingModule: 0x6CED1F63
           sceKernelIsCalledFromSysModule: 0x85E6D2BB
       SceModulemgrForDriver:
         nid: 0xD4A60A52
