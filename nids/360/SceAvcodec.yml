@@ -1,0 +1,16 @@
+modules:
+  SceAvcodec:
+    nid: 0xDD0E433A
+    libraries:
+      SceAvcodecForDriver:
+        nid: 0x66845469
+        functions:
+          sceJpegEncoderCsc: 0xB77B5BFC
+          sceJpegEncoderEncode: 0x468949D7
+          sceJpegEncoderEnd: 0x86AD5A4F
+          sceJpegEncoderGetContextSize: 0x4DB66E3A
+          sceJpegEncoderInit: 0x1BE9F5A4
+          sceJpegEncoderSetCompressionRatio: 0x91B27CF3
+          sceJpegEncoderSetHeaderMode: 0x58835DCB
+          sceJpegEncoderSetOutputAddr: 0x2C8271BA
+          sceJpegEncoderSetValidRegion: 0xD0647B74
