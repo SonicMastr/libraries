@@ -188,10 +188,10 @@ modules:
           sceKernelMemcpyUserToUserForPid: 0x8E086C33
           sceKernelRemapBlock: 0xDFE2C8CB
           sceKernelRoMemcpyKernelToUserForPid: 0x571D2739
-          sceKernelStrlenUser: 0xB429D419
           sceKernelStrncpyKernelToUser: 0x80BD6FEB
           sceKernelStrncpyUserForPid: 0x75AAF178
           sceKernelStrncpyUserToKernel: 0xDB3EC244
+          sceKernelStrnlenUser: 0xB429D419
           sceKernelStrnlenUserForPid: 0x9929EB07
           sceKernelSwitchVmaForPid: 0x6F2ACDAE
           sceKernelUidRelease: 0x149885C4
