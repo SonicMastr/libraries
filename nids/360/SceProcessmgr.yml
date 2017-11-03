@@ -39,3 +39,4 @@ modules:
         functions:
           sceKernelGetProcessAuthid: 0xE4C83B0D
           sceKernelGetProcessKernelBuf: 0xB9E68092
+          sceKernelLaunchApp: 0x71CF71FD
