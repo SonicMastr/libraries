@@ -201,6 +201,7 @@ modules:
         nid: 0x63A519E5
         functions:
           sceKernelCreateUidObj: 0xDF0288D7
+          sceKernelGetMemBlockType: 0x289BE3EC
           sceKernelRxMemcpyKernelToUserForPid: 0x30931572
       SceSysrootForKernel:
         nid: 0x3691DA45
