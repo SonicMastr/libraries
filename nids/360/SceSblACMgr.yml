@@ -11,3 +11,4 @@ modules:
           sceSblACMgrIsNonGameProgram: 0x6C5AB07F
           sceSblACMgrIsPspEmu: 0xFD00C72A
           sceSblACMgrIsShell: 0x8612B243
+          sceSblACMgrIsSystem: 0x0948F41C
