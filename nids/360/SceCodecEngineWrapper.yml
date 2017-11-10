@@ -1,0 +1,11 @@
+modules:
+  SceCodecEngineWrapper:
+    nid: 0x50CC4832
+    libraries:
+      SceCodecEngineWrapper:
+        nid: 0x5C9EE5B9
+        functions:
+          _sceCodecEngineAllocMemoryFromUnmapMemBlock: 0x03DCBDCA
+          _sceCodecEngineCloseUnmapMemBlock: 0xAD30912D
+          _sceCodecEngineFreeMemoryFromUnmapMemBlock: 0x489FF965
+          _sceCodecEngineOpenUnmapMemBlock: 0xB0E654EE
