@@ -13,6 +13,8 @@ modules:
           sceNetDumpCreate: 0xAFF9FA4D
           sceNetDumpDestroy: 0x82DDCF63
           sceNetDumpRead: 0x04042925
+          sceNetEmulationGet: 0xAE3F4AC6
+          sceNetEmulationSet: 0x561DFD03
           sceNetEpollAbort: 0x93FCC4E8
           sceNetEpollControl: 0x4C8764AC
           sceNetEpollCreate: 0xF9D102AE

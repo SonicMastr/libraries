@@ -71,9 +71,12 @@ modules:
           sceIoGetstat: 0xBCA5B623
           sceIoGetstatByFd: 0x57F8CD25
           sceIoIoctl: 0x54ABACFA
+          sceIoIoctlAsync: 0x099C54B9
           sceIoLseek: 0x99BA173E
+          sceIoLseekAsync: 0xCAC5D672
           sceIoMkdir: 0x9670D39F
           sceIoOpen: 0x6C60AC61
+          sceIoOpenAsync: 0x6A7EA9FD
           sceIoPread: 0x52315AD7
           sceIoPwrite: 0x8FFFF5A8
           sceIoRemove: 0xE20ED0F3
