@@ -119,6 +119,7 @@ modules:
           sceKernelDelayThreadCB: 0x9C0180E1
           sceKernelDeleteCallback: 0x3A7E17F6
           sceKernelDeleteEventFlag: 0x71ECB352
+          sceKernelDeleteFastMutex: 0x11FE84A1
           sceKernelDeleteMutex: 0x0A912340
           sceKernelDeleteSema: 0x16A35E58
           sceKernelDeleteThread: 0xAC834F3F
@@ -131,12 +132,14 @@ modules:
           sceKernelGetSystemTimeWide: 0xF4EE4FA9
           sceKernelGetThreadCpuAffinityMask: 0x83DC703D
           sceKernelGetThreadCurrentPriority: 0x01414F0B
+          sceKernelGetThreadId: 0x59D06540
           sceKernelGetThreadStackFreeSize: 0x7B278A0B
           sceKernelGetThreadTLSAddr: 0x66EEA46A
           sceKernelGetThreadmgrUIDClass: 0x0A20775A
           sceKernelGetTimerBaseWide: 0xA6D11DD3
           sceKernelGetTimerTimeWide: 0xC1286004
           sceKernelInitializeFastMutex: 0xAF8E1266
+          sceKernelLockFastMutex: 0x70627F3A
           sceKernelLockMutex: 0x16AC80C5
           sceKernelNotifyCallback: 0xC3E00919
           sceKernelPollEventFlag: 0x76C6555B
@@ -158,6 +161,7 @@ modules:
           sceKernelTryLockMutex: 0x270993A6
           sceKernelTryLockReadRWLock: 0xFC2B5A50
           sceKernelTryLockWriteRWLock: 0xA96F2E5A
+          sceKernelUnlockFastMutex: 0xDB395782
           sceKernelUnlockMutex: 0x1E82E5D0
           sceKernelUnlockReadRWLock: 0xDE1B9EEE
           sceKernelUnlockWriteRWLock: 0x94A73797
