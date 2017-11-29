@@ -49,3 +49,4 @@ modules:
           scePervasiveUartClockEnable: 0xEFD084D8
           scePervasiveUartResetDisable: 0xA7CE7DCC
           scePervasiveUartResetEnable: 0x788B6C61
+          scePervasiveUartSetBaudrate: 0x8BAB45F8
