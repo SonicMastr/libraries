@@ -1,5 +1,5 @@
-#ifndef _PSP2_LOWIO_I2C_H_
-#define _PSP2_LOWIO_I2C_H_
+#ifndef _PSP2_KERN_LOWIO_I2C_H_
+#define _PSP2_KERN_LOWIO_I2C_H_
 
 #include <psp2kern/types.h>
 
@@ -38,5 +38,5 @@ int sceI2cSetDebugHandlers(int bus, SceI2cDebugHandlers *debug_handlers);
 }
 #endif
 
-#endif /* _PSP2_LOWIO_I2C_H_ */
+#endif /* _PSP2_KERN_LOWIO_I2C_H_ */
 

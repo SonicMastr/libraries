@@ -1,5 +1,5 @@
-#ifndef _PSP2_KERNEL_CTRL_H_
-#define _PSP2_KERNEL_CTRL_H_
+#ifndef _PSP2_KERN_CTRL_H_
+#define _PSP2_KERN_CTRL_H_
 
 #include <psp2kern/types.h>
 
@@ -14,7 +14,7 @@ typedef enum SceCtrlErrorCode {
 } SceCtrlErrorCode;
 
 /** Enumeration for the digital controller buttons.
- * @note - L1/R1/L3/R3 only can bind using ::sceCtrlReadBufferPositiveExt2 
+ * @note - L1/R1/L3/R3 only can bind using ::sceCtrlReadBufferPositiveExt2
  */
 typedef enum SceCtrlButtons {
 	SCE_CTRL_SELECT      = 0x00000001,            //!< Select button.
@@ -295,4 +295,4 @@ int sceCtrlRegisterVirtualControllerDriver(SceCtrlVirtualControllerDriver *drive
 }
 #endif
 
-#endif /* _PSP2CTRL_H_ */
+#endif /* _PSP2_KERN_CTRL_H_ */

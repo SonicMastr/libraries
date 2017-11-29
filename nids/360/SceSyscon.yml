@@ -27,7 +27,6 @@ modules:
           sceSysconGetManualChargeMode: 0x4FEC564C
           sceSysconGetManufacturesStatus: 0x3E09A1F4
           sceSysconGetTemperatureLog: 0x3B354824
-          sceSysconGetTimeStamp: 0x4D588A0A
           sceSysconGetUsbDetStatus: 0xEF810687
           sceSysconIduModeClear: 0x34574496
           sceSysconIduModeSet: 0x956D07CB
