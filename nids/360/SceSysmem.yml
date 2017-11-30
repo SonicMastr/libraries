@@ -12,6 +12,7 @@ modules:
           sceKernelCpuDcacheWritebackRange: 0x9CB9F0CE
           sceKernelCpuDisableInterrupts: 0x821FC0EE
           sceKernelCpuEnableInterrupts: 0xF5BAD43B
+          sceKernelCpuGetCpuId: 0x5E4D5DE1
           sceKernelCpuResumeIntr: 0x7BB9D5DF
           sceKernelCpuSuspendIntr: 0xD32ACE9E
       SceCpuForKernel:
