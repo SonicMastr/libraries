@@ -95,8 +95,19 @@ typedef enum SceKernelModel {
 } SceKernelModel;
 
 typedef struct SceClass {
-	char data[0x2C];
-} SceClass;
+	struct SceClass *next;
+	struct SceClass *root;
+	struct SceClass *prev;
+	const char *name;
+	struct SceClass *uidclass;
+	unsigned int attributes;
+	unsigned short itemsize;
+	unsigned short unk1A;
+	unsigned int unk1C;
+	SceClassCallback create_cb;
+	SceClassCallback destroy_cb;
+	unsigned int magic; /* 0xABCE9DA5 */
+} SceClass; /* size = 0x2C */
 
 typedef struct SceObjectBase {
 	uint32_t sce_reserved[2];
@@ -235,11 +246,13 @@ int sceKernelUidRetain(SceUID uid);
  */
 int sceKernelUidRelease(SceUID uid);
 
-SceClass *sceKernelGetUidClass(void);
 typedef int (*SceClassCallback)(void *item);
+
+SceClass *sceKernelGetUidClass(void);
 int sceKernelCreateClass(SceClass *cls, const char *name, void *uidclass, size_t itemsize, SceClassCallback create, SceClassCallback destroy);
 int sceKernelDeleteUserUid(SceUID pid, SceUID user_uid);
 int sceKernelDeleteUid(SceUID uid);
+int sceKernelFindClassByName(const char name, SceClass **cls);
 
 int sceKernelSwitchVmaForPid(SceUID pid);
 
