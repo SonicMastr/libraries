@@ -94,6 +94,8 @@ typedef enum SceKernelModel {
 	SCE_KERNEL_MODEL_VITATV = 0x20000
 } SceKernelModel;
 
+typedef int (*SceClassCallback)(void *item);
+	
 typedef struct SceClass {
 	struct SceClass *next;
 	struct SceClass *root;
@@ -245,8 +247,6 @@ int sceKernelUidRetain(SceUID uid);
  * @return 0 on success, < 0 on error.
  */
 int sceKernelUidRelease(SceUID uid);
-
-typedef int (*SceClassCallback)(void *item);
 
 SceClass *sceKernelGetUidClass(void);
 int sceKernelCreateClass(SceClass *cls, const char *name, void *uidclass, size_t itemsize, SceClassCallback create, SceClassCallback destroy);
