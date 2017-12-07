@@ -54,13 +54,19 @@ modules:
       ScePowerForDriver:
         nid: 0x1590166F
         functions:
-          kcePowerGetBatteryElec: 0x862AE1A6
+          scePowerBatteryDisableUsbCharging: 0x90285886
+          scePowerBatteryEnableUsbCharging: 0x733F973B
+          scePowerBatteryForbidCharging: 0x166922EC
+          scePowerBatteryPermitCharging: 0xDD3D4DAC
+          scePowerBatterySetUsbStatus: 0xE4E3C316
+          scePowerBatteryStopUsbCharging: 0xACC857A4
           scePowerBatteryUpdateInfo: 0x27F3292C
           scePowerCancelRequest: 0xDB62C9CF
           scePowerEncodeUBattery: 0x3951AF53
           scePowerGetArmClockFrequency: 0xABC6F88F
           scePowerGetBatteryChargingStatus: 0xB4432BC8
           scePowerGetBatteryCycleCount: 0x008A54B9
+          scePowerGetBatteryElec: 0x862AE1A6
           scePowerGetBatteryFullCapacity: 0xFD18A0FF
           scePowerGetBatteryLifePercent: 0x2085D15D
           scePowerGetBatteryLifeTime: 0x8EFB3FA2
@@ -72,7 +78,9 @@ modules:
           scePowerGetBatteryVolt: 0x483CE86B
           scePowerGetBusClockFrequency: 0x478FE6F5
           scePowerGetCaseTemp: 0x525592E4
+          scePowerGetCompatClockFrequency: 0xCBCC11CC
           scePowerGetDeviceCount: 0x475BCC82
+          scePowerGetDisplayMaxBrightness: 0xD8759B55
           scePowerGetGpuClockFrequency: 0xC63DACD5
           scePowerGetGpuXbarClockFrequency: 0x0A750DEE
           scePowerGetIdleTimer: 0xEDC13FE5
@@ -90,17 +98,21 @@ modules:
           scePowerRequestDisplayOff: 0x160EB506
           scePowerRequestDisplayOn: 0x3EA75C88
           scePowerRequestHibernate: 0x08951418
+          scePowerRequestResume: 0x02DB1035
           scePowerRequestSoftReset: 0x2875994B
           scePowerRequestStandby: 0x2B7C7CF4
           scePowerRequestSuspend: 0xAC32C9CC
           scePowerSetArmClockFrequency: 0x74DB5AE5
           scePowerSetBatteryFakeStatus: 0x0C6973B8
           scePowerSetBusClockFrequency: 0xB8D7B3FB
+          scePowerSetCompatClockFrequency: 0xFFC84E69
+          scePowerSetDisplayMaxBrightness: 0x77027B6B
           scePowerSetGpuClockFrequency: 0x264C24FC
           scePowerSetGpuXbarClockFrequency: 0xA7739DBE
           scePowerSetIdleCallback: 0x1BA2FCAE
-          scePowerSetMipsClockFrequency: 0xFFC84E69
+          scePowerSetIdleTimer: 0x6BC26FC7
           scePowerSetPowerSwMode: 0xC1853BA7
+          scePowerSetProcessIdleCallback: 0x0856FD0A
           scePowerSetPsButtonPushTime: 0xCF8F0529
           scePowerSetStandbyButtonPushTime: 0x675A84ED
           scePowerTick: 0xEFD3C963
