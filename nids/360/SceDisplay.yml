@@ -29,12 +29,17 @@ modules:
       SceDisplayForDriver:
         nid: 0x9FED47AC
         functions:
+          sceDisplayDisableHead: 0x43347565
+          sceDisplayEnableHead: 0x496032D6
           sceDisplayGetActualViewportConf: 0x40ACFE51
+          sceDisplayGetDeviceType: 0x8D9A1CCE
           sceDisplayGetFrameBuf: 0xEEDA2E54
           sceDisplayGetFrameBufInfoForPid: 0x3BC165EF
           sceDisplayGetFrameBufInternal: 0x19F94C63
           sceDisplayGetMaximumFrameBufResolution: 0x5AFE6CD3
+          sceDisplayGetOutputMode: 0xD2CED235
           sceDisplayGetPrimaryHead: 0xC8E554C5
+          sceDisplayGetRefreshRateInternal: 0x7911958E
           sceDisplayGetResolutionInfoInternal: 0xB3C6D647
           sceDisplayGetVcountInternal: 0x8B5DA27B
           sceDisplayRegisterFrameBufCallback: 0x6E22990E
@@ -46,13 +51,18 @@ modules:
           sceDisplaySetFrameBuf: 0x289D82FE
           sceDisplaySetFrameBufInternal: 0x16466675
           sceDisplaySetInvertColors: 0x19140ACD
+          sceDisplaySetOutputMode: 0xAF5EE5BE
+          sceDisplaySetScaleConf: 0xEB390A76
           sceDisplaySetViewportConf: 0xEE5EB52D
           sceDisplayUnregisterVblankStartCallback: 0x4B27191F
           sceDisplayUnregisterVblankStartCallbackInternal: 0xB027433E
           sceDisplayWaitSetFrameBuf: 0x1C0C9C4A
           sceDisplayWaitSetFrameBufCB: 0x9D7F203C
+          sceDisplayWaitSetFrameBufCBInternal: 0x35466D63
+          sceDisplayWaitSetFrameBufInternal: 0x12A77662
           sceDisplayWaitSetFrameBufMulti: 0xE6D27E0A
           sceDisplayWaitSetFrameBufMultiCB: 0x863EACBE
+          sceDisplayWaitSetFrameBufMultiInternal: 0xF83C95B1
           sceDisplayWaitVblankStart: 0x984C27E7
           sceDisplayWaitVblankStartCB: 0x46F186C3
           sceDisplayWaitVblankStartCBInternal: 0x8F3C0E19
