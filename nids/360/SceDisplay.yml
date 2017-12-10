@@ -39,6 +39,7 @@ modules:
           sceDisplayGetMaximumFrameBufResolution: 0x5AFE6CD3
           sceDisplayGetOutputMode: 0xD2CED235
           sceDisplayGetPrimaryHead: 0xC8E554C5
+          sceDisplayGetRefreshRateInternal: 0x7911958E
           sceDisplayGetResolutionInfoInternal: 0xB3C6D647
           sceDisplayGetVcountInternal: 0x8B5DA27B
           sceDisplayRegisterFrameBufCallback: 0x6E22990E
@@ -57,8 +58,11 @@ modules:
           sceDisplayUnregisterVblankStartCallbackInternal: 0xB027433E
           sceDisplayWaitSetFrameBuf: 0x1C0C9C4A
           sceDisplayWaitSetFrameBufCB: 0x9D7F203C
+          sceDisplayWaitSetFrameBufCBInternal: 0x35466D63
+          sceDisplayWaitSetFrameBufInternal: 0x12A77662
           sceDisplayWaitSetFrameBufMulti: 0xE6D27E0A
           sceDisplayWaitSetFrameBufMultiCB: 0x863EACBE
+          sceDisplayWaitSetFrameBufMultiInternal: 0xF83C95B1
           sceDisplayWaitVblankStart: 0x984C27E7
           sceDisplayWaitVblankStartCB: 0x46F186C3
           sceDisplayWaitVblankStartCBInternal: 0x8F3C0E19
