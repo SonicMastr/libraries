@@ -98,6 +98,11 @@ typedef enum SceThreadStatus {
 	SCE_THREAD_KILLED  = 32, /* Thread manager has killed the thread (stack overflow) */
 } SceThreadStatus;
 
+typedef struct SceKernelFaultingProcessInfo {
+    SceUID pid;
+    uint32_t unk;
+} SceKernelFaultingProcessInfo;
+
 /**
  * \brief Create a thread
  *
@@ -1060,6 +1065,15 @@ SceUID sceKernelGetProcessId(void);
  * @return     Zero on success
  */
 int sceKernelRunWithStack(int stack_size, int (*to_call)(void *), void *args);
+
+/**
+ * @brief      Call from an abort handler to get info on faulting process
+ *
+ * @param      info  Output info
+ *
+ * @return     Zero on success
+ */
+int sceKernelGetFaultingProcess(SceKernelFaultingProcessInfo *info);
 
 #ifdef __cplusplus
 }

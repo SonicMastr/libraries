@@ -1,0 +1,9 @@
+modules:
+  SceExcpmgr:
+    nid: 0xF3D9E37C
+    libraries:
+      SceExcpmgrForKernel:
+        nid: 0x4CA0FDD5
+        functions:
+          sceExcpmgrGetData: 0x08CB30E6
+          sceExcpmgrRegisterHandler: 0x03499636

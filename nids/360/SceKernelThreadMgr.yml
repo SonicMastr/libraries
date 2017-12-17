@@ -175,3 +175,7 @@ modules:
           sceKernelWaitSema: 0x3C8B55A9
           sceKernelWaitThreadEnd: 0x3E20216F
           sceKernelWaitThreadEndCB: 0x9EF4F62C
+      SceThreadmgrForKernel:
+        nid: 0xA8CA0EFD
+        functions:
+          sceKernelGetFaultingProcess: 0xD8B9AC8D
