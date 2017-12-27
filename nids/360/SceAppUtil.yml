@@ -51,3 +51,8 @@ modules:
         nid: 0xE96B941B
         functions:
           sceAppUtilCacheMount: 0x0AA56143
+      SceAppUtilExt:
+        nid: 0x76D1A509
+        functions:
+          sceAppUtilExtVideoMount: 0xA0380CF7
+          sceAppUtilExtVideoUmount: 0x02E1E2C4

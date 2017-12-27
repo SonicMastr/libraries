@@ -1,6 +1,6 @@
 modules:
   SceHttp:
-    nid: 0x00000040
+    nid: 0xB015B405
     libraries:
       SceHttp:
         nid: 0xE8F15CDE

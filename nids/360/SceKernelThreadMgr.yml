@@ -90,6 +90,7 @@ modules:
           sceKernelTryLockMutex: 0x72FC1F54
           sceKernelTryLockReadRWLock: 0xEFDDA456
           sceKernelTryLockWriteRWLock: 0x206CBB66
+          sceKernelUnlockLwMutex: 0x91FA6614
           sceKernelUnlockMutex: 0x1A372EC8
           sceKernelUnlockReadRWLock: 0x3EF91145
           sceKernelUnlockWriteRWLock: 0xB4151397
