@@ -13,6 +13,17 @@ modules:
           sceFiosArchiveSetDecompressorThreadCount: 0xCD0E86D0
           sceFiosArchiveUnmount: 0xFE1E1D28
           sceFiosArchiveUnmountSync: 0xB26DC24D
+          sceFiosCacheContainsFileRangeSync: 0x07368D62
+          sceFiosCacheContainsFileSync: 0xA74990E3
+          sceFiosCacheFlushFileRangeSync: 0x7EB1134C
+          sceFiosCacheFlushFileSync: 0x811A68D4
+          sceFiosCacheFlushSync: 0x50B173E1
+          sceFiosCachePrefetchFH: 0xE83B4B91
+          sceFiosCachePrefetchFHRange: 0x62BA823F
+          sceFiosCachePrefetchFHRangeSync: 0x55E28E75
+          sceFiosCachePrefetchFHSync: 0x722EA8ED
+          sceFiosCachePrefetchFile: 0xC58DF766
+          sceFiosCachePrefetchFileRange: 0x21619E35
           sceFiosCancelAllOps: 0x1E920B1D
           sceFiosChangeStat: 0xD2CD9AF2
           sceFiosChangeStatSync: 0xC781D7B4
@@ -29,6 +40,7 @@ modules:
           sceFiosDateGetCurrent: 0x5C593C1E
           sceFiosDateToComponents: 0x5CFF6EA0
           sceFiosDateToSceDateTime: 0x94FDFFEE
+          sceFiosDeallocatePassthruFH: 0xFF0876EA
           sceFiosDebugDumpDH: 0x44B9F8EB
           sceFiosDebugDumpDate: 0x159B1FA8
           sceFiosDebugDumpError: 0x51E677DF
@@ -77,6 +89,7 @@ modules:
           sceFiosFHSync: 0xE485F35E
           sceFiosFHSyncSync: 0xA909CCE3
           sceFiosFHTell: 0xD7F33130
+          sceFiosFHToFileno: 0x0009910A
           sceFiosFHTruncate: 0x2B39453B
           sceFiosFHTruncateSync: 0xFEF940B7
           sceFiosFHWrite: 0xE663138E
@@ -95,6 +108,7 @@ modules:
           sceFiosFileTruncateSync: 0x6E1252B8
           sceFiosFileWrite: 0x42C278E5
           sceFiosFileWriteSync: 0x132B6DE6
+          sceFiosFilenoToFH: 0xEE3CEBB8
           sceFiosGetAllDHs: 0x681184A2
           sceFiosGetAllFHs: 0x90AB9195
           sceFiosGetAllOps: 0x8F62832C
@@ -123,6 +137,7 @@ modules:
           sceFiosOpIsCancelled: 0x0C81D80E
           sceFiosOpIsDone: 0x1B9A575E
           sceFiosOpReschedule: 0x968CADBD
+          sceFiosOpRescheduleWithPriority: 0x2B57C9A5
           sceFiosOpSyncWait: 0xE6A66C70
           sceFiosOpSyncWaitForIO: 0x202079F9
           sceFiosOpWait: 0x2AC79DFC
@@ -146,6 +161,9 @@ modules:
           sceFiosShutdownAndCancelOps: 0x5B8D48C4
           sceFiosStat: 0xFF04AF72
           sceFiosStatSync: 0xACBAF3E0
+          sceFiosStatisticsGet: 0xFE86B30D
+          sceFiosStatisticsPrint: 0x590DD306
+          sceFiosStatisticsReset: 0x5216E0DA
           sceFiosSuspend: 0x510953DC
           sceFiosSync: 0x0DF32816
           sceFiosSyncSync: 0x06D97629

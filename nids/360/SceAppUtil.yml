@@ -8,13 +8,17 @@ modules:
           sceAppUtilAddCookieWebBrowser: 0xC97D5D9E
           sceAppUtilAddcontMount: 0x53B2C020
           sceAppUtilAddcontUmount: 0x1B36AF8C
+          sceAppUtilAppEventParseGameCustomData: 0x0B04C067
           sceAppUtilAppEventParseIncomingDialog: 0x22297D59
           sceAppUtilAppEventParseLiveArea: 0x0F4EE55F
           sceAppUtilAppEventParseNearGift: 0x77380601
+          sceAppUtilAppEventParseNpActivity: 0xF6B75651
           sceAppUtilAppEventParseNpAppDataMessage: 0x6BED9B58
           sceAppUtilAppEventParseNpBasicJoinablePresence: 0x28C7D4F6
           sceAppUtilAppEventParseNpInviteMessage: 0xA2496814
           sceAppUtilAppEventParseScreenShotNotification: 0x2AF42D6A
+          sceAppUtilAppEventParseSessionInvitation: 0xA58E6FCE
+          sceAppUtilAppEventParseTeleport: 0x665A8B7E
           sceAppUtilAppEventParseTriggerUtil: 0x8DEE696B
           sceAppUtilAppEventParseWebBrowser: 0x8ED716F5
           sceAppUtilAppParamGetInt: 0xCD7FD67A
