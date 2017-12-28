@@ -1,6 +1,6 @@
 modules:
   SceHttp:
-    nid: 0x00000040
+    nid: 0xB015B405
     libraries:
       SceHttp:
         nid: 0xE8F15CDE
@@ -19,7 +19,9 @@ modules:
           sceHttpCreateConnectionWithURL: 0xC616C200
           sceHttpCreateEpoll: 0x7C99AF67
           sceHttpCreateRequest: 0xB0284270
+          sceHttpCreateRequest2: 0x857D9242
           sceHttpCreateRequestWithURL: 0xBD5DA1D0
+          sceHttpCreateRequestWithURL2: 0x1B6B7983
           sceHttpCreateTemplate: 0x62241DAB
           sceHttpDeleteConnection: 0xF0F65C15
           sceHttpDeleteRequest: 0x3D3D29AD
@@ -64,12 +66,14 @@ modules:
           sceHttpSetEpoll: 0x0F1FD1B3
           sceHttpSetEpollId: 0x5CEB6554
           sceHttpSetIcmOption: 0x23978CBC
+          sceHttpSetInflateGZIPEnabled: 0x5104B13D
           sceHttpSetNonblock: 0x27A98BDA
           sceHttpSetRecvTimeOut: 0x94BF196E
           sceHttpSetRedirectCallback: 0x4E08167D
           sceHttpSetRequestContentLength: 0x37C30C90
           sceHttpSetResolveRetry: 0x9AB56EA7
           sceHttpSetResolveTimeOut: 0x8455B5B3
+          sceHttpSetResponseHeaderMaxSize: 0xFD76E1FB
           sceHttpSetSendTimeOut: 0x8AE3F008
           sceHttpSslIsCtxCreated: 0x2D3F1281
           sceHttpTerm: 0xC9076666
@@ -83,8 +87,10 @@ modules:
           sceHttpWaitRequest: 0x94F7256A
           sceHttpWaitRequestCB: 0x48650A83
           sceHttpsDisableOption: 0xC6D60403
+          sceHttpsDisableOption2: 0x2E77B201
           sceHttpsDisableOptionPrivate: 0x00659635
           sceHttpsEnableOption: 0x9FBE2869
+          sceHttpsEnableOption2: 0x1E93E8EF
           sceHttpsEnableOptionPrivate: 0x72CB0741
           sceHttpsFreeCaList: 0x56C95D94
           sceHttpsGetCaList: 0xF71AA58D

@@ -1,6 +1,6 @@
 modules:
   SceDbg:
-    nid: 0x00000025
+    nid: 0x0E0ABB49
     libraries:
       SceDbg:
         nid: 0x623DF986

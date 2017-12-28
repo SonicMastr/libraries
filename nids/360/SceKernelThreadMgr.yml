@@ -28,6 +28,7 @@ modules:
           sceKernelChangeActiveCpuMask: 0x001173F8
           sceKernelChangeThreadCpuAffinityMask: 0x15129174
           sceKernelChangeThreadPriority: 0xBD0139F2
+          sceKernelChangeThreadPriority2: 0xC5FFCA61
           sceKernelChangeThreadVfpException: 0xCC18FBAE
           sceKernelCheckCallback: 0xE53E41F6
           sceKernelCheckWaitableStatus: 0xD9BD74EB
@@ -44,7 +45,9 @@ modules:
           sceKernelCreateCallback: 0xB19CF7E9
           sceKernelCreateThreadForUser: 0xC0FAF6A3
           sceKernelDelayThread: 0x4B675D05
+          sceKernelDelayThread200: 0x97C4A7C4
           sceKernelDelayThreadCB: 0x9C0180E1
+          sceKernelDelayThreadCB200: 0x34938242
           sceKernelDeleteCallback: 0xD469676B
           sceKernelDeleteCond: 0x879E6EBD
           sceKernelDeleteEventFlag: 0x5840162C
@@ -90,6 +93,7 @@ modules:
           sceKernelTryLockMutex: 0x72FC1F54
           sceKernelTryLockReadRWLock: 0xEFDDA456
           sceKernelTryLockWriteRWLock: 0x206CBB66
+          sceKernelUnlockLwMutex: 0x91FA6614
           sceKernelUnlockMutex: 0x1A372EC8
           sceKernelUnlockReadRWLock: 0x3EF91145
           sceKernelUnlockWriteRWLock: 0xB4151397
