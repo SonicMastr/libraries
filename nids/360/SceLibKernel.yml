@@ -257,7 +257,7 @@ modules:
           sceKernelTrySendMsgPipe: 0xDFC670E0
           sceKernelTrySendMsgPipeVector: 0x60DB346F
           sceKernelUnloadModule: 0x1987920E
-          sceKernelUnlockLwMutex: 0x120AFC8C
+          sceKernelUnlockLwMutex: 0x91FA6614
           sceKernelWaitCond: 0xC88D44AD
           sceKernelWaitCondCB: 0x4CE42CE2
           sceKernelWaitEvent: 0x120F03AF
