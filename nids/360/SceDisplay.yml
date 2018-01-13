@@ -51,6 +51,7 @@ modules:
           sceDisplaySetFrameBuf: 0x289D82FE
           sceDisplaySetFrameBufInternal: 0x16466675
           sceDisplaySetInvertColors: 0x19140ACD
+          sceDisplaySetMergeConf: 0x6B198052
           sceDisplaySetOutputMode: 0xAF5EE5BE
           sceDisplaySetScaleConf: 0xEB390A76
           sceDisplaySetViewportConf: 0xEE5EB52D
@@ -62,6 +63,7 @@ modules:
           sceDisplayWaitSetFrameBufInternal: 0x12A77662
           sceDisplayWaitSetFrameBufMulti: 0xE6D27E0A
           sceDisplayWaitSetFrameBufMultiCB: 0x863EACBE
+          sceDisplayWaitSetFrameBufMultiCBInternal: 0x6DC8F0F5
           sceDisplayWaitSetFrameBufMultiInternal: 0xF83C95B1
           sceDisplayWaitVblankStart: 0x984C27E7
           sceDisplayWaitVblankStartCB: 0x46F186C3
