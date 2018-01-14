@@ -444,15 +444,6 @@ int sceUdcdGetDeviceInfo(SceUdcdDeviceInfo *devInfo);
 int sceUdcdGetDrvState(const char *driverName);
 
 /**
- *  Get the list of drivers
- *  @param flags - One or more ::SceUdcdStatusDriver
- *  @param list - points to the output list
- *  @param size - number of entries in the output list
- *  @return the number of drivers in the output or < 0 in case of error
- */
-int sceUdcdGetDrvList(unsigned int flags, SceUdcdDriverName *list, int size);
-
-/**
  * Wait for USB state
  * @param state - combination of states (returned by ::sceUdcdGetDeviceState)
  * @param waitMode - one of the ::SceEventFlagWaitTypes
@@ -460,12 +451,6 @@ int sceUdcdGetDrvList(unsigned int flags, SceUdcdDriverName *list, int size);
  * @return the usb state or < 0 in case of error
  */
 int sceUdcdWaitState(unsigned int state, unsigned int waitMode, SceUInt *timeout);
-
-/**
- * Cancel a pending sceUdcdWaitState
- * @return 0 on success
- */
-int sceUdcdWaitCancel(void);
 
 /**
  * Register a USB driver.

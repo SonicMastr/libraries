@@ -306,7 +306,6 @@ int sceBtHfpGetCurrentPhoneNumber(int r0, int r1, int r2, int r3);
 int sceBtHfpRequest(int r0, int r1, int r2, int r3);
 int sceBtHidGetReportDescriptor(unsigned int mac0, unsigned int mac1, void *buffer, unsigned int size);
 int sceBtHidTransfer(unsigned int mac0, unsigned int mac1, SceBtHidRequest *request);
-int sceBtPairingOOB(int r0, int r1, int r2, int r3);
 int sceBtPushBip(int r0, int r1, int r2, int r3);
 int sceBtPushOpp(int r0, int r1, int r2, int r3);
 int sceBtReadEvent(SceBtEvent *events, int num_events);
