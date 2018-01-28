@@ -29,6 +29,8 @@ modules:
       SceDisplayForDriver:
         nid: 0x9FED47AC
         functions:
+          sceDisplayCaptureFrameBufDMAC: 0xF116D0B4
+          sceDisplayCaptureFrameBufIFTU: 0xB0CED8BC
           sceDisplayDisableHead: 0x43347565
           sceDisplayEnableHead: 0x496032D6
           sceDisplayGetActualViewportConf: 0x40ACFE51
