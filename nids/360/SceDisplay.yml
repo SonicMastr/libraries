@@ -49,7 +49,7 @@ modules:
           sceDisplayRegisterVblankStartCallback: 0x7FB0BD28
           sceDisplayRegisterVblankStartCallbackInternal: 0x4AE2A2B1
           sceDisplaySetBrightness: 0x9E3C6DC6
-          sceDisplaySetDisplayColorSpaceMode: 0x8D79D187
+          sceDisplaySetColorSpaceMode: 0x8D79D187
           sceDisplaySetFrameBuf: 0x289D82FE
           sceDisplaySetFrameBufInternal: 0x16466675
           sceDisplaySetInvertColors: 0x19140ACD
