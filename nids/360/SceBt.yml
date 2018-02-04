@@ -81,6 +81,14 @@ modules:
           sceBtHfpRequest: 0x6E49D11D
           sceBtHidGetReportDescriptor: 0x06CB4ABA
           sceBtHidTransfer: 0xF9DCEC77
+          sceBtHidVuGetReportFeature: 0xCA9B885C
+          sceBtHidVuGetReportInput: 0x3BBC1EE1
+          sceBtHidVuReadEvent: 0x3333A878
+          sceBtHidVuRegisterCallback: 0xAB57F8C1
+          sceBtHidVuSetInterruptOutput: 0xD2449052
+          sceBtHidVuSetReportFeature: 0x014A1D28
+          sceBtHidVuSetReportOutput: 0xAB2032A3
+          sceBtHidVuUnregisterCallback: 0x1AB31C7D
           sceBtPushBip: 0x7FF77792
           sceBtPushOpp: 0x21C788E2
           sceBtReadEvent: 0x5ABB9A9D
