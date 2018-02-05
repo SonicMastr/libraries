@@ -113,6 +113,7 @@ modules:
           sceKernelClearEvent: 0x9C335818
           sceKernelClearEventFlag: 0x4F1DA3BE
           sceKernelCreateCallback: 0x1C41614C
+          sceKernelCreateCond: 0xDB6CD34A
           sceKernelCreateEventFlag: 0x4336BAA4
           sceKernelCreateMutex: 0xFBAA026E
           sceKernelCreateSema: 0x30E93C31
@@ -121,6 +122,7 @@ modules:
           sceKernelDelayThread: 0x4B675D05
           sceKernelDelayThreadCB: 0x9C0180E1
           sceKernelDeleteCallback: 0x3A7E17F6
+          sceKernelDeleteCond: 0xAEE0D27C
           sceKernelDeleteEventFlag: 0x71ECB352
           sceKernelDeleteFastMutex: 0x11FE84A1
           sceKernelDeleteMutex: 0x0A912340
@@ -171,6 +173,7 @@ modules:
           sceKernelUnregisterCallbackFromEvent: 0x2E48D81C
           sceKernelUnregisterCallbackFromEventAll: 0x8DADBD16
           sceKernelUnregisterThreadEventHandler: 0x2C8ED6F0
+          sceKernelWaitCond: 0xCC7E027D
           sceKernelWaitEvent: 0xC529EA32
           sceKernelWaitEventCB: 0x360C655C
           sceKernelWaitEventFlag: 0x0C1D3F20
