@@ -27,6 +27,7 @@ int scePervasiveDsiResetEnable(int port, unsigned int mask);
 int scePervasiveDsiResetDisable(int port, unsigned int mask);
 int scePervasiveDsiClockEnable(int port, unsigned int mask);
 int scePervasiveDsiClockDisable(int port, unsigned int mask);
+int scePervasiveDsiSetPixelclock(int port, int pixelclock);
 
 int scePervasiveMsifResetEnable(void);
 int scePervasiveMsifResetDisable(void);
