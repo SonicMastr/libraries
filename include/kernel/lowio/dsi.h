@@ -22,10 +22,10 @@ typedef enum SceDsiHead {
 int sceDsiEnableHead(int head);
 int sceDsiDisableHead(int head);
 int sceDsiSendBlankingPacket(int head);
-int sceDsiSetLanesPixelsize(int head, int lanes, int pixelsize);
+int sceDsiSetLanesAndPixelSize(int head, int lanes, int pixelsize);
 int sceDsiSetVic(int head, int vic);
 int sceDsiGetVicResolution(int vic, int *width, int *height);
-int sceDsiGetPixelclock(int head);
+int sceDsiGetPixelClock(int head);
 int sceDsiGenericShortWrite(int head, int param0, int param1, int param2);
 int sceDsiGenericReadRequest(int head, int param, void *buff, unsigned int size);
 int sceDsiDcsShortWrite(int head, unsigned short param0, int param1);
