@@ -14,6 +14,8 @@ modules:
           sceKernelCpuEnableInterrupts: 0xF5BAD43B
           sceKernelCpuGetCpuId: 0x5E4D5DE1
           sceKernelCpuResumeIntr: 0x7BB9D5DF
+          sceKernelCpuSpinLockIrqRestore: 0x740A0750
+          sceKernelCpuSpinLockIrqSave: 0xEC53D007
           sceKernelCpuSuspendIntr: 0xD32ACE9E
       SceCpuForKernel:
         nid: 0x54BF2BAB
@@ -188,6 +190,13 @@ modules:
           sceKernelKernelUidForUserUid: 0x45D22597
           sceKernelMapBlockUserVisible: 0x58D21746
           sceKernelMapUserBlock: 0x7D4F8B5F
+          sceKernelMemBlockRelease: 0x00575B00
+          sceKernelMemRangeRelease: 0x75C70DE0
+          sceKernelMemRangeReleaseForPid: 0xA8525B06
+          sceKernelMemRangeReleaseWithPerm: 0x22CBE925
+          sceKernelMemRangeRetain: 0x59A4402F
+          sceKernelMemRangeRetainForPid: 0x659586BF
+          sceKernelMemRangeRetainWithPerm: 0xBC0A1D60
           sceKernelMemcpyKernelToUser: 0x6D88EF8A
           sceKernelMemcpyKernelToUserForPid: 0x6B825479
           sceKernelMemcpyKernelToUserForPidUnchecked: 0xFED82F2D

@@ -227,6 +227,24 @@ int sceKernelCpuSuspendIntr(int *addr);
  */
 int sceKernelCpuResumeIntr(int *addr, int prev_state);
 
+/**
+ * @brief      Disable interrupts (IRQs) and spin-lock
+ *
+ * @param[in]  addr   Mutex associated to the lock-unlock pair
+ *
+ * @return     The current state of the interrupt controller, to be passed to ::sceKernelCpuSpinLockIrqRestore
+ */
+int sceKernelCpuSpinLockIrqSave(int *addr);
+
+/**
+ * @brief      Spin-unlock and restore interrupt state
+ *
+ * @param[in]  addr   Mutex associated to the lock-unlock pair
+ * @param[in]  flags   Previous interrupt state to be restored (returned by ::sceKernelCpuSpinLockIrqSave)
+ *
+ * @return     Zero on success
+ */
+int sceKernelCpuSpinLockIrqRestore(int *addr, int flags);
 
 #ifdef __cplusplus
 }
