@@ -2,6 +2,20 @@ modules:
   SceLowio:
     nid: 0x17E0D8DF
     libraries:
+      SceDsiForDriver:
+        nid: 0xEC897883
+        functions:
+          sceDsiDcsRead: 0x3FB0DF1F
+          sceDsiDcsShortWrite: 0xBA6BC89F
+          sceDsiDisableHead: 0x114D1413
+          sceDsiEnableHead: 0x5BE5AA9B
+          sceDsiGenericReadRequest: 0x98120684
+          sceDsiGenericShortWrite: 0x89C00D2F
+          sceDsiGetPixelClock: 0x4DF9E924
+          sceDsiGetVicResolution: 0xB3A70C05
+          sceDsiSendBlankingPacket: 0x7640F607
+          sceDsiSetLanesAndPixelSize: 0x78E6E3CF
+          sceDsiSetVic: 0x97BFEA76
       SceGpioForDriver:
         nid: 0xF0EF5743
         functions:
@@ -31,6 +45,7 @@ modules:
           scePervasiveDsiClockEnable: 0xBC42C72F
           scePervasiveDsiResetDisable: 0xFFB43AC2
           scePervasiveDsiResetEnable: 0xE3FC1C8D
+          scePervasiveDsiSetPixelClock: 0x91C80C41
           scePervasiveGpioClockDisable: 0xEB176898
           scePervasiveGpioClockEnable: 0x2F195C97
           scePervasiveGpioResetDisable: 0x78C34032
