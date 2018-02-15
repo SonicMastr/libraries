@@ -143,6 +143,20 @@ modules:
       SceAvcodecForDriver:
         nid: 0x66845469
         functions:
+          sceAvcencCreateEncoder: 0xB2A51EB0
+          sceAvcencCreateEncoderBasic: 0xC5E720E2
+          sceAvcencCreateEncoderInternal: 0x71C37694
+          sceAvcencCsc: 0x4F11F915
+          sceAvcencDeleteEncoder: 0x2895CB6D
+          sceAvcencEncode: 0xA0E63278
+          sceAvcencEncodeFlush: 0x229AB2CF
+          sceAvcencEncodeStop: 0xDE515BFF
+          sceAvcencGetNalUnit: 0x1A584DB7
+          sceAvcencQueryEncoderMemSize: 0x5C3434FB
+          sceAvcencQueryEncoderMemSizeBasic: 0x7385FB51
+          sceAvcencQueryEncoderMemSizeInternal: 0xBF3835E2
+          sceAvcencSetAvailablePreset: 0x7DC13C29
+          sceAvcencSetEncoderParameter: 0xE0232BFE
           sceJpegEncoderCsc: 0xB77B5BFC
           sceJpegEncoderEncode: 0x468949D7
           sceJpegEncoderEnd: 0x86AD5A4F
