@@ -27,9 +27,6 @@ modules:
           sceKernelCpuIcacheAndL2WritebackInvalidateRange: 0x19F17BD0
           sceKernelCpuIcacheInvalidateAll: 0x264DA250
           sceKernelCpuIcacheInvalidateRange: 0xF4C7F578
-          sceKernelCpuRestoreContext: 0x0A4F0FB9
-          sceKernelCpuSaveContext: 0x211B89DA
-          sceKernelCpuUnrestrictedMemcpy: 0x8C683DEC
       SceDebugForDriver:
         nid: 0x88758561
         functions:

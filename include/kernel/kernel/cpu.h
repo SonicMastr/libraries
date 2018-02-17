@@ -65,6 +65,30 @@ static inline void sceKernelCpuRestoreContext(int context[3])
 }
 
 /**
+ * @brief      MMU permission bypassing memcpy
+ *
+ * This works by writing to the DACR before and after the memcpy.
+ *
+ * @param      dst   The destination
+ * @param[in]  src   The source
+ * @param[in]  len   The length
+ *
+ * @return     Zero on success.
+ */
+static inline int sceKernelCpuUnrestrictedMemcpy(void *dst, const void *src, size_t len)
+{
+	int prev_dacr;
+
+	asm ("mrc p15, 0, %0, c3, c0, 0" : "=r" (prev_dacr));
+	asm ("mcr p15, 0, %0, c3, c0, 0" :: "r" (0xFFFF0000));
+
+	memcpy(dst, src, len);
+
+	asm ("mcr p15, 0, %0, c3, c0, 0" :: "r" (prev_dacr));
+	return 0;
+}
+
+/**
  * @brief      Returns the CPU ID of the calling processor
  *
  * @return     The CPU ID
@@ -194,19 +218,6 @@ int sceKernelCpuIcacheInvalidateAll(void);
  * @return     Zero on success
  */
 int sceKernelCpuIcacheAndL2WritebackInvalidateRange(const void *ptr, size_t len);
-
-/**
- * @brief      MMU permission bypassing memcpy
- *
- * This works by writing to the DACR before and after the memcpy.
- *
- * @param      dst   The destination
- * @param[in]  src   The source
- * @param[in]  len   The length
- *
- * @return     Zero on success.
- */
-int sceKernelCpuUnrestrictedMemcpy(void *dst, const void *src, size_t len);
 
 /**
  * @brief      Suspend all interrupts (disables IRQs)
