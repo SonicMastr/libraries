@@ -128,7 +128,6 @@ modules:
           sceKernelDeleteMutex: 0x0A912340
           sceKernelDeleteSema: 0x16A35E58
           sceKernelDeleteThread: 0xAC834F3F
-          sceKernelEnterProcess: 0x0486F239
           sceKernelExitDeleteThread: 0x1D17DECF
           sceKernelExitThread: 0x0C8A38E1
           sceKernelGetCallbackCount: 0x0892D8DF
@@ -155,6 +154,8 @@ modules:
           sceKernelRunWithStack: 0xE54FD746
           sceKernelSetEvent: 0x9EA3A45C
           sceKernelSetEventFlag: 0xD4780C3E
+          sceKernelSetPermission: 0x02EEDF17
+          sceKernelSetProcessId: 0x0486F239
           sceKernelSetTimerTimeWide: 0x85195A16
           sceKernelSignalCond: 0xAC616150
           sceKernelSignalCondAll: 0x6EC78CD0
