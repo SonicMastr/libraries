@@ -1,0 +1,11 @@
+modules:
+  SceProcessmgr:
+    nid: 0x7CE857A1
+    libraries:
+      SceProcessmgrForKernel:
+        nid: 0xEB1F8EF7
+        functions:
+          sceKernelExitProcess: 0x905621F9
+          sceKernelGetProcessAuthid: 0x324F2B20
+          sceKernelGetProcessKernelBuf: 0xD991C85E
+          sceKernelLaunchApp: 0x68068618

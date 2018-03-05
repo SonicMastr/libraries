@@ -1,0 +1,16 @@
+modules:
+  SceKernelModulemgr:
+    nid: 0x726C6635
+    libraries:
+      SceModulemgrForKernel:
+        nid: 0x92C9FFC2
+        functions:
+          sceKernelGetModuleInfo: 0xDAA90093
+          sceKernelGetModuleInternal: 0x37512E29
+          sceKernelGetModuleList: 0xB72C75A4
+          sceKernelLoadModuleForPid: 0x4E85022D
+          sceKernelMountBootfs: 0x185FF1BC
+          sceKernelStartModuleForPid: 0x3FE47DDF
+          sceKernelStopModuleForPid: 0xBDBD391D
+          sceKernelUmountBootfs: 0xBD61AD4D
+          sceKernelUnloadModuleForPid: 0xFCA9FDB1
