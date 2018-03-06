@@ -5,4 +5,5 @@ modules:
       SceSblSsUpdateMgr:
         nid: 0x31406C49
         functions:
+          sceSblSsUpdateMgrGetBootMode: 0x8E834565
           sceSblSsUpdateMgrSetBootMode: 0xC725E3F0
