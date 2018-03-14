@@ -26,6 +26,7 @@ modules:
           sceSysconGetLogInfo: 0x701535FC
           sceSysconGetManualChargeMode: 0x4FEC564C
           sceSysconGetManufacturesStatus: 0x3E09A1F4
+          sceSysconGetNvsData: 0xACAFA2B8
           sceSysconGetTemperatureLog: 0x3B354824
           sceSysconGetUsbDetStatus: 0xEF810687
           sceSysconIduModeClear: 0x34574496
@@ -41,6 +42,7 @@ modules:
           sceSysconSetAlarmCallback: 0x32418370
           sceSysconSetDebugHandlers: 0xF245CD6F
           sceSysconSetLowBatteryCallback: 0x3F0DB7C0
+          sceSysconSetNvsData: 0x10C9657A
           sceSysconSetThermalAlertCallback: 0x773B8126
           sceSysconShowModeClear: 0x8D7724C0
           sceSysconShowModeSet: 0x6D65B70F
