@@ -121,7 +121,7 @@ int sceKernelGetModel(void);
  * @param[out] info - Returned free memory size for different kind of memory block types
  * @return 0 on success, < 0 on error.
 */
-int sceKernelGetFreeMemorySize(SceKernelFreeMemorySizeInfo info);
+int sceKernelGetFreeMemorySize(SceKernelFreeMemorySizeInfo *info);
 
 #ifdef __cplusplus
 }
