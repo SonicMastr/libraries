@@ -98,6 +98,7 @@ modules:
           sceKernelUnlockWriteRWLock: 0xB4151397
           sceKernelUnregisterCallbackFromEvent: 0x18462B11
           sceKernelUnregisterCallbackFromEventAll: 0x888A7361
+          sceKernelUnregisterThreadEventHandler: 0x2C8ED6F0
       SceThreadmgrCoredumpTime:
         nid: 0x5E8D0E22
         functions:
