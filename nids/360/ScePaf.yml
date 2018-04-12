@@ -2,6 +2,10 @@ modules:
   ScePaf:
     nid: 0xCD679177
     libraries:
+      ScePafMisc:
+        nid: 0x3D643CE8
+        functions:
+          sce_paf_misc_does_file_exist: 0x95F14046
       ScePafStdc:
         nid: 0xA7D28DAE
         functions:
