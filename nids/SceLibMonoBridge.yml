@@ -181,6 +181,7 @@ modules:
           monoeg_try_realloc: 0xB1006CCC
           pss_alloc_mem: 0x1A2E441F
           pss_alloc_raw: 0x599AEA5E
+          pss_app_exit_liveboard: 0x58ABAD62
           pss_code_mem_alloc: 0xF466ABEC
           pss_code_mem_flush_icache: 0x110F567B
           pss_code_mem_free: 0xB468C313
