@@ -197,6 +197,7 @@ modules:
           pss_delay_thread: 0x018524DD
           pss_delete_semaphore: 0x6148DE4D
           pss_disable_ftz: 0x2E9C2A4B
+          pss_errno_loc: 0x58ABAD62
           pss_free_mem: 0x1C59A84B
           pss_free_prng_provider: 0xBBCF4B04
           pss_free_raw: 0xB9EFB986
