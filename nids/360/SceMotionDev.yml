@@ -15,6 +15,7 @@ modules:
           sceMotionDevGetDeviceInfo: 0x1F1EFEFB
           sceMotionDevGetDeviceLocation: 0x5EDEA879
           sceMotionDevGetDs3CalibData: 0x1FD76B5E
+          sceMotionDevGetEvaInfo: 0xE6955280
           sceMotionDevGetFactoryMagnCalibData: 0x777D57D2
           sceMotionDevGetGyroBias: 0x6D033072
           sceMotionDevGetGyroBias2: 0x12B9F05E
