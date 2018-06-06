@@ -1,0 +1,61 @@
+modules:
+  SceSblPostSsMgr:
+    nid: 0xB6C941F2
+    libraries:
+      SceSblLicMgr:
+        nid: 0x62083C72
+        functions:
+          sceSblLicMgrActivateDevkit: 0xEB21DD39
+          sceSblLicMgrActivateFromFs: 0x6E56EA0A
+          sceSblLicMgrClearActivationData: 0x9B749D1D
+          sceSblLicMgrGetActivationKey: 0x2A437187
+          sceSblLicMgrGetExpireDate: 0xE9FA0FE5
+          sceSblLicMgrGetIssueNo: 0x0E0691A1
+          sceSblLicMgrGetLicenseStatus: 0x0EA6A30C
+          sceSblLicMgrGetUsageTimeLimit: 0x774EBBA2
+      SceSblPmMgr:
+        nid: 0xA9CE5795
+        functions:
+          sceSblPmMgrAuthEtoI: 0xBD38B141
+          sceSblPmMgrGetCurrentMode: 0xDA4EDEBF
+          sceSblPmMgrGetProductModeForUser: 0x46EA9FDB
+          sceSblPmMgrGetProductModeFromNVS: 0x49CE0DDF
+          sceSblPmMgrSetProductModeOffForUser: 0x41FE8A37
+      SceSblPostSsMgrForDriver:
+        nid: 0x2254E1B2
+        functions:
+          _sceSblPostSsMgrExecutePmSmF00dCommand: 0xFE92A318
+          sceSblPostSsMgrActivate: 0x0298382B
+          sceSblPostSsMgrDebugDecryptKeystone: 0xCC5AA5A5
+          sceSblPostSsMgrDebugEncryptKeystone: 0x42474C8B
+          sceSblPostSsMgrDecryptSealedkey: 0x33275F95
+          sceSblPostSsMgrEncryptSealedkey: 0x08525D8D
+          sceSblPostSsMgrExecutePmSmF00dCommand: 0xADF92824
+          sceSblPostSsMgrExecutePmSmF00dCommand8: 0x4663C195
+          sceSblPostSsMgrExecutePmSmSdF00dCommand: 0x19B63D65
+          sceSblPostSsMgrGetExpireDate: 0x4FF2682F
+          sceSblPostSsMgrInitializeSpfsoCtx: 0xBDF18922
+          sceSblPostSsMgrReleaseSpfsoCtx: 0xAD3B0078
+          sceSblPostSsMgrSetCpRtc: 0x3F9BDEDF
+          sceSblPostSsMgrVerifyKeystone: 0xDDA6FA6D
+          sceSblPostSsMgrVerifyKeystoneWithPasscode: 0xF86F1452
+          sceSblPostSsMgrVerifySpfsoCtx: 0x686B9461
+          sceSblUtMgrExecuteUtokenSmCommand1: 0xC2E58CE3
+          sceSblUtMgrHasComTestFlag: 0x7ACCAA50
+          sceSblUtMgrHasNpTestFlag: 0x9FD835B0
+          sceSblUtMgrHasStoreFlag: 0x9D2E2D39
+          sceSblUtMgrResetUtokenFile: 0x1FF699DD
+      SceSblRtcMgr:
+        nid: 0x44C5F209
+        functions:
+          sceSblRtcMgrGetCpRtcLogical: 0xDD44D726
+          sceSblRtcMgrGetCpRtcPhysicalForUser: 0x1614302B
+          sceSblRtcMgrGetCpSerialId: 0xE162A827
+          sceSblRtcMgrSetCpActivationKey: 0x298AE544
+          sceSblRtcMgrSetCpRtcLogical: 0x9DFB118B
+          sceSblRtcMgrSetCpRtcPhysicalAndKey: 0x3C0EEC69
+          sceSblRtcMgrSetCpRtcPhysicalForUser: 0xA990BC44
+      SceSblUtMgr:
+        nid: 0x000DF81A
+        functions:
+          sceSblUtMgrResetUtokenFile: 0x1CD57182
