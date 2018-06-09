@@ -1,0 +1,13 @@
+modules:
+  SceOled:
+    nid: 0x5410837A
+    libraries:
+      SceOledForDriver:
+        nid: 0x60C7478A
+        functions:
+          sceOledDisplayOff: 0xBC84602E
+          sceOledDisplayOn: 0x4C7836C7
+          sceOledGetBrightness: 0x43EF811A
+          sceOledSetBrightness: 0xF9624C47
+          sceOledSetDisplayColorSpaceMode: 0xDABBD9D3
+          sceOledWaitReady: 0x0CC6BCB4
