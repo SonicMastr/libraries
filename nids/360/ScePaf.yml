@@ -28,3 +28,7 @@ modules:
           sce_paf_private_strncasecmp: 0xA6014289
           sce_paf_private_strncmp: 0x1E1EA818
           sce_paf_private_strrchr: 0xFA2C892F
+      ScePafWidget:
+        nid: 0x073F8C68
+        functions:
+          scePafWidgetSetFontSize: 0x39B15B98
