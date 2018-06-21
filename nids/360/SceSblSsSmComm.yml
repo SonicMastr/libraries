@@ -1,0 +1,11 @@
+modules:
+  SceSblSsSmComm:
+    nid: 0xBB4B5D92
+    libraries:
+      SceSblSmCommForKernel:
+        nid: 0xCD3C89B6
+        functions:
+          sceSblSmCommCallFunc: 0xDB9FC204
+          sceSblSmCommStartSmFromData: 0x039C73B1
+          sceSblSmCommStartSmFromFile: 0x7863A0CC
+          sceSblSmCommStopSm: 0x0631F8ED
