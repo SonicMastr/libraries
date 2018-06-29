@@ -1,0 +1,13 @@
+modules:
+  SceMsif:
+    nid: 0x3305A0FE
+    libraries:
+      SceMsifForDriver:
+        nid: 0xB706084A
+        functions:
+          sceMsifDisableSlowMode: 0x75848756
+          sceMsifEnableSlowMode: 0x4B751CE6
+          sceMsifGetMsInfo: 0xD0307849
+          sceMsifGetSlowModeState: 0x491E25B5
+          sceMsifReadSector: 0x58654AA3
+          sceMsifWriteSector: 0x329035EF
