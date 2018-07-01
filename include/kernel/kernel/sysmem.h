@@ -408,6 +408,8 @@ int sceKernelMemRangeReleaseWithPerm(SceKernelMemoryRefPerm perm, void *addr, un
 
 int sceSysrootUseExternalStorage(void);
 
+#define sceSysrootIsManufacturingMode() sceSysrootUseExternalStorage()
+
 int sceSysrootUseInternalStorage(void);
 
 int sceDebugPrintf(const char *fmt, ...);
