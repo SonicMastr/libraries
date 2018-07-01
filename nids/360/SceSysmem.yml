@@ -232,10 +232,10 @@ modules:
           sceSysrootIsAuCodecIcConexant: 0x46E72428
           sceSysrootIsBsodReboot: 0x4373AC96
           sceSysrootIsExternalBootMode: 0x89D19090
-          sceSysrootIsManufacturingMode: 0x55392965
           sceSysrootIsSafeMode: 0x834439A7
           sceSysrootIsUpdateMode: 0xB0E1FC67
           sceSysrootIsUsbEnumWakeup: 0x79C9AE10
+          sceSysrootUseExternalStorage: 0x55392965
           sceSysrootUseInternalStorage: 0x50FE3B4D
       SceUartForKernel:
         nid: 0xC03DBE40

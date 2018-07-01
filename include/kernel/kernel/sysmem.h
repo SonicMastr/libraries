@@ -406,7 +406,9 @@ int sceKernelMemRangeReleaseForPid(SceUID pid, void *addr, unsigned int size);
  */
 int sceKernelMemRangeReleaseWithPerm(SceKernelMemoryRefPerm perm, void *addr, unsigned int size);
 
-int sceSysrootIsManufacturingMode(void);
+int sceSysrootUseExternalStorage(void);
+
+int sceSysrootUseInternalStorage(void);
 
 int sceDebugPrintf(const char *fmt, ...);
 
