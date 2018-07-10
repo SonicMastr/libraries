@@ -30,7 +30,9 @@ modules:
         nid: 0x9FED47AC
         functions:
           sceDisplayCaptureFrameBufDMAC: 0xF116D0B4
+          sceDisplayCaptureFrameBufDMACInternal: 0x707EEE2E
           sceDisplayCaptureFrameBufIFTU: 0xB0CED8BC
+          sceDisplayCaptureFrameBufIFTUInternal: 0xD4C812E5
           sceDisplayDisableHead: 0x43347565
           sceDisplayEnableHead: 0x496032D6
           sceDisplayGetActualViewportConf: 0x40ACFE51
