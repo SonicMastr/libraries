@@ -266,6 +266,17 @@ int sceDisplayRegisterFrameBufCallbackInternal(int display, SceUID uid);
  */
 int sceDisplaySetInvertColors(int display, int enable);
 
+/**
+ * Set display plane owner
+ *
+ * @param[in] head - Use 0 for OLED/LCD and 1 for HDMI
+ * @param[in] index - Can be 0 or 1
+ * @param[in] pid - PID of the new owner
+ *
+ * @return 0 on success, < 0 on error.
+*/
+int sceDisplaySetOwner(int head, int index, SceUID pid);
+
 #ifdef __cplusplus
 }
 #endif
