@@ -16,4 +16,3 @@ modules:
           sceSblACMgrIsPspEmu: 0xFD00C72A
           sceSblACMgrIsShell: 0x8612B243
           sceSblACMgrIsSystem: 0x0948F41C
-          sceSblACMgrIsUpdate: 0x930CD037
