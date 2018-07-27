@@ -38,6 +38,10 @@ modules:
           sceI2cTransferRead: 0xD1D0A9A4
           sceI2cTransferWrite: 0xCA94A759
           sceI2cTransferWriteRead: 0x0A40B7BF
+      SceIftuForDriver:
+        nid: 0xCAFCFE50
+        functions:
+          sceIftuCsc: 0x67E37EFC
       ScePervasiveForDriver:
         nid: 0xE692C727
         functions:
