@@ -8,6 +8,8 @@ modules:
           sceOledDisplayOff: 0xBC84602E
           sceOledDisplayOn: 0x4C7836C7
           sceOledGetBrightness: 0x43EF811A
+          sceOledGetDDB: 0xC9D5987C
+          sceOledGetDisplayColorSpaceMode: 0x4F8A1D4A
           sceOledSetBrightness: 0xF9624C47
           sceOledSetDisplayColorSpaceMode: 0xDABBD9D3
           sceOledWaitReady: 0x0CC6BCB4
