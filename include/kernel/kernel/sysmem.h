@@ -295,7 +295,7 @@ int sceSysrootGetSelfInfo(SceKernelSysrootSelfIndex index, SceKernelSysrootSelfI
  *
  * @return 0 on success, < 0 on error.
  */
-int sceKernelGetPaddr(void *addr, uintptr_t *paddr);
+int sceKernelGetPaddr(const void *addr, uintptr_t *paddr);
 
 /**
  * Get the physical address list of a given virtual address range
