@@ -190,6 +190,8 @@ modules:
           sceKernelKernelUidForUserUid: 0x45D22597
           sceKernelMapBlockUserVisible: 0x58D21746
           sceKernelMapUserBlock: 0x7D4F8B5F
+          sceKernelMapUserBlockDefaultType: 0x278BC201
+          sceKernelMapUserBlockDefaultTypeForPid: 0x0091D74D
           sceKernelMemBlockRelease: 0x00575B00
           sceKernelMemRangeRelease: 0x75C70DE0
           sceKernelMemRangeReleaseForPid: 0xA8525B06
@@ -220,6 +222,9 @@ modules:
           sceKernelCreateUidObj: 0xDF0288D7
           sceKernelFindClassByName: 0x62989905
           sceKernelGetMemBlockType: 0x289BE3EC
+          sceKernelGetUidDLinkClass: 0xC105604E
+          sceKernelGetUidHeapClass: 0x4CCA935D
+          sceKernelGetUidMemBlockClass: 0xAF729575
           sceKernelRxMemcpyKernelToUserForPid: 0x30931572
       SceSysrootForKernel:
         nid: 0x3691DA45

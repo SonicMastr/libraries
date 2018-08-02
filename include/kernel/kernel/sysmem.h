@@ -271,6 +271,9 @@ int sceKernelUidRetain(SceUID uid);
 int sceKernelUidRelease(SceUID uid);
 
 SceClass *sceKernelGetUidClass(void);
+SceClass *sceKernelGetUidDLinkClass(void);
+SceClass *sceKernelGetUidHeapClass(void);
+SceClass *sceKernelGetUidMemBlockClass(void);
 int sceKernelCreateClass(SceClass *cls, const char *name, void *uidclass, size_t itemsize, SceClassCallback create, SceClassCallback destroy);
 int sceKernelDeleteUserUid(SceUID pid, SceUID user_uid);
 int sceKernelDeleteUid(SceUID uid);
@@ -284,6 +287,15 @@ int sceKernelGetPidContext(SceUID pid, SceKernelProcessContext **ctx);
 int sceKernelGetProcessTitleId(SceUID pid, char *titleid, size_t len);
 
 int sceKernelMapBlockUserVisible(SceUID uid);
+int sceKernelMapUserBlock(const char *name, int permission, int type,
+			   const void *user_buf, unsigned int size, void **kernel_page,
+			   unsigned int *kernel_size, unsigned int *kernel_offset);
+int sceKernelMapUserBlockDefaultType(const char *name, int permission, void *user_buf,
+				      unsigned int size, void **kernel_page,
+				      unsigned int *kernel_size, unsigned int *kernel_offset);
+int sceKernelMapUserBlockDefaultTypeForPid(int pid, const char *name, int permission,
+					    const void *user_buf, unsigned int size, void **kernel_page,
+					    unsigned int *kernel_size, unsigned int *kernel_offset);
 
 int sceSysrootGetSelfInfo(SceKernelSysrootSelfIndex index, SceKernelSysrootSelfInfo *info);
 
