@@ -25,7 +25,9 @@ modules:
           sceUdcdRegisterToBus: 0x64675918
           sceUdcdReqCancelAll: 0x38787672
           sceUdcdReqRecv: 0xC60A74B2
+          sceUdcdReqRecvInternal: 0x175E6179
           sceUdcdReqSend: 0x1ED0E89E
+          sceUdcdReqSendInternal: 0x2E3E622A
           sceUdcdStall: 0x34079250
           sceUdcdStart: 0x9FD733EA
           sceUdcdStop: 0x1494293B

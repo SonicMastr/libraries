@@ -194,6 +194,12 @@ typedef enum SceUdcdErrorCode {
 	SCE_UDCD_ERROR_USBDRIVER_INVALID_FUNCS  = 0x80243202
 } SceUdcdErrorCode;
 
+/** SceUdcdDeviceRequest Flags
+ */
+typedef enum SceUdcdDeviceRequestAttr {
+	SCE_UDCD_DEVICE_REQUEST_ATTR_PHYCONT = 0x00000001
+} SceUdcdDeviceRequestAttr;
+
 /**  USB string descriptor
  */
 typedef struct SceUdcdStringDescriptor {
@@ -356,7 +362,7 @@ typedef struct SceUdcdDriver {
 typedef struct SceUdcdDeviceRequest {
 	SceUdcdEndpoint *endpoint;                            //!< Pointer to the endpoint to queue request on
 	void *data;                                           //!< Pointer to the data buffer to use in the request
-	unsigned int unk;                                     //!< Unknown data
+	unsigned int attributes;                              //!< Request attributes (See ::SceUdcdDeviceRequestAttr)
 	int  size;                                            //!< Size of the data buffer
 	int  isControlRequest;                                //!< Is a control request?
 	void (*onComplete)(struct SceUdcdDeviceRequest *req); //!< Pointer to the function to call on completion
@@ -550,7 +556,7 @@ int sceUdcdReqCancelAll(SceUdcdEndpoint *endp);
 int sceUdcdStall(SceUdcdEndpoint *endp);
 
 /**
- * Queue a send request(IN from host pov)
+ * Queue a send request (IN from host pov)
  *
  * @param req - Pointer to a filled out ::SceUdcdDeviceRequest structure.
  *
@@ -559,13 +565,33 @@ int sceUdcdStall(SceUdcdEndpoint *endp);
 int sceUdcdReqSend(SceUdcdDeviceRequest *req);
 
 /**
- * Queue a receive request(OUT from host pov)
+ * Queue a send request (IN from host pov) for an UDCD bus
+ *
+ * @param req - Pointer to a filled out ::SceUdcdDeviceRequest structure.
+ * @param[in] bus - UDCD bus (default is 2)
+ *
+ * @return 0 on success, < 0 on error
+ */
+int sceUdcdReqSendInternal(SceUdcdDeviceRequest *req, int bus);
+
+/**
+ * Queue a receive request (OUT from host pov)
  *
  * @param req - Pointer to a filled out ::SceUdcdDeviceRequest structure
  *
  * @return 0 on success, < 0 on error
  */
 int sceUdcdReqRecv(SceUdcdDeviceRequest *req);
+
+/**
+ * Queue a receive request (OUT from host pov) for an UDCD bus
+ *
+ * @param req - Pointer to a filled out ::SceUdcdDeviceRequest structure
+ * @param[in] bus - UDCD bus (default is 2)
+ *
+ * @return 0 on success, < 0 on error
+ */
+int sceUdcdReqRecvInternal(SceUdcdDeviceRequest *req, int bus);
 
 #ifdef __cplusplus
 }

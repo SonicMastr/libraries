@@ -290,7 +290,7 @@ int sceKernelMapBlockUserVisible(SceUID uid);
 int sceKernelMapUserBlock(const char *name, int permission, int type,
 			   const void *user_buf, unsigned int size, void **kernel_page,
 			   unsigned int *kernel_size, unsigned int *kernel_offset);
-int sceKernelMapUserBlockDefaultType(const char *name, int permission, void *user_buf,
+int sceKernelMapUserBlockDefaultType(const char *name, int permission, const void *user_buf,
 				      unsigned int size, void **kernel_page,
 				      unsigned int *kernel_size, unsigned int *kernel_offset);
 int sceKernelMapUserBlockDefaultTypeForPid(int pid, const char *name, int permission,
