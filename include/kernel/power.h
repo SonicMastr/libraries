@@ -192,6 +192,16 @@ int scePowerRequestSuspend(void);
 int scePowerRequestDisplayOff(void);
 
 /**
+ * Set the screen brightness.
+ * @see ::sceAVConfigSetDisplayBrightness for userland counterpart.
+ *
+ * @param brightness Brightness that the screen will be set to (range 21-65536, 0 turns off the screen).
+ *
+ * @return ?
+ */	
+int scePowerSetDisplayBrightness(int brightness);
+	
+/**
  * Sets CPU clock frequency
  *
  * @param freq - Frequency to set in Mhz
