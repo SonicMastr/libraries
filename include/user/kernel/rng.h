@@ -5,7 +5,7 @@
 extern "C" {
 #endif
 
-/***
+/**
  * Fills the output buffer with random data.
  *
  * @param[out] output - Output buffer

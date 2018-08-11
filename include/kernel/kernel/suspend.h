@@ -19,7 +19,7 @@ typedef enum SceKernelPowerTickType {
 } SceKernelPowerTickType;
 
 
-/***
+/**
  * Cancel specified idle timers to prevent entering in power save processing.
  *
  * @param[in] type - One of ::SceKernelPowerTickType

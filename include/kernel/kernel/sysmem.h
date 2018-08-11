@@ -144,7 +144,7 @@ typedef struct SceKernelSysrootSelfInfo {
 	uint32_t self_size;
 } SceKernelSysrootSelfInfo;
 
-/***
+/**
  * Allocates a new memory block
  *
  * @param[in] name - Name for the memory block
@@ -156,7 +156,7 @@ typedef struct SceKernelSysrootSelfInfo {
 */
 SceUID sceKernelAllocMemBlock(const char *name, SceKernelMemBlockType type, int size, SceKernelAllocMemBlockKernelOpt *optp);
 
-/***
+/**
  * Frees new memory block
  *
  * @param[in] uid - SceUID of the memory block to free
@@ -165,7 +165,7 @@ SceUID sceKernelAllocMemBlock(const char *name, SceKernelMemBlockType type, int 
 */
 int sceKernelFreeMemBlock(SceUID uid);
 
-/***
+/**
  * Gets the base address of a memory block
  *
  * @param[in] uid - SceUID of the memory block
@@ -175,7 +175,7 @@ int sceKernelFreeMemBlock(SceUID uid);
 */
 int sceKernelGetMemBlockBase(SceUID uid, void **basep);
 
-/***
+/**
  * Gets the memory block type of a memory block
  *
  * @param[in] uid - SceUID of the memory block
@@ -185,7 +185,7 @@ int sceKernelGetMemBlockBase(SceUID uid, void **basep);
 */
 int sceKernelGetMemBlockType(SceUID uid, unsigned int *type);
 
-/***
+/**
  * Find the SceUID of a memory block
  *
  * @param[in] addr - Base address of the memory block
@@ -195,7 +195,7 @@ int sceKernelGetMemBlockType(SceUID uid, unsigned int *type);
 */
 SceUID sceKernelFindMemBlockByAddr(const void *addr, SceSize size);
 
-/***
+/**
  * Find the SceUID of a memory block for a PID
  *
  * @param[in] pid - PID of the process
