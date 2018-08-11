@@ -426,7 +426,27 @@ int sceSysrootUseInternalStorage(void);
 
 int sceDebugPrintf(const char *fmt, ...);
 
-int sceDebugPrintf2(int unk0, int unk1, const char *fmt, ...);
+struct kernel_message_ctx
+{
+  int hex_value0_hi;
+  int hex_value0_lo;
+  int hex_value1;
+  char* msg0;
+  int num;
+  char* msg1;
+};
+
+// msg_type_flag : 0 or 0xB
+
+int sceDebugPrintf2(int msg_type_flag, kernel_message_ctx *msg_ctx, const char *fmt, ...);
+	
+int sceDebugPrintKernelPanic(kernel_message_ctx *msg_ctx, void *some_address);
+
+int sceDebugPrintfKernelPanic(kernel_message_ctx *msg_ctx, void *some_address, char* format, ...);
+
+int sceDebugPrintKernelAssertion(int condition, kernel_message_ctx *msg_ctx, void *some_address);
+
+int sceDebugPrintfKernelAssertion(int unk, int condition, kernel_message_ctx *msg_ctx, int some_address, const char *fmt, ...);
 
 int sceDebugSetHandlers(int (*func)(void *args, char c), void *args);
 
@@ -436,9 +456,10 @@ void *sceDebugGetPutcharHandler(void);
 
 int sceDebugPutchar(int character);
 
+int sceDebugDisableInfoDump(int flag);
+
 #ifdef __cplusplus
 }
 #endif
 
 #endif
-

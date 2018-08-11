@@ -33,8 +33,12 @@ modules:
       SceDebugForDriver:
         nid: 0x88758561
         functions:
+          sceDebugPrintKernelAssertion: 0x35A35322
+          sceDebugPrintKernelPanic: 0x391B5B74
           sceDebugPrintf: 0x391B74B7
           sceDebugPrintf2: 0x02B04343
+          sceDebugPrintfKernelAssertion: 0x821A2D59
+          sceDebugPrintfKernelPanic: 0x00CCE39C
       SceDebugForKernel:
         nid: 0x88C17370
         functions:
