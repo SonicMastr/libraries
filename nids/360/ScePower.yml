@@ -106,6 +106,7 @@ modules:
           scePowerSetBatteryFakeStatus: 0x0C6973B8
           scePowerSetBusClockFrequency: 0xB8D7B3FB
           scePowerSetCompatClockFrequency: 0xFFC84E69
+          scePowerSetDisplayBrightness: 0x43D5CE1D
           scePowerSetDisplayMaxBrightness: 0x77027B6B
           scePowerSetGpuClockFrequency: 0x264C24FC
           scePowerSetGpuXbarClockFrequency: 0xA7739DBE
