@@ -28,6 +28,18 @@ extern "C" {
 		asm volatile ("mcr p15, 0, %0, c13, c0, 3" :: "r" (state) : "memory"); \
 	} while (0)
 
+
+/**
+ * @brief      Writeback a range of L1 dcache (without L2)
+ *
+ * @param      ptr   The pointer
+ * @param[in]  len   The length
+ *
+ * @return     Zero on success
+ */
+int sceKernelCpuDcacheWritebackRange(const void *ptr, size_t len);
+
+
 /**
  * @brief      Save process context
  *
@@ -82,8 +94,10 @@ static inline int sceKernelCpuUnrestrictedMemcpy(void *dst, const void *src, siz
 	asm ("mrc p15, 0, %0, c3, c0, 0" : "=r" (prev_dacr));
 	asm ("mcr p15, 0, %0, c3, c0, 0" :: "r" (0xFFFF0000));
 
-	memcpy(dst, src, len);
-	sceKernelCpuDcacheWritebackRange((uintptr_t)dst & ~0x1F, (len + 0x1F) & ~0x1F);
+	for (size_t i=0; i < len; i++) {
+		((char *) dst)[i] = ((char *) src)[i];
+	}
+	sceKernelCpuDcacheWritebackRange((void *)((uintptr_t)dst & ~0x1F), (len + 0x1F) & ~0x1F);
 
 	asm ("mcr p15, 0, %0, c3, c0, 0" :: "r" (prev_dacr));
 	return 0;
@@ -111,16 +125,6 @@ int sceKernelCpuDisableInterrupts(void);
  * @return     Zero on success
  */
 int sceKernelCpuEnableInterrupts(int flags);
-
-/**
- * @brief      Writeback a range of L1 dcache (without L2)
- *
- * @param      ptr   The pointer
- * @param[in]  len   The length
- *
- * @return     Zero on success
- */
-int sceKernelCpuDcacheWritebackRange(const void *ptr, size_t len);
 
 /**
  * @brief      Invalidate a range of L1 dcache (without L2)
