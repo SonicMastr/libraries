@@ -8,6 +8,7 @@ extern "C" {
 #endif
 
 int sceSblAimgrGetSMI(void);
+int sceSblAimgrGetTargetId(void);
 int sceSblAimgrIsTest(void);
 int sceSblAimgrIsTool(void);
 int sceSblAimgrIsDEX(void);
