@@ -96,6 +96,8 @@ int sceKernelStopUnloadModuleForPid(SceUID pid, SceUID modid, SceSize args, void
 int sceKernelMountBootfs(const char *bootImagePath);
 int sceKernelUmountBootfs(void);
 
+int sceKernelSearchModuleByName(const char* module_name, const char* path, int pid);
+
 #ifdef __cplusplus
 }
 #endif
