@@ -18,7 +18,9 @@ modules:
           sceUdcdClearFIFO: 0x9F53D64D
           sceUdcdDeactivate: 0x8AE87657
           sceUdcdGetDeviceInfo: 0xFBEA3703
+          sceUdcdGetDeviceInfoInternal: 0x45EB0177
           sceUdcdGetDeviceState: 0xE054B5E4
+          sceUdcdGetDeviceStateInternal: 0x409DD196
           sceUdcdGetDrvState: 0xC0CA5DDB
           sceUdcdGetDrvStateInternal: 0x512F77BC
           sceUdcdRegister: 0x4E55244D
