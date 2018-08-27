@@ -430,6 +430,16 @@ int sceUdcdStart(const char *driverName, int size, void *args);
 int sceUdcdStartInternal(const char *driverName, int size, void *args, int bus);
 
 /**
+ * Starts the current USB driver for an UDCD bus.
+ *
+ * @param[in] unused - Unused
+ * @param[in] bus - UDCD bus (default is 2)
+ *
+ * @return 0 on success, < 0 on error.
+ */
+int sceUdcdStartCurrentInternal(int unused, int bus);
+
+/**
  * Stop a USB driver.
  *
  * @param driverName - Name of the USB driver to stop
@@ -451,6 +461,15 @@ int sceUdcdStop(const char *driverName, int size, void *args);
  * @return 0 on success, < 0 on error.
  */
 int sceUdcdStopInternal(const char *driverName, int size, void *args, int bus);
+
+/**
+ * Stops the current USB driver for an UDCD bus.
+ *
+ * @param[in] bus - UDCD bus (default is 2)
+ *
+ * @return 0 on success, < 0 on error.
+ */
+int sceUdcdStopCurrentInternal(int bus);
 
 /**
  * Activate a USB driver.

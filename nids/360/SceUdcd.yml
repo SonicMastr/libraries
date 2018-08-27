@@ -36,8 +36,10 @@ modules:
           sceUdcdStall: 0x34079250
           sceUdcdStallInternal: 0x9B44DF29
           sceUdcdStart: 0x9FD733EA
+          sceUdcdStartCurrentInternal: 0x360E95B9
           sceUdcdStartInternal: 0x90F8BCAE
           sceUdcdStop: 0x1494293B
+          sceUdcdStopCurrentInternal: 0x0F3595AE
           sceUdcdStopInternal: 0x150FD3BB
           sceUdcdUnregister: 0x0DECE532
           sceUdcdUnregisterInternal: 0x6CCD152E
