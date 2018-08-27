@@ -15,8 +15,11 @@ modules:
         nid: 0xBC05A8FB
         functions:
           sceUdcdActivate: 0x4FDEA423
+          sceUdcdActivateInternal: 0x9119247B
           sceUdcdClearFIFO: 0x9F53D64D
+          sceUdcdClearFIFOInternal: 0xA35F3BAF
           sceUdcdDeactivate: 0x8AE87657
+          sceUdcdDeactivateInternal: 0xFDC10F93
           sceUdcdGetDeviceInfo: 0xFBEA3703
           sceUdcdGetDeviceInfoInternal: 0x45EB0177
           sceUdcdGetDeviceState: 0xE054B5E4
@@ -24,16 +27,20 @@ modules:
           sceUdcdGetDrvState: 0xC0CA5DDB
           sceUdcdGetDrvStateInternal: 0x512F77BC
           sceUdcdRegister: 0x4E55244D
-          sceUdcdRegisterToBus: 0x64675918
+          sceUdcdRegisterInternal: 0x64675918
           sceUdcdReqCancelAll: 0x38787672
           sceUdcdReqRecv: 0xC60A74B2
           sceUdcdReqRecvInternal: 0x175E6179
           sceUdcdReqSend: 0x1ED0E89E
           sceUdcdReqSendInternal: 0x2E3E622A
           sceUdcdStall: 0x34079250
+          sceUdcdStallInternal: 0x9B44DF29
           sceUdcdStart: 0x9FD733EA
+          sceUdcdStartInternal: 0x90F8BCAE
           sceUdcdStop: 0x1494293B
+          sceUdcdStopInternal: 0x150FD3BB
           sceUdcdUnregister: 0x0DECE532
+          sceUdcdUnregisterInternal: 0x6CCD152E
           sceUdcdWaitBusInitialized: 0x1C684884
           sceUdcdWaitState: 0xD03017C0
           sceUdcdWaitStateInternal: 0x7AD0C8D1

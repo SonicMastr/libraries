@@ -418,6 +418,18 @@ int sceUdcdWaitBusInitialized(unsigned int timeout, int bus);
 int sceUdcdStart(const char *driverName, int size, void *args);
 
 /**
+ * Start a USB driver for an UDCD bus.
+ *
+ * @param driverName - Name of the USB driver to start
+ * @param size - Size of arguments to pass to USB driver start
+ * @param args - Arguments to pass to USB driver start
+ * @param[in] bus - UDCD bus (default is 2)
+ *
+ * @return 0 on success, < 0 on error.
+ */
+int sceUdcdStartInternal(const char *driverName, int size, void *args, int bus);
+
+/**
  * Stop a USB driver.
  *
  * @param driverName - Name of the USB driver to stop
@@ -429,6 +441,18 @@ int sceUdcdStart(const char *driverName, int size, void *args);
 int sceUdcdStop(const char *driverName, int size, void *args);
 
 /**
+ * Stop a USB driver for an UDCD bus.
+ *
+ * @param driverName - Name of the USB driver to stop
+ * @param size - Size of arguments to pass to USB driver start
+ * @param args - Arguments to pass to USB driver start
+ * @param[in] bus - UDCD bus (default is 2)
+ *
+ * @return 0 on success, < 0 on error.
+ */
+int sceUdcdStopInternal(const char *driverName, int size, void *args, int bus);
+
+/**
  * Activate a USB driver.
  *
  * @param pid - Product ID for the default USB Driver
@@ -438,11 +462,31 @@ int sceUdcdStop(const char *driverName, int size, void *args);
 int sceUdcdActivate(unsigned int productId);
 
 /**
+ * Activate a USB driver for an UDCD bus.
+ *
+ * @param pid - Product ID for the default USB Driver
+ * @param[in] bus_powered - Enable USB bus power
+ * @param[in] bus - UDCD bus (default is 2)
+ *
+ * @return 0 on success, < 0 on error.
+ */
+int sceUdcdActivateInternal(unsigned int productId, unsigned int bus_powered, int bus);
+
+/**
  * Deactivate USB driver.
  *
  * @return 0 on success, < 0 on error.
  */
 int sceUdcdDeactivate(void);
+
+/**
+ * Deactivate USB driver for an UDCD bus.
+ *
+ * @param[in] bus - UDCD bus (default is 2)
+ *
+ * @return 0 on success, < 0 on error.
+ */
+int sceUdcdDeactivateInternal(int bus);
 
 /**
  * Get USB state
@@ -452,6 +496,15 @@ int sceUdcdDeactivate(void);
 int sceUdcdGetDeviceState(void);
 
 /**
+ * Get USB state for an UDCD bus
+ *
+ * @param[in] bus - UDCD bus (default is 2)
+ *
+ * @return One or more ::SceUdcdStatus.
+ */
+int sceUdcdGetDeviceStateInternal(int bus);
+
+/**
  * Get device information
  *
  * @param[out] devInfo - Device information
@@ -459,6 +512,16 @@ int sceUdcdGetDeviceState(void);
  * @return 0 on success, < 0 on error.
 */
 int sceUdcdGetDeviceInfo(SceUdcdDeviceInfo *devInfo);
+
+/**
+ * Get device information for an UDCD bus
+ *
+ * @param[out] devInfo - Device information
+ * @param[in] bus - UDCD bus (default is 2)
+ *
+ * @return 0 on success, < 0 on error.
+*/
+int sceUdcdGetDeviceInfoInternal(SceUdcdDeviceInfo *devInfo, int bus);
 
 /**
  * Get state of a specific USB driver
@@ -517,7 +580,7 @@ int sceUdcdRegister(SceUdcdDriver *drv);
  *
  * @return 0 on success, < 0 on error
  */
-int sceUdcdRegisterToBus(SceUdcdDriver *drv, int bus);
+int sceUdcdRegisterInternal(SceUdcdDriver *drv, int bus);
 
 /**
  * Unregister a USB driver
@@ -529,6 +592,16 @@ int sceUdcdRegisterToBus(SceUdcdDriver *drv, int bus);
 int sceUdcdUnregister(SceUdcdDriver *drv);
 
 /**
+ * Unregister a USB driver for an UDCD bus
+ *
+ * @param drv - Pointer to a filled out USB driver
+ * @param[in] bus - UDCD bus (default is 2)
+ *
+ * @return 0 on success, < 0 on error
+ */
+int sceUdcdUnregisterInternal(SceUdcdDriver *drv, int bus);
+
+/**
  * Clear the FIFO on an endpoint
  *
  * @param endp - The endpoint to clear
@@ -536,6 +609,16 @@ int sceUdcdUnregister(SceUdcdDriver *drv);
  * @return 0 on success, < 0 on error
  */
 int sceUdcdClearFIFO(SceUdcdEndpoint *endp);
+
+/**
+ * Clear the FIFO on an endpoint for an UDCD bus
+ *
+ * @param endp - The endpoint to clear
+ * @param[in] bus - UDCD bus (default is 2)
+ *
+ * @return 0 on success, < 0 on error
+ */
+int sceUdcdClearFIFOInternal(SceUdcdEndpoint *endp, int bus);
 
 /**
  * Cancel any pending requests on an endpoint.
@@ -554,6 +637,16 @@ int sceUdcdReqCancelAll(SceUdcdEndpoint *endp);
  * @return 0 on success, < 0 on error
  */
 int sceUdcdStall(SceUdcdEndpoint *endp);
+
+/**
+ * Stall an endpoint for an UDCD bus
+ *
+ * @param endp - The endpoint to stall
+ * @param[in] bus - UDCD bus (default is 2)
+ *
+ * @return 0 on success, < 0 on error
+ */
+int sceUdcdStallInternal(SceUdcdEndpoint *endp, int bus);
 
 /**
  * Queue a send request (IN from host pov)
