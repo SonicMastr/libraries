@@ -65,6 +65,9 @@ modules:
           sceGzipGetInfo: 0xFFC6A10F
           sceGzipGetName: 0xF901FD3E
           sceGzipIsValid: 0xD8FAEFD4
+          sceHmacSha1Digest: 0x29A28957
+          sceHmacSha224Digest: 0x7F2A7B99
+          sceHmacSha256Digest: 0x83EFA1CC
           sceMt19937Init: 0x4C9A5730
           sceMt19937UInt: 0x92AEDFBC
           sceSfmt19937FillArray32: 0x2B30548B

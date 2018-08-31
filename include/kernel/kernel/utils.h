@@ -60,6 +60,10 @@ int sceSha256BlockUpdate(SceSha256Context *pContext, const void *plain, uint32_t
 int sceSha256BlockResult(SceSha256Context *pContext, char *digest);
 int sceSha256Digest(const void *plain, uint32_t len, char *result);
 
+int sceHmacSha1Digest(const unsigned char *key, uint32_t key_len, const void *plain, uint32_t len, char *result);
+int sceHmacSha224Digest(const unsigned char *key, uint32_t key_len, const void *plain, uint32_t len, char *result);
+int sceHmacSha256Digest(const unsigned char *key, uint32_t key_len, const void *plain, uint32_t len, char *result);
+
 #ifdef __cplusplus
 }
 #endif
