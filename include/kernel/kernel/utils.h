@@ -72,7 +72,7 @@ int sceHmacSha256Digest(const unsigned char *key, uint32_t key_len, const void *
  *
  * @return dst_size on success, < 0 on error.
  */
-int sceGzipDecompress(void *dst, int dst_size, const void *src, int *crc32);
+int sceGzipDecompress(void *dst, uint32_t dst_size, const void *src, uint32_t *crc32);
 
 #ifdef __cplusplus
 }
