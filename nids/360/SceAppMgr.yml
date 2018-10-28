@@ -217,6 +217,7 @@ modules:
           sceAppMgrGetPfsProcessStatus: 0xE72D2A4A
           sceAppMgrGetSystemDataFile: 0xAEC49533
           sceAppMgrIsExclusiveProcessRunning: 0xA888C2DC
+          sceAppMgrKillProcess: 0xD80566DB
           sceAppMgrLaunchAppByPath: 0xB0A37065
           sceAppMgrLoadSafeMemory: 0xFAF3DAAA
           sceAppMgrLocalBackupGetOfflineId: 0x61B13981
