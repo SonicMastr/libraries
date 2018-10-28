@@ -33,6 +33,7 @@ modules:
           sceKernelGetModuleInfo: 0xD269F915
           sceKernelGetModuleInternal: 0xFE303863
           sceKernelGetModuleList: 0x97CF7B4E
+          sceKernelGetProcessMainModule: 0x20A27FA9
           sceKernelLoadModuleForPid: 0xFA21D8CB
           sceKernelMountBootfs: 0x01360661
           sceKernelStartModuleForPid: 0x6DF745D5
