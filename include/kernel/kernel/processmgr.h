@@ -25,6 +25,13 @@ int sceKernelCreateProcessLocalStorage(const char *name, SceSize size);
 void *sceKernelGetProcessLocalStorageAddr(int key);
 int sceKernelGetProcessLocalStorageAddrForPid(SceUID pid, int key, void **out_addr, int create_if_doesnt_exist);
 
+/**
+ * @brief       Resume a suspended process.
+ * @param[in]   pid The process to resume.
+ * @return      Zero on success, < 0 on error.
+ */
+int sceKernelProcessResume(SceUID pid);
+
 #ifdef __cplusplus
 }
 #endif
