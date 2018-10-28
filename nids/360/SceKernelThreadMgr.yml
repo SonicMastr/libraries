@@ -137,6 +137,7 @@ modules:
           sceKernelGetSystemTimeLow: 0x47F6DE49
           sceKernelGetSystemTimeWide: 0xF4EE4FA9
           sceKernelGetThreadCpuAffinityMask: 0x83DC703D
+          sceKernelGetThreadCpuRegisters: 0x5022689D
           sceKernelGetThreadCurrentPriority: 0x01414F0B
           sceKernelGetThreadId: 0x59D06540
           sceKernelGetThreadIdList: 0xEA7B8AEF
