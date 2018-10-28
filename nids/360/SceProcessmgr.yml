@@ -52,5 +52,6 @@ modules:
           sceKernelExitProcess: 0x4CA7DC42
           sceKernelGetProcessAuthid: 0xE4C83B0D
           sceKernelGetProcessKernelBuf: 0xB9E68092
+          sceKernelGetProcessMainThread: 0x95F9ED94
           sceKernelLaunchApp: 0x71CF71FD
           sceKernelProcessResume: 0x080CDC59
