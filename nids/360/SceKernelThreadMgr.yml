@@ -139,6 +139,7 @@ modules:
           sceKernelGetThreadCpuAffinityMask: 0x83DC703D
           sceKernelGetThreadCurrentPriority: 0x01414F0B
           sceKernelGetThreadId: 0x59D06540
+          sceKernelGetThreadIdList: 0xEA7B8AEF
           sceKernelGetThreadStackFreeSize: 0x7B278A0B
           sceKernelGetThreadTLSAddr: 0x66EEA46A
           sceKernelGetThreadmgrUIDClass: 0x0A20775A
