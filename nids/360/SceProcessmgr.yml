@@ -40,6 +40,7 @@ modules:
           sceKernelGetProcessInfo: 0x0AFF3EAE
           sceKernelGetProcessLocalStorageAddr: 0xEE694840
           sceKernelGetProcessLocalStorageAddrForPid: 0xAF80F39C
+          sceKernelGetProcessStatus: 0x65B120B8
           sceKernelGetProcessTimeCore: 0xEC283166
           sceKernelGetProcessTimeLowCore: 0x02179E12
           sceKernelGetProcessTimeWideCore: 0x82D94BE9

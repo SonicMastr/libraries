@@ -32,6 +32,14 @@ int sceKernelGetProcessLocalStorageAddrForPid(SceUID pid, int key, void **out_ad
  */
 int sceKernelProcessResume(SceUID pid);
 
+/**
+ * @brief       Get the status of a given process.
+ * @param[in]   pid The process ID to query.
+ * @param[out]  status The bit field status of the process.
+ * @return      Zero on success, < 0 on error.
+ */
+int sceKernelGetProcessStatus(SceUID pid, int *status);
+
 #ifdef __cplusplus
 }
 #endif
