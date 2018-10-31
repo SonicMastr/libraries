@@ -908,6 +908,20 @@ typedef struct ThreadCpuRegisters
  */
 int sceKernelGetThreadCpuRegisters(SceUID thid, ThreadCpuRegisters *registers);
 
+
+/**
+ * @brief       Change the thread suspension status to another value.
+ *
+ * More research needs to be done to find out exactly what each status actually means. Some examples of useful scenarios:
+ * When handling an exception changing the status to 0x1002 (on a newly suspended thread) will stop the kernel rethrowing the same exception.
+ * When resuming a suspended thread changing the status to 2 will allow it to resume.
+ *
+ * @param[in]   thid    The thread to change.
+ * @param[in]   status  The new status for suspension.
+ * @return      Zero on success, else < 0 on error.
+ */
+int sceKernelChangeThreadSuspendStatus(SceUID thid, int status);
+
 #ifdef __cplusplus
 }
 #endif

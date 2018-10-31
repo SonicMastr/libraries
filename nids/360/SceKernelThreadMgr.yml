@@ -109,6 +109,7 @@ modules:
           sceKernelCancelCallback: 0xC040EC1C
           sceKernelCancelMutex: 0x7204B846
           sceKernelChangeThreadPriority: 0x63DAB420
+          sceKernelChangeThreadSuspendStatus: 0x04C6764B
           sceKernelCheckCallback: 0xE53E41F6
           sceKernelCheckWaitableStatus: 0xD9BD74EB
           sceKernelClearEvent: 0x9C335818
