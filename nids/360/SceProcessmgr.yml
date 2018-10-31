@@ -56,3 +56,4 @@ modules:
           sceKernelGetProcessMainThread: 0x95F9ED94
           sceKernelLaunchApp: 0x71CF71FD
           sceKernelResumeProcess: 0x080CDC59
+          sceKernelSuspendProcess: 0x6AECE4CD
