@@ -30,7 +30,7 @@ int sceKernelGetProcessLocalStorageAddrForPid(SceUID pid, int key, void **out_ad
  * @param[in]   pid The process to resume.
  * @return      Zero on success, < 0 on error.
  */
-int sceKernelProcessResume(SceUID pid);
+int sceKernelResumeProcess(SceUID pid);
 
 /**
  * @brief       Get the status of a given process.
