@@ -8,6 +8,7 @@ modules:
           sceIdStorageCreateAtomicLeaves: 0x99ACCB71
           sceIdStorageCreateLeaf: 0x08A471A6
           sceIdStorageDeleteLeaf: 0x2C97AB36
+          sceIdStorageEnumId: 0x31E08AFB
           sceIdStorageFlush: 0x3AD32523
           sceIdStorageFormat: 0x958089DB
           sceIdStorageGetFreeLeaves: 0x37833CB8
