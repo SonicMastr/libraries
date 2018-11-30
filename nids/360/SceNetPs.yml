@@ -7,9 +7,14 @@ modules:
         functions:
           sceNetAccept: 0x880A5423
           sceNetBind: 0x84AB650F
+          sceNetConnect: 0x13491DA1
           sceNetListen: 0x080C7992
           sceNetRecvfrom: 0x49B1669C
           sceNetSendto: 0xAB746734
           sceNetSetsockopt: 0x4BF5FAB4
           sceNetSocket: 0xEB95B024
           sceNetSocketClose: 0x21F4428D
+      SceNetPsForSyscalls:
+        nid: 0x2CBED2C6
+        functions:
+          sceNetConnectForSyscalls: 0x14A4DE52

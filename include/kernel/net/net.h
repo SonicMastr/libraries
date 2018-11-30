@@ -539,6 +539,7 @@ typedef struct SceNetIcmpHeader {
 int sceNetSocket(const char *name, int domain, int type, int protocol);
 int sceNetAccept(int s, SceNetSockaddr *addr, unsigned int *addrlen);
 int sceNetBind(int s, const SceNetSockaddr *addr, unsigned int addrlen);
+int sceNetConnect(int s, const SceNetSockaddr *name, unsigned int namelen);
 int sceNetListen(int s, int backlog);
 int sceNetRecvfrom(int s, void *buf, unsigned int len, int flags, SceNetSockaddr *from, unsigned int *fromlen);
 int sceNetSendto(int s, const void *msg, unsigned int len, int flags, const SceNetSockaddr *to, unsigned int tolen);
