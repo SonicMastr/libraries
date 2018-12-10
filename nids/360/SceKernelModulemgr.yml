@@ -31,9 +31,15 @@ modules:
         nid: 0xC445FA63
         functions:
           sceKernelGetModuleInfo: 0xD269F915
+          sceKernelGetModuleInfo2: 0x6A655255
           sceKernelGetModuleInternal: 0xFE303863
+          sceKernelGetModuleLibraryInfo: 0xD4BF409C
           sceKernelGetModuleList: 0x97CF7B4E
+          sceKernelGetModuleList2: 0x410E1D2E
+          sceKernelGetModuleUid: 0x3B93CF88
+          sceKernelGetModuleUidList: 0x1FDEAE16
           sceKernelGetProcessMainModule: 0x20A27FA9
+          sceKernelGetProcessMainModulePath: 0x779A1025
           sceKernelLoadModuleForPid: 0xFA21D8CB
           sceKernelMountBootfs: 0x01360661
           sceKernelStartModuleForPid: 0x6DF745D5
