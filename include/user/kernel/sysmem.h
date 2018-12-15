@@ -123,6 +123,8 @@ int sceKernelGetModel(void);
 */
 int sceKernelGetFreeMemorySize(SceKernelFreeMemorySizeInfo *info);
 
+int sceKernelIsPSVitaTV(void);
+
 #ifdef __cplusplus
 }
 #endif

@@ -45,6 +45,19 @@ typedef struct SceSha256Context {
 	char result[SCE_SHA256_DIGEST_SIZE];
 } SceSha256Context;
 
+struct SceDeflatePartialInputParam;
+
+typedef struct SceDeflatePartialInputParam {
+	uint32_t size;
+	const void *pBufEnd;
+	void *cookie;
+	const void *(* SceDeflateDecompressPartialInputCallback)(struct SceDeflatePartialInputParam* param, uint32_t outputsize);
+} SceDeflatePartialInputParam;
+
+typedef struct {
+	uint8_t data[976];
+} SceAesContext;
+
 int sceSha1BlockInit(SceSha1Context *pContext);
 int sceSha1BlockUpdate(SceSha1Context *pContext, const void *plain, uint32_t len);
 int sceSha1BlockResult(SceSha1Context *pContext, char *digest);
@@ -66,13 +79,124 @@ int sceHmacSha256Digest(const unsigned char *key, uint32_t key_len, const void *
 
 /**
  * @param[out] dst - dst buf
- * @param[in] dst_size - Size when decompressed
+ * @param[in] dst_size - dst buf size
  * @param[in] src - Gzip compressed data
  * @param[out] crc32 - crc32 when decompressed
  *
- * @return dst_size on success, < 0 on error.
+ * @return decompressed size on success, < 0 on error.
  */
 int sceGzipDecompress(void *dst, uint32_t dst_size, const void *src, uint32_t *crc32);
+
+/**
+ * @brief Check magic of Gzip header
+ *
+ * @param[in] src - Gzip compressed data
+ *
+ * @return 1 on success,  0 is not Gzip data.
+ */
+int sceGzipIsValid(const void *src);
+
+/**
+ * @brief Get filename etc. in Gzip data
+ *
+ * @param[in] src - Gzip compressed data
+ * @param[out] extra - Get information on extra-field
+ * @param[out] name - Get filename information
+ * @param[out] comment - Get comment information
+ * @param[out] crc - Get CRC16 information
+ * @param[out] data - Get compressed data start address
+ *
+ * @return 0 on success, < 0 on error.
+ */
+int sceGzipGetInfo(const void *src, const void **extra, const char **name, const char **comment, unsigned short *crc, const void **data);
+
+/**
+ * @brief Get filename string address
+ *
+ * @param[in] src - Gzip compressed data
+ *
+ * @return string address on success, NULL on error.
+ */
+const char *sceGzipGetName(const void *src);
+
+/**
+ * @brief Get comment string address
+ *
+ * @param[in] src - Gzip compressed data
+ *
+ * @return string address on success, NULL on error.
+ */
+const char *sceGzipGetComment(const void *src);
+
+/**
+ * @brief Get compressed data start address
+ *
+ * @param[in] src - Gzip compressed data
+ *
+ * @return compressed data address on success, NULL on error.
+ */
+const void *sceGzipGetCompressedData(const void *src);
+
+/**
+ * @brief Get filename etc. in Zlib data
+ *
+ * @param[in] src - Zlib compressed data
+ * @param[out] cmf - Get CMF (Compression Method and flags)
+ * @param[out] flg - Get FLG (FLaGs)
+ * @param[out] dictid - Get DictId
+ * @param[out] data - Get compressed data start address
+ *
+ * @return 0 on success, < 0 on error.
+ */
+int sceZlibGetInfo(const void *src, unsigned char *cmf, unsigned char *flg, unsigned int *dictid, const void **data);
+
+/**
+ * @brief Get compressed data start address
+ *
+ * @param[in] src - Gzip compressed data
+ *
+ * @return compressed data address on success, NULL on error.
+ */
+const void *sceZlibGetCompressedData(const void *src);
+
+/**
+ * @param[out] dst - dst buf
+ * @param[in] dst_size - dst buf size
+ * @param[in] src - Zlib compressed data
+ * @param[out] adler32 - adler32 when decompressed
+ *
+ * @return decompressed size on success, < 0 on error.
+ */
+int sceZlibDecompress(void *dst, uint32_t dst_size, const void *src, uint32_t *adler32);
+
+/**
+ * @param[out] dst - dst buf
+ * @param[in] dst_size - dst buf size
+ * @param[in] src - Deflate compressed data
+ * @param[out] next - next data
+ *
+ * @return decompressed size on success, < 0 on error.
+ */
+int sceDeflateDecompress(void *dst, uint32_t dst_size, const void *src, const void **next);
+int sceDeflateDecompressPartial(void *dst, unsigned int dst_size, const void *src, const void **next, SceDeflatePartialInputParam *cbInfo);
+
+/**
+ * @param[out] ctx - out key data, etc...
+ * @param[in] blocksize - 128 or 192 or 256
+ * @param[in] keysize - 128 or 192 or 256
+ * @param[in] key - key data
+ *
+ * @return 0 on success, < 0 on error.
+ */
+int sceAesInit1(SceAesContext *ctx, int blocksize, int keysize, const void *key);
+int sceAesInit2(SceAesContext *ctx, int blocksize, int keysize, const void *key);
+int sceAesInit3(SceAesContext *ctx, int blocksize, int keysize, const void *key);
+
+int sceAesDecrypt1(SceAesContext *ctx, const void *src, void *dst);
+int sceAesDecrypt2(SceAesContext *ctx, const void *src, void *dst);
+
+int sceAesEncrypt1(SceAesContext *ctx, const void *src, void *dst);
+int sceAesEncrypt2(SceAesContext *ctx, const void *src, void *dst);
 
 #ifdef __cplusplus
 }
