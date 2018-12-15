@@ -57,6 +57,13 @@ modules:
       SceKernelUtilsForDriver:
         nid: 0x496AD8B4
         functions:
+          sceAesDecrypt1: 0xD8678061
+          sceAesDecrypt2: 0xE39CD272
+          sceAesEncrypt1: 0xC2A61770
+          sceAesEncrypt2: 0x302947B6
+          sceAesInit1: 0xF12B6451
+          sceAesInit2: 0xEDA97D6D
+          sceAesInit3: 0x72408E29
           sceDeflateDecompress: 0x8AF1FAD4
           sceDeflateDecompressPartial: 0x3D74CCDF
           sceGzipDecompress: 0x367EE3DF
