@@ -543,12 +543,12 @@ int sceNetConnect(int s, const SceNetSockaddr *name, unsigned int namelen);
 int sceNetListen(int s, int backlog);
 int sceNetRecvfrom(int s, void *buf, unsigned int len, int flags, SceNetSockaddr *from, unsigned int *fromlen);
 int sceNetSendto(int s, const void *msg, unsigned int len, int flags, const SceNetSockaddr *to, unsigned int tolen);
+int sceNetSetsockopt(int s, int level, int optname, const void *optval, unsigned int optlen);
+int sceNetClose(int s);
 
 #define sceNetRecv(s, buf, len, flags) sceNetRecvfrom(s, buf, len, flags, NULL, 0)
 #define sceNetSend(s, msg, len, flags) sceNetSendto(s, msg, len, flags, NULL, 0)
-
-int sceNetSetsockopt(int s, int level, int optname, const void *optval, unsigned int optlen);
-int sceNetSocketClose(int s);
+#define sceNetSocketClose sceNetClose
 
 /* fixme ? */
 #define sceNetHtons __builtin_bswap16
