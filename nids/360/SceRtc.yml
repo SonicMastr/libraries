@@ -5,12 +5,45 @@ modules:
       SceRtc:
         nid: 0x3503487E
         functions:
+          _sceRtcConvertLocalTimeToUtc: 0x0FC8AC41
+          _sceRtcConvertUtcToLocalTime: 0x1E61DDA4
+          _sceRtcFormatRFC2822: 0x2CD6AC86
+          _sceRtcFormatRFC2822LocalTime: 0x4C7ED349
+          _sceRtcFormatRFC3339: 0x7EE2CBEF
+          _sceRtcFormatRFC3339LocalTime: 0x4836474D
+          _sceRtcGetCurrentAdNetworkTick: 0x76EFA8FE
+          _sceRtcGetCurrentClock: 0x24947354
+          _sceRtcGetCurrentClockLocalTime: 0x41A6C861
+          _sceRtcGetCurrentDebugNetworkTick: 0xBF639B21
+          _sceRtcGetCurrentGpsTick: 0x3BA820E5
+          _sceRtcGetCurrentNetworkTick: 0x06F734FE
+          _sceRtcGetCurrentRetainedNetworkTick: 0xC17EA809
+          _sceRtcGetCurrentTick: 0x247EE33B
+          _sceRtcGetLastAdjustedTick: 0xEA157EC5
+          _sceRtcGetLastReincarnatedTick: 0xE13D0FE5
           sceRtcGetAccumulativeTime: 0x258BE8EC
       SceRtcForDriver:
         nid: 0x0351D827
         functions:
+          sceRtcConvertLocalTimeToUtc: 0xAD2F3544
+          sceRtcConvertUtcToLocal: 0xC6E03DD4
+          sceRtcFormatRFC2822: 0xBA3415F8
+          sceRtcFormatRFC2822LocalTime: 0x1F7FC209
+          sceRtcFormatRFC3339: 0xD32AC698
+          sceRtcFormatRFC3339LocalTime: 0x35925318
+          sceRtcGetAccumulativeTime: 0x0A86FB04
           sceRtcGetAlarmTick: 0xC838275A
+          sceRtcGetCurrentAdNetworkTick: 0x3E3C09A0
+          sceRtcGetCurrentClock: 0xA930CD1A
+          sceRtcGetCurrentClockLocalTime: 0x7DC0DF93
+          sceRtcGetCurrentDebugNetworkTick: 0xC141632A
+          sceRtcGetCurrentGpsTick: 0xF69B610F
+          sceRtcGetCurrentNetworkTick: 0xF1517B38
+          sceRtcGetCurrentRetainedNetworkTick: 0x40B4BCFF
           sceRtcGetCurrentSecureTick: 0x401C0954
+          sceRtcGetCurrentTick: 0xDEC408D4
+          sceRtcGetLastAdjustedTick: 0x8A987573
+          sceRtcGetLastReincarnatedTick: 0x3D614A9A
           sceRtcGetSecureAlarmTick: 0xBD53731C
           sceRtcIsAlarmed: 0xCD295F0C
           sceRtcIsSecureAlarmed: 0xE39F2ABE
