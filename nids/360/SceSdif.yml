@@ -6,15 +6,21 @@ modules:
         nid: 0x96D306FA
         functions:
           sceSdifCopyCtx: 0x23A4EF01
+          sceSdifGetCID: 0x23A4EF01
           sceSdifGetCardInsertState1: 0x36A2B01B
           sceSdifGetCardInsertState2: 0xFD9E5CFA
           sceSdifGetSdContextGlobal: 0xDC8F52F8
           sceSdifGetSdContextPartMmc: 0x6A71987F
           sceSdifGetSdContextPartSd: 0xB9EA5B1E
           sceSdifGetSdContextPartSdio: 0x6A8235FC
+          sceSdifGetSdContextPartValidateMmc: 0x6A71987F
+          sceSdifGetSdContextPartValidateSd: 0xB9EA5B1E
+          sceSdifGetSdContextPartValidateSdio: 0x6A8235FC
+          sceSdifInitializeMmcDevice: 0x22C82E79
           sceSdifInitializeSdContextPartMmc: 0x22C82E79
           sceSdifInitializeSdContextPartSd: 0xC1271539
-          sceSdifReadSector: 0xB9593652
-          sceSdifReadSectorAsync: 0x6F8D529B
-          sceSdifWriteSector: 0xE0781171
-          sceSdifWriteSectorAsync: 0x175543D2
+          sceSdifInitializeSdDevice: 0xC1271539
+          sceSdifReadSectorMmc: 0x6F8D529B
+          sceSdifReadSectorSd: 0xB9593652
+          sceSdifWriteSectorMmc: 0x175543D2
+          sceSdifWriteSectorSd: 0xE0781171
