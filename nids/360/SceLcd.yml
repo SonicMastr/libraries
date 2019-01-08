@@ -1,0 +1,15 @@
+modules:
+  SceLcd:
+    nid: 0x32FDD1BB
+    libraries:
+      SceLcdForDriver:
+        nid: 0xFA916D71
+        functions:
+          sceLcdDisplayOff: 0x1A0A7519
+          sceLcdDisplayOn: 0x5F4124AB
+          sceLcdGetBrightness: 0x3A6D6AC3
+          sceLcdGetDDB: 0xE03E120B
+          sceLcdGetDisplayColorSpaceMode: 0x17F66722
+          sceLcdSetBrightness: 0x581D3A87
+          sceLcdSetDisplayColorSpaceMode: 0xD40968FB
+          sceLcdWaitReady: 0x0C7E03D8
