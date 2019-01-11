@@ -184,6 +184,7 @@ modules:
         nid: 0x6F25E18A
         functions:
           sceKernelAllocHeapMemory: 0x7B4CB60A
+          sceKernelAllocHeapMemoryWithOption: 0x49D4DD9B
           sceKernelAllocMemBlock: 0xC94850C9
           sceKernelCreateClass: 0x61317102
           sceKernelCreateHeap: 0x9328E0E8
