@@ -65,6 +65,7 @@ modules:
           sceCtrlSetBdRemoconConnected: 0xAA36F578
           sceCtrlSetButtonEmulation: 0x1E750326
           sceCtrlSetButtonIntercept: 0x06AA5E1A
+          sceCtrlSetCtrlpCallback: 0x7AD9467E
           sceCtrlSetIdleCancelKey: 0x0A679512
           sceCtrlSetIdleCancelThreshold: 0x345E74FD
           sceCtrlSetRapidFire: 0xA248CDAE

@@ -12,3 +12,6 @@ modules:
         functions:
           sceDmacMemcpy: 0x00896B11
           sceDmacMemset: 0x4BAC049B
+          sceKernelDmaOpAlloc: 0x7CD5088A
+          sceKernelDmaOpAssign: 0xFCE4171A
+          sceKernelDmaOpFree: 0xADFF1186

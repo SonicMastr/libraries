@@ -235,13 +235,18 @@ modules:
       SceSysmemForKernel:
         nid: 0x63A519E5
         functions:
+          sceGUIDGetUIDVectorByClass: 0xEC7D36EF
           sceKernelCreateUidObj: 0xDF0288D7
           sceKernelFindClassByName: 0x62989905
+          sceKernelGetFixedHeapInfoByPointer: 0x219E90FD
+          sceKernelGetHeapInfoByPtr: 0x68451777
           sceKernelGetMemBlockType: 0x289BE3EC
           sceKernelGetUidDLinkClass: 0xC105604E
           sceKernelGetUidHeapClass: 0x4CCA935D
           sceKernelGetUidMemBlockClass: 0xAF729575
+          sceKernelNameHeapGetInfo: 0xE443253B
           sceKernelRxMemcpyKernelToUserForPid: 0x30931572
+          sceKernelUIDEntryHeapGetInfo: 0x686AA15C
       SceSysrootForKernel:
         nid: 0x3691DA45
         functions:

@@ -47,6 +47,7 @@ modules:
           sceTouchRead: 0x70C8AACE
           sceTouchReadRegion: 0x9A91F624
           sceTouchRegisterVirtualTouchDriver: 0x03C3AC7C
+          sceTouchSetCtrlpCallback: 0x628D9324
           sceTouchSetRegion: 0x7985B164
           sceTouchSetRegionAttr: 0x10A998DE
           sceTouchSetSamplingState: 0x1247257A
