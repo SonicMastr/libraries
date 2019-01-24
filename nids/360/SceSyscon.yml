@@ -5,46 +5,70 @@ modules:
       SceSysconForDriver:
         nid: 0x60A35F64
         functions:
+          sceSysconBatteryExecBLCommand: 0x74B2AB55
+          sceSysconBatteryReadBLCommand: 0x448DAFF1
+          sceSysconBatterySWReset: 0x87DA378D
+          sceSysconBatterySetBLCommand: 0xE4F29744
+          sceSysconBatteryStartBLMode: 0x2CEF078E
+          sceSysconBatteryStopBLMode: 0xE4AE7852
           sceSysconBeginConfigstorageTransaction: 0xA4968B8C
           sceSysconClearTemperatureLog: 0x3843D657
           sceSysconCmdExec: 0x9ADDCA4A
           sceSysconCmdExecAsync: 0xC2224E82
           sceSysconCmdSync: 0x6E517D22
           sceSysconCommitConfigstorageTransaction: 0x7B9B3617
+          sceSysconCtrlAccPower: 0x8D1D97E8
+          sceSysconCtrlDeviceReset: 0x40FF3898
           sceSysconCtrlHdmiCecPower: 0x62155962
+          sceSysconCtrlHostOutputViaDongle: 0xDECCB2B4
           sceSysconCtrlLED: 0x04EC7579
           sceSysconCtrlManualChargeMode: 0xC6A2C9EF
-          sceSysconCtrlMsPower: 0x710A7CF0
+          sceSysconCtrlRMRPower: 0x710A7CF0
           sceSysconCtrlSdPower: 0xBE1ADE4F
+          sceSysconCtrlWirelessPower: 0x4FBDA504
+          sceSysconCtrlWirelessPowerDown: 0xDF8C6D2D
           sceSysconEnableHibernateIO: 0x4946538A
           sceSysconEndConfigstorageTransaction: 0xFCC3E8EE
           sceSysconGetBaryonTimestamp: 0x4D588A0A
           sceSysconGetBaryonVersion: 0xFF86F4C5
           sceSysconGetBatteryCalibData: 0x9ADC9936
+          sceSysconGetBatteryVersion: 0x68E0031E
           sceSysconGetHardwareInfo: 0xCBD6D8BC
           sceSysconGetHardwareInfo2: 0x965C68C3
           sceSysconGetLogInfo: 0x701535FC
           sceSysconGetManualChargeMode: 0x4FEC564C
           sceSysconGetManufacturesStatus: 0x3E09A1F4
-          sceSysconGetNvsData: 0xACAFA2B8
+          sceSysconGetMultiCnInfo: 0x1503D6A0
           sceSysconGetTemperatureLog: 0x3B354824
+          sceSysconGetTouchpanelDeviceInfo: 0xF492E69E
           sceSysconGetUsbDetStatus: 0xEF810687
           sceSysconIduModeClear: 0x34574496
           sceSysconIduModeSet: 0x956D07CB
           sceSysconIsDownLoaderMode: 0x9ADD60D2
+          sceSysconJigClosePort: 0x483FAE05
+          sceSysconJigOpenPort: 0x44A173F5
+          sceSysconJigSetConfig: 0xD24BF916
           sceSysconLoadConfigstorageScript: 0x89C5CFD6
           sceSysconLogReadData: 0x487D97F3
           sceSysconLogStart: 0x4E55CF5E
           sceSysconLogStartWaiting: 0x9C0B1E61
+          sceSysconNvsReadData: 0xACAFA2B8
+          sceSysconNvsSetRunMode: 0x81A6060D
+          sceSysconNvsWriteData: 0x10C9657A
           sceSysconReadCommand: 0x299B1CE7
-          sceSysconResetDevice: 0x8A95D35C
           sceSysconSendCommand: 0xE26488B9
           sceSysconSetAlarmCallback: 0x32418370
           sceSysconSetDebugHandlers: 0xF245CD6F
           sceSysconSetLowBatteryCallback: 0x3F0DB7C0
-          sceSysconSetNvsData: 0x10C9657A
+          sceSysconSetMultiCnPort: 0x8AAB6308
+          sceSysconSetPowerMode: 0x8A95D35C
           sceSysconSetThermalAlertCallback: 0x773B8126
           sceSysconShowModeClear: 0x8D7724C0
           sceSysconShowModeSet: 0x6D65B70F
+          sceSysconUpdaterCalcChecksum: 0xD27C3D80
+          sceSysconUpdaterExecFinalize: 0xC7747A63
+          sceSysconUpdaterExecProgramming: 0x69AD76E4
+          sceSysconUpdaterSetRunMode: 0xB487C2FB
+          sceSysconUpdaterSetSegment: 0x9B00BC7F
           sceSysconVerifyConfigstorageScript: 0xCC6F90A8
           sceSysconWaitInitialized: 0x55DF1C9B
