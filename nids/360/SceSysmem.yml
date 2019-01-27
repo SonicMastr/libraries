@@ -247,6 +247,10 @@ modules:
           sceKernelNameHeapGetInfo: 0xE443253B
           sceKernelRxMemcpyKernelToUserForPid: 0x30931572
           sceKernelUIDEntryHeapGetInfo: 0x686AA15C
+      SceSysrootForDriver:
+        nid: 0x2ED7F97A
+        functions:
+          sceKernelSysrootGetSystemSwVersion: 0x67AAB627
       SceSysrootForKernel:
         nid: 0x3691DA45
         functions:
