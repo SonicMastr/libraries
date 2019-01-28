@@ -104,7 +104,7 @@ int sceSysconCmdSync(SceSysconPacket *packet, int noWait);
  *
  * @return 0 on success.
  */
-int sceSysconResetDevice(int type, int mode);
+int sceSysconSetPowerMode(int type, int mode);
 
 int sceSysconReadCommand(unsigned short cmd, void *buffer, unsigned int size);
 int sceSysconSendCommand(unsigned short cmd, const void *buffer, unsigned int size);
@@ -133,7 +133,7 @@ int sceSysconCtrlLED(int led, int enable);
  *
  * @return 0 on success.
  */
-int sceSysconCtrlMsPower(int power);
+int sceSysconCtrlRMRPower(int power);
 
 /**
  * Set the SD power.
