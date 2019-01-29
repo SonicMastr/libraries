@@ -439,6 +439,16 @@ int sceKernelUnlockMutex(SceUID mutexid, int unlockCount);
  */
 int sceKernelCancelMutex(SceUID mutexid, int newCount, int *numWaitThreads);
 
+/**
+ * Retrieve information about a mutex.
+ *
+ * @param mutexid - UID of the mutex to retrieve info for.
+ * @param info - Pointer to a ::SceKernelMutexInfo struct to receive the info.
+ *
+ * @return < 0 on error.
+ */
+int sceKernelGetMutexInfo(SceUID mutexid, SceKernelMutexInfo *info);
+
 typedef struct  SceKernelLwMutexWork {
 	SceInt64 data[4];
 } SceKernelLwMutexWork;

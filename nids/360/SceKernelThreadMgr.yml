@@ -134,6 +134,7 @@ modules:
           sceKernelExitDeleteThread: 0x1D17DECF
           sceKernelExitThread: 0x0C8A38E1
           sceKernelGetCallbackCount: 0x0892D8DF
+          sceKernelGetMutexInfo: 0x69B78A12
           sceKernelGetProcessId: 0x9DCB4B7A
           sceKernelGetSystemTimeLow: 0x47F6DE49
           sceKernelGetSystemTimeWide: 0xF4EE4FA9
