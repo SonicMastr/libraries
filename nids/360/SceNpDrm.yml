@@ -30,6 +30,7 @@ modules:
           sceNpDrmGetRifPspKey: 0xDACB71F4
           sceNpDrmGetRifVitaKey: 0x723322B5
           sceNpDrmIsLooseAccountBind: 0xFC84CA1A
+          sceNpDrmPackageSetGameExist: 0x3BFD2850
           sceNpDrmPresetRifProvisionalFlag: 0xC070FE89
           sceNpDrmPspEbootSigGen: 0xEF387FC4
           sceNpDrmPspEbootVerify: 0xB6CA3A2C
@@ -55,3 +56,11 @@ modules:
           sceNpDrmPackageUninstallOngoing: 0xF1FF6193
           sceNpDrmSaveDataFormatOngoing: 0x200D2DE4
           sceNpDrmSaveDataInstallOngoing: 0xA5E0F38C
+      ScePsmDrm:
+        nid: 0x3F2B0888
+        functions:
+          scePsmDrmGetRifKey: 0x207A2C53
+      ScePsmDrmForDriver:
+        nid: 0x9F4924F2
+        functions:
+          scePsmDrmGetRifInfo: 0x984F9017

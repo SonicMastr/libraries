@@ -1,0 +1,16 @@
+modules:
+  ScePfsMgr:
+    nid: 0x538BA86B
+    libraries:
+      ScePfsMgrForKernel:
+        nid: 0xA067B56F
+        functions:
+          scePfsAcidDirApprove: 0x8CDA249A
+          scePfsAcidDirMount: 0x4A4A8243
+          scePfsAcidDirSet: 0xB0CC0A1A
+          scePfsAcidDirUnmount: 0x00C8AF80
+          scePfsApprove: 0xD8D0FEE5
+          scePfsDisapprove: 0x2D67D8CA
+          scePfsMount: 0xA772209C
+          scePfsMount2: 0x2D48AEA2
+          scePfsUnmount: 0x680BC384

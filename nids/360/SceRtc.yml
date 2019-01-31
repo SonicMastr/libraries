@@ -69,9 +69,13 @@ modules:
           sceRtcFormatRFC2822LocalTime: 0x42CA8EB5
           sceRtcFormatRFC3339: 0xCCEA2B54
           sceRtcFormatRFC3339LocalTime: 0x742250A9
+          sceRtcGetCurrentAdNetworkTick: 0x5612AF12
           sceRtcGetCurrentClock: 0x70FDE8F1
           sceRtcGetCurrentClockLocalTime: 0x0572EDDC
+          sceRtcGetCurrentDebugNetworkTick: 0x4ED6BA6C
+          sceRtcGetCurrentGpsTick: 0xBB92534F
           sceRtcGetCurrentNetworkTick: 0xCDDD25FE
+          sceRtcGetCurrentRetainedNetworkTick: 0xA086AE18
           sceRtcGetCurrentTick: 0x23F79274
           sceRtcGetDayOfWeek: 0x2F3531EB
           sceRtcGetDayOfYear: 0xB5C4E95F

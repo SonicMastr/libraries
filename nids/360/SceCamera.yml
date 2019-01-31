@@ -50,3 +50,7 @@ modules:
           sceCameraSetZoom: 0xF7464216
           sceCameraStart: 0xA8FEAE35
           sceCameraStop: 0x1DD9C9CE
+      SceCameraForDriver:
+        nid: 0xBCBC1F4A
+        functions:
+          sceCameraIsActive: 0xEB1CC2CA

@@ -4,6 +4,8 @@ modules:
     libraries:
       SceCpu:
         nid: 0x45265161
+        functions:
+          sceKernelCpuGetCpuId: 0x2704CFEE
       SceDebugLed:
         nid: 0xAE004C0A
         functions:
@@ -20,6 +22,7 @@ modules:
         functions:
           sceKernelCheckDipsw: 0xA98FC2FD
           sceKernelClearDipsw: 0xF1F3E9FE
+          sceKernelGetDipswInfo: 0xB2AD48BE
           sceKernelSetDipsw: 0x82E45FBF
       SceThreadmgr:
         nid: 0x859A24B1
@@ -155,6 +158,7 @@ modules:
           sceKernelGetMsgPipeCreatorId: 0x70E2A6D2
           sceKernelGetProcessId: 0x9DCB4B7A
           sceKernelGetSystemTimeWide: 0xF4EE4FA9
+          sceKernelGetThreadCpuAffinityMask: 0xF1AE5654
           sceKernelGetThreadStackFreeSize: 0x4F8A3DA0
           sceKernelGetThreadTLSAddr: 0xBACA6891
           sceKernelGetThreadmgrUIDClass: 0xC9678F7F
@@ -205,6 +209,8 @@ modules:
         functions:
           sceKernelCancelCallback: 0xC040EC1C
           sceKernelCancelMutex: 0x7204B846
+          sceKernelChangeCurrentThreadAttr: 0x751C9B7A
+          sceKernelChangeThreadCpuAffinityMask: 0x6D0733A8
           sceKernelChangeThreadPriority: 0x63DAB420
           sceKernelChangeThreadSuspendStatus: 0x04C6764B
           sceKernelCheckCallback: 0xE53E41F6
@@ -233,6 +239,7 @@ modules:
           sceKernelGetCallbackCount: 0x0892D8DF
           sceKernelGetMutexInfo: 0x69B78A12
           sceKernelGetProcessId: 0x9DCB4B7A
+          sceKernelGetProcessIdFromTLS: 0xFA54D49A
           sceKernelGetSystemTimeLow: 0x47F6DE49
           sceKernelGetSystemTimeWide: 0xF4EE4FA9
           sceKernelGetThreadCpuAffinityMask: 0x83DC703D
@@ -240,6 +247,7 @@ modules:
           sceKernelGetThreadCurrentPriority: 0x01414F0B
           sceKernelGetThreadId: 0x59D06540
           sceKernelGetThreadIdList: 0xEA7B8AEF
+          sceKernelGetThreadInfo: 0x283807E2
           sceKernelGetThreadStackFreeSize: 0x7B278A0B
           sceKernelGetThreadTLSAddr: 0x66EEA46A
           sceKernelGetThreadmgrUIDClass: 0x0A20775A
@@ -254,7 +262,10 @@ modules:
           sceKernelPollSema: 0x4FDDFE24
           sceKernelPulseEvent: 0x2427C81B
           sceKernelPulseEventWithNotifyCallback: 0x714A107A
+          sceKernelReceiveMsgPipeVector: 0xDA1F256B
+          sceKernelReceiveMsgPipeVectorCB: 0xDA5C9AC6
           sceKernelRegisterCallbackToEvent: 0x832A7E0C
+          sceKernelRegisterTimer: 0xC58DF384
           sceKernelRunWithStack: 0xE54FD746
           sceKernelSetEvent: 0x9EA3A45C
           sceKernelSetEventFlag: 0xD4780C3E

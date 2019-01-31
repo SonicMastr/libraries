@@ -6,6 +6,18 @@ modules:
         nid: 0x15F25C84
         functions:
           sceSblSmSchedCallFunc: 0x723B382F
+          sceSblSmSchedProxyChangeF00DStatus: 0xDE4EAC3C
+          sceSblSmSchedProxyDisableCry2ArmInterrupt: 0x85EDA5FC
+          sceSblSmSchedProxyEnableCry2ArmInterrupt: 0x8B84AC2A
+          sceSblSmSchedProxyExecuteF00DCommand: 0x7894B6F0
+          sceSblSmSchedProxyGetCommandF00DRegister: 0xF70C04EC
           sceSblSmSchedProxyGetStatus: 0x27EB92F1
+          sceSblSmSchedProxyGetUnknownF00DRegister: 0x3CE17233
+          sceSblSmSchedProxyInitialize: 0xA488D604
           sceSblSmSchedProxyInvoke: 0x1916509B
+          sceSblSmSchedProxyNotImplementedMaybeSMC0x131: 0x984EC9D1
+          sceSblSmSchedProxyNotImplementedMaybeSMC0x132: 0x1DFC8624
+          sceSblSmSchedProxyReadCry2Arm: 0x973A4A7D
+          sceSblSmSchedProxyUninitialize: 0x33A3A1E2
           sceSblSmSchedProxyWait: 0xF35EFC1A
+          sceSblSmSchedProxyWriteCry2Arm: 0x15B0E4DF

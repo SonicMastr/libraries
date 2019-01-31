@@ -14,4 +14,12 @@ modules:
           sceDmacMemset: 0x4BAC049B
           sceKernelDmaOpAlloc: 0x7CD5088A
           sceKernelDmaOpAssign: 0xFCE4171A
+          sceKernelDmaOpConcatenate: 0xA4454DEA
+          sceKernelDmaOpDeQueue: 0x7433F70F
+          sceKernelDmaOpEnQueue: 0x543F54CF
           sceKernelDmaOpFree: 0xADFF1186
+          sceKernelDmaOpQuit: 0x03052D0D
+          sceKernelDmaOpSetCallback: 0xCF627CFD
+          sceKernelDmaOpSetupChain: 0x167079FC
+          sceKernelDmaOpSetupDirect: 0x01A599E0
+          sceKernelDmaOpSync: 0x397A917C

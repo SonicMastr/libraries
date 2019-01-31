@@ -1,0 +1,8 @@
+modules:
+  SceSystimer:
+    nid: 0x9A1E946B
+    libraries:
+      SceSystimerForDriver:
+        nid: 0xA47EB09A
+        functions:
+          sceKernelSysTimerAlloc: 0xE2B9D8E9

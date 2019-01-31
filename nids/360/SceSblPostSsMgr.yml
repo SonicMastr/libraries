@@ -25,6 +25,8 @@ modules:
         nid: 0x2254E1B2
         functions:
           _sceSblPostSsMgrExecutePmSmF00dCommand: 0xFE92A318
+          sceSblLicMgrGetActivationKey: 0xF7F1015B
+          sceSblLicMgrGetLicenseStatus: 0x15F37282
           sceSblPostSsMgrActivate: 0x0298382B
           sceSblPostSsMgrDebugDecryptKeystone: 0xCC5AA5A5
           sceSblPostSsMgrDebugEncryptKeystone: 0x42474C8B
@@ -40,7 +42,10 @@ modules:
           sceSblPostSsMgrVerifyKeystone: 0xDDA6FA6D
           sceSblPostSsMgrVerifyKeystoneWithPasscode: 0xF86F1452
           sceSblPostSsMgrVerifySpfsoCtx: 0x686B9461
+          sceSblRtcMgrGetCpRtcLogical: 0xDE5150FE
+          sceSblRtcMgrGetCpRtcPhysical: 0x942010A0
           sceSblUtMgrExecuteUtokenSmCommand1: 0xC2E58CE3
+          sceSblUtMgrGetTrilithiumBuffer: 0xABDD68CD
           sceSblUtMgrHasComTestFlag: 0x7ACCAA50
           sceSblUtMgrHasNpTestFlag: 0x9FD835B0
           sceSblUtMgrHasStoreFlag: 0x9D2E2D39
@@ -58,4 +63,8 @@ modules:
       SceSblUtMgr:
         nid: 0x000DF81A
         functions:
+          sceSblUtMgrGetCurrentSecureTick: 0xCFCB1355
+          sceSblUtMgrIsTrilithiumFlagEnabled: 0x04CA1311
+          sceSblUtMgrReadUtoken: 0xD2836E0D
           sceSblUtMgrResetUtokenFile: 0x1CD57182
+          sceSblUtMgrUpdateUtoken: 0xBDE74645

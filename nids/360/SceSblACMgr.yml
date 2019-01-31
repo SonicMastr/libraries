@@ -9,11 +9,50 @@ modules:
       SceSblACMgrForDriver:
         nid: 0x9AD8E213
         functions:
+          sceSblACMgrGetPathId: 0x4322F188
+          sceSblACMgrGetSelfAuthInfo: 0x96AF69BD
           sceSblACMgrHasCapability: 0xC2D1F2FC
+          sceSblACMgrIsAllowedExtendedMemory: 0x4DB7F512
           sceSblACMgrIsAllowedUsbSerial: 0x062CAEB2
+          sceSblACMgrIsAllowedVirtualMachine: 0x2A29453C
           sceSblACMgrIsDevelopmentMode: 0xE87D1777
+          sceSblACMgrIsFself: 0x426A4E8C
           sceSblACMgrIsGameProgram: 0x1298C647
+          sceSblACMgrIsMiniSettingsForQA: 0xD0E11C89
+          sceSblACMgrIsNonGameOrGameProgram: 0x8A54DF3A
           sceSblACMgrIsNonGameProgram: 0x6C5AB07F
+          sceSblACMgrIsNotSandboxed: 0x0B6E6CD7
+          sceSblACMgrIsPSMDevAssistant: 0xC98D82EE
+          sceSblACMgrIsPSMRuntime: 0x091F7247
           sceSblACMgrIsPspEmu: 0xFD00C72A
+          sceSblACMgrIsSIEApp: 0xA67E8E5B
+          sceSblACMgrIsSceShell: 0x991FDC15
           sceSblACMgrIsShell: 0x8612B243
           sceSblACMgrIsSystem: 0x0948F41C
+          sceSblACMgrIsUpdaterUISetupperOrPkgInstallerSpawn: 0x962CD237
+          sceSblACMgrIsWebCoreOrWebKitProcess: 0x0139FC20
+      SceSblACMgrForKernel:
+        nid: 0x11F9B314
+        functions:
+          scePfsACSetFSAttrByMode: 0x2AE6CF27
+          sceSblACIsSystemProgram: 0x930CD037
+          sceSblACMgrGetMediaType: 0xD442962E
+          sceSblACMgrGetSelfAuthInfo: 0x7C2AF978
+          sceSblACMgrHasCapability: 0x9EDAF856
+          sceSblACMgrIsAllowedExtendedMemory: 0x384D20FD
+          sceSblACMgrIsAllowedVirtualMachine: 0x96403142
+          sceSblACMgrIsDevelopmentMode: 0xBBA13D9C
+          sceSblACMgrIsFself: 0x5AC59172
+          sceSblACMgrIsGameProgram: 0x05FDC646
+          sceSblACMgrIsMiniSettingsForQA: 0xAF6F208E
+          sceSblACMgrIsNonGameOrGameProgram: 0x570D6AD3
+          sceSblACMgrIsNonGameProgram: 0x3F99279F
+          sceSblACMgrIsNotSandboxed: 0xF5AD56E4
+          sceSblACMgrIsPSMDevAssistant: 0xC90A9216
+          sceSblACMgrIsPSMRuntime: 0x966B3738
+          sceSblACMgrIsPspEmu: 0x47B67F72
+          sceSblACMgrIsSIEApp: 0x3388F595
+          sceSblACMgrIsSceShell: 0xF9FEF5F0
+          sceSblACMgrIsSystem: 0x31C23B66
+          sceSblACMgrIsUpdaterUISetupperOrPkgInstallerSpawn: 0x98B28671
+          sceSblACMgrIsWebCoreOrWebKitProcess: 0xA7C3001D

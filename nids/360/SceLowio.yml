@@ -16,6 +16,7 @@ modules:
           sceDsiSendBlankingPacket: 0x7640F607
           sceDsiSetLanesAndPixelSize: 0x78E6E3CF
           sceDsiSetVic: 0x97BFEA76
+          sceDsiStartDisplay: 0xC2E85919
       SceGpioForDriver:
         nid: 0xF0EF5743
         functions:
@@ -42,6 +43,11 @@ modules:
         nid: 0xCAFCFE50
         functions:
           sceIftuCsc: 0x67E37EFC
+          sceIftuDisable: 0xC11F30B3
+          sceIftuEnable: 0x0D7C02F7
+          sceIftuSetInputFrameBuffer: 0x7CE0C4DA
+          sceIftuSetMergeSetting: 0xAF19FD85
+          sceIftuSetOutputFormat: 0xE6EE2C6B
       ScePervasiveForDriver:
         nid: 0xE692C727
         functions:

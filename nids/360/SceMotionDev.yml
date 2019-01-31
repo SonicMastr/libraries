@@ -40,7 +40,10 @@ modules:
       SceMotionDevForDriver:
         nid: 0xA501409A
         functions:
+          sceMotionDevGetCalibrationData: 0xF0251700
+          sceMotionDevGetCalibrationHeader: 0x3B23DF55
           sceMotionDevGetDeviceInfo: 0x3E4BCBC0
+          sceMotionDevGetEvaInfo: 0x5B53AC26
           sceMotionDevIsReady: 0x10AAC8EA
           sceMotionDevNoiseFilterIsAvailable: 0x11A17A96
           sceMotionDevRead: 0x3A3407B5

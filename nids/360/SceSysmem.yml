@@ -5,6 +5,82 @@ modules:
       SceCpuForDriver:
         nid: 0x40ECDB0E
         functions:
+          sceKernelCpuAtomicAddAndGet16: 0x59F74E94
+          sceKernelCpuAtomicAddAndGet32: 0x5F6A8743
+          sceKernelCpuAtomicAddAndGet64: 0x4E459A03
+          sceKernelCpuAtomicAddAndGet8: 0x1E850481
+          sceKernelCpuAtomicAddUnless16: 0x0F84AFE9
+          sceKernelCpuAtomicAddUnless32: 0x1F157DC3
+          sceKernelCpuAtomicAddUnless64: 0x06CCFA4B
+          sceKernelCpuAtomicAddUnless8: 0x5CC62CEC
+          sceKernelCpuAtomicAndAndGet16: 0xB281D52A
+          sceKernelCpuAtomicAndAndGet32: 0xDF899E4B
+          sceKernelCpuAtomicAndAndGet64: 0xD18E7B54
+          sceKernelCpuAtomicAndAndGet8: 0x32B62B1A
+          sceKernelCpuAtomicClearAndGet16: 0x6B050D7C
+          sceKernelCpuAtomicClearAndGet32: 0x78C1F148
+          sceKernelCpuAtomicClearAndGet64: 0x2149CD4C
+          sceKernelCpuAtomicClearAndGet8: 0x8E538AB5
+          sceKernelCpuAtomicClearMask16: 0x1BE58599
+          sceKernelCpuAtomicClearMask32: 0x4AE1BCC0
+          sceKernelCpuAtomicClearMask64: 0x55760309
+          sceKernelCpuAtomicClearMask8: 0x1B3336B0
+          sceKernelCpuAtomicCompareAndSet16: 0x6F63F56D
+          sceKernelCpuAtomicCompareAndSet32: 0xCDA96E81
+          sceKernelCpuAtomicCompareAndSet64: 0x4B527009
+          sceKernelCpuAtomicCompareAndSet8: 0x3627F4E0
+          sceKernelCpuAtomicDecIfPositive16: 0x9A693F5B
+          sceKernelCpuAtomicDecIfPositive32: 0x2A71B03C
+          sceKernelCpuAtomicDecIfPositive64: 0x267D0B33
+          sceKernelCpuAtomicDecIfPositive8: 0x45153D4E
+          sceKernelCpuAtomicGetAndAdd16: 0x225DF91A
+          sceKernelCpuAtomicGetAndAdd32: 0x341B6E81
+          sceKernelCpuAtomicGetAndAdd64: 0x043FD446
+          sceKernelCpuAtomicGetAndAdd8: 0xFCDCD4DE
+          sceKernelCpuAtomicGetAndAnd16: 0x4A820BC5
+          sceKernelCpuAtomicGetAndAnd32: 0x10EB35EB
+          sceKernelCpuAtomicGetAndAnd64: 0x18A17E07
+          sceKernelCpuAtomicGetAndAnd8: 0xD8E675C0
+          sceKernelCpuAtomicGetAndClear16: 0x8E9C086D
+          sceKernelCpuAtomicGetAndClear32: 0xE36F3A46
+          sceKernelCpuAtomicGetAndClear64: 0x88BA6002
+          sceKernelCpuAtomicGetAndClear8: 0x382D1466
+          sceKernelCpuAtomicGetAndOr16: 0x004F09D1
+          sceKernelCpuAtomicGetAndOr32: 0x2A40BB93
+          sceKernelCpuAtomicGetAndOr64: 0xCB73D6D5
+          sceKernelCpuAtomicGetAndOr8: 0xBDF6F8E4
+          sceKernelCpuAtomicGetAndSet16: 0x085532C8
+          sceKernelCpuAtomicGetAndSet32: 0x0EE04C03
+          sceKernelCpuAtomicGetAndSet64: 0xD2DEE625
+          sceKernelCpuAtomicGetAndSet8: 0x29599FC8
+          sceKernelCpuAtomicGetAndSub16: 0x3EE9B5B8
+          sceKernelCpuAtomicGetAndSub32: 0xF891CF2A
+          sceKernelCpuAtomicGetAndSub64: 0xA7585370
+          sceKernelCpuAtomicGetAndSub8: 0x7B43D0D7
+          sceKernelCpuAtomicGetAndXor16: 0x711801E6
+          sceKernelCpuAtomicGetAndXor32: 0x77E34309
+          sceKernelCpuAtomicGetAndXor64: 0xE212ECAD
+          sceKernelCpuAtomicGetAndXor8: 0xBAF47F7B
+          sceKernelCpuAtomicOrAndGet16: 0xADD39B84
+          sceKernelCpuAtomicOrAndGet32: 0xBC248C30
+          sceKernelCpuAtomicOrAndGet64: 0x3E218AF7
+          sceKernelCpuAtomicOrAndGet8: 0x5D515F1B
+          sceKernelCpuAtomicSet16: 0x532CA3E8
+          sceKernelCpuAtomicSet32: 0x3168BC57
+          sceKernelCpuAtomicSet64: 0xC381CE8C
+          sceKernelCpuAtomicSet8: 0x0836537E
+          sceKernelCpuAtomicSetIfGreaterGet16: 0x875B094D
+          sceKernelCpuAtomicSetIfGreaterGet32: 0x26F71995
+          sceKernelCpuAtomicSetIfGreaterGet8: 0xC3868071
+          sceKernelCpuAtomicSubAndGet16: 0x515682C9
+          sceKernelCpuAtomicSubAndGet32: 0xA4884C4E
+          sceKernelCpuAtomicSubAndGet64: 0xB5F8919C
+          sceKernelCpuAtomicSubAndGet8: 0xEB085370
+          sceKernelCpuAtomicXorAndGet16: 0x646003D6
+          sceKernelCpuAtomicXorAndGet32: 0x4244BE65
+          sceKernelCpuAtomicXorAndGet64: 0x692C51B3
+          sceKernelCpuAtomicXorAndGet8: 0x03887992
+          sceKernelCpuDcacheAndL2CleanInvalidateMVACRange_20: 0xE551F99B
           sceKernelCpuDcacheAndL2InvalidateRange: 0x02796361
           sceKernelCpuDcacheAndL2WritebackInvalidateRange: 0x364E68A4
           sceKernelCpuDcacheAndL2WritebackRange: 0x103872A5
@@ -13,23 +89,52 @@ modules:
           sceKernelCpuDisableInterrupts: 0x821FC0EE
           sceKernelCpuEnableInterrupts: 0xF5BAD43B
           sceKernelCpuGetCpuId: 0x5E4D5DE1
+          sceKernelCpuIsVaddrMapped: 0x337CBDF3
+          sceKernelCpuLockStoreFlag: 0x3F42B434
+          sceKernelCpuLockStoreLR: 0xBF82DEB2
+          sceKernelCpuLockSuspendIntrStoreFlag: 0x4C38CE4D
           sceKernelCpuResumeIntr: 0x7BB9D5DF
           sceKernelCpuSpinLockIrqRestore: 0x740A0750
           sceKernelCpuSpinLockIrqSave: 0xEC53D007
+          sceKernelCpuSpinLockStoreLR: 0xCAC9AE80
+          sceKernelCpuSpinUnlockStoreLR: 0xF5FD5676
           sceKernelCpuSuspendIntr: 0xD32ACE9E
+          sceKernelCpuTryLockStoreFlag: 0x4F7790B4
+          sceKernelCpuTryLockStoreLR: 0x5AC9D394
+          sceKernelCpuTryLockSuspendIntrStoreFlag: 0xDE6482C6
+          sceKernelCpuTryLockSuspendIntrStoreLR: 0x27C0B340
+          sceKernelCpuTrySpinLockStoreLR: 0x093925BD
+          sceKernelCpuTrySpinLockSuspendIntrStoreLR: 0xF02467D1
+          sceKernelCpuUnlockResumeIntrStoreFlag: 0x9EC91017
+          sceKernelCpuUnlockStoreFlag: 0xCB8ABDF0
+          sceKernelCpuUnlockStoreLR: 0xD6ED0C46
       SceCpuForKernel:
         nid: 0x54BF2BAB
         functions:
+          sceKernelCpuBranchPredictorInvalidateAll: 0x4C4C7D6B
+          sceKernelCpuBranchPredictorInvalidateAllIS: 0x1BB2BB8D
+          sceKernelCpuDcacheCleanInvalidateMVAC: 0xC8E8C9E9
+          sceKernelCpuDcacheCleanMVAC: 0xF7159B55
+          sceKernelCpuDcacheCleanMVACRange: 0xC5C1EE4E
           sceKernelCpuDcacheInvalidateAll: 0x2F3BF020
+          sceKernelCpuDcacheInvalidateMVAC: 0x470EAE1E
+          sceKernelCpuDcacheInvalidateMVACRange: 0x583F30D1
           sceKernelCpuDcacheWritebackAll: 0x73A30DB2
           sceKernelCpuDcacheWritebackInvalidateAll: 0x76DAB4D0
           sceKernelCpuDcacheWritebackInvalidateRange: 0x6BA2E51C
+          sceKernelCpuForKernel_9B8173F4: 0x9B8173F4
+          sceKernelCpuGetCONTEXTIDR: 0x5B6B3274
+          sceKernelCpuGetPaddr: 0x2A46E800
           sceKernelCpuIcacheAndL2WritebackInvalidateRange: 0x19F17BD0
           sceKernelCpuIcacheInvalidateAll: 0x264DA250
+          sceKernelCpuIcacheInvalidateAllU: 0xAEE0B489
           sceKernelCpuIcacheInvalidateRange: 0xF4C7F578
+          sceKernelCpuPreloadEngineKill: 0xD0D85FF8
           sceKernelCpuRestoreContext: 0x0A4F0FB9
           sceKernelCpuSaveContext: 0x211B89DA
           sceKernelCpuUnrestrictedMemcpy: 0x8C683DEC
+          sceKernelCpuUpdateSCTLR: 0x04008CF7
+          sceKernelMMUVAtoPAWithMode: 0x67343A07
       SceDebugForDriver:
         nid: 0x88758561
         functions:
@@ -47,6 +152,12 @@ modules:
           sceDebugPutchar: 0x82D2EDCE
           sceDebugRegisterPutcharHandler: 0xE6115A72
           sceDebugSetHandlers: 0x10067B7B
+      SceDebugLedForDriver:
+        nid: 0x7BC05EAD
+        functions:
+          sceKernelGetGPO: 0x3BB289F7
+          sceKernelSetGPI: 0x51C5325A
+          sceKernelSetGPOMask: 0x098473B0
       SceKernelSuspendForDriver:
         nid: 0x7290B21C
         functions:
@@ -75,6 +186,8 @@ modules:
           sceHmacSha1Digest: 0x29A28957
           sceHmacSha224Digest: 0x7F2A7B99
           sceHmacSha256Digest: 0x83EFA1CC
+          sceMt19937GlobalInit: 0xD428CC2A
+          sceMt19937GlobalUninit: 0x875B2A1C
           sceMt19937Init: 0x4C9A5730
           sceMt19937UInt: 0x92AEDFBC
           sceSfmt19937FillArray32: 0x2B30548B
@@ -98,6 +211,17 @@ modules:
           sceZlibDecompress: 0x900148DB
           sceZlibGetCompressedData: 0x01EB6C45
           sceZlibGetInfo: 0x5B9BCD75
+      ScePmMgrForDriver:
+        nid: 0xF13F32F9
+        functions:
+          scePmMgrGetProductMode: 0x2AC815A2
+          scePmMgrIsExternalBootMode: 0xBD1F193B
+      SceProcEventForDriver:
+        nid: 0x887F19D0
+        functions:
+          sceKernelInvokeProcEventHandler: 0x414CC813
+          sceKernelRegisterProcEventHandler: 0x2A43912D
+          sceKernelUnregisterProcEventHandler: 0x3DED57CC
       SceQafMgrForDriver:
         nid: 0x4E29D3B6
         functions:
@@ -113,6 +237,13 @@ modules:
       SceSblAIMgrForDriver:
         nid: 0xFD00C69A
         functions:
+          sceSblAIMgrGetProductSubCode: 0xB33CEC8F
+          sceSblAIMgrIsJapaneseFat: 0x6D5A3FC9
+          sceSblAIMgrIsPrototypeRev2: 0xFF5784B9
+          sceSblAIMgrIsPrototypeRev7: 0x05F79D4A
+          sceSblAIMgrIsToolRev3: 0xBB9D146B
+          sceSblAIMgrIsToolRev4: 0x37A79140
+          sceSblAIMgrIsToolRev5: 0xE5E47FF7
           sceSblAimgrGetSMI: 0x47D9CF13
           sceSblAimgrGetTargetId: 0x14345161
           sceSblAimgrIsCEX: 0xD78B04A2
@@ -183,32 +314,82 @@ modules:
       SceSysmemForDriver:
         nid: 0x6F25E18A
         functions:
+          sceGUIDReferObjectWithClassLevel: 0x77066FD1
+          sceKernelAddressSpaceVAtoPABySW: 0x65419BD3
           sceKernelAllocHeapMemory: 0x7B4CB60A
+          sceKernelAllocHeapMemoryFromGlobalHeap: 0x7750CEA7
+          sceKernelAllocHeapMemoryFromGlobalHeapWithOpt: 0x0B4ED16A
+          sceKernelAllocHeapMemoryWithOpt1: 0xB415B5A8
           sceKernelAllocHeapMemoryWithOption: 0x49D4DD9B
           sceKernelAllocMemBlock: 0xC94850C9
+          sceKernelAllocMemBlockWithInfo: 0xD44F464D
           sceKernelCreateClass: 0x61317102
           sceKernelCreateHeap: 0x9328E0E8
+          sceKernelCreateUidObj: 0x56A13E90
+          sceKernelCreateUidObjForUid: 0x89A44858
           sceKernelCreateUserUid: 0xBF209859
+          sceKernelCreateUserUidForClass: 0xCED1547B
+          sceKernelCreateUserUidForName: 0x513B9DDD
+          sceKernelCreateUserUidForNameWithClass: 0x8DA0BCA5
           sceKernelDeleteHeap: 0xD6437637
           sceKernelDeleteUid: 0x047D32F2
           sceKernelDeleteUserUid: 0x84A4AF5E
+          sceKernelFindMemBlock: 0x9C78064C
           sceKernelFindMemBlockByAddr: 0x8A1742F6
+          sceKernelFindMemBlockByAddrForDefaultSize: 0xF3BBE2E1
           sceKernelFindMemBlockByAddrForPid: 0x857F1D5A
+          sceKernelFindMemBlockForPid: 0x9F6E45E3
+          sceKernelFirstDifferentBlock32User: 0xBDA6E42B
+          sceKernelFirstDifferentBlock64User: 0xBB3B02C2
+          sceKernelFirstDifferentBlock64UserForPid: 0xE83855FD
           sceKernelFirstDifferentIntUserForPid: 0x8334454F
           sceKernelFreeHeapMemory: 0x3EBCE343
+          sceKernelFreeHeapMemoryFromGlobalHeap: 0xFB817A59
           sceKernelFreeMemBlock: 0x009E1C61
+          sceKernelGUIDGetObject: 0x0FC24464
+          sceKernelGetClassForPidForUid: 0xE9728A12
+          sceKernelGetClassForUid: 0xC74B0152
           sceKernelGetMemBlockBase: 0xA841EDDA
+          sceKernelGetMemBlockMappedBase: 0x0B1FD5C3
+          sceKernelGetMemBlockPARange: 0x98C15666
+          sceKernelGetMemBlockPaddrListForUid: 0x19A51AC7
+          sceKernelGetMemBlockVBase: 0xB81CF0A3
+          sceKernelGetNameForPidByUid: 0x09896EB7
+          sceKernelGetNameForUid: 0xA78755EB
+          sceKernelGetNameForUid2: 0xE655852F
           sceKernelGetObjForUid: 0x00ED6C14
+          sceKernelGetObjectForPidForUid: 0xFE6D7FAE
+          sceKernelGetObjectForUidForAttr: 0xF6DB54BA
+          sceKernelGetObjectForUidForClassTree: 0x72A98D17
           sceKernelGetPaddr: 0x8D160E65
           sceKernelGetPaddrList: 0xE68BEEBD
+          sceKernelGetPaddrListForLargePage: 0x08A8A7E8
+          sceKernelGetPaddrListForSmallPage: 0x16844CE6
+          sceKernelGetPaddrPair: 0xAE36C775
+          sceKernelGetPaddrPairForLargePage: 0x32257A24
+          sceKernelGetPaddrPairForSmallPage: 0xB3575090
+          sceKernelGetPhysicalMemoryType: 0x0AAA4FDD
           sceKernelGetPidContext: 0x2ECF7944
           sceKernelGetUidClass: 0x85336A1C
+          sceKernelGetUnknownValidPhysAddressSpace: 0xC9928F5E
+          sceKernelIsPaddrWithinSameSectionForUid: 0xF4AD89D8
+          sceKernelIsPaddrWithinUnknownValidPhysAddressSpace: 0xA7C0D1FC
           sceKernelKernelUidForUserUid: 0x45D22597
+          sceKernelKernelUidForUserUidForClass: 0x184172B1
           sceKernelMapBlockUserVisible: 0x58D21746
+          sceKernelMapBlockUserVisibleWithFlag: 0x04059C4B
           sceKernelMapUserBlock: 0x7D4F8B5F
           sceKernelMapUserBlockDefaultType: 0x278BC201
           sceKernelMapUserBlockDefaultTypeForPid: 0x0091D74D
+          sceKernelMemBlockDecRefCounterAndReleaseUid: 0xF50BDC0C
+          sceKernelMemBlockGetInfoEx: 0x24A99FFF
+          sceKernelMemBlockGetInfoExForVisibilityLevel: 0xA73CFFEF
+          sceKernelMemBlockGetSomeSize: 0x78337B62
+          sceKernelMemBlockIncRefCounterAndReleaseUid: 0xEAF3849B
           sceKernelMemBlockRelease: 0x00575B00
+          sceKernelMemBlockType2Memtype: 0x20C811FA
+          sceKernelMemBlockTypeGetPrivileges: 0x6A0792A3
+          sceKernelMemBlockTypeGetUnknown: 0xCB0F3A33
           sceKernelMemRangeRelease: 0x75C70DE0
           sceKernelMemRangeReleaseForPid: 0xA8525B06
           sceKernelMemRangeReleaseWithPerm: 0x22CBE925
@@ -220,14 +401,20 @@ modules:
           sceKernelMemcpyKernelToUserForPidUnchecked: 0xFED82F2D
           sceKernelMemcpyUserToKernel: 0xBC996A7A
           sceKernelMemcpyUserToKernelForPid: 0x605275F8
+          sceKernelMemcpyUserToUser: 0x1BD44DD5
           sceKernelMemcpyUserToUserForPid: 0x8E086C33
+          sceKernelOpenUidForName: 0xD76E7452
+          sceKernelProcModeVAtoPA: 0x61A67D32
           sceKernelRemapBlock: 0xDFE2C8CB
           sceKernelRoMemcpyKernelToUserForPid: 0x571D2739
+          sceKernelSetNameForPidForUid: 0x12624884
+          sceKernelSetObjectForUid: 0x4CFA4100
           sceKernelStrncpyKernelToUser: 0x80BD6FEB
           sceKernelStrncpyUserForPid: 0x75AAF178
           sceKernelStrncpyUserToKernel: 0xDB3EC244
           sceKernelStrnlenUser: 0xB429D419
           sceKernelStrnlenUserForPid: 0x9929EB07
+          sceKernelSwitchPidContext: 0x2D711589
           sceKernelSwitchVmaForPid: 0x6F2ACDAE
           sceKernelUidRelease: 0x149885C4
           sceKernelUidRetain: 0x0F5C84B7
@@ -235,10 +422,22 @@ modules:
       SceSysmemForKernel:
         nid: 0x63A519E5
         functions:
+          sceGUIDGetObjectWithClass: 0x7ABFA9A7
           sceGUIDGetUIDVectorByClass: 0xEC7D36EF
+          sceGUIDKernelCreateWithAttr: 0x53E1FFDE
+          sceGUIDOpenByGUID: 0xCF53EEE4
+          sceKernelAddressSpaceFreeAllMemBlock: 0x89CE1F31
+          sceKernelAddressSpaceSetPhyMemPart: 0x67955EE9
+          sceKernelAddressSpaceUnmap: 0xCE72839E
+          sceKernelAddressSpaceVAtoPA: 0xF2179820
+          sceKernelAllocSystemCallTable: 0x5FFE4B79
+          sceKernelCreateAddressSpace: 0x4A3737F0
           sceKernelCreateUidObj: 0xDF0288D7
+          sceKernelDeleteAddressSpace: 0xF2D7FE3A
           sceKernelFindClassByName: 0x62989905
+          sceKernelFreeSimpleMemBlock: 0xA1FFA2C9
           sceKernelGetFixedHeapInfoByPointer: 0x219E90FD
+          sceKernelGetHeapInfo: 0x91733EF4
           sceKernelGetHeapInfoByPtr: 0x68451777
           sceKernelGetMemBlockType: 0x289BE3EC
           sceKernelGetUidDLinkClass: 0xC105604E
@@ -246,25 +445,62 @@ modules:
           sceKernelGetUidMemBlockClass: 0xAF729575
           sceKernelNameHeapGetInfo: 0xE443253B
           sceKernelRxMemcpyKernelToUserForPid: 0x30931572
+          sceKernelSysrootAlloc: 0xC0A4D2F3
           sceKernelUIDEntryHeapGetInfo: 0x686AA15C
       SceSysrootForDriver:
         nid: 0x2ED7F97A
         functions:
+          sceKernelInvokeInitCallback: 0x93CD44CD
+          sceKernelSysrootCoredumpTrigger: 0xCD8CD242
+          sceKernelSysrootGetShellPid: 0x05093E7B
           sceKernelSysrootGetSystemSwVersion: 0x67AAB627
+          sceKernelSysrootSetSystemSwVersion: 0x3276086B
+          sceSysrootGetHardwareInfo: 0x930B1342
+          sceSysrootUtMgrHasNpTestFlag: 0xA43599E9
       SceSysrootForKernel:
         nid: 0x3691DA45
         functions:
+          sceKernelAllocHeapMemory: 0xD351EBC8
           sceKernelGetProcessTitleId: 0xEC3124A3
           sceKernelGetSysbase: 0x3E455842
           sceKernelGetSysrootBuffer: 0x9DB56D1F
+          sceKernelIsColdBoot: 0xD7198963
+          sceKernelIsSomeBootMode: 0x7B7F8171
+          sceKernelSysrootAppMgrSpawnProcess: 0x3ACACD22
+          sceKernelSysrootCheckRemapCodeForUser: 0xF8769E86
+          sceKernelSysrootDbgpSuspendProcessAndWaitResume: 0x256B2394
+          sceKernelSysrootGetCurrentAddressSpaceCB: 0x63EBB05B
+          sceKernelSysrootGetCurrentUIDEntryHeapCB: 0xB4C24588
+          sceKernelSysrootGetModulePrivate: 0x37EC12BB
+          sceKernelSysrootGetPUIDEntryHeap: 0x88DE85EF
+          sceKernelSysrootGetSharedMemory: 0xC8C8C321
+          sceKernelSysrootGetStatus: 0x5C426B19
+          sceKernelSysrootGetThreadAccessLevel: 0x20009397
+          sceKernelSysrootGetVbaseResetVector: 0xCC85905B
+          sceKernelSysrootIofilemgrStart: 0xF6A6D205
+          sceKernelSysrootIsUserModeThread: 0x7FC7A163
+          sceKernelSysrootProcessmgrStart2: 0x62E8F511
+          sceKernelSysrootSetSysroot: 0x36916C30
+          sceSysrootGetFactorySystemSwVersion: 0xD3872270
+          sceSysrootGetModuleInfoForPid: 0xFF9F80FF
+          sceSysrootGetNidName: 0x0B79E220
           sceSysrootGetSelfAuthInfo: 0x4F0A4066
           sceSysrootGetSelfInfo: 0xF10AB792
+          sceSysrootGetSessionId: 0x84783B71
+          sceSysrootGetUnk10: 0x403B509E
+          sceSysrootGetUnkC: 0xFFD6E24D
+          sceSysrootGetUnkC0: 0xAB3CC7D0
+          sceSysrootGetWakeupFactor: 0x2F97041A
           sceSysrootIsAuCodecIcConexant: 0x46E72428
           sceSysrootIsBsodReboot: 0x4373AC96
           sceSysrootIsExternalBootMode: 0x89D19090
           sceSysrootIsSafeMode: 0x834439A7
+          sceSysrootIsSomeBootMode2: 0x7918D44E
+          sceSysrootIsSomeMode: 0xAE7A8F1D
+          sceSysrootIsUnknownReboot: 0xE4EA1960
           sceSysrootIsUpdateMode: 0xB0E1FC67
           sceSysrootIsUsbEnumWakeup: 0x79C9AE10
+          sceSysrootRegisterLicMgrGetLicenseStatus: 0x71DB83A2
           sceSysrootUseExternalStorage: 0x55392965
           sceSysrootUseInternalStorage: 0x50FE3B4D
       SceUartForKernel:

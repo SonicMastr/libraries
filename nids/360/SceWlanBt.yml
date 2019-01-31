@@ -10,3 +10,10 @@ modules:
           sceWlanRegisterCallback: 0xAA2E46F6
           sceWlanSetConfiguration: 0xDBE8AEF2
           sceWlanUnregisterCallback: 0x826DC04F
+      SceWlanBtForDriver:
+        nid: 0xFD94FCE9
+        functions:
+          sceWlanBtAttachMonitor: 0xC5AA6F43
+          sceWlanBtDetachMonitor: 0xA7FDE9DC
+          sceWlanBtGetConfiguration: 0x0FC89113
+          sceWlanBtSetConfiguration: 0x4C96C3B7
