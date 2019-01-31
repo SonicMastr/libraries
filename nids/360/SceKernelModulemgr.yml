@@ -2,9 +2,21 @@ modules:
   SceKernelModulemgr:
     nid: 0x726C6635
     libraries:
+      SceBacktrace:
+        nid: 0xB07B6A3F
+        functions:
+          _sceKernelBacktrace: 0xBF371A98
       SceModulemgr:
         nid: 0xEAED1616
         functions:
+          _sceKernelCloseModule: 0x849E78BE
+          _sceKernelLoadModule: 0xB4C5EF9E
+          _sceKernelLoadStartModule: 0x60647592
+          _sceKernelOpenModule: 0x9D674F45
+          _sceKernelStartModule: 0x72CD301F
+          _sceKernelStopModule: 0x086867A8
+          _sceKernelStopUnloadModule: 0x86EAEA0A
+          _sceKernelUnloadModule: 0x8E4A7716
           sceKernelGetAllowedSdkVersionOnSystem: 0x4397FC4E
           sceKernelGetLibraryInfoByNID: 0xEAEB1312
           sceKernelGetModuleIdByAddr: 0xF5798C7C

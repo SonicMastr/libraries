@@ -1,0 +1,27 @@
+modules:
+  SceFios2Kernel:
+    nid: 0x10ECF2D0
+    libraries:
+      SceFios2Kernel:
+        nid: 0x8757B742
+        functions:
+          _sceFiosKernelOverlayAdd: 0x6DBCF0B2
+          _sceFiosKernelOverlayAddForProcess: 0x2A381357
+          _sceFiosKernelOverlayDHChstatSync: 0xF6A3E335
+          _sceFiosKernelOverlayDHCloseSync: 0x021B4AF7
+          _sceFiosKernelOverlayDHOpenSync: 0x5D6A1CCE
+          _sceFiosKernelOverlayDHReadSync: 0x2F06ADC6
+          _sceFiosKernelOverlayDHStatSync: 0x759EBEE6
+          _sceFiosKernelOverlayDHSyncSync: 0x2A9724C9
+          _sceFiosKernelOverlayGetInfo: 0xF44F3505
+          _sceFiosKernelOverlayGetInfoForProcess: 0xBC6B3CC5
+          _sceFiosKernelOverlayGetList: 0x9379E2D5
+          _sceFiosKernelOverlayGetRecommendedScheduler: 0xB02E0B26
+          _sceFiosKernelOverlayModify: 0x6D6CDE05
+          _sceFiosKernelOverlayModifyForProcess: 0x6DF2FC05
+          _sceFiosKernelOverlayRemove: 0xB4927173
+          _sceFiosKernelOverlayRemoveForProcess: 0xF8277E07
+          _sceFiosKernelOverlayResolveSync: 0xE9AE60FB
+          _sceFiosKernelOverlayResolveWithRangeSync: 0x8CCA471A
+          _sceFiosKernelOverlayThreadIsDisabled: 0x629F4FE4
+          _sceFiosKernelOverlayThreadSetDisabled: 0x3E9172EA

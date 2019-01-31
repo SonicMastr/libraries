@@ -1,0 +1,12 @@
+modules:
+  SceWlanBt:
+    nid: 0x99052D93
+    libraries:
+      SceWlan:
+        nid: 0x22821EA3
+        functions:
+          sceWlanGetConfiguration: 0x70AF9BD6
+          sceWlanGetWakeOnTargetProcess: 0x18E6AFB2
+          sceWlanRegisterCallback: 0xAA2E46F6
+          sceWlanSetConfiguration: 0xDBE8AEF2
+          sceWlanUnregisterCallback: 0x826DC04F

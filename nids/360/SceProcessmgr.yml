@@ -5,6 +5,9 @@ modules:
       SceProcessmgr:
         nid: 0x2DD91812
         functions:
+          _sceKernelExitProcessForUser: 0xC053DC6B
+          _sceKernelGetTimer5Reg: 0x2F73D72F
+          _sceKernelRegisterLibkernelAddresses: 0x56C2E8FF
           sceKernelCDialogSessionClose: 0xDB4CC1D0
           sceKernelCDialogSetLeaseLimit: 0xEC8DDAAD
           sceKernelCallAbortHandler: 0xEB6E50BB
