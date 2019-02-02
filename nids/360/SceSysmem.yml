@@ -122,7 +122,6 @@ modules:
           sceKernelCpuDcacheWritebackAll: 0x73A30DB2
           sceKernelCpuDcacheWritebackInvalidateAll: 0x76DAB4D0
           sceKernelCpuDcacheWritebackInvalidateRange: 0x6BA2E51C
-          sceKernelCpuForKernel_9B8173F4: 0x9B8173F4
           sceKernelCpuGetCONTEXTIDR: 0x5B6B3274
           sceKernelCpuGetPaddr: 0x2A46E800
           sceKernelCpuIcacheAndL2WritebackInvalidateRange: 0x19F17BD0
@@ -371,9 +370,7 @@ modules:
           sceKernelGetPhysicalMemoryType: 0x0AAA4FDD
           sceKernelGetPidContext: 0x2ECF7944
           sceKernelGetUidClass: 0x85336A1C
-          sceKernelGetUnknownValidPhysAddressSpace: 0xC9928F5E
           sceKernelIsPaddrWithinSameSectionForUid: 0xF4AD89D8
-          sceKernelIsPaddrWithinUnknownValidPhysAddressSpace: 0xA7C0D1FC
           sceKernelKernelUidForUserUid: 0x45D22597
           sceKernelKernelUidForUserUidForClass: 0x184172B1
           sceKernelMapBlockUserVisible: 0x58D21746
@@ -389,7 +386,6 @@ modules:
           sceKernelMemBlockRelease: 0x00575B00
           sceKernelMemBlockType2Memtype: 0x20C811FA
           sceKernelMemBlockTypeGetPrivileges: 0x6A0792A3
-          sceKernelMemBlockTypeGetUnknown: 0xCB0F3A33
           sceKernelMemRangeRelease: 0x75C70DE0
           sceKernelMemRangeReleaseForPid: 0xA8525B06
           sceKernelMemRangeReleaseWithPerm: 0x22CBE925
@@ -487,17 +483,11 @@ modules:
           sceSysrootGetSelfAuthInfo: 0x4F0A4066
           sceSysrootGetSelfInfo: 0xF10AB792
           sceSysrootGetSessionId: 0x84783B71
-          sceSysrootGetUnk10: 0x403B509E
-          sceSysrootGetUnkC: 0xFFD6E24D
-          sceSysrootGetUnkC0: 0xAB3CC7D0
           sceSysrootGetWakeupFactor: 0x2F97041A
           sceSysrootIsAuCodecIcConexant: 0x46E72428
           sceSysrootIsBsodReboot: 0x4373AC96
           sceSysrootIsExternalBootMode: 0x89D19090
           sceSysrootIsSafeMode: 0x834439A7
-          sceSysrootIsSomeBootMode2: 0x7918D44E
-          sceSysrootIsSomeMode: 0xAE7A8F1D
-          sceSysrootIsUnknownReboot: 0xE4EA1960
           sceSysrootIsUpdateMode: 0xB0E1FC67
           sceSysrootIsUsbEnumWakeup: 0x79C9AE10
           sceSysrootRegisterLicMgrGetLicenseStatus: 0x71DB83A2

@@ -69,10 +69,10 @@ modules:
         functions:
           sceIoCancel: 0x6D59658D
           sceIoChstat: 0x7D42B8DC
+          sceIoChstat2: 0x1F98BD50
           sceIoChstatAsync: 0x7EC442BF
           sceIoChstatByFd: 0xDF57A75F
           sceIoChstatByFdAsync: 0xEC974400
-          sceIoChstatForDriver_2: 0x1F98BD50
           sceIoClearErrorEvent: 0x40B933C7
           sceIoClose: 0xF99DD8A3
           sceIoCloseAsync: 0x11C57CC6
@@ -87,16 +87,16 @@ modules:
           sceIoDopen: 0x463B25CC
           sceIoDopenAsync: 0x72F06BDE
           sceIoDread: 0x20CF5FC7
+          sceIoDread2: 0x03051B02
           sceIoDreadAsync: 0x5982B0E3
-          sceIoDreadForDriver_2: 0x03051B02
           sceIoFlock: 0x16336A0D
           sceIoGetMediaType: 0x9C220246
           sceIoGetProcessDefaultPriorityForSystem: 0xCE397158
           sceIoGetstat: 0x75C96D25
+          sceIoGetstat2: 0xD6503624
           sceIoGetstatAsync: 0x94A5304A
           sceIoGetstatByFd: 0x462F059B
           sceIoGetstatByFdAsync: 0x0FEE1238
-          sceIoGetstatForDriver_2: 0xD6503624
           sceIoIoctl: 0x161CD33F
           sceIoIoctlAsync: 0xB761E91B
           sceIoLseek: 0x62090481
@@ -141,7 +141,7 @@ modules:
           sceVfsOpDevctl: 0xB07B307D
           sceVfsUnmount: 0x9C7E7B76
           sceVopChstat: 0x1974FA92
-          sceVopClsoe: 0x40944C2E
+          sceVopClose: 0x40944C2E
           sceVopCreate: 0x9E347C7D
           sceVopDclose: 0x1350F5C7
           sceVopDopen: 0x00C9C2DD

@@ -93,8 +93,6 @@ modules:
           scePowerIsLowBattery: 0xD3075926
           scePowerIsPowerOnline: 0x87440F5E
           scePowerIsRequest: 0x7FA406DD
-          scePowerIsSomethingBattery: 0x0D56C601
-          scePowerIsSomethingBattery2: 0x627A89C6
           scePowerIsSuspendRequired: 0x78A1A796
           scePowerRegisterCallback: 0x04B7766E
           scePowerRequestColdReset: 0x0442D852
