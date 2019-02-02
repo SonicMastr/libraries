@@ -58,6 +58,7 @@ modules:
       SceRegMgrForGame:
         nid: 0x0B351269
         functions:
+          sceRegMgrSystemIsBlueScreen: 0x169A0D1D
           sceRegMgrSystemParamGetBin: 0x7FFE2CDF
           sceRegMgrSystemParamGetInt: 0x347C1BDB
           sceRegMgrSystemParamGetStr: 0x877ADB3F

@@ -2,6 +2,13 @@ modules:
   SceVshBridge:
     nid: 0xA2BE1892
     libraries:
+      SceDrmBridge:
+        nid: 0xFF4CD67F
+        functions:
+          sceDrmBridgeGetCurrentSecureTick: 0xFFB164E2
+          sceDrmBridgeIsAllowRemotePlayDebug: 0x1BBB62E9
+          sceDrmBridgeMlnpsnlAuth1: 0xE04F767B
+          sceDrmBridgeMlnpsnlAuth2: 0x6D483DFC
       SceVshBridge:
         nid: 0x35C5ACD4
         functions:

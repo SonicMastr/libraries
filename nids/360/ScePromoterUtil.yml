@@ -15,5 +15,6 @@ modules:
           scePromoterUtilityPromoteImport: 0x4B37808F
           scePromoterUtilityPromotePkg: 0x716C81F4
           scePromoterUtilityPromotePkgWithRif: 0x86641BC6
+          scePromoterUtilityRemoveSavedata: 0xCB0A59B0
           scePromoterUtilityUpdateLiveArea: 0x17D73ECA
           scePromoterUtilityUpdateUpgradableStatus: 0x82E69783

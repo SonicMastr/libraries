@@ -200,6 +200,11 @@ modules:
         nid: 0xDCE180F8
         functions:
           sceAppMgrAcInstGetAcdirParam: 0x474AABDF
+          sceAppMgrAppDataMount: 0xB1D3C287
+          sceAppMgrAppDataMountById: 0x5E311F71
+          sceAppMgrAppMount: 0xEF0C9533
+          sceAppMgrAppParamGetInt: 0x12CE29F7
+          sceAppMgrAppUmount: 0x1DE3B7C4
           sceAppMgrBgdlSetQueueStatus: 0x5B1BE482
           sceAppMgrCheckContentInstallPeriod: 0x193784A9
           sceAppMgrCheckPfsMounted: 0x0B1BEEE0
@@ -212,8 +217,11 @@ modules:
           sceAppMgrCloudDataSrcMount: 0x6D4D6FFE
           sceAppMgrCloudDataVerifyHeader: 0x55D48190
           sceAppMgrDebugSettingNotifyUpdate: 0x7554330F
+          sceAppMgrDrmClose: 0x088670A6
+          sceAppMgrDrmOpen: 0xEA75D157
           sceAppMgrFakeSaveDataCreateMount: 0x12FC3FA8
           sceAppMgrGameDataMount: 0xCE356B2D
+          sceAppMgrGetBootParam: 0xD2541B4A
           sceAppMgrGetPfsProcessStatus: 0xE72D2A4A
           sceAppMgrGetSystemDataFile: 0xAEC49533
           sceAppMgrIsExclusiveProcessRunning: 0xA888C2DC
@@ -222,14 +230,28 @@ modules:
           sceAppMgrLoadSafeMemory: 0xFAF3DAAA
           sceAppMgrLocalBackupGetOfflineId: 0x61B13981
           sceAppMgrLocalBackupVerifyOfflineHeader: 0x62E98C42
+          sceAppMgrMmsMount: 0x13D54107
+          sceAppMgrPhotoMount: 0x43A35729
           sceAppMgrRegisterPath: 0xB53FB98E
+          sceAppMgrSaveDataGetQuota: 0xE104C37E
           sceAppMgrSaveDataLocalBackupTargetGetList: 0x9B3F7D66
           sceAppMgrSaveDataLocalBackupTargetRemoveItem: 0xC4EF95BB
+          sceAppMgrSaveDataMount: 0xE73C9516
           sceAppMgrSaveDataNotifyBackupFinished: 0x6989B258
+          sceAppMgrSaveDataSlotCreate: 0xE6F389B8
+          sceAppMgrSaveDataSlotDelete: 0xB544F2A0
+          sceAppMgrSaveDataSlotGetParam: 0xD137D486
+          sceAppMgrSaveDataSlotGetStatus: 0xEC9D5A35
+          sceAppMgrSaveDataSlotInit: 0x2277F736
+          sceAppMgrSaveDataSlotSetParam: 0x7E247E47
+          sceAppMgrSaveDataSlotSetStatus: 0x9ADB00FA
+          sceAppMgrSaveDataUmount: 0x2B080268
           sceAppMgrSaveSafeMemory: 0xD366AA44
           sceAppMgrSystemParamDateTimeSetConf: 0xA9AA3A68
+          sceAppMgrTrophyMount: 0xE977A833
           sceAppMgrUmount: 0xA714BB35
           sceAppMgrUpdateRifInfo: 0x894BDCB8
+          sceAppMgrWorkDirMount: 0x3A0A9B82
       SceAppMgrUser:
         nid: 0xA6605D6F
         functions:
@@ -288,6 +310,7 @@ modules:
           sceAppMgrGetStatusByName: 0x656E0ABD
           sceAppMgrGetSystemDataFilePlayReady: 0x1E1E97EE
           sceAppMgrGetUserDirPath: 0x5253338C
+          sceAppMgrGetUserDirPathById: 0x63E51420
           sceAppMgrGetVs0UserDataDrive: 0xC0631748
           sceAppMgrGetVs0UserModuleDrive: 0x906154DE
           sceAppMgrInitSafeMemoryById: 0x3E53681A
@@ -321,7 +344,9 @@ modules:
           sceAppMgrReceiveSystemEvent: 0x10B5765F
           sceAppMgrSaveDataAddMount: 0x8B224917
           sceAppMgrSaveDataDataRemove: 0x4544FCC5
+          sceAppMgrSaveDataDataRemove2: 0x36040E1D
           sceAppMgrSaveDataDataSave: 0x84DE76C7
+          sceAppMgrSaveDataDataSave2: 0xD5CA4F56
           sceAppMgrSaveDataGetQuota: 0x0717E2AE
           sceAppMgrSaveDataMount: 0x31F3CC59
           sceAppMgrSaveDataSlotCreate: 0x5181D7B3
@@ -350,6 +375,7 @@ modules:
           sceAppMgrSystemParamDateTimeGetConf: 0xE39FC7D5
           sceAppMgrSystemParamGetInt: 0x5B75180C
           sceAppMgrSystemParamGetString: 0x09899A08
+          sceAppMgrThemeDataMount: 0x633A7594
           sceAppMgrTrophyMount: 0x84FE08EE
           sceAppMgrTrophyMountById: 0x316207F3
           sceAppMgrUmount: 0x5E375921

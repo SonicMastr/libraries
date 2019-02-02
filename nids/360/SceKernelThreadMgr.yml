@@ -4,6 +4,8 @@ modules:
     libraries:
       SceCpu:
         nid: 0x45265161
+        functions:
+          sceKernelCpuGetCpuId: 0x2704CFEE
       SceDebugLed:
         nid: 0xAE004C0A
         functions:
@@ -20,10 +22,102 @@ modules:
         functions:
           sceKernelCheckDipsw: 0xA98FC2FD
           sceKernelClearDipsw: 0xF1F3E9FE
+          sceKernelGetDipswInfo: 0xB2AD48BE
           sceKernelSetDipsw: 0x82E45FBF
       SceThreadmgr:
         nid: 0x859A24B1
         functions:
+          __sceKernelCreateLwMutex: 0x4BB3154A
+          _sceKernelCancelEvent: 0x29483405
+          _sceKernelCancelEventFlag: 0xF76F3056
+          _sceKernelCancelEventWithSetPattern: 0x8E68E870
+          _sceKernelCancelMsgPipe: 0xCE769C83
+          _sceKernelCancelMutex: 0x1B74CB89
+          _sceKernelCancelRWLock: 0xD004EA15
+          _sceKernelCancelSema: 0x1CAF805D
+          _sceKernelCancelTimer: 0x13117B21
+          _sceKernelCreateCond: 0xCC14FA59
+          _sceKernelCreateEventFlag: 0x38AA5E8E
+          _sceKernelCreateLwCond: 0x940B9EBE
+          _sceKernelCreateMsgPipeWithLR: 0x2AAC8BFD
+          _sceKernelCreateMutex: 0x92667AE5
+          _sceKernelCreateRWLock: 0xB1877F5E
+          _sceKernelCreateSema: 0x0D76458E
+          _sceKernelCreateSema_16XX: 0xBD06F27C
+          _sceKernelCreateSimpleEvent: 0x9C187FAD
+          _sceKernelCreateTimer: 0x79BA0A6D
+          _sceKernelDeleteLwCond: 0x75FCF058
+          _sceKernelDeleteLwMutex: 0x91262C5F
+          _sceKernelExitCallback: 0x2682E6ED
+          _sceKernelGetCallbackInfo: 0x86761234
+          _sceKernelGetCondInfo: 0x05C51CE1
+          _sceKernelGetEventFlagInfo: 0x106C216F
+          _sceKernelGetEventInfo: 0xB395BBF1
+          _sceKernelGetEventPattern: 0x70358258
+          _sceKernelGetLwCondInfo: 0x6C79F2F2
+          _sceKernelGetLwCondInfoById: 0xD9E78D30
+          _sceKernelGetLwMutexInfoById: 0xFEC9E946
+          _sceKernelGetMsgPipeInfo: 0x7AE31060
+          _sceKernelGetMutexInfo: 0xE8CC3DF0
+          _sceKernelGetRWLockInfo: 0x8CE3AFC7
+          _sceKernelGetSemaInfo: 0x0402C633
+          _sceKernelGetSystemInfo: 0x80544E0C
+          _sceKernelGetSystemTime: 0xB70EBAE9
+          _sceKernelGetThreadContextForVM: 0x377094D5
+          _sceKernelGetThreadCpuAffinityMask: 0x212E6C35
+          _sceKernelGetThreadEventInfo: 0x5DE0B7E9
+          _sceKernelGetThreadExitStatus: 0xD3210C08
+          _sceKernelGetThreadInfo: 0xB373D8A1
+          _sceKernelGetThreadRunStatus: 0xC7FB5497
+          _sceKernelGetTimerBase: 0x865DA482
+          _sceKernelGetTimerEventRemainingTime: 0x215FD24D
+          _sceKernelGetTimerInfo: 0xAC7FE4F3
+          _sceKernelGetTimerTime: 0x6F2C41BA
+          _sceKernelLockLwMutex: 0x9C572180
+          _sceKernelLockMutex: 0x7FA945AD
+          _sceKernelLockMutexCB: 0xDB9F5333
+          _sceKernelLockReadRWLock: 0x7EB9E8B5
+          _sceKernelLockReadRWLockCB: 0x5D86D763
+          _sceKernelLockWriteRWLock: 0x80191FAA
+          _sceKernelLockWriteRWLockCB: 0xDBD09B09
+          _sceKernelPMonThreadGetCounter: 0x6B9711AC
+          _sceKernelPollEvent: 0x21C7913E
+          _sceKernelPollEventFlag: 0xDAB1B1C8
+          _sceKernelPulseEventWithNotifyCallback: 0x3E49D3F1
+          _sceKernelReceiveMsgPipeVector: 0x3DD9E4AB
+          _sceKernelReceiveMsgPipeVectorCB: 0x4DBF648E
+          _sceKernelRegisterThreadEventHandler: 0xCE6B49D8
+          _sceKernelSendMsgPipeVector: 0x5E65E454
+          _sceKernelSendMsgPipeVectorCB: 0xF6D515DC
+          _sceKernelSetEventWithNotifyCallback: 0x118F646E
+          _sceKernelSetThreadContextForVM: 0xD4785C41
+          _sceKernelSetTimerEvent: 0xE2C0BFEF
+          _sceKernelSetTimerTime: 0xFF738CD9
+          _sceKernelSignalLwCond: 0xC37F6983
+          _sceKernelSignalLwCondAll: 0x07D2584A
+          _sceKernelSignalLwCondTo: 0x6F1A4A2E
+          _sceKernelStartThread: 0xC30B1745
+          _sceKernelTryReceiveMsgPipeVector: 0x03CFCF00
+          _sceKernelTrySendMsgPipeVector: 0xB3D600AB
+          _sceKernelUnlockLwMutex: 0x2ABC41DF
+          _sceKernelWaitCond: 0x040795C7
+          _sceKernelWaitCondCB: 0x452B0AB3
+          _sceKernelWaitEvent: 0x4E0EA70D
+          _sceKernelWaitEventCB: 0x7D483C33
+          _sceKernelWaitEventFlag: 0xFCE2F728
+          _sceKernelWaitEventFlagCB: 0x401E0C68
+          _sceKernelWaitException: 0x6F7C4DE6
+          _sceKernelWaitExceptionCB: 0x5E7876F2
+          _sceKernelWaitLwCond: 0x18C65756
+          _sceKernelWaitLwCondCB: 0x72DBB96B
+          _sceKernelWaitMultipleEvents: 0x200CC503
+          _sceKernelWaitMultipleEventsCB: 0x0558B7C1
+          _sceKernelWaitSema: 0x45389B6B
+          _sceKernelWaitSemaCB: 0xF8E06784
+          _sceKernelWaitSignal: 0x50407BF4
+          _sceKernelWaitSignalCB: 0xCEA3FC52
+          _sceKernelWaitThreadEnd: 0xEA5C52F5
+          _sceKernelWaitThreadEndCB: 0xFA3D4491
           sceKernelCancelCallback: 0x30741EF2
           sceKernelChangeActiveCpuMask: 0x001173F8
           sceKernelChangeThreadCpuAffinityMask: 0x15129174
@@ -38,6 +132,7 @@ modules:
           sceKernelCloseEventFlag: 0x9A68F547
           sceKernelCloseMsgPipe: 0x1305A065
           sceKernelCloseMutex: 0x03E23AF6
+          sceKernelCloseMutex_089: 0xA35427EE
           sceKernelCloseRWLock: 0xFD5BD5C1
           sceKernelCloseSema: 0xA2D81F9E
           sceKernelCloseSimpleEvent: 0xFEF4CA53
@@ -63,6 +158,7 @@ modules:
           sceKernelGetMsgPipeCreatorId: 0x70E2A6D2
           sceKernelGetProcessId: 0x9DCB4B7A
           sceKernelGetSystemTimeWide: 0xF4EE4FA9
+          sceKernelGetThreadCpuAffinityMask: 0xF1AE5654
           sceKernelGetThreadStackFreeSize: 0x4F8A3DA0
           sceKernelGetThreadTLSAddr: 0xBACA6891
           sceKernelGetThreadmgrUIDClass: 0xC9678F7F
@@ -73,6 +169,7 @@ modules:
           sceKernelOpenEventFlag: 0xBC19F8A1
           sceKernelOpenMsgPipe: 0x0E1CB9F6
           sceKernelOpenMutex: 0x52E17182
+          sceKernelOpenMutex_089: 0x2928D2EC
           sceKernelOpenRWLock: 0xCE510196
           sceKernelOpenSema: 0xCBE235C7
           sceKernelOpenSimpleEvent: 0x4E1E4DF8
@@ -80,6 +177,7 @@ modules:
           sceKernelPollSema: 0x866EF048
           sceKernelPulseEvent: 0x8D27BAD6
           sceKernelRegisterCallbackToEvent: 0x76FB37E9
+          sceKernelResumeThreadForVM: 0x7EB55DAC
           sceKernelSendSignal: 0xD4C367B2
           sceKernelSetEvent: 0x324218CD
           sceKernelSetEventFlag: 0xEC94DFF7
@@ -90,6 +188,7 @@ modules:
           sceKernelSignalSema: 0xE6B761D1
           sceKernelStartTimer: 0x48091E0C
           sceKernelStopTimer: 0x869E9F20
+          sceKernelSuspendThreadForVM: 0x1FF5960D
           sceKernelTryLockMutex: 0x72FC1F54
           sceKernelTryLockReadRWLock: 0xEFDDA456
           sceKernelTryLockWriteRWLock: 0x206CBB66
@@ -99,6 +198,8 @@ modules:
           sceKernelUnregisterCallbackFromEvent: 0x18462B11
           sceKernelUnregisterCallbackFromEventAll: 0x888A7361
           sceKernelUnregisterThreadEventHandler: 0x2C8ED6F0
+          sceKernelWaitThreadEndCB_089: 0x0373C5E3
+          sceKernelWaitThreadEnd_089: 0xF3489EF4
       SceThreadmgrCoredumpTime:
         nid: 0x5E8D0E22
         functions:
@@ -108,6 +209,8 @@ modules:
         functions:
           sceKernelCancelCallback: 0xC040EC1C
           sceKernelCancelMutex: 0x7204B846
+          sceKernelChangeCurrentThreadAttr: 0x751C9B7A
+          sceKernelChangeThreadCpuAffinityMask: 0x6D0733A8
           sceKernelChangeThreadPriority: 0x63DAB420
           sceKernelChangeThreadSuspendStatus: 0x04C6764B
           sceKernelCheckCallback: 0xE53E41F6
@@ -136,6 +239,7 @@ modules:
           sceKernelGetCallbackCount: 0x0892D8DF
           sceKernelGetMutexInfo: 0x69B78A12
           sceKernelGetProcessId: 0x9DCB4B7A
+          sceKernelGetProcessIdFromTLS: 0xFA54D49A
           sceKernelGetSystemTimeLow: 0x47F6DE49
           sceKernelGetSystemTimeWide: 0xF4EE4FA9
           sceKernelGetThreadCpuAffinityMask: 0x83DC703D
@@ -143,6 +247,7 @@ modules:
           sceKernelGetThreadCurrentPriority: 0x01414F0B
           sceKernelGetThreadId: 0x59D06540
           sceKernelGetThreadIdList: 0xEA7B8AEF
+          sceKernelGetThreadInfo: 0x283807E2
           sceKernelGetThreadStackFreeSize: 0x7B278A0B
           sceKernelGetThreadTLSAddr: 0x66EEA46A
           sceKernelGetThreadmgrUIDClass: 0x0A20775A
@@ -151,12 +256,16 @@ modules:
           sceKernelInitializeFastMutex: 0xAF8E1266
           sceKernelLockFastMutex: 0x70627F3A
           sceKernelLockMutex: 0x16AC80C5
+          sceKernelLockMutexCB_089: 0xD06F2886
           sceKernelNotifyCallback: 0xC3E00919
           sceKernelPollEventFlag: 0x76C6555B
           sceKernelPollSema: 0x4FDDFE24
           sceKernelPulseEvent: 0x2427C81B
           sceKernelPulseEventWithNotifyCallback: 0x714A107A
+          sceKernelReceiveMsgPipeVector: 0xDA1F256B
+          sceKernelReceiveMsgPipeVectorCB: 0xDA5C9AC6
           sceKernelRegisterCallbackToEvent: 0x832A7E0C
+          sceKernelRegisterTimer: 0xC58DF384
           sceKernelRunWithStack: 0xE54FD746
           sceKernelSetEvent: 0x9EA3A45C
           sceKernelSetEventFlag: 0xD4780C3E

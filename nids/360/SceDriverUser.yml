@@ -1,0 +1,20 @@
+modules:
+  SceDriverUser:
+    nid: 0xAD0AEA9A
+    libraries:
+      SceDrmBridgeUser:
+        nid: 0x91AFEB43
+        functions:
+          sceDrmBridgeGetCurrentSecureTick: 0x7C994327
+          sceDrmBridgeIsAllowRemotePlayDebug: 0x1F82FF68
+          sceDrmBridgeMlnpsnlAuth1: 0x7D0DB83F
+          sceDrmBridgeMlnpsnlAuth2: 0x6471937D
+      SceErrorUser:
+        nid: 0xD401318D
+        functions:
+          sceErrorGetExternalString: 0xA4DE5B69
+          sceErrorHistoryClearError: 0x7DF547D1
+          sceErrorHistoryGetError: 0xB908B17F
+          sceErrorHistoryPostError: 0xBC416CFA
+          sceErrorHistorySetDefaultFormat: 0x395240A1
+          sceErrorHistoryUpdateSequenceInfo: 0x1AA2E39E

@@ -86,6 +86,7 @@ modules:
           scePowerGetIdleTimer: 0xEDC13FE5
           scePowerGetPowerSwMode: 0x165CE085
           scePowerGetResumeCount: 0x0074EF9B
+          scePowerGetVenezia: 0x0E58FCDF
           scePowerGetWakeupFactor: 0x9F26222A
           scePowerIsBatteryCharging: 0x1E490401
           scePowerIsBatteryExist: 0x0AFD0D8B
@@ -108,14 +109,17 @@ modules:
           scePowerSetCompatClockFrequency: 0xFFC84E69
           scePowerSetDisplayBrightness: 0x43D5CE1D
           scePowerSetDisplayMaxBrightness: 0x77027B6B
-          scePowerSetGpuClockFrequency: 0x264C24FC
+          scePowerSetGpuClockFrequency: 0x621BD8FD
+          scePowerSetGpuEs4ClockFrequency: 0x264C24FC
           scePowerSetGpuXbarClockFrequency: 0xA7739DBE
           scePowerSetIdleCallback: 0x1BA2FCAE
           scePowerSetIdleTimer: 0x6BC26FC7
           scePowerSetPowerSwMode: 0xC1853BA7
+          scePowerSetPowerSwMode2: 0x0CD21B1F
           scePowerSetProcessIdleCallback: 0x0856FD0A
           scePowerSetPsButtonPushTime: 0xCF8F0529
           scePowerSetStandbyButtonPushTime: 0x675A84ED
+          scePowerSetVenezia: 0xE5573571
           scePowerTick: 0xEFD3C963
           scePowerUnregisterCallback: 0xDFA8BAF8
           scePowerWlanActivate: 0x6D2CA84B

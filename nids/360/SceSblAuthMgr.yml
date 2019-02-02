@@ -4,8 +4,18 @@ modules:
     libraries:
       SceSblAuthMgrForDriver:
         nid: 0x4EB2B1BB
+        functions:
+          sceSblAuthMgrDecBindData: 0x41DAEA12
+          sceSblAuthMgrGetEKc: 0x868B9E9A
+          sceSblAuthMgrVerifySpfsoCtx: 0x24C4CE64
       SceSblAuthMgrForKernel:
         nid: 0x7ABF5135
         functions:
+          sceSblAuthMgrAuthHeader: 0xF3411881
           sceSblAuthMgrClearDmac5Key: 0xF2BB723E
+          sceSblAuthMgrClose: 0x026ACBAD
+          sceSblAuthMgrCompareSwVersion: 0xABAB8466
+          sceSblAuthMgrLoadBlock: 0xBC422443
+          sceSblAuthMgrOpen: 0xA9CD2A09
           sceSblAuthMgrSetDmac5Key: 0x122ACDEA
+          sceSblAuthMgrSetupAuthSegment: 0x89CCDA2C

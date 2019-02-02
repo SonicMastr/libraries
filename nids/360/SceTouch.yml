@@ -15,6 +15,7 @@ modules:
           sceTouchGetDeviceInfo: 0xD7889B91
           sceTouchGetPanelInfo: 0x10A2CA25
           sceTouchGetPixelDensity: 0xF0704CF3
+          sceTouchGetPixelDensity2: 0xE0C1DB92
           sceTouchGetProcessInfo: 0xAB364C23
           sceTouchGetSamplingState: 0x26531526
           sceTouchGetSamplingStateExt: 0xDC8671EA

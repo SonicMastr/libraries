@@ -2,9 +2,25 @@ modules:
   SceKernelModulemgr:
     nid: 0x726C6635
     libraries:
+      SceBacktrace:
+        nid: 0xB07B6A3F
+        functions:
+          _sceKernelBacktrace: 0xBF371A98
+      SceBacktraceForDriver:
+        nid: 0x77CB3DD6
+        functions:
+          sceKernelBacktrace: 0x166B9C8C
       SceModulemgr:
         nid: 0xEAED1616
         functions:
+          _sceKernelCloseModule: 0x849E78BE
+          _sceKernelLoadModule: 0xB4C5EF9E
+          _sceKernelLoadStartModule: 0x60647592
+          _sceKernelOpenModule: 0x9D674F45
+          _sceKernelStartModule: 0x72CD301F
+          _sceKernelStopModule: 0x086867A8
+          _sceKernelStopUnloadModule: 0x86EAEA0A
+          _sceKernelUnloadModule: 0x8E4A7716
           sceKernelGetAllowedSdkVersionOnSystem: 0x4397FC4E
           sceKernelGetLibraryInfoByNID: 0xEAEB1312
           sceKernelGetModuleIdByAddr: 0xF5798C7C
@@ -21,15 +37,19 @@ modules:
           sceKernelLoadStartModule: 0x189BFBBB
           sceKernelLoadStartModuleForPid: 0x9D953C22
           sceKernelLoadStartSharedModuleForPid: 0xE2ADEF8D
+          sceKernelRegisterLibary: 0x861638AD
+          sceKernelReleaseLibary: 0x0975B104
           sceKernelSearchModuleByName: 0xBBE1771C
           sceKernelStartModule: 0x0675B682
           sceKernelStopModule: 0x100DAEB9
           sceKernelStopUnloadModule: 0x03B30B7E
           sceKernelStopUnloadModuleForPid: 0x49A3EDC7
+          sceKernelStopUnloadSharedModuleForPid: 0x02D3D0C1
           sceKernelUnloadModule: 0x728E72A6
       SceModulemgrForKernel:
         nid: 0xC445FA63
         functions:
+          sceKernelFinalizeKbl: 0xFDD7F646
           sceKernelGetModuleInfo: 0xD269F915
           sceKernelGetModuleInfo2: 0x6A655255
           sceKernelGetModuleInternal: 0xFE303863
@@ -43,8 +63,11 @@ modules:
           sceKernelLoadModuleForPid: 0xFA21D8CB
           sceKernelLoadPreloadingModules: 0x3AD26B43
           sceKernelLoadProcessImage: 0xAC4EABDB
+          sceKernelLoadPtLoadSegForFwloader: 0x448810D5
           sceKernelMountBootfs: 0x01360661
+          sceKernelRegisterSyscall: 0xB427025E
           sceKernelStartModuleForPid: 0x6DF745D5
           sceKernelStopModuleForPid: 0x7BB4CE54
           sceKernelUmountBootfs: 0x9C838A6B
           sceKernelUnloadModuleForPid: 0x5972E2CC
+          sceKernelUnloadProcessModules: 0x0E33258E

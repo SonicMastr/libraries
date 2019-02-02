@@ -7,6 +7,22 @@ modules:
         functions:
           sceCoredumpRegisterCoredumpHandler: 0x031DC61E
           sceCoredumpUnregisterCoredumpHandler: 0x6037A2C3
+      SceCoredumpForDriver:
+        nid: 0xA351714A
+        functions:
+          sceCoredumpCafContextCreate: 0x2964AD0A
+          sceCoredumpCafContextDestroy: 0x95402BF3
+          sceCoredumpCafCreateIv: 0xE1BCBE8F
+          sceCoredumpCafFinal: 0xC90F61AF
+          sceCoredumpCafHeaderFinal: 0x65AA4991
+          sceCoredumpCafHeaderInit: 0x7C8120C5
+          sceCoredumpCafHeaderTransform: 0xAE2C2793
+          sceCoredumpCafInit: 0x9336009B
+          sceCoredumpCafSegmentFinal: 0xDF17420A
+          sceCoredumpCafSegmentInit: 0x07185515
+          sceCoredumpCafSegmentTransform: 0xFB7AEBFE
+          sceCoredumpCreateDump: 0x0C10313F
+          sceCoredumpDeleteCrashReportCaf: 0xAD070837
       SceCoredumpNounlink:
         nid: 0x2646E9D8
         functions:
