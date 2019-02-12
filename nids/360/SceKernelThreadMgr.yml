@@ -208,6 +208,7 @@ modules:
         nid: 0xE2C40624
         functions:
           sceKernelCancelCallback: 0xC040EC1C
+          sceKernelCancelMsgPipe: 0x9D6A2311
           sceKernelCancelMutex: 0x7204B846
           sceKernelChangeCurrentThreadAttr: 0x751C9B7A
           sceKernelChangeThreadCpuAffinityMask: 0x6D0733A8
@@ -220,6 +221,7 @@ modules:
           sceKernelCreateCallback: 0x1C41614C
           sceKernelCreateCond: 0xDB6CD34A
           sceKernelCreateEventFlag: 0x4336BAA4
+          sceKernelCreateMsgPipe: 0xBF631145
           sceKernelCreateMutex: 0xFBAA026E
           sceKernelCreateSema: 0x30E93C31
           sceKernelCreateSimpleEvent: 0x357A8177
@@ -230,6 +232,7 @@ modules:
           sceKernelDeleteCond: 0xAEE0D27C
           sceKernelDeleteEventFlag: 0x71ECB352
           sceKernelDeleteFastMutex: 0x11FE84A1
+          sceKernelDeleteMsgPipe: 0xB3453F88
           sceKernelDeleteMutex: 0x0A912340
           sceKernelDeleteSema: 0x16A35E58
           sceKernelDeleteThread: 0xAC834F3F
@@ -267,6 +270,7 @@ modules:
           sceKernelRegisterCallbackToEvent: 0x832A7E0C
           sceKernelRegisterTimer: 0xC58DF384
           sceKernelRunWithStack: 0xE54FD746
+          sceKernelSendMsgPipeVector: 0x67DD3BAD
           sceKernelSetEvent: 0x9EA3A45C
           sceKernelSetEventFlag: 0xD4780C3E
           sceKernelSetPermission: 0x02EEDF17
@@ -282,6 +286,8 @@ modules:
           sceKernelTryLockMutex: 0x270993A6
           sceKernelTryLockReadRWLock: 0xFC2B5A50
           sceKernelTryLockWriteRWLock: 0xA96F2E5A
+          sceKernelTryReceiveMsgPipeVector: 0xCE09221A
+          sceKernelTrySendMsgPipeVector: 0x4CF1BE58
           sceKernelUnlockFastMutex: 0xDB395782
           sceKernelUnlockMutex: 0x1E82E5D0
           sceKernelUnlockReadRWLock: 0xDE1B9EEE
