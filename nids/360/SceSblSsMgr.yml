@@ -62,7 +62,7 @@ modules:
           sceSblSsEncryptWithPortability: 0x21EC51F6
           sceSblSsGetNvsData: 0xFDD6D5DE
           sceSblSsMgrAesCmac: 0xEA6ACB6D
-          sceSblSsMgrAesCmacWithKeygen: 0x83B058F5
+          sceSblSsMgrAesCmacNP: 0x83B058F5
           sceSblSsMgrAesCtrDecrypt: 0x7D46768C
           sceSblSsMgrAesCtrEncrypt: 0x82B5DCEF
           sceSblSsMgrAesEcbDecrypt: 0x8B4700CB
@@ -73,7 +73,7 @@ modules:
           sceSblSsMgrDes64EcbEncrypt: 0x37DD5CBF
           sceSblSsMgrExecuteDmac5HashCommand: 0x9641374E
           sceSblSsMgrGetRandomData: 0xAC57F4F0
-          sceSblSsMgrHmacSha1WithKeygen: 0x92E37656
+          sceSblSsMgrHmacSha1NP: 0x92E37656
           sceSblSsMgrHmacSha256: 0x79F38554
           sceSblSsMgrMemset: 0xCD98CC92
           sceSblSsMgrSha1: 0xEB3AF9B5
