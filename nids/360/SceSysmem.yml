@@ -450,6 +450,7 @@ modules:
           sceKernelSysrootCoredumpTrigger: 0xCD8CD242
           sceKernelSysrootGetShellPid: 0x05093E7B
           sceKernelSysrootGetSystemSwVersion: 0x67AAB627
+          sceKernelSysrootSetProcessHandler: 0x0F07C3FC
           sceKernelSysrootSetSystemSwVersion: 0x3276086B
           sceSysrootGetHardwareInfo: 0x930B1342
           sceSysrootUtMgrHasNpTestFlag: 0xA43599E9
@@ -476,7 +477,6 @@ modules:
           sceKernelSysrootIofilemgrStart: 0xF6A6D205
           sceKernelSysrootIsUserModeThread: 0x7FC7A163
           sceKernelSysrootProcessmgrStart2: 0x62E8F511
-          sceKernelSysrootSetProcessHandler: 0x0F07C3FC
           sceKernelSysrootSetSysroot: 0x36916C30
           sceSysrootGetFactorySystemSwVersion: 0xD3872270
           sceSysrootGetModuleInfoForPid: 0xFF9F80FF
