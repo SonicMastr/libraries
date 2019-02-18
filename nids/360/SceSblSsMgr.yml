@@ -47,7 +47,7 @@ modules:
           sceSblAimgrGetPscode: 0xE0DC2587
           sceSblAimgrGetPscode2: 0x9A9676D0
           sceSblAimgrGetVisibleId: 0x04843835
-          sceSblDmac5AEsCbcDec: 0x121FA69F
+          sceSblDmac5AesCbcDec: 0x121FA69F
           sceSblDmac5AesCbcDecNP: 0x1901CB5E
           sceSblDmac5AesCbcEnc: 0xE6E1AD15
           sceSblDmac5AesCbcEncNP: 0x711C057A
@@ -61,22 +61,22 @@ modules:
           sceSblSsDecryptWithPortability: 0x934DB6B5
           sceSblSsEncryptWithPortability: 0x21EC51F6
           sceSblSsGetNvsData: 0xFDD6D5DE
-          sceSblSsMgrAESCMAC: 0xEA6ACB6D
-          sceSblSsMgrAESCMACWithKeygen: 0x83B058F5
-          sceSblSsMgrAESCTRDecrypt: 0x7D46768C
-          sceSblSsMgrAESCTREncrypt: 0x82B5DCEF
-          sceSblSsMgrAESECBDecrypt: 0x8B4700CB
-          sceSblSsMgrAESECBEncrypt: 0x01BE0374
-          sceSblSsMgrDES64CBCDecrypt: 0x926BCCF0
-          sceSblSsMgrDES64CBCEncrypt: 0x05B38698
-          sceSblSsMgrDES64ECBDecrypt: 0x8EAFB18A
-          sceSblSsMgrDES64ECBEncrypt: 0x37DD5CBF
+          sceSblSsMgrAesCmac: 0xEA6ACB6D
+          sceSblSsMgrAesCmacNP: 0x83B058F5
+          sceSblSsMgrAesCtrDecrypt: 0x7D46768C
+          sceSblSsMgrAesCtrEncrypt: 0x82B5DCEF
+          sceSblSsMgrAesEcbDecrypt: 0x8B4700CB
+          sceSblSsMgrAesEcbEncrypt: 0x01BE0374
+          sceSblSsMgrDes64CbcDecrypt: 0x926BCCF0
+          sceSblSsMgrDes64CbcEncrypt: 0x05B38698
+          sceSblSsMgrDes64EcbDecrypt: 0x8EAFB18A
+          sceSblSsMgrDes64EcbEncrypt: 0x37DD5CBF
           sceSblSsMgrExecuteDmac5HashCommand: 0x9641374E
           sceSblSsMgrGetRandomData: 0xAC57F4F0
-          sceSblSsMgrHMACSHA1WithKeygen: 0x92E37656
-          sceSblSsMgrHMACSHA256: 0x79F38554
+          sceSblSsMgrHmacSha1NP: 0x92E37656
+          sceSblSsMgrHmacSha256: 0x79F38554
           sceSblSsMgrMemset: 0xCD98CC92
-          sceSblSsMgrSHA1: 0xEB3AF9B5
+          sceSblSsMgrSha1: 0xEB3AF9B5
           sceSblSsSetNvsData: 0x249ADB07
       SceSblSsMgrForKernel:
         nid: 0x74580D9F
