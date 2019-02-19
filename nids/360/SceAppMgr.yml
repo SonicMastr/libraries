@@ -217,6 +217,7 @@ modules:
           sceAppMgrCloudDataSrcMount: 0x6D4D6FFE
           sceAppMgrCloudDataVerifyHeader: 0x55D48190
           sceAppMgrDebugSettingNotifyUpdate: 0x7554330F
+          sceAppMgrDestroyOtherAppByPid: 0xFC89D33D
           sceAppMgrDrmClose: 0x088670A6
           sceAppMgrDrmOpen: 0xEA75D157
           sceAppMgrFakeSaveDataCreateMount: 0x12FC3FA8
