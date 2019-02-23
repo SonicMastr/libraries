@@ -447,6 +447,7 @@ modules:
         nid: 0x2ED7F97A
         functions:
           sceKernelInvokeInitCallback: 0x93CD44CD
+          sceKernelSysrootCheckModelCapability: 0x8AA268D6
           sceKernelSysrootCoredumpTrigger: 0xCD8CD242
           sceKernelSysrootGetShellPid: 0x05093E7B
           sceKernelSysrootGetSystemSwVersion: 0x67AAB627
