@@ -109,7 +109,7 @@ int sceDisplayGetFrameBuf(SceDisplayFrameBuf *pParam, int sync);
  *
  * @return 0 on success, < 0 on error.
 */
-int sceDisplayGetFrameBufInfoForPid(SceUID pid, int head, int index, SceDisplayFrameBufInfo *info);
+int sceDisplayGetProcFrameBufInternal(SceUID pid, int head, int index, SceDisplayFrameBufInfo *info);
 
 /**
  * Get maximum framebuffer resolution
