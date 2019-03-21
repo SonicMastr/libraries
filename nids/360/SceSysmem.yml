@@ -324,7 +324,7 @@ modules:
           sceKernelAllocMemBlockWithInfo: 0xD44F464D
           sceKernelCreateClass: 0x61317102
           sceKernelCreateHeap: 0x9328E0E8
-          sceKernelCreateUidObj: 0x56A13E90
+          sceKernelCreateUidObj2: 0x56A13E90
           sceKernelCreateUidObjForUid: 0x89A44858
           sceKernelCreateUserUid: 0xBF209859
           sceKernelCreateUserUidForClass: 0xCED1547B
