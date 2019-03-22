@@ -458,7 +458,7 @@ modules:
       SceSysrootForKernel:
         nid: 0x3691DA45
         functions:
-          sceKernelAllocHeapMemory: 0xD351EBC8
+          sceKernelAllocHeapMemory2: 0xD351EBC8
           sceKernelGetProcessTitleId: 0xEC3124A3
           sceKernelGetSysbase: 0x3E455842
           sceKernelGetSysrootBuffer: 0x9DB56D1F

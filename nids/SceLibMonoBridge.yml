@@ -13,8 +13,8 @@ modules:
           __lshrdi3: 0x69B23762
           __moddi3: 0x9A2906FE
           __modsi3: 0x3F8F26A3
-          __sce_aeabi_idiv0: 0x1EBF97CC
-          __sce_aeabi_ldiv0: 0x2AB3B87C
+          __sce_aeabi_idiv1: 0x1EBF97CC
+          __sce_aeabi_ldiv1: 0x2AB3B87C
           __udivdi3: 0xD7F019CF
           __udivsi3: 0xFF10AAE9
           __umoddi3: 0x66FCF225

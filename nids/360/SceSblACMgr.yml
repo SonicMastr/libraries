@@ -37,22 +37,22 @@ modules:
           scePfsACSetFSAttrByMode: 0x2AE6CF27
           sceSblACIsSystemProgram: 0x930CD037
           sceSblACMgrGetMediaType: 0xD442962E
-          sceSblACMgrGetSelfAuthInfo: 0x7C2AF978
-          sceSblACMgrHasCapability: 0x9EDAF856
-          sceSblACMgrIsAllowedExtendedMemory: 0x384D20FD
-          sceSblACMgrIsAllowedVirtualMachine: 0x96403142
-          sceSblACMgrIsDevelopmentMode: 0xBBA13D9C
-          sceSblACMgrIsFself: 0x5AC59172
-          sceSblACMgrIsGameProgram: 0x05FDC646
-          sceSblACMgrIsMiniSettingsForQA: 0xAF6F208E
-          sceSblACMgrIsNonGameOrGameProgram: 0x570D6AD3
-          sceSblACMgrIsNonGameProgram: 0x3F99279F
-          sceSblACMgrIsNotSandboxed: 0xF5AD56E4
-          sceSblACMgrIsPSMDevAssistant: 0xC90A9216
-          sceSblACMgrIsPSMRuntime: 0x966B3738
-          sceSblACMgrIsPspEmu: 0x47B67F72
-          sceSblACMgrIsSIEApp: 0x3388F595
-          sceSblACMgrIsSceShell: 0xF9FEF5F0
-          sceSblACMgrIsSystem: 0x31C23B66
-          sceSblACMgrIsUpdaterUISetupperOrPkgInstallerSpawn: 0x98B28671
-          sceSblACMgrIsWebCoreOrWebKitProcess: 0xA7C3001D
+          sceSblACMgrGetSelfAuthInfo2: 0x7C2AF978
+          sceSblACMgrHasCapability2: 0x9EDAF856
+          sceSblACMgrIsAllowedExtendedMemory2: 0x384D20FD
+          sceSblACMgrIsAllowedVirtualMachine2: 0x96403142
+          sceSblACMgrIsDevelopmentMode2: 0xBBA13D9C
+          sceSblACMgrIsFself2: 0x5AC59172
+          sceSblACMgrIsGameProgram2: 0x05FDC646
+          sceSblACMgrIsMiniSettingsForQA2: 0xAF6F208E
+          sceSblACMgrIsNonGameOrGameProgram2: 0x570D6AD3
+          sceSblACMgrIsNonGameProgram2: 0x3F99279F
+          sceSblACMgrIsNotSandboxed2: 0xF5AD56E4
+          sceSblACMgrIsPSMDevAssistant2: 0xC90A9216
+          sceSblACMgrIsPSMRuntime2: 0x966B3738
+          sceSblACMgrIsPspEmu2: 0x47B67F72
+          sceSblACMgrIsSIEApp2: 0x3388F595
+          sceSblACMgrIsSceShell2: 0xF9FEF5F0
+          sceSblACMgrIsSystem2: 0x31C23B66
+          sceSblACMgrIsUpdaterUISetupperOrPkgInstallerSpawn2: 0x98B28671
+          sceSblACMgrIsWebCoreOrWebKitProcess2: 0xA7C3001D
