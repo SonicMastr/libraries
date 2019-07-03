@@ -2,28 +2,6 @@ modules:
   SceKernelThreadMgr:
     nid: 0xF46ED7B2
     libraries:
-      SceCpu:
-        nid: 0x45265161
-        functions:
-          sceKernelCpuGetCpuId: 0x2704CFEE
-      SceDebugLed:
-        nid: 0xAE004C0A
-        functions:
-          sceKernelGetGPI: 0x14F582CF
-          sceKernelSetGPO: 0x78E702D3
-      SceDipsw:
-        nid: 0xB36D5922
-        functions:
-          sceKernelCheckDipsw: 0x1C783FB2
-          sceKernelClearDipsw: 0x800EDCC1
-          sceKernelSetDipsw: 0x817053D4
-      SceDipswForDriver:
-        nid: 0xC9E26388
-        functions:
-          sceKernelCheckDipsw: 0xA98FC2FD
-          sceKernelClearDipsw: 0xF1F3E9FE
-          sceKernelGetDipswInfo: 0xB2AD48BE
-          sceKernelSetDipsw: 0x82E45FBF
       SceThreadmgr:
         nid: 0x859A24B1
         functions:

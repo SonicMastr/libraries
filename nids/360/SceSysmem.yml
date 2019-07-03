@@ -2,6 +2,10 @@ modules:
   SceSysmem:
     nid: 0x3380B323
     libraries:
+      SceCpu:
+        nid: 0x45265161
+        functions:
+          sceKernelCpuGetCpuId: 0x2704CFEE
       SceCpuForDriver:
         nid: 0x40ECDB0E
         functions:
@@ -151,12 +155,30 @@ modules:
           sceDebugPutchar: 0x82D2EDCE
           sceDebugRegisterPutcharHandler: 0xE6115A72
           sceDebugSetHandlers: 0x10067B7B
+      SceDebugLed:
+        nid: 0xAE004C0A
+        functions:
+          sceKernelGetGPI: 0x14F582CF
+          sceKernelSetGPO: 0x78E702D3
       SceDebugLedForDriver:
         nid: 0x7BC05EAD
         functions:
           sceKernelGetGPO: 0x3BB289F7
           sceKernelSetGPI: 0x51C5325A
           sceKernelSetGPOMask: 0x098473B0
+      SceDipsw:
+        nid: 0xB36D5922
+        functions:
+          sceKernelCheckDipsw: 0x1C783FB2
+          sceKernelClearDipsw: 0x800EDCC1
+          sceKernelSetDipsw: 0x817053D4
+      SceDipswForDriver:
+        nid: 0xC9E26388
+        functions:
+          sceKernelCheckDipsw: 0xA98FC2FD
+          sceKernelClearDipsw: 0xF1F3E9FE
+          sceKernelGetDipswInfo: 0xB2AD48BE
+          sceKernelSetDipsw: 0x82E45FBF
       SceKernelSuspendForDriver:
         nid: 0x7290B21C
         functions:
@@ -225,7 +247,9 @@ modules:
         nid: 0x4E29D3B6
         functions:
           sceSblQafMgrIsAllowControlIduAutoUpdate: 0xF8BFEE48
+          sceSblQafMgrIsAllowDecryptedBootConfigLoad: 0x883E9465
           sceSblQafMgrIsAllowDtcpIpReset: 0xE8B8F31F
+          sceSblQafMgrIsAllowHost0Access: 0x082A4FC2
           sceSblQafMgrIsAllowKeepCoreFile: 0xC1EA75C8
           sceSblQafMgrIsAllowLoadMagicGate: 0x36E5312E
           sceSblQafMgrIsAllowMarlinTest: 0x10283EB8
@@ -236,13 +260,7 @@ modules:
       SceSblAIMgrForDriver:
         nid: 0xFD00C69A
         functions:
-          sceSblAIMgrGetProductSubCode: 0xB33CEC8F
-          sceSblAIMgrIsJapaneseFat: 0x6D5A3FC9
-          sceSblAIMgrIsPrototypeRev2: 0xFF5784B9
-          sceSblAIMgrIsPrototypeRev7: 0x05F79D4A
-          sceSblAIMgrIsToolRev3: 0xBB9D146B
-          sceSblAIMgrIsToolRev4: 0x37A79140
-          sceSblAIMgrIsToolRev5: 0xE5E47FF7
+          sceSblAimgrGetProductSubCode: 0xB33CEC8F
           sceSblAimgrGetSMI: 0x47D9CF13
           sceSblAimgrGetTargetId: 0x14345161
           sceSblAimgrIsCEX: 0xD78B04A2
@@ -250,8 +268,14 @@ modules:
           sceSblAimgrIsDolce: 0x71608CA3
           sceSblAimgrIsGenuineDolce: 0xC6E83F34
           sceSblAimgrIsGenuineVITA: 0x963CA644
+          sceSblAimgrIsJapaneseFat: 0x6D5A3FC9
+          sceSblAimgrIsPrototypeRev2: 0xFF5784B9
+          sceSblAimgrIsPrototypeRev7: 0x05F79D4A
           sceSblAimgrIsTest: 0x3B638885
           sceSblAimgrIsTool: 0x274663A0
+          sceSblAimgrIsToolRev3: 0xBB9D146B
+          sceSblAimgrIsToolRev4: 0x37A79140
+          sceSblAimgrIsToolRev5: 0xE5E47FF7
           sceSblAimgrIsVITA: 0x4273B97B
       SceSysclibForDriver:
         nid: 0x7EE45391
@@ -455,6 +479,7 @@ modules:
           sceKernelSysrootSetSystemSwVersion: 0x3276086B
           sceSysrootGetHardwareInfo: 0x930B1342
           sceSysrootUtMgrHasNpTestFlag: 0xA43599E9
+          sceSysrootUtMgrSetNpTestFlag: 0xEE5D6CE9
       SceSysrootForKernel:
         nid: 0x3691DA45
         functions:
