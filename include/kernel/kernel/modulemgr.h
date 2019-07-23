@@ -152,7 +152,7 @@ int sceKernelStopUnloadModuleForPid(SceUID pid, SceUID modid, SceSize args, void
 int sceKernelMountBootfs(const char *bootImagePath);
 int sceKernelUmountBootfs(void);
 
-int sceKernelSearchModuleByName(const char *module_name, const char *path, int pid);
+int sceKernelSearchModuleByName(const char *module_name);
 
 /**
  * @brief Get the main module for a given process.
