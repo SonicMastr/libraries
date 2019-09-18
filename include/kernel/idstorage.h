@@ -8,14 +8,20 @@ extern "C" {
 #endif
 
 /**
- * @param[in] leafnum - 0x0 ~ 0x80 / leafnum > 0x80 = error
- * @param[out] buf - Leaf data
- * @param[in] buf_size - set 0x200 / buf_size != 0x200 = 0x800F090D
+ * @param[in]  leafnum - 0x0 ~ 0x80 / leafnum > 0x80 = error
+ * @param[out] buf     - Leaf data, size is 512 byte
  *
  * @return 0 on success, < 0 on error.
  */
-int sceIdStorageReadLeaf(int leafnum, void *buf, int buf_size);
-int sceIdStorageWriteLeaf(int leafnum, const void *buf, int buf_size);
+int sceIdStorageReadLeaf(int leafnum, void *buf);
+  
+/**
+ * @param[in] leafnum - 0x0 ~ 0x80 / leafnum > 0x80 = error
+ * @param[in] buf     - Leaf data, size is 512 byte
+ *
+ * @return 0 on success, < 0 on error.
+ */
+int sceIdStorageWriteLeaf(int leafnum, const void *buf);
 
 #ifdef __cplusplus
 }
