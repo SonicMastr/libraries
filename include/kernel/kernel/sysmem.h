@@ -277,7 +277,7 @@ SceClass *sceKernelGetUidMemBlockClass(void);
 int sceKernelCreateClass(SceClass *cls, const char *name, void *uidclass, size_t itemsize, SceClassCallback create, SceClassCallback destroy);
 int sceKernelDeleteUserUid(SceUID pid, SceUID user_uid);
 int sceKernelDeleteUid(SceUID uid);
-int sceKernelFindClassByName(const char name, SceClass **cls);
+int sceKernelFindClassByName(const char *name, SceClass **cls);
 
 int sceKernelSwitchVmaForPid(SceUID pid);
 
