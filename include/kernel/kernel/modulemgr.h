@@ -112,16 +112,18 @@ typedef struct {
   };
 } SceKernelModuleListInfo;
 
-typedef struct
-{
-  SceSize size; //!< sizeof(SceKernelModuleInfo2)
+typedef struct {
+  SceSize size; //!< sizeof(SceKernelModuleInfo2) : 0x120
   SceUID modid1;
-  uint32_t unk1;
-  uint32_t unk2;
-  uint32_t unk3;
-  uint32_t unk4;
-  char module_name[256];
-  uint32_t unk5;
+  uint32_t unk_0x08;
+  uint16_t unk_0x0C;
+  uint16_t unk_0x0E;
+  uint16_t unk_0x10;
+  uint16_t unk_0x12;
+  uint16_t unk_0x14;
+  uint16_t unk_0x16;
+  char module_name[0x100]; // offset : 0x18
+  uint32_t unk_0x118;
   SceUID modid2;
 } SceKernelModuleInfo2;
 
@@ -193,15 +195,13 @@ SceUID sceKernelGetProcessMainModule(SceUID pid);
 int sceKernelGetModuleList2(SceUID pid, SceKernelModuleListInfo *infolists, size_t *num);
 
 /**
- * @param[in] pid - target pid
- * @param[in] modid - target modid
- * @param[out] info - info output
- * @param[in] unk1 - set 0x120
- * @param[in] unk2 - set 0x120
+ * @param[in]  pid   - target pid
+ * @param[in]  modid - target modid
+ * @param[out] info  - info output
  *
  * @return 0 on success, < 0 on error.
  */
-int sceKernelGetModuleInfo2(SceUID pid, SceUID modid, SceKernelModuleInfo2 *info, int unk1, int unk2);
+int sceKernelGetModuleInfo2(SceUID pid, SceUID modid, SceKernelModuleInfo2 *info);
 
 int sceKernelGetModuleLibraryInfo(SceUID pid, SceUID modid, void *unk1, const void *unk2, int unk3);
 int sceKernelGetModuleUid(SceUID pid, SceUID modid, SceUID *modid_out, const void *unk1, int unk2);
