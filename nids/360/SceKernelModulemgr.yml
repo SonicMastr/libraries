@@ -32,6 +32,7 @@ modules:
       SceModulemgrForDriver:
         nid: 0xD4A60A52
         functions:
+          sceKernelGetModuleInfoByAddr: 0x1D9E0F7E
           sceKernelGetSystemSwVersion: 0x5182E212
           sceKernelLoadModule: 0x86D8D634
           sceKernelLoadStartModule: 0x189BFBBB
@@ -50,8 +51,10 @@ modules:
         nid: 0xC445FA63
         functions:
           sceKernelFinalizeKbl: 0xFDD7F646
+          sceKernelGetModuleIdByAddr: 0x0053BA4A
           sceKernelGetModuleInfo: 0xD269F915
           sceKernelGetModuleInfo2: 0x6A655255
+          sceKernelGetModuleInfoMinByAddr: 0x8309E043
           sceKernelGetModuleInternal: 0xFE303863
           sceKernelGetModuleLibraryInfo: 0xD4BF409C
           sceKernelGetModuleList: 0x97CF7B4E
@@ -64,9 +67,12 @@ modules:
           sceKernelLoadPreloadingModules: 0x3AD26B43
           sceKernelLoadProcessImage: 0xAC4EABDB
           sceKernelLoadPtLoadSegForFwloader: 0x448810D5
+          sceKernelModuleUnloadMySelf: 0x2A69385E
           sceKernelMountBootfs: 0x01360661
           sceKernelRegisterSyscall: 0xB427025E
+          sceKernelSetupForModulemgr: 0x3382952B
           sceKernelStartModuleForPid: 0x6DF745D5
+          sceKernelStartPreloadingModules: 0x432DCC7A
           sceKernelStopModuleForPid: 0x7BB4CE54
           sceKernelUmountBootfs: 0x9C838A6B
           sceKernelUnloadModuleForPid: 0x5972E2CC
