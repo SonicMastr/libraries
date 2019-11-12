@@ -100,6 +100,7 @@ modules:
           scePowerRequestDisplayOn: 0x3EA75C88
           scePowerRequestHibernate: 0x08951418
           scePowerRequestResume: 0x02DB1035
+          scePowerRequestShutdown: 0x8921A7A0
           scePowerRequestSoftReset: 0x2875994B
           scePowerRequestStandby: 0x2B7C7CF4
           scePowerRequestSuspend: 0xAC32C9CC
