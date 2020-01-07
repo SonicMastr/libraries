@@ -59,6 +59,7 @@ modules:
       ScePsmDrm:
         nid: 0x3F2B0888
         functions:
+          scePsmDrmGetRifInfo: 0xE31A6220
           scePsmDrmGetRifKey: 0x207A2C53
       ScePsmDrmForDriver:
         nid: 0x9F4924F2
