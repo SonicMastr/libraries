@@ -166,6 +166,13 @@ int scePowerGetGpuClockFrequency(void);
 int scePowerGetGpuXbarClockFrequency(void);
 
 /**
+ * Requests PS Vita to do a soft reset
+ *
+ * @return always 0
+ */
+int scePowerRequestSoftReset(void);
+
+/**
  * Requests PS Vita to do a cold reset
  *
  * @return always 0
