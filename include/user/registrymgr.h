@@ -59,11 +59,11 @@ int sceRegMgrSetKeyBin(const char *category, const char *name, void *buf, int si
  *
  * @param category - The path to the directory to be opened (e.g. /CONFIG/SYSTEM)
  * @param name - Name of the key
- * @param buf - Pointer to an int buffer to hold the value
+ * @param value - Value to set to
  *
  * @return 0 on success, < 0 on error
  */
-int sceRegMgrSetKeyInt(const char* category, const char* name, int buf);
+int sceRegMgrSetKeyInt(const char* category, const char* name, int value);
 
 /**
  * Set a key's information by category and name
