@@ -12,6 +12,9 @@ typedef SceUInt64 SceKernelSysClock;
 
 /* Threads. */
 
+/** UID of the current thread */
+#define SCE_KERNEL_THREAD_ID_SELF 0
+
 typedef int (*SceKernelThreadEntry)(SceSize args, void *argp);
 
 /** Additional options used when creating threads. */
