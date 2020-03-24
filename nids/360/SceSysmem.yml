@@ -147,6 +147,7 @@ modules:
           sceDebugPrintf2: 0x02B04343
           sceDebugPrintfKernelAssertion: 0x821A2D59
           sceDebugPrintfKernelPanic: 0x00CCE39C
+          sceDebugVprintf: 0x411C0733
       SceDebugForKernel:
         nid: 0x88C17370
         functions:
