@@ -21,6 +21,7 @@ int sceClibTolower(char ch);
 int sceClibToupper(char ch);
 
 int sceClibPrintf(const char *fmt, ...);
+int sceClibVprintf(const char *fmt, va_list args);
 int sceClibSnprintf(char *dst, SceSize dst_max_size, const char *fmt, ...);
 int sceClibVsnprintf(char *dst, SceSize dst_max_size, const char *fmt, va_list args);
 
