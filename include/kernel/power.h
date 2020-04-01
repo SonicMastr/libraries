@@ -256,6 +256,15 @@ int scePowerSetGpuXbarClockFrequency(int freq);
  */
 int scePowerSetIdleTimer(int callback_slot, SceUInt64 time);
 
+/**
+ * Sets the PS button hold time for showing the quick menu.
+ *
+ * @param time - Time in microseconds.
+ *
+ * @return 0 always
+ */
+int scePowerSetPsButtonPushTime(int time);
+
 #ifdef __cplusplus
 }
 #endif
