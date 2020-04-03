@@ -277,6 +277,18 @@ int sceDisplaySetInvertColors(int display, int enable);
 */
 int sceDisplaySetOwner(int head, int index, SceUID pid);
 
+/**
+ * Set display scaling configuration
+ *
+ * @param[in] scale - Scaling factor between 0.80000001 and 1.20000005
+ * @param[in] head - Use 0 for OLED/LCD and 1 for HDMI
+ * @param[in] index - Can be 0 or 1
+ * @param[in] flags - Returns error if ((flags & 1) && (flags & 0xC0))
+ *
+ * @return 0 on success, < 0 on error.
+*/
+int sceDisplaySetScaleConf(float scale, int head, int index, int flags);
+
 #ifdef __cplusplus
 }
 #endif
