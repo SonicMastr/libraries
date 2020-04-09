@@ -69,19 +69,19 @@ typedef struct SceIftuFrameBuf {
 
 typedef struct SceIftuPlaneState {
 	SceIftuFrameBuf fb;
-	unsigned int unk20;
-	unsigned int src_x;		/* In (0x10000 / 960) multiples */
-	unsigned int src_y;		/* in (0x10000 / 544) multiples */
-	unsigned int src_w;		/* in (0x10000 / 960) multiples */
-	unsigned int src_h;		/* in (0x10000 / 544) multiples */
-	unsigned int dst_x;
-	unsigned int dst_y;
-	unsigned int dst_w;
-	unsigned int dst_h;
-	unsigned int vtop_padding;
-	unsigned int vbot_padding;	/* h - aligned_h */
-	unsigned int hleft_padding;
-	unsigned int hright_padding;	/* w - aligned_w */
+	unsigned int unk20;             /* not observed to be non-zero */
+	unsigned int unk24;             /* not observed to be non-zero */
+	unsigned int unk28;             /* not observed to be non-zero */
+	unsigned int src_w;             /* inverse scaling factor in 16.16 fixed point, greater than or equal to 0.25 */
+	unsigned int src_h;             /* inverse scaling factor in 16.16 fixed point, greater than or equal to 0.25 */
+	unsigned int dst_x;             /* offset into the destination buffer */
+	unsigned int dst_y;             /* offset into the destination buffer */
+	unsigned int src_x;             /* offset into the source buffer in 8.8 fixed point, strictly less than 4.0 */
+	unsigned int src_y;             /* offset into the source buffer in 8.8 fixed point, strictly less than 4.0 */
+	unsigned int crop_top;
+	unsigned int crop_bot;
+	unsigned int crop_left;
+	unsigned int crop_right;
 } SceIftuPlaneState;
 
 int sceIftuCsc(SceIftuFrameBuf *dst, SceIftuPlaneState *src, SceIftuConvParams *params);
