@@ -133,6 +133,7 @@ modules:
           scePfsMgrVfsUmount: 0xD220539D
           sceVfsAddVfs: 0x673D2FCD
           sceVfsDeleteVfs: 0x9CBFA725
+          sceVfsFreeVnode: 0x21D57633
           sceVfsGetNewNode: 0xD60B5C63
           sceVfsMount: 0xB62DE9A6
           sceVfsNodeSetEventFlag: 0x6048F245
@@ -147,6 +148,7 @@ modules:
           sceVopDopen: 0x00C9C2DD
           sceVopDread: 0x77584C8F
           sceVopGetstat: 0x50A63ACF
+          sceVopInactive: 0x8FB94521
           sceVopIoctl: 0x333C904D
           sceVopLseek: 0xB2B13818
           sceVopMkdir: 0x2F3F8C70
@@ -158,3 +160,5 @@ modules:
           sceVopRmdir: 0x1D551105
           sceVopSync: 0x9CD96406
           sceVopWrite: 0x9A68378D
+          vfsLockMnt: 0x6B3CA9F7
+          vfsUnlockMnt: 0xDC2D8BCE
