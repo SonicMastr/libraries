@@ -46,6 +46,10 @@ int sceClibMemcmp(const void *s1, const void *s2, SceSize len);
 
 void *sceClibMemchr(const void *src, int ch, SceSize len);
 
+void *sceClibMspaceCreate(void *base, SceSize size);
+void *sceClibMspaceMalloc(void *space, SceSize size);
+void sceClibMspaceFree(void *space, void *ptr);
+
 #ifdef __cplusplus
 }
 #endif
