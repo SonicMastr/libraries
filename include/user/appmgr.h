@@ -96,6 +96,34 @@ typedef struct sceAppMgrLoadExecOptParam {
 
 #define SCE_APPMGR_MAX_APP_NAME_LENGTH	(31)
 
+typedef struct SceAppMgrBudgetInfo {
+// 0x00
+	SceSize size;
+	SceUInt32 mode;
+	SceUInt32 unk_8;
+	SceUInt32 budgetLPDDR2;
+// 0x10
+	SceUInt32 freeLPDDR2;
+	SceUInt32 allow0x0E208060;
+	SceUInt32 unk_14;
+	SceUInt32 budget0x0E208060;
+// 0x20
+	SceUInt32 free0x0E208060;
+	SceUInt32 unk_24;
+	SceUInt32 unk_28;
+	SceUInt32 budgetPHYCONT;
+// 0x30
+	SceUInt32 freePHYCONT;
+	SceUInt32 allow;
+	SceUChar8 unk_38[0x20];
+	SceUInt32 unk_58;
+	SceUInt32 budgetCDRAM;
+// 0x60
+	SceUInt32 freeCDRAM;
+	SceUChar8 reserved_64[0x24];
+// 0x88
+} SceAppMgrBudgetInfo;
+
 /**
  * Save data on savedata0: partition
  *
@@ -487,7 +515,15 @@ int _sceAppMgrGetRawPath(char *path, char *resolved_path, int resolved_path_size
  * @return 0 on success.
  */
 int _sceAppMgrGetRawPathOfApp0ByAppIdForShell(int appId, char resolved_path[292]);
-	
+
+/**
+ * Get application memory budget info.
+ *
+ * @return 0 on success, < 0 on error.
+ *
+ */
+int sceAppMgrGetBudgetInfo(SceAppMgrBudgetInfo *info);
+
 #ifdef __cplusplus
 }
 #endif
