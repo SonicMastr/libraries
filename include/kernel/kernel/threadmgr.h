@@ -452,18 +452,61 @@ int sceKernelCancelMutex(SceUID mutexid, int newCount, int *numWaitThreads);
  */
 int sceKernelGetMutexInfo(SceUID mutexid, SceKernelMutexInfo *info);
 
-typedef struct  SceKernelLwMutexWork {
-	SceInt64 data[4];
-} SceKernelLwMutexWork;
+/* Fast mutex */
 
-typedef struct SceKernelLwMutexOptParam {
+typedef struct SceKernelFastMutexWork {
+	SceInt64 data[8];
+} SceKernelFastMutexWork;
+
+typedef enum SceKernelFastMutexAttr {
+	SCE_KERNEL_FAST_MUTEX_ATTR_RECURSIVE   = 0x00000002,
+	SCE_KERNEL_FAST_MUTEX_ATTR_CEILING     = 0x00000004,
+	SCE_KERNEL_FAST_MUTEX_ATTR_UNK_3       = 0x00000008,
+	SCE_KERNEL_FAST_MUTEX_ATTR_TH_FIFO     = 0x00000000,
+	SCE_KERNEL_FAST_MUTEX_ATTR_TH_PRIO     = 0x00002000,
+	SCE_KERNEL_FAST_MUTEX_ATTR_UNK_15      = 0x00008000,
+	// All other flags are invalid
+} SceKernelFastMutexAttr;
+
+typedef struct SceKernelFastMutexOptParam {
 	SceSize size;
-} SceKernelLwMutexOptParam;
+	SceInt32 ceilingPriority;
+} SceKernelFastMutexOptParam;
 
-int sceKernelInitializeFastMutex(void *mutex, const char *name, int unk0, int unk1);
-int sceKernelLockFastMutex(void *mutex);
-int sceKernelUnlockFastMutex(void *mutex);
-int sceKernelDeleteFastMutex(void *mutex);
+SceInt32 sceKernelInitializeFastMutex(
+	SceKernelFastMutexWork *pWork,
+	const char *pName,
+	SceKernelFastMutexAttr attr,
+	const SceKernelFastMutexOptParam *pOptParam);
+
+SceInt32 sceKernelLockFastMutex(SceKernelFastMutexWork *pWork);
+
+SceInt32 sceKernelTryLockFastMutex(SceKernelFastMutexWork *pWork);
+
+SceInt32 sceKernelUnlockFastMutex(SceKernelFastMutexWork *pWork);
+
+SceInt32 sceKernelFinalizeFastMutex(SceKernelFastMutexWork *pWork);
+
+typedef struct SceKernelFastMutexInfo {
+// 0x00
+	SceSize size;
+	SceUID uid;
+	char name[SCE_UID_NAMELEN + 1];
+	SceKernelFastMutexAttr attr;
+	SceKernelFastMutexWork *pWork;
+// 0x30
+	SceInt32 currentCount;
+	SceUID currentOwnerId;
+	SceInt32 ceilingPriority;
+	SceInt32 unk3C;
+// 0x40
+	SceUInt32 numWaitThreads;
+// 0x44
+} SceKernelFastMutexInfo;
+
+SceInt32 sceKernelGetFastMutexInfo(SceKernelFastMutexWork *pWork, SceKernelFastMutexInfo *pInfo);
+
+SceInt32 sceKernelGetFastMutexInfoById(SceUID uid, SceKernelFastMutexInfo *pInfo);
 
 /* Event flags. */
 
