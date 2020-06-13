@@ -1,6 +1,8 @@
 #ifndef _PSP2_SHELLUTIL_H_
 #define _PSP2_SHELLUTIL_H_
 
+#include <psp2/types.h>
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -70,7 +72,91 @@ int sceShellUtilUnlock(SceShellUtilLockType type);
  *
  * @param[in] unk - pass 0
  */
-void sceShellUtilReboot(int unk);
+void sceShellUtilRequestColdReset(int unk);
+
+/**
+ * Poweroff the device
+ *
+ * @param[in] unk - pass 0
+ */
+void sceShellUtilRequestStandby(int unk);
+
+/**
+ * Show "A serious error has occured" message and reboot
+ *
+ * @param[in] safeModeType - sets type of safemode to reboot into, 0 to reboot normally
+ * @param[in] errorCode - error code to display in the message
+ * @param[in] errorMessageType - ex. 0 "Contact technical support"
+ */
+void sceShellUtilRequestColdResetWithError(int safeModeType, int errorCode, int errorMessageType);
+
+/**
+ * SceTextClipboardStorage is cached memory block with usable size of 0x1FFD bytes
+ * allocated by SceShellSvc on startup. Normally you would access this storage with
+ * clipboard sysmodule, however it can also be accessed directly with SceShellSvc
+ * functions. This memory can be accesed from any part of the system and is managed
+ * by SceShell. For example, you can write to it in one application and access
+ * written data from the other. Or you can write to it in application and access
+ * written data from the plugin.
+ *
+ * @param[in] data - pointer to the data to write
+ * @param[in] size - size of data to write. Must not exceed 0x1FFD.
+ */
+
+SceInt32 sceShellUtilTextClipboardWrite(const void* data, SceSize size);
+
+/**
+ * Read from text clipboard
+ *
+ * @param[in] data - pointer to the buffer where the read data will be placed
+ * @param[in] size - size of data to read
+ * @param[out] textlen - length actually read
+ */
+
+SceInt32 sceShellUtilTextClipboardRead(void* data, SceSize size, SceSize *textlen);
+
+/**
+ * Returns size of the data that was written to clipboard with
+ * sceShellUtilTextClipboardWrite
+ */
+
+SceUInt32 sceShellUtilTextClipboardGetUsedSize(void);
+
+/**
+ * Sets text in time display, UTF-16 (remains until reboot?)
+ */
+
+SceInt32 sceShellUtilSetTimeText(SceWChar16* unk, SceWChar16* text);
+
+/**
+ * Set airplane icon visibility
+ *
+ * @param[in] mode - 0 to hide, 1 to show
+ */
+
+SceInt32 sceShellUtilSetAirplaneIconMode(SceUInt32 mode);
+
+/**
+ * Set Bluetooth icon visibility
+ *
+ * @param[in] mode - 0 to hide, 1 to show
+ */
+
+SceInt32 sceShellUtilSetBtIconMode(SceUInt32 mode);
+
+/**
+ * Set BGM mode
+ *
+ * @param[in] mode - 0 to disable, 1 to enable
+ */
+
+SceInt32 sceShellUtilSetBGMMode(SceUInt32 mode);
+
+/**
+ * Set system language. Takes about 5 sec to apply.
+ */
+
+SceInt32 sceShellUtilSetSystemLanguage(SceUInt32 languageId);
 
 #ifdef __cplusplus
 }
