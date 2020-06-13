@@ -7,5 +7,6 @@ modules:
         functions:
           sceShellUtilInitEvents: 0xE8AD11EC
           sceShellUtilLock: 0xA9537233
+          sceShellUtilReboot: 0x636544FB
           sceShellUtilRegisterEventHandler: 0x7B5EDFE7
           sceShellUtilUnlock: 0x21A6CF54

@@ -65,6 +65,13 @@ int sceShellUtilLock(SceShellUtilLockType type);
 */
 int sceShellUtilUnlock(SceShellUtilLockType type);
 
+/**
+ * Reboot the device
+ *
+ * @param[in] unk - pass 0
+ */
+void sceShellUtilReboot(int unk);
+
 #ifdef __cplusplus
 }
 #endif
