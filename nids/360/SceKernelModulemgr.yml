@@ -53,16 +53,16 @@ modules:
           sceKernelFinalizeKbl: 0xFDD7F646
           sceKernelGetModuleIdByAddr: 0x0053BA4A
           sceKernelGetModuleInfo: 0xD269F915
-          sceKernelGetModuleInfo2: 0x6A655255
           sceKernelGetModuleInfoMinByAddr: 0x8309E043
           sceKernelGetModuleInternal: 0xFE303863
-          sceKernelGetModuleLibraryInfo: 0xD4BF409C
+          sceKernelGetModuleLibExportList: 0xD4BF409C
+          sceKernelGetModuleLibraryInfo: 0x6A655255
           sceKernelGetModuleList: 0x97CF7B4E
           sceKernelGetModuleList2: 0x410E1D2E
+          sceKernelGetModulePath: 0x779A1025
           sceKernelGetModuleUid: 0x3B93CF88
           sceKernelGetModuleUidList: 0x1FDEAE16
           sceKernelGetProcessMainModule: 0x20A27FA9
-          sceKernelGetProcessMainModulePath: 0x779A1025
           sceKernelLoadModuleForPid: 0xFA21D8CB
           sceKernelLoadPreloadingModules: 0x3AD26B43
           sceKernelLoadProcessImage: 0xAC4EABDB

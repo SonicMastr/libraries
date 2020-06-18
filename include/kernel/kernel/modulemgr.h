@@ -21,38 +21,39 @@ extern "C" {
 #define SCE_KERNEL_STOP_CANCEL        SCE_KERNEL_STOP_FAIL
 /** @} */
 
-typedef char SceKernelModuleName[0x1C];
+typedef struct SceKernelModuleName {
+  char s[0x1C];
+} SceKernelModuleName;
 
-typedef struct
-{
-  SceUInt size;   //!< this structure size (0x18)
+typedef struct SceKernelSegmentInfo {
+  SceSize size;   //!< this structure size (0x18)
   SceUInt perms;  //!< probably rwx in low bits
   void *vaddr;    //!< address in memory
-  SceUInt memsz;  //!< size in memory
-  SceUInt flags;  //!< meaning unknown
-  SceUInt res;    //!< unused?
+  SceSize memsz;  //!< size in memory
+  SceSize filesz; //!< original size of memsz
+  SceUInt res;    //!< unused
 } SceKernelSegmentInfo;
 
-typedef struct
-{
-  SceUInt size;   //!< 0x1B8 for Vita 1.x
-  SceUInt handle; //!< kernel module handle?
-  SceUInt flags;  //!< some bits. could be priority or whatnot
+typedef struct SceKernelModuleInfo {
+  SceSize size;                       //!< 0x1B8 for Vita 1.x
+  SceUID modid;
+  uint16_t modattr;
+  uint8_t  modver[2];
   char module_name[28];
   SceUInt unk28;
-  void *module_start;
-  void *module_stop;
-  void *module_exit;
-  void *exidxTop;
-  void *exidxBtm;
-  SceUInt unk40;
-  SceUInt unk44;
+  void *start_entry;
+  void *stop_entry;
+  void *exit_entry;
+  void *exidx_top;
+  void *exidx_btm;
+  void *extab_top;
+  void *extab_btm;
   void *tlsInit;
   SceSize tlsInitSize;
   SceSize tlsAreaSize;
   char path[256];
   SceKernelSegmentInfo segments[4];
-  SceUInt type;   //!< 6 = user-mode PRX?
+  SceUInt type;                       //!< 6 = user-mode PRX?
 } SceKernelModuleInfo;
 
 typedef struct {
@@ -114,20 +115,19 @@ typedef struct {
   };
 } SceKernelModuleListInfo;
 
-typedef struct {
-  SceSize size; //!< sizeof(SceKernelModuleInfo2) : 0x120
-  SceUID modid1;
-  uint32_t unk_0x08;
-  uint16_t unk_0x0C;
-  uint16_t unk_0x0E;
-  uint16_t unk_0x10;
-  uint16_t unk_0x12;
+typedef struct SceKernelModuleLibraryInfo {
+  SceSize size; //!< sizeof(SceKernelModuleLibraryInfo) : 0x120
+  SceUID libid;
+  uint32_t libnid;
+  uint16_t libver[2];
+  uint16_t entry_num_function;
+  uint16_t entry_num_variable;
   uint16_t unk_0x14;
   uint16_t unk_0x16;
-  char module_name[0x100]; // offset : 0x18
+  char library_name[0x100]; // offset : 0x18
   uint32_t unk_0x118;
   SceUID modid2;
-} SceKernelModuleInfo2;
+} SceKernelModuleLibraryInfo;
 
 /**
  * @brief Register syscall function
@@ -201,17 +201,6 @@ int sceKernelGetModuleList2(SceUID pid, SceKernelModuleListInfo *infolists, size
  * @return 0 on success, < 0 on error.
  */
 int sceKernelGetModuleInfo(SceUID pid, SceUID modid, SceKernelModuleInfo *info);
-
-/**
- * @brief Get module info2
- *
- * @param[in]  pid   - target pid
- * @param[in]  modid - target module id
- * @param[out] info  - info output
- *
- * @return 0 on success, < 0 on error.
- */
-int sceKernelGetModuleInfo2(SceUID pid, SceUID modid, SceKernelModuleInfo2 *info);
 
 /**
  * @brief Get module info mini by module address
@@ -480,7 +469,7 @@ int sceKernelUmountBootfs(void);
 SceUID sceKernelGetProcessMainModule(SceUID pid);
 
 /**
- * @brief Get the main module path for a given process.
+ * @brief Get the module path
  *
  * @param[in]  pid     - target pid
  * @param[out] path    - module path output
@@ -488,9 +477,37 @@ SceUID sceKernelGetProcessMainModule(SceUID pid);
  *
  * @return 0 on success, < 0 on error.
  */
-int sceKernelGetProcessMainModulePath(SceUID pid, char *path, int pathlen);
+int sceKernelGetModulePath(SceUID modid, char *path, int pathlen);
 
-int sceKernelGetModuleLibraryInfo(SceUID pid, SceUID modid, void *unk1, const void *unk2, int unk3);
+/**
+ * @brief Get library info
+ *
+ * @param[in]  pid   - target pid
+ * @param[in]  modid - target library id
+ * @param[out] info  - info output
+ *
+ * @return 0 on success, < 0 on error.
+ */
+int sceKernelGetModuleLibraryInfo(SceUID pid, SceUID libid, SceKernelModuleLibraryInfo *info);
+
+typedef struct SceKernelModuleExportEntry {
+	uint32_t libnid;
+	const void *entry; // function ptr. or vars?
+} SceKernelModuleExportEntry;
+
+/**
+ * @brief Get module export entry
+ *
+ * @param[in]    pid          - target pid
+ * @param[in]    libid        - target library uid
+ * @param[out]   list         - data output
+ * @param[inout] num          - in:list max num, out:get entry num
+ * @param[in]    cpy_skip_num - The index at which to start copying
+ *
+ * @return 0 on success, < 0 on error.
+ */
+int sceKernelGetModuleLibExportList(SceUID pid, SceUID libid, SceKernelModuleExportEntry *list, SceSize *num, SceSize cpy_skip_num);
+
 int sceKernelGetModuleUid(SceUID pid, SceUID modid, SceUID *modid_out, const void *unk1, int unk2);
 int sceKernelGetModuleUidList(SceUID pid, SceUID *modids, size_t *num);
 
