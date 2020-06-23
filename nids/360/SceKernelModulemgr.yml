@@ -51,6 +51,7 @@ modules:
         nid: 0xC445FA63
         functions:
           sceKernelFinalizeKbl: 0xFDD7F646
+          sceKernelGetModuleExportLibraryList: 0x1FDEAE16
           sceKernelGetModuleIdByAddr: 0x0053BA4A
           sceKernelGetModuleInfo: 0xD269F915
           sceKernelGetModuleInfoMinByAddr: 0x8309E043
@@ -59,9 +60,8 @@ modules:
           sceKernelGetModuleLibraryInfo: 0x6A655255
           sceKernelGetModuleList: 0x97CF7B4E
           sceKernelGetModuleList2: 0x410E1D2E
+          sceKernelGetModuleListByImport: 0x3B93CF88
           sceKernelGetModulePath: 0x779A1025
-          sceKernelGetModuleUid: 0x3B93CF88
-          sceKernelGetModuleUidList: 0x1FDEAE16
           sceKernelGetProcessMainModule: 0x20A27FA9
           sceKernelLoadModuleForPid: 0xFA21D8CB
           sceKernelLoadPreloadingModules: 0x3AD26B43
