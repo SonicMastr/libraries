@@ -530,7 +530,7 @@ int sceKernelGetModuleListByImport(SceUID pid, SceUID libid, SceUID *modids, Sce
  *
  * @return 0 on success, < 0 on error.
  */
-int sceKernelGetModuleExportLibraryList(SceUID pid, SceUID *libids, SceSize *num);
+int sceKernelGetProcessLibraryIdList(SceUID pid, SceUID *library_ids, SceSize *num);
 
 #ifdef __cplusplus
 }
