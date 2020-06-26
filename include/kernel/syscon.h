@@ -106,8 +106,8 @@ int sceSysconCmdSync(SceSysconPacket *packet, int noWait);
  */
 int sceSysconSetPowerMode(int type, int mode);
 
-int sceSysconReadCommand(unsigned short cmd, void *buffer, unsigned int size);
-int sceSysconSendCommand(unsigned short cmd, const void *buffer, unsigned int size);
+int sceSysconReadCommand(unsigned short cmd, void *buffer, SceSize size);
+int sceSysconSendCommand(unsigned short cmd, const void *buffer, SceSize size);
 
 /**
  * Set the debug handlers.
@@ -163,7 +163,7 @@ int sceSysconIsDownLoaderMode(void);
 
 int sceSysconLogStart(void);
 int sceSysconLogStartWaiting(void);
-int sceSysconLogReadData(unsigned short, void *buff, unsigned int size);
+int sceSysconLogReadData(unsigned short, void *buff, SceSize size);
 
 int sceSysconShowModeClear(void);
 int sceSysconShowModeSet(void);
@@ -196,8 +196,8 @@ int sceSysconClearTemperatureLog(int);
 int sceSysconBeginConfigstorageTransaction(void);
 int sceSysconCommitConfigstorageTransaction(void);
 int sceSysconEndConfigstorageTransaction(void);
-int sceSysconLoadConfigstorageScript(unsigned short, const void *buff, unsigned int size);
-int sceSysconVerifyConfigstorageScript(unsigned short, const void *buff, unsigned int size);
+int sceSysconLoadConfigstorageScript(unsigned short, const void *buff, SceSize size);
+int sceSysconVerifyConfigstorageScript(unsigned short, const void *buff, SceSize size);
 
 /**
  * Set the alarm callback, that will be ran when the alarm timer is passed.

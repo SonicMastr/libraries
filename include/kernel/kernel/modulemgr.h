@@ -137,7 +137,7 @@ typedef struct SceKernelModuleLibraryInfo {
  *
  * @return none
  */
-void sceKernelRegisterSyscall(int syscall_id, const void *func);
+void sceKernelRegisterSyscall(SceSize syscall_id, const void *func);
 
 /**
  * @brief Setup kernel for modulemgr
@@ -159,7 +159,7 @@ void sceKernelSetupForModulemgr(void);
  *
  * @return 0 on success, < 0 on error.
  */
-int sceKernelGetModuleList(SceUID pid, int flags1, int flags2, SceUID *modids, size_t *num);
+int sceKernelGetModuleList(SceUID pid, int flags1, int flags2, SceUID *modids, SceSize *num);
 
 /**
  * @par Example1: Get max to 10 kernel module info
@@ -189,7 +189,7 @@ int sceKernelGetModuleList(SceUID pid, int flags1, int flags2, SceUID *modids, s
  *
  * @return 0 on success, < 0 on error.
  */
-int sceKernelGetModuleList2(SceUID pid, SceKernelModuleListInfo *infolists, size_t *num);
+int sceKernelGetModuleList2(SceUID pid, SceKernelModuleListInfo *infolists, SceSize *num);
 
 /**
  * @brief Get module info
@@ -223,7 +223,7 @@ int sceKernelGetModuleInfoMinByAddr(SceUID pid, const void *module_addr, uint32_
  *
  * @return 0 on success, < 0 on error.
  */
-int sceKernelGetModuleInternal(SceUID modid, void **module_info);
+int sceKernelGetModuleInternal(SceUID modid, void **info);
 
 /**
  * @brief Get module id by module address
@@ -477,7 +477,7 @@ SceUID sceKernelGetProcessMainModule(SceUID pid);
  *
  * @return 0 on success, < 0 on error.
  */
-int sceKernelGetModulePath(SceUID modid, char *path, int pathlen);
+int sceKernelGetModulePath(SceUID modid, char *path, SceSize pathlen);
 
 /**
  * @brief Get library info
@@ -488,7 +488,7 @@ int sceKernelGetModulePath(SceUID modid, char *path, int pathlen);
  *
  * @return 0 on success, < 0 on error.
  */
-int sceKernelGetModuleLibraryInfo(SceUID pid, SceUID libid, SceKernelModuleLibraryInfo *info);
+int sceKernelGetModuleLibraryInfo(SceUID pid, SceUID library_id, SceKernelModuleLibraryInfo *info);
 
 typedef struct SceKernelModuleExportEntry {
 	uint32_t libnid;
@@ -506,7 +506,7 @@ typedef struct SceKernelModuleExportEntry {
  *
  * @return 0 on success, < 0 on error.
  */
-int sceKernelGetModuleLibExportList(SceUID pid, SceUID libid, SceKernelModuleExportEntry *list, SceSize *num, SceSize cpy_skip_num);
+int sceKernelGetModuleLibExportList(SceUID pid, SceUID library_id, SceKernelModuleExportEntry *list, SceSize *num, SceSize cpy_skip_num);
 
 /**
  * @brief Get module id list by import

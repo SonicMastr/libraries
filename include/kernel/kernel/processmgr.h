@@ -33,7 +33,7 @@ int sceKernelGetProcessLocalStorageAddrForPid(SceUID pid, int key, void **out_ad
  * @param[in]   unk Unknown.
  * @return      PID of the launched app on success, < 0 on error.
  */
-SceUID sceKernelLaunchApp(char* titleid, uint32_t flags, char *path, uint32_t unk);
+SceUID sceKernelLaunchApp(const char *titleid, uint32_t flags, const char *path, uint32_t unk);
 
 /**
  * @brief       Resume a suspended process.

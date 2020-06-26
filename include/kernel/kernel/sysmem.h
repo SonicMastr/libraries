@@ -2,6 +2,7 @@
 #define _PSP2_KERNEL_SYSMEM_H_
 
 #include <psp2kern/types.h>
+#include <stdarg.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -104,7 +105,7 @@ typedef enum SceKernelModel {
 	SCE_KERNEL_MODEL_VITATV = 0x20000
 } SceKernelModel;
 
-typedef int (*SceClassCallback)(void *item);
+typedef int (* SceClassCallback)(void *item);
 
 typedef struct SceClass {
 	struct SceClass *next;
@@ -150,11 +151,11 @@ typedef struct SceKernelSysrootSelfInfo {
  * @param[in] name - Name for the memory block
  * @param[in] type - Type of the memory to allocate
  * @param[in] size - Size of the memory to allocate
- * @param[in] optp - Memory block options?
+ * @param[in] opt  - Memory block options?
  *
  * @return SceUID of the memory block on success, < 0 on error.
 */
-SceUID sceKernelAllocMemBlock(const char *name, SceKernelMemBlockType type, int size, SceKernelAllocMemBlockKernelOpt *optp);
+SceUID sceKernelAllocMemBlock(const char *name, SceKernelMemBlockType type, SceSize size, SceKernelAllocMemBlockKernelOpt *opt);
 
 /**
  * Frees new memory block
@@ -168,12 +169,12 @@ int sceKernelFreeMemBlock(SceUID uid);
 /**
  * Gets the base address of a memory block
  *
- * @param[in] uid - SceUID of the memory block
- * @param[out] basep - Base address of the memory block identified by uid
+ * @param[in]  uid  - SceUID of the memory block
+ * @param[out] base - Base address of the memory block identified by uid
  *
  * @return 0 on success, < 0 on error.
 */
-int sceKernelGetMemBlockBase(SceUID uid, void **basep);
+int sceKernelGetMemBlockBase(SceUID uid, void **base);
 
 /**
  * Gets the memory block type of a memory block
@@ -221,14 +222,14 @@ int sceKernelDeleteHeap(SceUID uid);
 void *sceKernelAllocHeapMemory(SceUID uid, SceSize size);
 void sceKernelFreeHeapMemory(SceUID uid, void *ptr);
 
-int sceKernelMemcpyUserToKernelForPid(SceUID pid, void *dst, uintptr_t src, size_t len);
-int sceKernelMemcpyUserToKernel(void *dst, uintptr_t src, size_t len);
-int sceKernelMemcpyKernelToUser(uintptr_t dst, const void *src, size_t len);
-int sceKernelRxMemcpyKernelToUserForPid(SceUID pid, uintptr_t dst, const void *src, size_t len);
+int sceKernelMemcpyUserToKernelForPid(SceUID pid, void *dst, uintptr_t src, SceSize len);
+int sceKernelMemcpyUserToKernel(void *dst, uintptr_t src, SceSize len);
+int sceKernelMemcpyKernelToUser(uintptr_t dst, const void *src, SceSize len);
+int sceKernelRxMemcpyKernelToUserForPid(SceUID pid, uintptr_t dst, const void *src, SceSize len);
 
-int sceKernelStrncpyUserToKernel(void *dst, uintptr_t src, size_t len);
-int sceKernelStrncpyKernelToUser(uintptr_t dst, const void *src, size_t len);
-int sceKernelStrncpyUserForPid(SceUID pid, void *dst, uintptr_t src, size_t len);
+int sceKernelStrncpyUserToKernel(void *dst, uintptr_t src, SceSize len);
+int sceKernelStrncpyKernelToUser(uintptr_t dst, const void *src, SceSize len);
+int sceKernelStrncpyUserForPid(SceUID pid, void *dst, uintptr_t src, SceSize len);
 
 SceUID sceKernelKernelUidForUserUid(SceUID pid, SceUID user_uid);
 SceUID sceKernelCreateUserUid(SceUID pid, SceUID kern_uid);
@@ -274,7 +275,8 @@ SceClass *sceKernelGetUidClass(void);
 SceClass *sceKernelGetUidDLinkClass(void);
 SceClass *sceKernelGetUidHeapClass(void);
 SceClass *sceKernelGetUidMemBlockClass(void);
-int sceKernelCreateClass(SceClass *cls, const char *name, void *uidclass, size_t itemsize, SceClassCallback create, SceClassCallback destroy);
+
+int sceKernelCreateClass(SceClass *cls, const char *name, void *uidclass, SceSize itemsize, SceClassCallback create, SceClassCallback destroy);
 int sceKernelDeleteUserUid(SceUID pid, SceUID user_uid);
 int sceKernelDeleteUid(SceUID uid);
 int sceKernelFindClassByName(const char *name, SceClass **cls);
@@ -284,18 +286,18 @@ int sceKernelSwitchVmaForPid(SceUID pid);
 void *sceKernelGetSysrootBuffer(void);
 int sceKernelGetPidContext(SceUID pid, SceKernelProcessContext **ctx);
 
-int sceKernelGetProcessTitleId(SceUID pid, char *titleid, size_t len);
+int sceKernelGetProcessTitleId(SceUID pid, char *titleid, SceSize len);
 
 int sceKernelMapBlockUserVisible(SceUID uid);
 int sceKernelMapUserBlock(const char *name, int permission, int type,
-			   const void *user_buf, unsigned int size, void **kernel_page,
-			   unsigned int *kernel_size, unsigned int *kernel_offset);
+			   const void *user_buf, SceSize size, void **kernel_page,
+			   SceSize *kernel_size, unsigned int *kernel_offset);
 int sceKernelMapUserBlockDefaultType(const char *name, int permission, const void *user_buf,
-				      unsigned int size, void **kernel_page,
-				      unsigned int *kernel_size, unsigned int *kernel_offset);
+				      SceSize size, void **kernel_page,
+				      SceSize *kernel_size, unsigned int *kernel_offset);
 int sceKernelMapUserBlockDefaultTypeForPid(int pid, const char *name, int permission,
-					    const void *user_buf, unsigned int size, void **kernel_page,
-					    unsigned int *kernel_size, unsigned int *kernel_offset);
+					    const void *user_buf, SceSize size, void **kernel_page,
+					    SceSize *kernel_size, unsigned int *kernel_offset);
 
 int sceSysrootGetSelfInfo(SceKernelSysrootSelfIndex index, SceKernelSysrootSelfInfo *info);
 
@@ -342,7 +344,7 @@ int sceKernelMemBlockRelease(SceUID uid);
  *
  * @return 0 on success, < 0 on error.
  */
-int sceKernelMemRangeRetain(void *addr, unsigned int size);
+int sceKernelMemRangeRetain(void *addr, SceSize size);
 
 /**
  * Retains a memory range for a process (pid)
@@ -357,7 +359,7 @@ int sceKernelMemRangeRetain(void *addr, unsigned int size);
  *
  * @return 0 on success, < 0 on error.
  */
-int sceKernelMemRangeRetainForPid(SceUID pid, void *addr, unsigned int size);
+int sceKernelMemRangeRetainForPid(SceUID pid, void *addr, SceSize size);
 
 /**
  * Retains a memory range checking for a given permission
@@ -372,7 +374,7 @@ int sceKernelMemRangeRetainForPid(SceUID pid, void *addr, unsigned int size);
  *
  * @return 0 on success, < 0 on error.
  */
-int sceKernelMemRangeRetainWithPerm(SceKernelMemoryRefPerm perm, void *addr, unsigned int size);
+int sceKernelMemRangeRetainWithPerm(SceKernelMemoryRefPerm perm, void *addr, SceSize size);
 
 /**
  * Releases a memory range
@@ -386,7 +388,7 @@ int sceKernelMemRangeRetainWithPerm(SceKernelMemoryRefPerm perm, void *addr, uns
  *
  * @return 0 on success, < 0 on error.
  */
-int sceKernelMemRangeRelease(void *addr, unsigned int size);
+int sceKernelMemRangeRelease(void *addr, SceSize size);
 
 /**
  * Releases a memory range for a process (pid)
@@ -401,7 +403,7 @@ int sceKernelMemRangeRelease(void *addr, unsigned int size);
  *
  * @return 0 on success, < 0 on error.
  */
-int sceKernelMemRangeReleaseForPid(SceUID pid, void *addr, unsigned int size);
+int sceKernelMemRangeReleaseForPid(SceUID pid, void *addr, SceSize size);
 
 /**
  * Releases a memory range checking for a given permission
@@ -416,7 +418,7 @@ int sceKernelMemRangeReleaseForPid(SceUID pid, void *addr, unsigned int size);
  *
  * @return 0 on success, < 0 on error.
  */
-int sceKernelMemRangeReleaseWithPerm(SceKernelMemoryRefPerm perm, void *addr, unsigned int size);
+int sceKernelMemRangeReleaseWithPerm(SceKernelMemoryRefPerm perm, void *addr, SceSize size);
 
 int sceSysrootUseExternalStorage(void);
 
@@ -426,29 +428,26 @@ int sceSysrootUseInternalStorage(void);
 
 int sceDebugPrintf(const char *fmt, ...);
 
-typedef struct kernel_message_ctx
-{
+typedef struct SceKernelDebugMessageContext {
   int hex_value0_hi;
   int hex_value0_lo;
   int hex_value1;
-  char* msg0;
-  int num;
-  char* msg1;
-} kernel_message_ctx;
+  char *msg0;
+  SceSize num;
+  char *msg1;
+} SceKernelDebugMessageContext;
 
 // msg_type_flag : 0 or 0xB
 
-int sceDebugPrintf2(int msg_type_flag, kernel_message_ctx *msg_ctx, const char *fmt, ...);
+int sceDebugPrintf2(int msg_type_flag, const SceKernelDebugMessageContext *ctx, const char *fmt, ...);
 	
-int sceDebugPrintKernelPanic(kernel_message_ctx *msg_ctx, void *some_address);
+int sceDebugPrintKernelPanic(const SceKernelDebugMessageContext *ctx, void *some_address);
+int sceDebugPrintfKernelPanic(const SceKernelDebugMessageContext *ctx, void *some_address, const char *fmt, ...);
 
-int sceDebugPrintfKernelPanic(kernel_message_ctx *msg_ctx, void *some_address, char* format, ...);
+int sceDebugPrintKernelAssertion(int condition, const SceKernelDebugMessageContext *ctx, void *some_address);
+int sceDebugPrintfKernelAssertion(int unk, int condition, const SceKernelDebugMessageContext *ctx, int some_address, const char *fmt, ...);
 
-int sceDebugPrintKernelAssertion(int condition, kernel_message_ctx *msg_ctx, void *some_address);
-
-int sceDebugPrintfKernelAssertion(int unk, int condition, kernel_message_ctx *msg_ctx, int some_address, const char *fmt, ...);
-
-int sceDebugSetHandlers(int (*func)(void *args, char c), void *args);
+int sceDebugSetHandlers(int (*func)(int unk, const char *format, const va_list args), void *args);
 
 int sceDebugRegisterPutcharHandler(int (*func)(void *args, char c), void *args);
 

@@ -14,7 +14,7 @@ typedef SceUInt64 SceKernelSysClock;
 
 /* Threads. */
 
-typedef int (*SceKernelThreadEntry)(SceSize args, void *argp);
+typedef int (* SceKernelThreadEntry)(SceSize args, void *argp);
 
 /** Additional options used when creating threads. */
 typedef struct SceKernelThreadOptParam {
@@ -43,7 +43,7 @@ typedef struct SceKernelThreadInfo {
 	/** Thread stack pointer */
 	void            *stack;
 	/** Thread stack size */
-	int             stackSize;
+	SceSize         stackSize;
 	/** Initial priority */
 	int             initPriority;
 	/** Current priority */
@@ -123,7 +123,7 @@ typedef struct SceKernelFaultingProcessInfo {
  * @return UID of the created thread, or an error code.
  */
 SceUID sceKernelCreateThread(const char *name, SceKernelThreadEntry entry, int initPriority,
-                             int stackSize, SceUInt attr, int cpuAffinityMask,
+                             SceSize stackSize, SceUInt attr, int cpuAffinityMask,
                              const SceKernelThreadOptParam *option);
 
 /**
@@ -282,7 +282,7 @@ typedef struct SceKernelSemaInfo {
  * @par Example:
  * @code
  * int semaid;
- * semaid = sceKernelCreateSema("MySema", 0, 1, 1, 0);
+ * semaid = sceKernelCreateSema("MySema", 0, 1, 1, NULL);
  * @endcode
  *
  * @param name - Specifies the name of the sema
@@ -323,7 +323,7 @@ int sceKernelSignalSema(SceUID semaid, int signal);
  *
  * @par Example:
  * @code
- * sceKernelWaitSema(semaid, 1, 0);
+ * sceKernelWaitSema(semaid, 1, NULL);
  * @endcode
  *
  * @param semaid - The sema id returned from ::sceKernelCreateSema
@@ -382,7 +382,7 @@ typedef struct SceKernelMutexInfo {
  * @par Example:
  * @code
  * int mutexid;
- * mutexid = sceKernelCreateMutex("MyMutex", 0, 1, 1, 0);
+ * mutexid = sceKernelCreateMutex("MyMutex", 0, 1, NULL);
  * @endcode
  *
  * @param name - Specifies the name of the mutex
@@ -511,7 +511,7 @@ typedef enum SceEventFlagWaitTypes {
   * @par Example:
   * @code
   * int evid;
-  * evid = sceKernelCreateEventFlag("wait_event", 0, 0, 0);
+  * evid = sceKernelCreateEventFlag("wait_event", 0, 0, NULL);
   * @endcode
   */
 SceUID sceKernelCreateEventFlag(const char *name, int attr, int bits, SceKernelEventFlagOptParam *opt);
@@ -704,7 +704,7 @@ typedef struct SceKernelCallbackInfo {
  * @par Example:
  * @code
  * int cbid;
- * cbid = sceKernelCreateCallback("Exit Callback", exit_cb, NULL);
+ * cbid = sceKernelCreateCallback("Exit Callback", 0, exit_cb, NULL);
  * @endcode
  *
  * @param name - A textual name for the callback
@@ -828,7 +828,7 @@ SceUID sceKernelGetProcessId(void);
  *
  * @return     Zero on success
  */
-int sceKernelRunWithStack(int stack_size, int (*to_call)(void *), void *args);
+int sceKernelRunWithStack(SceSize stack_size, int (* to_call)(void *), void *args);
 
 /**
  * @brief      Call from an abort handler to get info on faulting process
@@ -841,7 +841,7 @@ int sceKernelGetFaultingProcess(SceKernelFaultingProcessInfo *info);
 
 /* Workqueues */
 
-typedef int (*SceKernelWorkQueueWorkFunction)(void *args);
+typedef int (* SceKernelWorkQueueWorkFunction)(void *args);
 
 /**
  * @brief      Enqueue work to a workqueue
@@ -945,7 +945,7 @@ int sceKernelChangeThreadSuspendStatus(SceUID thid, int status);
  *
  * @return The UID of the created pipe, < 0 on error
  */
-SceUID sceKernelCreateMsgPipe(const char *name, int type, int attr, unsigned int bufSize, void *opt);
+SceUID sceKernelCreateMsgPipe(const char *name, int type, int attr, SceSize bufSize, void *opt);
 
 /**
  * Delete a message pipe
@@ -959,7 +959,7 @@ int sceKernelDeleteMsgPipe(SceUID uid);
 typedef struct
 {
     const void *message;
-    unsigned int size;
+    SceSize size;
 } MsgPipeSendData;
 
 /**
@@ -987,12 +987,12 @@ int sceKernelSendMsgPipeVector(SceUID uid, const MsgPipeSendData *v, unsigned in
  *
  * @return 0 on success, < 0 on error
  */
-int sceKernelTrySendMsgPipeVector(SceUID uid, const MsgPipeSendData *v, unsigned int size, int unk1, void *unk2);
+int sceKernelTrySendMsgPipeVector(SceUID uid, const MsgPipeSendData *v, SceSize size, int unk1, void *unk2);
 
 typedef struct
 {
     void *message;
-    unsigned int size;
+    SceSize size;
 } MsgPipeRecvData;
 
 /**
@@ -1020,7 +1020,7 @@ int sceKernelReceiveMsgPipeVector(SceUID uid, const MsgPipeRecvData *v, unsigned
  *
  * @return 0 on success, < 0 on error
  */
-int sceKernelTryReceiveMsgPipeVector(SceUID uid, const MsgPipeRecvData *v, unsigned int size, int unk1, void *unk2);
+int sceKernelTryReceiveMsgPipeVector(SceUID uid, const MsgPipeRecvData *v, SceSize size, int unk1, void *unk2);
 
 /**
  * Cancel a message pipe
