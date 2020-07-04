@@ -6,8 +6,8 @@ modules:
         nid: 0x5058F4AB
         functions:
           sceIncomingDialogClose: 0x126BD15E
-          sceIncomingDialogFinalize: 0x860B1885
           sceIncomingDialogGetStatus: 0x839DE14C
-          sceIncomingDialogInitialize: 0x18AF99EB
+          sceIncomingDialogInit: 0x18AF99EB
           sceIncomingDialogOpen: 0x2BEDC1A0
           sceIncomingDialogSwitchToDialog: 0x0123B83A
+          sceIncomingDialogTerm: 0x860B1885

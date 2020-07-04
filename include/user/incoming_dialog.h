@@ -25,7 +25,7 @@ typedef enum SceIncomingDialogStatus {
 /**
  * Errors
  */
-#define SCE_INCOMINGDIALOG_ERROR_INVALID_ARG               0x80106202;
+#define SCE_INCOMING_DIALOG_ERROR_INVALID_ARG               0x80106202;
 
 typedef struct SceIncomingDialogParam {
 	SceInt32 sdkVersion;
@@ -42,7 +42,7 @@ typedef struct SceIncomingDialogParam {
 /**
  * Initialize incoming dialog library, initType must be 0.
  */
-SceInt32 sceIncomingDialogInitialize(int initType);
+SceInt32 sceIncomingDialogInit(int initType);
 
 /**
  * Open incoming dialog.
@@ -65,9 +65,9 @@ SceInt32 sceIncomingDialogSwitchToDialog(void);
 SceInt32 sceIncomingDialogClose(void);
 
 /**
- * Finalize incoming dialog library
+ * Terminate incoming dialog library
  */
-SceInt32 sceIncomingDialogFinalize(void);
+SceInt32 sceIncomingDialogTerm(void);
 
 static inline
 void sceIncomingDialogParamInit(SceIncomingDialogParam* dialogParam)

@@ -10,7 +10,7 @@ extern "C" {
 /**
  * Errors
  */
-#define SCE_NOTIFICATIONUTIL_ERROR_INTERNAL               0x80106301
+#define SCE_NOTIFICATION_UTIL_ERROR_INTERNAL               0x80106301
 
 /**
  * BGDL-type notification event handler function
