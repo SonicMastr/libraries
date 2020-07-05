@@ -2,13 +2,13 @@
 #define _PSP2_KERNEL_SYSMEM_H_
 
 #include <stdarg.h>
-#include <psp2kern/types.h>
+#include <psp2kern/kernel/types.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-typedef enum SceKernelMemBlockType {
+typedef enum _SceKernelMemBlockType {
 	SCE_KERNEL_MEMBLOCK_TYPE_SHARED_RX                = 0x0390D050,
 	SCE_KERNEL_MEMBLOCK_TYPE_USER_CDRAM_RW            = 0x09408060,
 	SCE_KERNEL_MEMBLOCK_TYPE_USER_RW_UNCACHE          = 0x0C208060,
@@ -19,7 +19,7 @@ typedef enum SceKernelMemBlockType {
 	SCE_KERNEL_MEMBLOCK_TYPE_KERNEL_RX                = 0x1020D005,
 	SCE_KERNEL_MEMBLOCK_TYPE_KERNEL_RW                = 0x1020D006,
 	SCE_KERNEL_MEMBLOCK_TYPE_RW_UNK0                  = 0x6020D006
-} SceKernelMemBlockType;
+} _SceKernelMemBlockType;
 
 typedef enum SceKernelAllocMemBlockAttr {
 	SCE_KERNEL_ALLOC_MEMBLOCK_ATTR_HAS_PADDR          = 0x00000002U,

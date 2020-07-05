@@ -1,16 +1,13 @@
 #ifndef _PSP2_KERNEL_THREADMGR_H_
 #define _PSP2_KERNEL_THREADMGR_H_
 
-#include <psp2kern/types.h>
+#include <psp2kern/kernel/types.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 #define SCE_KERNEL_MUTEX_ATTR_RECURSIVE 2
-
-/** 64-bit system clock type. */
-typedef SceUInt64 SceKernelSysClock;
 
 /* Threads. */
 
