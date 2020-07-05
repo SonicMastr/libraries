@@ -1,6 +1,7 @@
 #ifndef _PSP2_KERNEL_CPU_H_
 #define _PSP2_KERNEL_CPU_H_
 
+#include <psp2common/kernel/cpu.h>
 #include <psp2kern/types.h>
 
 #ifdef __cplusplus
