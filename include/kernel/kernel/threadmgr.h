@@ -1,6 +1,7 @@
 #ifndef _PSP2_KERNEL_THREADMGR_H_
 #define _PSP2_KERNEL_THREADMGR_H_
 
+#include <psp2kern/kernel/constants.h>
 #include <psp2kern/kernel/types.h>
 
 #ifdef __cplusplus
