@@ -1,80 +1,51 @@
 #ifndef _PSP2_KERNEL_THREADMGR_H_
 #define _PSP2_KERNEL_THREADMGR_H_
 
-#include <psp2/types.h>
+#include <psp2common/kernel/threadmgr.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-/** 64-bit system clock type. */
-typedef SceUInt64 SceKernelSysClock;
-
 /* Threads. */
 
-/** UID of the current thread */
-#define SCE_KERNEL_THREAD_ID_SELF 0
-
-typedef int (*SceKernelThreadEntry)(SceSize args, void *argp);
-
 /** Additional options used when creating threads. */
-typedef struct SceKernelThreadOptParam {
+typedef struct _SceKernelThreadOptParam {
 	/** Size of the ::SceKernelThreadOptParam structure. */
-	SceSize     size;
-	/** Attributes */
-	SceUInt32   attr;
+	SceSize   size;
+	SceUInt32 attr;
 } SceKernelThreadOptParam;
 
 /** Structure to hold the status information for a thread
   * @see sceKernelGetThreadInfo
   */
-typedef struct SceKernelThreadInfo {
+typedef struct _SceKernelThreadInfo {
 	/** Size of the structure */
 	SceSize              size;
-	/** The UID of the process where the thread belongs */
-	SceUID               processId; //Needs confirmation
-	/** Nul terminated name of the thread */
-	char                 name[32];
-	/** Thread attributes */
-	SceUInt              attr;
-	/** Thread status */
-	int                  status;
-	/** Thread entry point */
+	SceUID               processId;
+	char                 name[SCE_UID_NAMELEN+1];
+	SceUInt32            attr;
+	SceUInt32            status;
 	SceKernelThreadEntry entry;
-	/** Thread stack pointer */
-	void                 *stack;
-	/** Thread stack size */
-	int                  stackSize;
-	/** Initial priority */
-	int                  initPriority;
-	/** Current priority */
-	int                  currentPriority;
-	/** Initial CPU affinity mask */
-	int                  initCpuAffinityMask;
-	/** Current CPU affinity mask */
-	int                  currentCpuAffinityMask;
-	/** Current CPU ID */
-	int                  currentCpuId;
-	/** Last executed CPU ID */
-	int                  lastExecutedCpuId;
-	/** Wait type */
-	int                  waitType;
-	/** Wait id */
+	void                 *pStack;
+	SceSize              stackSize;
+	SceInt32             initPriority;
+	SceInt32             currentPriority;
+	SceInt32             initCpuAffinityMask;
+	SceInt32             currentCpuAffinityMask;
+	SceInt32             currentCpuId;
+	SceInt32             lastExecutedCpuId;
+	SceUInt32            waitType;
 	SceUID               waitId;
-	/** Exit status of the thread */
-	int                  exitStatus;
-	/** Number of clock cycles run */
+	SceInt32             exitStatus;
 	SceKernelSysClock    runClocks;
-	/** Interrupt preemption count */
-	SceUInt              intrPreemptCount;
-	/** Thread preemption count */
-	SceUInt              threadPreemptCount;
-	/** Thread release count */
-	SceUInt              threadReleaseCount;
+	SceUInt32            intrPreemptCount;
+	SceUInt32            threadPreemptCount;
+	SceUInt32            threadReleaseCount;
+	SceInt32             changeCpuCount;
 	/** Function notify callback UID */
-	SceUID               fNotifyCallback;
-	/** Reserved */
-	int                  reserved;
+	SceInt32             fNotifyCallback;
+	SceInt32             reserved;
 } SceKernelThreadInfo;
 
 /** Statistics about a running thread.
@@ -86,7 +57,7 @@ typedef struct SceKernelThreadRunStatus {
 		SceUID processId;
 		SceUID threadId;
 		int    priority;
-	} cpuInfo[4];
+	} cpuInfo[SCE_KERNEL_MAX_CPU];
 } SceKernelThreadRunStatus;
 
 /* Sure there must be more than this, but haven't seen them */
@@ -99,183 +70,188 @@ typedef enum SceThreadStatus {
 	SCE_THREAD_KILLED  = 32, /* Thread manager has killed the thread (stack overflow) */
 } SceThreadStatus;
 
-typedef enum SceKernelMutexAttribute {
-	SCE_KERNEL_MUTEX_ATTR_RECURSIVE = 0x02
-} SceKernelMutexAttribute;
-
 /**
  * Create a thread
  *
- * @par Example:
- * @code
- * SceUID thid;
- * thid = sceKernelCreateThread("my_thread", threadFunc, 0x10000100, 0x10000, 0, 0, NULL);
- * @endcode
- *
- * @param name - An arbitrary thread name.
+ * @param pName - An arbitrary thread name.
  * @param entry - The thread function to run when started.
  * @param initPriority - The initial priority of the thread. Less if higher priority.
  * @param stackSize - The size of the initial stack.
  * @param attr - The thread attributes, zero or more of ::SceThreadAttributes.
  * @param cpuAffinityMask - The CPU affinity mask
- * @param option - Additional options specified by ::SceKernelThreadOptParam.
+ * @param pOptParam - Additional options specified by ::SceKernelThreadOptParam.
 
  * @return UID of the created thread, or an error code.
  */
-SceUID sceKernelCreateThread(const char *name, SceKernelThreadEntry entry, int initPriority,
-                             int stackSize, SceUInt attr, int cpuAffinityMask,
-                             const SceKernelThreadOptParam *option);
+SceUID	sceKernelCreateThread(
+	const char                    *pName,
+	SceKernelThreadEntry          entry,
+	SceInt32                      initPriority,
+	SceSize                       stackSize,
+	SceUInt32                     attr,
+	SceInt32                      cpuAffinityMask,
+	const SceKernelThreadOptParam *pOptParam);
 
 /**
  * Delate a thread
  *
- * @param thid - UID of the thread to be deleted.
+ * @param threadId - UID of the thread to be deleted.
  *
  * @return < 0 on error.
  */
-int sceKernelDeleteThread(SceUID thid);
+SceInt32 sceKernelDeleteThread(SceUID threadId);
 
 /**
  * Start a created thread
  *
- * @param thid - Thread id from ::sceKernelCreateThread
- * @param arglen - Length of the data pointed to by argp, in bytes
- * @param argp - Pointer to the arguments.
+ * @param threadId - Thread id from ::sceKernelCreateThread
+ * @param argSize - Length of the data pointed to by argp, in bytes
+ * @param pArgBlock - Pointer to the arguments.
  */
-int sceKernelStartThread(SceUID thid, SceSize arglen, void *argp);
+SceInt32 sceKernelStartThread(SceUID threadId, SceSize argSize, const void *pArgBlock);
 
 /**
  * Exit a thread
  *
- * @param status - Exit status.
+ * @param exitStatus - Exit status.
  */
-int sceKernelExitThread(int status);
+SceInt32 sceKernelExitThread(SceInt32 exitStatus);
 
 /**
   * Exit a thread and delete itself.
   *
-  * @param status - Exit status
+  * @param exitStatus - Exit status
   */
-int sceKernelExitDeleteThread(int status);
+SceInt32 sceKernelExitDeleteThread(SceInt32 exitStatus);
 
 /**
   * Wait until a thread has ended.
   *
-  * @param thid - Id of the thread to wait for.
-  * @param stat - Exit status.
-  * @param timeout - Timeout in microseconds (assumed).
+  * @param threadId - Id of the thread to wait for.
+  * @param pExitStatus - Exit status.
+  * @param pTimeout - Timeout in microseconds.
   *
   * @return < 0 on error.
   */
-int sceKernelWaitThreadEnd(SceUID thid, int *stat, SceUInt *timeout);
+SceInt32 sceKernelWaitThreadEnd(SceUID threadId, SceInt32 *pExitStatus, SceUInt32 *pTimeout);
 
 /**
   * Wait until a thread has ended and handle callbacks if necessary.
   *
-  * @param thid - Id of the thread to wait for.
-  * @param stat - Exit status.
-  * @param timeout - Timeout in microseconds (assumed).
+  * @param threadId - Id of the thread to wait for.
+  * @param pExitStatus - Exit status.
+  * @param pTimeout - Timeout in microseconds.
   *
   * @return < 0 on error.
   */
-int sceKernelWaitThreadEndCB(SceUID thid, int *stat, SceUInt *timeout);
+SceInt32 sceKernelWaitThreadEndCB(SceUID threadId, SceInt32 *pExitStatus, SceUInt32 *pTimeout);
 
 /**
   * Delay the current thread by a specified number of microseconds
   *
-  * @param delay - Delay in microseconds.
+  * @param usec - Delay in microseconds.
   *
   * @par Example:
   * @code
   * sceKernelDelayThread(1000000); // Delay for a second
   * @endcode
   */
-int sceKernelDelayThread(SceUInt delay);
+SceInt32 sceKernelDelayThread(SceUInt32 usec);
 
 /**
   * Delay the current thread by a specified number of microseconds and handle any callbacks.
   *
-  * @param delay - Delay in microseconds.
+  * @param usec - Delay in microseconds.
   *
   * @par Example:
   * @code
   * sceKernelDelayThread(1000000); // Delay for a second
   * @endcode
   */
-int sceKernelDelayThreadCB(SceUInt delay);
+SceInt32 sceKernelDelayThreadCB(SceUInt32 usec);
 
 /**
  * Modify the attributes of the current thread.
  *
- * @param unknown - Set to 0.
- * @param attr - The thread attributes to modify.  One of ::SceThreadAttributes.
+ * @param clearAttr - Bits to clear
+ * @param setAttr - Bits to set
  *
  * @return < 0 on error.
  */
-int sceKernelChangeCurrentThreadAttr(int unknown, SceUInt attr);
+SceInt32 sceKernelChangeCurrentThreadAttr(SceUInt32 clearAttr, SceUInt32 setAttr);
 
 /**
   * Change the threads current priority.
   *
-  * @param thid - The ID of the thread (from ::sceKernelCreateThread or ::sceKernelGetThreadId)
+  * @param threadId - The ID of the thread (from ::sceKernelCreateThread or ::sceKernelGetThreadId)
   * @param priority - The new priority (the lower the number the higher the priority)
   *
   * @par Example:
   * @code
-  * int thid = sceKernelGetThreadId();
+  * int threadId = sceKernelGetThreadId();
   * // Change priority of current thread to 16
   * sceKernelChangeThreadPriority(thid, 16);
   * @endcode
   *
   * @return 0 if successful, otherwise the error code.
   */
-int sceKernelChangeThreadPriority(SceUID thid, int priority);
+SceInt32 sceKernelChangeThreadPriority(SceUID threadId, SceInt32 priority);
+
+/**
+  * Change the threads current priority.
+  *
+  * @param threadId - The ID of the thread (from ::sceKernelCreateThread or ::sceKernelGetThreadId)
+  * @param priority - The new priority (the lower the number the higher the priority)
+  *
+  * @return old priority or error code
+  */
+SceInt32 sceKernelChangeThreadPriority2(SceUID threadId, SceInt32 priority);
 
 /**
   * Get the current thread Id
   *
   * @return The thread id of the calling thread.
   */
-int sceKernelGetThreadId(void);
+SceUID sceKernelGetThreadId(void);
 
 /**
  * Get the current priority of the thread you are in.
  *
  * @return The current thread priority
  */
-int sceKernelGetThreadCurrentPriority(void);
+SceInt32 sceKernelGetThreadCurrentPriority(void);
 
 /**
  * Get the exit status of a thread.
  *
- * @param thid - The UID of the thread to check.
+ * @param threadId - The UID of the thread to check.
+ * @param pExitStatus - pointer to area to store result
  *
- * @return The exit status
+ * @return 0 or <0 on error
  */
-int sceKernelGetThreadExitStatus(SceUID thid);
+SceInt32 sceKernelGetThreadExitStatus(SceUID threadId, SceInt32 *pExitStatus);
 
 /**
- * Check the thread stack?
+ * Check remaining thread stack size
  *
- * @return Unknown.
+ * @return Stack size at the time of function call
  */
-int sceKernelCheckThreadStack(void);
+SceSize sceKernelCheckThreadStack(void);
 
 /**
  * Get the free stack size for a thread.
  *
- * @param thid - The thread ID. Seem to take current thread
- * if set to 0.
+ * @param threadId - The thread ID
  *
  * @return The free size.
  */
-int sceKernelGetThreadStackFreeSize(SceUID thid);
+SceSize sceKernelGetThreadStackFreeSize(SceUID threadId);
 
 /**
   * Get the status information for the specified thread.
   *
-  * @param thid - Id of the thread to get status
-  * @param info - Pointer to the info structure to receive the data.
+  * @param threadId - Id of the thread to get status
+  * @param pInfo - Pointer to the info structure to receive the data.
   * Note: The structures size field should be set to
   * sizeof(SceKernelThreadInfo) before calling this function.
   *
@@ -288,17 +264,41 @@ int sceKernelGetThreadStackFreeSize(SceUID thid);
   * @endcode
   * @return 0 if successful, otherwise the error code.
   */
-int sceKernelGetThreadInfo(SceUID thid, SceKernelThreadInfo *info);
+SceInt32 sceKernelGetThreadInfo(SceUID threadId, SceKernelThreadInfo *pInfo);
 
 /**
  * Retrive the runtime status of a thread.
  *
- * @param thid - UID of the thread to retrieve status.
- * @param status - Pointer to a ::SceKernelThreadRunStatus struct to receive the runtime status.
+ * @param pStatus - Pointer to a ::SceKernelThreadRunStatus struct to receive the runtime status.
  *
  * @return 0 if successful, otherwise the error code.
  */
-int sceKernelGetThreadRunStatus(SceUID thid, SceKernelThreadRunStatus *status);
+SceInt32 sceKernelGetThreadRunStatus(SceKernelThreadRunStatus *pStatus);
+
+typedef SceInt32 (*SceKernelChangeStackFunction)(void *pArg);
+
+SceInt32 sceKernelCallWithChangeStack(
+	void *pBase,
+	SceSize size,
+	SceKernelChangeStackFunction changeStackFunc,
+	void *pCommon);
+
+SceInt32 sceKernelChangeThreadCpuAffinityMask(SceUID threadId, SceInt32 cpuAffinityMask);
+
+SceInt32 sceKernelGetThreadCpuAffinityMask(SceUID threadId);
+
+/**
+ * Get the process ID of the current thread.
+ *
+ * @return process ID of the current thread
+ */
+SceUID sceKernelGetProcessId(void);
+
+SceInt32 sceKernelCheckWaitableStatus(void);
+
+SceInt32 sceKernelChangeThreadVfpException(SceInt32 clearMask, SceInt32 setMask);
+
+SceInt32 sceKernelGetCurrentThreadVfpException(void);
 
 
 /* Semaphores. */
@@ -318,7 +318,7 @@ typedef struct SceKernelSemaInfo {
 	/** The UID of the semaphore */
 	SceUID          semaId;
 	/** NUL-terminated name of the semaphore. */
-	char            name[32];
+	char            name[SCE_UID_NAMELEN + 1];
 	/** Attributes. */
 	SceUInt         attr;
 	/** The initial count the semaphore was created with. */
@@ -342,20 +342,25 @@ typedef struct SceKernelSemaInfo {
  *
  * @param name - Specifies the name of the sema
  * @param attr - Sema attribute flags (normally set to 0)
- * @param initVal - Sema initial value
- * @param maxVal - Sema maximum value
- * @param option - Sema options (normally set to 0)
+ * @param initCount - Sema initial value
+ * @param maxCount - Sema maximum value
+ * @param pOptParam - Sema options (normally set to 0)
  * @return A semaphore id
  */
-SceUID sceKernelCreateSema(const char *name, SceUInt attr, int initVal, int maxVal, SceKernelSemaOptParam *option);
+SceUID sceKernelCreateSema(
+	const char *name,
+	SceUInt32 attr,
+	SceInt32 initCount,
+	SceInt32 maxCount,
+	SceKernelSemaOptParam *pOptParam);
 
 /**
  * Destroy a semaphore
  *
- * @param semaid - The semaid returned from a previous create call.
- * @return Returns the value 0 if it's successful, otherwise -1
+ * @param semaId - The semaid returned from a previous create call.
+ * @return Returns the value 0 if it's successful, otherwise negative
  */
-int sceKernelDeleteSema(SceUID semaid);
+SceInt32 sceKernelDeleteSema(SceUID semaId);
 
 /**
  * Send a signal to a semaphore
@@ -363,77 +368,81 @@ int sceKernelDeleteSema(SceUID semaid);
  * @par Example:
  * @code
  * // Signal the sema
- * sceKernelSignalSema(semaid, 1);
+ * sceKernelSignalSema(semaId, 1);
  * @endcode
  *
- * @param semaid - The sema id returned from ::sceKernelCreateSema
- * @param signal - The amount to signal the sema (i.e. if 2 then increment the sema by 2)
+ * @param semaId - The sema ID returned from ::sceKernelCreateSema
+ * @param signalCount - The amount to signal the sema (i.e. if 2 then increment the sema by 2)
  *
  * @return < 0 On error.
  */
-int sceKernelSignalSema(SceUID semaid, int signal);
+SceInt32 sceKernelSignalSema(SceUID semaId, SceInt32 signalCount);
 
 /**
  * Lock a semaphore
  *
  * @par Example:
  * @code
- * sceKernelWaitSema(semaid, 1, 0);
+ * sceKernelWaitSema(semaId, 1, 0);
  * @endcode
  *
- * @param semaid - The sema id returned from ::sceKernelCreateSema
- * @param signal - The value to wait for (i.e. if 1 then wait till reaches a signal state of 1)
- * @param timeout - Timeout in microseconds (assumed).
+ * @param semaId - The sema id returned from ::sceKernelCreateSema
+ * @param needCount - The value to wait for (i.e. if 1 then wait till reaches a signal state of 1)
+ * @param pTimeout - Timeout in microseconds.
  *
  * @return < 0 on error.
  */
-int sceKernelWaitSema(SceUID semaid, int signal, SceUInt *timeout);
+SceInt32 sceKernelWaitSema(SceUID semaId, SceInt32 needCount, SceUInt32 *pTimeout);
 
 /**
  * Lock a semaphore and handle callbacks if necessary.
  *
  * @par Example:
  * @code
- * sceKernelWaitSemaCB(semaid, 1, 0);
+ * sceKernelWaitSemaCB(semaId, 1, 0);
  * @endcode
  *
- * @param semaid - The sema id returned from ::sceKernelCreateSema
- * @param signal - The value to wait for (i.e. if 1 then wait till reaches a signal state of 1)
- * @param timeout - Timeout in microseconds (assumed).
+ * @param semaId - The sema id returned from ::sceKernelCreateSema
+ * @param needCount - The value to wait for (i.e. if 1 then wait till reaches a signal state of 1)
+ * @param pTimeout - Timeout in microseconds.
  *
  * @return < 0 on error.
  */
-int sceKernelWaitSemaCB(SceUID semaid, int signal, SceUInt *timeout);
+SceInt32 sceKernelWaitSemaCB(SceUID semaId, SceInt32 needCount, SceUInt32 *pTimeout);
 
 /**
  * Poll a semaphore.
  *
- * @param semaid - UID of the semaphore to poll.
- * @param signal - The value to test for.
+ * @param semaId - UID of the semaphore to poll.
+ * @param needCount - The value to test for.
  *
  * @return < 0 on error.
  */
-int sceKernelPollSema(SceUID semaid, int signal);
+SceInt32 sceKernelPollSema(SceUID semaId, SceInt32 needCount);
 
 /**
  * Cancels a semaphore
  *
- * @param semaid - The sema id returned from ::sceKernelCreateSema
+ * @param semaId - The sema id returned from ::sceKernelCreateSema
  * @param setCount - The new lock count of the semaphore
- * @param numWaitThreads - Number of threads waiting for the semaphore
+ * @param pNumWaitThreads - Number of threads waiting for the semaphore
  * @return < 0 On error.
  */
-int sceKernelCancelSema(SceUID semaid, int setCount, int *numWaitThreads);
+SceInt32 sceKernelCancelSema(SceUID semaId, SceInt32 setCount, SceUInt32 *pNumWaitThreads);
 
 /**
  * Retrieve information about a semaphore.
  *
- * @param semaid - UID of the semaphore to retrieve info for.
- * @param info - Pointer to a ::SceKernelSemaInfo struct to receive the info.
+ * @param semaId - UID of the semaphore to retrieve info for.
+ * @param pInfo - Pointer to a ::SceKernelSemaInfo struct to receive the info.
  *
  * @return < 0 on error.
  */
-int sceKernelGetSemaInfo(SceUID semaid, SceKernelSemaInfo *info);
+SceInt32 sceKernelGetSemaInfo(SceUID semaId, SceKernelSemaInfo *pInfo);
+
+SceUID sceKernelOpenSema(const char *pName);
+
+SceInt32 sceKernelCloseSema(SceUID semaId);
 
 
 /* Mutexes. */
@@ -442,7 +451,7 @@ int sceKernelGetSemaInfo(SceUID semaid, SceKernelSemaInfo *info);
 typedef struct SceKernelMutexOptParam {
 	/** Size of the ::SceKernelMutexOptParam structure. */
 	SceSize     size;
-	int         ceilingPriority;
+	SceInt32    ceilingPriority;
 } SceKernelMutexOptParam;
 
 /** Current state of a mutex.
@@ -454,17 +463,18 @@ typedef struct SceKernelMutexInfo {
 	/** The UID of the mutex. */
 	SceUID          mutexId;
 	/** NUL-terminated name of the mutex. */
-	char            name[32];
+	char            name[SCE_UID_NAMELEN + 1];
 	/** Attributes. */
-	SceUInt         attr;
+	SceUInt32       attr;
 	/** The initial count the mutex was created with. */
-	int             initCount;
+	SceInt32        initCount;
 	/** The current count. */
-	int             currentCount;
+	SceInt32        currentCount;
 	/** The UID of the current owner of the mutex. */
 	SceUID          currentOwnerId;
 	/** The number of threads waiting on the mutex. */
-	int             numWaitThreads;
+	SceUInt32       numWaitThreads;
+	SceInt32        ceilingPriority;
 } SceKernelMutexInfo;
 
 /**
@@ -476,141 +486,125 @@ typedef struct SceKernelMutexInfo {
  * mutexid = sceKernelCreateMutex("MyMutex", 0, 1, 1, 0);
  * @endcode
  *
- * @param name - Specifies the name of the mutex
+ * @param pName - Specifies the name of the mutex
  * @param attr - Mutex attribute flags (normally set to 0)
  * @param initCount - Mutex initial value
- * @param option - Mutex options (normally set to 0)
+ * @param pOptParam - Mutex options (normally set to 0)
  * @return A mutex id
  */
-SceUID sceKernelCreateMutex(const char *name, SceUInt attr, int initCount, SceKernelMutexOptParam *option);
+SceUID sceKernelCreateMutex(
+	const char *pName,
+	SceUInt32 attr,
+	SceInt32 initCount,
+	const SceKernelMutexOptParam *pOptParam);
 
 /**
  * Destroy a mutex
  *
- * @param mutexid - The mutex id returned from ::sceKernelCreateMutex
- * @return Returns the value 0 if it's successful, otherwise -1
+ * @param mutexId - The mutex id returned from ::sceKernelCreateMutex
+ * @return Returns the value 0 if it's successful, otherwise < 0
  */
-int sceKernelDeleteMutex(SceUID mutexid);
+SceInt32 sceKernelDeleteMutex(SceUID mutexId);
 
 /**
  * Open a mutex
  *
- * @param name - The name of the mutex to open
- * @return Returns the value 0 if it's successful, otherwise -1
+ * @param pName - The name of the mutex to open
+ * @return Returns an UID if successful, otherwise < 0
  */
-int sceKernelOpenMutex(const char *name);
+SceUID sceKernelOpenMutex(const char *pName);
 
 /**
  * Close a mutex
  *
- * @param mutexid - The mutex id returned from ::sceKernelCreateMutex
- * @return Returns the value 0 if it's successful, otherwise -1
+ * @param mutexId - The mutex id returned from ::sceKernelCreateMutex
+ * @return Returns the value 0 if it's successful, otherwise < 0
  */
-int sceKernelCloseMutex(SceUID mutexid);
+SceInt32 sceKernelCloseMutex(SceUID mutexId);
 
 /**
  * Lock a mutex
  *
- * @param mutexid - The mutex id returned from ::sceKernelCreateMutex
+ * @param mutexId - The mutex id returned from ::sceKernelCreateMutex
  * @param lockCount - The value to increment to the lock count of the mutex
- * @param timeout - Timeout in microseconds (assumed)
+ * @param pTimeout - Timeout in microseconds
  * @return < 0 On error.
  */
-int sceKernelLockMutex(SceUID mutexid, int lockCount, unsigned int *timeout);
+SceInt32 sceKernelLockMutex(SceUID mutexId, SceInt32 lockCount, SceUInt32 *pTimeout);
 
 /**
  * Lock a mutex and handle callbacks if necessary.
  *
- * @param mutexid - The mutex id returned from ::sceKernelCreateMutex
+ * @param mutexId - The mutex id returned from ::sceKernelCreateMutex
  * @param lockCount - The value to increment to the lock count of the mutex
- * @param timeout - Timeout in microseconds (assumed)
+ * @param pTimeout - Timeout in microseconds
  * @return < 0 On error.
  */
-int sceKernelLockMutexCB(SceUID mutexid, int lockCount, unsigned int *timeout);
+SceInt32 sceKernelLockMutexCB(SceUID mutexId, SceInt32 lockCount, SceUInt32 *pTimeout);
 
 /**
  * Try to lock a mutex (non-blocking)
  *
- * @param mutexid - The mutex id returned from ::sceKernelCreateMutex
+ * @param mutexId - The mutex id returned from ::sceKernelCreateMutex
  * @param lockCount - The value to increment to the lock count of the mutex
  * @return < 0 On error.
  */
-int sceKernelTryLockMutex(SceUID mutexid, int lockCount);
+SceInt32 sceKernelTryLockMutex(SceUID mutexId, SceInt32 lockCount);
 
 /**
  * Try to unlock a mutex (non-blocking)
  *
- * @param mutexid - The mutex id returned from ::sceKernelCreateMutex
+ * @param mutexId - The mutex id returned from ::sceKernelCreateMutex
  * @param unlockCount - The value to decrement to the lock count of the mutex
  * @return < 0 On error.
  */
-int sceKernelUnlockMutex(SceUID mutexid, int unlockCount);
+SceInt32 sceKernelUnlockMutex(SceUID mutexId, SceInt32 unlockCount);
 
 /**
  * Cancels a mutex
  *
- * @param mutexid - The mutex id returned from ::sceKernelCreateMutex
+ * @param mutexId - The mutex id returned from ::sceKernelCreateMutex
  * @param newCount - The new lock count of the mutex
- * @param numWaitThreads - Number of threads waiting for the mutex
+ * @param pNumWaitThreads - Number of threads waiting for the mutex
  * @return < 0 On error.
  */
-int sceKernelCancelMutex(SceUID mutexid, int newCount, int *numWaitThreads);
+SceInt32 sceKernelCancelMutex(SceUID mutexId, SceInt32 newCount, SceUInt32 *pNumWaitThreads);
 
 /**
  * Retrieve information about a mutex.
  *
- * @param mutexid - UID of the mutex to retrieve info for.
- * @param info - Pointer to a ::SceKernelMutexInfo struct to receive the info.
+ * @param mutexId - UID of the mutex to retrieve info for.
+ * @param pInfo - Pointer to a ::SceKernelMutexInfo struct to receive the info.
  *
  * @return < 0 on error.
  */
-int sceKernelGetMutexInfo(SceUID mutexid, SceKernelMutexInfo *info);
+SceInt32 sceKernelGetMutexInfo(SceUID mutexId, SceKernelMutexInfo *pInfo);
 
 
 /* Event flags. */
 
 /** Structure to hold the event flag information */
 typedef struct SceKernelEventFlagInfo {
-	SceSize size;
-	SceUID  evfId;          // Needs confirmation
-	char    name[32];
-	SceUInt attr;
-	SceUInt initPattern;
-	SceUInt currentPattern;
-	int     numWaitThreads;
+	SceSize   size;
+	SceUID    evfId;
+	char      name[SCE_UID_NAMELEN + 1];
+	SceUInt32 attr;
+	SceUInt32 initPattern;
+	SceUInt32 currentPattern;
+	SceUInt32 numWaitThreads;
 } SceKernelEventFlagInfo;
 
 typedef struct SceKernelEventFlagOptParam {
 	SceSize         size;
 } SceKernelEventFlagOptParam;
 
-typedef struct SceKernelEventFlagOptParam SceKernelEventFlagOptParam;
-
-/** Event flag creation attributes */
-typedef enum SceEventFlagAttributes {
-	/** Allow the event flag to be waited upon by multiple threads */
-	SCE_EVENT_WAITMULTIPLE = 0x200
-} SceEventFlagAttributes;
-
-/** Event flag wait types */
-typedef enum SceEventFlagWaitTypes {
-	/** Wait for all bits in the pattern to be set */
-	SCE_EVENT_WAITAND       = 0,
-	/** Wait for one or more bits in the pattern to be set */
-	SCE_EVENT_WAITOR        = 1,
-	/** Clear all the bits when it matches */
-	SCE_EVENT_WAITCLEAR     = 2,
-	/** Clear the wait pattern when it matches */
-	SCE_EVENT_WAITCLEAR_PAT = 4
-} SceEventFlagWaitTypes;
-
 /**
   * Create an event flag.
   *
-  * @param name - The name of the event flag.
+  * @param pName - The name of the event flag.
   * @param attr - Attributes from ::SceEventFlagAttributes
-  * @param bits - Initial bit pattern.
-  * @param opt  - Options, set to NULL
+  * @param initPattern - Initial bit pattern.
+  * @param pOptParam  - Options, set to NULL
   * @return < 0 on error. >= 0 event flag id.
   *
   * @par Example:
@@ -619,81 +613,101 @@ typedef enum SceEventFlagWaitTypes {
   * evid = sceKernelCreateEventFlag("wait_event", 0, 0, 0);
   * @endcode
   */
-SceUID sceKernelCreateEventFlag(const char *name, int attr, int bits, SceKernelEventFlagOptParam *opt);
+SceUID sceKernelCreateEventFlag(
+	const char *pName,
+	SceUInt32 attr,
+	SceUInt32 initPattern,
+	const SceKernelEventFlagOptParam *pOptParam);
 
 /**
   * Set an event flag bit pattern.
   *
-  * @param evid - The event id returned by ::sceKernelCreateEventFlag.
-  * @param bits - The bit pattern to set.
+  * @param evfId - The event id returned by ::sceKernelCreateEventFlag.
+  * @param bitPattern - The bit pattern to set.
   *
   * @return < 0 On error
   */
-int sceKernelSetEventFlag(SceUID evid, unsigned int bits);
+SceInt32 sceKernelSetEventFlag(SceUID evfId, SceUInt32 bitPattern);
 
 /**
  * Clear a event flag bit pattern
  *
- * @param evid - The event id returned by ::sceKernelCreateEventFlag
- * @param bits - The bits to clean
+ * @param evfId - The event id returned by ::sceKernelCreateEventFlag
+ * @param bitPattern - The bits to unset
  *
  * @return < 0 on Error
  */
-int sceKernelClearEventFlag(SceUID evid, unsigned int bits);
+SceInt32 sceKernelClearEventFlag(SceUID evfId, SceUInt32 bitPattern);
 
 /**
   * Poll an event flag for a given bit pattern.
   *
-  * @param evid - The event id returned by ::sceKernelCreateEventFlag.
-  * @param bits - The bit pattern to poll for.
-  * @param wait - Wait type, one or more of ::SceEventFlagWaitTypes or'ed together
-  * @param outBits - The bit pattern that was matched.
+  * @param evfId - The event id returned by ::sceKernelCreateEventFlag.
+  * @param bitPattern - The bit pattern to poll for.
+  * @param waitMode - Wait type, one or more of ::SceEventFlagWaitTypes or'ed together
+  * @param pResultPat - The bit pattern that was matched.
   * @return < 0 On error
   */
-int sceKernelPollEventFlag(int evid, unsigned int bits, unsigned int wait, unsigned int *outBits);
+SceInt32 sceKernelPollEventFlag(SceUID evfId, SceUInt32 bitPattern, SceUInt32 waitMode, SceUInt32 *pResultPat);
 
 /**
   * Wait for an event flag for a given bit pattern.
   *
-  * @param evid - The event id returned by ::sceKernelCreateEventFlag.
-  * @param bits - The bit pattern to poll for.
-  * @param wait - Wait type, one or more of ::SceEventFlagWaitTypes or'ed together
-  * @param outBits - The bit pattern that was matched.
-  * @param timeout  - Timeout in microseconds
+  * @param evfId - The event id returned by ::sceKernelCreateEventFlag.
+  * @param bitPattern - The bit pattern to poll for.
+  * @param waitMode - Wait type, one or more of ::SceEventFlagWaitTypes or'ed together
+  * @param pResultPat - The bit pattern that was matched.
+  * @param pTimeout  - Timeout in microseconds
   * @return < 0 On error
   */
-int sceKernelWaitEventFlag(int evid, unsigned int bits, unsigned int wait, unsigned int *outBits, SceUInt *timeout);
+SceInt32 sceKernelWaitEventFlag(
+	SceUID evfId,
+	SceUInt32 bitPattern,
+	SceUInt32 waitMode,
+	SceUInt32 *pResultPat,
+	SceUInt32 *pTimeout);
 
 /**
   * Wait for an event flag for a given bit pattern with callback.
   *
-  * @param evid - The event id returned by ::sceKernelCreateEventFlag.
-  * @param bits - The bit pattern to poll for.
-  * @param wait - Wait type, one or more of ::SceEventFlagWaitTypes or'ed together
-  * @param outBits - The bit pattern that was matched.
-  * @param timeout  - Timeout in microseconds
+  * @param evfId - The event id returned by ::sceKernelCreateEventFlag.
+  * @param bitPattern - The bit pattern to poll for.
+  * @param waitMode - Wait type, one or more of ::SceEventFlagWaitTypes or'ed together
+  * @param pResultPat - The bit pattern that was matched.
+  * @param pTimeout  - Timeout in microseconds
   * @return < 0 On error
   */
-int sceKernelWaitEventFlagCB(int evid, unsigned int bits, unsigned int wait, unsigned int *outBits, SceUInt *timeout);
+SceInt32 sceKernelWaitEventFlagCB(
+	SceUID evfId,
+	SceUInt32 bitPattern,
+	SceUInt32 waitMode,
+	SceUInt32 *pResultPat,
+	SceUInt32 *pTimeout);
 
 /**
   * Delete an event flag
   *
-  * @param evid - The event id returned by ::sceKernelCreateEventFlag.
+  * @param evfId - The event id returned by ::sceKernelCreateEventFlag.
   *
   * @return < 0 On error
   */
-int sceKernelDeleteEventFlag(int evid);
+SceInt32 sceKernelDeleteEventFlag(SceUID evfId);
 
 /**
   * Get the status of an event flag.
   *
-  * @param event - The UID of the event.
-  * @param status - A pointer to a ::SceKernelEventFlagInfo structure.
+  * @param evfId - The UID of the event.
+  * @param pInfo - A pointer to a ::SceKernelEventFlagInfo structure.
   *
   * @return < 0 on error.
   */
-int sceKernelGetEventFlagInfo(SceUID event, SceKernelEventFlagInfo *info);
+SceInt32 sceKernelGetEventFlagInfo(SceUID evfId, SceKernelEventFlagInfo *pInfo);
+
+SceUID sceKernelOpenEventFlag(const char *pName);
+
+SceInt32 sceKernelCloseEventFlag(SceUID evfId);
+
+SceInt32 sceKernelCancelEventFlag(SceUID evfId, SceUInt32 setPattern, SceUInt32 *pNumWaitThreads);
 
 /* Condition variables */
 
@@ -712,7 +726,7 @@ typedef struct SceKernelCondInfo {
 	/** The UID of the condition variable. */
 	SceUID          condId;
 	/** NUL-terminated name of the condition variable. */
-	char            name[32];
+	char            name[SCE_UID_NAMELEN + 1];
 	/** Attributes. */
 	SceUInt         attr;
 	/** Mutex associated with the condition variable. */
@@ -730,55 +744,59 @@ typedef struct SceKernelCondInfo {
  * condId = sceKernelCreateCond("MyCond", 0, mutexId, NULL);
  * @endcode
  *
- * @param name - Specifies the name of the condition variable
+ * @param pName - Specifies the name of the condition variable
  * @param attr - Condition variable attribute flags (normally set to 0)
  * @param mutexId - Mutex to be related to the condition variable
- * @param option - Condition variable options (normally set to 0)
+ * @param pOptParam - Condition variable options (normally set to 0)
  * @return A condition variable id
  */
-SceUID sceKernelCreateCond(const char *name, SceUInt attr, SceUID mutexId, const SceKernelCondOptParam *option);
+SceUID sceKernelCreateCond(
+	const char *pName,
+	SceUInt32 attr,
+	SceUID mutexId,
+	const SceKernelCondOptParam *pOptParam);
 
 /**
  * Destroy a condition variable
  *
  * @param condition variableid - The condition variable id returned from ::sceKernelCreateCond
- * @return Returns the value 0 if it's successful, otherwise -1
+ * @return Returns the value 0 if it's successful, otherwise < 0
  */
-int sceKernelDeleteCond(SceUID condId);
+SceInt32 sceKernelDeleteCond(SceUID condId);
 
 /**
  * Open a condition variable
  *
- * @param name - The name of the condition variable to open
- * @return Returns the value 0 if it's successful, otherwise -1
+ * @param pName - The name of the condition variable to open
+ * @return Returns an UID if successful, otherwise < 0
  */
-int sceKernelOpenCond(const char *name);
+SceUID sceKernelOpenCond(const char *pName);
 
 /**
  * Close a condition variable
  *
  * @param condition variableid - The condition variable id returned from ::sceKernelCreateCond
- * @return Returns the value 0 if it's successful, otherwise -1
+ * @return Returns the value 0 if it's successful, otherwise < 0
  */
-int sceKernelCloseCond(SceUID condId);
+SceInt32 sceKernelCloseCond(SceUID condId);
 
 /**
  * Waits for a signal of a condition variable
  *
  * @param condId - The condition variable id returned from ::sceKernelCreateCond
- * @param timeout - Timeout in microseconds (assumed)
+ * @param pTimeout - Timeout in microseconds
  * @return < 0 On error.
  */
-int sceKernelWaitCond(SceUID condId, unsigned int *timeout);
+SceInt32 sceKernelWaitCond(SceUID condId, SceUInt32 *pTimeout);
 
 /**
  * Waits for a signal of a condition variable (with callbacks)
  *
  * @param condId - The condition variable id returned from ::sceKernelCreateCond
- * @param timeout - Timeout in microseconds (assumed)
+ * @param pTimeout - Timeout in microseconds
  * @return < 0 On error.
  */
-int sceKernelWaitCondCB(SceUID condId, unsigned int *timeout);
+SceInt32 sceKernelWaitCondCB(SceUID condId, SceUInt32 *pTimeout);
 
 /**
  * Signals a condition variable
@@ -786,7 +804,7 @@ int sceKernelWaitCondCB(SceUID condId, unsigned int *timeout);
  * @param condId - The condition variable id returned from ::sceKernelCreateCond
  * @return < 0 On error.
  */
-int sceKernelSignalCond(SceUID condId);
+SceInt32 sceKernelSignalCond(SceUID condId);
 
 /**
  * Signals a condition variable to all threads waiting for it
@@ -794,7 +812,7 @@ int sceKernelSignalCond(SceUID condId);
  * @param condId - The condition variable id returned from ::sceKernelCreateCond
  * @return < 0 On error.
  */
-int sceKernelSignalCondAll(SceUID condId);
+SceInt32 sceKernelSignalCondAll(SceUID condId);
 
 /**
  * Signals a condition variable to a specific thread waiting for it
@@ -803,31 +821,37 @@ int sceKernelSignalCondAll(SceUID condId);
  * @param threadId - The thread id returned from ::sceKernelCreateThread
  * @return < 0 On error.
  */
-int sceKernelSignalCondTo(SceUID condId, SceUID threadId);
+SceInt32 sceKernelSignalCondTo(SceUID condId, SceUID threadId);
+
+SceInt32 sceKernelGetCondInfo(SceUID condId, SceKernelCondInfo *pInfo);
 
 /* Callbacks. */
 
 /** Callback function prototype */
-typedef int (*SceKernelCallbackFunction)(int notifyId, int notifyCount, int notifyArg, void *common);
+typedef SceInt32 (*SceKernelCallbackFunction)(
+	SceUID notifyId,
+	SceInt32 notifyCount,
+	SceInt32 notifyArg,
+	void *pCommon);
 
 /** Structure to hold the status information for a callback */
 typedef struct SceKernelCallbackInfo {
 	/** Size of the structure (i.e. sizeof(SceKernelCallbackInfo)) */
-	SceSize size;
+	SceSize                   size;
 	/** The UID of the callback. */
-	SceUID  callbackId; // Needs confirmation
+	SceUID                    callbackId;
 	/** The name given to the callback */
-	char    name[32];
+	char                      name[SCE_UID_NAMELEN + 1];
+	SceUInt32                 attr;
 	/** The thread id associated with the callback */
-	SceUID  threadId;
+	SceUID                    threadId;
 	/** Pointer to the callback function */
-	SceKernelCallbackFunction callback;
+	SceKernelCallbackFunction callbackFunc;
+	SceUID                    notifyId;
+	SceInt32                  notifyCount;
+	SceInt32                  notifyArg;
 	/** User supplied argument for the callback */
-	void    *common;
-	/** Unknown */
-	int     notifyCount;
-	/** Unknown */
-	int     notifyArg;
+	void                      *pCommon;
 } SceKernelCallbackInfo;
 
 /**
@@ -840,209 +864,565 @@ typedef struct SceKernelCallbackInfo {
  * @endcode
  *
  * @param name - A textual name for the callback
- * @param attr - ?
- * @param func - A pointer to a function that will be called as the callback
- * @param arg  - Argument for the callback ?
+ * @param attr - Set to 0. There are no attributes.
+ * @param callbackFunc - A pointer to a function that will be called as the callback
+ * @param pCommon  - Common data for the callback
  *
  * @return >= 0 A callback id which can be used in subsequent functions, < 0 an error.
  */
-int sceKernelCreateCallback(const char *name, unsigned int attr, SceKernelCallbackFunction func, void *arg);
+SceUID sceKernelCreateCallback(
+	const char *name,
+	SceUInt32 attr,
+	SceKernelCallbackFunction callbackFunc,
+	void *pCommon);
 
 /**
   * Gets the status of a specified callback.
   *
-  * @param cb - The UID of the callback to retrieve info for.
-  * @param status - Pointer to a status structure. The size parameter should be
+  * @param callbackId - The UID of the callback to retrieve info for.
+  * @param pInfo - Pointer to a status structure. The size parameter should be
   * initialised before calling.
   *
   * @return < 0 on error.
   */
-int sceKernelGetCallbackInfo(SceUID cb, SceKernelCallbackInfo *infop);
+SceInt32 sceKernelGetCallbackInfo(SceUID callbackId, SceKernelCallbackInfo *pInfo);
 
 /**
  * Delete a callback
  *
- * @param cb - The UID of the specified callback
+ * @param callbackId - The UID of the specified callback
  *
  * @return 0 on success, < 0 on error
  */
-int sceKernelDeleteCallback(SceUID cb);
+SceInt32 sceKernelDeleteCallback(SceUID callbackId);
 
 /**
  * Notify a callback
  *
- * @param cb - The UID of the specified callback
- * @param arg2 - Passed as arg2 into the callback function
+ * @param callbackId - The UID of the specified callback
+ * @param notifyArg - Passed as arg2 into the callback function
  *
  * @return 0 on success, < 0 on error
  */
-int sceKernelNotifyCallback(SceUID cb, int arg2);
+SceInt32 sceKernelNotifyCallback(SceUID callbackId, SceInt32 notifyArg);
 
 /**
  * Cancel a callback ?
  *
- * @param cb - The UID of the specified callback
+ * @param callbackId - The UID of the specified callback
  *
  * @return 0 on success, < 0 on error
  */
-int sceKernelCancelCallback(SceUID cb);
+SceInt32 sceKernelCancelCallback(SceUID callbackId);
 
 /**
  * Get the callback count
  *
- * @param cb - The UID of the specified callback
+ * @param callbackId - The UID of the specified callback
  *
  * @return The callback count, < 0 on error
  */
-int sceKernelGetCallbackCount(SceUID cb);
+SceInt32 sceKernelGetCallbackCount(SceUID callbackId);
 
 /**
- * Check callback ?
+ * Check callback notification
  *
- * @return Something or another
+ * @return Callback notification count or < 0 on error
  */
-int sceKernelCheckCallback(void);
+SceInt32 sceKernelCheckCallback(void);
 
 
 /* Message pipes */
 
+typedef struct _SceKernelMsgPipeOptParam {
+	SceSize size;
+	SceUInt32 attr;
+	SceInt32 reserved[2];
+	SceUInt32 openLimit;
+} SceKernelMsgPipeOptParam;
+
 /**
  * Create a message pipe
  *
- * @param name - Name of the pipe
- * @param type - The type of memory attribute to use internally (set to 0x40)
- * @param attr - Set to 12
- * @param bufSize - The size of the internal buffer in multiples of 0x1000 (4KB)
- * @param opt  - Message pipe options (set to NULL)
+ * @param pName - Name of the pipe
+ * @param type - Message pipe memory type
+ * @param attr - Message pipe attribute
+ * @param bufSize - The size of the internal buffer in multiples of 0x1000 (4KiB) up to 32MiB
+ * @param pOptParam  - Message pipe options
  *
  * @return The UID of the created pipe, < 0 on error
  */
-SceUID sceKernelCreateMsgPipe(const char *name, int type, int attr, unsigned int bufSize, void *opt);
+SceUID sceKernelCreateMsgPipe(
+	const char *pName,
+	SceUInt32 type,
+	SceUInt32 attr,
+	SceSize bufSize,
+	const SceKernelMsgPipeOptParam *pOptParam);
 
 /**
  * Delete a message pipe
  *
- * @param uid - The UID of the pipe
+ * @param msgPipeId - The UID of the pipe
  *
  * @return 0 on success, < 0 on error
  */
-int sceKernelDeleteMsgPipe(SceUID uid);
+SceInt32 sceKernelDeleteMsgPipe(SceUID msgPipeId);
 
 /**
  * Send a message to a pipe
  *
- * @param uid - The UID of the pipe
- * @param message - Pointer to the message
- * @param size - Size of the message
- * @param unk1 - Unknown - async vs sync? use 0 for sync
- * @param unk2 - Unknown - use NULL
- * @param timeout - Timeout for send in us. use NULL to wait indefinitely
+ * @param msgPipeId - The UID of the pipe
+ * @param pSendBuf - Pointer to the message
+ * @param sendSize - Size of the message
+ * @param waitMode - Wait mode when sending
+ * @param pResult - Pointer to area to store sent size
+ * @param pTimeout - Timeout in microseconds
  *
  * @return 0 on success, < 0 on error
  */
-int sceKernelSendMsgPipe(SceUID uid, void *message, unsigned int size, int unk1, void *unk2, unsigned int *timeout);
+SceInt32 sceKernelSendMsgPipe(
+	SceUID msgPipeId,
+	const void *pSendBuf,
+	SceSize sendSize,
+	SceUInt32 waitMode,
+	SceSize *pResult,
+	SceUInt32 *pTimeout);
 
 /**
  * Send a message to a pipe (with callback)
  *
- * @param uid - The UID of the pipe
- * @param message - Pointer to the message
- * @param size - Size of the message
- * @param unk1 - Unknown - async vs sync? use 0 for sync
- * @param unk2 - Unknown - use NULL
- * @param timeout - Timeout for send in us. use NULL to wait indefinitely
+ * @param msgPipeId - The UID of the pipe
+ * @param pSendBuf - Pointer to the message
+ * @param sendSize - Size of the message
+ * @param waitMode - Wait mode when sending
+ * @param pResult - Pointer to area to store sent size
+ * @param pTimeout - Timeout in microseconds
  *
  * @return 0 on success, < 0 on error
  */
-int sceKernelSendMsgPipeCB(SceUID uid, void *message, unsigned int size, int unk1, void *unk2, unsigned int *timeout);
+SceInt32 sceKernelSendMsgPipeCB(
+	SceUID msgPipeId,
+	const void *pSendBuf,
+	SceSize sendSize,
+	SceUInt32 waitMode,
+	SceSize *pResult,
+	SceUInt32 *pTimeout);
 
 /**
- * Try to send a message to a pipe
+ * Send a message to a pipe (non blocking)
  *
- * @param uid - The UID of the pipe
- * @param message - Pointer to the message
- * @param size - Size of the message
- * @param unk1 - Unknown - use 0
- * @param unk2 - Unknown - use NULL
+ * @param msgPipeId - The UID of the pipe
+ * @param pSendBuf - Pointer to the message
+ * @param sendSize - Size of the message
+ * @param waitMode - Wait mode when sending
+ * @param pResult - Pointer to area to store sent size
  *
  * @return 0 on success, < 0 on error
  */
-int sceKernelTrySendMsgPipe(SceUID uid, void *message, unsigned int size, int unk1, void *unk2);
+SceInt32 sceKernelTrySendMsgPipe(
+	SceUID msgPipeId,
+	const void *pSendBuf,
+	SceSize sendSize,
+	SceUInt32 waitMode,
+	SceSize *pResult);
 
 /**
  * Receive a message from a pipe
  *
- * @param uid - The UID of the pipe
- * @param message - Pointer to the message
- * @param size - Size of the message
- * @param unk1 - Unknown - async vs sync? use 0 for sync
- * @param unk2 - Unknown - use NULL
- * @param timeout - Timeout for receive in us. use NULL to wait indefinitely
+ * @param msgPipeId - The UID of the pipe
+ * @param pRecvBuf - Pointer to the message
+ * @param recvSize - Size of the message
+ * @param waitMode - Wait mode when receiving
+ * @param pResult - Pointer to area to store received size
+ * @param pTimeout - Timeout in microseconds
  *
  * @return 0 on success, < 0 on error
  */
-int sceKernelReceiveMsgPipe(SceUID uid, void *message, unsigned int size, int unk1, void *unk2, unsigned int *timeout);
+SceInt32 sceKernelReceiveMsgPipe(
+	SceUID msgPipeId,
+	const void *pRecvBuf,
+	SceSize recvSize,
+	SceUInt32 waitMode,
+	SceSize *pResult,
+	SceUInt32 *pTimeout);
 
 /**
  * Receive a message from a pipe (with callback)
  *
- * @param uid - The UID of the pipe
- * @param message - Pointer to the message
- * @param size - Size of the message
- * @param unk1 - Unknown - async vs sync? use 0 for sync
- * @param unk2 - Unknown - use NULL
- * @param timeout - Timeout for receive in us. use NULL to wait indefinitely
+ * @param msgPipeId - The UID of the pipe
+ * @param pRecvBuf - Pointer to the message
+ * @param recvSize - Size of the message
+ * @param waitMode - Wait mode when receiving
+ * @param pResult - Pointer to area to store received size
+ * @param pTimeout - Timeout in microseconds
  *
  * @return 0 on success, < 0 on error
  */
-int sceKernelReceiveMsgPipeCB(SceUID uid, void *message, unsigned int size, int unk1, void *unk2, unsigned int *timeout);
+SceInt32 sceKernelReceiveMsgPipeCB(
+	SceUID msgPipeId,
+	const void *pRecvBuf,
+	SceSize recvSize,
+	SceUInt32 waitMode,
+	SceSize *pResult,
+	SceUInt32 *pTimeout);
 
 /**
- * Receive a message from a pipe
+ * Receive a message from a pipe (non blocking)
  *
- * @param uid - The UID of the pipe
- * @param message - Pointer to the message
- * @param size - Size of the message
- * @param unk1 - Unknown - use 0
- * @param unk2 - Unknown - use NULL
+ * @param msgPipeId - The UID of the pipe
+ * @param pRecvBuf - Pointer to the message
+ * @param recvSize - Size of the message
+ * @param waitMode - Wait mode when receiving
+ * @param pResult - Pointer to area to store received size
  *
  * @return 0 on success, < 0 on error
  */
-int sceKernelTryReceiveMsgPipe(SceUID uid, void *message, unsigned int size, int unk1, void *unk2);
+SceInt32 sceKernelTryReceiveMsgPipe(
+	SceUID msgPipeId,
+	void *pRecvBuf,
+	SceSize recvSize,
+	SceUInt32 waitMode,
+	SceSize *pResult);
 
 /**
  * Cancel a message pipe
  *
- * @param uid - UID of the pipe to cancel
- * @param psend - Receive number of sending threads, NULL is valid
- * @param precv - Receive number of receiving threads, NULL is valid
+ * @param msgPipeId - UID of the pipe to cancel
+ * @param pNumSendWaitThreads - Receive number of sending threads, NULL is valid
+ * @param pNumReceiveWaitThreads - Receive number of receiving threads, NULL is valid
  *
  * @return 0 on success, < 0 on error
  */
-int sceKernelCancelMsgPipe(SceUID uid, int *psend, int *precv);
+SceInt32 sceKernelCancelMsgPipe(
+	SceUID msgPipeId,
+	SceUInt32 *pNumSendWaitThreads,
+	SceUInt32 *pNumReceiveWaitThreads);
 
 /** Message Pipe status info */
 typedef struct SceKernelMppInfo {
-	SceSize size;
-	SceUID  mppId; // Needs confirmation
-	char    name[32];
-	SceUInt attr;
-	int     bufSize;
-	int     freeSize;
-	int     numSendWaitThreads;
-	int     numReceiveWaitThreads;
+	SceSize   size;
+	SceUID    msgPipeId;
+	char      name[SCE_UID_NAMELEN + 1];
+	SceUInt32 attr;
+	SceSize   bufSize;
+	SceSize   freeSize;
+	SceUInt32 numSendWaitThreads;
+	SceUInt32 numReceiveWaitThreads;
 } SceKernelMppInfo;
 
 /**
  * Get the status of a Message Pipe
  *
- * @param uid - The uid of the Message Pipe
- * @param info - Pointer to a ::SceKernelMppInfo structure
+ * @param msgPipeId - The uid of the Message Pipe
+ * @param pInfo - Pointer to a ::SceKernelMppInfo structure
  *
  * @return 0 on success, < 0 on error
  */
-int sceKernelGetMsgPipeInfo(SceUID uid, SceKernelMppInfo *info);
+SceInt32 sceKernelGetMsgPipeInfo(SceUID msgPipeId, SceKernelMppInfo *pInfo);
 
+SceUID sceKernelOpenMsgPipe(const char *pName);
+
+SceInt32 sceKernelCloseMsgPipe(SceUID msgPipeId);
+
+typedef struct _SceKernelMsgPipeVector {
+	void *pBase;
+	SceSize bufSize;
+} SceKernelMsgPipeVector;
+
+SceInt32 sceKernelSendMsgPipeVector(
+	SceUID msgPipeId,
+	const SceKernelMsgPipeVector *pVector,
+	SceUInt32 numVector,
+	SceUInt32 waitMode,
+	SceSize *pResult,
+	SceUInt32 *pTimeout
+);
+
+SceInt32 sceKernelSendMsgPipeVectorCB(
+	SceUID msgPipeId,
+	const SceKernelMsgPipeVector *pVector,
+	SceUInt32 numVector,
+	SceUInt32 waitMode,
+	SceSize *pResult,
+	SceUInt32 *pTimeout);
+
+SceInt32 sceKernelTrySendMsgPipeVector(
+	SceUID msgPipeId,
+	const SceKernelMsgPipeVector *pVector,
+	SceUInt32 numVector,
+	SceUInt32 waitMode,
+	SceSize *pResult);
+
+SceInt32 sceKernelReceiveMsgPipeVector(
+	SceUID msgPipeId,
+	const SceKernelMsgPipeVector *pVector,
+	SceUInt32 numVector,
+	SceUInt32 waitMode,
+	SceSize *pResult,
+	SceUInt32 *pTimeout);
+
+SceInt32 sceKernelReceiveMsgPipeVectorCB(
+	SceUID msgPipeId,
+	const SceKernelMsgPipeVector *pVector,
+	SceUInt32 numVector,
+	SceUInt32 waitMode,
+	SceSize *pResult,
+	SceUInt32 *pTimeout);
+
+SceInt32 sceKernelTryReceiveMsgPipeVector(
+	SceUID msgPipeId,
+	const SceKernelMsgPipeVector *pVector,
+	SceUInt32 numVector,
+	SceUInt32 waitMode,
+	SceSize *pResult);
+
+/* Thread event */
+
+SceInt32 sceKernelRegisterCallbackToEvent(SceUID eventId, SceUID callbackId);
+
+SceInt32 sceKernelUnregisterCallbackFromEvent(SceUID eventId, SceUID callbackId);
+
+SceInt32 sceKernelUnregisterCallbackFromEventAll(SceUID eventId);
+
+typedef SceInt32 (*SceKernelThreadEventHandler)(SceInt32 type, SceUID threadId, SceInt32 arg, void *pCommon);
+
+typedef struct _SceKernelEventInfo {
+	SceSize size;
+	SceUID eventId;
+	char name[SCE_UID_NAMELEN + 1];
+	SceUInt32 attr;
+	SceUInt32 eventPattern;
+	SceUInt64 userData;
+	SceUInt32 numWaitThreads;
+	SceInt32 reserved[1];
+} SceKernelEventInfo;
+
+SceInt32 sceKernelWaitEvent(
+	SceUID eventId,
+	SceUInt32 waitPattern,
+	SceUInt32 *pResultPattern,
+	SceUInt64 *pUserData,
+	SceUInt32 *pTimeout
+);
+
+SceInt32 sceKernelWaitEventCB(
+	SceUID eventId,
+	SceUInt32 waitPattern,
+	SceUInt32 *pResultPattern,
+	SceUInt64 *pUserData,
+	SceUInt32 *pTimeout
+);
+
+SceInt32 sceKernelPollEvent(
+	SceUID eventId,
+	SceUInt32 bitPattern,
+	SceUInt32 *pResultPattern,
+	SceUInt64 *pUserData
+);
+
+typedef struct	_SceKernelWaitEvent {
+	SceUID eventId;
+	SceUInt32 eventPattern;
+} SceKernelWaitEvent;
+
+typedef struct	_SceKernelResultEvent {
+	SceUID eventId;
+	SceInt32 result;
+	SceUInt32 resultPattern;
+	SceInt32 reserved[1];
+	SceUInt64 userData;
+} SceKernelResultEvent;
+
+SceInt32 sceKernelWaitMultipleEvents(
+	SceKernelWaitEvent *pWaitEventList,
+	SceUInt32 numEvents,
+	SceUInt32 waitMode,
+	SceKernelResultEvent *pResultEventList,
+	SceUInt32 *pTimeout);
+
+SceInt32 sceKernelWaitMultipleEventsCB(
+	SceKernelWaitEvent *pWaitEventList,
+	SceUInt32 numEvents,
+	SceUInt32 waitMode,
+	SceKernelResultEvent *pResultEventList,
+	SceUInt32 *pTimeout);
+
+SceInt32 sceKernelSetEvent(
+	SceUID eventId,
+	SceUInt32 setPattern,
+	SceUInt64 userData);
+
+SceInt32 sceKernelSetEventWithNotifyCallback(
+	SceUID eventId,
+	SceUInt32 setPattern,
+	SceUInt64 userData,
+	SceInt32 notifyArg);
+
+SceInt32 sceKernelPulseEvent(
+	SceUID eventId,
+	SceUInt32 pulsePattern,
+	SceUInt64 userData);
+
+SceInt32 sceKernelPulseEventWithNotifyCallback(
+	SceUID eventId,
+	SceUInt32 pulsePattern,
+	SceUInt64 userData,
+	SceInt32 notifyArg);
+
+SceInt32 sceKernelClearEvent(
+	SceUID eventId,
+	SceUInt32 clearPattern);
+
+
+SceInt32 sceKernelCancelEventWithSetPattern(
+	SceUID eventId,
+	SceUInt32 setPattern,
+	SceUInt64 userData,
+	SceUInt32 *pNumWaitThreads);
+
+
+SceInt32 sceKernelGetEventPattern(
+	SceUID eventId,
+	SceUInt32 *pPattern);
+
+SceInt32 sceKernelCancelEvent(
+	SceUID eventId,
+	SceUInt32 *pNumWaitThreads);
+
+SceInt32 sceKernelGetEventInfo(
+	SceUID eventId,
+	SceKernelEventInfo *pInfo);
+
+/* Reader/writer lock */
+
+typedef struct _SceKernelRWLockOptParam {
+	SceSize	size;
+} SceKernelRWLockOptParam;
+
+typedef struct _SceKernelRWLockInfo {
+	SceSize size;
+	SceUID rwLockId;
+	char name[SCE_UID_NAMELEN + 1];
+	SceUInt32 attr;
+	SceInt32 lockCount;
+	SceUID writeOwnerId;
+	SceUInt32 numReadWaitThreads;
+	SceUInt32 numWriteWaitThreads;
+} SceKernelRWLockInfo;
+
+SceUID sceKernelCreateRWLock(
+	const char *pName,
+	SceUInt32 attr,
+	const SceKernelRWLockOptParam*pOptParam);
+
+SceInt32 sceKernelDeleteRWLock(SceUID rwLockId);
+
+SceUID sceKernelOpenRWLock(const char pName);
+
+SceInt32 sceKernelCloseRWLock(SceUID rwLockId);
+
+SceInt32 sceKernelLockReadRWLock(SceUID rwLockId, SceUInt32 *pTimeout);
+
+SceInt32 sceKernelLockReadRWLockCB(SceUID rwLockId, SceUInt32 *pTimeout);
+
+SceInt32 sceKernelTryLockReadRWLock(SceUID rwLockId);
+
+SceInt32 sceKernelUnlockReadRWLock(SceUID rwLockId);
+
+SceInt32 sceKernelLockWriteRWLock(SceUID rwLockId, SceUInt32 *pTimeout);
+
+SceInt32 sceKernelLockWriteRWLockCB(SceUID rwLockId, SceUInt32 *pTimeout);
+
+SceInt32 sceKernelTryLockWriteRWLock(SceUID rwLockId);
+
+SceInt32 sceKernelUnlockWriteRWLock(SceUID rwLockId);
+
+SceInt32 sceKernelCancelRWLock(
+	SceUID rwLockId,
+	SceUInt32 *pNumReadWaitThreads,
+	SceUInt32 *pNumWriteWaitThreads,
+	SceInt32 flag);
+
+SceInt32 sceKernelGetRWLockInfo(SceUID rwLockId, SceKernelRWLockInfo *pInfo);
+
+/* Thread timer */
+
+typedef struct _SceKernelTimerOptParam {
+	SceSize size;
+} SceKernelTimerOptParam;
+
+typedef struct _SceKernelTimerInfo {
+	SceSize           size;
+	SceUID            timerId;
+	char              name[SCE_UID_NAMELEN + 1];
+	SceUInt32         attr;
+	SceInt32          fActive;
+	SceKernelSysClock baseTime;
+	SceKernelSysClock currentTime;
+	SceKernelSysClock schedule;
+	SceKernelSysClock interval;
+	SceInt32          type;
+	SceInt32          fRepeat;
+	SceUInt32         numWaitThreads;
+	SceInt32          reserved[1];
+} SceKernelTimerInfo;
+
+SceUID sceKernelCreateTimer(
+	const char *pName,
+	SceUInt32 attr,
+	const SceKernelTimerOptParam *pOptParam);
+
+SceInt32 sceKernelDeleteTimer(SceUID timerId);
+
+SceUID sceKernelOpenTimer(const char *pName);
+
+SceInt32 sceKernelCloseTimer(SceUID timerId);
+
+SceInt32 sceKernelStartTimer(SceUID timerId);
+
+SceInt32 sceKernelStopTimer(SceUID timerId);
+
+SceInt32 sceKernelGetTimerBase(SceUID timerId, SceKernelSysClock *pBase);
+
+SceUInt64 sceKernelGetTimerBaseWide(SceUID timerId);
+
+SceInt32 sceKernelGetTimerTime(SceUID timerId, SceKernelSysClock *pClock);
+
+SceUInt64 sceKernelGetTimerTimeWide(SceUID timerId);
+
+SceInt32 sceKernelSetTimerTime(SceUID timerId, SceKernelSysClock *pClock);
+
+SceUInt64 sceKernelSetTimerTimeWide(SceUID timerId, SceUInt64 clock);
+
+SceInt32 sceKernelSetTimerEvent(
+	SceUID timerId,
+	SceInt32 type,
+	SceKernelSysClock *pInterval,
+	SceInt32 fRepeat);
+
+SceInt32 sceKernelCancelTimer(SceUID timerId, SceUInt32 *pNumWaitThreads);
+
+SceInt32 sceKernelGetTimerInfo(SceUID timerId, SceKernelTimerInfo *pInfo);
+
+SceInt32 sceKernelGetTimerEventRemainingTime(SceUID timerId, SceKernelSysClock *pClock);
+
+/* Simple event */
+
+typedef struct _SceKernelSimpleEventOptParam {
+	SceSize size;
+} SceKernelSimpleEventOptParam;
+
+SceUID sceKernelCreateSimpleEvent(
+	const char *pName,
+	SceUInt32 attr,
+	SceUInt32 initPattern,
+	const SceKernelSimpleEventOptParam *pOptParam);
+
+SceInt32 sceKernelDeleteSimpleEvent(SceUID simpleEventId);
+
+SceUID sceKernelOpenSimpleEvent(const char *pName);
+
+SceInt32 sceKernelCloseSimpleEvent(SceUID simpleEventId);
 
 /* Misc. */
 
@@ -1054,17 +1434,17 @@ typedef struct SceKernelSystemInfo {
 		SceKernelSysClock idleClock;
 		SceUInt32         comesOutOfIdleCount;
 		SceUInt32         threadSwitchCount;
-	} cpuInfo[4];
+	} cpuInfo[SCE_KERNEL_MAX_CPU];
 } SceKernelSystemInfo;
 
 /**
  * Get the system information
  *
- * @param info - Pointer to a ::SceKernelSystemInfo structure
+ * @param pInfo - Pointer to a ::SceKernelSystemInfo structure
  *
  * @return 0 on success, < 0 on error
  */
-int sceKernelGetSystemInfo(SceKernelSystemInfo *info);
+SceInt32 sceKernelGetSystemInfo(SceKernelSystemInfo *pInfo);
 
 /* Misc. */
 
@@ -1096,22 +1476,52 @@ typedef enum SceKernelIdListType {
  */
 SceKernelIdListType sceKernelGetThreadmgrUIDClass(SceUID uid);
 
+/* Lightweight mutex */
 
-typedef struct	SceKernelLwMutexWork {
+typedef struct SceKernelLwMutexWork {
 	SceInt64 data[4];
 } SceKernelLwMutexWork;
 
 typedef struct SceKernelLwMutexOptParam {
-	SceSize	size;
+	SceSize size;
 } SceKernelLwMutexOptParam;
 
-int sceKernelCreateLwMutex(SceKernelLwMutexWork *pWork,const char *pName, unsigned int attr, int initCount, const SceKernelLwMutexOptParam *pOptParam);
-int sceKernelDeleteLwMutex(SceKernelLwMutexWork *pWork);
-int sceKernelLockLwMutex(SceKernelLwMutexWork *pWork, int lockCount, unsigned int *pTimeout);
-int sceKernelTryLockLwMutex(SceKernelLwMutexWork *pWork, int lockCount);
-int sceKernelUnlockLwMutex(SceKernelLwMutexWork *pWork, int unlockCount);
+typedef struct _SceKernelLwMutexInfo {
+	SceSize              size;
+	SceUID               uid;
+	char                 name[SCE_UID_NAMELEN + 1];
+	SceUInt32            attr;
+	SceKernelLwMutexWork *pWork;
+	SceInt32             initCount;
+	SceInt32             currentCount;
+	SceUID               currentOwnerId;
+	SceUInt32            numWaitThreads;
+} SceKernelLwMutexInfo;
 
-typedef struct	SceKernelLwCondWork {
+SceInt32 sceKernelCreateLwMutex(
+	SceKernelLwMutexWork *pWork,
+	const char *pName,
+	SceUInt32 attr,
+	SceInt32 initCount,
+	const SceKernelLwMutexOptParam *pOptParam);
+
+SceInt32 sceKernelDeleteLwMutex(SceKernelLwMutexWork *pWork);
+
+SceInt32 sceKernelLockLwMutex(SceKernelLwMutexWork *pWork, SceInt32 lockCount, SceUInt32 *pTimeout);
+
+SceInt32 sceKernelLockLwMutexCB(SceKernelLwMutexWork *pWork, SceInt32 lockCount, SceUInt32 *pTimeout);
+
+SceInt32 sceKernelTryLockLwMutex(SceKernelLwMutexWork *pWork, SceInt32 lockCount);
+
+SceInt32 sceKernelUnlockLwMutex(SceKernelLwMutexWork *pWork, SceInt32 unlockCount);
+
+SceInt32 sceKernelGetLwMutexInfo(SceKernelLwMutexWork *pWork, SceKernelLwMutexInfo *pInfo);
+
+SceInt32 sceKernelGetLwMutexInfoById(SceUID lwMutexId, SceKernelLwMutexInfo *pInfo);
+
+/* Lightweight condition */
+
+typedef struct SceKernelLwCondWork {
 	SceInt64 data[4];
 } SceKernelLwCondWork;
 
@@ -1119,10 +1529,37 @@ typedef struct SceKernelLwCondOptParam {
 	SceSize	size;
 } SceKernelLwCondOptParam;
 
-int sceKernelCreateLwCond(SceKernelLwCondWork *pWork, const char *pName, unsigned int attr, SceKernelLwMutexWork *pLwMutex, const SceKernelLwCondOptParam *pOptParam);
-int sceKernelDeleteLwCond(SceKernelLwCondWork *pWork);
-int sceKernelSignalLwCond(SceKernelLwCondWork *pWork);
-int sceKernelWaitLwCond(SceKernelLwCondWork *pWork,  unsigned int *pTimeout);
+typedef struct _SceKernelLwCondInfo {
+	SceSize size;
+	SceUID uid;
+	char name[SCE_UID_NAMELEN + 1];
+	SceUInt32 attr;
+	SceKernelLwCondWork *pWork;
+	SceKernelLwMutexWork *pLwMutex;
+	SceUInt32 numWaitThreads;
+} SceKernelLwCondInfo;
+
+SceInt32 sceKernelCreateLwCond(
+	SceKernelLwCondWork	          *pWork,
+	const char                    *pName,
+	SceUInt32                      attr,
+	SceKernelLwMutexWork          *pLwMutex,
+	const SceKernelLwCondOptParam *pOptParam
+);
+
+SceInt32 sceKernelDeleteLwCond(SceKernelLwCondWork *pWork);
+
+SceInt32 sceKernelSignalLwCond(SceKernelLwCondWork *pWork);
+
+SceInt32 sceKernelWaitLwCond(SceKernelLwCondWork *pWork, SceUInt32 *pTimeout);
+
+SceInt32 sceKernelSignalLwCondAll(SceKernelLwCondWork *pWork);
+
+SceInt32 sceKernelSignalLwCondTo(SceKernelLwCondWork *pWork, SceUID threadId);
+
+SceInt32 sceKernelGetLwCondInfo (SceKernelLwCondWork *pWork, SceKernelLwCondInfo *pInfo);
+
+SceInt32 sceKernelGetLwCondInfoById(SceUID lwCondId, SceKernelLwCondInfo *pInfo);
 
 
 /**

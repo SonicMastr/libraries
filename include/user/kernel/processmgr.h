@@ -8,9 +8,6 @@
 extern "C" {
 #endif
 
-/** UID of the current process */
-#define SCE_KERNEL_PROCESS_ID_SELF 0
-
 typedef enum SceKernelProcessPrioritySystem {
 	SCE_KERNEL_PROCESS_PRIORITY_SYSTEM_HIGH     = 32,
 	SCE_KERNEL_PROCESS_PRIORITY_SYSTEM_DEFAULT  = 96,
@@ -92,13 +89,6 @@ SceUInt32 sceKernelGetProcessTimeLow(void);
  * @return process time of the current process
  */
 SceUInt64 sceKernelGetProcessTimeWide(void);
-
-/**
- * Get the process ID of the current process.
- *
- * @return process ID of the current process
- */
-SceUID sceKernelGetProcessId(void);
 
 #ifdef __cplusplus
 }

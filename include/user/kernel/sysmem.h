@@ -1,20 +1,20 @@
 #ifndef _PSP2_KERNEL_SYSMEM_H_
 #define _PSP2_KERNEL_SYSMEM_H_
 
-#include <psp2/types.h>
+#include <psp2/kernel/types.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-typedef enum SceKernelMemBlockType {
+typedef enum _SceKernelMemBlockType {
 	SCE_KERNEL_MEMBLOCK_TYPE_USER_RW_UNCACHE          = 0x0C208060,
 	SCE_KERNEL_MEMBLOCK_TYPE_USER_RX                  = 0x0C20D050,
 	SCE_KERNEL_MEMBLOCK_TYPE_USER_RW                  = 0x0C20D060,
 	SCE_KERNEL_MEMBLOCK_TYPE_USER_MAIN_PHYCONT_RW     = 0x0C80D060,
 	SCE_KERNEL_MEMBLOCK_TYPE_USER_MAIN_PHYCONT_NC_RW  = 0x0D808060,
 	SCE_KERNEL_MEMBLOCK_TYPE_USER_CDRAM_RW            = 0x09408060
-} SceKernelMemBlockType;
+} _SceKernelMemBlockType;
 
 typedef struct SceKernelAllocMemBlockOpt {
 	SceSize size;

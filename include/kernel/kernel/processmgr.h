@@ -7,9 +7,6 @@
 extern "C" {
 #endif
 
-/** UID of the current process */
-#define SCE_KERNEL_PROCESS_ID_SELF 0
-
 /** UID of the kernel process */
 #define SCE_KERNEL_PROCESS_ID_KERNEL 0x10005
 
