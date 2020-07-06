@@ -90,13 +90,6 @@ SceUInt32 sceKernelGetProcessTimeLow(void);
  */
 SceUInt64 sceKernelGetProcessTimeWide(void);
 
-/**
- * Get the process ID of the current process.
- *
- * @return process ID of the current process
- */
-SceUID sceKernelGetProcessId(void);
-
 #ifdef __cplusplus
 }
 #endif
