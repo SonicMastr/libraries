@@ -1,0 +1,8 @@
+modules:
+  SceKernelThreadMgr:
+    nid: 0x23A1B482
+    libraries:
+      SceThreadmgrForKernel:
+        nid: 0x7F8593BA
+        functions:
+          sceKernelGetFaultingProcess: 0x6C1F092F
