@@ -5,7 +5,6 @@ modules:
       ScePerf:
         nid: 0x447F047D
         functions:
-          _pLibPerfCaptureFlagPtr: 0x936A5F31
           _sceCpuRazorPopFiberUserMarker: 0x453AED06
           _sceCpuRazorPushFiberUserMarker: 0x8F7B522C
           _sceRazorCpuInit: 0x7AD6AC30
@@ -32,3 +31,5 @@ modules:
           sceRazorCpuStopCapture: 0x9C2C05C2
           sceRazorCpuStopUserMarkerTrace: 0x4B47E144
           sceRazorCpuSync: 0x4F1385E3
+        variables:
+          _pLibPerfCaptureFlagPtr: 0x936A5F31
