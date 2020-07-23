@@ -1,6 +1,7 @@
 #ifndef _DOLCESDK_PSP2KERN_KERNEL_IOFILEMGR_DIRENT_H_
 #define _DOLCESDK_PSP2KERN_KERNEL_IOFILEMGR_DIRENT_H_
 
+#include <psp2kern/kernel/iofilemgr/async.h>
 #include <psp2kern/kernel/iofilemgr/stat.h>
 
 #ifdef __cplusplus
@@ -50,6 +51,37 @@ int sceIoDclose(SceUID fd);
   * - < 0 - Error
   */
 int sceIoDread(SceUID fd, SceIoDirent *buf);
+
+/**
+  * Open a directory (asynchronous)
+  *
+  * @param dirname - The directory to open for reading.
+  * @param asyncParam - parameters related to async operation.
+  *
+  * @return If >= 0 then a valid op handle, otherwise a Sony error code.
+  */
+SceUID sceIoDopenAsync(const char *dirname, SceIoAsyncParam* asyncParam);
+
+/**
+  * Reads an entry from an opened file descriptor (asynchronous)
+  *
+  * @param fd - Already opened file descriptor (using ::sceIoDopen or ::sceIoDopenAsync)
+  * @param dir - Pointer to a ::SceIoDirent structure to hold the file information
+  * @param asyncParam - parameters related to async operation.
+  *
+  * @return If >= 0 then a valid op handle, otherwise a Sony error code.
+  */
+SceUID sceIoDreadAsync(SceUID fd, SceIoDirent *dir, SceIoAsyncParam* asyncParam);
+
+/**
+  * Close an opened directory file descriptor (asynchronous)
+  *
+  * @param fd - Already opened file descriptor (using ::sceIoDopen or ::sceIoDopenAsync)
+  * @param asyncParam - parameters related to async operation.
+  *
+  * @return If >= 0 then a valid op handle, otherwise a Sony error code.
+  */
+SceUID sceIoDcloseAsync(SceUID fd, SceIoAsyncParam* asyncParam);
 
 #ifdef __cplusplus
 }
