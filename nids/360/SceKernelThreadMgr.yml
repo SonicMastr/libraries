@@ -241,6 +241,7 @@ modules:
           sceKernelLockMutex: 0x16AC80C5
           sceKernelLockMutexCB_089: 0xD06F2886
           sceKernelNotifyCallback: 0xC3E00919
+          sceKernelPollEvent: 0xD08C71C6
           sceKernelPollEventFlag: 0x76C6555B
           sceKernelPollSema: 0x4FDDFE24
           sceKernelPulseEvent: 0x2427C81B

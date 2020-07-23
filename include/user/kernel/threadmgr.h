@@ -1273,13 +1273,11 @@ SceInt32 sceKernelClearEvent(
 	SceUID eventId,
 	SceUInt32 clearPattern);
 
-
 SceInt32 sceKernelCancelEventWithSetPattern(
 	SceUID eventId,
 	SceUInt32 setPattern,
 	SceUInt64 userData,
 	SceUInt32 *pNumWaitThreads);
-
 
 SceInt32 sceKernelGetEventPattern(
 	SceUID eventId,

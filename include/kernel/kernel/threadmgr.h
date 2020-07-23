@@ -1069,6 +1069,29 @@ int sceKernelTryReceiveMsgPipeVector(SceUID uid, const MsgPipeRecvData *v, unsig
  */
 int sceKernelCancelMsgPipe(SceUID uid, int *psend, int *precv);
 
+SceInt32 sceKernelWaitEvent(
+	SceUID eventId,
+	SceUInt32 waitPattern,
+	SceUInt32 *pResultPattern,
+	SceUInt64 *pUserData,
+	SceUInt32 *pTimeout
+);
+
+SceInt32 sceKernelWaitEventCB(
+	SceUID eventId,
+	SceUInt32 waitPattern,
+	SceUInt32 *pResultPattern,
+	SceUInt64 *pUserData,
+	SceUInt32 *pTimeout
+);
+
+SceInt32 sceKernelPollEvent(
+	SceUID eventId,
+	SceUInt32 bitPattern,
+	SceUInt32 *pResultPattern,
+	SceUInt64 *pUserData
+);
+
 #ifdef __cplusplus
 }
 #endif
