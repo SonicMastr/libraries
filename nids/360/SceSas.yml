@@ -5,36 +5,68 @@ modules:
       SceSas:
         nid: 0xEE47EC43
         functions:
+          sceSasCheckGrain: 0x0AEA9963
           sceSasCore: 0x7A4672B2
+          sceSasCoreInternal: 0x62CCF050
           sceSasCoreWithMix: 0xBD496983
           sceSasExit: 0xBB7D6790
+          sceSasExitInternal: 0x799DD9C0
           sceSasGetDryPeak: 0xB6642276
+          sceSasGetDryPeakInternal: 0x40ED8367
           sceSasGetEndState: 0x007E63E6
+          sceSasGetEndStateInternal: 0x0F771045
           sceSasGetEnvelope: 0x296A9910
+          sceSasGetEnvelopeInternal: 0xE3A5D1D4
           sceSasGetGrain: 0x2BEA45BC
+          sceSasGetGrainInternal: 0x26B2B2A9
           sceSasGetNeededMemorySize: 0x180C6824
+          sceSasGetNeededMemorySizeInternal: 0x5F82207D
           sceSasGetOutputmode: 0x2C36E150
+          sceSasGetOutputmodeInternal: 0x0B96AF29
           sceSasGetPauseState: 0xFD1A0CBF
+          sceSasGetPauseStateInternal: 0xBEEBC820
           sceSasGetPreMasterPeak: 0x1568017A
+          sceSasGetPreMasterPeakInternal: 0x3D4F37FF
           sceSasGetWetPeak: 0x4314F0E9
+          sceSasGetWetPeakInternal: 0x0DE54FF9
           sceSasInit: 0x449B5974
+          sceSasInitInternal: 0x5C5250C1
           sceSasInitWithGrain: 0x820D5F82
           sceSasSetADSR: 0x18A5EFA2
+          sceSasSetADSRInternal: 0x44514A50
           sceSasSetADSRmode: 0x5207F9D2
+          sceSasSetADSRmodeInternal: 0xE9F3944D
           sceSasSetDistortion: 0x011788BE
+          sceSasSetDistortionInternal: 0x1744ACD7
           sceSasSetEffect: 0xB0444E69
+          sceSasSetEffectInternal: 0xE04ACC5A
           sceSasSetEffectParam: 0xBAD546A0
+          sceSasSetEffectParamInternal: 0xCB23EA6D
           sceSasSetEffectType: 0xCDF2DDD5
+          sceSasSetEffectTypeInternal: 0xDAF4773A
           sceSasSetEffectVolume: 0x55EDDBFA
+          sceSasSetEffectVolumeInternal: 0x50D722D7
           sceSasSetGrain: 0x2B4A207C
+          sceSasSetGrainInternal: 0xB47D5122
           sceSasSetKeyOff: 0x5E42ADAB
+          sceSasSetKeyOffInternal: 0x4636ACC2
           sceSasSetKeyOn: 0xC838DB6F
+          sceSasSetKeyOnInternal: 0xB26DF4BF
           sceSasSetNoise: 0xF1C63CB9
+          sceSasSetNoiseInternal: 0xBD2907EA
           sceSasSetOutputmode: 0x44DDB3C4
+          sceSasSetOutputmodeInternal: 0x107D1850
           sceSasSetPause: 0x59C7A9DF
+          sceSasSetPauseInternal: 0x79665BCA
           sceSasSetPitch: 0x2C48A08C
+          sceSasSetPitchInternal: 0x81AF90AC
           sceSasSetSL: 0xDE6227B8
+          sceSasSetSLInternal: 0xFE263F55
           sceSasSetSimpleADSR: 0xECCE0DB8
+          sceSasSetSimpleADSRInternal: 0xBF95B455
           sceSasSetVoice: 0x2B75F9BC
+          sceSasSetVoiceInternal: 0x0C294FAF
           sceSasSetVoicePCM: 0xB1756EFC
+          sceSasSetVoicePCMInternal: 0xEB6708B0
           sceSasSetVolume: 0x0BE8204D
+          sceSasSetVolumeInternal: 0x868E1C88
