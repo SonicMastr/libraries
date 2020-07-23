@@ -46,9 +46,35 @@ int sceClibMemcmp(const void *s1, const void *s2, SceSize len);
 
 void *sceClibMemchr(const void *src, int ch, SceSize len);
 
-void *sceClibMspaceCreate(void *base, SceSize size);
-void *sceClibMspaceMalloc(void *space, SceSize size);
-void sceClibMspaceFree(void *space, void *ptr);
+/* mspace functions */
+
+typedef void* SceClibMspace;
+
+typedef struct SceClibMspaceStats {
+  SceSize maxSystemSize;
+  SceSize currentSystemSize;
+  SceSize maxInUseSize;
+  SceSize currentInUseSize;
+  SceSize reserved[4];
+} SceClibMspaceStats;
+
+/* create and destroy mspace */
+SceClibMspace sceClibMspaceCreate(void *base, SceSize capacity);
+SceInt32      sceClibMspaceDestroy(SceClibMspace msp);
+
+/* allocator and deallocator */
+void *sceClibMspaceMalloc(SceClibMspace msp, SceSize size);
+void  sceClibMspaceFree(SceClibMspace msp, void *ptr);
+void *sceClibMspaceCalloc(SceClibMspace msp, SceSize nelem, SceSize size);
+void *sceClibMspaceMemalign(SceClibMspace msp, SceSize boundary, SceSize size);
+void *sceClibMspaceRealloc(SceClibMspace msp, void *ptr, SceSize size);
+void *sceClibMspaceReallocalign(SceClibMspace msp, void *ptr, SceSize size, SceSize boundary);
+
+/* utility */
+SceSize  sceClibMspaceMallocUsableSize(void *p);
+SceInt32 sceClibMspaceMallocStats(SceClibMspace msp, SceClibMspaceStats *buf);
+SceInt32 sceClibMspaceMallocStatsFast(SceClibMspace msp, SceClibMspaceStats *buf);
+SceInt32 sceClibMspaceIsHeapEmpty(SceClibMspace msp);
 
 #ifdef __cplusplus
 }
