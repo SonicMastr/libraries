@@ -1,7 +1,7 @@
 #ifndef _PSP2_COMPAT_H_
 #define _PSP2_COMPAT_H_
 
-#include <psp2/io/devctl.h>
+#include <psp2/kernel/iofilemgr.h>
 #include <psp2/rtc.h>
 #include <psp2/types.h>
 #include <stdint.h>
