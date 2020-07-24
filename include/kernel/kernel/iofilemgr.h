@@ -113,6 +113,25 @@ SceUID sceIoOpen(const char *filename, int flag, SceIoMode mode);
 int sceIoClose(SceUID fd);
 
 /**
+  * Perform an ioctl on a device.
+  *
+  * @param fd - Opened file descriptor to ioctl to
+  * @param cmd - The command to send to the device
+  * @param argp - A data block to send to the device, if NULL sends no data
+  * @param arglen - Length of indata, if 0 sends no data
+  * @param bufp - A data block to receive the result of a command, if NULL receives no data
+  * @param buflen - Length of outdata, if 0 receives no data
+  * @return 0 on success, < 0 on error
+  */
+int sceIoIoctl(
+  SceUID fd,
+  int cmd,
+  const void *argp,
+  SceSize arglen,
+  void *bufp,
+  SceSize buflen);
+
+/**
  * Reposition read/write file descriptor offset
  *
  * @par Example:
