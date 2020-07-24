@@ -99,30 +99,34 @@ typedef struct sceAppMgrLoadExecOptParam {
 
 #define SCE_APPMGR_MAX_APP_NAME_LENGTH	(31)
 
+#define SCE_APPMGR_BUDGET_MODE_MAIN              2
+#define SCE_APPMGR_BUDGET_MODE_MAIN_PHYCONT      3
+#define SCE_APPMGR_BUDGET_MODE_MAIN_PHYCONT_CDLG 4
+
 typedef struct SceAppMgrBudgetInfo {
 // 0x00
-	SceSize size;
-	SceUInt32 mode;
+	SceSize size;              //!< Sizes if 0x88 bytes
+	SceUInt32 mode;            //!< Application budget mode
 	SceUInt32 unk_8;
-	SceUInt32 budgetLPDDR2;
+	SceUInt32 budgetMain;      //!< Main LPDDR2 budget in bytes
 // 0x10
-	SceUInt32 freeLPDDR2;
-	SceUInt32 allow0x0E208060;
-	SceUInt32 unk_14;
-	SceUInt32 budget0x0E208060;
+	SceUInt32 freeMain;        //!< Free main LPDDR2 in bytes
+	SceUInt32 hasCdlg;         //!< Has CDLG memory type in budget
+	SceUInt32 unk_14;          //!< Only if CDLG is used, otherwise 0
+	SceUInt32 budgetCdlg;      //!< CDLG budget in bytes
 // 0x20
-	SceUInt32 free0x0E208060;
-	SceUInt32 unk_24;
-	SceUInt32 unk_28;
-	SceUInt32 budgetPHYCONT;
+	SceUInt32 freeCdlg;        //!< Free CDLG in bytes
+	SceUInt32 unk_24;          //!< always 0
+	SceUInt32 unk_28;          //!< Only phycont is used, otherwise 0
+	SceUInt32 budgetPhycont;   //!< Phycont budget in bytes
 // 0x30
-	SceUInt32 freePHYCONT;
-	SceUInt32 allow;
-	SceUChar8 unk_38[0x20];
+	SceUInt32 freePhycont;     //!< Free phycont in bytes
+	SceUInt32 allow;           //!< Some memory type?
+	SceUChar8 unk_38[0x20];    //!< Some memory type?
 	SceUInt32 unk_58;
-	SceUInt32 budgetCDRAM;
+	SceUInt32 budgetCdram;     //!< Cdram budget in bytes
 // 0x60
-	SceUInt32 freeCDRAM;
+	SceUInt32 freeCdram;       //!< Free Cdram in bytes
 	SceUChar8 reserved_64[0x24];
 // 0x88
 } SceAppMgrBudgetInfo;
