@@ -1,20 +1,12 @@
 #ifndef _DOLCESDK_PSP2_KERNEL_IOFILEMGR_DIRENT_H_
 #define _DOLCESDK_PSP2_KERNEL_IOFILEMGR_DIRENT_H_
 
+#include <psp2common/kernel/iofilemgr/dirent.h>
 #include <psp2/kernel/iofilemgr/async.h>
-#include <psp2/kernel/iofilemgr/stat.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
-
-/** Describes a single directory entry */
-typedef struct SceIoDirent {
-	SceIoStat d_stat;      //!< File status
-	char      d_name[256]; //!< File name (not file path)
-	void      *d_private;  //!< Reserved (set to 0)
-	int       dummy;       //!< Padding
-} SceIoDirent;
 
 /**
   * Open a directory

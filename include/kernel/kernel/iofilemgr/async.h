@@ -1,6 +1,7 @@
 #ifndef _DOLCESDK_PSP2KERN_KERNEL_IOFILEMGR_ASYNC_H_
 #define _DOLCESDK_PSP2KERN_KERNEL_IOFILEMGR_ASYNC_H_
 
+#include <psp2common/kernel/iofilemgr/async.h>
 #include <psp2kern/kernel/threadmgr.h>
 
 #ifdef __cplusplus
