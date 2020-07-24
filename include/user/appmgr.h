@@ -1,12 +1,15 @@
 #ifndef _PSP2_APPMGR_H_
 #define _PSP2_APPMGR_H_
 
+#include <psp2/scebase.h>
 #include <psp2/types.h>
 #include <psp2/apputil.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
+
+#define _SCE_APPMGR_VERSION (SCE_PSP2_SDK_VERSION & 0xffff0000)
 
 typedef enum SceAppMgrErrorCode {
 	SCE_APPMGR_ERROR_BUSY               = 0x80802000, //!< Busy
@@ -523,6 +526,27 @@ int _sceAppMgrGetRawPathOfApp0ByAppIdForShell(int appId, char resolved_path[292]
  *
  */
 int sceAppMgrGetBudgetInfo(SceAppMgrBudgetInfo *info);
+
+/**
+ * Shared Framebuffer
+ */
+
+typedef struct SceSharedFbInfo SceSharedFbInfo;
+
+SceUID _sceSharedFbOpen(int index, SceUInt32 buildVersion);
+
+static __inline__
+SceUID sceSharedFbOpen(int index, SceUInt32 buildVersion) {
+	return _sceSharedFbOpen(index, _SCE_APPMGR_VERSION);
+}
+
+int sceSharedFbClose(SceUID fbId);
+
+int sceSharedFbBegin(SceUID fbId, SceSharedFbInfo *fbInfo);
+
+int sceSharedFbEnd(SceUID fbId);
+
+int sceSharedFbGetInfo(SceUID fbId, SceSharedFbInfo *fbInfo);
 
 #ifdef __cplusplus
 }
