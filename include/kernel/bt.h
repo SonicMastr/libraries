@@ -299,12 +299,12 @@ int sceBtGetConnectingInfo(unsigned int mac0, unsigned int mac1); // 1 = disconn
 int sceBtGetDeviceName(unsigned int mac0, unsigned int mac1, char name[0x79]);
 int sceBtGetInfoForTest(int r0, int r1, int r2, int r3);
 int sceBtGetLastError(void);
-int sceBtGetRegisteredInfo(int device, int unk, SceBtRegisteredInfo *info, unsigned int info_size);
+int sceBtGetRegisteredInfo(int device, int unk, SceBtRegisteredInfo *info, SceSize info_size);
 int sceBtGetStatusForTest(int r0, int r1, int r2, int r3);
 int sceBtGetVidPid(unsigned int mac0, unsigned int mac1, unsigned short vid_pid[2]);
 int sceBtHfpGetCurrentPhoneNumber(int r0, int r1, int r2, int r3);
 int sceBtHfpRequest(int r0, int r1, int r2, int r3);
-int sceBtHidGetReportDescriptor(unsigned int mac0, unsigned int mac1, void *buffer, unsigned int size);
+int sceBtHidGetReportDescriptor(unsigned int mac0, unsigned int mac1, void *buffer, SceSize size);
 int sceBtHidTransfer(unsigned int mac0, unsigned int mac1, SceBtHidRequest *request);
 int sceBtPushBip(int r0, int r1, int r2, int r3);
 int sceBtPushOpp(int r0, int r1, int r2, int r3);
@@ -314,7 +314,7 @@ int sceBtRecvBip(int r0, int r1, int r2, int r3);
 int sceBtRecvOpp(int r0, int r1, int r2, int r3);
 int sceBtRecvSpp(int r0, int r1, int r2, int r3);
 int sceBtRegisterCallback(SceUID cb, int unused, int flags1, int flags2); // looks like flags1 is a mask for permitted MACs
-int sceBtReplyPinCode(unsigned int mac0, unsigned int mac1, unsigned char *code, unsigned int length);
+int sceBtReplyPinCode(unsigned int mac0, unsigned int mac1, unsigned char *code, SceSize length);
 int sceBtReplyUserConfirmation(unsigned int mac0, unsigned int mac1, int unk);
 int sceBtSendAudio(int r0, int r1, int r2, int r3);
 int sceBtSendL2capEchoRequestForTest(int r0, int r1, int r2, int r3);

@@ -337,7 +337,7 @@ typedef struct SceKernelSemaInfo {
  * @par Example:
  * @code
  * int semaid;
- * semaid = sceKernelCreateSema("MyMutex", 0, 1, 1, 0);
+ * semaid = sceKernelCreateSema("MySema", 0, 1, 1, NULL);
  * @endcode
  *
  * @param name - Specifies the name of the sema
@@ -483,7 +483,7 @@ typedef struct SceKernelMutexInfo {
  * @par Example:
  * @code
  * int mutexid;
- * mutexid = sceKernelCreateMutex("MyMutex", 0, 1, 1, 0);
+ * mutexid = sceKernelCreateMutex("MyMutex", 0, 1, NULL);
  * @endcode
  *
  * @param pName - Specifies the name of the mutex
@@ -610,7 +610,7 @@ typedef struct SceKernelEventFlagOptParam {
   * @par Example:
   * @code
   * int evid;
-  * evid = sceKernelCreateEventFlag("wait_event", 0, 0, 0);
+  * evid = sceKernelCreateEventFlag("wait_event", 0, 0, NULL);
   * @endcode
   */
 SceUID sceKernelCreateEventFlag(

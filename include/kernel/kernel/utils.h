@@ -58,24 +58,24 @@ typedef struct {
 	uint8_t data[976];
 } SceAesContext;
 
-int sceSha1BlockInit(SceSha1Context *pContext);
-int sceSha1BlockUpdate(SceSha1Context *pContext, const void *plain, uint32_t len);
-int sceSha1BlockResult(SceSha1Context *pContext, char *digest);
-int sceSha1Digest(const void *plain, uint32_t len, char *result);
+int sceSha1BlockInit(SceSha1Context *ctx);
+int sceSha1BlockUpdate(SceSha1Context *ctx, const void *plain, SceSize len);
+int sceSha1BlockResult(SceSha1Context *ctx, void *result);
+int sceSha1Digest(const void *plain, SceSize len, void *digest);
 
-int sceSha224BlockInit(SceSha224Context *pContext);
-int sceSha224BlockUpdate(SceSha224Context *pContext, const void *plain, uint32_t len);
-int sceSha224BlockResult(SceSha224Context *pContext, char *digest);
-int sceSha224Digest(const void *plain, uint32_t len, char *result);
+int sceSha224BlockInit(SceSha224Context *ctx);
+int sceSha224BlockUpdate(SceSha224Context *ctx, const void *plain, SceSize len);
+int sceSha224BlockResult(SceSha224Context *ctx, void *result);
+int sceSha224Digest(const void *plain, SceSize len, void *digest);
 
-int sceSha256BlockInit(SceSha256Context *pContext);
-int sceSha256BlockUpdate(SceSha256Context *pContext, const void *plain, uint32_t len);
-int sceSha256BlockResult(SceSha256Context *pContext, char *digest);
-int sceSha256Digest(const void *plain, uint32_t len, char *result);
+int sceSha256BlockInit(SceSha256Context *ctx);
+int sceSha256BlockUpdate(SceSha256Context *ctx, const void *plain, SceSize len);
+int sceSha256BlockResult(SceSha256Context *ctx, void *result);
+int sceSha256Digest(const void *plain, SceSize len, void *digest);
 
-int sceHmacSha1Digest(const unsigned char *key, uint32_t key_len, const void *plain, uint32_t len, char *result);
-int sceHmacSha224Digest(const unsigned char *key, uint32_t key_len, const void *plain, uint32_t len, char *result);
-int sceHmacSha256Digest(const unsigned char *key, uint32_t key_len, const void *plain, uint32_t len, char *result);
+int sceHmacSha1Digest(const void *key, SceSize key_len, const void *plain, SceSize len, void *digest);
+int sceHmacSha224Digest(const void *key, SceSize key_len, const void *plain, SceSize len, void *digest);
+int sceHmacSha256Digest(const void *key, SceSize key_len, const void *plain, SceSize len, void *digest);
 
 /**
  * @param[out] dst - dst buf
@@ -85,7 +85,7 @@ int sceHmacSha256Digest(const unsigned char *key, uint32_t key_len, const void *
  *
  * @return decompressed size on success, < 0 on error.
  */
-int sceGzipDecompress(void *dst, uint32_t dst_size, const void *src, uint32_t *crc32);
+int sceGzipDecompress(void *dst, SceSize dst_size, const void *src, uint32_t *crc32);
 
 /**
  * @brief Check magic of Gzip header
@@ -167,7 +167,7 @@ const void *sceZlibGetCompressedData(const void *src);
  *
  * @return decompressed size on success, < 0 on error.
  */
-int sceZlibDecompress(void *dst, uint32_t dst_size, const void *src, uint32_t *adler32);
+int sceZlibDecompress(void *dst, SceSize dst_size, const void *src, uint32_t *adler32);
 
 /**
  * @param[out] dst - dst buf
@@ -177,8 +177,8 @@ int sceZlibDecompress(void *dst, uint32_t dst_size, const void *src, uint32_t *a
  *
  * @return decompressed size on success, < 0 on error.
  */
-int sceDeflateDecompress(void *dst, uint32_t dst_size, const void *src, const void **next);
-int sceDeflateDecompressPartial(void *dst, unsigned int dst_size, const void *src, const void **next, SceDeflatePartialInputParam *cbInfo);
+int sceDeflateDecompress(void *dst, SceSize dst_size, const void *src, const void **next);
+int sceDeflateDecompressPartial(void *dst, SceSize dst_size, const void *src, const void **next, SceDeflatePartialInputParam *cbInfo);
 
 /**
  * @param[out] ctx - out key data, etc...
@@ -188,9 +188,9 @@ int sceDeflateDecompressPartial(void *dst, unsigned int dst_size, const void *sr
  *
  * @return 0 on success, < 0 on error.
  */
-int sceAesInit1(SceAesContext *ctx, int blocksize, int keysize, const void *key);
-int sceAesInit2(SceAesContext *ctx, int blocksize, int keysize, const void *key);
-int sceAesInit3(SceAesContext *ctx, int blocksize, int keysize, const void *key);
+int sceAesInit1(SceAesContext *ctx, SceSize blocksize, SceSize keysize, const void *key);
+int sceAesInit2(SceAesContext *ctx, SceSize blocksize, SceSize keysize, const void *key);
+int sceAesInit3(SceAesContext *ctx, SceSize blocksize, SceSize keysize, const void *key);
 
 int sceAesDecrypt1(SceAesContext *ctx, const void *src, void *dst);
 int sceAesDecrypt2(SceAesContext *ctx, const void *src, void *dst);

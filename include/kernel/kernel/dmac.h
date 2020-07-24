@@ -1,7 +1,7 @@
 #ifndef _PSP2_KERNEL_DMAC_H_
 #define _PSP2_KERNEL_DMAC_H_
 
-#include <stddef.h>
+#include <psp2kern/types.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -16,7 +16,7 @@ extern "C" {
  *
  * @return dst.
 */
-void *sceDmacMemcpy(void *dst, const void *src, size_t size);
+void *sceDmacMemcpy(void *dst, const void *src, SceSize size);
 
 /**
  * DMA memset
@@ -27,7 +27,7 @@ void *sceDmacMemcpy(void *dst, const void *src, size_t size);
  *
  * @return dst.
 */
-void *sceDmacMemset(void *dst, int c, size_t size);
+void *sceDmacMemset(void *dst, int c, SceSize size);
 
 #ifdef __cplusplus
 }

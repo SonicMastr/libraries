@@ -1,6 +1,8 @@
 #ifndef _PSP2_KERNEL_RNG_H_
 #define _PSP2_KERNEL_RNG_H_
 
+#include <psp2/types.h>
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -13,7 +15,7 @@ extern "C" {
  *
  * @return 0 on success, < 0 on error.
 */
-int sceKernelGetRandomNumber(void *output, unsigned size);
+int sceKernelGetRandomNumber(void *output, SceSize size);
 
 #ifdef __cplusplus
 }
