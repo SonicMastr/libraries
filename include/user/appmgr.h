@@ -99,9 +99,9 @@ typedef struct sceAppMgrLoadExecOptParam {
 
 #define SCE_APPMGR_MAX_APP_NAME_LENGTH	(31)
 
-#define SCE_APPMGR_BUDGET_MODE_MAIN              2
-#define SCE_APPMGR_BUDGET_MODE_MAIN_PHYCONT      3
-#define SCE_APPMGR_BUDGET_MODE_MAIN_PHYCONT_CDLG 4
+#define SCE_APPMGR_BUDGET_MODE_MAIN              2 // Main LPDDR2 only
+#define SCE_APPMGR_BUDGET_MODE_MAIN_PHYCONT      3 // Main and phycont or CDLG which is also contiguous
+#define SCE_APPMGR_BUDGET_MODE_MAIN_PHYCONT_CDLG 4 // Main and phycont and CDLG
 
 typedef struct SceAppMgrBudgetInfo {
 // 0x00
@@ -112,12 +112,12 @@ typedef struct SceAppMgrBudgetInfo {
 // 0x10
 	SceUInt32 freeMain;        //!< Free main LPDDR2 in bytes
 	SceUInt32 hasCdlg;         //!< Has CDLG memory type in budget
-	SceUInt32 unk_14;          //!< Only if CDLG is used, otherwise 0
+	SceUInt32 unk_14;          //!< Non-zero if CDLG is used, otherwise 0
 	SceUInt32 budgetCdlg;      //!< CDLG budget in bytes
 // 0x20
 	SceUInt32 freeCdlg;        //!< Free CDLG in bytes
 	SceUInt32 unk_24;          //!< always 0
-	SceUInt32 unk_28;          //!< Only phycont is used, otherwise 0
+	SceUInt32 unk_28;          //!< Non-zero if phycont is used, otherwise 0
 	SceUInt32 budgetPhycont;   //!< Phycont budget in bytes
 // 0x30
 	SceUInt32 freePhycont;     //!< Free phycont in bytes
@@ -540,7 +540,7 @@ typedef struct SceSharedFbInfo SceSharedFbInfo;
 SceUID _sceSharedFbOpen(int index, SceUInt32 buildVersion);
 
 static __inline__
-SceUID sceSharedFbOpen(int index, SceUInt32 buildVersion) {
+SceUID sceSharedFbOpen(int index) {
 	return _sceSharedFbOpen(index, _SCE_APPMGR_VERSION);
 }
 
