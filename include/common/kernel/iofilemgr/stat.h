@@ -17,6 +17,8 @@ extern "C" {
 /* for SceMode */
 #define SCE_STM_RWU         00600
 #define SCE_STM_RU          00400
+#define SCE_STM_RWO         00006
+#define SCE_STM_RO          00004
 
 /* for chstat cbit */
 #define SCE_CST_MODE        0x0001
