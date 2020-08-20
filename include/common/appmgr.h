@@ -14,6 +14,8 @@ extern "C" {
 #define SCE_APPMGR_SAVEDATA_SLOT_DETAIL_MAXSIZE    512
 #define SCE_APPMGR_SAVEDATA_SLOT_ICON_PATH_MAXSIZE 64
 
+#define SCE_APPMGR_NP_DRM_ADDCONT_ID_SIZE 17
+
 typedef SceUInt32 SceAppMgrSaveDataSlotStatus;
 typedef SceUInt32 SceAppMgrSaveDataDataSaveMode;
 
@@ -42,6 +44,17 @@ typedef struct SceAppMgrSaveDataDataSaveItem {
 	SceAppMgrSaveDataDataSaveMode mode;
 	SceChar8 reserved[36];
 } SceAppMgrSaveDataDataSaveItem;
+
+typedef struct SceAppMgrDrmAddcontId {
+	SceChar8 data[SCE_APPMGR_NP_DRM_ADDCONT_ID_SIZE];
+	SceChar8 padding[3];
+} SceAppMgrDrmAddcontId;
+
+typedef struct SceAppMgrDrmAddcontParam {
+	SceSize size;
+	SceAppMgrDrmAddcontId dirName;
+	SceAppMgrMountPoint mountPoint;
+} SceAppMgrDrmAddcontParam;
 
 #if defined(_LANGUAGE_C_PLUS_PLUS)||defined(__cplusplus)||defined(c_plusplus)
 }

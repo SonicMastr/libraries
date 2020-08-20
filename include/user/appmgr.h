@@ -3,7 +3,6 @@
 
 #include <psp2common/appmgr.h>
 #include <psp2/scebase.h>
-#include <psp2/types.h>
 
 #ifdef __cplusplus
 extern "C" {

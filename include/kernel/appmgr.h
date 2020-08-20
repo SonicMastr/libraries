@@ -1,7 +1,7 @@
 #ifndef _PSP2_KERNEL_APPMGR_H_
 #define _PSP2_KERNEL_APPMGR_H_
 
-#include <psp2kern/types.h>
+#include <psp2common/appmgr.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -33,17 +33,21 @@ typedef struct
 
 /**
  * @brief       Launch an application for debugging
- * 
+ *
  * @param[in] path  Path to the executable to load
  * @param[in] args  Arguments to pass to the executable and to configure appmgr
  * @param[in] arg_size  The size of the args passed in
  * @param[in] type  Set to 0x80000000 for debugging launch
  * @param[in] param pointer to launch params
  * @param unk unknown, set to nullptr
- * 
+ *
  * @return   pid on success, else < 0.
  */
 int sceAppMgrLaunchAppByPath(const char *path, const char *args, SceSize arg_size, unsigned int type, const SceAppMgrLaunchParam *param, void *unk);
+
+SceInt32 sceAppMgrDrmOpen(const SceAppMgrDrmAddcontParam *pParam);
+
+SceInt32 sceAppMgrDrmClose(const SceAppMgrDrmAddcontParam *pParam);
 
 #ifdef __cplusplus
 }
