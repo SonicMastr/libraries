@@ -1,9 +1,9 @@
 #ifndef _PSP2_APPMGR_H_
 #define _PSP2_APPMGR_H_
 
+#include <psp2common/appmgr.h>
 #include <psp2/scebase.h>
 #include <psp2/types.h>
-#include <psp2/apputil.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -51,36 +51,36 @@ typedef struct SceAppMgrSystemEvent {
 typedef struct SceAppMgrSaveDataData {
 	int size;                                //!< Must be 0x4C
 	unsigned int slotId;                     //!< Save slot to use
-	SceAppUtilSaveDataSlotParam* slotParam;  //!< Save slot params
+	SceAppMgrSaveDataSlotParam* slotParam;  //!< Save slot params
 	uint8_t reserved[32];                    //!< Reserved data
-	SceAppUtilSaveDataFile* files;           //!< Pointer to an array of files
+	SceAppMgrSaveDataDataSaveItem* files;           //!< Pointer to an array of files
 	int fileNum;                             //!< Number of files to save
-	SceAppUtilSaveDataMountPoint mountPoint; //!< Savedata mountpoint
+	SceAppMgrMountPoint mountPoint; //!< Savedata mountpoint
 	unsigned int* requiredSizeKB;            //!< Required size in KBs
 } SceAppMgrSaveDataData;
 
 typedef struct SceAppMgrSaveDataDataDelete {
 	int size;                                //!< Must be 0x44
 	unsigned int slotId;                     //!< Save slot to use
-	SceAppUtilSaveDataSlotParam* slotParam;  //!< Save slot params
+	SceAppMgrSaveDataSlotParam* slotParam;  //!< Save slot params
 	uint8_t reserved[32];                    //!< Reserved data
-	SceAppUtilSaveDataFile* files;           //!< Pointer to an array of files
+	SceAppMgrSaveDataDataSaveItem* files;           //!< Pointer to an array of files
 	int fileNum;                             //!< Number of files to delete
-	SceAppUtilSaveDataMountPoint mountPoint; //!< Savedata mountpoint
+	SceAppMgrMountPoint mountPoint; //!< Savedata mountpoint
 } SceAppMgrSaveDataDataDelete;
 
 typedef struct SceAppMgrSaveDataSlot {
 	int size;                                //!< Must be 0x418
 	unsigned int slotId;                     //!< Save slot to use
-	SceAppUtilSaveDataSlotParam slotParam;   //!< Save slot params
+	SceAppMgrSaveDataSlotParam slotParam;   //!< Save slot params
 	uint8_t reserved[116];                   //!< Reserved data
-	SceAppUtilSaveDataMountPoint mountPoint; //!< Savedata mountpoint
+	SceAppMgrMountPoint mountPoint; //!< Savedata mountpoint
 } SceAppMgrSaveDataSlot;
 
 typedef struct SceAppMgrSaveDataSlotDelete {
 	int size;                                 //!< Must be 0x18
 	unsigned int slotId;                      //!< Save slot to use
-	SceAppUtilSaveDataMountPoint mountPoint;  //!< Savedata mountpoint
+	SceAppMgrMountPoint mountPoint;  //!< Savedata mountpoint
 } SceAppMgrSaveDataSlotDelete;
 
 typedef struct SceAppMgrAppState {
