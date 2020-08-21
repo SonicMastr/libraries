@@ -8,22 +8,6 @@ extern "C" {
 #endif
 
 /**
- * Left shift with only register operations (no memory access).
- */
-SceInt64 lshift(SceInt64 value, int shift);
-
-/**
- * Arithmetic right shift with only register operations (no memory access).
- */
-SceInt64 rshift(SceInt64 value, int shift);
-
-/**
- * Arithmetic right shift with only register operations (no memory access).
- * May be faster than rshift for shift less than 32.
- */
-SceInt64 rshift_fast(SceInt64 value, int shift);
-
-/**
  * Like memcmp but checks all n bytes of s1 and s2 without early return.
  */
 int memcmp_consttime(const void *s1, const void *s2, size_t n);
