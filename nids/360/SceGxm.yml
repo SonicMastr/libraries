@@ -278,6 +278,16 @@ modules:
           sceGxmVertexFence: 0xE05277D6
           sceGxmVertexProgramGetProgram: 0xBC52320E
           sceGxmWaitEvent: 0x8BD94593
+      SceGxmInternal:
+        nid: 0x3FE654E6
+        functions:
+          sceGxmInternalCreateRenderTarget: 0xC8A0F04E
+          sceGxmInternalGetRenderTargetMemSize: 0x4DD98588
+          sceGxmInternalIsInitialized: 0xEC82DB20
+          sceGxmInternalMapFragmentUsseMemory: 0xB9391D22
+          sceGxmInternalMapVertexUsseMemory: 0x5694B569
+          sceGxmInternalUnmapFragmentUsseMemory: 0xC29B9B82
+          sceGxmInternalUnmapVertexUsseMemory: 0xD7506735
       SceGxmInternalForVsh:
         nid: 0xC98AEB79
         functions:
