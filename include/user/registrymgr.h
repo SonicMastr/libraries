@@ -131,7 +131,6 @@ int sceRegMgrSystemParamGetInt(const int id, int* buf);
  */
 int sceRegMgrSystemParamGetStr(const int id, char* buf, const int size);
 
-
 /**
  * Get the registry version
  *
@@ -142,6 +141,70 @@ int sceRegMgrSystemParamGetStr(const int id, char* buf, const int size);
  */
 int sceRegMgrGetRegVersion(int version, char* buf);
 
+/**
+ * Get binary registry key by id
+ *
+ * @param id - The id of the key
+ * @param buf[out] - Pointer to a buffer
+ * @param size - The size of the buffer
+ *
+ * @return 0 on success, < 0 on error
+ */
+SceInt32 sceRegMgrUtilityGetBin(SceUInt32 id, void *buf, SceSize size);
+
+/**
+ * Get integer registry key by id
+ *
+ * @param id - The id of the key
+ * @param buf[out] - Pointer to a buffer
+ *
+ * @return 0 on success, < 0 on error
+ */
+SceInt32 sceRegMgrUtilityGetInt(SceUInt32 id, SceInt32 *buf);
+
+/**
+ * Get char array registry key by id
+ *
+ * @param id - The id of the key
+ * @param buf[out] - Pointer to a buffer
+ * @param size - The size of the buffer
+ *
+ * @return 0 on success, < 0 on error
+ */
+SceInt32 sceRegMgrUtilityGetStr(SceUInt32 id, char *buf, SceSize size);
+
+/**
+ * Set binary registry key by id
+ *
+ * @param id - The id of the key
+ * @param buf - Pointer to a buffer
+ * @param size - The size of the buffer
+ *
+ * @return 0 on success, < 0 on error
+ */
+SceInt32 sceRegMgrUtilitySetBin(SceUInt32 id, const void *buf, SceSize size);
+
+
+/**
+ * Set integer registry key by id
+ *
+ * @param id - The id of the key
+ * @param val - Value to set
+ *
+ * @return 0 on success, < 0 on error
+ */
+SceInt32 sceRegMgrUtilitySetInt(SceUInt32 id, SceInt32 val);
+
+/**
+ * Set char array registry key by id
+ *
+ * @param id - The id of the key
+ * @param buf - Pointer to a buffer
+ * @param size - The size of the buffer
+ *
+ * @return 0 on success, < 0 on error
+ */
+SceInt32 sceRegMgrUtilitySetStr(SceUInt32 id, const char *buf, SceSize size);
 
 #ifdef __cplusplus
 }
