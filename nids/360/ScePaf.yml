@@ -2,9 +2,22 @@ modules:
   ScePaf:
     nid: 0xCD679177
     libraries:
+      ScePafCommon:
+        nid: 0x3C1965CD
+        functions:
+          scePafCesUtf16CharToUtf8: 0x8E009780
+          scePafCesUtf16CharToUtf8WithFlag: 0x5FAAAE1C
+          scePafCesUtf16ToUtf8: 0x06C015C6
+          scePafCesUtf16ToUtf8WithFlag: 0x683BC8E8
+          scePafCesUtf8CharToUtf16: 0x950C3AA0
+          scePafCesUtf8CharToUtf16WithFlag: 0xA9ED25D9
+          scePafCesUtf8ToUtf16: 0x3CFEB1EB
+          scePafCesUtf8ToUtf16WithFlag: 0x23A39B05
       ScePafMisc:
         nid: 0x3D643CE8
         functions:
+          scePafCesUtf16CharToUtf8WithAlloc: 0xE690F751
+          scePafCesUtf8CharToUtf16WithAlloc: 0xA6ABC0B2
           sce_paf_misc_does_file_exist: 0x95F14046
       ScePafResource:
         nid: 0x2836DC9B
