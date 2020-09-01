@@ -42,7 +42,7 @@ int _vshIoMount(int id, const char *path, int permission, void *buf);
  *
  * @return 0 >= on success, < 0 on error.
  */
-int vshIoUmount(int id, int force, int unk2, int unk3); 
+int vshIoUmount(int id, int force, int unk2, int unk3);
 
 int vshIdStorageIsDirty(void);
 int vshIdStorageIsFormatted(void);
@@ -63,6 +63,15 @@ int vshIdStorageReadLeaf(SceSize leafnum, void *buf);
  * @return 0 on success, < 0 on error.
  */
 int vshIdStorageWriteLeaf(SceSize leafnum, const void *buf);
+
+/**
+ * Sets the PS button hold time for showing the quick menu.
+ *
+ * @param time - Time in microseconds.
+ *
+ * @return 0 always
+ */
+int vshPowerSetPsButtonPushTime(int time);
 
 int vshSblAimgrIsCEX(void);
 int vshSblAimgrIsDEX(void);
