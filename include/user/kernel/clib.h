@@ -20,9 +20,14 @@ char sceClibLookCtypeTable(char ch);
 int sceClibTolower(char ch);
 int sceClibToupper(char ch);
 
+__attribute__((__format__(__printf__, 1, 2)))
 int sceClibPrintf(const char *fmt, ...);
+
 int sceClibVprintf(const char *fmt, va_list args);
+
+__attribute__((__format__(__printf__, 3, 4)))
 int sceClibSnprintf(char *dst, SceSize dst_max_size, const char *fmt, ...);
+
 int sceClibVsnprintf(char *dst, SceSize dst_max_size, const char *fmt, va_list args);
 
 char *sceClibStrncpy(char *dst, const char *src, SceSize len);

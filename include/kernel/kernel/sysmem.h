@@ -426,6 +426,7 @@ int sceSysrootUseExternalStorage(void);
 
 int sceSysrootUseInternalStorage(void);
 
+__attribute__((__format__(__printf__, 1, 2)))
 int sceDebugPrintf(const char *fmt, ...);
 
 typedef struct SceKernelDebugMessageContext {
@@ -438,15 +439,19 @@ typedef struct SceKernelDebugMessageContext {
 } SceKernelDebugMessageContext;
 
 // msg_type_flag : 0 or 0xB
-
+__attribute__((__format__(__printf__, 3, 4)))
 int sceDebugPrintf2(int msg_type_flag, const SceKernelDebugMessageContext *ctx, const char *fmt, ...);
 
 int sceDebugVprintf(const char *fmt, va_list args);
 
 int sceDebugPrintKernelPanic(const SceKernelDebugMessageContext *ctx, void *some_address);
+
+__attribute__((__format__(__printf__, 3, 4)))
 int sceDebugPrintfKernelPanic(const SceKernelDebugMessageContext *ctx, void *some_address, const char *fmt, ...);
 
 int sceDebugPrintKernelAssertion(int condition, const SceKernelDebugMessageContext *ctx, void *some_address);
+
+__attribute__((__format__(__printf__, 5, 6)))
 int sceDebugPrintfKernelAssertion(int unk, int condition, const SceKernelDebugMessageContext *ctx, int some_address, const char *fmt, ...);
 
 int sceDebugSetHandlers(int (*func)(int unk, const char *format, const va_list args), void *args);

@@ -54,27 +54,27 @@ char *sce_paf_strrchr(const char *str, int character);
 
 /* UTF8 to UTF16 */
 
-SceSSize scePafCesUtf8ToUtf16(ScePafString *utf8, ScePafWString *utf16);
+SceSSize scePafCesUtf8ToUtf16(const ScePafString *utf8, ScePafWString *utf16);
 
-SceSSize scePafCesUtf8ToUtf16WithFlag(ScePafString *utf8, ScePafWString *utf16, SceUInt32 flags);
+SceSSize scePafCesUtf8ToUtf16WithFlag(const ScePafString *utf8, ScePafWString *utf16, SceUInt32 flags);
 
-SceSSize scePafCesUtf8CharToUtf16(char *utf8, ScePafWString *utf16);
+SceSSize scePafCesUtf8CharToUtf16(const char *utf8, ScePafWString *utf16);
 
-SceSSize scePafCesUtf8CharToUtf16WithFlag(char *utf8, ScePafWString *utf16, SceUInt32 flags);
+SceSSize scePafCesUtf8CharToUtf16WithFlag(const char *utf8, ScePafWString *utf16, SceUInt32 flags);
 
-ScePafWString *scePafCesUtf8CharToUtf16WithAlloc(char *utf8, ScePafWString *utf16);
+ScePafWString *scePafCesUtf8CharToUtf16WithAlloc(const char *utf8, ScePafWString *utf16);
 
 /* UTF16 to UTF8 */
 
-SceSSize scePafCesUtf16ToUtf8(ScePafWString *utf16, ScePafString *utf8);
+SceSSize scePafCesUtf16ToUtf8(const ScePafWString *utf16, ScePafString *utf8);
 
-SceSSize scePafCesUtf16ToUtf8WithFlag(ScePafWString *utf16, ScePafString *utf8, SceUInt32 flags);
+SceSSize scePafCesUtf16ToUtf8WithFlag(const ScePafWString *utf16, ScePafString *utf8, SceUInt32 flags);
 
-SceSSize scePafCesUtf16CharToUtf8(SceWChar16 *utf16, ScePafString *utf8);
+SceSSize scePafCesUtf16CharToUtf8(const SceWChar16 *utf16, ScePafString *utf8);
 
-SceSSize scePafCesUtf16CharToUtf8WithFlag(SceWChar16 *utf16, ScePafString *utf8, SceUInt32 flags);
+SceSSize scePafCesUtf16CharToUtf8WithFlag(const SceWChar16 *utf16, ScePafString *utf8, SceUInt32 flags);
 
-ScePafString *scePafCesUtf16CharToUtf8WithAlloc(SceWChar16 *utf16, ScePafString *utf8);
+ScePafString *scePafCesUtf16CharToUtf8WithAlloc(const SceWChar16 *utf16, ScePafString *utf8);
 
 #ifdef __cplusplus
 }
