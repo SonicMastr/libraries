@@ -46,6 +46,8 @@ int sceClibMemcmp(const void *s1, const void *s2, SceSize len);
 
 void *sceClibMemchr(const void *src, int ch, SceSize len);
 
+long long sceClibStrtoll(const char *str, char **endptr, int base);
+
 /* mspace functions */
 
 typedef void* SceClibMspace;
