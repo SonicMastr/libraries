@@ -9,13 +9,6 @@ extern "C" {
 
 /* Threads. */
 
-/** Additional options used when creating threads. */
-typedef struct _SceKernelThreadOptParam {
-	/** Size of the ::SceKernelThreadOptParam structure. */
-	SceSize   size;
-	SceUInt32 attr;
-} SceKernelThreadOptParam;
-
 /** Structure to hold the status information for a thread
   * @see sceKernelGetThreadInfo
   */
@@ -1581,6 +1574,21 @@ void *sceKernelGetThreadTLSAddr(SceUID thid, int key);
  * @return pointer to TLS key value
  */
 void *sceKernelGetTLSAddr(int key);
+
+typedef enum _SceKernelThreadSpecificInfo {
+    SCE_THREAD_SPECIFIC_INFO_UNK_0,
+    SCE_THREAD_SPECIFIC_INFO_ID,
+    SCE_THREAD_SPECIFIC_INFO_STACK_START_ADDRESS,
+    SCE_THREAD_SPECIFIC_INFO_STACK_END_ADDRESS,
+    SCE_THREAD_SPECIFIC_INFO_VFP_EXCEPTION,
+    SCE_THREAD_SPECIFIC_INFO_LWMUTEX_STATUS,
+    SCE_THREAD_SPECIFIC_INFO_UNK_6,
+    SCE_THREAD_SPECIFIC_INFO_UNK_7,
+    SCE_THREAD_SPECIFIC_INFO_PRIORITY,
+    SCE_THREAD_SPECIFIC_INFO_AFFINITY,
+} SceKernelThreadSpecificInfo;
+
+SceUnion32 sceKernelGetThreadSpecificInfo(SceUID threadId, SceKernelThreadSpecificInfo info);
 
 #ifdef __cplusplus
 }
