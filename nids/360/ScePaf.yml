@@ -117,7 +117,10 @@ modules:
           sce_paf_toupper: 0x761184A5
           sce_paf_towlower: 0xC8C2CDAC
           sce_paf_vsnprintf: 0x51C66C6E
+          sce_paf_vsnprintf_internal: 0xAE0F3820
           sce_paf_vsprintf: 0x3079B56B
+          sce_paf_vswprintf: 0xFA5C2193
+          sce_paf_vswprintf_internal: 0xAFB23563
           sce_paf_wcscasecmp: 0x92A125F6
           sce_paf_wcscat: 0xDDDDD6E0
           sce_paf_wcschr: 0x13833CAE

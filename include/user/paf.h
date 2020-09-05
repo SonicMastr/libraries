@@ -1,6 +1,7 @@
 #ifndef _PSP2_PAF_H_
 #define _PSP2_PAF_H_
 
+#include <stdarg.h>
 #include <wchar.h>
 #include <psp2/types.h>
 #include <psp2/ces/error.h>
@@ -50,6 +51,8 @@ char *sce_paf_strrchr(const char *str, int character);
 
 /* __attribute__((__format__(__wprintf__, 3, 4))) */
 int sce_paf_swprintf(wchar_t *buffer, size_t bufsz, const wchar_t *format, ...);
+
+int sce_paf_vswprintf(wchar_t *buffer, size_t bufsz, const wchar_t *format, va_list vlist);
 
 wint_t sce_paf_towlower(wint_t wc);
 
