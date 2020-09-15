@@ -133,8 +133,6 @@ modules:
           sceKernelCpuIcacheInvalidateAllU: 0xAEE0B489
           sceKernelCpuIcacheInvalidateRange: 0xF4C7F578
           sceKernelCpuPreloadEngineKill: 0xD0D85FF8
-          sceKernelCpuRestoreContext: 0x0A4F0FB9
-          sceKernelCpuSaveContext: 0x211B89DA
           sceKernelCpuUnrestrictedMemcpy: 0x8C683DEC
           sceKernelCpuUpdateSCTLR: 0x04008CF7
           sceKernelMMUVAtoPAWithMode: 0x67343A07

@@ -1552,6 +1552,29 @@ SceInt32 sceKernelGetLwCondInfo (SceKernelLwCondWork *pWork, SceKernelLwCondInfo
 
 SceInt32 sceKernelGetLwCondInfoById(SceUID lwCondId, SceKernelLwCondInfo *pInfo);
 
+typedef struct SceKernelWaitSignalOptParam {
+    SceUInt32 unk;
+} SceKernelWaitSignalOptParam;
+
+/**
+ * @brief Sleep current thread and wait for a signal. After it receives a signal, the thread wakes up.
+ *
+ * This is like a semphore with limit 1. 
+ * If signal was sent before and not consumed before, the function will immediately return.
+ * 
+ * @param params - extra parameters
+ * @return 0 on success
+ */
+int sceKernelWaitSignal(SceUInt32 unk0, SceUInt32 unk1, SceKernelWaitSignalOptParam *params);
+
+/**
+ * @brief Send a signal to another thread specified by thid.
+ *
+ * @param thid - the id of the thread to send a signal to
+ * @return 0 on success
+ * @return SCE_KERNEL_ERROR_ALREADY_SENT if the last signal was not consumed by sceKernelWaitSignal
+ */
+int sceKernelSendSignal(SceUID thid);
 
 /**
  * Get the system time (wide version)

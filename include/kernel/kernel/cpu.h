@@ -3,6 +3,7 @@
 
 #include <psp2common/kernel/cpu.h>
 #include <psp2kern/types.h>
+#include <string.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -35,10 +36,8 @@ extern "C" {
  *
  * @param      ptr   The pointer
  * @param[in]  len   The length
- *
- * @return     Zero on success
  */
-int sceKernelCpuDcacheWritebackRange(const void *ptr, SceSize len);
+void sceKernelCpuDcacheWritebackRange(const void *ptr, SceSize len);
 
 
 /**
@@ -92,15 +91,13 @@ static inline int sceKernelCpuUnrestrictedMemcpy(void *dst, const void *src, Sce
 {
 	int prev_dacr;
 
-	asm ("mrc p15, 0, %0, c3, c0, 0" : "=r" (prev_dacr));
-	asm ("mcr p15, 0, %0, c3, c0, 0" :: "r" (0xFFFF0000));
+	asm volatile("mrc p15, 0, %0, c3, c0, 0" : "=r" (prev_dacr));
+	asm volatile("mcr p15, 0, %0, c3, c0, 0" :: "r" (0xFFFF0000));
 
-	for (size_t i=0; i < len; i++) {
-		((char *) dst)[i] = ((char *) src)[i];
-	}
+	memcpy(dst, src, len);
 	sceKernelCpuDcacheWritebackRange((void *)((uintptr_t)dst & ~0x1F), (len + 0x1F) & ~0x1F);
 
-	asm ("mcr p15, 0, %0, c3, c0, 0" :: "r" (prev_dacr));
+	asm volatile("mcr p15, 0, %0, c3, c0, 0" :: "r" (prev_dacr));
 	return 0;
 }
 
@@ -132,51 +129,47 @@ int sceKernelCpuEnableInterrupts(int flags);
  *
  * @param      ptr   The pointer
  * @param[in]  len   The length
- *
- * @return     Zero on success
  */
-int sceKernelCpuDcacheInvalidateRange(const void *ptr, SceSize len);
+void sceKernelCpuDcacheInvalidateRange(const void *ptr, SceSize len);
 
 /**
  * @brief      Writeback and invalidate a range of L1 dcache (without L2)
  *
  * @param      ptr   The pointer
  * @param[in]  len   The length
- *
- * @return     Zero on success
  */
-int sceKernelCpuDcacheWritebackInvalidateRange(const void *ptr, SceSize len);
+void sceKernelCpuDcacheWritebackInvalidateRange(const void *ptr, SceSize len);
 
 /**
  * @brief      Invalidate all the L1 dcache (without L2)
- *
- * @return     Zero on success
  */
-int sceKernelCpuDcacheInvalidateAll(void);
+void sceKernelCpuDcacheInvalidateAll(void);
 
 /**
  * @brief      Writeback all the L1 dcache (without L2)
- *
- * @return     Zero on success
  */
-int sceKernelCpuDcacheWritebackAll(void);
+void sceKernelCpuDcacheWritebackAll(void);
 
 /**
  * @brief      Writeback and invalidate all the L1 dcache (without L2)
- *
- * @return     Zero on success
  */
-int sceKernelCpuDcacheWritebackInvalidateAll(void);
+void sceKernelCpuDcacheWritebackInvalidateAll(void);
 
 /**
  * @brief      Writeback a range of L1 dcache and L2
  *
  * @param      ptr   The pointer
  * @param[in]  len   The length
- *
- * @return     Zero on success
  */
-int sceKernelCpuDcacheAndL2WritebackRange(const void *ptr, SceSize len);
+void sceKernelCpuDcacheAndL2WritebackRange(const void *ptr, SceSize len);
+
+/**
+ * @brief      Writeback and invalidate a range of L1 dcache and L2
+ *
+ * @param      ptr   The pointer
+ * @param[in]  len   The length
+ */
+void sceKernelCpuDcacheAndL2InvalidateRange(const void *ptr, SceSize len);
 
 /**
  * @brief      Writeback and invalidate a range of L1 dcache and L2
@@ -186,27 +179,15 @@ int sceKernelCpuDcacheAndL2WritebackRange(const void *ptr, SceSize len);
  *
  * @return     Zero on success
  */
-int sceKernelCpuDcacheAndL2InvalidateRange(const void *ptr, SceSize len);
-
-/**
- * @brief      Writeback and invalidate a range of L1 dcache and L2
- *
- * @param      ptr   The pointer
- * @param[in]  len   The length
- *
- * @return     Zero on success
- */
-int sceKernelCpuDcacheAndL2WritebackInvalidateRange(const void *ptr, SceSize len);
+void sceKernelCpuDcacheAndL2WritebackInvalidateRange(const void *ptr, SceSize len);
 
 /**
  * @brief      Invalidate a range of L1 icache (without L2)
  *
  * @param      ptr   The pointer
  * @param[in]  len   The length
- *
- * @return     Zero on success
  */
-int sceKernelCpuIcacheInvalidateRange(const void *ptr, SceSize len);
+void sceKernelCpuIcacheInvalidateRange(const void *ptr, SceSize len);
 
 /**
  * @brief      Invalidate all the L1 icache (without L2)
@@ -220,10 +201,8 @@ int sceKernelCpuIcacheInvalidateAll(void);
  *
  * @param      ptr   The pointer
  * @param[in]  len   The length
- *
- * @return     Zero on success
  */
-int sceKernelCpuIcacheAndL2WritebackInvalidateRange(const void *ptr, SceSize len);
+void sceKernelCpuIcacheAndL2WritebackInvalidateRange(const void *ptr, SceSize len);
 
 /**
  * @brief      Suspend all interrupts (disables IRQs)
