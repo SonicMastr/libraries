@@ -2,6 +2,14 @@ modules:
   SceLibKernel:
     nid: 0xF9C9C52F
     libraries:
+      SceKernelForMono:
+        nid: 0x5FEEA076
+        functions:
+          sceKernelGetThreadContextForMono: 0xAD210F16
+          sceKernelResumeThreadForMono: 0x9A6D085B
+          sceKernelSetThreadContextForMono: 0x92A0964D
+          sceKernelSuspendThreadForMono: 0x38839DA2
+          sceKernelWaitExceptionForMono: 0x1BECC64C
       SceLibKernel:
         nid: 0xCAE9ACE6
         functions:
