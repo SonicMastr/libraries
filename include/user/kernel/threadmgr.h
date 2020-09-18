@@ -1553,15 +1553,15 @@ SceInt32 sceKernelGetLwCondInfo (SceKernelLwCondWork *pWork, SceKernelLwCondInfo
 SceInt32 sceKernelGetLwCondInfoById(SceUID lwCondId, SceKernelLwCondInfo *pInfo);
 
 typedef struct SceKernelWaitSignalOptParam {
-    SceUInt32 unk;
+	SceUInt32 unk;
 } SceKernelWaitSignalOptParam;
 
 /**
  * @brief Sleep current thread and wait for a signal. After it receives a signal, the thread wakes up.
  *
- * This is like a semphore with limit 1. 
+ * This is like a semphore with limit 1.
  * If signal was sent before and not consumed before, the function will immediately return.
- * 
+ *
  * @param params - extra parameters
  * @return 0 on success
  */
@@ -1599,16 +1599,16 @@ void *sceKernelGetThreadTLSAddr(SceUID thid, int key);
 void *sceKernelGetTLSAddr(int key);
 
 typedef enum _SceKernelThreadSpecificInfo {
-    SCE_THREAD_SPECIFIC_INFO_UNK_0,
-    SCE_THREAD_SPECIFIC_INFO_ID,
-    SCE_THREAD_SPECIFIC_INFO_STACK_START_ADDRESS,
-    SCE_THREAD_SPECIFIC_INFO_STACK_END_ADDRESS,
-    SCE_THREAD_SPECIFIC_INFO_VFP_EXCEPTION,
-    SCE_THREAD_SPECIFIC_INFO_LWMUTEX_STATUS,
-    SCE_THREAD_SPECIFIC_INFO_UNK_6,
-    SCE_THREAD_SPECIFIC_INFO_UNK_7,
-    SCE_THREAD_SPECIFIC_INFO_PRIORITY,
-    SCE_THREAD_SPECIFIC_INFO_AFFINITY,
+	SCE_THREAD_SPECIFIC_INFO_UNK_0,
+	SCE_THREAD_SPECIFIC_INFO_ID,
+	SCE_THREAD_SPECIFIC_INFO_STACK_START_ADDRESS,
+	SCE_THREAD_SPECIFIC_INFO_STACK_END_ADDRESS,
+	SCE_THREAD_SPECIFIC_INFO_VFP_EXCEPTION,
+	SCE_THREAD_SPECIFIC_INFO_LWMUTEX_STATUS,
+	SCE_THREAD_SPECIFIC_INFO_UNK_6,
+	SCE_THREAD_SPECIFIC_INFO_UNK_7,
+	SCE_THREAD_SPECIFIC_INFO_PRIORITY,
+	SCE_THREAD_SPECIFIC_INFO_AFFINITY,
 } SceKernelThreadSpecificInfo;
 
 SceUnion32 sceKernelGetThreadSpecificInfo(SceUID threadId, SceKernelThreadSpecificInfo info);

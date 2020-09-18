@@ -269,14 +269,14 @@ typedef SceInt32 (*SceKernelThreadEntry)(SceSize argSize, void *pArgBlock);
 // Types
 
 typedef struct _SceKernelThreadOptParam {
-    /** Size of the ::SceKernelThreadOptParam structure. */
-    SceSize               size;
-    SceUInt32             attr;
-    SceKernelMemBlockType memType1;
-    SceKernelMemBlockType memType2;
-    SceInt32              unk0x10;
-    SceInt32              unk0x14;
-    SceInt32              unk0x1C;
+	/** Size of the ::SceKernelThreadOptParam structure. */
+	SceSize               size;
+	SceUInt32             attr;
+	SceKernelMemBlockType memType1;
+	SceKernelMemBlockType memType2;
+	SceInt32              unk0x10;
+	SceInt32              unk0x14;
+	SceInt32              unk0x1C;
 } SceKernelThreadOptParam;
 
 #if defined(_LANGUAGE_C_PLUS_PLUS)||defined(__cplusplus)||defined(c_plusplus)
