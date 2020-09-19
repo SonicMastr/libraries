@@ -8,7 +8,7 @@ extern "C" {
 /**
  * Errors
  */
-#define SCE_BGAPPUTIL_ERROR_INVALID_ARG 0x80106501
+#define SCE_BGAPPUTIL_ERROR_INVALID_ARG ((int)0x80106501)
 
 /**
  * Start BG application (eboot2.bin)

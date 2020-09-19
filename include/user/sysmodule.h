@@ -10,9 +10,9 @@ extern "C" {
 /** Errorcodes for SceSysmodule */
 typedef enum SceSysmoduleErrorCode {
 	SCE_SYSMODULE_LOADED                = 0,          //!< Module is already loaded
-	SCE_SYSMODULE_ERROR_INVALID_VALUE   = 0x805A1000, //!< Invalid value
-	SCE_SYSMODULE_ERROR_UNLOADED        = 0x805A1001, //!< Module is not loaded
-	SCE_SYSMODULE_ERROR_FATAL           = 0x805A10FF  //!< Fatal error
+	SCE_SYSMODULE_ERROR_INVALID_VALUE   = (int)0x805A1000, //!< Invalid value
+	SCE_SYSMODULE_ERROR_UNLOADED        = (int)0x805A1001, //!< Module is not loaded
+	SCE_SYSMODULE_ERROR_FATAL           = (int)0x805A10FF  //!< Fatal error
 } SceSysmoduleErrorCode;
 
 /** Available modules ID for ::sceSysmoduleLoadModule */

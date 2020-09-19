@@ -25,7 +25,7 @@ typedef enum SceIncomingDialogStatus {
 /**
  * Errors
  */
-#define SCE_INCOMING_DIALOG_ERROR_INVALID_ARG               0x80106202;
+#define SCE_INCOMING_DIALOG_ERROR_INVALID_ARG               ((int)0x80106202)
 
 typedef struct SceIncomingDialogParam {
 	SceInt32 sdkVersion;

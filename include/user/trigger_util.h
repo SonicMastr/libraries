@@ -30,12 +30,12 @@ typedef enum SceTriggerUtilDays {
 /**
  * Errors
  */
-#define SCE_TRIGGER_UTIL_ERROR_BUSY                       0x80103601
-#define SCE_TRIGGER_UTIL_ERROR_NOT_FOUND_USER             0x80103610
-#define SCE_TRIGGER_UTIL_ERROR_NOT_FOUND_SYSTEM           0x80103612
-#define SCE_TRIGGER_UTIL_ERROR_NOT_REGISTERED             0x80103620
-#define SCE_TRIGGER_UTIL_ERROR_EVENT_TYPE_MISMATCH        0x80103623
-#define SCE_TRIGGER_UTIL_ERROR_INVALID_ARG                0x80103650
+#define SCE_TRIGGER_UTIL_ERROR_BUSY                       ((int)0x80103601)
+#define SCE_TRIGGER_UTIL_ERROR_NOT_FOUND_USER             ((int)0x80103610)
+#define SCE_TRIGGER_UTIL_ERROR_NOT_FOUND_SYSTEM           ((int)0x80103612)
+#define SCE_TRIGGER_UTIL_ERROR_NOT_REGISTERED             ((int)0x80103620)
+#define SCE_TRIGGER_UTIL_ERROR_EVENT_TYPE_MISMATCH        ((int)0x80103623)
+#define SCE_TRIGGER_UTIL_ERROR_INVALID_ARG                ((int)0x80103650)
 
 typedef struct SceTriggerUtilEventParamDaily { // size is 0x50
 	SceUInt32 ver;

@@ -8,9 +8,9 @@ extern "C" {
 #endif
 
 typedef enum SceCtrlErrorCode {
-	SCE_CTRL_ERROR_INVALID_ARG      = 0x80340001,
-	SCE_CTRL_ERROR_PRIV_REQUIRED    = 0x80340002,
-	SCE_CTRL_ERROR_FATAL            = 0x803400FF
+	SCE_CTRL_ERROR_INVALID_ARG      = (int)0x80340001,
+	SCE_CTRL_ERROR_PRIV_REQUIRED    = (int)0x80340002,
+	SCE_CTRL_ERROR_FATAL            = (int)0x803400FF
 } SceCtrlErrorCode;
 
 /** Enumeration for the digital controller buttons.

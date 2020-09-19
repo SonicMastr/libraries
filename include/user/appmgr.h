@@ -11,13 +11,13 @@ extern "C" {
 #define _SCE_APPMGR_VERSION (SCE_PSP2_SDK_VERSION & 0xffff0000)
 
 typedef enum SceAppMgrErrorCode {
-	SCE_APPMGR_ERROR_BUSY               = 0x80802000, //!< Busy
-	SCE_APPMGR_ERROR_STATE              = 0x80802013, //!< Invalid state
-	SCE_APPMGR_ERROR_NULL_POINTER       = 0x80802016, //!< NULL pointer
-	SCE_APPMGR_ERROR_INVALID            = 0x8080201A, //!< Invalid param
-	SCE_APPMGR_ERROR_TOO_LONG_ARGV      = 0x8080201D, //!< argv is too long
-	SCE_APPMGR_ERROR_INVALID_SELF_PATH  = 0x8080201E, //!< Invalid SELF path
-	SCE_APPMGR_ERROR_BGM_PORT_BUSY      = 0x80803000  //!< BGM port was occupied and could not be secured
+	SCE_APPMGR_ERROR_BUSY               = (int)0x80802000, //!< Busy
+	SCE_APPMGR_ERROR_STATE              = (int)0x80802013, //!< Invalid state
+	SCE_APPMGR_ERROR_NULL_POINTER       = (int)0x80802016, //!< NULL pointer
+	SCE_APPMGR_ERROR_INVALID            = (int)0x8080201A, //!< Invalid param
+	SCE_APPMGR_ERROR_TOO_LONG_ARGV      = (int)0x8080201D, //!< argv is too long
+	SCE_APPMGR_ERROR_INVALID_SELF_PATH  = (int)0x8080201E, //!< Invalid SELF path
+	SCE_APPMGR_ERROR_BGM_PORT_BUSY      = (int)0x80803000  //!< BGM port was occupied and could not be secured
 } SceAppMgrErrorCode;
 
 typedef enum SceAppMgrSystemEventType {
