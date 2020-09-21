@@ -12,13 +12,3 @@ modules:
           sceUsbSerialSetup: 0x290E08B4
           sceUsbSerialStart: 0xE3BEC18C
           sceUsbSerialStatus: 0xA6A2F5DE
-      SceUsbSerialForDriver:
-        nid: 0x8829C2F3
-        functions:
-          sceUsbSerialClose: 0xE6B1E64F
-          sceUsbSerialGetRecvBufferSize: 0xF531B5AE
-          sceUsbSerialRecv: 0x6B5E296F
-          sceUsbSerialSend: 0x0C2E73C0
-          sceUsbSerialSetup: 0x590B8F97
-          sceUsbSerialStart: 0xFEE7F4BA
-          sceUsbSerialStatus: 0x8C426906

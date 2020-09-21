@@ -447,7 +447,6 @@ modules:
           sceKernelOpenUidForName: 0xD76E7452
           sceKernelProcModeVAtoPA: 0x61A67D32
           sceKernelRemapBlock: 0xDFE2C8CB
-          sceKernelRoMemcpyKernelToUserForPid: 0x571D2739
           sceKernelSetNameForPidForUid: 0x12624884
           sceKernelSetObjectForUid: 0x4CFA4100
           sceKernelStrncpyKernelToUser: 0x80BD6FEB
@@ -456,7 +455,6 @@ modules:
           sceKernelStrnlenUser: 0xB429D419
           sceKernelStrnlenUserForPid: 0x9929EB07
           sceKernelSwitchPidContext: 0x2D711589
-          sceKernelSwitchVmaForPid: 0x6F2ACDAE
           sceKernelUidRelease: 0x149885C4
           sceKernelUidRetain: 0x0F5C84B7
           sceKernelUnmapMemBlock: 0xFFCD9B60

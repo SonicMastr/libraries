@@ -281,8 +281,6 @@ int sceKernelDeleteUserUid(SceUID pid, SceUID user_uid);
 int sceKernelDeleteUid(SceUID uid);
 int sceKernelFindClassByName(const char *name, SceClass **cls);
 
-int sceKernelSwitchVmaForPid(SceUID pid);
-
 void *sceKernelGetSysrootBuffer(void);
 int sceKernelGetPidContext(SceUID pid, SceKernelProcessContext **ctx);
 
