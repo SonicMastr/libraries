@@ -71,6 +71,23 @@ modules:
           sceJpegInitMJpegWithParam: 0x518163A7
           sceJpegMJpegCsc: 0xC2380E3A
           sceJpegSplitDecodeMJpeg: 0x4598EC9C
+      SceVideodecAsyncUser:
+        nid: 0x7D00D21F
+        functions:
+          sceAvcdecDecodeAuNalAuNongameapp: 0x0E4A6EE3
+          sceAvcdecDecodeAuNongameapp: 0x867C75AD
+          sceAvcdecDecodeGetPictureNongameapp: 0xCF3CFC70
+          sceAvcdecRegisterCallbackNongameapp: 0x497F7EC7
+          sceAvcdecUnregisterCallbackNongameapp: 0xE07A91B5
+          sceAvcdecUnregisterCallbackWithCbidNongameapp: 0x7761522A
+      SceVideodecLowDelayUser:
+        nid: 0x6354EEFF
+        functions:
+          sceAvcdecSetLowDelayModeNongameapp: 0xD57F82C1
+      SceVideodecRecoveryPointUser:
+        nid: 0x6D3CD128
+        functions:
+          sceAvcdecSetRecoveryPointSEIMode: 0x58C620EC
       SceVideodecUser:
         nid: 0x163C3727
         functions:
@@ -82,12 +99,9 @@ modules:
           sceAvcdecDecode: 0xD6190A06
           sceAvcdecDecodeAuInternal: 0x2385A82B
           sceAvcdecDecodeAuNalAuInternal: 0x68628BC4
-          sceAvcdecDecodeAuNalAuNongameapp: 0x0E4A6EE3
-          sceAvcdecDecodeAuNongameapp: 0x867C75AD
           sceAvcdecDecodeAvailableSize: 0x441673E3
           sceAvcdecDecodeFlush: 0x25F31020
           sceAvcdecDecodeGetPictureInternal: 0x63237A8F
-          sceAvcdecDecodeGetPictureNongameapp: 0xCF3CFC70
           sceAvcdecDecodeGetPictureWithWorkPictureInternal: 0x66F65155
           sceAvcdecDecodeNalAu: 0x6C68A38F
           sceAvcdecDecodeNalAuWithWorkPicture: 0xDDF41798
@@ -103,16 +117,11 @@ modules:
           sceAvcdecQueryDecoderMemSizeInternal: 0x7BC8DFEA
           sceAvcdecQueryDecoderMemSizeNongameapp: 0xFA072F66
           sceAvcdecRegisterCallbackInternal: 0x8FA94451
-          sceAvcdecRegisterCallbackNongameapp: 0x497F7EC7
           sceAvcdecSetDecodeMode: 0x75803C83
           sceAvcdecSetDecodeModeInternal: 0xF57CC2BC
           sceAvcdecSetInterlacedStreamMode: 0x2DD70FC8
-          sceAvcdecSetLowDelayModeNongameapp: 0xD57F82C1
-          sceAvcdecSetRecoveryPointSEIMode: 0x58C620EC
           sceAvcdecUnregisterCallbackInternal: 0x24E905BF
-          sceAvcdecUnregisterCallbackNongameapp: 0xE07A91B5
           sceAvcdecUnregisterCallbackWithCbidInternal: 0x001069FB
-          sceAvcdecUnregisterCallbackWithCbidNongameapp: 0x7761522A
           sceM4vdecCreateDecoder: 0x17C6AC9E
           sceM4vdecCreateDecoderInternal: 0x4D4CA34E
           sceM4vdecCsc: 0xB4BC325B

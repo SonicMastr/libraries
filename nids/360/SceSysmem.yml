@@ -497,6 +497,7 @@ modules:
           sceKernelSysrootSetProcessHandler: 0x0F07C3FC
           sceKernelSysrootSetSystemSwVersion: 0x3276086B
           sceSysrootGetHardwareInfo: 0x930B1342
+          sceSysrootIsAuCodecIcConexant: 0x46E72428
           sceSysrootUtMgrHasNpTestFlag: 0xA43599E9
           sceSysrootUtMgrSetNpTestFlag: 0xEE5D6CE9
       SceSysrootForKernel:
@@ -530,7 +531,6 @@ modules:
           sceSysrootGetSelfInfo: 0xF10AB792
           sceSysrootGetSessionId: 0x84783B71
           sceSysrootGetWakeupFactor: 0x2F97041A
-          sceSysrootIsAuCodecIcConexant: 0x46E72428
           sceSysrootIsBsodReboot: 0x4373AC96
           sceSysrootIsExternalBootMode: 0x89D19090
           sceSysrootIsSafeMode: 0x834439A7

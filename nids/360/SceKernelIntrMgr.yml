@@ -5,14 +5,12 @@ modules:
       SceIntrmgrForDriver:
         nid: 0x9DF04041
         functions:
-          sceKernelClearIntrPending: 0x4DC48A01
           sceKernelDisableSubIntr: 0x259C6D9E
           sceKernelEnableSubIntr: 0x901E41D8
           sceKernelGetIntrMasked: 0x6EC07C56
           sceKernelGetIntrPriority: 0xE427D050
           sceKernelGetIntrTarget: 0x353CFAAE
           sceKernelIsIntrAllowedInCurrentContext: 0x182EE3E3
-          sceKernelIsIntrPending: 0xA269003D
           sceKernelIsSubInterruptOccurred: 0x950B864B
           sceKernelMaskIntr: 0x180435EC
           sceKernelRegisterIntrHandler: 0x5C1FEB29
@@ -33,4 +31,6 @@ modules:
       SceIntrmgrForKernel:
         nid: 0x07AC5E3A
         functions:
+          sceKernelClearIntrPending: 0x4DC48A01
+          sceKernelIsIntrPending: 0xA269003D
           sceKernelQueryIntrHandlerInfo: 0xB5AFAE49
