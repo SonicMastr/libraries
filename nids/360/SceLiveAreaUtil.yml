@@ -1,5 +1,5 @@
 modules:
-  SceLiveArea:
+  SceLiveAreaUtil:
     nid: 0x6D180EF6
     libraries:
       SceLiveAreaUtil:

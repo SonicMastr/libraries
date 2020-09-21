@@ -1,5 +1,5 @@
 modules:
-  SceHttp:
+  SceLibHttp:
     nid: 0xB015B405
     libraries:
       SceHttp:

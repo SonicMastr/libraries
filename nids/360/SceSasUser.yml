@@ -1,5 +1,5 @@
 modules:
-  SceSas:
+  SceSasUser:
     nid: 0xBDF706EB
     libraries:
       SceSas:

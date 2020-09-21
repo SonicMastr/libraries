@@ -1,5 +1,5 @@
 modules:
-  SceNetCtl:
+  SceLibNetCtl:
     nid: 0xFA4A5948
     libraries:
       SceNetCtl:

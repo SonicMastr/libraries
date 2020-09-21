@@ -1,5 +1,5 @@
 modules:
-  SceSsl:
+  SceLibSsl:
     nid: 0x9CD6CA85
     libraries:
       SceSsl:

@@ -1,6 +1,6 @@
 modules:
   SceSulpha:
-    nid: 0x000000D4
+    nid: 0x2C476B6B
     libraries:
       SceSulpha:
         nid: 0x533DEBDE

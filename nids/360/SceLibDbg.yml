@@ -1,5 +1,5 @@
 modules:
-  SceDbg:
+  SceLibDbg:
     nid: 0x0E0ABB49
     libraries:
       SceDbg:

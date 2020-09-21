@@ -1,5 +1,5 @@
 modules:
-  ScePgf:
+  SceLibPgf:
     nid: 0xB40B26E9
     libraries:
       ScePgf:

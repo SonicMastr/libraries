@@ -1,5 +1,5 @@
 modules:
-  ScePvf:
+  SceLibPvf:
     nid: 0x820F86E8
     libraries:
       ScePvf:

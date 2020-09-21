@@ -1,6 +1,6 @@
 modules:
   SceOled:
-    nid: 0x5410837A
+    nid: 0xE49D6C00
     libraries:
       SceOledForDriver:
         nid: 0x60C7478A

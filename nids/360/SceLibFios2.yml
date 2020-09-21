@@ -1,6 +1,6 @@
 modules:
-  SceFios2:
-    nid: 0x00000032
+  SceLibFios2:
+    nid: 0xC72B85FD
     libraries:
       SceFios2:
         nid: 0x3AD4D630
