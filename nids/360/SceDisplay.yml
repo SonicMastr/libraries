@@ -78,13 +78,3 @@ modules:
           sceDisplayWaitVblankStartMultiCB: 0x77ED8B3A
           sceDisplayWaitVblankStartMultiCBInternal: 0x61421AAF
           sceDisplayWaitVblankStartMultiInternal: 0x32287576
-      SceDisplayUser:
-        nid: 0x4FAACD11
-        functions:
-          sceDisplayGetFrameBuf: 0x42AE6BBC
-          sceDisplayGetFrameBufInternal: 0x5213F74B
-          sceDisplayGetMaximumFrameBufResolution: 0x8848ADDD
-          sceDisplayGetResolutionInfoInternal: 0x0BFB78C6
-          sceDisplaySetFrameBuf: 0x7A410B64
-          sceDisplaySetFrameBufForCompat: 0x8C36B628
-          sceDisplaySetFrameBufInternal: 0x89F86A1E

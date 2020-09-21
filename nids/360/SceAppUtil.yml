@@ -66,8 +66,3 @@ modules:
           sceAppUtilCacheGetDevInfo: 0x1171B736
           sceAppUtilCacheMount: 0x0AA56143
           sceAppUtilCacheUmount: 0x72D26BF4
-      SceAppUtilExt:
-        nid: 0x76D1A509
-        functions:
-          sceAppUtilExtVideoMount: 0xA0380CF7
-          sceAppUtilExtVideoUmount: 0x02E1E2C4
