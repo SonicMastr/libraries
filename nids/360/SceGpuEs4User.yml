@@ -1,0 +1,42 @@
+modules:
+  SceGpuEs4User:
+    nid: 0x8EFBDBFF
+    libraries:
+      SceGpuEs4User:
+        nid: 0xFAFCA413
+        functions:
+          PVRSRVAcquireDeviceData: 0x70800B46
+          PVRSRVAllocDeviceMem: 0x071E62F0
+          PVRSRVAllocSyncInfo: 0x94286660
+          PVRSRVConnect: 0x228252A2
+          PVRSRVCreateDeviceMemContext: 0x1E0A9C4A
+          PVRSRVCreateSyncInfoModObj: 0x416C8813
+          PVRSRVDestroyDeviceMemContext: 0xB9178277
+          PVRSRVDisconnect: 0xA5B14369
+          PVRSRVEnumerateDevices: 0x4447D217
+          PVRSRVFreeDeviceMem: 0xB6CFD213
+          PVRSRVFreeSyncInfo: 0xB26DF3D2
+          PVRSRVGetMiscInfo: 0x73E945A1
+          PVRSRVMapMemoryToGpu: 0x56893E98
+          PVRSRVModifyPendingSyncOps: 0x0D27286F
+          PVRSRVReleaseMiscInfo: 0xF4735A47
+          PVRSRVUnmapMemoryFromGpu: 0xAD20D1A0
+          SGXCreateRenderContext: 0x8A997DBB
+          SGXCreateTransferContext: 0xBDE2B9E1
+          SGXDestroyRenderContext: 0x0BFE1685
+          SGXDestroyTransferContext: 0x8ED7D698
+          SGXGetClientInfo: 0xB000CA65
+          SGXGetMiscInfo: 0x09BB98B2
+          SGXGetRenderTargetDriverMemBlock: 0x804BA13D
+          SGXGetRenderTargetHostMem: 0x9E8E2957
+          SGXKickTA: 0xF0CCE9DB
+          SGXReleaseClientInfo: 0x5273D097
+          SGXRemoveRenderTarget: 0xD90B0707
+          SGXTransferControlStream: 0x5564C1BE
+      SceGpuEs4UserForVsh:
+        nid: 0x9E3C99D4
+        functions:
+          PVRSRVCloseSharedSyncInfo: 0x0A9556D9
+          PVRSRVCreateSharedSyncInfo: 0x3C09BFCA
+          PVRSRVDeleteSharedSyncInfo: 0x010DA2CB
+          PVRSRVOpenSharedSyncInfo: 0x8A27AB0A
