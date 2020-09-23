@@ -275,14 +275,33 @@ modules:
       SceGxmInternal:
         nid: 0x3FE654E6
         functions:
-          sceGxmInternalCreateRenderTarget: 0xC8A0F04E
-          sceGxmInternalGetRenderTargetMemSize: 0x4DD98588
-          sceGxmInternalIsInitialized: 0xEC82DB20
-          sceGxmInternalMapFragmentUsseMemory: 0xB9391D22
-          sceGxmInternalMapVertexUsseMemory: 0x5694B569
-          sceGxmInternalUnmapFragmentUsseMemory: 0xC29B9B82
-          sceGxmInternalUnmapVertexUsseMemory: 0xD7506735
+          sceGxmCheckMappedMemory: 0x88B424FB
+          sceGxmCreateRenderTargetInternal: 0xC8A0F04E
+          sceGxmGetRenderTargetMemSizeInternal: 0x4DD98588
+          sceGxmIsInitializedInternal: 0xEC82DB20
+          sceGxmMapFragmentUsseMemoryInternal: 0xB9391D22
+          sceGxmMapVertexUsseMemoryInternal: 0x5694B569
+          sceGxmUnmapFragmentUsseMemoryInternal: 0xC29B9B82
+          sceGxmUnmapVertexUsseMemoryInternal: 0xD7506735
+      SceGxmInternalForGles:
+        nid: 0xB5973AAA
+        functions:
+          sceGxmShaderPatcherCreateFragmentProgramInternal: 0x83149CAD
+      SceGxmInternalForTest:
+        nid: 0x171129AF
+        functions:
+          sceGxmAllocDeviceMemLinux: 0xD412F27B
+          sceGxmSetFragmentJobDepthBiasAdjust: 0x46D6C306
+          sceGxmSetFragmentJobSplitThreshold: 0xD352F90A
+          sceGxmSetFragmentJobVisibilityBuffer: 0x1D68FB73
+          sceGxmSetFragmentJobYuvProfile: 0x6E9565D5
+          sceGxmSetVertexJobNearClipMode: 0xC65CED80
+          sceGxmSetVertexJobSplitThreshold: 0x65FF05BC
       SceGxmInternalForVsh:
         nid: 0xC98AEB79
         functions:
-          sceGxmVshInitialize: 0xA04F5FAC
+          sceGxmInitializeInternal: 0xA04F5FAC
+          sceGxmSyncObjectCloseShared: 0xBEB4F93D
+          sceGxmSyncObjectCreateShared: 0x2A956594
+          sceGxmSyncObjectDeleteShared: 0x9B8FC52F
+          sceGxmSyncObjectOpenShared: 0xAD3FE572
