@@ -50,27 +50,27 @@ typedef SceIoPreadSyscallParam SceIoPwriteSyscallParam;
 
 /* Function declarations */
 
-SceUID _sceIoRemove(const char *filename, SceIoUnusedSyscallParam0x8 param);
+SceUID _sceIoRemove(const char *filename, SceIoUnusedSyscallParam0x8* param);
 
-int _sceIoMkdir(const char *dirname, SceIoMode mode, SceIoUnusedSyscallParam0x8 param);
+int _sceIoMkdir(const char *dirname, SceIoMode mode, SceIoUnusedSyscallParam0x8* param);
 
-int _sceIoRmdir(const char *dirname, SceIoUnusedSyscallParam0x8 param);
+int _sceIoRmdir(const char *dirname, SceIoUnusedSyscallParam0x8* param);
 
-int _sceIoRename(const char *oldname, const char *newname, SceIoUnusedSyscallParam0x10 param);
+int _sceIoRename(const char *oldname, const char *newname, SceIoUnusedSyscallParam0x10* param);
 
-int _sceIoDevctl(const char *devname, int cmd, const void *arg, SceIoDevctlSyscallParam param);
+int _sceIoDevctl(const char *devname, int cmd, const void *arg, SceIoDevctlSyscallParam* param);
 
-int _sceIoSync(const char *devname, int flag, SceIoUnusedSyscallParam0x8 param);
+int _sceIoSync(const char *devname, int flag, SceIoUnusedSyscallParam0x8* param);
 
-SceUID _sceIoOpen(const char *filename, int flag, SceIoMode mode, SceIoUnusedSyscallParam0x8 param);
+SceUID _sceIoOpen(const char *filename, int flag, SceIoMode mode, SceIoUnusedSyscallParam0x8* param);
 
-int _sceIoIoctl(SceUID fd, int cmd, const void *argp, SceIoIoctlSyscallParam param);
+int _sceIoIoctl(SceUID fd, int cmd, const void *argp, SceIoIoctlSyscallParam* param);
 
-SceOff _sceIoLseek(SceUID fd, SceIoLseekSyscallParam param);
+SceOff _sceIoLseek(SceUID fd, SceIoLseekSyscallParam* param);
 
-SceSSize _sceIoPread(SceUID fd, void *buf, SceSize nbyte, SceIoPreadSyscallParam param);
+SceSSize _sceIoPread(SceUID fd, void *buf, SceSize nbyte, SceIoPreadSyscallParam* param);
 
-SceSSize _sceIoPwrite(SceUID fd, const void *buf, SceSize nbyte, SceIoPwriteSyscallParam param);
+SceSSize _sceIoPwrite(SceUID fd, const void *buf, SceSize nbyte, SceIoPwriteSyscallParam* param);
 
 #ifdef __cplusplus
 }
