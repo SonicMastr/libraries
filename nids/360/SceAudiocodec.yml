@@ -1,0 +1,10 @@
+modules:
+  SceAudiocodec:
+    nid: 0x799A8649
+    libraries:
+      SceAudiocodec:
+        nid: 0x0984774F
+        functions:
+          sceAudiocodecDecode: 0xE827E04F
+          sceAudiocodecInit: 0x1F9A3722
+          sceAudiocodecQueryMemSize: 0xE2AF3A54
