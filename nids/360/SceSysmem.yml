@@ -531,6 +531,7 @@ modules:
           sceKernelSysrootIsUserModeThread: 0x7FC7A163
           sceKernelSysrootPrintBacktrace: 0x491CE8DF
           sceKernelSysrootProcessmgrStart2: 0x62E8F511
+          sceKernelSysrootRegisterDbgpHandler: 0x3999F917
           sceKernelSysrootReturnFromExcpToThread: 0xDADFF828
           sceKernelSysrootSetModulePrivate: 0x7A7E7C0C
           sceKernelSysrootSetSharedMemory: 0xFBB91741
@@ -539,6 +540,7 @@ modules:
           sceKernelSysrootSetVbaseResetVector: 0x0F2F2B4E
           sceKernelSysrootThreadMgrStartAfterProcess: 0x0EB5D7CD
           sceKernelSysrootTrapThreadAfterSyscall: 0x9139E22B
+          sceKernelSysrootUnregisterDbgpHandler: 0x7B7ED1E9
           sceSysrootGetFactorySystemSwVersion: 0xD3872270
           sceSysrootGetModuleInfoForPid: 0xFF9F80FF
           sceSysrootGetNidName: 0x0B79E220
