@@ -107,6 +107,22 @@ int sceDebugPutchar(int character);
  */
 int sceDebugDisableInfoDump(int flag);
 
+/**
+ * @brief Get current minimum assertion level
+ *
+ * @return current minimum assertion level.
+ */
+int sceKernelGetMinimumAssertionLevel(void);
+
+/**
+ * @brief Get current minimum assertion level
+ *
+ * @param[in] level - new minimum assertion level
+ *
+ * @return previous minimum assertion level.
+ */
+int sceKernelSetMinimumAssertionLevel(int level);
+
 SCE_CDECL_END
 
 #endif /* _VDSUITE_KERNEL_KERNEL_SYSMEM_DEBUG_H */

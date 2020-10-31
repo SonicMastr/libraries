@@ -146,6 +146,7 @@ modules:
           sceDebugPrintfKernelAssertion: 0x821A2D59
           sceDebugPrintfKernelPanic: 0x00CCE39C
           sceDebugVprintf: 0x411C0733
+          sceKernelGetMinimumAssertionLevel: 0x374B7868
       SceDebugForKernel:
         nid: 0x88C17370
         functions:
@@ -154,6 +155,7 @@ modules:
           sceDebugPutchar: 0x82D2EDCE
           sceDebugRegisterPutcharHandler: 0xE6115A72
           sceDebugSetHandlers: 0x10067B7B
+          sceKernelSetMinimumAssertionLevel: 0xCE9060F1
       SceDebugLed:
         nid: 0xAE004C0A
         functions:
