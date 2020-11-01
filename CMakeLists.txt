@@ -1,55 +1,56 @@
-cmake_minimum_required(VERSION 3.13)
+#
+#   Copyright (C) 2021 Reiko Asakura. All Rights Reserved.
+#
+#   Vita Development Suite Libraries
+#
 
-set(ARCH "arm-dolce-eabi" CACHE STRING "Target architecture")
-set(CMAKE_INSTALL_PREFIX "$ENV{DOLCESDK}/" CACHE PATH "Install prefix")
+cmake_minimum_required(VERSION 3.19)
 
-if(DEFINED ENV{DOLCESDK})
-  set(_LIBS_GEN "$ENV{DOLCESDK}/bin/dolce-libs-gen")
-else()
-  set(_LIBS_GEN "dolce-libs-gen")
-endif()
-set(LIBS_GEN "${_LIBS_GEN}" CACHE STRING "libs-gen command")
+set(CMAKE_TOOLCHAIN_FILE $ENV{SCE_PSP2_SDK_DIR}/host_tools/build/cmake/psp2-snc-toolchain.cmake)
 
-include(ProcessorCount)
-ProcessorCount(_NPROC)
-if(_NPROC EQUAL 0)
-  set(_NPROC 1)
-endif()
-set(NPROC "${_NPROC}" CACHE STRING "Number of processors")
+project(vdsuite-libraries LANGUAGES NONE)
 
-project(dolcesdk-target-headers LANGUAGES NONE)
+include(ExternalProject)
+include(VitaDevelopmentSuite)
 
-set(STUBS_DIR stubs)
-set(DB_FILE "${CMAKE_SOURCE_DIR}/db.yml")
-set(DB_365_FILE "${CMAKE_SOURCE_DIR}/db_365.yml")
-
-add_custom_command(OUTPUT "${STUBS_DIR}"
-  DEPENDS "${DB_FILE}" "${DB_365_FILE}"
-  COMMAND ${CMAKE_COMMAND} -E make_directory "${STUBS_DIR}"
-  COMMAND "${LIBS_GEN}" "${DB_FILE}" "${STUBS_DIR}/cex-3600"
-  COMMAND "${LIBS_GEN}" "${DB_365_FILE}" "${STUBS_DIR}/cex-3650"
-)
-
-add_custom_target(prepare-stubs
-  DEPENDS "${STUBS_DIR}"
-  COMMENT "Preparing stubs"
-)
-
-add_custom_target(build-stubs
-  COMMAND make -C "${STUBS_DIR}/cex-3600" -j "${NPROC}"
-  COMMAND make -C "${STUBS_DIR}/cex-3650" -j "${NPROC}"
-  COMMENT "Building stubs with ${NPROC} jobs"
-)
-
-add_dependencies(build-stubs prepare-stubs)
+# Install stub archives
 
 add_custom_target(install-stubs
-  COMMAND make -C "${STUBS_DIR}/cex-3600" install
-  COMMAND make -C "${STUBS_DIR}/cex-3650" install
-  COMMENT "Install stubs"
+  COMMAND ${CMAKE_COMMAND}
+    -D NIDS_DIR=${CMAKE_CURRENT_SOURCE_DIR}/nids
+    -D VDSUITE_LIBGEN=${VDSUITE_LIBGEN}
+    -D CMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX}
+    -P ${CMAKE_CURRENT_SOURCE_DIR}/cmake/InstallStubs.cmake
 )
 
-add_dependencies(install-stubs build-stubs)
+# Install headers
 
-install(DIRECTORY include/ DESTINATION "${ARCH}/include")
-install(FILES db.yml db_365.yml DESTINATION share)
+install(DIRECTORY
+  include/
+  DESTINATION include/vdsuite
+)
+
+# Build and install GLES headers
+
+ExternalProject_Add(opengl-registry
+  URL https://github.com/KhronosGroup/OpenGL-Registry/archive/2afca877b25ec2c7f19ddcba21a8627b9fa8e026.tar.gz
+  URL_HASH SHA256=d7447748ac3a10c9c6324e2ee980b3b0d6f75f8665d0d4055b1afd1aa3f5b67d
+  EXCLUDE_FROM_ALL TRUE
+  INSTALL_DIR ${CMAKE_INSTALL_PREFIX}
+  CONFIGURE_COMMAND ""
+  BUILD_COMMAND ""
+  INSTALL_COMMAND ${CMAKE_COMMAND} -E copy_directory <SOURCE_DIR>/api/GLES2 <INSTALL_DIR>/include/vdsuite/user/GLES2
+)
+
+ExternalProject_Add(egl-registry
+  URL https://github.com/KhronosGroup/EGL-Registry/archive/d42c684f61828e3ce18533f1c6893b79980e6acc.tar.gz
+  URL_HASH SHA256=02ce918b4c9c65b5af1924330a17f3c7fbccfd87869a5c87b25d7c7c593a3d8b
+  EXCLUDE_FROM_ALL TRUE
+  INSTALL_DIR ${CMAKE_INSTALL_PREFIX}
+  PATCH_COMMAND patch --forward --strip=1 --input=${CMAKE_CURRENT_SOURCE_DIR}/patches/egl-registry.patch
+  CONFIGURE_COMMAND ""
+  BUILD_COMMAND ${CMAKE_COMMAND} -E chdir <SOURCE_DIR>/api python3 genheaders.py -registry egl.xml EGL/egl.h
+  COMMAND       ${CMAKE_COMMAND} -E chdir <SOURCE_DIR>/api python3 genheaders.py -registry egl.xml EGL/eglext.h
+  INSTALL_COMMAND ${CMAKE_COMMAND} -E copy_directory <SOURCE_DIR>/api/EGL <INSTALL_DIR>/include/vdsuite/user/EGL
+  COMMAND         ${CMAKE_COMMAND} -E copy_directory <SOURCE_DIR>/api/KHR <INSTALL_DIR>/include/vdsuite/user/KHR
+)

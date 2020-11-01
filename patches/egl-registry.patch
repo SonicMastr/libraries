@@ -1,0 +1,40 @@
+--- a/api/EGL/eglplatform.h
++++ b/api/EGL/eglplatform.h
+@@ -139,6 +139,12 @@ typedef void              *EGLNativeDisplayType;
+ typedef khronos_uintptr_t  EGLNativePixmapType;
+ typedef khronos_uintptr_t  EGLNativeWindowType;
+ 
++#elif defined(__psp2__)
++
++typedef void *EGLNativeDisplayType;
++typedef void *EGLNativePixmapType;
++typedef int   EGLNativeWindowType;
++
+ #else
+ #error "Platform not recognized"
+ #endif
+--- a/api/genheaders.py
++++ b/api/genheaders.py
+@@ -410,8 +410,8 @@ buildList = [
+         filename          = 'EGL/egl.h',
+         apiname           = 'egl',
+         profile           = None,
+-        versions          = allVersions,
+-        emitversions      = allVersions,
++        versions          = '1\.[0-4]',
++        emitversions      = '1\.[0-4]',
+         defaultExtensions = None,                   # No default extensions
+         addExtensions     = None,
+         removeExtensions  = None,
+@@ -429,9 +429,9 @@ buildList = [
+         filename          = 'EGL/eglext.h',
+         apiname           = 'egl',
+         profile           = None,
+-        versions          = allVersions,
++        versions          = '1\.[0-4]',
+         emitversions      = None,
+-        defaultExtensions = 'egl',                  # Default extensions for EGL
++        defaultExtensions = None,                   # No default extensions
+         addExtensions     = None,
+         removeExtensions  = None,
+         prefixText        = prefixStrings + eglPlatformStrings + eglextVersionStrings,
