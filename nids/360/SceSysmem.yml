@@ -261,9 +261,9 @@ modules:
       SceSblAIMgrForDriver:
         nid: 0xFD00C69A
         functions:
+          sceSblAimgrGetProductCode: 0x14345161
           sceSblAimgrGetProductSubCode: 0xB33CEC8F
           sceSblAimgrGetSMI: 0x47D9CF13
-          sceSblAimgrGetTargetId: 0x14345161
           sceSblAimgrIsCEX: 0xD78B04A2
           sceSblAimgrIsDEX: 0xF4B98F66
           sceSblAimgrIsDolce: 0x71608CA3
