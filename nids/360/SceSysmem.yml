@@ -498,8 +498,8 @@ modules:
           sceKernelSysrootSetSystemSwVersion: 0x3276086B
           sceNetDebugAttach: 0x6C036B53
           sceNetDebugDetach: 0xA9510EFE
+          sceSysrootGetHardwareFlags: 0x46E72428
           sceSysrootGetHardwareInfo: 0x930B1342
-          sceSysrootIsAuCodecIcConexant: 0x46E72428
           sceSysrootUtMgrHasNpTestFlag: 0xA43599E9
           sceSysrootUtMgrSetNpTestFlag: 0xEE5D6CE9
       SceSysrootForKernel:

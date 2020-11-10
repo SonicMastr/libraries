@@ -68,6 +68,15 @@ int sceKernelSysrootSetProcessHandler(const SceSysrootProcessHandler *handlers);
  */
 SceUID sceKernelSysrootGetShellPid(void);
 
+/**
+ * Get hardware flags.
+ *
+ * @param[out] flags - The flags output buffer. size is 0x10 byte
+ *
+ * @return always 0.
+ */
+SceInt32 sceSysrootGetHardwareFlags(SceUInt32 flags[4]);
+
 SCE_CDECL_END
 
 #endif /* _VDSUITE_KERNEL_KERNEL_SYSMEM_SYSROOT_H */
