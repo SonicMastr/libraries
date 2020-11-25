@@ -121,6 +121,7 @@ modules:
           sceKernelGetProcessIdFromTLS: 0xFA54D49A
           sceKernelGetSystemTimeLow: 0x47F6DE49
           sceKernelGetSystemTimeWide: 0xF4EE4FA9
+          sceKernelGetTLSAddr: 0xE938FB20
           sceKernelGetThreadCpuAffinityMask: 0x83DC703D
           sceKernelGetThreadCpuRegisters: 0x5022689D
           sceKernelGetThreadCurrentPriority: 0x01414F0B

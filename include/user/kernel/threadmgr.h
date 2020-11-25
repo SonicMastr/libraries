@@ -56,13 +56,6 @@ int sceKernelWaitSignal(SceUInt32 unk0, SceUInt32 unk1, SceKernelWaitSignalOptPa
  */
 int sceKernelSendSignal(SceUID thid);
 
-/**
- * @brief sceKernelGetTLSAddr get pointer to TLS key area for current thread
- * @param key - the TLS keyslot index
- * @return pointer to TLS key value
- */
-void *sceKernelGetTLSAddr(SceKernelTLS key);
-
 /*
  * Mono thread support functions
  */

@@ -34,6 +34,13 @@ typedef enum _SceKernelTLS {
 } SceKernelTLS;
 
 /**
+ * @brief sceKernelGetTLSAddr get pointer to TLS key area for current thread
+ * @param key - the TLS keyslot index
+ * @return pointer to TLS key value
+ */
+void *sceKernelGetTLSAddr(SceKernelTLS key);
+
+/**
  * @brief sceKernelGetThreadTLSAddr gets an address to a 4 bytes area of TLS memory for the specified thread
  * @param thid - The UID of the thread to access TLS
  * @param key - the TLS keyslot index
