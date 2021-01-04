@@ -64,6 +64,7 @@ modules:
           scePowerCancelRequest: 0xDB62C9CF
           scePowerEncodeUBattery: 0x3951AF53
           scePowerGetArmClockFrequency: 0xABC6F88F
+          scePowerGetArmClockFrequencyProc: 0x2E9000F7
           scePowerGetBatteryChargingStatus: 0xB4432BC8
           scePowerGetBatteryCycleCount: 0x008A54B9
           scePowerGetBatteryElec: 0x862AE1A6
@@ -77,16 +78,22 @@ modules:
           scePowerGetBatteryTemp: 0x28E12023
           scePowerGetBatteryVolt: 0x483CE86B
           scePowerGetBusClockFrequency: 0x478FE6F5
+          scePowerGetBusClockFrequencyProc: 0x2777A517
+          scePowerGetCameraBusClockFrequency: 0x668F01D4
           scePowerGetCaseTemp: 0x525592E4
           scePowerGetCompatClockFrequency: 0xCBCC11CC
-          scePowerGetDeviceCount: 0x475BCC82
           scePowerGetDisplayMaxBrightness: 0xD8759B55
-          scePowerGetGpuClockFrequency: 0xC63DACD5
+          scePowerGetDmac5ClockFrequency: 0xF1E14EA9
+          scePowerGetGpuClockFrequencyInternal: 0x475BCC82
+          scePowerGetGpuClockFrequencyProc: 0x642E0AF2
           scePowerGetGpuXbarClockFrequency: 0x0A750DEE
+          scePowerGetGpuXbarClockFrequencyProc: 0x62C5406C
           scePowerGetIdleTimer: 0xEDC13FE5
           scePowerGetPowerSwMode: 0x165CE085
           scePowerGetResumeCount: 0x0074EF9B
-          scePowerGetVenezia: 0x0E58FCDF
+          scePowerGetSysClockFrequency: 0xC63DACD5
+          scePowerGetVeneziaClockFrequency: 0x64641E6A
+          scePowerGetVipClockFrequency: 0x0E58FCDF
           scePowerGetWakeupFactor: 0x9F26222A
           scePowerIsBatteryCharging: 0x1E490401
           scePowerIsBatteryExist: 0x0AFD0D8B
@@ -105,15 +112,21 @@ modules:
           scePowerRequestStandby: 0x2B7C7CF4
           scePowerRequestSuspend: 0xAC32C9CC
           scePowerSetArmClockFrequency: 0x74DB5AE5
+          scePowerSetArmClockFrequencyProc: 0x86CB5218
           scePowerSetBatteryFakeStatus: 0x0C6973B8
           scePowerSetBusClockFrequency: 0xB8D7B3FB
+          scePowerSetBusClockFrequencyProc: 0x20A33D58
           scePowerSetCallbackState: 0xA6FF5997
+          scePowerSetCameraBusClockFrequency: 0xC743E392
           scePowerSetCompatClockFrequency: 0xFFC84E69
           scePowerSetDisplayBrightness: 0x43D5CE1D
           scePowerSetDisplayMaxBrightness: 0x77027B6B
-          scePowerSetGpuClockFrequency: 0x621BD8FD
-          scePowerSetGpuEs4ClockFrequency: 0x264C24FC
+          scePowerSetDmac5ClockFrequency: 0xA902CDDF
+          scePowerSetGpuClockFrequency: 0x717DB06C
+          scePowerSetGpuClockFrequencyInternal: 0x264C24FC
+          scePowerSetGpuClockFrequencyProc: 0xB104EFE2
           scePowerSetGpuXbarClockFrequency: 0xA7739DBE
+          scePowerSetGpuXbarClockFrequencyProc: 0x8D18F728
           scePowerSetIdleCallback: 0x1BA2FCAE
           scePowerSetIdleTimer: 0x6BC26FC7
           scePowerSetPowerSwMode: 0xC1853BA7
@@ -121,7 +134,9 @@ modules:
           scePowerSetProcessIdleCallback: 0x0856FD0A
           scePowerSetPsButtonPushTime: 0xCF8F0529
           scePowerSetStandbyButtonPushTime: 0x675A84ED
-          scePowerSetVenezia: 0xE5573571
+          scePowerSetSysClockFrequency: 0x0E333BEC
+          scePowerSetVeneziaClockFrequency: 0x621BD8FD
+          scePowerSetVipClockFrequency: 0xE5573571
           scePowerTick: 0xEFD3C963
           scePowerUnregisterCallback: 0xDFA8BAF8
           scePowerWlanActivate: 0x6D2CA84B

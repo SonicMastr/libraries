@@ -152,11 +152,11 @@ int scePowerGetArmClockFrequency(void);
 int scePowerGetBusClockFrequency(void);
 
 /**
- * Returns GPU clock frequency
+ * Returns Sys clock frequency
  *
- * @return GPU clock frequency in Mhz
+ * @return Sys clock frequency in Mhz
  */
-int scePowerGetGpuClockFrequency(void);
+int scePowerGetSysClockFrequency(void);
 
 /**
  * Returns GPU crossbar clock frequency
