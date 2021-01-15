@@ -6,31 +6,31 @@ modules:
         nid: 0xD0FC2991
         functions:
           sceKblAuthMgrClose: 0x79241ACF
-          sceKblCheckDipsw: 0xC8F4DE71
           sceKblCpuDisableIrqInterrupts: 0xDDB3A1A8
           sceKblFreeFileSystemCtx: 0x261F2747
-          sceKblGetCpuId: 0xB506A10E
           sceKblGetHardwareFlags: 0xD3A516D5
           sceKblGetMinimumLogLevel: 0xC011935A
           sceKblGetPutcharHandler: 0x9B868276
           sceKblInitDevice: 0xF7AF8690
-          sceKblIsAllowKernelDebug: 0xCE94F329
-          sceKblIsCEX: 0x8A416887
-          sceKblIsCEXJpFat: 0xC3DDDE15
-          sceKblIsDEX: 0x5945F065
-          sceKblIsDolce: 0xA7BD4417
-          sceKblIsGenuineDolce: 0xB6D00D6D
-          sceKblIsTest: 0x943E7537
-          sceKblIsTool: 0xB6C9ACF1
-          sceKblIsVITA: 0x838466E9
           sceKblLoadModule: 0x6D7A1F18
-          sceKblPrintf: 0x13A5ABEF
-          sceKblPrintfLevel: 0x752E7EEC
           sceKblPutchar: 0x08E9FAEB
           sceKblSetNonSyncModuleStart: 0x9F4F3F98
           sceKblStartModule: 0x9A92436E
-          sceKblSysrootCpuCoreSyncAll: 0x314AA770
-          sceKblSysrootCpuCoreSyncWait: 0x807B4437
-          sceKblSysrootIofilemgrStart: 0xC7B77991
-          sceKblSysrootProcessmgrStart2: 0x161D6FCC
-          sceKblSysrootThreadMgrStartAfterProcess: 0x1DB28F02
+          sceKernelCheckDipsw: 0xC8F4DE71
+          sceKernelCpuId: 0xB506A10E
+          sceKernelPrintf: 0x13A5ABEF
+          sceKernelPrintfLevel: 0x752E7EEC
+          sceKernelSysrootCorelockLock: 0x807B4437
+          sceKernelSysrootCorelockUnlock: 0x314AA770
+          sceKernelSysrootIofilemgrStart: 0xC7B77991
+          sceKernelSysrootProcessmgrStart2: 0x161D6FCC
+          sceKernelSysrootThreadMgrStartAfterProcess: 0x1DB28F02
+          sceSblAimgrIsCEX: 0x8A416887
+          sceSblAimgrIsDEX: 0x5945F065
+          sceSblAimgrIsDiag: 0xC3DDDE15
+          sceSblAimgrIsDolce: 0xA7BD4417
+          sceSblAimgrIsGenuineDolce: 0xB6D00D6D
+          sceSblAimgrIsTest: 0x943E7537
+          sceSblAimgrIsTool: 0xB6C9ACF1
+          sceSblAimgrIsVITA: 0x838466E9
+          sceSblQafManagerIsAllowKernelDebug: 0xCE94F329
