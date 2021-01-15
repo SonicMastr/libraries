@@ -122,7 +122,6 @@ modules:
           scePowerSetDisplayBrightness: 0x43D5CE1D
           scePowerSetDisplayMaxBrightness: 0x77027B6B
           scePowerSetDmac5ClockFrequency: 0xA902CDDF
-          scePowerSetGpuClockFrequency: 0x717DB06C
           scePowerSetGpuClockFrequencyInternal: 0x264C24FC
           scePowerSetGpuClockFrequencyProc: 0xB104EFE2
           scePowerSetGpuXbarClockFrequency: 0xA7739DBE
