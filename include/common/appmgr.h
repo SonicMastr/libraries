@@ -1,7 +1,7 @@
 #ifndef _DOLCESDK_PSP2COMMON_APPMGR_H_
 #define _DOLCESDK_PSP2COMMON_APPMGR_H_
 
-#include <psp2common/types.h>
+#include_next <appmgr.h>
 
 #if defined(_LANGUAGE_C_PLUS_PLUS)||defined(__cplusplus)||defined(c_plusplus)
 extern "C" {

@@ -1,51 +1,13 @@
 #ifndef _PSP2_APPMGR_H_
 #define _PSP2_APPMGR_H_
 
-#include <psp2common/appmgr.h>
-#include <psp2/scebase.h>
+#include_next <appmgr.h>
+
+#include <stdint.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
-
-#define _SCE_APPMGR_VERSION (SCE_PSP2_SDK_VERSION & 0xffff0000)
-
-typedef enum SceAppMgrErrorCode {
-	SCE_APPMGR_ERROR_BUSY               = (int)0x80802000, //!< Busy
-	SCE_APPMGR_ERROR_STATE              = (int)0x80802013, //!< Invalid state
-	SCE_APPMGR_ERROR_NULL_POINTER       = (int)0x80802016, //!< NULL pointer
-	SCE_APPMGR_ERROR_INVALID            = (int)0x8080201A, //!< Invalid param
-	SCE_APPMGR_ERROR_TOO_LONG_ARGV      = (int)0x8080201D, //!< argv is too long
-	SCE_APPMGR_ERROR_INVALID_SELF_PATH  = (int)0x8080201E, //!< Invalid SELF path
-	SCE_APPMGR_ERROR_BGM_PORT_BUSY      = (int)0x80803000  //!< BGM port was occupied and could not be secured
-} SceAppMgrErrorCode;
-
-typedef enum SceAppMgrSystemEventType {
-	SCE_APPMGR_SYSTEMEVENT_ON_RESUME             = 0x10000003,
-	SCE_APPMGR_SYSTEMEVENT_ON_STORE_PURCHASE     = 0x10000004,
-	SCE_APPMGR_SYSTEMEVENT_ON_NP_MESSAGE_ARRIVED = 0x10000005,
-	SCE_APPMGR_SYSTEMEVENT_ON_STORE_REDEMPTION   = 0x10000006
-} SceAppMgrSystemEventType;
-
-typedef enum SceAppMgrInfoBarVisibility {
-	SCE_APPMGR_INFOBAR_VISIBILITY_INVISIBLE = 0,
-	SCE_APPMGR_INFOBAR_VISIBILITY_VISIBLE   = 1
-} SceAppMgrInfoBarVisibility;
-
-typedef enum SceAppMgrInfoBarColor {
-	SCE_APPMGR_INFOBAR_COLOR_BLACK  = 0,
-	SCE_APPMGR_INFOBAR_COLOR_WHITE  = 1
-} SceAppMgrInfoBarColor;
-
-typedef enum SceAppMgrInfoBarTransparency {
-	SCE_APPMGR_INFOBAR_TRANSPARENCY_OPAQUE      = 0,
-	SCE_APPMGR_INFOBAR_TRANSPARENCY_TRANSLUCENT = 1
-} SceAppMgrInfoBarTransparency;
-
-typedef struct SceAppMgrSystemEvent {
-	int     systemEvent;   //!< One of ::SceAppMgrSystemEventType
-	uint8_t reserved[60];  //!< Reserved data
-} SceAppMgrSystemEvent;
 
 typedef struct SceAppMgrSaveDataData {
 	int size;                                //!< Must be 0x4C
@@ -82,21 +44,8 @@ typedef struct SceAppMgrSaveDataSlotDelete {
 	SceAppMgrMountPoint mountPoint;  //!< Savedata mountpoint
 } SceAppMgrSaveDataSlotDelete;
 
-typedef struct SceAppMgrAppState {
-	SceUInt32 systemEventNum;
-	SceUInt32 appEventNum;
-	SceBool isSystemUiOverlaid;
-	SceUInt8 reserved[116];
-} SceAppMgrAppState;
-
 typedef struct SceAppMgrExecOptParam SceAppMgrExecOptParam; // Missing struct
 typedef struct SceAppMgrLaunchAppOptParam SceAppMgrLaunchAppOptParam; // Missing struct
-
-typedef struct sceAppMgrLoadExecOptParam {
-	int reserved[64];    //!< Reserved data
-} sceAppMgrLoadExecOptParam;
-
-#define SCE_APPMGR_MAX_APP_NAME_LENGTH	(31)
 
 #define SCE_APPMGR_BUDGET_MODE_MAIN              2 // Main LPDDR2 only
 #define SCE_APPMGR_BUDGET_MODE_MAIN_PHYCONT      3 // Main and phycont or CDLG which is also contiguous
@@ -254,26 +203,6 @@ SceUID sceAppMgrGetProcessIdByAppIdForShell(SceUID appId);
 int sceAppMgrGetRunningAppIdListForShell(SceUID *appIds, int count);
 
 /**
- * Get an application state
- *
- * @param[out] appState - State of the application
- * @param[in] len - sizeof(SceAppMgrState)
- * @param[in] version - Version (?)
-
- * @return 0 on success, < 0 on error.
- */
-int _sceAppMgrGetAppState(SceAppMgrAppState *appState, SceSize len, uint32_t version);
-
-/**
- * Receive system event
- *
- * @param[out] systemEvent - Received system event
-
- * @return 0 on success, < 0 on error.
- */
-int sceAppMgrReceiveSystemEvent(SceAppMgrSystemEvent *systemEvent);
-
-/**
  * Copies app param to an array
  *
  * @param[out] param - pointer to a 1024 byte location to store the app param
@@ -283,48 +212,6 @@ int sceAppMgrReceiveSystemEvent(SceAppMgrSystemEvent *systemEvent);
  * @note App param example: type=LAUNCH_APP_BY_URI&uri=psgm:play?titleid=NPXS10031
  */
 int sceAppMgrGetAppParam(char *param);
-
-/**
- * Obtains the BGM port, even when it is not in front
- *
- * @return 0 on success, < 0 on error.
- *
- */
-int sceAppMgrAcquireBgmPort(void);
-
-/**
- * Release acquired BGM port
- *
- * @return 0 on success, < 0 on error.
- *
- */
-int sceAppMgrReleaseBgmPort(void);
-
-/**
- * Set infobar state
- *
- * @param[in] visibility - Infobar visibility
- * @param[in] color - Infobar color
- * @param[in] transparency - Infobar transparency
- *
- * @return 0 on success, < 0 on error.
- *
- */
-int sceAppMgrSetInfobarState(SceAppMgrInfoBarVisibility visibility, SceAppMgrInfoBarColor color, SceAppMgrInfoBarTransparency transparency);
-
-/**
- * Load and start a SELF executable
- *
- * @param[in] appPath - Path of the SELF file
- * @param[in] argv - Args to pass to SELF module_start
- * @param[in] optParam - Optional params
- *
- * @return 0 on success, < 0 on error.
- *
- * @note SELF file must be located in app0: partition.
- */
-int sceAppMgrLoadExec(const char *appPath, char * const argv[],
-	const SceAppMgrExecOptParam *optParam);
 
 /**
  * Start an application by URI
