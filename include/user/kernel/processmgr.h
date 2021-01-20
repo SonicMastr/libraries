@@ -1,53 +1,9 @@
 #ifndef _PSP2_KERNEL_PROCESSMGR_H_
 #define _PSP2_KERNEL_PROCESSMGR_H_
 
-#include <psp2/kernel/threadmgr.h>
-#include <psp2/types.h>
+#include_next <kernel/processmgr.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-typedef enum SceKernelProcessPrioritySystem {
-	SCE_KERNEL_PROCESS_PRIORITY_SYSTEM_HIGH     = 32,
-	SCE_KERNEL_PROCESS_PRIORITY_SYSTEM_DEFAULT  = 96,
-	SCE_KERNEL_PROCESS_PRIORITY_SYSTEM_LOW      = 159
-} SceKernelProcessPrioritySystem;
-
-typedef enum SceKernelProcessPriorityUser {
-	SCE_KERNEL_PROCESS_PRIORITY_USER_HIGH       = 64,
-	SCE_KERNEL_PROCESS_PRIORITY_USER_DEFAULT    = 96,
-	SCE_KERNEL_PROCESS_PRIORITY_USER_LOW        = 127
-} SceKernelProcessPriorityUser;
-
-typedef enum SceKernelPowerTickType {
-	/** Cancel all timers */
-	SCE_KERNEL_POWER_TICK_DEFAULT               = 0,
-	/** Cancel automatic suspension timer */
-	SCE_KERNEL_POWER_TICK_DISABLE_AUTO_SUSPEND  = 1,
-	/** Cancel OLED-off timer */
-	SCE_KERNEL_POWER_TICK_DISABLE_OLED_OFF      = 4,
-	/** Cancel OLED dimming timer */
-	SCE_KERNEL_POWER_TICK_DISABLE_OLED_DIMMING  = 6
-} SceKernelPowerTickType;
-
-/**
- * Exit current Process with specified return code
- *
- * @param[in] res - Exit code to return
- *
- * @return 0 on success, < 0 on error.
- */
-int sceKernelExitProcess(int res);
-
-/**
- * Cancel specified idle timers to prevent entering in power save processing.
- *
- * @param[in] type - One of ::SceKernelPowerTickType
- *
- * @return 0
- */
-int sceKernelPowerTick(SceKernelPowerTickType type);
+SCE_CDECL_BEGIN
 
 /**
  * Locks certain timers from triggering.
@@ -56,7 +12,7 @@ int sceKernelPowerTick(SceKernelPowerTickType type);
  *
  * @return 0
   */
-int sceKernelPowerLock(SceKernelPowerTickType type);
+int sceKernelPowerLock(SceInt32 type);
 
 /**
  * Unlocks certain timers.
@@ -65,34 +21,9 @@ int sceKernelPowerLock(SceKernelPowerTickType type);
  *
  * @return 0
  */
-int sceKernelPowerUnlock(SceKernelPowerTickType type);
+int sceKernelPowerUnlock(SceInt32 type);
 
-/**
- * Get the process time of the current process.
- *
- * @param[out] type - Pointer to a ::SceKernelSysClock structure which will receive the process time.
- *
- * @return 0 on success, < 0 on error.
- */
-int sceKernelGetProcessTime(SceKernelSysClock *pSysClock);
-
-/**
- * Get the lower 32 bits part of process time of the current process.
- *
- * @return process time of the current process
- */
-SceUInt32 sceKernelGetProcessTimeLow(void);
-
-/**
- * Get the process time of the current process.
- *
- * @return process time of the current process
- */
-SceUInt64 sceKernelGetProcessTimeWide(void);
-
-#ifdef __cplusplus
-}
-#endif
+SCE_CDECL_END
 
 #endif /* _PSP2_KERNEL_PROCESSMGR_H_ */
 
