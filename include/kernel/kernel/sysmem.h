@@ -1,33 +1,26 @@
 #ifndef _PSP2_KERNEL_SYSMEM_H_
 #define _PSP2_KERNEL_SYSMEM_H_
 
-#include <stdarg.h>
-#include <psp2kern/kernel/types.h>
+#include_next <kernel/sysmem.h>
+
+#include <stddef.h>
+#include <stdint.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-typedef enum _SceKernelMemBlockType {
-	SCE_KERNEL_MEMBLOCK_TYPE_SHARED_RX                = 0x0390D050,
-	SCE_KERNEL_MEMBLOCK_TYPE_USER_CDRAM_RW            = 0x09408060,
-	SCE_KERNEL_MEMBLOCK_TYPE_USER_RW_UNCACHE          = 0x0C208060,
-	SCE_KERNEL_MEMBLOCK_TYPE_USER_RX                  = 0x0C20D050,
-	SCE_KERNEL_MEMBLOCK_TYPE_USER_RW                  = 0x0C20D060,
-	SCE_KERNEL_MEMBLOCK_TYPE_USER_MAIN_PHYCONT_RW     = 0x0C80D060,
-	SCE_KERNEL_MEMBLOCK_TYPE_USER_MAIN_PHYCONT_NC_RW  = 0x0D808060,
-	SCE_KERNEL_MEMBLOCK_TYPE_KERNEL_RX                = 0x1020D005,
-	SCE_KERNEL_MEMBLOCK_TYPE_KERNEL_RW                = 0x1020D006,
-	SCE_KERNEL_MEMBLOCK_TYPE_RW_UNK0                  = 0x6020D006
-} _SceKernelMemBlockType;
+#define SCE_KERNEL_MEMBLOCK_TYPE_SHARED_RX                 0x0390D050
+#define SCE_KERNEL_MEMBLOCK_TYPE_USER_RX                   0x0C20D050
+#define SCE_KERNEL_MEMBLOCK_TYPE_KERNEL_RX                 0x1020D005
+#define SCE_KERNEL_MEMBLOCK_TYPE_KERNEL_RW                 0x1020D006
+#define SCE_KERNEL_MEMBLOCK_TYPE_RW_UNK0                   0x6020D006
 
 typedef enum SceKernelAllocMemBlockAttr {
 	SCE_KERNEL_ALLOC_MEMBLOCK_ATTR_HAS_PADDR          = 0x00000002U,
-	SCE_KERNEL_ALLOC_MEMBLOCK_ATTR_HAS_ALIGNMENT      = 0x00000004U,
 	SCE_KERNEL_ALLOC_MEMBLOCK_ATTR_HAS_MIRROR_BLOCKID = 0x00000040U,
 	SCE_KERNEL_ALLOC_MEMBLOCK_ATTR_HAS_PID            = 0x00000080U,
 	SCE_KERNEL_ALLOC_MEMBLOCK_ATTR_HAS_PADDR_LIST     = 0x00001000U,
-	SCE_KERNEL_ALLOC_MEMBLOCK_ATTR_PHYCONT            = 0x00200000U,
 	SCE_KERNEL_ALLOC_MEMBLOCK_ATTR_ALLOW_PARTIAL_OP   = 0x04000000U
 } SceKernelAllocMemBlockAttr;
 
@@ -146,37 +139,6 @@ typedef struct SceKernelSysrootSelfInfo {
 } SceKernelSysrootSelfInfo;
 
 /**
- * Allocates a new memory block
- *
- * @param[in] name - Name for the memory block
- * @param[in] type - Type of the memory to allocate
- * @param[in] size - Size of the memory to allocate
- * @param[in] opt  - Memory block options?
- *
- * @return SceUID of the memory block on success, < 0 on error.
-*/
-SceUID sceKernelAllocMemBlock(const char *name, SceKernelMemBlockType type, SceSize size, SceKernelAllocMemBlockKernelOpt *opt);
-
-/**
- * Frees new memory block
- *
- * @param[in] uid - SceUID of the memory block to free
- *
- * @return 0 on success, < 0 on error.
-*/
-int sceKernelFreeMemBlock(SceUID uid);
-
-/**
- * Gets the base address of a memory block
- *
- * @param[in]  uid  - SceUID of the memory block
- * @param[out] base - Base address of the memory block identified by uid
- *
- * @return 0 on success, < 0 on error.
-*/
-int sceKernelGetMemBlockBase(SceUID uid, void **base);
-
-/**
  * Gets the memory block type of a memory block
  *
  * @param[in] uid - SceUID of the memory block
@@ -185,16 +147,6 @@ int sceKernelGetMemBlockBase(SceUID uid, void **base);
  * @return 0 on success, < 0 on error.
 */
 int sceKernelGetMemBlockType(SceUID uid, unsigned int *type);
-
-/**
- * Find the SceUID of a memory block
- *
- * @param[in] addr - Base address of the memory block
- * @param[in] size - Size to search for (usally set to 0)
- *
- * @return SceUID of the memory block on success, < 0 on error.
-*/
-SceUID sceKernelFindMemBlockByAddr(const void *addr, SceSize size);
 
 /**
  * Find the SceUID of a memory block for a PID

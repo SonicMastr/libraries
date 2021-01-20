@@ -1,18 +1,9 @@
 #ifndef _PSP2_KERNEL_SYSMEM_H_
 #define _PSP2_KERNEL_SYSMEM_H_
 
-#include <psp2/kernel/sysmem/memblock.h>
+#include_next <kernel/sysmem.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-typedef struct SceKernelFreeMemorySizeInfo {
-	int size;         //!< sizeof(SceKernelFreeMemorySizeInfo)
-	int size_user;    //!< Free memory size for *_USER_RW memory
-	int size_cdram;   //!< Free memory size for USER_CDRAM_RW memory
-	int size_phycont; //!< Free memory size for USER_MAIN_PHYCONT_*_RW memory
-} SceKernelFreeMemorySizeInfo;
+SCE_CDECL_BEGIN
 
 typedef enum SceKernelModel {
 	SCE_KERNEL_MODEL_VITA   = 0x10000,
@@ -41,19 +32,9 @@ int sceKernelGetModelForCDialog(void);
 */
 int sceKernelGetModel(void);
 
-/**
- * Get free memory size in bytes
- *
- * @param[out] info - Returned free memory size for different kind of memory block types
- * @return 0 on success, < 0 on error.
-*/
-int sceKernelGetFreeMemorySize(SceKernelFreeMemorySizeInfo *info);
-
 int sceKernelIsPSVitaTV(void);
 
-#ifdef __cplusplus
-}
-#endif
+SCE_CDECL_END
 
 #endif
 
