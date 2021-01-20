@@ -1,25 +1,13 @@
 #ifndef _PSP2_KERNEL_MODULEMGR_H_
 #define _PSP2_KERNEL_MODULEMGR_H_
 
-#include <psp2kern/types.h>
+#include_next <kernel/modulemgr.h>
+
+#include <stdint.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
-
-/**
- * @brief      Return values for plugins `module_start` and `module_stop`
- */
-/** @{ */
-#define SCE_KERNEL_START_SUCCESS      (0)
-#define SCE_KERNEL_START_RESIDENT     SCE_KERNEL_START_SUCCESS
-#define SCE_KERNEL_START_NO_RESIDENT  (1)
-#define SCE_KERNEL_START_FAILED       (2)
-
-#define SCE_KERNEL_STOP_SUCCESS       (0)
-#define SCE_KERNEL_STOP_FAIL          (1)
-#define SCE_KERNEL_STOP_CANCEL        SCE_KERNEL_STOP_FAIL
-/** @} */
 
 typedef enum SceKernelModuleState {
     SCE_KERNEL_MODULE_STATE_READY   = 0x00000002,
@@ -61,14 +49,6 @@ typedef struct SceKernelModuleInfo {
   SceKernelSegmentInfo segments[4];
   SceUInt state;                       //!< see:SceKernelModuleState
 } SceKernelModuleInfo;
-
-typedef struct {
-  SceSize size;
-} SceKernelLMOption;
-
-typedef struct {
-  SceSize size;
-} SceKernelULMOption;
 
 typedef struct {
   SceSize size;
@@ -259,84 +239,6 @@ SceUID sceKernelSearchModuleByName(const char *module_name);
 int sceKernelGetSystemSwVersion(SceKernelFwInfo *data);
 
 /**
- * @brief load module (kernel only)
- *
- * @param[in] path   - module path
- * @param[in] flags  - unknown, set zero
- * @param[in] option - unknown
- *
- * @return modid on success, < 0 on error.
- */
-SceUID sceKernelLoadModule(const char *path, int flags, SceKernelLMOption *option);
-
-/**
- * @brief start module (kernel only)
- *
- * @param[in]  modid  - target module id
- * @param[in]  args   - module start args
- * @param[in]  argp   - module start argp
- * @param[in]  flags  - unknown, set zero
- * @param[in]  option - unknown
- * @param[out] status - module_start res, SCE_KERNEL_START_SUCCESS etc...
- *
- * @return 0 on success, < 0 on error.
- */
-int sceKernelStartModule(SceUID modid, SceSize args, void *argp, int flags, SceKernelLMOption *option, int *status);
-
-/**
- * @brief load and start module (kernel only)
- *
- * @param[in]  path   - module path
- * @param[in]  args   - module start args
- * @param[in]  argp   - module start argp
- * @param[in]  flags  - unknown, set zero
- * @param[in]  option - unknown
- * @param[out] status - module_start res, SCE_KERNEL_START_SUCCESS etc...
- *
- * @return modid on success, < 0 on error.
- */
-SceUID sceKernelLoadStartModule(const char *path, SceSize args, void *argp, int flags, SceKernelLMOption *option, int *status);
-
-/**
- * @brief stop module (kernel only)
- *
- * @param[in]  modid  - target module id
- * @param[in]  args   - module stop args
- * @param[in]  argp   - module stop argp
- * @param[in]  flags  - unknown, set zero
- * @param[in]  option - unknown
- * @param[out] status - module_stop res, SCE_KERNEL_STOP_SUCCESS etc...
- *
- * @return 0 on success, < 0 on error.
- */
-int sceKernelStopModule(SceUID modid, SceSize args, void *argp, int flags, SceKernelULMOption *option, int *status);
-
-/**
- * @brief unload module (kernel only)
- *
- * @param[in]  modid  - target module id
- * @param[in]  flags  - unknown, set zero
- * @param[in]  option - unknown
- *
- * @return 0 on success, < 0 on error.
- */
-int sceKernelUnloadModule(SceUID modid, int flags, SceKernelULMOption *option);
-
-/**
- * @brief stop and unload module (kernel only)
- *
- * @param[in]  modid  - target module id
- * @param[in]  args   - module stop args
- * @param[in]  argp   - module stop argp
- * @param[in]  flags  - unknown, set zero
- * @param[in]  option - unknown
- * @param[out] status - module_stop res, SCE_KERNEL_STOP_SUCCESS etc...
- *
- * @return 0 on success, < 0 on error.
- */
-int sceKernelStopUnloadModule(SceUID modid, SceSize args, void *argp, int flags, SceKernelULMOption *option, int *status);
-
-/**
  * @brief load module
  *
  * @param[in]  pid    - target pid
@@ -346,7 +248,7 @@ int sceKernelStopUnloadModule(SceUID modid, SceSize args, void *argp, int flags,
  *
  * @return modid on success, < 0 on error.
  */
-SceUID sceKernelLoadModuleForPid(SceUID pid, const char *path, int flags, SceKernelLMOption *option);
+SceUID sceKernelLoadModuleForPid(SceUID pid, const char *path, int flags, SceKernelLoadModuleOpt *option);
 
 /**
  * @brief start module
@@ -361,7 +263,7 @@ SceUID sceKernelLoadModuleForPid(SceUID pid, const char *path, int flags, SceKer
  *
  * @return 0 on success, < 0 on error.
  */
-int sceKernelStartModuleForPid(SceUID pid, SceUID modid, SceSize args, void *argp, int flags, SceKernelLMOption *option, int *status);
+int sceKernelStartModuleForPid(SceUID pid, SceUID modid, SceSize args, void *argp, int flags, SceKernelStartModuleOpt *option, int *status);
 
 /**
  * @brief load and start module
@@ -376,7 +278,7 @@ int sceKernelStartModuleForPid(SceUID pid, SceUID modid, SceSize args, void *arg
  *
  * @return modid on success, < 0 on error.
  */
-SceUID sceKernelLoadStartModuleForPid(SceUID pid, const char *path, SceSize args, void *argp, int flags, SceKernelLMOption *option, int *status);
+SceUID sceKernelLoadStartModuleForPid(SceUID pid, const char *path, SceSize args, void *argp, int flags, SceKernelLoadModuleOpt *option, int *status);
 
 /**
  * @brief stop module
@@ -391,7 +293,7 @@ SceUID sceKernelLoadStartModuleForPid(SceUID pid, const char *path, SceSize args
  *
  * @return 0 on success, < 0 on error.
  */
-int sceKernelStopModuleForPid(SceUID pid, SceUID modid, SceSize args, void *argp, int flags, SceKernelULMOption *option, int *status);
+int sceKernelStopModuleForPid(SceUID pid, SceUID modid, SceSize args, void *argp, int flags, SceKernelStopModuleOpt *option, int *status);
 
 /**
  * @brief unload module
@@ -403,7 +305,7 @@ int sceKernelStopModuleForPid(SceUID pid, SceUID modid, SceSize args, void *argp
  *
  * @return 0 on success, < 0 on error.
  */
-int sceKernelUnloadModuleForPid(SceUID pid, SceUID modid, int flags, SceKernelULMOption *option);
+int sceKernelUnloadModuleForPid(SceUID pid, SceUID modid, int flags, SceKernelUnloadModuleOpt *option);
 
 /**
  * @brief stop and unload module
@@ -418,7 +320,7 @@ int sceKernelUnloadModuleForPid(SceUID pid, SceUID modid, int flags, SceKernelUL
  *
  * @return 0 on success, < 0 on error.
  */
-int sceKernelStopUnloadModuleForPid(SceUID pid, SceUID modid, SceSize args, void *argp, int flags, SceKernelULMOption *option, int *status);
+int sceKernelStopUnloadModuleForPid(SceUID pid, SceUID modid, SceSize args, void *argp, int flags, SceKernelUnloadModuleOpt *option, int *status);
 
 /**
  * @brief load and start module as shared module
@@ -433,7 +335,7 @@ int sceKernelStopUnloadModuleForPid(SceUID pid, SceUID modid, SceSize args, void
  *
  * @return modid on success, < 0 on error.
  */
-SceUID sceKernelLoadStartSharedModuleForPid(SceUID pid, const char *path, SceSize args, void *argp, int flags, SceKernelLMOption *option, int *status);
+SceUID sceKernelLoadStartSharedModuleForPid(SceUID pid, const char *path, SceSize args, void *argp, int flags, SceKernelLoadModuleOpt *option, int *status);
 
 /**
  * @brief stop and unload module as shared module
@@ -448,7 +350,7 @@ SceUID sceKernelLoadStartSharedModuleForPid(SceUID pid, const char *path, SceSiz
  *
  * @return 0 on success, < 0 on error.
  */
-int sceKernelStopUnloadSharedModuleForPid(SceUID pid, SceUID modid, SceSize args, void *argp, int flags, SceKernelULMOption *option, int *status);
+int sceKernelStopUnloadSharedModuleForPid(SceUID pid, SceUID modid, SceSize args, void *argp, int flags, SceKernelUnloadModuleOpt *option, int *status);
 
 /**
  * @brief mount bootfs (load bootfs module)
