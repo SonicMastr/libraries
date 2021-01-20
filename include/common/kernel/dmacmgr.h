@@ -1,11 +1,10 @@
-#ifndef _PSP2_DMAC_H_
-#define _PSP2_DMAC_H_
+#ifndef _VDSUITE_COMMON_KERNEL_DMACMGR_H
+#define _VDSUITE_COMMON_KERNEL_DMACMGR_H
 
-#include <psp2/types.h>
+#include <cdefs.h>
+#include <kernel/types.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+SCE_CDECL_BEGIN
 
 /**
  * DMA memcpy
@@ -29,8 +28,6 @@ void *sceDmacMemcpy(void *dst, const void *src, SceSize size);
 */
 void *sceDmacMemset(void *dst, int c, SceSize size);
 
-#ifdef __cplusplus
-}
-#endif
+SCE_CDECL_END
 
-#endif /* _PSP2_DMAC_H_ */
+#endif /* _VDSUITE_COMMON_KERNEL_DMACMGR_H */
