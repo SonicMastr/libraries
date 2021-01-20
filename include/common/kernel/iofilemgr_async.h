@@ -1,6 +1,8 @@
 #ifndef _DOLCESDK_PSP2COMMON_KERNEL_IOFILEMGR_ASYNC_H_
 #define _DOLCESDK_PSP2COMMON_KERNEL_IOFILEMGR_ASYNC_H_
 
+#include <kernel/threadmgr.h>
+
 #ifdef __cplusplus
 extern "C" {
 #endif

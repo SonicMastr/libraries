@@ -1,48 +1,13 @@
 #ifndef _DOLCESDK_PSP2KERN_KERNEL_IOFILEMGR_DIRENT_H_
 #define _DOLCESDK_PSP2KERN_KERNEL_IOFILEMGR_DIRENT_H_
 
-#include <psp2common/kernel/iofilemgr/dirent.h>
-#include <psp2kern/kernel/iofilemgr/async.h>
+#include_next <kernel/iofilemgr_dirent.h>
+
+#include <kernel/iofilemgr_async.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
-
-/**
-  * Open a directory
-  *
-  * @par Example:
-  * @code
-  * int dfd;
-  * dfd = sceIoDopen("device:/");
-  * if(dfd >= 0)
-  * { Do something with the file descriptor }
-  * @endcode
-  * @param dirname - The directory to open for reading.
-  * @return If >= 0 then a valid file descriptor, otherwise a Sony error code.
-  */
-SceUID sceIoDopen(const char *dirname);
-
-/**
-  * Close an opened directory file descriptor
-  *
-  * @param fd - Already opened file descriptor (using ::sceIoDopen)
-  * @return < 0 on error
-  */
-int sceIoDclose(SceUID fd);
-
-/**
-  * Reads an entry from an opened file descriptor.
-  *
-  * @param fd - Already opened file descriptor (using ::sceIoDopen)
-  * @param buf - Pointer to a ::SceIoDirent structure to hold the file information
-  *
-  * @return Read status
-  * -   0 - No more directory entries left
-  * - > 0 - More directory entries to go
-  * - < 0 - Error
-  */
-int sceIoDread(SceUID fd, SceIoDirent *buf);
 
 /**
   * Open a directory (asynchronous)

@@ -1,54 +1,13 @@
 #ifndef _DOLCESDK_PSP2KERN_KERNEL_IOFILEMGR_STAT_H_
 #define _DOLCESDK_PSP2KERN_KERNEL_IOFILEMGR_STAT_H_
 
-#include <psp2common/kernel/iofilemgr/stat.h>
-#include <psp2kern/kernel/iofilemgr/async.h>
+#include_next <kernel/iofilemgr_stat.h>
+
+#include <kernel/iofilemgr_async.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
-
-/**
-  * Change the status of a file.
-  *
-  * @param name - The path to the file.
-  * @param buf - A pointer to a ::SceIoStat structure.
-  * @param cbit - Bitmask defining which bits to change.
-  *
-  * @return < 0 on error.
-  */
-int sceIoChstat(const char *name, const SceIoStat *buf, unsigned int cbit);
-
-/**
-  * Get the status of a file.
-  *
-  * @param name - The path to the file.
-  * @param buf - A pointer to a ::SceIoStat structure.
-  *
-  * @return < 0 on error.
-  */
-int sceIoGetstat(const char *name, SceIoStat *buf);
-
-/**
-  * Get the status of a file descriptor.
-  *
-  * @param fd - The file descriptor.
-  * @param buf - A pointer to a ::SceIoStat structure.
-  *
-  * @return < 0 on error.
-  */
-int sceIoGetstatByFd(SceUID fd, SceIoStat *buf);
-
-/**
-  * Change the status of a file descriptor.
-  *
-  * @param fd - The file descriptor.
-  * @param buf - A pointer to an io_stat_t structure.
-  * @param cbit - Bitmask defining which bits to change.
-  *
-  * @return < 0 on error.
-  */
-int sceIoChstatByFd(SceUID fd, const SceIoStat *buf, unsigned int cbit);
 
 /**
  * Make a directory file (asynchronous)
