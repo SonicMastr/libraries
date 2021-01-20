@@ -1,9 +1,10 @@
 #ifndef _PSP2_KERNEL_CPU_H_
 #define _PSP2_KERNEL_CPU_H_
 
-#include <psp2common/kernel/cpu.h>
-#include <psp2kern/types.h>
+#include_next <kernel/cpu.h>
+
 #include <string.h>
+#include <scetypes.h>
 
 #ifdef __cplusplus
 extern "C" {
