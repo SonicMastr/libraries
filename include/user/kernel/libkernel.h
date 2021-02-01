@@ -1,12 +1,9 @@
 #ifndef _PSP2_KERNEL_CLIB_H_
 #define _PSP2_KERNEL_CLIB_H_
 
-#include <psp2/types.h>
-#include <stdarg.h>
+#include_next <kernel/libkernel.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+SCE_CDECL_BEGIN
 
 /**
  * Run bkpt #0x88 and end the process in state -1
@@ -43,14 +40,7 @@ int sceClibStrncasecmp(const char *s1, const char *s2, SceSize len);
 
 SceSize sceClibStrnlen(const char *s1, SceSize max_len);
 
-void *sceClibMemset(void *dst, int ch, SceSize len);
-void *sceClibMemcpy(void *dst, const void *src, SceSize len);
 void *sceClibMemcpy_safe(void *dst, const void *src, SceSize len);
-void *sceClibMemmove(void *dst, const void *src, SceSize len);
-
-int sceClibMemcmp(const void *s1, const void *s2, SceSize len);
-
-void *sceClibMemchr(const void *src, int ch, SceSize len);
 
 long long sceClibStrtoll(const char *str, char **endptr, int base);
 
@@ -84,9 +74,7 @@ SceInt32 sceClibMspaceMallocStats(SceClibMspace msp, SceClibMspaceStats *buf);
 SceInt32 sceClibMspaceMallocStatsFast(SceClibMspace msp, SceClibMspaceStats *buf);
 SceInt32 sceClibMspaceIsHeapEmpty(SceClibMspace msp);
 
-#ifdef __cplusplus
-}
-#endif
+SCE_CDECL_END
 
 #endif /* _PSP2_KERNEL_CLIB_H_ */
 
