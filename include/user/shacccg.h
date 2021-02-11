@@ -1,8 +1,8 @@
 #ifndef _DOLCESDK_PSP2_SHACCCG_H_
 #define _DOLCESDK_PSP2_SHACCCG_H_
 
-#include <psp2/shacccg/types.h>
-#include <psp2/shacccg/paramquery.h>
+#include <shacccg/types.h>
+#include <shacccg/paramquery.h>
 
 /** @file	shacccg.h
 

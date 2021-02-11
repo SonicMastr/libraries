@@ -4,7 +4,7 @@
 /** @file
 */
 
-#include <psp2/gxm/shader_patcher.h>
+#include_next <gxm/shader_patcher.h>
 
 #ifdef	__cplusplus
 extern "C" {

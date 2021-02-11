@@ -3,8 +3,6 @@
 
 #include_next <kernel/iofilemgr.h>
 
-#include <kernel/iofilemgr_async.h>
-
 #ifdef __cplusplus
 extern "C" {
 #endif

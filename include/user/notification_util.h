@@ -1,7 +1,7 @@
 #ifndef _DOLCESDK_PSP2_NOTIFICATION_UTIL_H_
 #define _DOLCESDK_PSP2_NOTIFICATION_UTIL_H_
 
-#include <psp2/types.h>
+#include <scetypes.h>
 
 #ifdef __cplusplus
 extern "C" {

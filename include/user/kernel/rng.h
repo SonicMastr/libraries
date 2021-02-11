@@ -1,7 +1,7 @@
 #ifndef _PSP2_KERNEL_RNG_H_
 #define _PSP2_KERNEL_RNG_H_
 
-#include <psp2/types.h>
+#include <scetypes.h>
 
 #ifdef __cplusplus
 extern "C" {

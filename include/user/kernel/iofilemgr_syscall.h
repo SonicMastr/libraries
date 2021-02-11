@@ -1,7 +1,7 @@
 #ifndef _DOLCESDK_PSP2_KERNEL_IOFILEMGR_SYSCALL_H_
 #define _DOLCESDK_PSP2_KERNEL_IOFILEMGR_SYSCALL_H_
 
-#include <scetypes.h>
+#include <kernel/types.h>
 
 #ifdef __cplusplus
 extern "C" {

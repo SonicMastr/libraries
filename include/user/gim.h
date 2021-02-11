@@ -5,12 +5,10 @@
 extern "C" {
 #endif
 
-#include <stdbool.h>
-#include <psp2/gxm.h>
-#include <psp2/scebase.h>
-
-#include <psp2/kernel/clib.h>
-#include <psp2/kernel/sysmem.h>
+#include <stddef.h>
+#include <gxm.h>
+#include <kernel/libkernel.h>
+#include <kernel/sysmem/memblock.h>
 
 #define SCE_GIM_TAG        0x2E47494DUL    /* 'GIM.' */
 #define SCE_GIM_VERSION    0x312E3030UL    /* '1.00' */

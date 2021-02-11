@@ -1,7 +1,6 @@
 #ifndef _PSP2_NPDRM_H_
 #define _PSP2_NPDRM_H_
 
-#include <psp2/types.h>
 #include <stdint.h>
 
 #ifdef __cplusplus

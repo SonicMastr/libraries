@@ -1,7 +1,7 @@
 #ifndef _PSP2_NET_NET_SYSCALLS_H_
 #define _PSP2_NET_NET_SYSCALLS_H_
 
-#include <psp2/net/net.h>
+#include <net.h>
 
 #ifdef __cplusplus
 extern "C" {

@@ -1,12 +1,13 @@
 #ifndef _PSP2_PSS_H_
 #define _PSP2_PSS_H_
 
-#include <psp2/types.h>
+#include <stdint.h>
+#include <scetypes.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
-  
+
 typedef struct ScePssCryptoHandle {
   SceUID fd;
   uint32_t unk1;

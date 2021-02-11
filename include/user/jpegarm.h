@@ -1,8 +1,7 @@
 #ifndef _DOLCESDK_PSP2_JPEGARM_H_
 #define _DOLCESDK_PSP2_JPEGARM_H_
 
-#include <psp2/types.h>
-#include <psp2/jpeg.h>
+#include <scejpeg.h>
 
 #if defined(_LANGUAGE_C_PLUS_PLUS)||defined(__cplusplus)||defined(c_plusplus)
 extern "C" {

@@ -4,7 +4,7 @@
 /** @file
 */
 
-#include <psp2/gxm/sync_object.h>
+#include_next <gxm/sync_object.h>
 
 #ifdef	__cplusplus
 extern "C" {

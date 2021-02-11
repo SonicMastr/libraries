@@ -3,6 +3,8 @@
 
 #include_next <kernel/libkernel.h>
 
+#include <stdarg.h>
+
 SCE_CDECL_BEGIN
 
 /**

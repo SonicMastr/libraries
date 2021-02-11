@@ -3,6 +3,8 @@
 
 #include_next <kernel/processmgr.h>
 
+#include <stdint.h>
+
 #ifdef __cplusplus
 extern "C" {
 #endif

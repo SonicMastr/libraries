@@ -4,7 +4,7 @@
 /** @file
 */
 
-#include <psp2/gxm/context.h>
+#include_next <gxm/context.h>
 
 #ifdef	__cplusplus
 extern "C" {

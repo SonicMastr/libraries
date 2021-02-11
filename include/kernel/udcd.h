@@ -1,9 +1,6 @@
 #ifndef _PSP2_KERNEL_UDCD_H_
 #define _PSP2_KERNEL_UDCD_H_
 
-#include <psp2kern/types.h>
-#include <dolcesdk/align.h>
-
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -211,7 +208,7 @@ typedef struct SceUdcdStringDescriptor {
 
 /**  USB device descriptor
  */
-typedef struct SCE_ALIGN(4) SceUdcdDeviceDescriptor {
+typedef struct __attribute__((__aligned__(4))) SceUdcdDeviceDescriptor {
 	unsigned char  bLength;
 	unsigned char  bDescriptorType;
 	unsigned short bcdUSB;
@@ -230,7 +227,7 @@ typedef struct SCE_ALIGN(4) SceUdcdDeviceDescriptor {
 
 /**  USB device qualifier descriptor
  */
-typedef struct SCE_ALIGN(4) SceUdcdDeviceQualifierDescriptor {
+typedef struct __attribute__((__aligned__(4))) SceUdcdDeviceQualifierDescriptor {
 	unsigned char  bLength;
 	unsigned char  bDescriptorType;
 	unsigned short bcdUSB;
@@ -376,7 +373,7 @@ typedef struct SceUdcdDeviceRequest {
 
 /**  USB driver name
  */
-typedef struct SCE_ALIGN(16) SceUdcdDriverName {
+typedef struct __attribute__((__aligned__(16))) SceUdcdDriverName {
 	int  size;
 	char name[32];
 	int  flags;

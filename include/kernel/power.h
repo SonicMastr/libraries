@@ -1,7 +1,7 @@
 #ifndef _PSP2_KERN_POWER_H_
 #define _PSP2_KERN_POWER_H_
 
-#include <psp2kern/types.h>
+#include <scetypes.h>
 
 #ifdef __cplusplus
 extern "C" {

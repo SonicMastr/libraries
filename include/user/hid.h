@@ -5,7 +5,7 @@
 extern "C" {
 #endif
 
-#include <psp2/types.h>
+#include <scetypes.h>
 
 typedef struct SceHidKeyboardReport {
 	SceUInt8 reserved;

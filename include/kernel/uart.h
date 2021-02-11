@@ -1,8 +1,6 @@
 #ifndef _PSP2_KERN_UART_H_
 #define _PSP2_KERN_UART_H_
 
-#include <psp2kern/types.h>
-
 #ifdef __cplusplus
 extern "C" {
 #endif

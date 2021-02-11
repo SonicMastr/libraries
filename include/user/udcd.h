@@ -1,7 +1,8 @@
 #ifndef _PSP2_UDCD_H_
 #define _PSP2_UDCD_H_
 
-#include <psp2/types.h>
+#include <stdint.h>
+#include <scetypes.h>
 
 #ifdef __cplusplus
 extern "C" {

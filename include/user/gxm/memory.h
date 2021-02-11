@@ -6,7 +6,7 @@
   	Memory mapping API for the GPU.
 */
 
-#include <psp2/gxm/memory.h>
+#include_next <gxm/memory.h>
 
 #ifdef	__cplusplus
 extern "C" {

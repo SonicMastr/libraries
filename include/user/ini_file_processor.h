@@ -11,7 +11,7 @@
 
 #ifdef __cplusplus
 
-#include <cstddef>
+#include <stddef.h>
 
 namespace sce {
 namespace Ini {

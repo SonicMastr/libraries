@@ -4,7 +4,7 @@
 /** @file
 */
 
-#include <psp2/gxm/render_target.h>
+#include_next <gxm/render_target.h>
 
 #ifdef	__cplusplus
 extern "C" {

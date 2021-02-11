@@ -1,7 +1,7 @@
 #ifndef _PSP2_KERNEL_APPMGR_H_
 #define _PSP2_KERNEL_APPMGR_H_
 
-#include <psp2common/appmgr.h>
+#include_next <appmgr.h>
 
 #ifdef __cplusplus
 extern "C" {

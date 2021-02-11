@@ -1,7 +1,7 @@
 #ifndef _DOLCESDK_PSP2_AUDIOCODEC_H_
 #define _DOLCESDK_PSP2_AUDIOCODEC_H_
 
-#include <psp2/audiodec.h>
+#include <audiodec.h>
 
 /* Error definition */
 #define SCE_AUDIOCODEC_ERROR_API_FAIL                     (0x8000 + SCE_AUDIODEC_ERROR_API_FAIL)

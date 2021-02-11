@@ -1,8 +1,6 @@
 #ifndef _PSP2_KERNEL_USBD_H_
 #define _PSP2_KERNEL_USBD_H_
 
-#include <psp2kern/kernel/threadmgr.h>
-
 #ifdef __cplusplus
 extern "C" {
 #endif

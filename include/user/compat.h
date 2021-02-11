@@ -1,10 +1,9 @@
 #ifndef _PSP2_COMPAT_H_
 #define _PSP2_COMPAT_H_
 
-#include <psp2/kernel/iofilemgr.h>
-#include <psp2/rtc.h>
-#include <psp2/types.h>
-#include <stdint.h>
+#include <kernel/iofilemgr.h>
+#include <rtc.h>
+#include <scetypes.h>
 
 #ifdef __cplusplus
 extern "C" {

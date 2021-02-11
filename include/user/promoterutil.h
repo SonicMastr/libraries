@@ -1,7 +1,7 @@
 #ifndef _PSP2_PROMOTERUTIL_H_
 #define _PSP2_PROMOTERUTIL_H_
 
-#include <psp2/types.h>
+#include <stdint.h>
 
 #ifdef __cplusplus
 extern "C" {

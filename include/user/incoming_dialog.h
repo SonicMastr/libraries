@@ -1,9 +1,9 @@
 #ifndef _DOLCESDK_PSP2_INCOMING_DIALOG_H_
 #define _DOLCESDK_PSP2_INCOMING_DIALOG_H_
 
-#include <psp2/kernel/clib.h>
-#include <psp2/scebase.h>
-#include <psp2/types.h>
+#include <kernel/libkernel.h>
+#include <scetypes.h>
+#include <sdk_version.h>
 
 #ifdef __cplusplus
 extern "C" {

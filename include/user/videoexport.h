@@ -1,9 +1,6 @@
 #ifndef _PSP2_VIDEO_EXPORT_H_
 #define _PSP2_VIDEO_EXPORT_H_
 
-#include <psp2/types.h>
-#include <stdint.h>
-
 #ifdef __cplusplus
 extern "C" {
 #endif

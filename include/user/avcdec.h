@@ -1,6 +1,7 @@
 #ifndef _DOLCESDK_PSP2_AVCDEC_H_
 #define _DOLCESDK_PSP2_AVCDEC_H_
 
+#include <videodec.h>
 #include_next <avcdec.h>
 
 #if defined(_LANGUAGE_C_PLUS_PLUS)||defined(__cplusplus)||defined(c_plusplus)

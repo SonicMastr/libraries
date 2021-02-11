@@ -1,9 +1,8 @@
 #ifndef _DOLCESDK_PSP2_TRIGGER_UTIL_H_
 #define _DOLCESDK_PSP2_TRIGGER_UTIL_H_
 
-#include <psp2/kernel/clib.h>
-#include <psp2/rtc.h>
-#include <psp2/types.h>
+#include <rtc.h>
+#include <scetypes.h>
 
 #ifdef __cplusplus
 extern "C" {

@@ -1,7 +1,7 @@
 #ifndef _DOLCESDK_PSP2KERN_KERNEL_SYSCLIB_H_
 #define _DOLCESDK_PSP2KERN_KERNEL_SYSCLIB_H_
 
-#include <psp2/types.h>
+#include <stddef.h>
 
 #ifdef __cplusplus
 extern "C" {

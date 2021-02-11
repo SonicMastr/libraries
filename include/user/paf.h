@@ -3,8 +3,7 @@
 
 #include <stdarg.h>
 #include <wchar.h>
-#include <psp2/types.h>
-#include <psp2/ces/error.h>
+#include <scetypes.h>
 
 #ifdef __cplusplus
 extern "C" {

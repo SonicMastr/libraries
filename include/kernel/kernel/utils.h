@@ -1,7 +1,8 @@
 #ifndef _PSP2_KERNEL_UTILS_H_
 #define _PSP2_KERNEL_UTILS_H_
 
-#include <psp2kern/types.h>
+#include <stdint.h>
+#include <scetypes.h>
 
 #ifdef __cplusplus
 extern "C" {

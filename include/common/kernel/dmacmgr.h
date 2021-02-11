@@ -2,7 +2,7 @@
 #define _VDSUITE_COMMON_KERNEL_DMACMGR_H
 
 #include <cdefs.h>
-#include <kernel/types.h>
+#include <scetypes.h>
 
 SCE_CDECL_BEGIN
 
