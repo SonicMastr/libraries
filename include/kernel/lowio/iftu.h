@@ -1,3 +1,7 @@
+/*
+	Vita Development Suite Libraries
+*/
+
 #ifndef _PSP2_KERN_LOWIO_IFTU_H_
 #define _PSP2_KERN_LOWIO_IFTU_H_
 

@@ -1,3 +1,7 @@
+/*
+	Vita Development Suite Libraries
+*/
+
 #ifndef _DOLCESDK_PSP2_GXM_INIT_INTERNAL_H_
 #define _DOLCESDK_PSP2_GXM_INIT_INTERNAL_H_
 

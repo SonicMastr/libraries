@@ -1,3 +1,7 @@
+/*
+	Vita Development Suite Libraries
+*/
+
 #ifndef _DOLCESDK_PSP2_INI_FILE_PROCESSOR_H_
 #define _DOLCESDK_PSP2_INI_FILE_PROCESSOR_H_
 

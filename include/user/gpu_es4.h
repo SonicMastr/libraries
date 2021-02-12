@@ -1,3 +1,7 @@
+/*
+	Vita Development Suite Libraries
+*/
+
 #ifndef _DOLCESDK_PSP2_GPU_ES4_H_
 #define _DOLCESDK_PSP2_GPU_ES4_H_
 

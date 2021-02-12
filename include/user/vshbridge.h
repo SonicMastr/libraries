@@ -1,3 +1,7 @@
+/*
+	Vita Development Suite Libraries
+*/
+
 #ifndef _PSP2_VSHBRIDGE_H_
 #define _PSP2_VSHBRIDGE_H_
 

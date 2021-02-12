@@ -1,3 +1,7 @@
+/*
+	Vita Development Suite Libraries
+*/
+
 #ifndef _PSP2_KERN_POWER_H_
 #define _PSP2_KERN_POWER_H_
 

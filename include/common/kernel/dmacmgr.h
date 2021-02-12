@@ -1,3 +1,7 @@
+/*
+	Vita Development Suite Libraries
+*/
+
 #ifndef _VDSUITE_COMMON_KERNEL_DMACMGR_H
 #define _VDSUITE_COMMON_KERNEL_DMACMGR_H
 

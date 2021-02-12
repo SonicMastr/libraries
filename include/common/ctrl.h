@@ -1,3 +1,7 @@
+/*
+	Vita Development Suite Libraries
+*/
+
 /*                 -*- mode: c; tab-width: 4; indent-tabs-mode: t; -*- */
 /*
  *

@@ -1,3 +1,7 @@
+/*
+	Vita Development Suite Libraries
+*/
+
 #ifndef _DOLCESDK_PSP2COMMON_KERNEL_IOFILEMGR_H_
 #define _DOLCESDK_PSP2COMMON_KERNEL_IOFILEMGR_H_
 

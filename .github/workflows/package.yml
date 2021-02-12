@@ -1,0 +1,90 @@
+#
+#   Copyright (C) 2021 Reiko Asakura. All Rights Reserved.
+#
+#   Vita Development Suite Libraries
+#
+
+name: Package
+
+on:
+  push:
+    branches:
+      - master
+    tags:
+      - 'release/*'
+
+env:
+  CMAKE_GENERATOR: MinGW Makefiles
+  SCE_ROOT_DIR: ${{ github.workspace }}/ci-base/SCE
+  SCE_PSP2_SDK_DIR: ${{ github.workspace }}/ci-base/sdk
+
+jobs:
+
+  package:
+    name: Package
+    runs-on: windows-latest
+    steps:
+
+      - name: Set commit digest
+        if: "!startsWith(github.ref, 'refs/tags/release/')"
+        run: |
+          echo "version=git-$("${{ github.sha }}".Substring(0, 8))"
+            | Out-File -FilePath "$env:GITHUB_ENV" -Encoding utf8 -Append
+
+      - name: Set release version
+        if: startsWith(github.ref, 'refs/tags/release/')
+        run: |
+          echo "version=$("${{ github.ref }}".Substring(18))"
+            | Out-File -FilePath "$env:GITHUB_ENV" -Encoding utf8 -Append
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Checkout CI base
+        uses: actions/checkout@v2
+        with:
+          repository: Vita-Development-Suite/ci-base
+          path: ci-base
+          token: ${{ secrets.PRIVATE_REPO_TOKEN }}
+
+      - name: Install dependencies
+        run: |
+          $ProgressPreference = "SilentlyContinue"
+          "psp2-cmake-toolchains","cmake-modules","toolchain"
+            | ForEach-Object {
+                $base_path = "https://bin.shotatoshounenwachigau.moe/vdsuite"
+                Invoke-WebRequest -Uri "$base_path/vdsuite-$_-latest.zip" -OutFile "$_.zip"
+                Expand-Archive -Path "$_.zip" -DestinationPath ${{ github.workspace }}/ci-base
+              }
+          pip install lxml
+
+      - name: Install
+        run: |
+          $name = "Vita Development Suite Libraries"
+          Get-ChildItem -Recurse -File -Path include
+            | ForEach-Object {(Get-Content -Raw $_.FullName) -replace "$name","$name ${{ env.version }}"
+            | Set-Content -Encoding utf8NoBOM -NoNewLine $_.FullName}
+          cmake . -D CMAKE_INSTALL_PREFIX=/sdk/target
+          if ($LastExitCode -ne 0) { exit $LastExitCode }
+          make install
+          if ($LastExitCode -ne 0) { exit $LastExitCode }
+          make opengl-registry
+          if ($LastExitCode -ne 0) { exit $LastExitCode }
+          make egl-registry
+          if ($LastExitCode -ne 0) { exit $LastExitCode }
+          make install-stubs
+          if ($LastExitCode -ne 0) { exit $LastExitCode }
+          Copy-Item -Path "${{ github.workspace }}/ci-base/external/*" -Destination /sdk -Recurse -Force
+
+      - name: Package
+        run: |
+          cd /
+          7z a vdsuite-libraries-${{ env.version }}.zip sdk
+          if ($LastExitCode -ne 0) { exit $LastExitCode }
+
+      - name: Upload
+        uses: actions/upload-artifact@v2
+        with:
+          name: vdsuite-libraries-${{ env.version }}
+          path: /vdsuite-libraries-${{ env.version }}.zip
+          if-no-files-found: error

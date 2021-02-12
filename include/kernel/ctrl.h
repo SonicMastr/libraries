@@ -1,3 +1,7 @@
+/*
+	Vita Development Suite Libraries
+*/
+
 #ifndef _PSP2_KERN_CTRL_H_
 #define _PSP2_KERN_CTRL_H_
 

@@ -1,3 +1,7 @@
+/*
+	Vita Development Suite Libraries
+*/
+
 #ifndef _PSP2_KERNEL_NET_NET_H_
 #define _PSP2_KERNEL_NET_NET_H_
 

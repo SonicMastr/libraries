@@ -1,3 +1,7 @@
+/*
+	Vita Development Suite Libraries
+*/
+
 #ifndef _PSP2_NET_NET_SYSCALLS_H_
 #define _PSP2_NET_NET_SYSCALLS_H_
 

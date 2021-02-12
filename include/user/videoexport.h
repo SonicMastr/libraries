@@ -1,3 +1,7 @@
+/*
+	Vita Development Suite Libraries
+*/
+
 #ifndef _PSP2_VIDEO_EXPORT_H_
 #define _PSP2_VIDEO_EXPORT_H_
 
