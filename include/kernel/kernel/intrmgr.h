@@ -38,22 +38,21 @@ typedef struct SceKernelIntrOptParam {
 int sceKernelRegisterIntrHandler(int intr_code, const char *name, int interrupt_type,
 	SceKernelIntrHandler *handler, void *userCtx, int priority, int targetcpu, SceKernelIntrOptParam *opt);
 int sceKernelReleaseIntrHandler(int intr_code);
-int sceKernelMaskIntr(int intr_code);
-int sceKernelUnmaskIntr(int intr_code);
-int sceKernelSetIntrMasked(int intr_code, int masked);
-int sceKernelGetIntrMasked(int intr_code, int *masked);
+int sceKernelDisableIntr(int intr_code);
+int sceKernelEnableIntr(int intr_code);
+int sceKernelSuspendIntr(int intr_code, int *masked);
 int sceKernelIsIntrPending(int intr_code);
 int sceKernelClearIntrPending(int intr_code);
 int sceKernelSetIntrPriority(int intr_code, int priority);
 int sceKernelGetIntrPriority(int intr_code, int *priority);
-int sceKernelSetIntrTarget(int intr_code, int cpu_target_list);
-int sceKernelGetIntrTarget(int intr_code, int *cpu_target_list);
-int sceKernelTriggerSGI(int intr_code, unsigned int target_list_filter, unsigned int cpu_target_list);
-int sceKernelIsIntrAllowedInCurrentContext(int intr_code);
+int sceKernelSetIntrTargetCpu(int intr_code, int cpu_target_list);
+int sceKernelGetIntrTargetCpu(int intr_code, int *cpu_target_list);
+int sceKernelGenerateSoftIntr(int intr_code, unsigned int target_list_filter, unsigned int cpu_target_list);
+int sceKernelIsIntrContext(int intr_code);
 int sceKernelRegisterSubIntrHandler(int intr_code, int subintr_code, const char *name,
 	SceKernelSubIntrHandler handler, void *register_arg);
 int sceKernelReleaseSubIntrHandler(int intr_code, int subintr_code);
-int sceKernelTriggerSubIntr(int intr_code, int subintr_code, void *subintr_arg);
+int sceKernelCallSubIntrHandler(int intr_code, int subintr_code, void *subintr_arg);
 int sceKernelEnableSubIntr(int intr_code, int subintr_code);
 int sceKernelDisableSubIntr(int intr_code, int subintr_code);
 

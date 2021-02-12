@@ -5,14 +5,16 @@ modules:
       SceIntrmgrForDriver:
         nid: 0x9DF04041
         functions:
+          sceKernelCallSubIntrHandler: 0xCC94B294
+          sceKernelDisableIntr: 0x180435EC
           sceKernelDisableSubIntr: 0x259C6D9E
+          sceKernelEnableIntr: 0x7117E827
           sceKernelEnableSubIntr: 0x901E41D8
-          sceKernelGetIntrMasked: 0x6EC07C56
+          sceKernelGenerateSoftIntr: 0x29F62500
           sceKernelGetIntrPriority: 0xE427D050
-          sceKernelGetIntrTarget: 0x353CFAAE
-          sceKernelIsIntrAllowedInCurrentContext: 0x182EE3E3
+          sceKernelGetIntrTargetCpu: 0x353CFAAE
+          sceKernelIsIntrContext: 0x182EE3E3
           sceKernelIsSubInterruptOccurred: 0x950B864B
-          sceKernelMaskIntr: 0x180435EC
           sceKernelRegisterIntrHandler: 0x5C1FEB29
           sceKernelRegisterIntrHookHandler: 0x99048AEC
           sceKernelRegisterSubIntrHandler: 0x96576C18
@@ -21,13 +23,10 @@ modules:
           sceKernelReleaseSubIntrHandler: 0x7B9657B3
           sceKernelResumeIntr: 0xA4C772AF
           sceKernelResumeSubIntr: 0x957023D0
-          sceKernelSetIntrMasked: 0x7117E827
           sceKernelSetIntrPriority: 0x71020E29
-          sceKernelSetIntrTarget: 0x973BACCC
+          sceKernelSetIntrTargetCpu: 0x973BACCC
+          sceKernelSuspendIntr: 0x6EC07C56
           sceKernelSuspendSubIntr: 0x3A9EA7D1
-          sceKernelTriggerSGI: 0x29F62500
-          sceKernelTriggerSubIntr: 0xCC94B294
-          sceKernelUnmaskIntr: 0x7117E827
       SceIntrmgrForKernel:
         nid: 0x07AC5E3A
         functions:
