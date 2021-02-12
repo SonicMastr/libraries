@@ -17,7 +17,7 @@ modules:
           sceMtpBeginGetObjectMetadata: 0xBD82BC51
           sceMtpBeginGetObjectStatus2: 0x2747749A
           sceMtpBeginGetObjectThumbnail: 0xEA291CFC
-          sceMtpBeginGetSystemSetting: 0xE3727775
+          sceMtpBeginGetSystemSetting: 0x231FB847
           sceMtpBeginGetTotalObjectSize: 0x46CCEAEC
           sceMtpBeginHandover: 0xCFCED21A
           sceMtpBeginHttpGetDataWithUrl: 0x6B7800B7
@@ -34,7 +34,7 @@ modules:
           sceMtpBeginRpcNetOperationRecv: 0x32985803
           sceMtpBeginRpcNetOperationSend: 0x8E7F11CB
           sceMtpBeginSearchObject: 0x7E078352
-          sceMtpBeginSetSystemSetting: 0x231FB847
+          sceMtpBeginSetSystemSetting: 0xCFA3A9DA
           sceMtpBeginSpecifiedObjectMetadata: 0xB26C8078
           sceMtpBeginWriteObjectWithOffset: 0xFFCB2181
           sceMtpCheckContextValid: 0x24130489
