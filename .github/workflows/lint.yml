@@ -1,0 +1,64 @@
+#
+#   Copyright (C) 2021 Reiko Asakura. All Rights Reserved.
+#
+#   Vita Development Suite Libraries
+#
+
+name: Lint
+
+on:
+  push:
+  schedule:
+    - cron:  '0 10 * * *'
+
+env:
+  SCE_ROOT_DIR: ${{ github.workspace }}/ci-base/SCE
+  SCE_PSP2_SDK_DIR: ${{ github.workspace }}/ci-base/sdk
+
+jobs:
+
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Checkout CI base
+        uses: actions/checkout@v2
+        with:
+          repository: Vita-Development-Suite/ci-base
+          path: ci-base
+          token: ${{ secrets.PRIVATE_REPO_TOKEN }}
+
+      - name: Check NIDs sort
+        run: |
+          python3 scripts/nids-check-sort.py
+
+      - name: Check IWYU
+        run: |
+          sudo apt-get -qy install iwyu
+          python3 scripts/gen-test-compile.py
+          IWYU_COMMON_OPTS=" \
+            -Xiwyu --mapping_file=iwyu.imp \
+            -Xiwyu --no_comment \
+            -Xiwyu --verbose=1 \
+            -isystem ${{ env.SCE_PSP2_SDK_DIR }}/target/include \
+            -isystem ${{ env.SCE_PSP2_SDK_DIR }}/target/include_common \
+            -isystem ${{ env.SCE_PSP2_SDK_DIR }}/host_tools/build/include \
+            --target=armv7a-none-eabi \
+            -D __builtin_scei_arm_mrc(...)=0 \
+            -D __builtin_scei_arm_mcr(...)=0 \
+            -D __builtin_scei_arm_mcrr(...)=0 \
+            -D __builtin_scei_arm_dsb_sy(...)=0 \
+            -D __builtin_scei_arm_dmb_sy(...)=0"
+          find include/common -type f -exec \
+            iwyu -Xiwyu --check_also='{}' all-common.cpp \
+            -isystem include/common $IWYU_COMMON_OPTS ';'
+          find include/user -type f -exec \
+            iwyu -Xiwyu --check_also='{}' all-user.cpp \
+            -isystem include/user -isystem include/common $IWYU_COMMON_OPTS ';'
+          find include/kernel -type f -exec \
+            iwyu -Xiwyu --check_also='{}' all-kernel.cpp \
+            -isystem include/kernel -isystem include/common $IWYU_COMMON_OPTS ';'
