@@ -7,34 +7,9 @@
 
 #include_next <kernel/cpu.h>
 
-#include <string.h>
-#include <scetypes.h>
-
 #ifdef __cplusplus
 extern "C" {
 #endif
-
-/**
- * @brief      Call this when entering a syscall
- *
- * @param      state  The state
- */
-#define ENTER_SYSCALL(state) \
-	do { \
-		asm volatile ("mrc p15, 0, %0, c13, c0, 3" : "=r" (state)); \
-		asm volatile ("mcr p15, 0, %0, c13, c0, 3" :: "r" (state << 16) : "memory"); \
-	} while(0)
-
-/**
- * @brief      Call this when exiting a syscall
- *
- * @param      state  The state
- */
-#define EXIT_SYSCALL(state) \
-	do { \
-		asm volatile ("mcr p15, 0, %0, c13, c0, 3" :: "r" (state) : "memory"); \
-	} while (0)
-
 
 /**
  * @brief      Writeback a range of L1 dcache (without L2)
@@ -43,43 +18,6 @@ extern "C" {
  * @param[in]  len   The length
  */
 void sceKernelCpuDcacheWritebackRange(const void *ptr, SceSize len);
-
-
-/**
- * @brief      Save process context
- *
- * @param      context  The context
- */
-static inline void sceKernelCpuSaveContext(int context[3])
-{
-	asm ("mrc p15, 0, %0, c2, c0, 1" : "=r" (context[0]));
-	asm ("mrc p15, 0, %0, c3, c0, 0" : "=r" (context[1]));
-	asm ("mrc p15, 0, %0, c13, c0, 1" : "=r" (context[2]));
-}
-
-/**
- * @brief      Restore process context
- *
- * @param      context  The context, can be from ::sceKernelGetPidContext
- */
-static inline void sceKernelCpuRestoreContext(int context[3])
-{
-	int cpsr, tmp;
-
-	asm volatile ("mrs %0, cpsr" : "=r" (cpsr));
-	if (!(cpsr & 0x80))
-		asm volatile ("cpsid i" ::: "memory");
-	asm volatile ("mrc p15, 0, %0, c13, c0, 1" : "=r" (tmp));
-	tmp = (tmp & 0xFFFFFF00) | context[2];
-	asm volatile ("mcr p15, 0, %0, c13, c0, 1" :: "r" (0));
-	asm volatile ("isb" ::: "memory");
-	asm volatile ("mcr p15, 0, %0, c2, c0, 1" :: "r" (context[0] | 0x4A));
-	asm volatile ("isb" ::: "memory");
-	asm volatile ("mcr p15, 0, %0, c13, c0, 1" :: "r" (tmp));
-	asm volatile ("mcr p15, 0, %0, c3, c0, 0" :: "r" (context[1] & 0x55555555));
-	if (!(cpsr & 0x80))
-		asm volatile ("cpsie i" ::: "memory");
-}
 
 /**
  * @brief      MMU permission bypassing memcpy
@@ -92,25 +30,7 @@ static inline void sceKernelCpuRestoreContext(int context[3])
  *
  * @return     Zero on success.
  */
-static inline int sceKernelCpuUnrestrictedMemcpy(void *dst, const void *src, SceSize len)
-{
-	int prev_dacr;
-
-	asm volatile("mrc p15, 0, %0, c3, c0, 0" : "=r" (prev_dacr));
-	asm volatile("mcr p15, 0, %0, c3, c0, 0" :: "r" (0xFFFF0000));
-
-	memcpy(dst, src, len);
-
-	len += (SceSize)(((uintptr_t)dst) & 0x1F);
-
-	dst = (void *)(((uintptr_t)dst) & ~0x1F);
-	len = (len + 0x1F) & ~0x1F;
-
-	sceKernelCpuDcacheWritebackRange(dst, len);
-
-	asm volatile("mcr p15, 0, %0, c3, c0, 0" :: "r" (prev_dacr));
-	return 0;
-}
+int sceKernelCpuUnrestrictedMemcpy(void *dst, const void *src, SceSize len);
 
 /**
  * @brief      Returns the CPU ID of the calling processor

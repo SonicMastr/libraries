@@ -8,7 +8,7 @@ cmake_minimum_required(VERSION 3.19)
 
 set(CMAKE_TOOLCHAIN_FILE $ENV{SCE_PSP2_SDK_DIR}/host_tools/build/cmake/psp2-snc-toolchain.cmake)
 
-project(vdsuite-libraries LANGUAGES NONE)
+project(vdsuite-libraries LANGUAGES C)
 
 include(ExternalProject)
 include(VitaDevelopmentSuite)
@@ -54,3 +54,7 @@ ExternalProject_Add(egl-registry
   INSTALL_COMMAND ${CMAKE_COMMAND} -E copy_directory <SOURCE_DIR>/api/EGL <INSTALL_DIR>/include/vdsuite/user/EGL
   COMMAND         ${CMAKE_COMMAND} -E copy_directory <SOURCE_DIR>/api/KHR <INSTALL_DIR>/include/vdsuite/user/KHR
 )
+
+# Static libraries
+
+add_subdirectory(365compat)
