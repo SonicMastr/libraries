@@ -77,12 +77,22 @@ typedef struct SceKernelAllocMemBlockKernelOpt {
 	SceUInt32 field_54;
 } SceKernelAllocMemBlockKernelOpt;
 
+#define SCE_KERNEL_CREATE_HEAP_FLAG_AUTO_EXTEND				(1 << 0)
+#define SCE_KERNEL_CREATE_HEAP_FLAG_1						(1 << 1)
+#define SCE_KERNEL_CREATE_HEAP_FLAG_4						(1 << 4)
+#define SCE_KERNEL_CREATE_HEAP_FLAG_WITH_MAX_SIZE			(1 << 8)
+#define SCE_KERNEL_CREATE_HEAP_FLAG_WITH_BASE				(1 << 9)
+#define SCE_KERNEL_CREATE_HEAP_FLAG_WITH_MEMORY_TYPE		(1 << 10)
+#define SCE_KERNEL_CREATE_HEAP_FLAG_11						(1 << 11)
+#define SCE_KERNEL_CREATE_HEAP_FLAG_12						(1 << 12)
+// All other flags are invalid
+
 typedef struct SceKernelHeapCreateOpt {
 	SceSize size;
-	SceUInt32 uselock;
-	SceUInt32 field_8;
-	SceUInt32 field_C;
-	SceUInt32 field_10;
+	SceUInt32 flags;
+	SceUInt32 maxSize;
+	void *pBase;
+	SceKernelMemoryType memoryType;
 	SceUInt32 field_14;
 	SceUInt32 field_18;
 } SceKernelHeapCreateOpt;
