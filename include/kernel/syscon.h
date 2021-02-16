@@ -131,6 +131,15 @@ int sceSysconSetDebugHandlers(const SceSysconDebugHandlers *handlers);
 int sceSysconCtrlLED(int led, int enable);
 
 /**
+ * Set PSTV LED mode.
+ *
+ * @param mode Set to 0 for on, 1 for slow blink, 2 for fast blink.
+ *
+ * @return 0 on success.
+ */
+int sceSysconCtrlDolceLED(int mode);
+
+/**
  * Set the memory stick power.
  *
  * @param power The new power value.

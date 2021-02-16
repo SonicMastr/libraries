@@ -19,6 +19,7 @@ modules:
           sceSysconCommitConfigstorageTransaction: 0x7B9B3617
           sceSysconCtrlAccPower: 0x8D1D97E8
           sceSysconCtrlDeviceReset: 0x40FF3898
+          sceSysconCtrlDolceLED: 0x727F985A
           sceSysconCtrlHdmiCecPower: 0x62155962
           sceSysconCtrlHostOutputViaDongle: 0xDECCB2B4
           sceSysconCtrlLED: 0x04EC7579
