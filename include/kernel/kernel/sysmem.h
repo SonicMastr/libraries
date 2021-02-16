@@ -239,6 +239,7 @@ int sceKernelFindClassByName(const char *name, SceClass **cls);
 
 void *sceKernelGetSysrootBuffer(void);
 int sceKernelGetPidContext(SceUID pid, SceKernelProcessContext **ctx);
+int sceKernelSwitchPidContext(SceKernelProcessContext *ctx, SceKernelProcessContext *current_ctx);
 
 int sceKernelGetProcessTitleId(SceUID pid, char *titleid, SceSize len);
 
