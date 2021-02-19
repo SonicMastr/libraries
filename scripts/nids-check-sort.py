@@ -11,9 +11,9 @@ from pathlib import Path
 
 from yaml import load
 try:
-    from yaml import CLoader as Loader
+	from yaml import CLoader as Loader
 except ImportError:
-    from yaml import SafeLoader as Loader
+	from yaml import SafeLoader as Loader
 
 def write_export_syms(syms):
 	out = ''
