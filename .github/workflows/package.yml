@@ -64,7 +64,7 @@ jobs:
           Get-ChildItem -Recurse -File -Path include
             | ForEach-Object {(Get-Content -Raw $_.FullName) -replace "$name","$name ${{ env.version }}"
             | Set-Content -Encoding utf8NoBOM -NoNewLine $_.FullName}
-          cmake . -D CMAKE_INSTALL_PREFIX=/sdk/target
+          cmake . -D CMAKE_INSTALL_PREFIX=/sdk/target -D CMAKE_BUILD_TYPE=Release
           if ($LastExitCode -ne 0) { exit $LastExitCode }
           make install
           if ($LastExitCode -ne 0) { exit $LastExitCode }
