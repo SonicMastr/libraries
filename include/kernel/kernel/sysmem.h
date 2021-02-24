@@ -455,6 +455,13 @@ typedef struct
  */
 int sceKernelSysrootSetProcessHandler(const SceSysrootProcessHandler *handlers);
 
+/**
+ * Get the process UID of shell.
+ *
+ * @return UID or -1 if shell is not started.
+ */
+SceUID sceKernelSysrootGetShellPid(void);
+
 #ifdef __cplusplus
 }
 #endif
