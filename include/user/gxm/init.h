@@ -62,6 +62,15 @@ SceGxmErrorCode sceGxmInitializeInternal(const SceGxmInitializeParams *params);
 */
 bool sceGxmIsInitializedInternal(void);
 
+/** Gets PowerVR service device data.
+
+	@return
+	Pointer to device data.
+
+	@ingroup render
+*/
+void *sceGxmGetDeviceData(void);
+
 #ifdef	__cplusplus
 }
 #endif	// def __cplusplus

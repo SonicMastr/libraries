@@ -277,6 +277,7 @@ modules:
         functions:
           sceGxmCheckMappedMemory: 0x88B424FB
           sceGxmCreateRenderTargetInternal: 0xC8A0F04E
+          sceGxmGetDeviceData: 0x90EE6A28
           sceGxmGetRenderTargetMemSizeInternal: 0x4DD98588
           sceGxmIsInitializedInternal: 0xEC82DB20
           sceGxmMapFragmentUsseMemoryInternal: 0xB9391D22
