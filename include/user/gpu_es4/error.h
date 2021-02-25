@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _DOLCESDK_PSP2_GPU_ES4_H_
-#define _DOLCESDK_PSP2_GPU_ES4_H_
+#ifndef _VDSUITE_USER_GPU_ES4_ERROR_H
+#define _VDSUITE_USER_GPU_ES4_ERROR_H
 
 /** @file
 */
@@ -190,5 +190,5 @@
 #define PVRSRV_ERROR_DEVICE_POWER_CHANGE_FAILURE         -2141486924 /* 0x805B80B4 */
 #define PVRSRV_ERROR_BAD_SYNC_STATE                      -2141486923 /* 0x805B80B5 */
 
-#endif /* _DOLCESDK_PSP2_GPU_ES4_H_ */
+#endif /* _VDSUITE_USER_GPU_ES4_ERROR_H */
 
