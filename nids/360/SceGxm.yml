@@ -278,10 +278,15 @@ modules:
           sceGxmCheckMappedMemory: 0x88B424FB
           sceGxmCreateRenderTargetInternal: 0xC8A0F04E
           sceGxmGetDeviceData: 0x90EE6A28
+          sceGxmGetDisplayQueueThreadId: 0xAB1D9466
           sceGxmGetRenderTargetMemSizeInternal: 0x4DD98588
+          sceGxmIsInitialized: 0xC8E9F108
           sceGxmIsInitializedInternal: 0xEC82DB20
+          sceGxmIsWithinScene: 0xB56413BB
           sceGxmMapFragmentUsseMemoryInternal: 0xB9391D22
           sceGxmMapVertexUsseMemoryInternal: 0x5694B569
+          sceGxmSetRazorCallbacks1: 0x56CDD9AD
+          sceGxmSetRazorCallbacks2: 0x3FC5E110
           sceGxmUnmapFragmentUsseMemoryInternal: 0xC29B9B82
           sceGxmUnmapVertexUsseMemoryInternal: 0xD7506735
       SceGxmInternalForGles:
