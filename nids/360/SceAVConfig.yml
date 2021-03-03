@@ -39,3 +39,8 @@ modules:
           sceAVConfigUnRegisterCallback: 0xDD78C3BA
           sceAVConfigWriteMasterVol: 0x65F03D6A
           sceAVConfigWriteRegSystemVol: 0xC411D984
+      SceAVConfigForDriver:
+        nid: 0xECC77DDB
+        functions:
+          sceAVConfigCancelExcOut: 0x91792D6F
+          sceAVConfigRequestExcOut: 0x3817CDA1
