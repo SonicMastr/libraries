@@ -9,6 +9,8 @@ modules:
           sceNetBind: 0x84AB650F
           sceNetClose: 0x21F4428D
           sceNetConnect: 0x13491DA1
+          sceNetDriverAttach: 0x1ABF937D
+          sceNetGatewayAttach: 0x3D4A1D74
           sceNetGetpeername: 0xB949AFD5
           sceNetGetsockname: 0x8F1BB0E7
           sceNetGetsockopt: 0x92EE24A6
