@@ -14,8 +14,7 @@ def check_sort(f):
 	nids_string = f.read_text()
 	sorted_nids_string = nids.dump_string(nids_string)
 	if nids_string != sorted_nids_string:
-		print(f'{f} is not sorted')
-		print(sorted_nids_string)
-		sys.exit(1)
+		f.write_text(sorted_nids_string)
+		sys.exit(f'{f} was not sorted and has been sorted')
 
 nids.iterdir('nids', check_sort)
