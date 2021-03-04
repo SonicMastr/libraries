@@ -28,6 +28,25 @@ modules:
           sceNpWebApiGetMemoryPoolStats: 0x9DF7EE1E
           sceNpWebApiGetNpTitleId: 0xB65DF857
           sceNpWebApiInitialize: 0x8519EB34
+          sceNpWebApiInitializeForSceShell: 0xE8FBA9B8
+          sceNpWebApiIntAbortHandle: 0x1140FA82
+          sceNpWebApiIntCreateHandle: 0xBED99F66
+          sceNpWebApiIntCreateMultipartRequest: 0x93BBA612
+          sceNpWebApiIntCreatePushEventFilter: 0x19062C5A
+          sceNpWebApiIntCreateRequest: 0x0D910413
+          sceNpWebApiIntCreateServicePushEventFilter: 0x159396F0
+          sceNpWebApiIntDeleteHandle: 0x1D427258
+          sceNpWebApiIntDeletePushEventFilter: 0x6CDD45B6
+          sceNpWebApiIntDeleteServicePushEventFilter: 0xC359A88A
+          sceNpWebApiIntGetMemoryPoolStats: 0x6E6AFA39
+          sceNpWebApiIntInitialize: 0xA11FBA1A
+          sceNpWebApiIntRegisterPushEventCallback: 0x83E94928
+          sceNpWebApiIntRegisterServicePushEventCallback: 0x1BDB76C0
+          sceNpWebApiIntTerminate: 0x66CEC1A6
+          sceNpWebApiIntUnregisterPushEventCallback: 0xFDCBD57D
+          sceNpWebApiIntUnregisterServicePushEventCallback: 0xC18E6DAA
+          sceNpWebApiModuleStartForSceShell: 0xE83CE7F1
+          sceNpWebApiModuleStopForSceShell: 0x8D83A2D0
           sceNpWebApiReadData: 0xBA75BF6E
           sceNpWebApiRegisterExtdPushEventCallback: 0xE75796DD
           sceNpWebApiRegisterPushEventCallback: 0xDB04ECD6
