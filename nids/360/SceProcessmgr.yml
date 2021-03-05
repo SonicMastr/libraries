@@ -15,9 +15,9 @@ modules:
           sceKernelGetExtraTty: 0x2D635A00
           sceKernelGetProcessName: 0x10C52C95
           sceKernelGetProcessParam: 0x2BE3E066
-          sceKernelGetProcessTimeCore: 0xD37A8437
-          sceKernelGetProcessTimeLowCore: 0xF5D0D4C6
-          sceKernelGetProcessTimeWideCore: 0x89DA0967
+          sceKernelGetProcessTime: 0xD37A8437
+          sceKernelGetProcessTimeLow: 0xF5D0D4C6
+          sceKernelGetProcessTimeWide: 0x89DA0967
           sceKernelGetProcessTitleId: 0x03A48771
           sceKernelGetRemoteProcessTime: 0xE6E9FCA3
           sceKernelGetStderr: 0xFA5E3ADA
@@ -44,9 +44,9 @@ modules:
           sceKernelGetProcessLocalStorageAddr: 0xEE694840
           sceKernelGetProcessLocalStorageAddrForPid: 0xAF80F39C
           sceKernelGetProcessStatus: 0x65B120B8
-          sceKernelGetProcessTimeCore: 0xEC283166
-          sceKernelGetProcessTimeLowCore: 0x02179E12
-          sceKernelGetProcessTimeWideCore: 0x82D94BE9
+          sceKernelGetProcessTime: 0xEC283166
+          sceKernelGetProcessTimeLow: 0x02179E12
+          sceKernelGetProcessTimeWide: 0x82D94BE9
           sceKernelGetRemoteProcessTime: 0xC074EB31
           sceKernelIsCDialogAvailable: 0x2F6020B7
           sceKernelIsGameBudget: 0xF7A8BB25
