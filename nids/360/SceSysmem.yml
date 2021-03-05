@@ -5,7 +5,7 @@ modules:
       SceCpu:
         nid: 0x45265161
         functions:
-          sceKernelCpuGetCpuId: 0x2704CFEE
+          sceKernelCpuId: 0x2704CFEE
       SceCpuForDriver:
         nid: 0x40ECDB0E
         functions:
@@ -92,7 +92,7 @@ modules:
           sceKernelCpuDcacheWritebackRange: 0x9CB9F0CE
           sceKernelCpuDisableInterrupts: 0x821FC0EE
           sceKernelCpuEnableInterrupts: 0xF5BAD43B
-          sceKernelCpuGetCpuId: 0x5E4D5DE1
+          sceKernelCpuId: 0x5E4D5DE1
           sceKernelCpuIsVaddrMapped: 0x337CBDF3
           sceKernelCpuLockStoreFlag: 0x3F42B434
           sceKernelCpuLockStoreLR: 0xBF82DEB2

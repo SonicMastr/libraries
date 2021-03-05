@@ -33,13 +33,6 @@ void sceKernelCpuDcacheWritebackRange(const void *ptr, SceSize len);
 int sceKernelCpuUnrestrictedMemcpy(void *dst, const void *src, SceSize len);
 
 /**
- * @brief      Returns the CPU ID of the calling processor
- *
- * @return     The CPU ID
- */
-int sceKernelCpuGetCpuId(void);
-
-/**
  * @brief      Disabled interrupts
  *
  * @return     Interrupt masks before disabling
