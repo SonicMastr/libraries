@@ -23,9 +23,9 @@ modules:
           sceClibMemchr: 0x407D6153
           sceClibMemcmp: 0x9CC2BFDF
           sceClibMemcmpConstTime: 0x100091AF
-          sceClibMemcpy: 0x14E9DBD7
+          sceClibMemcpy: 0x2E3B02A1
           sceClibMemcpyChk: 0x1F94EF45
-          sceClibMemcpy_safe: 0x2E3B02A1
+          sceClibMemcpy_16XX: 0x14E9DBD7
           sceClibMemmove: 0x736753C8
           sceClibMemmoveChk: 0xA18068FC
           sceClibMemset: 0x632980D7
@@ -246,6 +246,8 @@ modules:
           sceKernelLoadStartModule: 0x2DCC4AFA
           sceKernelLockLwMutex: 0x46E7BE7B
           sceKernelLockLwMutexCB: 0x3148C6B6
+          sceKernelLockLwMutexCB_16XX: 0x6F9C4CC1
+          sceKernelLockLwMutex_16XX: 0xA7819967
           sceKernelLockMutex: 0x1D8D7945
           sceKernelLockMutexCB: 0x2BDAA524
           sceKernelLockReadRWLock: 0xFA670F0F
@@ -257,7 +259,9 @@ modules:
           sceKernelPollEvent: 0x241F3634
           sceKernelPollEventFlag: 0x1FBB0FE1
           sceKernelPrintBacktrace: 0x1C02A434
+          sceKernelPrintBacktrace_16XX: 0x20E2D4B7
           sceKernelPulseEventWithNotifyCallback: 0x92F162F3
+          sceKernelPuts: 0x023EAA62
           sceKernelReceiveMsgPipe: 0x4E81DD5C
           sceKernelReceiveMsgPipeCB: 0x33AF829B
           sceKernelReceiveMsgPipeVector: 0x9F899087
@@ -280,6 +284,7 @@ modules:
           sceKernelStopModule: 0x3B2CBA09
           sceKernelStopUnloadModule: 0x2415F8A4
           sceKernelTryLockLwMutex: 0xA6A2C915
+          sceKernelTryLockLwMutex_16XX: 0x9EF798C1
           sceKernelTryReceiveMsgPipe: 0x5615B006
           sceKernelTryReceiveMsgPipeVector: 0x86ECC0FF
           sceKernelTrySendMsgPipe: 0xDFC670E0
@@ -287,6 +292,7 @@ modules:
           sceKernelUnloadModule: 0x1987920E
           sceKernelUnlockLwMutex: 0x91FA6614
           sceKernelUnlockLwMutex2: 0x120AFC8C
+          sceKernelUnlockLwMutex_16XX: 0x499EA781
           sceKernelWaitCond: 0xC88D44AD
           sceKernelWaitCondCB: 0x4CE42CE2
           sceKernelWaitEvent: 0x120F03AF
