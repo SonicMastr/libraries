@@ -5,4 +5,17 @@ modules:
       SceClockgenForDriver:
         nid: 0xFF160234
         functions:
+          sceClockgenAudioClkDisable: 0xF0A0242D
+          sceClockgenAudioClkEnable: 0x5130682D
+          sceClockgenAudioClkSetSamplingFreq: 0x820D3516
+          sceClockgenCameraClkDisable: 0x82F39378
+          sceClockgenCameraClkEnable: 0x06663ECA
+          sceClockgenGetRegValue: 0x09072366
+          sceClockgenGetRevision: 0xCF63B11D
+          sceClockgenInit: 0x0BA41732
+          sceClockgenSetProtocol: 0xEFE8A68C
+          sceClockgenSetSpectrumSpreading: 0xA2CA8B65
+          sceClockgenUnk1ClkDisable: 0x66AC5580
+          sceClockgenUnk1ClkEnable: 0x62478916
           sceClockgenWlanBtClkDisable: 0xB6F0A532
+          sceClockgenWlanBtClkEnable: 0x7B28A724
