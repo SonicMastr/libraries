@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _DOLCESDK_PSP2_SHACCCG_H_
-#define _DOLCESDK_PSP2_SHACCCG_H_
+#ifndef _VDSUITE_USER_SHACCCG_H
+#define _VDSUITE_USER_SHACCCG_H
 
 #include <shacccg/types.h>
 #include <shacccg/paramquery.h>
@@ -127,4 +127,4 @@ int32_t sceShaccCgSetMemAllocator(
 }
 #endif	/* __cplusplus */
 
-#endif /* _DOLCESDK_PSP2_SHACCCG_H_ */
+#endif /* _VDSUITE_USER_SHACCCG_H */

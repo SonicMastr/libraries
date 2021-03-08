@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_KERNEL_SYSMEM_H_
-#define _PSP2_KERNEL_SYSMEM_H_
+#ifndef _VDSUITE_USER_KERNEL_SYSMEM_H
+#define _VDSUITE_USER_KERNEL_SYSMEM_H
 
 #include_next <kernel/sysmem.h>
 
@@ -40,5 +40,5 @@ int sceKernelIsPSVitaTV(void);
 
 SCE_CDECL_END
 
-#endif
+#endif /* _VDSUITE_USER_KERNEL_SYSMEM_H */
 

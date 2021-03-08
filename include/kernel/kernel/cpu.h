@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_KERNEL_CPU_H_
-#define _PSP2_KERNEL_CPU_H_
+#ifndef _VDSUITE_KERNEL_KERNEL_CPU_H
+#define _VDSUITE_KERNEL_KERNEL_CPU_H
 
 #include_next <kernel/cpu.h>
 
@@ -170,5 +170,5 @@ int sceKernelCpuSpinLockIrqRestore(int *addr, int flags);
 }
 #endif
 
-#endif /* _PSP2_KERNEL_CPU_H_ */
+#endif /* _VDSUITE_KERNEL_KERNEL_CPU_H */
 

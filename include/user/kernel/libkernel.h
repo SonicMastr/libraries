@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_KERNEL_CLIB_H_
-#define _PSP2_KERNEL_CLIB_H_
+#ifndef _VDSUITE_USER_KERNEL_LIBKERNEL_H
+#define _VDSUITE_USER_KERNEL_LIBKERNEL_H
 
 #include_next <kernel/libkernel.h>
 
@@ -82,5 +82,5 @@ SceInt32 sceClibMspaceIsHeapEmpty(SceClibMspace msp);
 
 SCE_CDECL_END
 
-#endif /* _PSP2_KERNEL_CLIB_H_ */
+#endif /* _VDSUITE_USER_KERNEL_LIBKERNEL_H */
 

@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_AVCONFIG_H_
-#define _PSP2_AVCONFIG_H_
+#ifndef _VDSUITE_USER_AVCONFIG_H
+#define _VDSUITE_USER_AVCONFIG_H
 
 #include <scetypes.h>
 
@@ -170,5 +170,5 @@ int sceAVConfigSetDisplayColorSpaceMode(SceUInt32 mode);
 }
 #endif
 
-#endif
+#endif /* _VDSUITE_USER_AVCONFIG_H */
 

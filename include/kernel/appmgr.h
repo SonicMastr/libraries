@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_KERNEL_APPMGR_H_
-#define _PSP2_KERNEL_APPMGR_H_
+#ifndef _VDSUITE_KERNEL_APPMGR_H
+#define _VDSUITE_KERNEL_APPMGR_H
 
 #include_next <appmgr.h>
 
@@ -57,4 +57,4 @@ SceInt32 sceAppMgrDrmClose(const SceAppMgrDrmAddcontParam *pParam);
 }
 #endif
 
-#endif /* _PSP2_KERNEL_APPMGR_H_ */
+#endif /* _VDSUITE_KERNEL_APPMGR_H */

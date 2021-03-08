@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_KERN_LOWIO_DSI_H_
-#define _PSP2_KERN_LOWIO_DSI_H_
+#ifndef _VDSUITE_KERNEL_LOWIO_DSI_H
+#define _VDSUITE_KERNEL_LOWIO_DSI_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -37,5 +37,5 @@ int sceDsiDcsRead(int head, unsigned short param, void *buff, unsigned int size)
 }
 #endif
 
-#endif /* _PSP2_KERN_LOWIO_DSI_H_ */
+#endif /* _VDSUITE_KERNEL_LOWIO_DSI_H */
 

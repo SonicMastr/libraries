@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_KERNEL_THREADMGR_H_
-#define _PSP2_KERNEL_THREADMGR_H_
+#ifndef _VDSUITE_KERNEL_KERNEL_THREADMGR_H
+#define _VDSUITE_KERNEL_KERNEL_THREADMGR_H
 
 #include_next <kernel/threadmgr.h>
 
@@ -237,5 +237,5 @@ int sceKernelChangeThreadSuspendStatus(SceUID thid, int status);
 }
 #endif
 
-#endif /* _PSP2_KERNEL_THREADMGR_H_ */
+#endif /* _VDSUITE_KERNEL_KERNEL_THREADMGR_H */
 

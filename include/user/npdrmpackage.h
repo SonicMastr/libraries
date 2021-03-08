@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_NPDRMPACKAGE_H_
-#define _PSP2_NPDRMPACKAGE_H_
+#ifndef _VDSUITE_USER_NPDRMPACKAGE_H
+#define _VDSUITE_USER_NPDRMPACKAGE_H
 
 #include <scetypes.h>
 
@@ -52,4 +52,4 @@ int _sceNpDrmPackageDecrypt(void * __restrict__ buffer, SceSize size, _sceNpDrmP
 }
 #endif
 
-#endif /* _PSP2_NPDRMPACKAGE_H_ */
+#endif /* _VDSUITE_USER_NPDRMPACKAGE_H */

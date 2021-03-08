@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_USBD_H_
-#define _PSP2_USBD_H_
+#ifndef _VDSUITE_USER_USBD_H
+#define _VDSUITE_USER_USBD_H
 
 #include <scetypes.h>
 
@@ -90,4 +90,4 @@ int sceUsbdAttachCompositeLdd(SceUID, unsigned char unk[0x14]);
 }
 #endif
 
-#endif /* _PSP2_USBD_H_ */
+#endif /* _VDSUITE_USER_USBD_H */

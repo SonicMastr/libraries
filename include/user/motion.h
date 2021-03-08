@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _DOLCESDK_PSP2_MOTION_H_
-#define _DOLCESDK_PSP2_MOTION_H_
+#ifndef _VDSUITE_USER_MOTION_H
+#define _VDSUITE_USER_MOTION_H
 
 #include_next <motion.h>
 
@@ -108,6 +108,6 @@ int sceMotionGetStateInternal(SceMotionState *motionState);
 }
 #endif  /* defined(_LANGUAGE_C_PLUS_PLUS)||defined(__cplusplus)||defined(c_plusplus) */
 
-#endif /* _DOLCESDK_PSP2_MOTION_H_ */
+#endif /* _VDSUITE_USER_MOTION_H */
 
 

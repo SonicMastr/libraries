@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_UDCD_H_
-#define _PSP2_UDCD_H_
+#ifndef _VDSUITE_USER_UDCD_H
+#define _VDSUITE_USER_UDCD_H
 
 #include <stdint.h>
 #include <scetypes.h>
@@ -116,4 +116,4 @@ int sceUdcdWaitState(SceUdcdWaitParam *waitParam, unsigned int timeout);
 }
 #endif
 
-#endif /* _PSP2_UDCD_H_ */
+#endif /* _VDSUITE_USER_UDCD_H */

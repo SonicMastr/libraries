@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_KERNEL_UTILS_H_
-#define _PSP2_KERNEL_UTILS_H_
+#ifndef _VDSUITE_KERNEL_KERNEL_UTILS_H
+#define _VDSUITE_KERNEL_KERNEL_UTILS_H
 
 #include <stdint.h>
 #include <scetypes.h>
@@ -207,4 +207,4 @@ int sceAesEncrypt2(SceAesContext *ctx, const void *src, void *dst);
 }
 #endif
 
-#endif /* _PSP2_KERNEL_UTILS_H_ */
+#endif /* _VDSUITE_KERNEL_KERNEL_UTILS_H */

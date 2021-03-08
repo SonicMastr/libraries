@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_REGISTRYMGR_H_
-#define _PSP2_REGISTRYMGR_H_
+#ifndef _VDSUITE_USER_REGISTRYMGR_H
+#define _VDSUITE_USER_REGISTRYMGR_H
 
 #include <scetypes.h>
 
@@ -214,4 +214,4 @@ SceInt32 sceRegMgrUtilitySetStr(SceUInt32 id, const char *buf, SceSize size);
 }
 #endif
 
-#endif /* _PSP2_REGISTRYMGR_H_ */
+#endif /* _VDSUITE_USER_REGISTRYMGR_H */

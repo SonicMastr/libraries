@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _DOLCESDK_PSP2_GXM_RENDER_TARGET_INTERNAL_H_
-#define _DOLCESDK_PSP2_GXM_RENDER_TARGET_INTERNAL_H_
+#ifndef _VDSUITE_USER_GXM_RENDER_TARGET_H
+#define _VDSUITE_USER_GXM_RENDER_TARGET_H
 
 /** @file
 */
@@ -69,4 +69,4 @@ SceGxmErrorCode sceGxmCreateRenderTargetInternal(
 }
 #endif	// def __cplusplus
 
-#endif /* _DOLCESDK_PSP2_GXM_RENDER_TARGET_INTERNAL_H_ */
+#endif /* _VDSUITE_USER_GXM_RENDER_TARGET_H */

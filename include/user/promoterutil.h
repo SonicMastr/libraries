@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_PROMOTERUTIL_H_
-#define _PSP2_PROMOTERUTIL_H_
+#ifndef _VDSUITE_USER_PROMOTERUTIL_H
+#define _VDSUITE_USER_PROMOTERUTIL_H
 
 #include <stdint.h>
 
@@ -124,4 +124,4 @@ int scePromoterUtilityCheckExist(const char *titleid, int *res);
 }
 #endif
 
-#endif /* _PSP2_PROMOTERUTIL_H_ */
+#endif /* _VDSUITE_USER_PROMOTERUTIL_H */

@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _DOLCESDK_PSP2_BGAPPUTIL_H_
-#define _DOLCESDK_PSP2_BGAPPUTIL_H_
+#ifndef _VDSUITE_USER_BGAPPUTIL_H
+#define _VDSUITE_USER_BGAPPUTIL_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -27,4 +27,4 @@ int sceBgAppUtilStartBgApp(int mode);
 }
 #endif /* __cplusplus */
 
-#endif /* _DOLCESDK_PSP2_BGAPPUTIL_H_ */
+#endif /* _VDSUITE_USER_BGAPPUTIL_H */

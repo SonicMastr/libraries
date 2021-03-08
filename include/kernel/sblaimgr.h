@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_KERNEL_SBLACMGR_H_
-#define _PSP2_KERNEL_SBLACMGR_H_
+#ifndef _VDSUITE_KERNEL_SBLAIMGR_H
+#define _VDSUITE_KERNEL_SBLAIMGR_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -24,5 +24,5 @@ int sceSblAimgrIsGenuineDolce(void);
 }
 #endif
 
-#endif /* _PSP2_KERNEL_SBLAIMGR_H_ */
+#endif /* _VDSUITE_KERNEL_SBLAIMGR_H */
 

@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_KERNEL_IDSTORAGE_H_
-#define _PSP2_KERNEL_IDSTORAGE_H_
+#ifndef _VDSUITE_KERNEL_IDSTORAGE_H
+#define _VDSUITE_KERNEL_IDSTORAGE_H
 
 #include <scetypes.h>
 
@@ -31,4 +31,4 @@ int sceIdStorageWriteLeaf(SceSize leafnum, const void *buf);
 }
 #endif
 
-#endif /* _PSP2_KERNEL_IDSTORAGE_H_ */
+#endif /* _VDSUITE_KERNEL_IDSTORAGE_H */

@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _DOLCESDK_PSP2_GXM_SYNC_OBJECT_INTERNAL_H_
-#define _DOLCESDK_PSP2_GXM_SYNC_OBJECT_INTERNAL_H_
+#ifndef _VDSUITE_USER_GXM_SYNC_OBJECT_H
+#define _VDSUITE_USER_GXM_SYNC_OBJECT_H
 
 /** @file
 */
@@ -96,4 +96,4 @@ SceGxmErrorCode sceGxmSyncObjectCloseShared(uint32_t key, SceGxmSyncObject *sync
 }
 #endif	// def __cplusplus
 
-#endif /* _DOLCESDK_PSP2_GXM_SYNC_OBJECT_INTERNAL_H_ */
+#endif /* _VDSUITE_USER_GXM_SYNC_OBJECT_H */

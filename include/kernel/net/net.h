@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_KERNEL_NET_NET_H_
-#define _PSP2_KERNEL_NET_NET_H_
+#ifndef _VDSUITE_KERNEL_NET_NET_H
+#define _VDSUITE_KERNEL_NET_NET_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -562,4 +562,4 @@ int sceNetClose(int s);
 }
 #endif
 
-#endif /* _PSP2_KERNEL_NET_NET_H_ */
+#endif /* _VDSUITE_KERNEL_NET_NET_H */

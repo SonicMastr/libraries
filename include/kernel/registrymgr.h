@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_REGISTRYMGR_H_
-#define _PSP2_REGISTRYMGR_H_
+#ifndef _VDSUITE_KERNEL_REGISTRYMGR_H
+#define _VDSUITE_KERNEL_REGISTRYMGR_H
 
 #include <scetypes.h>
 
@@ -85,4 +85,4 @@ int sceRegMgrSetKeyStr(const char *category, const char *name, char *buf, SceSiz
 }
 #endif
 
-#endif /* _PSP2_REGISTRYMGR_H_ */
+#endif /* _VDSUITE_KERNEL_REGISTRYMGR_H */

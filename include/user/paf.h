@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_PAF_H_
-#define _PSP2_PAF_H_
+#ifndef _VDSUITE_USER_PAF_H
+#define _VDSUITE_USER_PAF_H
 
 #include <stdarg.h>
 #include <wchar.h>
@@ -118,5 +118,5 @@ ScePafString *scePafCesUtf16CharToUtf8WithAlloc(const SceWChar16 *utf16, ScePafS
 }
 #endif
 
-#endif /* _PSP2_PAF_H_ */
+#endif /* _VDSUITE_USER_PAF_H */
 

@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_NET_NET_SYSCALLS_H_
-#define _PSP2_NET_NET_SYSCALLS_H_
+#ifndef _VDSUITE_USER_NET_NET_SYSCALLS_H
+#define _VDSUITE_USER_NET_NET_SYSCALLS_H
 
 #include <net.h>
 
@@ -17,4 +17,4 @@ int sceNetSyscallConnect(int s, const SceNetSockaddr *name, unsigned int namelen
 }
 #endif
 
-#endif /* _PSP2_NET_NET_SYSCALLS_H_ */
+#endif /* _VDSUITE_USER_NET_NET_SYSCALLS_H */

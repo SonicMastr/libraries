@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _DOLCESDK_PSP2_KERNEL_SYSMEM_MEMBLOCK_H_
-#define _DOLCESDK_PSP2_KERNEL_SYSMEM_MEMBLOCK_H_
+#ifndef _VDSUITE_USER_KERNEL_SYSMEM_MEMBLOCK_H
+#define _VDSUITE_USER_KERNEL_SYSMEM_MEMBLOCK_H
 
 #include_next <kernel/sysmem/memblock.h>
 
@@ -43,4 +43,4 @@ typedef struct SceKernelAllocMemBlockOptInternal {
 
 SCE_CDECL_END
 
-#endif  /* _DOLCESDK_PSP2_KERNEL_SYSMEM_MEMBLOCK_H_ */
+#endif  /* _VDSUITE_USER_KERNEL_SYSMEM_MEMBLOCK_H */

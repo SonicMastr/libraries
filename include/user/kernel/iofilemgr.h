@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _DOLCESDK_PSP2_KERNEL_IOFILEMGR_H_
-#define _DOLCESDK_PSP2_KERNEL_IOFILEMGR_H_
+#ifndef _VDSUITE_USER_KERNEL_IOFILEMGR_H
+#define _VDSUITE_USER_KERNEL_IOFILEMGR_H
 
 #include_next <kernel/iofilemgr.h>
 
@@ -70,4 +70,4 @@ int sceIoGetThreadDefaultPriority(void);
 }
 #endif
 
-#endif	/* _DOLCESDK_PSP2_KERNEL_IOFILEMGR_H_ */
+#endif	/* _VDSUITE_USER_KERNEL_IOFILEMGR_H */

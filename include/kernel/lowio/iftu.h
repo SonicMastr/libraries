@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_KERN_LOWIO_IFTU_H_
-#define _PSP2_KERN_LOWIO_IFTU_H_
+#ifndef _VDSUITE_KERNEL_LOWIO_IFTU_H
+#define _VDSUITE_KERNEL_LOWIO_IFTU_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -92,5 +92,5 @@ int sceIftuCsc(SceIftuFrameBuf *dst, SceIftuPlaneState *src, SceIftuConvParams *
 }
 #endif
 
-#endif /* _PSP2_KERN_LOWIO_IFTU_H_ */
+#endif /* _VDSUITE_KERNEL_LOWIO_IFTU_H */
 

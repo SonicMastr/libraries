@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _DOLCESDK_PSP2_INI_FILE_PROCESSOR_H_
-#define _DOLCESDK_PSP2_INI_FILE_PROCESSOR_H_
+#ifndef _VDSUITE_USER_INI_FILE_PROCESSOR_H
+#define _VDSUITE_USER_INI_FILE_PROCESSOR_H
 
 #define SCE_INI_FILE_PROCESSOR_ERROR_MODE           ((int)0x80840002)
 #define SCE_INI_FILE_PROCESSOR_ERROR_EOF            ((int)0x80840005)
@@ -200,4 +200,4 @@ private:
 
 #endif // __cplusplus
 
-#endif // _DOLCESDK_PSP2_INI_FILE_PROCESSOR_H_
+#endif // _VDSUITE_USER_INI_FILE_PROCESSOR_H

@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_KERNEL_SBLACMGR_H_
-#define _PSP2_KERNEL_SBLACMGR_H_
+#ifndef _VDSUITE_KERNEL_SBLACMGR_H
+#define _VDSUITE_KERNEL_SBLACMGR_H
 
 #include <scetypes.h>
 
@@ -21,5 +21,5 @@ int sceSblACMgrIsDevelopmentMode(void);
 }
 #endif
 
-#endif /* _PSP2_KERNEL_SBLACMGR_H_ */
+#endif /* _VDSUITE_KERNEL_SBLACMGR_H */
 

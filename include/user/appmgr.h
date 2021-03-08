@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_APPMGR_H_
-#define _PSP2_APPMGR_H_
+#ifndef _VDSUITE_USER_APPMGR_H
+#define _VDSUITE_USER_APPMGR_H
 
 #include_next <appmgr.h>
 
@@ -477,5 +477,5 @@ int sceSharedFbGetInfo(SceUID fbId, SceSharedFbInfo *fbInfo);
 }
 #endif
 
-#endif /* _PSP2_APPMGR_H_ */
+#endif /* _VDSUITE_USER_APPMGR_H */
 

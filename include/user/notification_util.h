@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _DOLCESDK_PSP2_NOTIFICATION_UTIL_H_
-#define _DOLCESDK_PSP2_NOTIFICATION_UTIL_H_
+#ifndef _VDSUITE_USER_NOTIFICATION_UTIL_H
+#define _VDSUITE_USER_NOTIFICATION_UTIL_H
 
 #include <scetypes.h>
 
@@ -93,4 +93,4 @@ SceInt32 sceNotificationUtilProgressFinish(const SceNotificationUtilProgressFini
 }
 #endif /* __cplusplus */
 
-#endif /* _DOLCESDK_PSP2_NOTIFICATION_UTIL_H_ */
+#endif /* _VDSUITE_USER_NOTIFICATION_UTIL_H */

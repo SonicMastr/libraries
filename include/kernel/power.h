@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_KERN_POWER_H_
-#define _PSP2_KERN_POWER_H_
+#ifndef _VDSUITE_KERNEL_POWER_H
+#define _VDSUITE_KERNEL_POWER_H
 
 #include <scetypes.h>
 
@@ -263,4 +263,4 @@ int scePowerSetPsButtonPushTime(int time);
 }
 #endif
 
-#endif /* _PSP2_KERN_POWER_H_ */
+#endif /* _VDSUITE_KERNEL_POWER_H */

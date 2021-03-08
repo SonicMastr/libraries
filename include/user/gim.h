@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _DOLCESDK_PSP2_GIM_H_
-#define _DOLCESDK_PSP2_GIM_H_
+#ifndef _VDSUITE_USER_GIM_H
+#define _VDSUITE_USER_GIM_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -363,5 +363,5 @@ inline SceGimErrorCode sceGimCheckData(void *gim) {
 }
 #endif
 
-#endif /* _DOLCESDK_PSP2_GIM_H_ */
+#endif /* _VDSUITE_USER_GIM_H */
 

@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_CTRL_H_
-#define _PSP2_CTRL_H_
+#ifndef _VDSUITE_USER_CTRL_H
+#define _VDSUITE_USER_CTRL_H
 
 #include_next <ctrl.h>
 
@@ -82,4 +82,4 @@ int sceCtrlGetBatteryInfo(int port, SceUInt8 *batt);
 }
 #endif
 
-#endif /* _PSP2CTRL_H_ */
+#endif /* _VDSUITE_USER_CTRL_H */

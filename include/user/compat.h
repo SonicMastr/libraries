@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_COMPAT_H_
-#define _PSP2_COMPAT_H_
+#ifndef _VDSUITE_USER_COMPAT_H
+#define _VDSUITE_USER_COMPAT_H
 
 #include <kernel/iofilemgr.h>
 #include <rtc.h>
@@ -301,5 +301,5 @@ int sceCompatGetCurrentSecureTick(SceRtcTick *tick);
 }
 #endif
 
-#endif /* _PSP2_COMPAT_H_ */
+#endif /* _VDSUITE_USER_COMPAT_H */
 

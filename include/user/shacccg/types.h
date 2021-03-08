@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _DOLCESDK_PSP2_SHACCCG_TYPES_H_
-#define _DOLCESDK_PSP2_SHACCCG_TYPES_H_
+#ifndef _VDSUITE_USER_SHACCCG_TYPES_H
+#define _VDSUITE_USER_SHACCCG_TYPES_H
 
 #include <stddef.h>
 #include <stdint.h>
@@ -450,4 +450,4 @@ void sceShaccCgInitializeCallbackList(
 }
 #endif	/* __cplusplus */
 
-#endif /* _DOLCESDK_PSP2_SHACCCG_TYPES_H_ */
+#endif /* _VDSUITE_USER_SHACCCG_TYPES_H */

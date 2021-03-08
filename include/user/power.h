@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_POWER_H_
-#define _PSP2_POWER_H_
+#ifndef _VDSUITE_USER_POWER_H
+#define _VDSUITE_USER_POWER_H
 
 #include_next <power.h>
 
@@ -205,4 +205,4 @@ int scePowerGetUsingWireless(void);
 }
 #endif
 
-#endif /* _PSP2_POWER_H_ */
+#endif /* _VDSUITE_USER_POWER_H */

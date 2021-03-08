@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_KERN_CTRL_H_
-#define _PSP2_KERN_CTRL_H_
+#ifndef _VDSUITE_KERNEL_CTRL_H
+#define _VDSUITE_KERNEL_CTRL_H
 
 #include_next <ctrl.h>
 
@@ -87,4 +87,4 @@ int sceCtrlRegisterVirtualControllerDriver(SceCtrlVirtualControllerDriver *drive
 }
 #endif
 
-#endif /* _PSP2_KERN_CTRL_H_ */
+#endif /* _VDSUITE_KERNEL_CTRL_H */

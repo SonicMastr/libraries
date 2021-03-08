@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_KERNEL_EXCPMGR_H_
-#define _PSP2_KERNEL_EXCPMGR_H_
+#ifndef _VDSUITE_KERNEL_KERNEL_EXCPMGR_H
+#define _VDSUITE_KERNEL_KERNEL_EXCPMGR_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -47,4 +47,4 @@ int sceExcpmgrRegisterHandler(SceExcpKind kind, int priority, void *handler);
 }
 #endif
 
-#endif /* _PSP2_KERNEL_EXCPMGR_H_ */
+#endif /* _VDSUITE_KERNEL_KERNEL_EXCPMGR_H */

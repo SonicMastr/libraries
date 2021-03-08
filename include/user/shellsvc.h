@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _DOLCESDK_PSP2_SHELLSVC_H_
-#define _DOLCESDK_PSP2_SHELLSVC_H_
+#ifndef _VDSUITE_USER_SHELLSVC_H
+#define _VDSUITE_USER_SHELLSVC_H
 
 #include <scetypes.h>
 
@@ -179,5 +179,5 @@ SceShellSvcSvcObj *sceShellSvcGetSvcObj(void);
 }
 #endif
 
-#endif /* _DOLCESDK_PSP2_SHELLSVC_H_ */
+#endif /* _VDSUITE_USER_SHELLSVC_H */
 

@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_KERNEL_MODULEMGR_H_
-#define _PSP2_KERNEL_MODULEMGR_H_
+#ifndef _VDSUITE_USER_KERNEL_MODULEMGR_H
+#define _VDSUITE_USER_KERNEL_MODULEMGR_H
 
 #include_next <kernel/modulemgr.h>
 
@@ -73,5 +73,5 @@ int sceKernelGetSystemSwVersion(SceKernelFwInfo *data);
 }
 #endif
 
-#endif /* _PSP2_KERNEL_MODULEMGR_H_ */
+#endif /* _VDSUITE_USER_KERNEL_MODULEMGR_H */
 

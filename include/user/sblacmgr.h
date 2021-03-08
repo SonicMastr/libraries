@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_SBLACMGR_H_
-#define _PSP2_SBLACMGR_H_
+#ifndef _VDSUITE_USER_SBLACMGR_H
+#define _VDSUITE_USER_SBLACMGR_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -15,4 +15,4 @@ int _sceSblACMgrIsGameProgram(void);
 }
 #endif
 
-#endif /* _PSP2_SBLACMGR_H_ */
+#endif /* _VDSUITE_USER_SBLACMGR_H */

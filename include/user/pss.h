@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_PSS_H_
-#define _PSP2_PSS_H_
+#ifndef _VDSUITE_USER_PSS_H
+#define _VDSUITE_USER_PSS_H
 
 #include <stdint.h>
 #include <scetypes.h>
@@ -31,5 +31,5 @@ void pss_code_mem_unlock(void);
 }
 #endif
 
-#endif /* _PSP2_PSS_H_ */
+#endif /* _VDSUITE_USER_PSS_H */
 

@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_KERN_UART_H_
-#define _PSP2_KERN_UART_H_
+#ifndef _VDSUITE_KERNEL_UART_H
+#define _VDSUITE_KERNEL_UART_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -18,5 +18,5 @@ int sceUartWrite(int port, char data);
 }
 #endif
 
-#endif /* _PSP2_KERN_UART_H_ */
+#endif /* _VDSUITE_KERNEL_UART_H */
 

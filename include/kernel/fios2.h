@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_KERNEL_FIOS2KERNEL_H_
-#define _PSP2_KERNEL_FIOS2KERNEL_H_
+#ifndef _VDSUITE_KERNEL_FIOS2_H
+#define _VDSUITE_KERNEL_FIOS2_H
 
 #include <stdint.h>
 #include <scetypes.h>
@@ -90,4 +90,4 @@ int sceFiosKernelOverlayResolveSync(SceUID pid, int resolveFlag, const char *inP
 }
 #endif
 
-#endif /* _PSP2_KERNEL_FIOS2KERNEL_H_ */
+#endif /* _VDSUITE_KERNEL_FIOS2_H */

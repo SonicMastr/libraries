@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_KERNEL_PROC_EVENT_H_
-#define _PSP2_KERNEL_PROC_EVENT_H_
+#ifndef _VDSUITE_KERNEL_KERNEL_PROC_EVENT_H
+#define _VDSUITE_KERNEL_KERNEL_PROC_EVENT_H
 
 #include <scetypes.h>
 
@@ -74,4 +74,4 @@ int sceKernelInvokeProcEventHandler(SceUID pid, int event_id, int event_type, vo
 }
 #endif
 
-#endif /* _PSP2_KERNEL_PROC_EVENT_H_ */
+#endif /* _VDSUITE_KERNEL_KERNEL_PROC_EVENT_H */

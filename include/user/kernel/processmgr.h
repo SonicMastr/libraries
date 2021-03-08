@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_KERNEL_PROCESSMGR_H_
-#define _PSP2_KERNEL_PROCESSMGR_H_
+#ifndef _VDSUITE_USER_KERNEL_PROCESSMGR_H
+#define _VDSUITE_USER_KERNEL_PROCESSMGR_H
 
 #include_next <kernel/processmgr.h>
 
@@ -29,5 +29,5 @@ int sceKernelPowerUnlock(SceInt32 type);
 
 SCE_CDECL_END
 
-#endif /* _PSP2_KERNEL_PROCESSMGR_H_ */
+#endif /* _VDSUITE_USER_KERNEL_PROCESSMGR_H */
 

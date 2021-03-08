@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_KERNEL_SYSMEM_H_
-#define _PSP2_KERNEL_SYSMEM_H_
+#ifndef _VDSUITE_KERNEL_KERNEL_SYSMEM_H
+#define _VDSUITE_KERNEL_KERNEL_SYSMEM_H
 
 #include_next <kernel/sysmem.h>
 
@@ -466,4 +466,4 @@ SceUID sceKernelSysrootGetShellPid(void);
 }
 #endif
 
-#endif
+#endif /* _VDSUITE_KERNEL_KERNEL_SYSMEM_H */

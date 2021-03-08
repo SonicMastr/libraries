@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_DISPLAY_H_
-#define _PSP2_DISPLAY_H_
+#ifndef _VDSUITE_USER_DISPLAY_H
+#define _VDSUITE_USER_DISPLAY_H
 
 #include_next <display.h>
 
@@ -52,5 +52,5 @@ int sceDisplayGetVcountInternal(int display);
 }
 #endif
 
-#endif /* _PSP2_DISPLAY_H_ */
+#endif /* _VDSUITE_USER_DISPLAY_H */
 

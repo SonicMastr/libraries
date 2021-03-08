@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_KERNEL_SUSPEND_H_
-#define _PSP2_KERNEL_SUSPEND_H_
+#ifndef _VDSUITE_KERNEL_KERNEL_SUSPEND_H
+#define _VDSUITE_KERNEL_KERNEL_SUSPEND_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -35,4 +35,4 @@ int sceKernelRegisterSysEventHandler(const char *name, SceSysEventHandler handle
 }
 #endif
 
-#endif /* _PSP2_KERNEL_SUSPEND_H_ */
+#endif /* _VDSUITE_KERNEL_KERNEL_SUSPEND_H */

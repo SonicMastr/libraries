@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _DOLCESDK_PSP2_AVCDEC_H_
-#define _DOLCESDK_PSP2_AVCDEC_H_
+#ifndef _VDSUITE_USER_AVCDEC_H
+#define _VDSUITE_USER_AVCDEC_H
 
 #include <videodec.h>
 #include_next <avcdec.h>
@@ -60,5 +60,5 @@ extern SceInt32 sceAvcdecDecodeGetPictureNongameapp(SceAvcdecCtrl *pCtrl, SceAvc
 }
 #endif /* defined(_LANGUAGE_C_PLUS_PLUS)||defined(__cplusplus)||defined(c_plusplus) */
 
-#endif /* _DOLCESDK_PSP2_AVCDEC_H_ */
+#endif /* _VDSUITE_USER_AVCDEC_H */
 

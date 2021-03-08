@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _DOLCESDK_PSP2_TRIGGER_UTIL_H_
-#define _DOLCESDK_PSP2_TRIGGER_UTIL_H_
+#ifndef _VDSUITE_USER_TRIGGER_UTIL_H
+#define _VDSUITE_USER_TRIGGER_UTIL_H
 
 #include <rtc.h>
 #include <scetypes.h>
@@ -232,4 +232,4 @@ int sceTriggerUtilGetRegisteredSystemTitleIdList(char* buffer, int *numOfIds);
 }
 #endif /* __cplusplus */
 
-#endif /* _DOLCESDK_PSP2_TRIGGER_UTIL_H_ */
+#endif /* _VDSUITE_USER_TRIGGER_UTIL_H */

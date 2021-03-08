@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_KERNEL_SBLAUTHMGR_H_
-#define _PSP2_KERNEL_SBLAUTHMGR_H_
+#ifndef _VDSUITE_KERNEL_SBLAUTHMGR_H
+#define _VDSUITE_KERNEL_SBLAUTHMGR_H
 
 #include <scetypes.h>
 
@@ -18,5 +18,5 @@ int sceSblAuthMgrSetDmac5Key(const void *key, SceSize keylen, int slot_id, int k
 }
 #endif
 
-#endif /* _PSP2_KERNEL_SBLAUTHMGR_H_ */
+#endif /* _VDSUITE_KERNEL_SBLAUTHMGR_H */
 

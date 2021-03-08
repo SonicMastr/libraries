@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_KERN_LOWIO_PERVASIVE_H_
-#define _PSP2_KERN_LOWIO_PERVASIVE_H_
+#ifndef _VDSUITE_KERNEL_LOWIO_PERVASIVE_H
+#define _VDSUITE_KERNEL_LOWIO_PERVASIVE_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -43,5 +43,5 @@ int scePervasiveRemovableMemoryGetCardInsertState(void);
 }
 #endif
 
-#endif /* _PSP2_KERN_LOWIO_PERVASIVE_H_ */
+#endif /* _VDSUITE_KERNEL_LOWIO_PERVASIVE_H */
 

@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_KERNEL_BT_H_
-#define _PSP2_KERNEL_BT_H_
+#ifndef _VDSUITE_KERNEL_BT_H
+#define _VDSUITE_KERNEL_BT_H
 
 #include <stdint.h>
 #include <scetypes.h>
@@ -342,4 +342,4 @@ int sceBtUnregisterCallback(SceUID cb);
 }
 #endif
 
-#endif /* _PSP2_KERNEL_BT_H_ */
+#endif /* _VDSUITE_KERNEL_BT_H */

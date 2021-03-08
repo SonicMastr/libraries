@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _DOLCESDK_PSP2_JPEGARM_H_
-#define _DOLCESDK_PSP2_JPEGARM_H_
+#ifndef _VDSUITE_USER_JPEGARM_H
+#define _VDSUITE_USER_JPEGARM_H
 
 #include <scejpeg.h>
 
@@ -102,5 +102,5 @@ int sceJpegArmSplitDecodeMJpeg(void *pCtrl);
 }
 #endif
 
-#endif /* _DOLCESDK_PSP2_JPEGARM_H_ */
+#endif /* _VDSUITE_USER_JPEGARM_H */
 

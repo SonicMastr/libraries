@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _DOLCESDK_PSP2COMMON_KERNEL_IOFILEMGR_ASYNC_H_
-#define _DOLCESDK_PSP2COMMON_KERNEL_IOFILEMGR_ASYNC_H_
+#ifndef _VDSUITE_COMMON_KERNEL_IOFILEMGR_ASYNC_H
+#define _VDSUITE_COMMON_KERNEL_IOFILEMGR_ASYNC_H
 
 #include <stddef.h>
 #include <kernel/iofilemgr.h>
@@ -334,4 +334,4 @@ int sceIoPollAsync(SceUID opHandle)
 }
 #endif
 
-#endif	/* _DOLCESDK_PSP2COMMON_KERNEL_IOFILEMGR_ASYNC_H_ */
+#endif	/* _VDSUITE_COMMON_KERNEL_IOFILEMGR_ASYNC_H */

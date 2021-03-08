@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_HID_H_
-#define _PSP2_HID_H_
+#ifndef _VDSUITE_USER_HID_H
+#define _VDSUITE_USER_HID_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -72,5 +72,5 @@ int sceHidMouseRead(SceUInt32 handle, SceHidMouseReport *reports[], int nReports
 }
 #endif
 
-#endif
+#endif /* _VDSUITE_USER_HID_H */
 

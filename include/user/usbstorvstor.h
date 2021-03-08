@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_USBSTORVSTOR_H_
-#define _PSP2_USBSTORVSTOR_H_
+#ifndef _VDSUITE_USER_USBSTORVSTOR_H
+#define _VDSUITE_USER_USBSTORVSTOR_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -53,4 +53,4 @@ int sceUsbstorVStorStop(void);
 }
 #endif
 
-#endif /* _PSP2_USBSTORVSTOR_H_ */
+#endif /* _VDSUITE_USER_USBSTORVSTOR_H */

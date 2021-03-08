@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _DOLCESDK_PSP2_KERNEL_IOFILEMGR_ASYNC_H_
-#define _DOLCESDK_PSP2_KERNEL_IOFILEMGR_ASYNC_H_
+#ifndef _VDSUITE_USER_KERNEL_IOFILEMGR_ASYNC_H
+#define _VDSUITE_USER_KERNEL_IOFILEMGR_ASYNC_H
 
 #include_next <kernel/iofilemgr_async.h>
 
@@ -35,4 +35,4 @@ int sceIoCompleteMultiple(SceIoAsyncParam* asyncParam, int numOfParam, int* numO
 }
 #endif
 
-#endif	/* _DOLCESDK_PSP2_KERNEL_IOFILEMGR_ASYNC_H_ */
+#endif	/* _VDSUITE_USER_KERNEL_IOFILEMGR_ASYNC_H */

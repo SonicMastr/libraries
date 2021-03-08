@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_KERNEL_USBD_H_
-#define _PSP2_KERNEL_USBD_H_
+#ifndef _VDSUITE_KERNEL_USBD_H
+#define _VDSUITE_KERNEL_USBD_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -99,4 +99,4 @@ int sceUsbdInterruptTransfer(int endpoint_id,
 }
 #endif
 
-#endif /* _PSP2_KERNEL_USBD_H_ */
+#endif /* _VDSUITE_KERNEL_USBD_H */

@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_VSHBRIDGE_H_
-#define _PSP2_VSHBRIDGE_H_
+#ifndef _VDSUITE_USER_VSHBRIDGE_H
+#define _VDSUITE_USER_VSHBRIDGE_H
 
 #include <kernel/modulemgr.h>
 
@@ -106,4 +106,4 @@ int vshRemovableMemoryGetCardInsertState(void);
 }
 #endif
 
-#endif /* _PSP2_VSHBRIDGE_H_ */
+#endif /* _VDSUITE_USER_VSHBRIDGE_H */

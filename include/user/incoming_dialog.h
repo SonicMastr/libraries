@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _DOLCESDK_PSP2_INCOMING_DIALOG_H_
-#define _DOLCESDK_PSP2_INCOMING_DIALOG_H_
+#ifndef _VDSUITE_USER_INCOMING_DIALOG_H
+#define _VDSUITE_USER_INCOMING_DIALOG_H
 
 #include <kernel/libkernel.h>
 #include <scetypes.h>
@@ -94,4 +94,4 @@ void sceIncomingDialogParamInit(SceIncomingDialogParam* dialogParam)
 }
 #endif /* __cplusplus */
 
-#endif /* _DOLCESDK_PSP2_INCOMING_DIALOG_H_ */
+#endif /* _VDSUITE_USER_INCOMING_DIALOG_H */

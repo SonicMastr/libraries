@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_KERN_LOWIO_GPIO_H_
-#define _PSP2_KERN_LOWIO_GPIO_H_
+#ifndef _VDSUITE_KERNEL_LOWIO_GPIO_H
+#define _VDSUITE_KERNEL_LOWIO_GPIO_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -40,5 +40,5 @@ int sceGpioQueryIntr(int bus, int port);
 }
 #endif
 
-#endif /* _PSP2_KERN_LOWIO_GPIO_H_ */
+#endif /* _VDSUITE_KERNEL_LOWIO_GPIO_H */
 

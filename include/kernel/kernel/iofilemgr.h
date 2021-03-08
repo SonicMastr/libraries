@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _DOLCESDK_PSP2KERN_KERNEL_IOFILEMGR_H_
-#define _DOLCESDK_PSP2KERN_KERNEL_IOFILEMGR_H_
+#ifndef _VDSUITE_KERNEL_KERNEL_IOFILEMGR_H
+#define _VDSUITE_KERNEL_KERNEL_IOFILEMGR_H
 
 #include_next <kernel/iofilemgr.h>
 
@@ -63,4 +63,4 @@ int sceIoUmount(int id, int a2, int a3, int a4);
 }
 #endif
 
-#endif	/* _DOLCESDK_PSP2KERN_KERNEL_IOFILEMGR_H_ */
+#endif	/* _VDSUITE_KERNEL_KERNEL_IOFILEMGR_H */

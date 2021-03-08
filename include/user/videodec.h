@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _DOLCESDK_PSP2_VIDEODEC_H_
-#define _DOLCESDK_PSP2_VIDEODEC_H_
+#ifndef _VDSUITE_USER_VIDEODEC_H
+#define _VDSUITE_USER_VIDEODEC_H
 
 #include_next <videodec.h>
 
@@ -34,5 +34,5 @@ extern SceInt32 sceVideodecInitLibraryWithUnmapMemNongameapp(SceUInt32 codecType
 }
 #endif /* defined(_LANGUAGE_C_PLUS_PLUS)||defined(__cplusplus)||defined(c_plusplus) */
 
-#endif /* _DOLCESDK_PSP2_VIDEODEC_H_ */
+#endif /* _VDSUITE_USER_VIDEODEC_H */
 

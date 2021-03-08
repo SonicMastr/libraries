@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_MTPIF_H_
-#define _PSP2_MTPIF_H_
+#ifndef _VDSUITE_USER_MTPIF_H
+#define _VDSUITE_USER_MTPIF_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -31,4 +31,4 @@ int sceMtpIfStopDriver(int flags);
 }
 #endif
 
-#endif /* _PSP2_MTPIF_H_ */
+#endif /* _VDSUITE_USER_MTPIF_H */

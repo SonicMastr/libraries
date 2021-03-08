@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_KERN_SYSCON_H_
-#define _PSP2_KERN_SYSCON_H_
+#ifndef _VDSUITE_KERNEL_SYSCON_H
+#define _VDSUITE_KERNEL_SYSCON_H
 
 #include <scetypes.h>
 
@@ -246,5 +246,5 @@ int sceSysconSetThermalAlertCallback(SceSysconCallback callback, void *argp);
 }
 #endif
 
-#endif /* _PSP2_KERN_SYSCON_H_ */
+#endif /* _VDSUITE_KERNEL_SYSCON_H */
 

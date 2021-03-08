@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _DOLCESDK_PSP2_AUDIOCODEC_H_
-#define _DOLCESDK_PSP2_AUDIOCODEC_H_
+#ifndef _VDSUITE_USER_AUDIOCODEC_H
+#define _VDSUITE_USER_AUDIOCODEC_H
 
 #include <audiodec.h>
 
@@ -209,4 +209,4 @@ SceInt32 sceAudiocodecGetAt3Config(SceUInt32 cmode, SceUInt32 nbytes)
 }
 #endif
 
-#endif /* _DOLCESDK_PSP2_AUDIOCODEC_H_ */
+#endif /* _VDSUITE_USER_AUDIOCODEC_H */

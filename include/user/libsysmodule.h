@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_SYSMODULE_H_
-#define _PSP2_SYSMODULE_H_
+#ifndef _VDSUITE_USER_LIBSYSMODULE_H
+#define _VDSUITE_USER_LIBSYSMODULE_H
 
 #include_next <libsysmodule.h>
 
@@ -130,5 +130,5 @@ int sceSysmoduleUnloadModuleInternalWithArg(SceUInt32 id, SceSize args, void *ar
 }
 #endif
 
-#endif /* _PSP2_SYSMODULE_H_ */
+#endif /* _VDSUITE_USER_LIBSYSMODULE_H */
 

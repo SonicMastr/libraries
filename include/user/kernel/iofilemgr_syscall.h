@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _DOLCESDK_PSP2_KERNEL_IOFILEMGR_SYSCALL_H_
-#define _DOLCESDK_PSP2_KERNEL_IOFILEMGR_SYSCALL_H_
+#ifndef _VDSUITE_USER_KERNEL_IOFILEMGR_SYSCALL_H
+#define _VDSUITE_USER_KERNEL_IOFILEMGR_SYSCALL_H
 
 #include <kernel/types.h>
 
@@ -80,4 +80,4 @@ SceSSize _sceIoPwrite(SceUID fd, const void *buf, SceSize nbyte, SceIoPwriteSysc
 }
 #endif
 
-#endif	/* _DOLCESDK_PSP2_KERNEL_IOFILEMGR_SYSCALL_H_ */
+#endif	/* _VDSUITE_USER_KERNEL_IOFILEMGR_SYSCALL_H */

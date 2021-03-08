@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _DOLCESDK_PSP2_SAS_H_
-#define _DOLCESDK_PSP2_SAS_H_
+#ifndef _VDSUITE_USER_SAS_H
+#define _VDSUITE_USER_SAS_H
 
 #include_next <sas.h>
 
@@ -54,4 +54,4 @@ SceSasResult sceSasSetEffectParamInternal(SceUID sasCoreId, SceUInt32 delayTime,
 }
 #endif
 
-#endif /* _DOLCESDK_PSP2_SAS_H_ */
+#endif /* _VDSUITE_USER_SAS_H */

@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_NPDRM_H_
-#define _PSP2_NPDRM_H_
+#ifndef _VDSUITE_USER_NPDRM_H
+#define _VDSUITE_USER_NPDRM_H
 
 #include <stdint.h>
 
@@ -54,5 +54,5 @@ int _sceNpDrmGetRifNameForInstall(char *rif_name, const void *rif_data, int unk)
 }
 #endif
 
-#endif /* _PSP2_NPDRM_H_ */
+#endif /* _VDSUITE_USER_NPDRM_H */
 

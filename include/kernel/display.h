@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_KERNEL_DISPLAY_H_
-#define _PSP2_KERNEL_DISPLAY_H_
+#ifndef _VDSUITE_KERNEL_DISPLAY_H
+#define _VDSUITE_KERNEL_DISPLAY_H
 
 #include <stdint.h>
 #include <scetypes.h>
@@ -300,5 +300,5 @@ int sceDisplaySetScaleConf(float scale, int head, int index, int flags);
 }
 #endif
 
-#endif /* _PSP2_KERNEL_DISPLAY_H_ */
+#endif /* _VDSUITE_KERNEL_DISPLAY_H */
 

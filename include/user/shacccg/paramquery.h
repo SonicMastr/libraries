@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _DOLCESDK_PSP2_SHACCCG_PARAMQUERY_H_
-#define _DOLCESDK_PSP2_SHACCCG_PARAMQUERY_H_
+#ifndef _VDSUITE_USER_SHACCCG_PARAMQUERY_H
+#define _VDSUITE_USER_SHACCCG_PARAMQUERY_H
 
 #include <stdint.h>
 
@@ -528,4 +528,4 @@ SceShaccCgParameterBaseType sceShaccCgGetSamplerQueryFormatPrecision(
 }
 #endif	/* __cplusplus */
 
-#endif /* _DOLCESDK_PSP2_SHACCCG_PARAMQUERY_H_ */
+#endif /* _VDSUITE_USER_SHACCCG_PARAMQUERY_H */

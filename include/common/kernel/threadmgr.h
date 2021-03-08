@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _DOLCESDK_PSP2COMMON_KERNEL_THREADMGR_H_
-#define _DOLCESDK_PSP2COMMON_KERNEL_THREADMGR_H_
+#ifndef _VDSUITE_COMMON_KERNEL_THREADMGR_H
+#define _VDSUITE_COMMON_KERNEL_THREADMGR_H
 
 #include_next <kernel/threadmgr.h>
 

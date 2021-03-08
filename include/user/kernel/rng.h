@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_KERNEL_RNG_H_
-#define _PSP2_KERNEL_RNG_H_
+#ifndef _VDSUITE_USER_KERNEL_RNG_H
+#define _VDSUITE_USER_KERNEL_RNG_H
 
 #include <scetypes.h>
 
@@ -25,5 +25,5 @@ int sceKernelGetRandomNumber(void *output, SceSize size);
 }
 #endif
 
-#endif /* _PSP2_KERNEL_RNG_H_ */
+#endif /* _VDSUITE_USER_KERNEL_RNG_H */
 

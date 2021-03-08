@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_USBSERIAL_H_
-#define _PSP2_USBSERIAL_H_
+#ifndef _VDSUITE_USER_USBSERIAL_H
+#define _VDSUITE_USER_USBSERIAL_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -82,4 +82,5 @@ unsigned int sceUsbSerialRecv(void *buffer, unsigned int max_len, int unk1, int 
 #ifdef __cplusplus
 }
 #endif
-#endif
+
+#endif /* _VDSUITE_USER_USBSERIAL_H */

@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_VIDEO_EXPORT_H_
-#define _PSP2_VIDEO_EXPORT_H_
+#ifndef _VDSUITE_USER_VIDEOEXPORT_H
+#define _VDSUITE_USER_VIDEOEXPORT_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -39,4 +39,4 @@ int sceVideoExportFromFile(const VideoExportInputParam* in_param, int unk, void*
 }
 #endif
 
-#endif /* _PSP2_VIDEO_EXPORT_H_ */
+#endif /* _VDSUITE_USER_VIDEOEXPORT_H */

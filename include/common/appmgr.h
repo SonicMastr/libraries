@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _DOLCESDK_PSP2COMMON_APPMGR_H_
-#define _DOLCESDK_PSP2COMMON_APPMGR_H_
+#ifndef _VDSUITE_COMMON_APPMGR_H
+#define _VDSUITE_COMMON_APPMGR_H
 
 #include_next <appmgr.h>
 
@@ -64,4 +64,4 @@ typedef struct SceAppMgrDrmAddcontParam {
 }
 #endif
 
-#endif // _DOLCESDK_PSP2COMMON_APPMGR_H_
+#endif // _VDSUITE_COMMON_APPMGR_H

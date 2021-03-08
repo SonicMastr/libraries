@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _DOLCESDK_PSP2KERN_KERNEL_SYSCLIB_H_
-#define _DOLCESDK_PSP2KERN_KERNEL_SYSCLIB_H_
+#ifndef _VDSUITE_KERNEL_KERNEL_SYSCLIB_H
+#define _VDSUITE_KERNEL_KERNEL_SYSCLIB_H
 
 #include <stddef.h>
 
@@ -26,4 +26,4 @@ char *strncpy_fast(char *dest, const char *src, size_t n);
 }
 #endif
 
-#endif /* _DOLCESDK_PSP2KERN_KERNEL_SYSCLIB_H_ */
+#endif /* _VDSUITE_KERNEL_KERNEL_SYSCLIB_H */

@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _PSP2_KERNEL_INTRMGR_H_
-#define _PSP2_KERNEL_INTRMGR_H_
+#ifndef _VDSUITE_KERNEL_KERNEL_INTRMGR_H
+#define _VDSUITE_KERNEL_KERNEL_INTRMGR_H
 
 #include <stdint.h>
 
@@ -64,5 +64,5 @@ int sceKernelDisableSubIntr(int intr_code, int subintr_code);
 }
 #endif
 
-#endif /* _PSP2_KERNEL_INTRMGR_H_ */
+#endif /* _VDSUITE_KERNEL_KERNEL_INTRMGR_H */
 
