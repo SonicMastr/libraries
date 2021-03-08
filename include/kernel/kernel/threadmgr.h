@@ -120,16 +120,41 @@ void *sceKernelGetThreadTLSAddr(SceUID thid, int key);
  */
 void *sceKernelGetTLSAddr(int key);
 
+/** Type of function used with sceKernelExtendKernelStack */
+typedef SceInt32 (*SceKernelExtendKernelStackFunction)(void *pArg);
+
+/** Type of function used with sceKernelExtendKernelStackWide */
+typedef SceInt64 (*SceKernelExtendKernelStackWideFunction)(void *pArg);
+
 /**
- * @brief      Runs a function with larger stack size
+ * @brief		Changes the stack address range and calls extendKernelStackFunc
  *
- * @param[in]  stack_size  The stack size
- * @param[in]  to_call     To call
- * @param      args        The arguments
+ * @param[in]	stackSize					Size of the changed stack
+ * @param[in]	extendKernelStackFunc		Function to call
+ * @param[in]	pCommon						Argument to pass to extendKernelStackFunc
  *
- * @return     Zero on success
+ * @return		Return value of extendKernelStackFunc
  */
-int sceKernelRunWithStack(SceSize stack_size, int (* to_call)(void *), void *args);
+SceInt32 sceKernelExtendKernelStack(
+	SceSize									stackSize,
+	SceKernelExtendKernelStackFunction		extendKernelStackFunc,
+	void									*pCommon
+);
+
+/**
+ * @brief		Changes the stack address range and calls extendKernelStackWideFunc
+ *
+ * @param[in]	stackSize					Size of the changed stack
+ * @param[in]	extendKernelStackWideFunc	Function to call
+ * @param[in]	pCommon						Argument to pass to extendKernelStackWideFunc
+ *
+ * @return		Return value of extendKernelStackWideFunc
+ */
+SceInt64 sceKernelExtendKernelStackWide(
+	SceSize									stackSize,
+	SceKernelExtendKernelStackWideFunction	extendKernelStackWideFunc,
+	void									*pCommon
+);
 
 /**
  * @brief      Call from an abort handler to get info on faulting process

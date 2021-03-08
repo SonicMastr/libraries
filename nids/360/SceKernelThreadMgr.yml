@@ -112,6 +112,8 @@ modules:
           sceKernelEnqueueWorkQueue: 0xE50E1185
           sceKernelExitDeleteThread: 0x1D17DECF
           sceKernelExitThread: 0x0C8A38E1
+          sceKernelExtendKernelStack: 0xE54FD746
+          sceKernelExtendKernelStackWide: 0xA2C801A5
           sceKernelFinalizeFastMutex: 0x11FE84A1
           sceKernelGetCallbackCount: 0x0892D8DF
           sceKernelGetFastMutexInfo: 0xD7AF2E58
@@ -146,7 +148,6 @@ modules:
           sceKernelReceiveMsgPipeVectorCB: 0xDA5C9AC6
           sceKernelRegisterCallbackToEvent: 0x832A7E0C
           sceKernelRegisterTimer: 0xC58DF384
-          sceKernelRunWithStack: 0xE54FD746
           sceKernelSendMsgPipeVector: 0x67DD3BAD
           sceKernelSetEvent: 0x9EA3A45C
           sceKernelSetEventFlag: 0xD4780C3E
