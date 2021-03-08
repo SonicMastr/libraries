@@ -16,6 +16,24 @@ modules:
           sceKernelGetThreadContextForVM: 0x010BB885
           sceKernelResumeThreadForVM: 0x70F3F49D
           sceKernelSuspendThreadForVM: 0xF5F8F795
+      SceLibGcc:
+        nid: 0x567AF9A6
+        functions:
+          _Unwind_Backtrace: 0xA22B2436
+          _Unwind_Complete: 0x8A5F29D8
+          _Unwind_DeleteException: 0x4BB45B70
+          _Unwind_ForcedUnwind: 0x7772C028
+          _Unwind_GetCFA: 0xDBE840D6
+          _Unwind_GetDataRelBase: 0xAC15DBA5
+          _Unwind_GetLanguageSpecificData: 0xBAC00FF7
+          _Unwind_GetRegionStart: 0xDA5097CE
+          _Unwind_GetTextRelBase: 0x8D4953C7
+          _Unwind_RaiseException: 0x12472ADD
+          _Unwind_Resume: 0x74274866
+          _Unwind_Resume_or_Rethrow: 0x7DFC519A
+          _Unwind_VRS_Get: 0x0DFF2B2C
+          _Unwind_VRS_Pop: 0xF16E32FC
+          _Unwind_VRS_Set: 0xDAB28374
       SceLibKernel:
         nid: 0xCAE9ACE6
         functions:
