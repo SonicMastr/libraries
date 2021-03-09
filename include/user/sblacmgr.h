@@ -5,11 +5,13 @@
 #ifndef _VDSUITE_USER_SBLACMGR_H
 #define _VDSUITE_USER_SBLACMGR_H
 
+#include <scetypes.h>
+
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-int _sceSblACMgrIsGameProgram(void);
+SceInt32 sceSblACMgrIsGameProgram(SceInt32 *result);
 
 #ifdef __cplusplus
 }
