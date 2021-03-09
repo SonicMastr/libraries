@@ -11,7 +11,7 @@
 extern "C" {
 #endif
 
-int sceSblACMgrIsShell(SceUID pid);
+int sceSblACMgrIsSystemProgram(SceUID pid);
 int sceSblACMgrIsPspEmu(SceUID pid);
 int sceSblACMgrIsGameProgram(SceUID pid);
 int sceSblACMgrIsNonGameProgram(SceUID pid);

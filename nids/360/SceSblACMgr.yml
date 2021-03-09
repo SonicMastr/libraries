@@ -5,7 +5,8 @@ modules:
       SceSblACMgrForDriver:
         nid: 0x9AD8E213
         functions:
-          sceSblACMgrGetPathId: 0x4322F188
+          sceSblACMgrGetFSAttributeByThreadAccessLevel: 0x0606B87E
+          sceSblACMgrGetMediaType: 0x4322F188
           sceSblACMgrGetSelfAuthInfo: 0x96AF69BD
           sceSblACMgrHasCapability: 0xC2D1F2FC
           sceSblACMgrIsAllowedExtendedMemory: 0x4DB7F512
@@ -23,7 +24,8 @@ modules:
           sceSblACMgrIsPspEmu: 0xFD00C72A
           sceSblACMgrIsSIEApp: 0xA67E8E5B
           sceSblACMgrIsSceShell: 0x991FDC15
-          sceSblACMgrIsShell: 0x8612B243
           sceSblACMgrIsSystem: 0x0948F41C
+          sceSblACMgrIsSystemProgram: 0x8612B243
           sceSblACMgrIsUpdaterUISetupperOrPkgInstallerSpawn: 0x962CD237
           sceSblACMgrIsWebCoreOrWebKitProcess: 0x0139FC20
+          sceSblACMgrSetFSAttributeByPermission: 0x6210D745
