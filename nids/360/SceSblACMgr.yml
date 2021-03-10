@@ -7,25 +7,33 @@ modules:
         functions:
           sceSblACMgrGetFSAttributeByThreadAccessLevel: 0x0606B87E
           sceSblACMgrGetMediaType: 0x4322F188
-          sceSblACMgrGetSelfAuthInfo: 0x96AF69BD
+          sceSblACMgrGetProcessProgramAuthId: 0x96AF69BD
           sceSblACMgrHasCapability: 0xC2D1F2FC
-          sceSblACMgrIsAllowedExtendedMemory: 0x4DB7F512
+          sceSblACMgrHasMagicGateFlag: 0xA27E47A7
+          sceSblACMgrHasMarlinFlag: 0xF5AE24AC
+          sceSblACMgrHasSystemDataFileFlag: 0xA92CD636
+          sceSblACMgrHasSystemDataFilePlayReadyFlag: 0xAE1AF154
+          sceSblACMgrIsAllowCache: 0x456DA7AC
+          sceSblACMgrIsAllowCoredump: 0x4CBD6156
+          sceSblACMgrIsAllowLoopBackMount: 0x4DB7F512
+          sceSblACMgrIsAllowMsMount: 0x0B6E6CD7
+          sceSblACMgrIsAllowUdcd: 0xD0E11C89
           sceSblACMgrIsAllowedUsbSerial: 0x062CAEB2
           sceSblACMgrIsAllowedVirtualMachine: 0x2A29453C
           sceSblACMgrIsDevelopmentMode: 0xE87D1777
           sceSblACMgrIsFself: 0x426A4E8C
           sceSblACMgrIsGameProgram: 0x1298C647
-          sceSblACMgrIsMiniSettingsForQA: 0xD0E11C89
           sceSblACMgrIsNonGameOrGameProgram: 0x8A54DF3A
           sceSblACMgrIsNonGameProgram: 0x6C5AB07F
-          sceSblACMgrIsNotSandboxed: 0x0B6E6CD7
           sceSblACMgrIsPSM: 0xC98D82EE
+          sceSblACMgrIsPSMDevAssistant: 0xA67E8E5B
           sceSblACMgrIsPSMRuntime: 0x091F7247
+          sceSblACMgrIsPsNowClient: 0x0924896F
           sceSblACMgrIsPspEmu: 0xFD00C72A
-          sceSblACMgrIsSIEApp: 0xA67E8E5B
+          sceSblACMgrIsRootProgram: 0x0948F41C
           sceSblACMgrIsSceShell: 0x991FDC15
-          sceSblACMgrIsSystem: 0x0948F41C
           sceSblACMgrIsSystemProgram: 0x8612B243
+          sceSblACMgrIsUnityRuntimeForPSM: 0x5C4BC352
           sceSblACMgrIsUpdaterUISetupperOrPkgInstallerSpawn: 0x962CD237
           sceSblACMgrIsWebCoreOrWebKitProcess: 0x0139FC20
           sceSblACMgrSetFSAttributeByPermission: 0x6210D745
