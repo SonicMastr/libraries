@@ -9,6 +9,7 @@ modules:
           sceKernelResumeThreadForMono: 0x9A6D085B
           sceKernelSetThreadContextForMono: 0x92A0964D
           sceKernelSuspendThreadForMono: 0x38839DA2
+          sceKernelWaitExceptionCBForMono: 0xE513151F
           sceKernelWaitExceptionForMono: 0x1BECC64C
       SceKernelForVM:
         nid: 0xA2B3EA8F
