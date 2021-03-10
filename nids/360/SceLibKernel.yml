@@ -237,7 +237,7 @@ modules:
           sceKernelGetThreadId: 0x0FB972F9
           sceKernelGetThreadInfo: 0x8D9C5461
           sceKernelGetThreadRunStatus: 0xD6B01013
-          sceKernelGetThreadSpecificInfo: 0x35D20E49
+          sceKernelGetThreadTLSAddr: 0x35D20E49
           sceKernelGetTimerBase: 0x1F59E04D
           sceKernelGetTimerEventRemainingTime: 0x75B1EB3E
           sceKernelGetTimerInfo: 0x7E35E10A

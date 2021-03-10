@@ -47,6 +47,7 @@ modules:
           _sceKernelGetThreadExitStatus: 0xD3210C08
           _sceKernelGetThreadInfo: 0xB373D8A1
           _sceKernelGetThreadRunStatus: 0xC7FB5497
+          _sceKernelGetThreadTLSAddr: 0xBACA6891
           _sceKernelGetTimerBase: 0x865DA482
           _sceKernelGetTimerEventRemainingTime: 0x215FD24D
           _sceKernelGetTimerInfo: 0xAC7FE4F3
@@ -137,7 +138,6 @@ modules:
           sceKernelGetProcessId: 0x9DCB4B7A
           sceKernelGetSystemTimeWide: 0xF4EE4FA9
           sceKernelGetThreadStackFreeSize: 0x4F8A3DA0
-          sceKernelGetThreadTLSAddr: 0xBACA6891
           sceKernelGetThreadmgrUIDClass: 0xC9678F7F
           sceKernelGetTimerBaseWide: 0x5DBC1960
           sceKernelGetTimerTimeWide: 0x3EFD3165
