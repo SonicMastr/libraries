@@ -230,7 +230,7 @@ modules:
           sceKernelGetSystemTime: 0x8AF15B5F
           sceKernelGetTLSAddr: 0xB295EB61
           sceKernelGetThreadContextForVM: 0x22C9595E
-          sceKernelGetThreadCpuAffinityMask2: 0x8C57AC2A
+          sceKernelGetThreadCpuAffinityMask: 0x8C57AC2A
           sceKernelGetThreadCurrentPriority: 0xC53A9848
           sceKernelGetThreadEventInfo: 0xE48476FE
           sceKernelGetThreadExitStatus: 0xD5DC26C4
