@@ -312,11 +312,40 @@ modules:
           sceKernelWaitThreadEnd: 0xDDB395A9
           sceKernelWaitThreadEndCB: 0xC54941ED
           sceSblACMgrIsGameProgram: 0x963F4A99
+          sceSblGcAuthMgrAdhocBB160Auth1: 0xEFD76235
+          sceSblGcAuthMgrAdhocBB160Auth2: 0x1F4DF829
+          sceSblGcAuthMgrAdhocBB160Auth3: 0xC362ECD6
+          sceSblGcAuthMgrAdhocBB160Auth4: 0x6314CAA3
+          sceSblGcAuthMgrAdhocBB160Auth5: 0x3B595E1D
+          sceSblGcAuthMgrAdhocBB160BroadCastDecrypt: 0xE2984A54
+          sceSblGcAuthMgrAdhocBB160BroadCastEncrypt: 0x88E72157
+          sceSblGcAuthMgrAdhocBB160GetKeys: 0x84C75DC3
+          sceSblGcAuthMgrAdhocBB160Init: 0x9B28E1AF
           sceSblGcAuthMgrAdhocBB160Shutdown: 0x5F9F0D61
+          sceSblGcAuthMgrAdhocBB160UniCastDecrypt: 0x01E00CBF
+          sceSblGcAuthMgrAdhocBB160UniCastEncrypt: 0xA9002567
+          sceSblGcAuthMgrAdhocBB224Auth1: 0x211BEDE8
+          sceSblGcAuthMgrAdhocBB224Auth2: 0xDEAD6277
+          sceSblGcAuthMgrAdhocBB224Auth3: 0x104D802F
+          sceSblGcAuthMgrAdhocBB224Auth4: 0x65126005
+          sceSblGcAuthMgrAdhocBB224Auth5: 0x4AC7EFC9
+          sceSblGcAuthMgrAdhocBB224GetKeys: 0xAC57B6A4
+          sceSblGcAuthMgrAdhocBB224Init: 0xC8082804
           sceSblGcAuthMgrAdhocBB224Shutdown: 0xE633BAD1
+          sceSblGcAuthMgrGetMediaIdType01: 0xF7027E6A
           sceSblGcAuthMgrMsSaveBBCipherFinal: 0xEB02F15D
+          sceSblGcAuthMgrMsSaveBBCipherInit: 0x2E05B2DC
+          sceSblGcAuthMgrMsSaveBBCipherUpdate: 0x56A59D4F
+          sceSblGcAuthMgrMsSaveBBMacFinal: 0x774AE3CB
+          sceSblGcAuthMgrMsSaveBBMacInit: 0x1693032E
           sceSblGcAuthMgrMsSaveBBMacUpdate: 0xEE2D40F7
           sceSblGcAuthMgrPcactActivation: 0x17C0CEF4
+          sceSblGcAuthMgrPcactGetChallenge: 0x9557D15C
+          sceSblGcAuthMgrPkgVry: 0x12C7CD2B
+          sceSblGcAuthMgrPsmactCreateC1: 0x622A81E6
+          sceSblGcAuthMgrPsmactVerifyR1: 0xEB6DA895
+          sceSblGcAuthMgrSclkGetData1: 0x93A6570E
+          sceSblGcAuthMgrSclkSetData2: 0xE088B0D0
         variables:
           SceKernelStackChkGuard: 0x4458BCF3
           __stack_chk_guard: 0x93B8AA67
