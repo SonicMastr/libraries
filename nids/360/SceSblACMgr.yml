@@ -31,28 +31,3 @@ modules:
           sceSblACMgrIsSystem: 0x0948F41C
           sceSblACMgrIsUpdaterUISetupperOrPkgInstallerSpawn: 0x962CD237
           sceSblACMgrIsWebCoreOrWebKitProcess: 0x0139FC20
-      SceSblACMgrForKernel:
-        nid: 0x11F9B314
-        functions:
-          scePfsACSetFSAttrByMode: 0x2AE6CF27
-          sceSblACIsSystemProgram: 0x930CD037
-          sceSblACMgrGetMediaType: 0xD442962E
-          sceSblACMgrGetSelfAuthInfo2: 0x7C2AF978
-          sceSblACMgrHasCapability2: 0x9EDAF856
-          sceSblACMgrIsAllowedExtendedMemory2: 0x384D20FD
-          sceSblACMgrIsAllowedVirtualMachine2: 0x96403142
-          sceSblACMgrIsDevelopmentMode2: 0xBBA13D9C
-          sceSblACMgrIsFself2: 0x5AC59172
-          sceSblACMgrIsGameProgram2: 0x05FDC646
-          sceSblACMgrIsMiniSettingsForQA2: 0xAF6F208E
-          sceSblACMgrIsNonGameOrGameProgram2: 0x570D6AD3
-          sceSblACMgrIsNonGameProgram2: 0x3F99279F
-          sceSblACMgrIsNotSandboxed2: 0xF5AD56E4
-          sceSblACMgrIsPSMDevAssistant2: 0xC90A9216
-          sceSblACMgrIsPSMRuntime2: 0x966B3738
-          sceSblACMgrIsPspEmu2: 0x47B67F72
-          sceSblACMgrIsSIEApp2: 0x3388F595
-          sceSblACMgrIsSceShell2: 0xF9FEF5F0
-          sceSblACMgrIsSystem2: 0x31C23B66
-          sceSblACMgrIsUpdaterUISetupperOrPkgInstallerSpawn2: 0x98B28671
-          sceSblACMgrIsWebCoreOrWebKitProcess2: 0xA7C3001D

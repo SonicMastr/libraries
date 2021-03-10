@@ -526,8 +526,6 @@ modules:
           sceKernelSysrootIsUserModeThread: 0x7FC7A163
           sceKernelSysrootProcessmgrStart2: 0x62E8F511
           sceKernelSysrootSetSysroot: 0x36916C30
-          sceNetDebugAttach: 0x6C036B53
-          sceNetDebugDetach: 0xA9510EFE
           sceSysrootGetFactorySystemSwVersion: 0xD3872270
           sceSysrootGetModuleInfoForPid: 0xFF9F80FF
           sceSysrootGetNidName: 0x0B79E220
