@@ -19,7 +19,7 @@ modules:
           sceSblACMgrIsNonGameOrGameProgram: 0x8A54DF3A
           sceSblACMgrIsNonGameProgram: 0x6C5AB07F
           sceSblACMgrIsNotSandboxed: 0x0B6E6CD7
-          sceSblACMgrIsPSMDevAssistant: 0xC98D82EE
+          sceSblACMgrIsPSM: 0xC98D82EE
           sceSblACMgrIsPSMRuntime: 0x091F7247
           sceSblACMgrIsPspEmu: 0xFD00C72A
           sceSblACMgrIsSIEApp: 0xA67E8E5B
