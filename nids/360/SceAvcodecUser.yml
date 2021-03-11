@@ -41,6 +41,8 @@ modules:
         nid: 0x469AB062
         functions:
           sceCodecEngineAllocMemoryFromUnmapMemBlock: 0x1A3A53E5
+          sceCodecEngineChangeNumWorkerCoresDefault: 0x9AD7E66F
+          sceCodecEngineChangeNumWorkerCoresMax: 0x9A5E7B2F
           sceCodecEngineCloseUnmapMemBlock: 0x95EA3B3E
           sceCodecEngineFreeMemoryFromUnmapMemBlock: 0x6A31831D
           sceCodecEngineOpenUnmapMemBlock: 0xF0B4C892
