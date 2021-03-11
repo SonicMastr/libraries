@@ -2,10 +2,6 @@ modules:
   SceSblACMgr:
     nid: 0x7474D6F9
     libraries:
-      SceSblACMgr:
-        nid: 0xF069F219
-        functions:
-          _sceSblACMgrIsGameProgram: 0x3C17A7F7
       SceSblACMgrForDriver:
         nid: 0x9AD8E213
         functions:

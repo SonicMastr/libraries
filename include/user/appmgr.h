@@ -13,41 +13,6 @@
 extern "C" {
 #endif
 
-typedef struct SceAppMgrSaveDataData {
-	int size;                                //!< Must be 0x4C
-	unsigned int slotId;                     //!< Save slot to use
-	SceAppMgrSaveDataSlotParam* slotParam;  //!< Save slot params
-	uint8_t reserved[32];                    //!< Reserved data
-	SceAppMgrSaveDataDataSaveItem* files;           //!< Pointer to an array of files
-	int fileNum;                             //!< Number of files to save
-	SceAppMgrMountPoint mountPoint; //!< Savedata mountpoint
-	unsigned int* requiredSizeKB;            //!< Required size in KBs
-} SceAppMgrSaveDataData;
-
-typedef struct SceAppMgrSaveDataDataDelete {
-	int size;                                //!< Must be 0x44
-	unsigned int slotId;                     //!< Save slot to use
-	SceAppMgrSaveDataSlotParam* slotParam;  //!< Save slot params
-	uint8_t reserved[32];                    //!< Reserved data
-	SceAppMgrSaveDataDataSaveItem* files;           //!< Pointer to an array of files
-	int fileNum;                             //!< Number of files to delete
-	SceAppMgrMountPoint mountPoint; //!< Savedata mountpoint
-} SceAppMgrSaveDataDataDelete;
-
-typedef struct SceAppMgrSaveDataSlot {
-	int size;                                //!< Must be 0x418
-	unsigned int slotId;                     //!< Save slot to use
-	SceAppMgrSaveDataSlotParam slotParam;   //!< Save slot params
-	uint8_t reserved[116];                   //!< Reserved data
-	SceAppMgrMountPoint mountPoint; //!< Savedata mountpoint
-} SceAppMgrSaveDataSlot;
-
-typedef struct SceAppMgrSaveDataSlotDelete {
-	int size;                                 //!< Must be 0x18
-	unsigned int slotId;                      //!< Save slot to use
-	SceAppMgrMountPoint mountPoint;  //!< Savedata mountpoint
-} SceAppMgrSaveDataSlotDelete;
-
 typedef struct SceAppMgrExecOptParam SceAppMgrExecOptParam; // Missing struct
 typedef struct SceAppMgrLaunchAppOptParam SceAppMgrLaunchAppOptParam; // Missing struct
 
@@ -87,60 +52,6 @@ typedef struct SceAppMgrTrcNotification {
     int unk;                           //!< Set to 0
     char message[0x3C];                //!< Must be null-terminated
 } SceAppMgrTrcNotification;
-
-/**
- * Save data on savedata0: partition
- *
- * @param[in] data - Data to save
- *
- * @return 0 on success, < 0 on error.
- */
-int _sceAppMgrSaveDataDataSave(SceAppMgrSaveDataData* data);
-
-/**
- * Remove data on savedata0: partition
- *
- * @param[in] data - Data to remove
- *
- * @return 0 on success, < 0 on error.
- */
-int _sceAppMgrSaveDataDataRemove(SceAppMgrSaveDataDataDelete* data);
-
-/**
- * Create a savedata slot
- *
- * @param[in] data - Slot data
- *
- * @return 0 on success, < 0 on error.
- */
-int _sceAppMgrSaveDataSlotCreate(SceAppMgrSaveDataSlot* data);
-
-/**
- * Get current param of a savedata slot
- *
- * @param[out] data - Slot data
- *
- * @return 0 on success, < 0 on error.
- */
-int _sceAppMgrSaveDataSlotGetParam(SceAppMgrSaveDataSlot* data);
-
-/**
- * Set current param of a savedata slot
- *
- * @param[in] data - Slot data
- *
- * @return 0 on success, < 0 on error.
- */
-int _sceAppMgrSaveDataSlotSetParam(SceAppMgrSaveDataSlot* data);
-
-/**
- * Delete a savedata slot
- *
- * @param[in] data - Slot data
- *
- * @return 0 on success, < 0 on error.
- */
-int _sceAppMgrSaveDataSlotDelete(SceAppMgrSaveDataSlotDelete* data);
 
 /**
  * Get Process ID by Title ID

@@ -2,10 +2,6 @@ modules:
   SceSblSsMgr:
     nid: 0x4E913538
     libraries:
-      SceSblAimgr:
-        nid: 0xD473F968
-        functions:
-          _sceKernelGetOpenPsId: 0x6E283E2E
       SceSblDmac5Mgr:
         nid: 0x437366A2
         functions:
@@ -34,10 +30,6 @@ modules:
           sceSblQafMgrIsAllowRemoteSysmoduleLoad: 0xF45AA706
           sceSblQafMgrIsAllowScreenShotAlways: 0xD22A8731
           sceSblQafMgrSetQafToken2: 0xF4B5C8A5
-      SceSblRng:
-        nid: 0x1843F124
-        functions:
-          _sceKernelGetRandomNumber: 0xC37E818C
       SceSblSsMgrForDriver:
         nid: 0x61E9428D
         functions:

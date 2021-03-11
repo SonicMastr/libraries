@@ -5,37 +5,6 @@ modules:
       SceIofilemgr:
         nid: 0xF2FF276E
         functions:
-          _sceIoChstat: 0xD2EE455F
-          _sceIoChstatAsync: 0xB4B021D9
-          _sceIoChstatByFd: 0xE0BE2A30
-          _sceIoCompleteMultiple: 0x9111D004
-          _sceIoDevctl: 0x515AC017
-          _sceIoDevctlAsync: 0x3EE3F66E
-          _sceIoDopen: 0xE6E614B5
-          _sceIoDread: 0x8713D662
-          _sceIoGetstat: 0x8E7E11F2
-          _sceIoGetstatAsync: 0xD414C89F
-          _sceIoGetstatByFd: 0xE6C53567
-          _sceIoIoctl: 0x1D2988F1
-          _sceIoIoctlAsync: 0xE00DC256
-          _sceIoLseek: 0xA604764A
-          _sceIoLseekAsync: 0x2300858E
-          _sceIoMkdir: 0x8F1ACC32
-          _sceIoMkdirAsync: 0xF5C58B21
-          _sceIoOpen: 0xCC67B6FD
-          _sceIoOpenAsync: 0x09CD0FC8
-          _sceIoPread: 0x539FD5C4
-          _sceIoPreadAsync: 0xBCF5684D
-          _sceIoPwrite: 0x9654094B
-          _sceIoPwriteAsync: 0xB2D0B2F4
-          _sceIoRemove: 0x78955C65
-          _sceIoRemoveAsync: 0x5FFA47E2
-          _sceIoRename: 0x4912F748
-          _sceIoRenameAsync: 0x81794921
-          _sceIoRmdir: 0xFFFB4D76
-          _sceIoRmdirAsync: 0x13DC3244
-          _sceIoSync: 0x5DD867F7
-          _sceIoSyncAsync: 0x86DB0C0E
           sceIoCancel: 0xCEF48835
           sceIoChstatByFdAsync: 0xA9F89275
           sceIoCloseAsync: 0x8EA3616A

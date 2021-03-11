@@ -5,13 +5,6 @@ modules:
       SceDisplay:
         nid: 0x5ED8F994
         functions:
-          _sceDisplayGetFrameBuf: 0xA753B0CA
-          _sceDisplayGetFrameBufInternal: 0x86A8E436
-          _sceDisplayGetMaximumFrameBufResolution: 0x2EBFC7CB
-          _sceDisplayGetResolutionInfoInternal: 0xFEFEB240
-          _sceDisplaySetFrameBuf: 0xF51523CB
-          _sceDisplaySetFrameBufForCompat: 0x45BCB941
-          _sceDisplaySetFrameBufInternal: 0x7A8CB78E
           sceDisplayGetPrimaryHead: 0x7178FADA
           sceDisplayGetRefreshRate: 0xA08CA60D
           sceDisplayGetVcount: 0xB6FDE0BA
