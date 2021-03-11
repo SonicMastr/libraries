@@ -38,7 +38,6 @@ modules:
           _sceIoSyncAsync: 0x86DB0C0E
           sceIoCancel: 0xCEF48835
           sceIoChstatByFdAsync: 0xA9F89275
-          sceIoClose: 0xC70B8886
           sceIoCloseAsync: 0x8EA3616A
           sceIoComplete: 0xD1C49D2F
           sceIoDclose: 0x422A221A
@@ -53,7 +52,6 @@ modules:
           sceIoGetThreadDefaultPriorityForSystem: 0xFCBCEAED
           sceIoGetstatByFdAsync: 0x5167AC1E
           sceIoLseek32: 0x49252B9B
-          sceIoRead: 0xFDB32293
           sceIoReadAsync: 0x773EBD45
           sceIoSetPriority: 0x14B2D56C
           sceIoSetPriorityForSystem: 0x27373135
@@ -62,7 +60,6 @@ modules:
           sceIoSetThreadDefaultPriorityForSystem: 0xB9C9C9CF
           sceIoSyncByFd: 0x16512F59
           sceIoSyncByFdAsync: 0x7E1367CB
-          sceIoWrite: 0x34EFD876
           sceIoWriteAsync: 0xE0D63D2A
       SceIofilemgrForDriver:
         nid: 0x40FD29C7

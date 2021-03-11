@@ -130,7 +130,6 @@ modules:
           sceKernelDeleteRWLock: 0xE73649CA
           sceKernelDeleteSema: 0xDB32948A
           sceKernelDeleteSimpleEvent: 0x208CFE28
-          sceKernelDeleteThread: 0x1BBDE3D9
           sceKernelDeleteTimer: 0xAB1E42C4
           sceKernelExitDeleteThread: 0x1D17DECF
           sceKernelGetCallbackCount: 0x038644D5
