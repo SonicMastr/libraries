@@ -105,21 +105,6 @@ SceInt32 sceKernelGetFastMutexInfoById(SceUID uid, SceKernelFastMutexInfo *pInfo
  */
 SceInt64 sceKernelGetSystemTimeWide(void);
 
-/**
- * @brief sceKernelGetThreadTLSAddr gets an address to a 4 bytes area of TLS memory for the specified thread
- * @param thid - The UID of the thread to access TLS
- * @param key - the TLS keyslot index
- * @return pointer to TLS memory
- */
-void *sceKernelGetThreadTLSAddr(SceUID thid, int key);
-
-/**
- * @brief sceKernelGetTLSAddr get pointer to TLS key area for current thread
- * @param key - the TLS keyslot index
- * @return pointer to TLS key value
- */
-void *sceKernelGetTLSAddr(int key);
-
 /** Type of function used with sceKernelExtendKernelStack */
 typedef SceInt32 (*SceKernelExtendKernelStackFunction)(void *pArg);
 

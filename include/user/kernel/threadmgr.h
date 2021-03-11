@@ -63,27 +63,6 @@ int sceKernelSendSignal(SceUID thid);
  */
 SceInt64 sceKernelGetSystemTimeWide(void);
 
-typedef enum _SceKernelTLS {
-	SCE_THREAD_TLS_UNK_0,
-	SCE_THREAD_TLS_ID,
-	SCE_THREAD_TLS_STACK_START_ADDRESS,
-	SCE_THREAD_TLS_STACK_END_ADDRESS,
-	SCE_THREAD_TLS_VFP_EXCEPTION,
-	SCE_THREAD_TLS_LWMUTEX_STATUS,
-	SCE_THREAD_TLS_UNK_6,
-	SCE_THREAD_TLS_UNK_7,
-	SCE_THREAD_TLS_PRIORITY,
-	SCE_THREAD_TLS_AFFINITY,
-} SceKernelTLS;
-
-/**
- * @brief sceKernelGetThreadTLSAddr gets an address to a 4 bytes area of TLS memory for the specified thread
- * @param thid - The UID of the thread to access TLS
- * @param key - the TLS keyslot index
- * @return pointer to TLS memory
- */
-void *sceKernelGetThreadTLSAddr(SceUID thid, SceKernelTLS key);
-
 /**
  * @brief sceKernelGetTLSAddr get pointer to TLS key area for current thread
  * @param key - the TLS keyslot index
