@@ -1,0 +1,18 @@
+modules:
+  SceBemp2sys:
+    nid: 0xBFFC68F3
+    libraries:
+      SceBemp2sys:
+        nid: 0xA6A04A2C
+        functions:
+          bemp2sys_logprintf_getlevel: 0xCF2FD310
+          bemp2sys_logprintf_setfunc: 0x0287CA06
+          bemp2sys_logprintf_setlevel: 0x69F282FF
+          bemp2sys_memmanager_set: 0x491AD648
+          bemp2sys_psdecoder_create: 0x81EB635C
+          bemp2sys_tsdecoder_create: 0xBBB64B8E
+          bemp2sys_tsdecoder_destroy: 0xC877BD9E
+          bemp2sys_tsdecoder_init: 0x4EE90DC7
+          bemp2sys_tsdecoder_readpacket: 0x6901B91F
+          bemp2sys_tsdecoder_release: 0x6D48B143
+          bemp2sys_tsdecoder_sendmessage: 0x25E3FEF3
