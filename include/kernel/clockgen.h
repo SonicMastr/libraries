@@ -12,6 +12,8 @@
 extern "C" {
 #endif  /* defined(_LANGUAGE_C_PLUS_PLUS)||defined(__cplusplus)||defined(c_plusplus) */
 
+int sceClockgenGetRevision(void);
+
 // idx < 3
 int sceClockgenGetRegValue(uint32_t idx);
 
@@ -22,6 +24,20 @@ int sceClockgenSetSpectrumSpreading(int mode);
 
 // changes behaviour of sceClockgenInit(), default true
 int sceClockgenSetProtocol(bool protocol);
+
+int sceClockgenInit(void);
+
+int sceClockgenAudioClkEnable(void);
+
+int sceClockgenAudioClkDisable(void);
+
+int sceClockgenCameraClkEnable(void);
+
+int sceClockgenCameraClkDisable(void);
+
+int sceClockgenWlanBtClkEnable(void);
+
+int sceClockgenWlanBtClkDisable(void);
 
 #if defined(_LANGUAGE_C_PLUS_PLUS)||defined(__cplusplus)||defined(c_plusplus)
 }
