@@ -205,6 +205,7 @@ modules:
           sceKernelCreateTimer: 0x2255B2A5
           sceKernelDeleteLwCond: 0x721F6CB3
           sceKernelDeleteLwMutex: 0x244E76D2
+          sceKernelDeleteThread: 0x58DDAC4F
           sceKernelExitProcess: 0x7595D9AA
           sceKernelGetCallbackInfo: 0x88DD1BC8
           sceKernelGetCondInfo: 0x6864DCE2
