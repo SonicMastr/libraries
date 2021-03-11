@@ -41,6 +41,49 @@ typedef enum _SceKernelTLS {
  */
 void *sceKernelGetThreadTLSAddr(SceUID thid, SceKernelTLS key);
 
+/** @name	システム時間
+ */
+/*@{*/
+
+/**
+ * @brief システム時間の取得
+ *
+ * システム稼働開始時からの経過時間(システム時間)を取得します。
+ * システム時間はシステムサスペンド期間中は停止しています。
+ * システム時間はマイクロ秒単位です。
+ *
+ * @param[out]	pClock	システム時間を受け取る構造体変数へのポインタを指定します。
+ * @retval		SCE_OK	成功
+ * @retval		負の値	エラーコード
+ */
+SceInt32	sceKernelGetSystemTime(SceKernelSysClock *pClock);
+
+/**
+ * @brief システム時間を64bit幅で取得
+ *
+ * システム稼働開始時からの経過時間(システム時間)を取得します。
+ * システム時間はシステムサスペンド期間中は停止しています。
+ * システム時間はマイクロ秒単位です。
+ *
+ * sceKernelGetSystemTime()との違いは、結果を直接SceUInt64値で返すことです。
+ *
+ * @return	システム時間
+ */
+SceUInt64	sceKernelGetSystemTimeWide(void);
+
+/**
+ * @brief システム時間の下位32bit部分の取得
+ *
+ * システム稼働開始時からの経過時間(システム時間)の下位32bitを取得します。
+ * システム時間はシステムサスペンド期間中は停止しています。
+ * システム時間はマイクロ秒単位です。
+ *
+ * @return	システム時間の下位32ビット
+ */
+SceUInt32	sceKernelGetSystemTimeLow(void);
+
+/*@}*//*J システム時間 */
+
 SCE_CDECL_END
 
 #endif

@@ -98,13 +98,6 @@ SceInt32 sceKernelGetFastMutexInfoById(SceUID uid, SceKernelFastMutexInfo *pInfo
 
 /* Misc. */
 
-/**
- * Get the system time (wide version)
- *
- * @return The system time
- */
-SceInt64 sceKernelGetSystemTimeWide(void);
-
 /** Type of function used with sceKernelExtendKernelStack */
 typedef SceInt32 (*SceKernelExtendKernelStackFunction)(void *pArg);
 

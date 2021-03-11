@@ -57,13 +57,6 @@ int sceKernelWaitSignal(SceUInt32 unk0, SceUInt32 unk1, SceKernelWaitSignalOptPa
 int sceKernelSendSignal(SceUID thid);
 
 /**
- * Get the system time (wide version)
- *
- * @return The system time
- */
-SceInt64 sceKernelGetSystemTimeWide(void);
-
-/**
  * @brief sceKernelGetTLSAddr get pointer to TLS key area for current thread
  * @param key - the TLS keyslot index
  * @return pointer to TLS key value
