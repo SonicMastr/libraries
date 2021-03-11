@@ -22,7 +22,6 @@ modules:
           __sce_aeabi_idiv0: 0x4373B548
           __sce_aeabi_ldiv0: 0xFB235848
           __stack_chk_fail: 0x37691BF8
-          _sceKernelCreateLwMutex: 0xB84EF718
           sceClibAbort: 0x2F2C6046
           sceClibDprintf: 0x4340EF77
           sceClibLookCtypeTable: 0xD8EBBB7E
@@ -236,7 +235,6 @@ modules:
           sceKernelGetSystemInfo: 0xE0241FAA
           sceKernelGetSystemTime: 0x8AF15B5F
           sceKernelGetTLSAddr: 0xB295EB61
-          sceKernelGetThreadContextForVM: 0x22C9595E
           sceKernelGetThreadCpuAffinityMask: 0x8C57AC2A
           sceKernelGetThreadCurrentPriority: 0xC53A9848
           sceKernelGetThreadEventInfo: 0xE48476FE
@@ -279,7 +277,6 @@ modules:
           sceKernelSendMsgPipeVector: 0x94D506F7
           sceKernelSendMsgPipeVectorCB: 0x9C6F7F79
           sceKernelSetEventWithNotifyCallback: 0x5FF3EE92
-          sceKernelSetThreadContextForVM: 0x27E6DEDE
           sceKernelSetTimerEvent: 0x621D293B
           sceKernelSetTimerTime: 0xFFAD717F
           sceKernelSignalLwCond: 0x3AC63B9A
