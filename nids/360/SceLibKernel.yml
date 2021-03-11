@@ -10,6 +10,12 @@ modules:
           sceKernelSetThreadContextForMono: 0x92A0964D
           sceKernelSuspendThreadForMono: 0x38839DA2
           sceKernelWaitExceptionForMono: 0x1BECC64C
+      SceKernelForVM:
+        nid: 0xA2B3EA8F
+        functions:
+          sceKernelGetThreadContextForVM: 0x010BB885
+          sceKernelResumeThreadForVM: 0x70F3F49D
+          sceKernelSuspendThreadForVM: 0xF5F8F795
       SceLibKernel:
         nid: 0xCAE9ACE6
         functions:
