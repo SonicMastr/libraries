@@ -1,8 +1,0 @@
-[
-  { include: ["@<gxm/.*>", "private", "<gxm.h>", "public"] },
-  { include: ["@<kernel/iofilemgr_.*>", "private", "<kernel/iofilemgr.h>", "public"] },
-  { include: ["@<net/.*>", "private", "<net.h>", "public"] },
-  { include: ["@<scebase_common/.*>", "private", "<scebase_common.h>", "public"] },
-  { include: ["@<shacccg/.*>", "private", "<shacccg.h>", "public"] },
-  { symbol: ["SceSize", "private", "<scetypes.h>", "public"]},
-]
