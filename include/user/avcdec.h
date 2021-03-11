@@ -12,9 +12,6 @@
 extern "C" {
 #endif /* defined(_LANGUAGE_C_PLUS_PLUS)||defined(__cplusplus)||defined(c_plusplus) */
 
-#define SCE_AVCDEC_PIXEL_RGB565					(0x1U)
-#define SCE_AVCDEC_PIXEL_RGBA5551				(0x2U)
-
 /* For use in sceAvcdecSetDecodeMode() */
 #define SCE_AVCDEC_MODE_EXTENDED				(0x80U)
 

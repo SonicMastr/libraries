@@ -30,33 +30,6 @@ typedef enum SceThreadStatus {
  */
 SceSize sceKernelGetThreadStackFreeSize(SceUID threadId);
 
-/* Condition variables */
-
-/**
- * Open a condition variable
- *
- * @param pName - The name of the condition variable to open
- * @return Returns an UID if successful, otherwise < 0
- */
-SceUID sceKernelOpenCond(const char *pName);
-
-/**
- * Close a condition variable
- *
- * @param condition variableid - The condition variable id returned from ::sceKernelCreateCond
- * @return Returns the value 0 if it's successful, otherwise < 0
- */
-SceInt32 sceKernelCloseCond(SceUID condId);
-
-/**
- * Waits for a signal of a condition variable (with callbacks)
- *
- * @param condId - The condition variable id returned from ::sceKernelCreateCond
- * @param pTimeout - Timeout in microseconds
- * @return < 0 On error.
- */
-SceInt32 sceKernelWaitCondCB(SceUID condId, SceUInt32 *pTimeout);
-
 /* Misc. */
 
 typedef struct SceKernelWaitSignalOptParam {

@@ -9,7 +9,6 @@ modules:
           sceGxmBeginCommandList: 0x944D3F83
           sceGxmBeginScene: 0x8734FF4E
           sceGxmBeginSceneEx: 0x4709CF5A
-          sceGxmBeginScene_16XX: 0xDBA33160
           sceGxmColorSurfaceGetClip: 0x07DFEE4B
           sceGxmColorSurfaceGetData: 0x2DB6026C
           sceGxmColorSurfaceGetDitherMode: 0x200A96E1
@@ -76,7 +75,6 @@ modules:
           sceGxmMapMemory: 0xC61E34FC
           sceGxmMapVertexUsseMemory: 0xFA437510
           sceGxmMidSceneFlush: 0x2B5C0444
-          sceGxmMidSceneFlush_16XX: 0x51FE0899
           sceGxmNotificationWait: 0x9F448E79
           sceGxmPadHeartbeat: 0x3D25FCE9
           sceGxmPopUserMarker: 0x4FA073A6
@@ -95,16 +93,13 @@ modules:
           sceGxmPrecomputedVertexStateGetDefaultUniformBuffer: 0xBE5A68EF
           sceGxmPrecomputedVertexStateInit: 0xBE937F8D
           sceGxmPrecomputedVertexStateSetAllTextures: 0xC40C9127
-          sceGxmPrecomputedVertexStateSetAllTextures_16XX: 0x8FF68274
           sceGxmPrecomputedVertexStateSetAllUniformBuffers: 0x0389861D
           sceGxmPrecomputedVertexStateSetDefaultUniformBuffer: 0x34BF64E3
           sceGxmPrecomputedVertexStateSetTexture: 0x6A29EB06
-          sceGxmPrecomputedVertexStateSetTexture_16XX: 0x1625D348
           sceGxmPrecomputedVertexStateSetUniformBuffer: 0xDBF97ED6
           sceGxmProgramCheck: 0xED8B6C69
           sceGxmProgramFindParameterByName: 0x277794C4
           sceGxmProgramFindParameterBySemantic: 0x633CAA54
-          sceGxmProgramFindParameterBySemantic_16XX: 0x7FFFDD7A
           sceGxmProgramGetDefaultUniformBufferSize: 0x8FA3F9C3
           sceGxmProgramGetFragmentProgramInputs: 0xC6924709
           sceGxmProgramGetOutputRegisterFormat: 0xE11603B1
@@ -128,7 +123,6 @@ modules:
           sceGxmProgramParameterGetResourceIndex: 0x5C79D59A
           sceGxmProgramParameterGetSemantic: 0xE6D9C4CE
           sceGxmProgramParameterGetSemanticIndex: 0xB85CC13E
-          sceGxmProgramParameterGetSemantic_16XX: 0xAAFD61D5
           sceGxmProgramParameterGetType: 0x7B9023C3
           sceGxmProgramParameterIsRegFormat: 0x871E5009
           sceGxmProgramParameterIsSamplerCube: 0xF7AA978B
@@ -180,7 +174,6 @@ modules:
           sceGxmSetVertexProgram: 0x31FF8ABD
           sceGxmSetVertexStream: 0x895DF2E9
           sceGxmSetVertexTexture: 0x9EB4380F
-          sceGxmSetVertexTexture_16XX: 0x16C9D339
           sceGxmSetVertexUniformBuffer: 0xC68015E4
           sceGxmSetViewport: 0x3EB3380B
           sceGxmSetViewportEnable: 0x814F61EB
@@ -224,15 +217,12 @@ modules:
           sceGxmTextureGetMinFilter: 0x920666C6
           sceGxmTextureGetMipFilter: 0xCE94CA15
           sceGxmTextureGetMipmapCount: 0xF7B7B1E4
-          sceGxmTextureGetMipmapCount_16XX: 0x4CC42929
           sceGxmTextureGetNormalizeMode: 0x512BB86C
           sceGxmTextureGetPalette: 0x0D189C30
           sceGxmTextureGetStride: 0xB0BD52F3
           sceGxmTextureGetType: 0xF65D4917
           sceGxmTextureGetUAddrMode: 0x2AE22788
-          sceGxmTextureGetUAddrMode_16XX: 0xC037DA83
           sceGxmTextureGetVAddrMode: 0x46136CA9
-          sceGxmTextureGetVAddrMode_16XX: 0xD2F0D9C1
           sceGxmTextureGetWidth: 0x126A3EB3
           sceGxmTextureInitCube: 0x11DC8DC9
           sceGxmTextureInitCubeArbitrary: 0xE3DF5E3B
@@ -245,7 +235,6 @@ modules:
           sceGxmTextureSetFormat: 0xFC943596
           sceGxmTextureSetGammaMode: 0xA6D9F4DA
           sceGxmTextureSetHeight: 0xAEE7FDD1
-          sceGxmTextureSetHeight_16XX: 0x1B20D5DF
           sceGxmTextureSetLodBias: 0xB65EE6F7
           sceGxmTextureSetLodMin: 0xB79E43DD
           sceGxmTextureSetMagFilter: 0xFA695FD7
@@ -256,11 +245,8 @@ modules:
           sceGxmTextureSetPalette: 0xDD6AABFA
           sceGxmTextureSetStride: 0x58D0EB0A
           sceGxmTextureSetUAddrMode: 0x4281763E
-          sceGxmTextureSetUAddrMode_16XX: 0x8699ECF4
           sceGxmTextureSetVAddrMode: 0x126CDAA3
-          sceGxmTextureSetVAddrMode_16XX: 0xFA22F6CC
           sceGxmTextureSetWidth: 0x2EA178BE
-          sceGxmTextureSetWidth_16XX: 0x5A690B60
           sceGxmTextureValidate: 0x5331BED3
           sceGxmTransferCopy: 0x62312BF8
           sceGxmTransferDownscale: 0xD10F7EAD
