@@ -63,3 +63,7 @@ modules:
           sceNetSocketAbort: 0x891C1B9B
           sceNetSocketClose: 0x29822B4D
           sceNetTerm: 0xEA3CC286
+      SceNetInternal:
+        nid: 0x9E8A69FD
+        functions:
+          sceNetGetIfList: 0x235DE96C
