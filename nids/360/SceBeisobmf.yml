@@ -1,0 +1,25 @@
+modules:
+  SceBeisobmf:
+    nid: 0x0DE3F913
+    libraries:
+      SceBeisobmf:
+        nid: 0xC3525DE0
+        functions:
+          isobmf_box_getchildbox: 0x35EFA733
+          isobmf_box_getdiskoffset: 0xB66791B3
+          isobmf_box_getflags32b: 0xF9EA95DA
+          isobmf_box_getmember_length: 0x1047C50A
+          isobmf_box_getmember_ptr: 0xB0208E0C
+          isobmf_box_getmember_type: 0x9722FE78
+          isobmf_box_getnextbox: 0xD086C0EC
+          isobmf_box_getstate: 0x72F99D98
+          isobmf_box_gettype: 0x18B99048
+          isobmf_decoder_clear: 0xD310B27E
+          isobmf_decoder_create: 0x82FDC702
+          isobmf_decoder_decode: 0xD592745E
+          isobmf_decoder_destroy: 0xA70C1132
+          isobmf_decoder_get_decoder_tree: 0xD643E393
+          isobmf_decoder_getquerydata: 0x0A70CE8D
+          isobmf_decoder_next_disk_offset: 0x71AB7DEA
+          isobmf_decoder_query: 0xD158B5D2
+          isobmf_memmanager_set: 0x958E4F24
