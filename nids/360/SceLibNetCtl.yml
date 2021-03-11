@@ -18,6 +18,7 @@ modules:
           sceNetCtlGetPhoneMaxDownloadableSize: 0x4FB4BEA1
           sceNetCtlInetGetInfo: 0xB26D07F3
           sceNetCtlInetGetResult: 0x6B20EC02
+          sceNetCtlInetGetScanInfoBssidIpcInt: 0xA840C74C
           sceNetCtlInetGetState: 0x6D26AC68
           sceNetCtlInetRegisterCallback: 0xEAEE6185
           sceNetCtlInetUnregisterCallback: 0xD0C3BF3F

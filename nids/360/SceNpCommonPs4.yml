@@ -1,0 +1,8 @@
+modules:
+  SceNpCommonPs4:
+    nid: 0x5B8E839D
+    libraries:
+      SceNpCommonPs4:
+        nid: 0x523E1FF8
+        functions:
+          sceNpGetSystemClockUsec: 0xF56B0EAB

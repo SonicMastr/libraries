@@ -1,0 +1,9 @@
+modules:
+  SceShell:
+    nid: 0x0552F692
+    libraries:
+      SceShell:
+        nid: 0x2404AE25
+        functions:
+          sceNetCtlDisableNetworkImposeForShellSocketVsh: 0x794BF5BE
+          sceNetCtlEnableNetworkImposeForShellSocketVsh: 0x6B8772A2

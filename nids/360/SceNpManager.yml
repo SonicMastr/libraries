@@ -16,7 +16,9 @@ modules:
           sceNpManagerGetCachedParam: 0x43DC48A1
           sceNpManagerGetChatRestrictionFlag: 0x60C575B1
           sceNpManagerGetContentRatingFlag: 0xAF0073B2
+          sceNpManagerGetCredentialFromRegistry: 0xDDF30B0E
           sceNpManagerGetNpId: 0x3C94B4B4
           sceNpRegisterServiceStateCallback: 0x44239C35
           sceNpTerm: 0x19E40AE1
           sceNpUnregisterServiceStateCallback: 0xD9E6E56C
+          sceNpUtilIsAccountBound: 0xB24FC028
