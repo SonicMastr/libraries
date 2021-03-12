@@ -9,6 +9,8 @@
 
 #include <stdint.h>
 
+#include <fios2/fios2_types.h>
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -298,36 +300,25 @@ int sceAppMgrUmount(const char *mount_point);
 int sceAppMgrConvertVs0UserDrivePath(char *path, char *mount_point, int unk);
 
 /**
- * Get raw path for a given path
- *
- * @param[in] path - Path to convert
- * @param[in] mount_point - Mountpoint to use
- * @param[in] unk - Unknown
- *
- * @return 0 on success, < 0 on error.
- */
-int sceAppMgrGetRawPath(char *path, char *mount_point, char *unk);
-
-/**
  * Resolve a path to the corresponding true path (uses ::sceFiosKernelOverlayResolveSync underneath).
  *
  * @param[in] path - Path to convert (e.g. app0:)
  * @param[out] resolved_path - True resolved path
- * @param[in] unk - Unknown, provide an empty buffer
+ * @param[in] resolved_path_size - size of the resolved_path buffer
  *
  * @return 0 on success, < 0 on error.
  */
-int _sceAppMgrGetRawPath(char *path, char *resolved_path, int resolved_path_size, char unk[16]);
+int sceAppMgrGetRawPath(const char *path, char *resolved_path, int resolved_path_size);
 
 /**
  * Get the real/resolved path of app0: (where it's actually mounted)
  *
  * @param[in] appId - Use -2 for the current application
- * @param[out] resolved_path - Buffer that will hold the resolved path. It should have enough room to hold 292 characters or it will buffer overflow (noname120).
+ * @param[out] resolved_path - Buffer that will hold the resolved path.
  *
  * @return 0 on success.
  */
-int _sceAppMgrGetRawPathOfApp0ByAppIdForShell(int appId, char resolved_path[292]);
+int sceAppMgrGetRawPathOfApp0ByAppIdForShell(int appId, char resolved_path[SCE_FIOS_OVERLAY_POINT_MAX]);
 
 /**
  * Get application memory budget info.
