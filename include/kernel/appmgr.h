@@ -49,10 +49,6 @@ typedef struct
  */
 int sceAppMgrLaunchAppByPath(const char *path, const char *args, SceSize arg_size, unsigned int type, const SceAppMgrLaunchParam *param, void *unk);
 
-SceInt32 sceAppMgrDrmOpen(const SceAppMgrDrmAddcontParam *pParam);
-
-SceInt32 sceAppMgrDrmClose(const SceAppMgrDrmAddcontParam *pParam);
-
 #ifdef __cplusplus
 }
 #endif

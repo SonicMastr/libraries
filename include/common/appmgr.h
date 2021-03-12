@@ -7,28 +7,27 @@
 
 #include_next <appmgr.h>
 
+#include <apputil.h>
+
 #if defined(_LANGUAGE_C_PLUS_PLUS)||defined(__cplusplus)||defined(c_plusplus)
 extern "C" {
 #endif
 
-#define SCE_APPMGR_MOUNTPOINT_DATA_MAXSIZE 16
-
-#define SCE_APPMGR_NP_DRM_ADDCONT_ID_SIZE 17
-
-typedef struct SceAppMgrMountPoint {
-	SceChar8 data[SCE_APPMGR_MOUNTPOINT_DATA_MAXSIZE];
-} SceAppMgrMountPoint;
-
-typedef struct SceAppMgrDrmAddcontId {
-	SceChar8 data[SCE_APPMGR_NP_DRM_ADDCONT_ID_SIZE];
-	SceChar8 padding[3];
-} SceAppMgrDrmAddcontId;
+/*J 構造体 -------------------------------------------------------------------------------- */
+/*E Structures ---------------------------------------------------------------------------- */
 
 typedef struct SceAppMgrDrmAddcontParam {
 	SceSize size;
-	SceAppMgrDrmAddcontId dirName;
-	SceAppMgrMountPoint mountPoint;
+	SceAppUtilDrmAddcontId dirName;
+	SceAppUtilMountPoint mountPoint;
 } SceAppMgrDrmAddcontParam;
+
+/*J 関数 -------------------------------------------------------------------------------- */
+/*E Functions --------------------------------------------------------------------------- */
+
+SceInt32 sceAppMgrDrmOpen(const SceAppMgrDrmAddcontParam *pParam);
+
+SceInt32 sceAppMgrDrmClose(const SceAppMgrDrmAddcontParam *pParam);
 
 #if defined(_LANGUAGE_C_PLUS_PLUS)||defined(__cplusplus)||defined(c_plusplus)
 }
