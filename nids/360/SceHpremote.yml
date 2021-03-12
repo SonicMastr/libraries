@@ -1,0 +1,16 @@
+modules:
+  SceHpremote:
+    nid: 0xA2133147
+    libraries:
+      SceHpremoteForDriver:
+        nid: 0xFD0B0E27
+        functions:
+          sceHprmGetHpDetect: 0x71B5FB67
+          sceHprmGetInternalState: 0x7B038374
+          sceHprmIsHeadphoneExist: 0x7E69EDA4
+          sceHprmIsMicrophoneExist: 0x219C58F1
+          sceHprmIsRemoteExist: 0x208DB1BD
+          sceHprmRegisterCallback: 0xC7154136
+          sceHprmReset: 0x4D1E622C
+          sceHprmSetConnectCallback: 0xD22913DB
+          sceHprmUnregisterCallback: 0x68D64A0F
