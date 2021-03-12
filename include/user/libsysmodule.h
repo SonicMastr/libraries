@@ -112,7 +112,8 @@ int sceSysmoduleIsLoadedInternal(SceUInt32 id);
  *
  * @return 0 on success, <0 otherwise.
  */
-int sceSysmoduleLoadModuleInternalWithArg(SceUInt32 id, SceSize args, void *argp, void *unk);
+#define sceSysmoduleLoadModuleInternalWithArg _sceSysmoduleLoadModuleInternalWithArg
+int _sceSysmoduleLoadModuleInternalWithArg(SceUInt32 id, SceSize args, void *argp, void *unk);
 
 /**
  * Unload an internal module with custom arguments.
@@ -124,7 +125,8 @@ int sceSysmoduleLoadModuleInternalWithArg(SceUInt32 id, SceSize args, void *argp
  *
  * @return 0 on success, <0 otherwise.
  */
-int sceSysmoduleUnloadModuleInternalWithArg(SceUInt32 id, SceSize args, void *argp, void *unk);
+#define sceSysmoduleUnloadModuleInternalWithArg _sceSysmoduleUnloadModuleInternalWithArg
+int _sceSysmoduleUnloadModuleInternalWithArg(SceUInt32 id, SceSize args, void *argp, void *unk);
 
 #ifdef __cplusplus
 }
