@@ -7,12 +7,10 @@
 
 #include_next <kernel/sysmem.h>
 
-#include <stddef.h>
-#include <stdint.h>
+#include <kernel/sysmem/debug.h>
+#include <kernel/sysmem/sysroot.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+SCE_CDECL_BEGIN
 
 #define SCE_KERNEL_MEMBLOCK_TYPE_SHARED_RX                 0x0390D050
 #define SCE_KERNEL_MEMBLOCK_TYPE_USER_RX                   0x0C20D050
@@ -140,18 +138,6 @@ typedef struct SceKernelProcessContext {
 	SceUInt32 CONTEXTIDR;
 } SceKernelProcessContext;
 
-typedef enum SceKernelSysrootSelfIndex {
-	SCE_KERNEL_SYSROOT_SELF_INDEX_GCAUTHMGR_SM		= 0,
-	SCE_KERNEL_SYSROOT_SELF_INDEX_RMAUTH_SM			= 1,
-	SCE_KERNEL_SYSROOT_SELF_INDEX_ENCDEC_W_PORTABILITY_SM	= 2
-} SceKernelSysrootSelfIndex;
-
-typedef struct SceKernelSysrootSelfInfo {
-	uint32_t size;
-	void *self_data;
-	uint32_t self_size;
-} SceKernelSysrootSelfInfo;
-
 /**
  * Gets the memory block type of a memory block
  *
@@ -247,11 +233,8 @@ int sceKernelDeleteUserUid(SceUID pid, SceUID user_uid);
 int sceKernelDeleteUid(SceUID uid);
 int sceKernelFindClassByName(const char *name, SceClass **cls);
 
-void *sceKernelGetSysrootBuffer(void);
 int sceKernelGetPidContext(SceUID pid, SceKernelProcessContext **ctx);
 int sceKernelSwitchPidContext(SceKernelProcessContext *ctx, SceKernelProcessContext *current_ctx);
-
-int sceKernelGetProcessTitleId(SceUID pid, char *titleid, SceSize len);
 
 int sceKernelMapBlockUserVisible(SceUID uid);
 int sceKernelMapUserBlock(const char *name, int permission, int type,
@@ -263,8 +246,6 @@ int sceKernelMapUserBlockDefaultType(const char *name, int permission, const voi
 int sceKernelMapUserBlockDefaultTypeForPid(int pid, const char *name, int permission,
 					    const void *user_buf, SceSize size, void **kernel_page,
 					    SceSize *kernel_size, unsigned int *kernel_offset);
-
-int sceSysrootGetSelfInfo(SceKernelSysrootSelfIndex index, SceKernelSysrootSelfInfo *info);
 
 /**
  * Get the physical address of a given virtual address
@@ -385,85 +366,6 @@ int sceKernelMemRangeReleaseForPid(SceUID pid, void *addr, SceSize size);
  */
 int sceKernelMemRangeReleaseWithPerm(SceKernelMemoryRefPerm perm, void *addr, SceSize size);
 
-int sceSysrootUseExternalStorage(void);
-
-#define sceSysrootIsManufacturingMode() sceSysrootUseExternalStorage()
-
-int sceSysrootUseInternalStorage(void);
-
-__attribute__((__format__(__printf__, 1, 2)))
-int sceDebugPrintf(const char *fmt, ...);
-
-typedef struct SceKernelDebugMessageContext {
-  int hex_value0_hi;
-  int hex_value0_lo;
-  int hex_value1;
-  char *msg0;
-  SceSize num;
-  char *msg1;
-} SceKernelDebugMessageContext;
-
-// msg_type_flag : 0 or 0xB
-__attribute__((__format__(__printf__, 3, 4)))
-int sceDebugPrintf2(int msg_type_flag, const SceKernelDebugMessageContext *ctx, const char *fmt, ...);
-
-int sceDebugVprintf(const char *fmt, va_list args);
-
-int sceDebugPrintKernelPanic(const SceKernelDebugMessageContext *ctx, void *some_address);
-
-__attribute__((__format__(__printf__, 3, 4)))
-int sceDebugPrintfKernelPanic(const SceKernelDebugMessageContext *ctx, void *some_address, const char *fmt, ...);
-
-int sceDebugPrintKernelAssertion(int condition, const SceKernelDebugMessageContext *ctx, void *some_address);
-
-__attribute__((__format__(__printf__, 5, 6)))
-int sceDebugPrintfKernelAssertion(int unk, int condition, const SceKernelDebugMessageContext *ctx, int some_address, const char *fmt, ...);
-
-int sceDebugSetHandlers(int (*func)(int unk, const char *format, const va_list args), void *args);
-
-int sceDebugRegisterPutcharHandler(int (*func)(void *args, char c), void *args);
-
-void *sceDebugGetPutcharHandler(void);
-
-int sceDebugPutchar(int character);
-
-int sceDebugDisableInfoDump(int flag);
-
-typedef struct
-{
-    size_t size; //!< sizeof(SceSysrootProcessHandler)
-    int (* unk_4)(void);
-    int (* unk_8)(void);
-    int (* unk_C)(void);
-    int (* unk_10)(void);
-    int (* unk_14)(void);
-    int (* unk_18)(void);
-    int (* on_process_created)(void); //!< called when process is created
-    int (* unk_20)(void);
-    int (* unk_24)(void);
-} SceSysrootProcessHandler;
-
-/**
- * Set handlers for the process lifecycle.
- *
- * This internal function allows a developer to introspect and receive events based
- * on the process lifecycle.
- *
- * @param[in]  handlers   Pointer to struct containing the handlers. This function does not copy the handlers, so this pointer must remain valid after a successful call.
- *
- * @return 0 on success, < 0 on error.
- */
-int sceKernelSysrootSetProcessHandler(const SceSysrootProcessHandler *handlers);
-
-/**
- * Get the process UID of shell.
- *
- * @return UID or -1 if shell is not started.
- */
-SceUID sceKernelSysrootGetShellPid(void);
-
-#ifdef __cplusplus
-}
-#endif
+SCE_CDECL_END
 
 #endif /* _VDSUITE_KERNEL_KERNEL_SYSMEM_H */
