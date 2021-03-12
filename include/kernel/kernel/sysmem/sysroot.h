@@ -33,8 +33,6 @@ int sceSysrootGetSelfInfo(SceKernelSysrootSelfIndex index, SceKernelSysrootSelfI
 
 int sceSysrootUseExternalStorage(void);
 
-#define sceSysrootIsManufacturingMode() sceSysrootUseExternalStorage()
-
 int sceSysrootUseInternalStorage(void);
 
 typedef struct
