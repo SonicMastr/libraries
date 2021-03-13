@@ -33,3 +33,7 @@ jobs:
       - name: Check NIDs digest
         run: |
           python3 scripts/nids-check-digest.py
+
+      - name: Check header files
+        run: |
+          python3 scripts/check-header-files.py
