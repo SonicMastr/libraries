@@ -142,6 +142,79 @@ modules:
           sce_paf_wmemcpy: 0x19B5B91D
           sce_paf_wmemmove: 0x468A09B1
           sce_paf_wmemset: 0x36890967
+      ScePafThread:
+        nid: 0x54276D19
+        functions:
+          _ZN3paf6thread21DefaultThreadPriority3GetEv: 0x2AD8B80F
+          _ZN3paf6thread21DefaultThreadPriority3SetEv: 0x82A6C26A
+          _ZN3paf6thread21DefaultThreadPriorityC1Ev: 0xEE889AAF
+          _ZN3paf6thread21DefaultThreadPriorityC2Ev: 0x15F029A2
+          _ZN3paf6thread4Cond4WaitEj: 0x26225225
+          _ZN3paf6thread4Cond6NotifyEv: 0x733814FD
+          _ZN3paf6thread4Cond9NotifyAllEv: 0x12911164
+          _ZN3paf6thread4CondC1EP21_SceKernelLwMutexWorkPKci: 0xBA5BD169
+          _ZN3paf6thread4CondC2EP21_SceKernelLwMutexWorkPKci: 0x8291E6C4
+          _ZN3paf6thread4CondD1Ev: 0x52F363A9
+          _ZN3paf6thread4CondD2Ev: 0xE3D5D9BB
+          _ZN3paf6thread4Sema4WaitEv: 0xFB300461
+          _ZN3paf6thread4Sema6SignalEv: 0x534F14D4
+          _ZN3paf6thread4SemaC1EPKcii: 0x1089526C
+          _ZN3paf6thread4SemaC2EPKcii: 0xD1D39853
+          _ZN3paf6thread4SemaD1Ev: 0xE72CBBE1
+          _ZN3paf6thread4SemaD2Ev: 0x323F3E4D
+          _ZN3paf6thread5Mutex4LockEv: 0xF9FFA0BE
+          _ZN3paf6thread5Mutex6UnlockEv: 0x95F9C45F
+          _ZN3paf6thread5Mutex7TryLockEv: 0x18AF6844
+          _ZN3paf6thread5MutexC1EPKci: 0xC4BD9753
+          _ZN3paf6thread5MutexC2EPKci: 0xA48CABF3
+          _ZN3paf6thread5MutexD1Ev: 0x8CCECAC9
+          _ZN3paf6thread5MutexD2Ev: 0xD1BEBE2D
+          _ZN3paf6thread5Queue4PushEPKcPFvPvES4_: 0x23B8F66F
+          _ZN3paf6thread5Queue4SizeEv: 0x9F2131F9
+          _ZN3paf6thread5Queue7ExecuteEv: 0x98EA7399
+          _ZN3paf6thread5Queue8WaitDoneEv: 0x0164145D
+          _ZN3paf6thread5QueueC1EPKc: 0x5A72B9FC
+          _ZN3paf6thread5QueueC2EPKc: 0xA87BC0AE
+          _ZN3paf6thread5QueueD1Ev: 0xBE9A9155
+          _ZN3paf6thread5QueueD2Ev: 0x6B1322CB
+          _ZN3paf6thread6Mutex24LockEv: 0x4EA3A3D5
+          _ZN3paf6thread6Mutex26UnlockEv: 0x9100D580
+          _ZN3paf6thread6Mutex27TryLockEv: 0xE09598ED
+          _ZN3paf6thread6Mutex2C1EPKci: 0xA5D3F1B5
+          _ZN3paf6thread6Mutex2C2EPKci: 0xBC109843
+          _ZN3paf6thread6Mutex2D1Ev: 0xAD04A33D
+          _ZN3paf6thread6Mutex2D2Ev: 0x9BA75E36
+          _ZN3paf6thread6RWLock10LockSharedEv: 0xAFB836B3
+          _ZN3paf6thread6RWLock12UnlockSharedEv: 0x38D35DEF
+          _ZN3paf6thread6RWLock13LockExclusiveEv: 0x39B3F3CA
+          _ZN3paf6thread6RWLock15UnlockExclusiveEv: 0xAEE8496E
+          _ZN3paf6thread6RWLockC1EPKc: 0x02C1347F
+          _ZN3paf6thread6RWLockC2EPKc: 0x1ECE442B
+          _ZN3paf6thread6RWLockD1Ev: 0x221624F8
+          _ZN3paf6thread6RWLockD2Ev: 0x6FBDD800
+          _ZN3paf6thread6Thread12IsMainThreadEi: 0xD27FC881
+          _ZN3paf6thread6Thread14ChangePriorityEi: 0xFCCF62D6
+          _ZN3paf6thread6Thread16GetMainThreadUIDEi: 0xC6F80BB3
+          _ZN3paf6thread6Thread16SetMainThreadUIDEi: 0xFE2DC4FE
+          _ZN3paf6thread6Thread19InternalThreadEntryEjPv: 0x918D89FC
+          _ZN3paf6thread6Thread4JoinEv: 0xC5F24067
+          _ZN3paf6thread6Thread4SelfEv: 0x7E669E6E
+          _ZN3paf6thread6Thread5SleepEj: 0x651F4F81
+          _ZN3paf6thread6Thread5StartEv: 0x60910895
+          _ZN3paf6thread6Thread9IsStartedEv: 0x318AD6B7
+          _ZN3paf6thread6ThreadC1EijPKcPKNS0_9ThreadOptE: 0x6E829BD8
+          _ZN3paf6thread6ThreadC2EijPKcPKNS0_9ThreadOptE: 0x1740FB30
+          _ZN3paf6thread6ThreadD0Ev: 0x1013F3C0
+          _ZN3paf6thread6ThreadD1Ev: 0x52C62CD1
+          _ZN3paf6thread6ThreadD2Ev: 0x7EA6B501
+          _ZN3paf6thread8SyncCall4PushEPFvPvES2_: 0x004445E7
+          _ZN3paf6thread8SyncCall7ExecuteEv: 0x58876337
+          _ZN3paf6thread8SyncCallC1EPKc: 0x465970E2
+          _ZN3paf6thread8SyncCallC2EPKc: 0x94138DD2
+          _ZN3paf6thread8SyncCallD1Ev: 0xF17CAAB0
+          _ZN3paf6thread8SyncCallD2Ev: 0xA8DB7042
+          _ZN3paf6thread9ThreadOptC1Ev: 0x5712350E
+          _ZN3paf6thread9ThreadOptC2Ev: 0xCC65DF88
       ScePafWidget:
         nid: 0x073F8C68
         functions:
