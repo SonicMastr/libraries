@@ -25,7 +25,7 @@ typedef struct SceKernelSysrootSelfInfo {
 	uint32_t self_size;
 } SceKernelSysrootSelfInfo;
 
-void *sceKernelGetSysrootBuffer(void);
+void *sceKernelSysrootGetKblParam(void);
 
 int sceKernelGetProcessTitleId(SceUID pid, char *titleid, SceSize len);
 
