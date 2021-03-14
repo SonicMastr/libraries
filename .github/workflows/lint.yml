@@ -22,6 +22,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Install dependencies
+        run: |
+          pip3 install ruamel.yaml
+
       - name: Check NIDs sort
         run: |
           python3 scripts/nids-check-sort.py

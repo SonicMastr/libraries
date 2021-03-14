@@ -9,19 +9,10 @@
 import sys
 from pathlib import Path
 
-import yaml
-try:
-	from yaml import CLoader as YamlLoader
-except ImportError:
-	from yaml import SafeLoader as YamlLoader
+from ruamel.yaml import YAML
 
 def load(nids):
-	if isinstance(nids, Path):
-		nids = yaml.load(nids.read_bytes(), Loader=YamlLoader)
-	elif not isinstance(nids, dict):
-		nids = yaml.load(nids, Loader=YamlLoader)
-
-	return nids
+	return nids if isinstance(nids, dict) else YAML(typ='safe').load(nids)
 
 def process(nids, modules_cb=None, module_cb=None, libraries_cb=None, library_cb=None, functions_cb=None, variables_cb=None, export_cb=None, user_data=None):
 
