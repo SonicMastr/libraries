@@ -26,6 +26,10 @@ jobs:
         run: |
           pip3 install ruamel.yaml
 
+      - name: Check NIDs duplicates
+        run: |
+          python3 scripts/nids-check-dupe.py
+
       - name: Check NIDs sort
         run: |
           python3 scripts/nids-check-sort.py
