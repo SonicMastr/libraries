@@ -51,6 +51,22 @@ modules:
       ScePafStdc:
         nid: 0xA7D28DAE
         functions:
+          _ZdaPv: 0x5C468294
+          _ZdlPv: 0x1B77082E
+          _Znaj: 0xD8CC1AFE
+          _Znwj: 0xFC5CD359
+          __aeabi_atexit: 0xC95732BB
+          __cxa_atexit: 0xAD9500EF
+          __cxa_deleted_virtual: 0x25A6D9BB
+          __cxa_finalize: 0xF36BABE3
+          __cxa_guard_abort: 0xDDD8FFEA
+          __cxa_guard_acquire: 0xCB26B866
+          __cxa_guard_release: 0x6AB297BE
+          __cxa_pure_virtual: 0x2730262C
+          abort: 0xD608246A
+          exit: 0x92BF63C9
+          memcpy: 0x5883A6E3
+          memset: 0x75ECC54E
           sce_paf_abs: 0x0F297A5E
           sce_paf_atexit: 0x9A1D1ED1
           sce_paf_atof: 0x9C251354
@@ -61,29 +77,22 @@ modules:
           sce_paf_bcopy: 0x44C0825D
           sce_paf_bsearch: 0x78AE1C51
           sce_paf_bzero: 0xD21442B4
-          sce_paf_exit: 0x92BF63C9
           sce_paf_fclose: 0xA005E879
           sce_paf_fflush: 0x26A0A5F6
           sce_paf_fgetc: 0xDEB581B4
           sce_paf_fopen: 0x1BCCD0B9
           sce_paf_fputc: 0xAF1831DC
           sce_paf_fread: 0x43A53623
-          sce_paf_free: 0x1B77082E
-          sce_paf_free2: 0x5C468294
           sce_paf_fseek: 0xFC10F9E9
           sce_paf_ftell: 0x77CB5E21
           sce_paf_fwrite: 0x4D5BB0F8
           sce_paf_longjmp: 0x001BFAC2
           sce_paf_look_ctype_table: 0x247C19A8
-          sce_paf_malloc: 0xFC5CD359
-          sce_paf_malloc2: 0xD8CC1AFE
           sce_paf_memchr: 0x1D286681
           sce_paf_memcmp: 0x79DFA2A2
           sce_paf_memcpy: 0x2C5B6F9C
-          sce_paf_memcpy2: 0x5883A6E3
           sce_paf_memmove: 0x01566828
           sce_paf_memset: 0xE148AF94
-          sce_paf_memset2: 0x75ECC54E
           sce_paf_qsort: 0xF7A11753
           sce_paf_rand: 0xC9DACD41
           sce_paf_setjmp: 0x2105FFAD

@@ -27,14 +27,11 @@ typedef struct ScePafWString {
  * std C functions
  */
 
-void sce_paf_free(void *ptr);
-void *sce_paf_malloc(SceSize size);
 void *sce_paf_bzero(void *ptr, SceSize num);
 void *sce_paf_memchr(const void *ptr, int value, SceSize num);
 int sce_paf_memcmp(const void *ptr1, const void *ptr2, SceSize num);
 int sce_paf_bcmp(const void *ptr1, const void *ptr2, SceSize num);
 void *sce_paf_memcpy(void *destination, const void *source, SceSize num);
-void *sce_paf_memcpy2(void *destination, const void *source, SceSize num);
 void *sce_paf_memmove(void *destination, const void *source, SceSize num);
 void *sce_paf_bcopy(void *destination, const void *source, SceSize num);
 void *sce_paf_memset(void *ptr, int value, SceSize num);
