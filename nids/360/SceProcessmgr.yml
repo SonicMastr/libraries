@@ -36,17 +36,17 @@ modules:
       SceProcessmgrForDriver:
         nid: 0x746EC971
         functions:
-          sceKernelCreateProcessLocalStorage: 0x3801D7D6
+          sceKernelGetKPLS: 0xEE694840
           sceKernelGetProcessInfo: 0x0AFF3EAE
-          sceKernelGetProcessLocalStorageAddr: 0xEE694840
-          sceKernelGetProcessLocalStorageAddrForPid: 0xAF80F39C
           sceKernelGetProcessStatus: 0x65B120B8
           sceKernelGetProcessTime: 0xEC283166
           sceKernelGetProcessTimeLow: 0x02179E12
           sceKernelGetProcessTimeWide: 0x82D94BE9
+          sceKernelGetRemoteKPLS: 0xAF80F39C
           sceKernelGetRemoteProcessTime: 0xC074EB31
           sceKernelIsCDialogAvailable: 0x2F6020B7
           sceKernelIsGameBudget: 0xF7A8BB25
+          sceKernelRegisterKPLS: 0x3801D7D6
       SceProcessmgrForKernel:
         nid: 0x7A69DE86
         functions:

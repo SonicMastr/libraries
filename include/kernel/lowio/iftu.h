@@ -86,7 +86,7 @@ typedef struct SceIftuPlaneState {
 	unsigned int crop_right;
 } SceIftuPlaneState;
 
-int sceIftuCsc(SceIftuFrameBuf *dst, SceIftuPlaneState *src, SceIftuConvParams *params);
+int sceIftuConvert(SceIftuFrameBuf *dst, SceIftuPlaneState *src, SceIftuConvParams *params);
 
 #ifdef __cplusplus
 }

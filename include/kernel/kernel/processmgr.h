@@ -30,9 +30,9 @@ void *sceKernelGetProcessKernelBuf(SceUID pid);
 
 int sceKernelGetProcessInfo(SceUID pid, SceKernelProcessInfo *info);
 
-int sceKernelCreateProcessLocalStorage(const char *name, SceSize size);
-void *sceKernelGetProcessLocalStorageAddr(int key);
-int sceKernelGetProcessLocalStorageAddrForPid(SceUID pid, int key, void **out_addr, int create_if_doesnt_exist);
+int sceKernelRegisterKPLS(const char *name, SceSize size);
+void *sceKernelGetKPLS(int key);
+int sceKernelGetRemoteKPLS(SceUID pid, int key, void **out_addr, int create_if_doesnt_exist);
 
 /**
  * @brief       Launch an application

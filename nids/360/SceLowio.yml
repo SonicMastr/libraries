@@ -7,16 +7,16 @@ modules:
         functions:
           sceDsiDcsRead: 0x3FB0DF1F
           sceDsiDcsShortWrite: 0xBA6BC89F
-          sceDsiDisableHead: 0x114D1413
-          sceDsiEnableHead: 0x5BE5AA9B
           sceDsiGenericReadRequest: 0x98120684
           sceDsiGenericShortWrite: 0x89C00D2F
           sceDsiGetPixelClock: 0x4DF9E924
-          sceDsiGetVicResolution: 0xB3A70C05
-          sceDsiSendBlankingPacket: 0x7640F607
+          sceDsiQueryResolutionSize: 0xB3A70C05
+          sceDsiSetDisplayMode: 0x97BFEA76
           sceDsiSetLanesAndPixelSize: 0x78E6E3CF
-          sceDsiSetVic: 0x97BFEA76
           sceDsiStartDisplay: 0xC2E85919
+          sceDsiStartMaster: 0x5BE5AA9B
+          sceDsiStopDisplay: 0x7640F607
+          sceDsiStopMaster: 0x114D1413
       SceGpioForDriver:
         nid: 0xF0EF5743
         functions:
@@ -42,7 +42,7 @@ modules:
       SceIftuForDriver:
         nid: 0xCAFCFE50
         functions:
-          sceIftuCsc: 0x67E37EFC
+          sceIftuConvert: 0x67E37EFC
           sceIftuDisable: 0xC11F30B3
           sceIftuEnable: 0x0D7C02F7
           sceIftuSetInputFrameBuffer: 0x7CE0C4DA
@@ -51,15 +51,15 @@ modules:
       ScePervasiveForDriver:
         nid: 0xE692C727
         functions:
-          scePervasiveDsiClockDisable: 0x25AE181E
-          scePervasiveDsiClockEnable: 0xBC42C72F
-          scePervasiveDsiResetDisable: 0xFFB43AC2
-          scePervasiveDsiResetEnable: 0xE3FC1C8D
           scePervasiveDsiSetPixelClock: 0x91C80C41
           scePervasiveGpioClockDisable: 0xEB176898
           scePervasiveGpioClockEnable: 0x2F195C97
           scePervasiveGpioResetDisable: 0x78C34032
           scePervasiveGpioResetEnable: 0x731A097D
+          scePervasiveIftuDsiClkGateDisable: 0x25AE181E
+          scePervasiveIftuDsiClkGateEnable: 0xBC42C72F
+          scePervasiveIftuDsiResetDisable: 0xFFB43AC2
+          scePervasiveIftuDsiResetEnable: 0xE3FC1C8D
           scePervasiveMsifClockDisable: 0x2A9778CD
           scePervasiveMsifClockEnable: 0x7704C013
           scePervasiveMsifResetDisable: 0xCB0F15CD

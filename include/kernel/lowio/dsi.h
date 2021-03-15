@@ -21,12 +21,12 @@ typedef enum SceDsiHead {
 	SCE_DSI_HEAD_HDMI	= 1,
 } SceDsiHead;
 
-int sceDsiEnableHead(int head);
-int sceDsiDisableHead(int head);
-int sceDsiSendBlankingPacket(int head);
+int sceDsiStartMaster(int head);
+int sceDsiStopMaster(int head);
+int sceDsiStopDisplay(int head);
 int sceDsiSetLanesAndPixelSize(int head, int lanes, int pixelsize);
-int sceDsiSetVic(int head, int vic);
-int sceDsiGetVicResolution(int vic, int *width, int *height);
+int sceDsiSetDisplayMode(int head, int vic);
+int sceDsiQueryResolutionSize(int vic, int *width, int *height);
 int sceDsiGetPixelClock(int head);
 int sceDsiGenericShortWrite(int head, int param0, int param1, int param2);
 int sceDsiGenericReadRequest(int head, int param, void *buff, unsigned int size);
