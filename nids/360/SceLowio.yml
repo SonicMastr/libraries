@@ -52,26 +52,26 @@ modules:
         nid: 0xE692C727
         functions:
           scePervasiveDsiSetPixelClock: 0x91C80C41
-          scePervasiveGpioClockDisable: 0xEB176898
-          scePervasiveGpioClockEnable: 0x2F195C97
+          scePervasiveGpioClkGateDisable: 0xEB176898
+          scePervasiveGpioClkGateEnable: 0x2F195C97
           scePervasiveGpioResetDisable: 0x78C34032
           scePervasiveGpioResetEnable: 0x731A097D
           scePervasiveIftuDsiClkGateDisable: 0x25AE181E
           scePervasiveIftuDsiClkGateEnable: 0xBC42C72F
           scePervasiveIftuDsiResetDisable: 0xFFB43AC2
           scePervasiveIftuDsiResetEnable: 0xE3FC1C8D
-          scePervasiveMsifClockDisable: 0x2A9778CD
-          scePervasiveMsifClockEnable: 0x7704C013
+          scePervasiveMsifClkGateDisable: 0x2A9778CD
+          scePervasiveMsifClkGateEnable: 0x7704C013
           scePervasiveMsifResetDisable: 0xCB0F15CD
           scePervasiveMsifResetEnable: 0xA3569FF1
           scePervasiveMsifSetClock: 0x64ABE589
           scePervasiveRemovableMemoryGetCardInsertState: 0x551EEE82
-          scePervasiveSpiClockDisable: 0xA85BF98A
-          scePervasiveSpiClockEnable: 0xDFD96BFC
+          scePervasiveSpiClkGateDisable: 0xA85BF98A
+          scePervasiveSpiClkGateEnable: 0xDFD96BFC
           scePervasiveSpiResetDisable: 0xE4B145AE
           scePervasiveSpiResetEnable: 0x7B16F900
-          scePervasiveUartClockDisable: 0x18DD8043
-          scePervasiveUartClockEnable: 0xEFD084D8
+          scePervasiveUartClkGateDisable: 0x18DD8043
+          scePervasiveUartClkGateEnable: 0xEFD084D8
           scePervasiveUartResetDisable: 0xA7CE7DCC
           scePervasiveUartResetEnable: 0x788B6C61
           scePervasiveUartSetBaudrate: 0x8BAB45F8
