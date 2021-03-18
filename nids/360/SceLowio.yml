@@ -51,11 +51,19 @@ modules:
       ScePervasiveForDriver:
         nid: 0xE692C727
         functions:
+          scePervasiveAclkgenClkGateDisable: 0xF861FEE4
+          scePervasiveAclkgenClkGateEnable: 0x47F2C35C
+          scePervasiveAclkgenResetDisable: 0x5BAFA0DC
+          scePervasiveAclkgenResetEnable: 0x821AE6C7
           scePervasiveDsiSetPixelClock: 0x91C80C41
           scePervasiveGpioClkGateDisable: 0xEB176898
           scePervasiveGpioClkGateEnable: 0x2F195C97
           scePervasiveGpioResetDisable: 0x78C34032
           scePervasiveGpioResetEnable: 0x731A097D
+          scePervasiveI2sClkGateDisable: 0xA3CF9844
+          scePervasiveI2sClkGateEnable: 0x4235EB7D
+          scePervasiveI2sResetDisable: 0xEEE340ED
+          scePervasiveI2sResetEnable: 0x146108D4
           scePervasiveIftuDsiClkGateDisable: 0x25AE181E
           scePervasiveIftuDsiClkGateEnable: 0xBC42C72F
           scePervasiveIftuDsiResetDisable: 0xFFB43AC2
@@ -66,6 +74,10 @@ modules:
           scePervasiveMsifResetEnable: 0xA3569FF1
           scePervasiveMsifSetClock: 0x64ABE589
           scePervasiveRemovableMemoryGetCardInsertState: 0x551EEE82
+          scePervasiveSpdifClkGateDisable: 0x51981FEE
+          scePervasiveSpdifClkGateEnable: 0x6B5DEDA2
+          scePervasiveSpdifResetDisable: 0x6A2FB697
+          scePervasiveSpdifResetEnable: 0xB8AF1249
           scePervasiveSpiClkGateDisable: 0xA85BF98A
           scePervasiveSpiClkGateEnable: 0xDFD96BFC
           scePervasiveSpiResetDisable: 0xE4B145AE
@@ -75,3 +87,7 @@ modules:
           scePervasiveUartResetDisable: 0xA7CE7DCC
           scePervasiveUartResetEnable: 0x788B6C61
           scePervasiveUartSetBaudrate: 0x8BAB45F8
+          scePervasiveVipClkGateDisable: 0x03E1FAA6
+          scePervasiveVipClkGateEnable: 0xB1CFA18F
+          scePervasiveVipResetDisable: 0xE2D8F6C3
+          scePervasiveVipResetEnable: 0x31C0A98B
