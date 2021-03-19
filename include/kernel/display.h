@@ -26,19 +26,6 @@ typedef struct SceDisplayFrameBufInfo {
 } SceDisplayFrameBufInfo;
 
 /**
- * Set/Update framebuffer parameters for display
- *
- * @param[in] head - Use 0 for OLED/LCD and 1 for HDMI
- * @param[in] index - Can be 0 or 1
- * @param[in] pParam - Pointer to a ::SceDisplayFrameBuf structure.
- * @param[in] sync - One of ::DisplaySetBufSync
- *
- * @return 0 on success, < 0 on error.
- * @note - If NULL is provided as pParam pointer, output is blacked out.
-*/
-int sceDisplaySetFrameBufInternal(int head, int index, const SceDisplayFrameBuf *pParam, int sync);
-
-/**
  * Get the configured framebuffer information of a head and its framebuffer index for a PID
  *
  * @param[in] pid - PID of the process to get the framebuffer information from.
@@ -52,28 +39,6 @@ int sceDisplaySetFrameBufInternal(int head, int index, const SceDisplayFrameBuf 
  * @return 0 on success, < 0 on error.
 */
 int sceDisplayGetProcFrameBufInternal(SceUID pid, int head, int index, SceDisplayFrameBufInfo *info);
-
-/**
- * Get maximum framebuffer resolution
- *
- * @param[out] width - Maximum width
- * @param[out] height - Maximum height
- *
- * @return 0 on success, < 0 on error.
-*/
-int sceDisplayGetMaximumFrameBufResolution(int *width, int *height);
-
-/**
- * Primary display index
- */
-int sceDisplayGetPrimaryHead(void);
-
-/**
- * Number of vertical blank pulses up to now for a display
- *
- * @param[in] display - Display index
- */
-int sceDisplayGetVcountInternal(int display);
 
 /**
  * Wait for vertical blank start for display

@@ -2,8 +2,8 @@
 	Vita Development Suite Libraries
 */
 
-#ifndef _VDSUITE_USER_DISPLAY_H
-#define _VDSUITE_USER_DISPLAY_H
+#ifndef _VDSUITE_COMMON_DISPLAY_H
+#define _VDSUITE_COMMON_DISPLAY_H
 
 #include_next <display.h>
 
@@ -33,9 +33,22 @@ int sceDisplayGetMaximumFrameBufResolution(int *width, int *height);
  */
 int sceDisplayGetVcountInternal(int display);
 
+/**
+ * Set/Update framebuffer parameters for display
+ *
+ * @param[in] head - Use 0 for OLED/LCD and 1 for HDMI
+ * @param[in] index - Can be 0 or 1
+ * @param[in] pParam - Pointer to a ::SceDisplayFrameBuf structure.
+ * @param[in] sync - One of ::DisplaySetBufSync
+ *
+ * @return 0 on success, < 0 on error.
+ * @note - If NULL is provided as pParam pointer, output is blacked out.
+*/
+int sceDisplaySetFrameBufInternal(int head, int index, const SceDisplayFrameBuf *pParam, int sync);
+
 #ifdef __cplusplus
 }
 #endif
 
-#endif /* _VDSUITE_USER_DISPLAY_H */
+#endif	/* _VDSUITE_COMMON_DISPLAY_H */
 
