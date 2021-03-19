@@ -17,16 +17,6 @@ extern "C" {
 int sceDisplayGetPrimaryHead(void);
 
 /**
- * Get current number of fps for the current screen mode.
- *
- * @param[out] pFps - Pointer to a float variable to store current number of fps.
- *
- * @return 0 on success, < 0 on error.
- * @note - This function returns a theoretical value, this might not be the exact frame rate.
-*/
-int sceDisplayGetRefreshRate(float *pFps);
-
-/**
  * Get maximum framebuffer resolution
  *
  * @param[out] width - Maximum width
@@ -35,11 +25,6 @@ int sceDisplayGetRefreshRate(float *pFps);
  * @return 0 on success, < 0 on error.
 */
 int sceDisplayGetMaximumFrameBufResolution(int *width, int *height);
-
-/**
- * Number of vertical blank pulses up to now
- */
-int sceDisplayGetVcount(void);
 
 /**
  * Number of vertical blank pulses up to now for a display
