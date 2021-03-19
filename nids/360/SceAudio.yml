@@ -21,3 +21,14 @@ modules:
           sceAudioOutSetEffectType: 0xB41FACCE
           sceAudioOutSetPortVolume_forUser: 0x65840F3D
           sceAudioOutSetVolume: 0x64167F11
+      SceAudioForDriver:
+        nid: 0x15D711C1
+        functions:
+          sceAudioOutGetPortVolume: 0xB05D5B28
+          sceAudioOutSetAdopt: 0x3440C1CA
+          sceAudioOutSetAdoptMode: 0xDB1C4A83
+          sceAudioOutSetAlcMode: 0x216D8A91
+          sceAudioOutSetEffectType: 0x8D0AE24F
+          sceAudioOutSetPortOpenCallback: 0xF07D34C2
+          sceAudioOutSetPortReleaseCallback: 0xE87902DF
+          sceAudioOutSetPortVolume: 0x629261CD
