@@ -26,6 +26,7 @@ modules:
           sceDisplayCaptureFrameBufDMACInternal: 0x707EEE2E
           sceDisplayCaptureFrameBufIFTU: 0xB0CED8BC
           sceDisplayCaptureFrameBufIFTUInternal: 0xD4C812E5
+          sceDisplayDeclareShellProcess: 0xBC76296A
           sceDisplayDisableHead: 0x43347565
           sceDisplayEnableHead: 0x496032D6
           sceDisplayGetActualViewportConf: 0x40ACFE51
@@ -47,6 +48,7 @@ modules:
           sceDisplaySetColorSpaceMode: 0x8D79D187
           sceDisplaySetFrameBuf: 0x289D82FE
           sceDisplaySetFrameBufInternal: 0x16466675
+          sceDisplaySetFrameDebug: 0x086DEFB6
           sceDisplaySetInvertColors: 0x19140ACD
           sceDisplaySetMergeConf: 0x6B198052
           sceDisplaySetOutputMode: 0xAF5EE5BE
