@@ -42,8 +42,9 @@ namespace paf {
 		{
 		public:
 
-			enum Error {
-				SCE_PAF_ERROR_THREADING_THREAD_ALREADY_STARTED = 0x80AF0702
+			enum Error
+			{
+				SCE_PAF_ERROR_THREAD_THREAD_ALREADY_STARTED = 0x80AF0702
 			};
 
 
@@ -53,7 +54,7 @@ namespace paf {
 
 			virtual SceVoid EntryFunction() = 0;
 
-			static SceInt32 InternalThreadEntry(SceSize argSize, void *pArgBlock);
+			static SceInt32 InternalThreadEntry(SceSize argSize, ScePVoid pArgBlock);
 
 			static SceVoid SetMainThreadUID(SceInt32 threadNum = 0);
 
@@ -193,9 +194,11 @@ namespace paf {
 
 			~Queue();
 
+			static Queue *s_mainThreadQueue;
+
 			SceVoid WaitDone();
 
-			SceVoid Push(const char *pName, QueueEntryFunction entry, void *pArgBlock);
+			SceVoid Push(const char *pName, QueueEntryFunction entry, ScePVoid pArgBlock);
 
 			SceVoid Execute();
 
@@ -217,7 +220,9 @@ namespace paf {
 
 			~SyncCall();
 
-			SceVoid Push(SyncCallEntryFunction entry, void *pArgBlock);
+			static SyncCall *s_mainThreadSyncCall;
+
+			SceVoid Push(SyncCallEntryFunction entry, ScePVoid pArgBlock);
 
 			SceVoid Execute();
 
