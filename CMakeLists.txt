@@ -36,23 +36,23 @@ ExternalProject_Add(opengl-registry
   URL https://github.com/KhronosGroup/OpenGL-Registry/archive/2afca877b25ec2c7f19ddcba21a8627b9fa8e026.tar.gz
   URL_HASH SHA256=d7447748ac3a10c9c6324e2ee980b3b0d6f75f8665d0d4055b1afd1aa3f5b67d
   EXCLUDE_FROM_ALL TRUE
-  INSTALL_DIR ${CMAKE_INSTALL_PREFIX}
+  INSTALL_DIR ${CMAKE_INSTALL_PREFIX}/include/vdsuite/user/piglet
   CONFIGURE_COMMAND ""
   BUILD_COMMAND ""
-  INSTALL_COMMAND ${CMAKE_COMMAND} -E copy_directory <SOURCE_DIR>/api/GLES2 <INSTALL_DIR>/include/vdsuite/user/GLES2
+  INSTALL_COMMAND ${CMAKE_COMMAND} -E copy_directory <SOURCE_DIR>/api/GLES2 <INSTALL_DIR>/GLES2
 )
 
 ExternalProject_Add(egl-registry
   URL https://github.com/KhronosGroup/EGL-Registry/archive/d42c684f61828e3ce18533f1c6893b79980e6acc.tar.gz
   URL_HASH SHA256=02ce918b4c9c65b5af1924330a17f3c7fbccfd87869a5c87b25d7c7c593a3d8b
   EXCLUDE_FROM_ALL TRUE
-  INSTALL_DIR ${CMAKE_INSTALL_PREFIX}
+  INSTALL_DIR ${CMAKE_INSTALL_PREFIX}/include/vdsuite/user/piglet
   PATCH_COMMAND patch --forward --strip=1 --input=${CMAKE_CURRENT_SOURCE_DIR}/patches/egl-registry.patch
   CONFIGURE_COMMAND ""
   BUILD_COMMAND ${CMAKE_COMMAND} -E chdir <SOURCE_DIR>/api python3 genheaders.py -registry egl.xml EGL/egl.h
   COMMAND       ${CMAKE_COMMAND} -E chdir <SOURCE_DIR>/api python3 genheaders.py -registry egl.xml EGL/eglext.h
-  INSTALL_COMMAND ${CMAKE_COMMAND} -E copy_directory <SOURCE_DIR>/api/EGL <INSTALL_DIR>/include/vdsuite/user/EGL
-  COMMAND         ${CMAKE_COMMAND} -E copy_directory <SOURCE_DIR>/api/KHR <INSTALL_DIR>/include/vdsuite/user/KHR
+  INSTALL_COMMAND ${CMAKE_COMMAND} -E copy_directory <SOURCE_DIR>/api/EGL <INSTALL_DIR>/EGL
+  COMMAND         ${CMAKE_COMMAND} -E copy_directory <SOURCE_DIR>/api/KHR <INSTALL_DIR>/KHR
 )
 
 # Static libraries
