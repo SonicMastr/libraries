@@ -70,8 +70,8 @@ modules:
           __cxa_guard_acquire: 0xCB26B866
           __cxa_guard_release: 0x6AB297BE
           __cxa_pure_virtual: 0x2730262C
-          abort: 0xD608246A
-          exit: 0x92BF63C9
+          abort: 0x19BB4B73
+          exit: 0xD608246A
           memcpy: 0x5883A6E3
           memset: 0x75ECC54E
           sce_paf_abs: 0x0F297A5E
