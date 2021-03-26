@@ -9,18 +9,19 @@ modules:
           _ZN3sce3Ini13InitParameterC2Ev: 0x9F8FC03F
           _ZN3sce3Ini16IniFileProcessor10initializeEPKNS0_13InitParameterE: 0x0975D396
           _ZN3sce3Ini16IniFileProcessor11deserializeEPKcj: 0xB785FE67
-          _ZN3sce3Ini16IniFileProcessor17terminateForErrorEv: 0x48A6BDCB
+          _ZN3sce3Ini16IniFileProcessor14getLastIoErrorEv: 0x48A6BDCB
           _ZN3sce3Ini16IniFileProcessor3addEPKcS3_: 0x703E1BAE
           _ZN3sce3Ini16IniFileProcessor3delEPKc: 0xC2B3A41C
           _ZN3sce3Ini16IniFileProcessor3getEPKcPcjj: 0x7F22CED1
           _ZN3sce3Ini16IniFileProcessor3setEPKcS3_: 0xDBC5F9A8
+          _ZN3sce3Ini16IniFileProcessor4freeEv: 0x655D31C6
           _ZN3sce3Ini16IniFileProcessor4openEPKcS3_i: 0x51B791E8
           _ZN3sce3Ini16IniFileProcessor4sizeEv: 0xD7648B61
           _ZN3sce3Ini16IniFileProcessor5closeEv: 0xEDFAD6B4
+          _ZN3sce3Ini16IniFileProcessor5flushEv: 0xA51840C7
           _ZN3sce3Ini16IniFileProcessor5parseEPcS2_j: 0xD5C7B3EE
           _ZN3sce3Ini16IniFileProcessor5resetEv: 0xB48C756B
-          _ZN3sce3Ini16IniFileProcessor6createEPKcS3_i: 0xFD8DE2F8
-          _ZN3sce3Ini16IniFileProcessor7cleanupEv: 0xA51840C7
+          _ZN3sce3Ini16IniFileProcessor7openNewEPKcS3_i: 0xFD8DE2F8
           _ZN3sce3Ini16IniFileProcessor9serializeEPPKcPj: 0x109B4E83
           _ZN3sce3Ini16IniFileProcessor9terminateEv: 0x2BEF7391
           _ZN3sce3Ini16IniFileProcessorC1Ev: 0xA0F71A2C

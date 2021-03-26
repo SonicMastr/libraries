@@ -5,13 +5,21 @@
 #ifndef _VDSUITE_USER_INI_FILE_PROCESSOR_H
 #define _VDSUITE_USER_INI_FILE_PROCESSOR_H
 
-#define SCE_INI_FILE_PROCESSOR_ERROR_MODE           ((int)0x80840002)
-#define SCE_INI_FILE_PROCESSOR_ERROR_EOF            ((int)0x80840005)
-#define SCE_INI_FILE_PROCESSOR_ERROR_READ_ONLY      ((int)0x80840007)
-#define SCE_INI_FILE_PROCESSOR_ERROR_FILE_NOT_FOUND ((int)0x80840009)
-#define SCE_INI_FILE_PROCESSOR_ERROR_KEY_NOT_FOUND  ((int)0x80840010)
+#define SCE_INI_FILE_PROCESSOR_ERROR_NO_MEMORY			(-2138832895) /* 0x80840001 */
+#define SCE_INI_FILE_PROCESSOR_ERROR_UNINITIALIZED		(-2138832894) /* 0x80840002 */
+#define SCE_INI_FILE_PROCESSOR_ERROR_EOF				(-2138832891) /* 0x80840005 */
+#define SCE_INI_FILE_PROCESSOR_ERROR_INVALID_ARGUMENT	(-2138832890) /* 0x80840006 */
+#define SCE_INI_FILE_PROCESSOR_ERROR_READ_ONLY			(-2138832889) /* 0x80840007 */
+#define SCE_INI_FILE_PROCESSOR_ERROR_FILE_NOT_FOUND		(-2138832887) /* 0x80840009 */
+#define SCE_INI_FILE_PROCESSOR_ERROR_INVALID_KEY		(-2138832882) /* 0x8084000E */
+#define SCE_INI_FILE_PROCESSOR_ERROR_KEY_NOT_FOUND		(-2138832880) /* 0x80840010 */
 
-#define SCE_INI_FILE_PROCESSOR_PARSE_COMPLETED      0x00840001
+#define SCE_INI_FILE_PROCESSOR_PARSE_COMPLETED			(0x840001)
+
+#define SCE_INI_FILE_PROCESSOR_OPEN_FLAG_UNK_20			(1 << 20) /* Sets sceIoOpen flag to 0x10001 */
+#define SCE_INI_FILE_PROCESSOR_OPEN_FLAG_WITH_MODE		(1 << 21) /* Sets sceIoOpen mode to (flags & 0xFFFF) */
+
+#define SCE_INI_FILE_PROCESSOR_KEY_BUFFER_SIZE			(0x80)
 
 #ifdef __cplusplus
 
@@ -61,54 +69,61 @@ public:
 	int terminate();
 
 	/**
-	 * Terminate INI file processor when file could not be opened
+	 * Returns the last IO error number.
 	 *
-	 * @return 0 on success, < 0 on error.
+	 * @return 0 or error number.
 	 */
-	int terminateForError();
+	int getLastIoError();
 
 	/**
-	 * Get INI as a string. The returned buffer is not null-terminated.
+	 * Serialize INI data into a string
 	 *
-	 * @param[out] ini - memory where INI data is stored
-	 * @param[out] size - size of the INI data
+	 * @param[out] ini - string data
+	 * @param[out] size - length of the output string
 	 *
 	 * @return 0 on success, < 0 on error.
 	 */
 	int serialize(const char** ini, size_t* size);
 
 	/**
-	 * Process INI as a string. Size is without null-terminator.
+	 * Frees the memory allocated for serialize.
 	 *
-	 * @param[in] ini - memory where INI data is stored
-	 * @param[in] size - size of the INI data
+	 * @return 0 on success, < 0 on error.
+	 */
+	int free();
+
+	/**
+	 * Deserialize INI data from a string
+	 *
+	 * @param[in] ini - string data
+	 * @param[in] size - length of the input string
 	 *
 	 * @return 0 on success, < 0 on error.
 	 */
 	int deserialize(const char* ini, size_t size);
 
 	/**
-	 * Open INI file
+	 * Create a new INI file or open an existing INI file.
 	 *
 	 * @param[in] path - path to the INI file to open
-	 * @param[in] mode - file open mode
-	 * @param[in] unk - unknown, set to 0
+	 * @param[in] mode - file open mode, "r" or "rw"
+	 * @param[in] flags - bitwise OR of open flags
 	 *
 	 * @return 0 on success, < 0 on error.
 	 */
-	int open(const char* path, const char* mode, int unk);
+	int open(const char* path, const char* mode, int flags);
 
 	/**
-	 * Create new INI file and open it. If file is already present, it will be overwritten
+	 * Create new INI file. If the file already exists, it will be truncated.
 	 *
 	 * @param[in] path - path to the INI file to open
-	 * @param[in] mode - file open mode
-	 * @param[in] unk - unknown, set to 0
+	 * @param[in] mode - set to "rw", this argument has no effect
+	 * @param[in] flags - bitwise OR of open flags
 	 *
 	 * @return 0 on success, < 0 on error.
 	 *
 	 */
-	int create(const char* path, const char* mode, int unk);
+	int openNew(const char* path, const char* mode, int flags);
 
 	/**
 	 * Close INI file
@@ -118,11 +133,11 @@ public:
 	int close();
 
 	/**
-	 * Cleanup temp files
+	 * Flush changes to file.
 	 *
 	 * @return 0 on success, < 0 on error.
 	 */
-	int cleanup();
+	int flush();
 
 	/**
 	 * Get total number of keys in the opened INI file
@@ -175,9 +190,9 @@ public:
 	/**
 	 * Parse key and corresponding value, one key per call until eof
 	 *
-	 * @param[out] key - buffer to store key string, must have size at least 0x80
+	 * @param[out] key - buffer to store key string
 	 * @param[out] val - buffer to store value string
-	 * @param[in] size - max string size that can fit in val, not including the null terminator
+	 * @param[in] size - size of the output value buffer
 	 *
 	 * @return 0 on success, < 0 on error.
 	 *
