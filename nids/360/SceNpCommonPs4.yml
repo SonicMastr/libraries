@@ -5,4 +5,43 @@ modules:
       SceNpCommonPs4:
         nid: 0x523E1FF8
         functions:
+          sceNpCancelEventFlag: 0xF2753B27
+          sceNpClearEventFlag: 0x84EA4F2A
+          sceNpCloseEventFlag: 0x73E77BE0
+          sceNpCloseSema: 0x7272B106
+          sceNpCondDestroy: 0xAC89B1E7
+          sceNpCondInit: 0x34C15C21
+          sceNpCondSignal: 0x3D73D77E
+          sceNpCondSignalAll: 0x62A77FA7
+          sceNpCondTimedwait: 0x69E858EA
+          sceNpCondWait: 0xE47C64E8
+          sceNpCreateEventFlag: 0x85B12451
+          sceNpCreateSema: 0x1C1B177A
+          sceNpCreateThread: 0x04EC8796
+          sceNpDbgDumpBinary: 0x0A7044DA
+          sceNpDbgDumpText: 0x93DA3594
+          sceNpDeleteEventFlag: 0xE42B3A09
+          sceNpDeleteSema: 0x908EDA3A
+          sceNpGetSystemClockLowUsec: 0xA25DA29A
           sceNpGetSystemClockUsec: 0xF56B0EAB
+          sceNpJoinThread: 0xCFB92A12
+          sceNpLwMutexDestroy: 0x29895EBB
+          sceNpLwMutexInit: 0x4858EFB6
+          sceNpLwMutexLock: 0xF5840D6E
+          sceNpLwMutexTryLock: 0x9846B55A
+          sceNpLwMutexUnlock: 0x4A1C1C3C
+          sceNpMutexDestroy: 0x2D74359F
+          sceNpMutexInit: 0xEDBFFFE9
+          sceNpMutexLock: 0xD37A4868
+          sceNpMutexTryLock: 0x950060DC
+          sceNpMutexUnlock: 0x262D1ACE
+          sceNpOpenEventFlag: 0xBF4855F2
+          sceNpOpenSema: 0xEB92EB4E
+          sceNpPanic: 0xF50BD96A
+          sceNpPollEventFlag: 0x2559AAB6
+          sceNpPollSema: 0x508877F1
+          sceNpSetEventFlag: 0x48C115EA
+          sceNpSignalSema: 0x364483E2
+          sceNpThreadGetId: 0x5395A6B1
+          sceNpWaitEventFlag: 0x78905979
+          sceNpWaitSema: 0x2387BCED
