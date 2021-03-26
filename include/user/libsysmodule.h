@@ -102,18 +102,31 @@ int sceSysmoduleUnloadModuleInternal(SceUInt32 id);
  */
 int sceSysmoduleIsLoadedInternal(SceUInt32 id);
 
+int _sceSysmoduleLoadModuleInternalWithArg(SceUInt32 id, SceSize args, const void *argp, void *extra);
+
 /**
  * Load an internal module with custom arguments.
  *
  * @param[in] id - Module ID to check.
  * @param[in] args - Size of passed arguments.
  * @param[in] argp - Pointer to arguments to pass.
- * @param[in] unk - Unknown value.
+ * @param[in] flags - Set to 0.
+ * @param[out] pRes - Result of load.
  *
  * @return 0 on success, <0 otherwise.
  */
-#define sceSysmoduleLoadModuleInternalWithArg _sceSysmoduleLoadModuleInternalWithArg
-int _sceSysmoduleLoadModuleInternalWithArg(SceUInt32 id, SceSize args, void *argp, void *unk);
+static int sceSysmoduleLoadModuleInternalWithArg(
+	SceUInt32 id, SceSize args, const void *argp, SceUInt32 flags, int *pRes)
+{
+	struct {
+		SceUInt32 flags;
+		int *pRes;
+		int unused[2];
+	} extra = {flags, pRes, 0, 0};
+	return _sceSysmoduleLoadModuleInternalWithArg(id, args, argp, &extra);
+}
+
+int _sceSysmoduleUnloadModuleInternalWithArg(SceUInt32 id, SceSize args, const void *argp, void *extra);
 
 /**
  * Unload an internal module with custom arguments.
@@ -121,12 +134,21 @@ int _sceSysmoduleLoadModuleInternalWithArg(SceUInt32 id, SceSize args, void *arg
  * @param[in] id - Module ID to check.
  * @param[in] args - Size of passed arguments.
  * @param[in] argp - Pointer to arguments to pass.
- * @param[in] unk - Unknown value.
+ * @param[in] flags - Set to 0.
+ * @param[out] pRes - Result of unload.
  *
  * @return 0 on success, <0 otherwise.
  */
-#define sceSysmoduleUnloadModuleInternalWithArg _sceSysmoduleUnloadModuleInternalWithArg
-int _sceSysmoduleUnloadModuleInternalWithArg(SceUInt32 id, SceSize args, void *argp, void *unk);
+static int sceSysmoduleUnloadModuleInternalWithArg(
+	SceUInt32 id, SceSize args, const void *argp, SceUInt32 flags, int *pRes)
+{
+	struct {
+		SceUInt32 flags;
+		int *pRes;
+		int unused[2];
+	} extra = {flags, pRes, 0, 0};
+	return _sceSysmoduleUnloadModuleInternalWithArg(id, args, argp, &extra);
+}
 
 #ifdef __cplusplus
 }
