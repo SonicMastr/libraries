@@ -55,6 +55,9 @@ modules:
           scePervasiveAclkgenClkGateEnable: 0x47F2C35C
           scePervasiveAclkgenResetDisable: 0x5BAFA0DC
           scePervasiveAclkgenResetEnable: 0x821AE6C7
+          scePervasiveCameraBusClockSelect: 0x589D0291
+          scePervasiveCecClockOutDisable: 0xD185D235
+          scePervasiveCecClockOutEnable: 0x26B51075
           scePervasiveDsiSetPixelClock: 0x91C80C41
           scePervasiveGpioClkGateDisable: 0xEB176898
           scePervasiveGpioClkGateEnable: 0x2F195C97
