@@ -36,6 +36,7 @@ modules:
           sceKernelDeleteSimpleEvent: 0x208CFE28
           sceKernelDeleteTimer: 0xAB1E42C4
           sceKernelExitDeleteThread: 0x1D17DECF
+          sceKernelExitThread: 0x0C8A38E1
           sceKernelGetCallbackCount: 0x038644D5
           sceKernelGetMsgPipeCreatorId: 0x70E2A6D2
           sceKernelGetProcessId: 0x9DCB4B7A
@@ -75,10 +76,6 @@ modules:
           sceKernelUnregisterCallbackFromEvent: 0x18462B11
           sceKernelUnregisterCallbackFromEventAll: 0x888A7361
           sceKernelUnregisterThreadEventHandler: 0x2C8ED6F0
-      SceThreadmgrCoredumpTime:
-        nid: 0x5E8D0E22
-        functions:
-          sceKernelExitThread: 0x0C8A38E1
       SceThreadmgrForDriver:
         nid: 0xE2C40624
         functions:
