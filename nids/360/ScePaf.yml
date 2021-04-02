@@ -75,6 +75,10 @@ modules:
           memcpy: 0x5883A6E3
           memset: 0x75ECC54E
           sce_paf_abs: 0x0F297A5E
+          sce_paf_acosf: 0xC6A059A7
+          sce_paf_asinf: 0xA75AAF07
+          sce_paf_atan2f: 0x30C3A75E
+          sce_paf_atanf: 0xA74ACFE5
           sce_paf_atof: 0x9C251354
           sce_paf_atoi: 0x5930D99A
           sce_paf_atol: 0x086AD1FA
@@ -83,17 +87,25 @@ modules:
           sce_paf_bcopy: 0x44C0825D
           sce_paf_bsearch: 0x78AE1C51
           sce_paf_bzero: 0xD21442B4
+          sce_paf_ceilf: 0x21241EE8
+          sce_paf_cosf: 0x99E15A83
+          sce_paf_expf: 0x28E1E0ED
           sce_paf_fclose: 0xA005E879
           sce_paf_fflush: 0x26A0A5F6
           sce_paf_fgetc: 0xDEB581B4
+          sce_paf_floorf: 0x148C1463
           sce_paf_fopen: 0x1BCCD0B9
           sce_paf_fputc: 0xAF1831DC
           sce_paf_fread: 0x43A53623
+          sce_paf_free: 0x347AFDD9
           sce_paf_fseek: 0xFC10F9E9
           sce_paf_ftell: 0x77CB5E21
           sce_paf_fwrite: 0x4D5BB0F8
+          sce_paf_logf: 0x131D0280
           sce_paf_longjmp: 0x001BFAC2
           sce_paf_look_ctype_table: 0x247C19A8
+          sce_paf_malloc: 0x0886C1E3
+          sce_paf_memalign: 0xAA9952E0
           sce_paf_memchr: 0x1D286681
           sce_paf_memcmp: 0x79DFA2A2
           sce_paf_memcpy: 0x2C5B6F9C
@@ -101,7 +113,10 @@ modules:
           sce_paf_memset: 0xE148AF94
           sce_paf_qsort: 0xF7A11753
           sce_paf_rand: 0xC9DACD41
+          sce_paf_realloc: 0x0ADEA3AD
+          sce_paf_roundf: 0x65B8E8A9
           sce_paf_setjmp: 0x2105FFAD
+          sce_paf_sinf: 0xC3C6F821
           sce_paf_snprintf: 0x4E0D907E
           sce_paf_sprintf: 0x19182BDA
           sce_paf_srand: 0x772DF5A0
@@ -129,6 +144,7 @@ modules:
           sce_paf_strtoul: 0x04FDF238
           sce_paf_strtoull: 0xC05A18CA
           sce_paf_swprintf: 0xF67F76D0
+          sce_paf_tanf: 0x3C250862
           sce_paf_tolower: 0xDAC2EE4D
           sce_paf_toupper: 0x761184A5
           sce_paf_towlower: 0xC8C2CDAC
