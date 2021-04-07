@@ -7,16 +7,27 @@
 
 #include_next <kernel/iofilemgr_stat.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+SCE_CDECL_BEGIN
+
+/*@{*/
+
+/** @name Stat 関連マクロ
+ *
+ */
 
 /* for SceMode */
-#define SCE_STM_RWO         00006
-#define SCE_STM_RO          00004
+#define SCE_STM_RWXU		00700
+#define SCE_STM_RUSR		00400
+#define SCE_STM_WUSR		00200
+#define SCE_STM_XUSR		00100
 
-#ifdef __cplusplus
-}
-#endif
+#define SCE_STM_RWXS		00007
+#define SCE_STM_RSYS		00004
+#define SCE_STM_WSYS		00002
+#define SCE_STM_XSYS		00001
+
+/*@}*/
+
+SCE_CDECL_END
 
 #endif	/* _VDSUITE_COMMON_KERNEL_IOFILEMGR_STAT_H */
