@@ -92,6 +92,8 @@ modules:
           scePowerGetPowerSwMode: 0x165CE085
           scePowerGetResumeCount: 0x0074EF9B
           scePowerGetSysClockFrequency: 0xC63DACD5
+          scePowerGetUsingWirelessProc: 0x06AF03DB
+          scePowerGetUsingWlanProc: 0x2784A6BD
           scePowerGetVeneziaClockFrequency: 0x64641E6A
           scePowerGetVipClockFrequency: 0x0E58FCDF
           scePowerGetWakeupFactor: 0x9F26222A
@@ -101,6 +103,7 @@ modules:
           scePowerIsPowerOnline: 0x87440F5E
           scePowerIsRequest: 0x7FA406DD
           scePowerIsSuspendRequired: 0x78A1A796
+          scePowerIsWlanActive: 0x2B51FE2F
           scePowerRegisterCallback: 0x04B7766E
           scePowerRequestColdReset: 0x0442D852
           scePowerRequestDisplayOff: 0x160EB506
@@ -128,14 +131,17 @@ modules:
           scePowerSetGpuXbarClockFrequencyProc: 0x8D18F728
           scePowerSetIdleCallback: 0x1BA2FCAE
           scePowerSetIdleTimer: 0x6BC26FC7
-          scePowerSetPowerSwMode: 0xC1853BA7
-          scePowerSetPowerSwMode2: 0x0CD21B1F
+          scePowerSetIdleTimerCountProc: 0xFB5C3C75
+          scePowerSetPowerSwMode: 0x0CD21B1F
+          scePowerSetPowerSwModeForUser: 0xC1853BA7
           scePowerSetProcessIdleCallback: 0x0856FD0A
           scePowerSetPsButtonPushTime: 0xCF8F0529
           scePowerSetStandbyButtonPushTime: 0x675A84ED
           scePowerSetSysClockFrequency: 0x0E333BEC
+          scePowerSetUsingWlanProc: 0x4A69163A
           scePowerSetVeneziaClockFrequency: 0x621BD8FD
           scePowerSetVipClockFrequency: 0xE5573571
+          scePowerSetWakeupCondition: 0xF535D928
           scePowerTick: 0xEFD3C963
           scePowerUnregisterCallback: 0xDFA8BAF8
           scePowerWlanActivate: 0x6D2CA84B
