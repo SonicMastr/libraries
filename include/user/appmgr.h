@@ -9,14 +9,60 @@
 
 #include <stdint.h>
 
+#include <display.h>
 #include <fios2/fios2_types.h>
+#include <gxm/constants.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
+#define SCE_APPMGR_LAUNCH_APP_FLAG_MODAL_DONT_SUSPEND		0x60000 // Do not suspend main app when modal app has been closed
+
+typedef struct SceAppMgrLaunchAppOptParam {
+	SceSize size; //0x40
+	int launchFlags;
+	int unk_08;
+	SceUID appLaunchCB; //-1 if not used
+	SceUID getParamCB; //-1 if not used
+	SceUID appCloseCB; //-1 if not used
+	int unk_18; //seen: 0, 2, 3
+	int unk_1C;
+	char reserved[0x20];
+} SceAppMgrLaunchAppOptParam;
+
+#define SCE_APPMGR_APP_ATTRIB_FG							0x1
+#define SCE_APPMGR_APP_ATTRIB_NONSUSPENDABLE				0x100
+
+typedef struct SceAppMgrAppStatus {
+	SceUInt32 unk_0;
+	SceUInt32 launchMode;
+	SceUInt32 bgm_priority_or_status;
+	char appName[32];
+	SceUInt32 unk_2C;
+	SceUID appId;
+	SceUID processId;
+	SceBool isShellProcess;
+	SceBool isActive;
+	SceUInt32 unk_40;
+	SceUInt32 unk_44;
+	SceUInt32 appAttrib;
+	SceUInt32 unk_4C;
+	SceUInt32 unk_50;
+	SceUInt32 unk_54;
+	SceUInt32 unk_58;
+	SceUInt32 unk_5C;
+	SceUInt32 unk_60;
+	SceUInt32 unk_64;
+	SceUInt32 unk_68;
+	SceUInt32 unk_6C;
+	SceUInt32 unk_70;
+	SceUInt32 unk_74;
+	SceUInt32 unk_78;
+	SceUInt32 unk_7C;
+} SceAppMgrAppStatus;
+
 typedef struct SceAppMgrExecOptParam SceAppMgrExecOptParam; // Missing struct
-typedef struct SceAppMgrLaunchAppOptParam SceAppMgrLaunchAppOptParam; // Missing struct
 
 #define SCE_APPMGR_BUDGET_MODE_MAIN              2 // Main LPDDR2 only
 #define SCE_APPMGR_BUDGET_MODE_MAIN_PHYCONT      3 // Main and phycont or CDLG which is also contiguous
@@ -354,11 +400,40 @@ int sceAppMgrGrowMemory(SceSize size, int unk);
  */
 int sceAppMgrGrowMemory3(SceSize size, int unk);
 
+int sceAppMgrGetStatusByName(const char *name, SceAppMgrAppStatus *status);
+
+int sceAppMgrCaptureFrameBufDMACByAppId(SceUID appId, SceDisplayFrameBuf *captureBuffer);
+
+int sceAppMgrCaptureFrameBufIFTUByAppId(SceUID appId, SceDisplayFrameBuf *captureBuffer);
+
 /**
  * Shared Framebuffer
  */
 
-typedef struct SceSharedFbInfo SceSharedFbInfo;
+typedef struct SceSharedFbInfo {	// size is 0x58
+	void* frontBuffer;				// cdram base
+	int memsize;
+	void* backBuffer;				// cdram base
+	int unk_0C;
+	void *unk_10;
+	int unk_14;
+	int unk_18;
+	int unk_1C;
+	int unk_20;
+	int stride;						// 960
+	int width;						// 960
+	int height;						// 544
+	SceGxmColorFormat colorFormat;
+	int curbuf;
+	int unk_38;
+	int unk_3C;
+	int unk_40;
+	int unk_44;
+	int owner;
+	int unk_4C;
+	int unk_50;
+	int unk_54;
+} SceSharedFbInfo;
 
 SceUID _sceSharedFbOpen(int index, SceUInt32 buildVersion);
 
