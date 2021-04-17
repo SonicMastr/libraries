@@ -9,26 +9,138 @@ modules:
           _ZN3paf6String9ToWStringEPKcPNS_7WStringEj: 0xA9ED25D9
           _ZN3paf6String9ToWStringEPNS_7WStringE: 0x3CFEB1EB
           _ZN3paf6String9ToWStringEPNS_7WStringEj: 0x23A39B05
+          _ZN3paf6StringC1EPKc: 0xAED94915
+          _ZN3paf6StringC1EPKcj: 0x5EEAEBAE
+          _ZN3paf6StringC1EPS0_: 0xBFB672E6
+          _ZN3paf6StringC1Ev: 0xCA19F75C
+          _ZN3paf6StringC2EPKc: 0x25E1C8C4
+          _ZN3paf6StringC2EPKcj: 0x1F1C3F8D
+          _ZN3paf6StringC2EPS0_: 0xCC229501
+          _ZN3paf6StringC2Ev: 0x50C5FA24
+          _ZN3paf6common21WidgetStateTransitionEfPNS_6widget6WidgetEjii: 0xB48C9BDC
+          _ZN3paf6common28WidgetStateTransitionReverseEfPNS_6widget6WidgetEjii: 0x6CF3A3C8
           _ZN3paf6common5Utils17AddMainThreadTaskEPFvPvES2_: 0x6735B503
+          _ZN3paf6common5Utils20RemoveMainThreadTaskEPFvPvES2_: 0x4A8115D5
           _ZN3paf7WString8ToStringEPKtPNS_6StringE: 0x8E009780
           _ZN3paf7WString8ToStringEPKtPNS_6StringEj: 0x5FAAAE1C
           _ZN3paf7WString8ToStringEPNS_6StringE: 0x06C015C6
           _ZN3paf7WString8ToStringEPNS_6StringEj: 0x683BC8E8
+      ScePafGraphics:
+        nid: 0xA070D6A7
+        functions:
+          _ZN3paf8graphics10MemoryPool12FreeMemBlockEjPv: 0x167F6801
+          _ZN3paf8graphics10MemoryPool13AllocMemBlockEjjPKcPv: 0xBBE8F063
+          _ZN3paf8graphics10MemoryPool20GetDefaultMemoryPoolEv: 0xCDE30B64
+          _ZN3paf8graphics10MemoryPoolC1EPNS1_9InitParamE: 0x6A986ED3
+          _ZN3paf8graphics10MemoryPoolC1EPvjPKcPNS_9Allocator3OptEj: 0xEEC40427
+          _ZN3paf8graphics10MemoryPoolC2EPNS1_9InitParamE: 0xFF236372
+          _ZN3paf8graphics10MemoryPoolC2EPvjPKcPNS_9Allocator3OptEj: 0xD49AB0A5
+          _ZN3paf8graphics10MemoryPoolD0Ev: 0x1697139C
+          _ZN3paf8graphics10MemoryPoolD1Ev: 0x2FBA10B9
+          _ZN3paf8graphics10MemoryPoolD2Ev: 0x2B1159EC
+          _ZN3paf8graphics7SurfaceC1EPNS0_10MemoryPoolEjjjjiji: 0x7C8B2A63
+          _ZN3paf8graphics7SurfaceD0Ev: 0x58D2FEF6
+          _ZN3paf8graphics7SurfaceD1Ev: 0x767D7A4D
+          _ZN3paf8graphics7SurfaceD2Ev: 0xF1EE942C
+          _ZN3paf8graphics7SurfacedlEPv: 0x9FAF51CF
+          _ZN3paf8graphics7SurfacenwEj: 0x6EA3E8FF
       ScePafMisc:
         nid: 0x3D643CE8
         functions:
-          _ZN3paf4misc4Misc7IsDolceEv: 0xAF4FC3F4
-          _ZN3paf4misc4Sha111BlockResultEPh: 0xB3BF59FC
-          _ZN3paf4misc4Sha111BlockUpdateEPvj: 0xE6BB459E
-          _ZN3paf4misc4Sha1C1Ev: 0xB38C53C0
+          _ZN3paf2io10MkdirMultiEPKci: 0xFDCD1121
+          _ZN3paf2io10MkdirRWSYSEPKc: 0x198A4C81
+          _ZN3paf2io15MkdirMultiRWSYSEPKc: 0xE39FA610
+          _ZN3paf2io15RemoveRecursiveEPKc: 0xDFF0CA06
+          _ZN3paf2io18SetDefaultPriorityEj: 0xA283AD47
+          _ZN3paf2io3Dir4OpenEPiPKc: 0x95F2C107
+          _ZN3paf2io3Dir4ReadEPNS1_6DirentE: 0xA4F553B0
+          _ZN3paf2io3Dir5CloseEPi: 0x2E8E9CBB
+          _ZN3paf2io4File10CloseAsyncEv: 0xE1624D8E
+          _ZN3paf2io4File10LseekAsyncEiiP15SceIoAsyncParam: 0x69798A47
+          _ZN3paf2io4File10WriteAsyncEPKvj: 0x604D3C31
+          _ZN3paf2io4File11CancelAsyncEv: 0x00AB4F34
+          _ZN3paf2io4File11SetPriorityEj: 0x619FA110
+          _ZN3paf2io4File4OpenEPKcii: 0x9DD7B62D
+          _ZN3paf2io4File4ReadEPvj: 0x999CDF39
+          _ZN3paf2io4File4SyncEv: 0x61B3C8C6
+          _ZN3paf2io4File5CloseEv: 0x757CC8B1
+          _ZN3paf2io4File5LseekExi: 0x38D851FF
+          _ZN3paf2io4File5WriteEPKvj: 0x132F4E2C
+          _ZN3paf2io4File7GetSizeEv: 0x3AB24248
+          _ZN3paf2io4File7GetStatEPv: 0x223EAD7D
+          _ZN3paf2io4File9OpenAsyncEPKcii: 0xBDE466D2
+          _ZN3paf2io4File9PollAsyncEPNS1_11AsyncResultE: 0xEE7027E7
+          _ZN3paf2io4File9ReadAsyncEPvj: 0xC6220CE0
+          _ZN3paf2io4File9SyncAsyncEv: 0xF626DC7D
+          _ZN3paf2io4File9WaitAsyncEPNS1_11AsyncResultE: 0x7486256D
+          _ZN3paf2io4FileC1Ev: 0xE73FE3E5
+          _ZN3paf2io4FileC2Ev: 0xA495CC6B
+          _ZN3paf2io4FileD0Ev: 0xDF3A09D4
+          _ZN3paf2io4FileD1Ev: 0xEEDD1701
+          _ZN3paf2io4FileD2Ev: 0xA47418DF
+          _ZN3paf2io5IsDirEPKc: 0xB002E56C
+          _ZN3paf2io5MkdirEPKci: 0x53EAF163
+          _ZN3paf2io6ExistsEPKc: 0x95F14046
+          _ZN3paf2io6RemoveEPKc: 0x40573275
+          _ZN3paf4Sha111BlockResultEPh: 0xB3BF59FC
+          _ZN3paf4Sha111BlockUpdateEPvj: 0xE6BB459E
+          _ZN3paf4Sha1C1Ev: 0xB38C53C0
+          _ZN3paf5Image12GetLastErrorEv: 0xE9A4171E
+          _ZN3paf5Image12SetLastErrorEi: 0x951B7B59
+          _ZN3paf5Image18GetPaletteColorNumEv: 0x9ADD8A26
+          _ZN3paf5Image4LoadEPNS0_6ResultEPKcPviiii: 0xFAA808C2
+          _ZN3paf5Image7GetTypeEv: 0xBF87C099
+          _ZN3paf6ModuleC1EPKciji: 0xB3B5DF38
+          _ZN3paf6ModuleC2EPKciji: 0xF297D14C
+          _ZN3paf6ModuleD1Ev: 0x7C86911E
+          _ZN3paf6ModuleD2Ev: 0xAFD2590E
           _ZN3paf6String16WCharToNewStringEPKtPS0_: 0xE690F751
+          _ZN3paf7IsDolceEv: 0xAF4FC3F4
           _ZN3paf7WString16CharToNewWStringEPKcPS0_: 0xA6ABC0B2
+          _ZN3paf8datetime8DateTime10IsLeapYearEi: 0xA6178A4C
+          _ZN3paf8datetime8DateTime11SetFromTickEP10SceRtcTick: 0x6EC994D7
+          _ZN3paf8datetime8DateTime12ParseRFC3339EP10SceRtcTickPKc: 0xE4516D60
+          _ZN3paf8datetime8DateTime13FormatRFC3339EPcP10SceRtcTicki: 0x0CC85E44
+          _ZN3paf8datetime8DateTime14GetCurrentTickEP10SceRtcTick: 0x656E8C26
+          _ZN3paf8datetime8DateTime14GetDaysInMonthEii: 0x3D21E902
+          _ZN3paf8datetime8DateTime14SetFromRFC3339EPKc: 0x209DB708
+          _ZN3paf8datetime8DateTime18GetCurrentClockUtcEv: 0x59979922
+          _ZN3paf8datetime8DateTime21ConvertLocalTimeToUtcEPK10SceRtcTickPS1_: 0xF9AE799D
+          _ZN3paf8datetime8DateTime21GetCurrentNetworkTickEP10SceRtcTick: 0x6DB38377
+          _ZN3paf8datetime8DateTime22ConvertUtcToLoacalTimeEPK10SceRtcTickPS1_: 0x909913D9
+          _ZN3paf8datetime8DateTime22FormatRFC3339LocalTimeEPcP10SceRtcTick: 0xB94B29AC
+          _ZN3paf8datetime8DateTime22GetCurrentNetworkClockEv: 0xDE76F76B
+          _ZN3paf8datetime8DateTime23GetCurrentTickLocalTimeEP10SceRtcTick: 0x64927F55
+          _ZN3paf8datetime8DateTime24GetCurrentClockLocalTimeEv: 0x96345146
+          _ZN3paf8datetime8DateTime3SumEPKS0_S2_: 0xB5184CAF
+          _ZN3paf8datetime8DateTime9ToRtcTickEP10SceRtcTick: 0x1B012451
+          _ZN3paf8datetime8DateTime9ToRtcTickEv: 0x08943D3E
+          _ZN3paf8datetime8DateTimeC1Ettttttj: 0x8523A173
+          _ZN3paf8datetime8DateTimeC2Ettttttj: 0xAF79665E
+          _ZN3paf8datetime8DateTimeD1Ev: 0x2DBDFC13
+          _ZN3paf8datetime8DateTimeltEPKS1_: 0x17B87641
+          _ZN3paf9Allocator10DeallocateEPv: 0xCE97B579
+          _ZN3paf9Allocator15AllocateAlignedEjj: 0x04716F15
+          _ZN3paf9Allocator15GetMemBlockBaseEPPvS3_: 0x9A80FBC3
+          _ZN3paf9Allocator7GetSizeEv: 0x7270DC05
+          _ZN3paf9Allocator8AllocateEj: 0x89A1CE78
+          _ZN3paf9AllocatorC1EPPvjPKcPNS1_3OptE: 0xA2B0BF4D
+          _ZN3paf9AllocatorC2EPPvjPKcPNS1_3OptE: 0xF36F1C66
+          _ZN3paf9AllocatorD0Ev: 0x79F13D72
+          _ZN3paf9AllocatorD1Ev: 0x25238A3A
+          _ZN3paf9AllocatorD2Ev: 0x4A434F81
           scePafMiscInitializeInputMethodExt: 0xAC108E50
-          sce_paf_misc_does_file_exist: 0x95F14046
       ScePafResource:
         nid: 0x2836DC9B
         functions:
-          _ZN3paf8Resource7Element13GetHashByNameEPS1_: 0x5F05DE68
+          _ZN3paf8Resource19DefaultMemAllocatorEjPNS_9AllocatorEPvjPPS3_Pj: 0x23B99133
+          _ZN3paf8Resource7Element11GetHashByIdEPS1_: 0x5F05DE68
+          _ZN3paf8Resource9GetStringEPKcPPtPj: 0x50CD574F
+          _ZN3paf8Resource9GetStringEjPPtPj: 0x55EB9585
+          _ZN3paf8ResourceC1EPKcPNS0_9LoadParamE: 0xA70524AD
+          _ZN3paf8ResourceC2EPKcPNS0_9LoadParamE: 0x20EA3ADB
+          _ZN3paf8ResourceD1Ev: 0xF194FC6D
+          _ZN3paf8ResourceD2Ev: 0xE617D3AE
           scePafResourceGetAttribute: 0xAD8678FB
           scePafResourceGetAttributeChar: 0x1546336D
           scePafResourceGetAttributeData: 0x37720983
@@ -57,6 +169,7 @@ modules:
       ScePafStdc:
         nid: 0xA7D28DAE
         functions:
+          _ZN3paf9Allocator18GetGlobalAllocatorEv: 0x261CAF72
           _ZdaPv: 0x5C468294
           _ZdlPv: 0x1B77082E
           _Znaj: 0xD8CC1AFE
@@ -201,8 +314,8 @@ modules:
           _ZN3paf6thread5MutexD1Ev: 0x8CCECAC9
           _ZN3paf6thread5MutexD2Ev: 0xD1BEBE2D
           _ZN3paf6thread5Queue4PushEPKcPFvPvES4_: 0x23B8F66F
-          _ZN3paf6thread5Queue4SizeEv: 0x9F2131F9
           _ZN3paf6thread5Queue7ExecuteEv: 0x98EA7399
+          _ZN3paf6thread5Queue7GetSizeEv: 0x9F2131F9
           _ZN3paf6thread5Queue8WaitDoneEv: 0x0164145D
           _ZN3paf6thread5QueueC1EPKc: 0x5A72B9FC
           _ZN3paf6thread5QueueC2EPKc: 0xA87BC0AE
@@ -233,11 +346,31 @@ modules:
           _ZN3paf6thread6Thread5SleepEj: 0x651F4F81
           _ZN3paf6thread6Thread5StartEv: 0x60910895
           _ZN3paf6thread6Thread9IsStartedEv: 0x318AD6B7
-          _ZN3paf6thread6ThreadC1EijPKcPKNS0_9ThreadOptE: 0x6E829BD8
-          _ZN3paf6thread6ThreadC2EijPKcPKNS0_9ThreadOptE: 0x1740FB30
+          _ZN3paf6thread6ThreadC1EijPKcPKNS1_3OptE: 0x6E829BD8
+          _ZN3paf6thread6ThreadC2EijPKcPKNS1_3OptE: 0x1740FB30
           _ZN3paf6thread6ThreadD0Ev: 0x1013F3C0
           _ZN3paf6thread6ThreadD1Ev: 0x52C62CD1
           _ZN3paf6thread6ThreadD2Ev: 0x7EA6B501
+          _ZN3paf6thread8JobQueue20ChangeWorkerPriorityEi: 0x64FF39DE
+          _ZN3paf6thread8JobQueue21CreateDefaultJobQueueEPNS1_3OptE: 0x777E2981
+          _ZN3paf6thread8JobQueue21DeleteDefaultJobQueueEv: 0x30154F76
+          _ZN3paf6thread8JobQueue3OptC1Ev: 0xF4C3881C
+          _ZN3paf6thread8JobQueue3OptC2Ev: 0xE3D0FAC7
+          _ZN3paf6thread8JobQueue4Item12SetSomethingEv: 0x2AE6D3EB
+          _ZN3paf6thread8JobQueue4ItemC1EPKc: 0xECF8334D
+          _ZN3paf6thread8JobQueue4ItemC2EPKc: 0xA54DB064
+          _ZN3paf6thread8JobQueue4ItemD0Ev: 0xCCE903F3
+          _ZN3paf6thread8JobQueue4ItemD1Ev: 0x88DA7B11
+          _ZN3paf6thread8JobQueue4ItemD2Ev: 0xE639D331
+          _ZN3paf6thread8JobQueue4JoinEv: 0x789B263C
+          _ZN3paf6thread8JobQueue4PushEPNS1_4ItemE: 0x93F7A9D6
+          _ZN3paf6thread8JobQueue7ExecuteEv: 0x88061E60
+          _ZN3paf6thread8JobQueue7GetSizeEv: 0xA59ABB3B
+          _ZN3paf6thread8JobQueue8Execute2Ev: 0x90A23616
+          _ZN3paf6thread8JobQueueC1EPKcPNS1_3OptE: 0xEEDBA99E
+          _ZN3paf6thread8JobQueueC2EPKcPNS1_3OptE: 0x7A98D9E5
+          _ZN3paf6thread8JobQueueD1Ev: 0x1ABA2C42
+          _ZN3paf6thread8JobQueueD2Ev: 0x2CA36E35
           _ZN3paf6thread8SyncCall4PushEPFvPvES2_: 0x004445E7
           _ZN3paf6thread8SyncCall7ExecuteEv: 0x58876337
           _ZN3paf6thread8SyncCallC1EPKc: 0x465970E2
@@ -248,14 +381,21 @@ modules:
           _ZN3paf6thread9ThreadOptC2Ev: 0xCC65DF88
         variables:
           _ZN3paf6thread5Queue17s_mainThreadQueueE: 0x83CE85DD
+          _ZN3paf6thread8JobQueue17s_defaultJobQueueE: 0x83970927
           _ZN3paf6thread8SyncCall20s_mainThreadSyncCallE: 0x11807592
       ScePafToplevel:
         nid: 0x4D9A9DD0
         functions:
-          _ZN3paf6Plugin10FindByNameEPKc: 0x004D98CC
           _ZN3paf6Plugin13SetRootWidgetEPNS_8Resource7ElementEPNS0_19RootWidgetInitParamE: 0x30B442D9
+          _ZN3paf6Plugin17TemplateInitParamC1Ev: 0x99300D8B
+          _ZN3paf6Plugin19GetRootWidgetByHashEPNS_8Resource7ElementE: 0xE1DC7DF5
           _ZN3paf6Plugin19RootWidgetInitParamC1Ev: 0x34FE1331
+          _ZN3paf6Plugin21AddWidgetFromTemplateEPNS_6widget6WidgetEPNS_8Resource7ElementEPNS0_17TemplateInitParamE: 0xAB0DB9B0
+          _ZN3paf6Plugin9GetByNameEPKc: 0x004D98CC
           _ZN3paf9Framework10LoadPluginEPNS0_15PluginInitParamEPFvPNS_6PluginEES6_: 0xBE479650
+          _ZN3paf9Framework11GetInstanceEv: 0xF72FC59E
+          _ZN3paf9Framework11LoadTextureEPNS_8graphics7TextureEPS0_PNS_8Resource7ElementE: 0x7191797C
+          _ZN3paf9Framework13GetRootWidgetEv: 0x2FB738A8
           _ZN3paf9Framework15LoadPluginAsyncEPNS0_15PluginInitParamEPFvPNS_6PluginEES6_: 0xF702E40A
           _ZN3paf9Framework15PluginInitParamC1Ev: 0x400F84CE
           _ZN3paf9Framework15PluginInitParamC2Ev: 0x58C1A580
@@ -263,6 +403,7 @@ modules:
           _ZN3paf9Framework16_LoadPluginAsyncEPNS0_15PluginInitParamEPFvPNS_6PluginEES6_: 0xF975994E
           _ZN3paf9Framework17ExitRenderingLoopEv: 0x9A4B0DC4
           _ZN3paf9Framework18EnterRenderingLoopEv: 0x12E33958
+          _ZN3paf9Framework18GetApplicationModeEv: 0x592F13C6
           _ZN3paf9Framework18LoadCommonResourceEPFvvE: 0x947332B7
           _ZN3paf9Framework18LoadCommonResourceEPNS0_23CommonResourceInitParamEPFvvE: 0x56182FBF
           _ZN3paf9Framework21GetFwLangBySystemLangEj: 0x1AEDE4E0
@@ -270,6 +411,8 @@ modules:
           _ZN3paf9Framework23CommonResourceInitParamC2Ev: 0x99DD7850
           _ZN3paf9Framework23LoadCommonResourceAsyncEPFvvE: 0x3F0DB1BF
           _ZN3paf9Framework23LoadCommonResourceAsyncEPNS0_23CommonResourceInitParamEPFvvE: 0x9E5E0C9C
+          _ZN3paf9Framework25InitializeDefaultJobQueueEv: 0x7C624212
+          _ZN3paf9Framework28GetDefaultGraphicsMemoryPoolEv: 0xA0896F7F
           _ZN3paf9Framework9InitParam17LoadDefaultParamsEv: 0x907BA948
           _ZN3paf9Framework9InitParamC1Ev: 0xA5560E60
           _ZN3paf9FrameworkC1EPNS0_9InitParamE: 0xE2860A99
@@ -280,18 +423,202 @@ modules:
       ScePafWidget:
         nid: 0x073F8C68
         functions:
-          _ZN3paf2ui5Label7SetTextEPNS_7WStringE: 0x922FF349
-          _ZN3paf2ui5LabelC1EPNS0_6WidgetEi: 0x5C2962E1
-          _ZN3paf2ui5LabelC2EPNS0_6WidgetEi: 0x0FF7D929
-          _ZN3paf2ui5LabelD1Ev: 0xD9231C26
-          _ZN3paf2ui5LabelD2Ev: 0x8722C2F6
-          _ZN3paf2ui6Widget10FindByHashEPNS_8Resource7ElementEj: 0x9D304F4A
-          _ZN3paf2ui6Widget11SetFontSizeEfijj: 0x39B15B98
-          _ZN3paf2ui6Widget11SetPositionEP11SceFVector4fiiiii: 0xE29AB31F
-          _ZN3paf2ui6Widget21RegisterEventCallbackEiPNS1_13EventCallbackEi: 0xFB7FE189
-          _ZN3paf2ui6Widget23UnregisterEventCallbackEiii: 0xB98D49AD
-          _ZN3paf2ui6Widget25RegisterLoopEventCallbackEiPNS1_13EventCallbackE: 0x6E3EEF4E
-          _ZN3paf2ui6Widget7SetSizeEP11SceFVector4fiiiii: 0x046AA07D
-          _ZN3paf2ui6Widget8SetColorENS1_5Color4TypeEiiPKS2_: 0xCD20EF38
-          _ZN3paf2ui6Widget9AddEffectEii: 0x7602488B
-          _ZN3paf2ui6Widget9SetOptionENS1_6OptionEiii: 0xF2A2E2E6
+          _ZN3paf6widget11AppIconBaseC1EPNS0_6WidgetEi: 0x2D4FBF97
+          _ZN3paf6widget11AppIconBaseC2EPNS0_6WidgetEi: 0xCBB40BFB
+          _ZN3paf6widget11ImageButtonC1EPNS0_6WidgetEi: 0x1F8C6717
+          _ZN3paf6widget11ImageButtonC2EPNS0_6WidgetEi: 0xBB2570E1
+          _ZN3paf6widget11ImageButtonD0Ev: 0x4F6A3FEE
+          _ZN3paf6widget11ImageButtonD1Ev: 0x66722DFA
+          _ZN3paf6widget11ImageButtonD2Ev: 0x7AECDD95
+          _ZN3paf6widget11PlaneButtonC1EPNS0_6WidgetEi: 0x7A34D477
+          _ZN3paf6widget11PlaneButtonC2EPNS0_6WidgetEi: 0xA6EE275A
+          _ZN3paf6widget11ProgressBarC1EPNS0_6WidgetEi: 0x8C227A15
+          _ZN3paf6widget11ProgressBarC2EPNS0_6WidgetEi: 0xEC1B845D
+          _ZN3paf6widget11ProgressBarD0Ev: 0x4C42311C
+          _ZN3paf6widget11ProgressBarD1Ev: 0x76449651
+          _ZN3paf6widget11ProgressBarD2Ev: 0x71F4BE03
+          _ZN3paf6widget11RadioButtonC1EPNS0_6WidgetEi: 0xCA4A826C
+          _ZN3paf6widget11RadioButtonC2EPNS0_6WidgetEi: 0x0D494399
+          _ZN3paf6widget11ScrollBar2DC1EPNS0_6WidgetEi: 0xA13B217C
+          _ZN3paf6widget11ScrollBar2DC2EPNS0_6WidgetEi: 0x2C1DDA7E
+          _ZN3paf6widget11ScrollBar2DD0Ev: 0x30C8D581
+          _ZN3paf6widget11ScrollBar2DD1Ev: 0x8A373B41
+          _ZN3paf6widget11ScrollBar2DD2Ev: 0xCBC08650
+          _ZN3paf6widget12CornerButtonC1EPNS0_6WidgetEi: 0x9AF9A420
+          _ZN3paf6widget12CornerButtonC2EPNS0_6WidgetEi: 0x5AEB4C96
+          _ZN3paf6widget12CornerButtonD0Ev: 0x0893AE97
+          _ZN3paf6widget12CornerButtonD1Ev: 0x565D6895
+          _ZN3paf6widget12CornerButtonD2Ev: 0xF3DC2331
+          _ZN3paf6widget13BusyIndicator11SetBallSizeEf: 0xD7D7712F
+          _ZN3paf6widget13BusyIndicator4StopEv: 0x73D27A1B
+          _ZN3paf6widget13BusyIndicator5StartEv: 0x04310E14
+          _ZN3paf6widget13BusyIndicatorC1EPNS0_6WidgetEi: 0x93174EC7
+          _ZN3paf6widget13BusyIndicatorC2EPNS0_6WidgetEi: 0x196FE988
+          _ZN3paf6widget13BusyIndicatorD0Ev: 0x5456D1F9
+          _ZN3paf6widget13BusyIndicatorD1Ev: 0x997E220E
+          _ZN3paf6widget13BusyIndicatorD2Ev: 0xEEE62010
+          _ZN3paf6widget13ImageSlidebarC1EPNS0_6WidgetEi: 0x01730380
+          _ZN3paf6widget13ImageSlidebarC2EPNS0_6WidgetEi: 0x749FF603
+          _ZN3paf6widget13ImageSlidebarD0Ev: 0x35689523
+          _ZN3paf6widget13ImageSlidebarD1Ev: 0xF5E9D5F2
+          _ZN3paf6widget13ImageSlidebarD2Ev: 0xFE05C9F5
+          _ZN3paf6widget13SlidingDrawerC1EPNS0_6WidgetEi: 0x815A26F6
+          _ZN3paf6widget13SlidingDrawerC2EPNS0_6WidgetEi: 0x102AD75B
+          _ZN3paf6widget13SlidingDrawerD0Ev: 0x731E18A6
+          _ZN3paf6widget13SlidingDrawerD1Ev: 0xD76769AC
+          _ZN3paf6widget13SlidingDrawerD2Ev: 0x62FF22E7
+          _ZN3paf6widget13SpeechBalloonC1EPNS0_6WidgetEi: 0xF25F3B4A
+          _ZN3paf6widget14ScrollBarTouchC1EPNS0_6WidgetEi: 0x388F18D0
+          _ZN3paf6widget14ScrollBarTouchC2EPNS0_6WidgetEi: 0x83A1A81C
+          _ZN3paf6widget14ScrollBarTouchD0Ev: 0x1FF1A14C
+          _ZN3paf6widget14ScrollBarTouchD1Ev: 0xE26E4241
+          _ZN3paf6widget14ScrollBarTouchD2Ev: 0x3CAAF9FF
+          _ZN3paf6widget15CompositeButtonC1EPNS0_6WidgetEi: 0xA5FDA893
+          _ZN3paf6widget15CompositeDrawerC1EPNS0_6WidgetEi: 0x3E183ACE
+          _ZN3paf6widget15CompositeDrawerC2EPNS0_6WidgetEi: 0x47CEF730
+          _ZN3paf6widget15CompositeDrawerD0Ev: 0x1617B198
+          _ZN3paf6widget15CompositeDrawerD1Ev: 0xE28A3C09
+          _ZN3paf6widget15CompositeDrawerD2Ev: 0x070A2502
+          _ZN3paf6widget16ProgressBarTouchC1EPNS0_6WidgetEi: 0x8C39024C
+          _ZN3paf6widget16ProgressBarTouchC2EPNS0_6WidgetEi: 0x805C35B2
+          _ZN3paf6widget16ProgressBarTouchD0Ev: 0xD13E0F08
+          _ZN3paf6widget16ProgressBarTouchD1Ev: 0x41ED9224
+          _ZN3paf6widget16ProgressBarTouchD2Ev: 0x35FA4988
+          _ZN3paf6widget16ScrollViewParentC1EPNS0_6WidgetEi: 0x46DE1318
+          _ZN3paf6widget16ScrollViewParentC2EPNS0_6WidgetEi: 0xCC28BB62
+          _ZN3paf6widget16ScrollViewParentD0Ev: 0x1EA76BAE
+          _ZN3paf6widget16ScrollViewParentD1Ev: 0xE024C815
+          _ZN3paf6widget16ScrollViewParentD2Ev: 0x3EB61E47
+          _ZN3paf6widget3BoxC1EPNS0_6WidgetEi: 0xBE20C3D9
+          _ZN3paf6widget3BoxC2EPNS0_6WidgetEi: 0x5CB29873
+          _ZN3paf6widget3BoxD0Ev: 0xBA7ACC3E
+          _ZN3paf6widget3BoxD1Ev: 0xA63BF15B
+          _ZN3paf6widget3BoxD2Ev: 0x467E5FD1
+          _ZN3paf6widget4TextC1EPNS0_6WidgetEi: 0x5C2962E1
+          _ZN3paf6widget4TextC2EPNS0_6WidgetEi: 0x0FF7D929
+          _ZN3paf6widget4TextD0Ev: 0x8722C2F6
+          _ZN3paf6widget4TextD1Ev: 0xD9231C26
+          _ZN3paf6widget4TextD2Ev: 0x28251DCB
+          _ZN3paf6widget6Button12SetThresholdEii: 0x16479BA7
+          _ZN3paf6widget6ButtonC1EPNS0_6WidgetEi: 0xD00B2806
+          _ZN3paf6widget6ButtonC2EPNS0_6WidgetEi: 0x859C45CC
+          _ZN3paf6widget6ButtonD0Ev: 0x4E3FCEFA
+          _ZN3paf6widget6ButtonD1Ev: 0x99E67510
+          _ZN3paf6widget6ButtonD2Ev: 0x110033D4
+          _ZN3paf6widget6DialogC1EPNS0_6WidgetEi: 0xDDA9E9A3
+          _ZN3paf6widget6DialogC2EPNS0_6WidgetEi: 0x97EA03F1
+          _ZN3paf6widget6DialogD0Ev: 0x7FD0AA07
+          _ZN3paf6widget6DialogD1Ev: 0xB0C077BF
+          _ZN3paf6widget6DialogD2Ev: 0x23457800
+          _ZN3paf6widget6Widget10TypeButtonEv: 0x240106D7
+          _ZN3paf6widget6Widget10TypeDialogEv: 0x644CA867
+          _ZN3paf6widget6Widget11SetFontSizeEfijj: 0x39B15B98
+          _ZN3paf6widget6Widget11SetPositionEPK11SceFVector4fiiiii: 0xE29AB31F
+          _ZN3paf6widget6Widget11TypeNumSpinEv: 0xE055FBA3
+          _ZN3paf6widget6Widget11TypeTextBoxEv: 0xBE985097
+          _ZN3paf6widget6Widget12AssignButtonEj: 0x21125870
+          _ZN3paf6widget6Widget12SetDimFactorEfiiiii: 0x543F0959
+          _ZN3paf6widget6Widget12TypeCheckBoxEv: 0x8EC2F0BF
+          _ZN3paf6widget6Widget12TypeFileListEv: 0x8A33FF2B
+          _ZN3paf6widget6Widget12TypeItemSpinEv: 0x9B72616F
+          _ZN3paf6widget6Widget12TypeListItemEv: 0xCB4AF8D4
+          _ZN3paf6widget6Widget12TypeListViewEv: 0x32B98BD0
+          _ZN3paf6widget6Widget12TypePageTurnEv: 0x2F886BFA
+          _ZN3paf6widget6Widget12TypeRadioBoxEv: 0xF7086918
+          _ZN3paf6widget6Widget12TypeRichTextEv: 0x7A10B2CE
+          _ZN3paf6widget6Widget12TypeSlideBarEv: 0x63E55B87
+          _ZN3paf6widget6Widget12TypeSpinBaseEv: 0xDD6D6411
+          _ZN3paf6widget6Widget13GetChildByNumEj: 0xB8CA08DA
+          _ZN3paf6widget6Widget13PlayAnimationENS1_9AnimationEPFviPS1_iPvES4_: 0x44B22ACA
+          _ZN3paf6widget6Widget13TypeAppIcon2DEv: 0xB102817A
+          _ZN3paf6widget6Widget13TypeScrollBarEv: 0xB3878D10
+          _ZN3paf6widget6Widget14GetChildByHashEPNS_8Resource7ElementEj: 0x9D304F4A
+          _ZN3paf6widget6Widget14SetFilterColorEPKNS1_5ColorEfiiiii: 0x627CDA4E
+          _ZN3paf6widget6Widget15SetTextWithFlag5EPNS_7WStringEi: 0x922FF349
+          _ZN3paf6widget6Widget15TypeAppIconBaseEv: 0xCDA6ACBE
+          _ZN3paf6widget6Widget15TypeImageButtonEv: 0xBCDBE29A
+          _ZN3paf6widget6Widget15TypePlaneButtonEv: 0x75D4C5F0
+          _ZN3paf6widget6Widget15TypeProgressBarEv: 0x064AF4AA
+          _ZN3paf6widget6Widget15TypeRadioButtonEv: 0x9D26B32A
+          _ZN3paf6widget6Widget15TypeScrollBar2DEv: 0x00714ACB
+          _ZN3paf6widget6Widget16TypeCornerButtonEv: 0x8E8EA698
+          _ZN3paf6widget6Widget17SetLimitedFpsModeEi: 0x66847A11
+          _ZN3paf6widget6Widget17TypeBusyIndicatorEv: 0xDBCC58BB
+          _ZN3paf6widget6Widget17TypeImageSlidebarEv: 0xBEEE0DCA
+          _ZN3paf6widget6Widget17TypeSlidingDrawerEv: 0x167D054C
+          _ZN3paf6widget6Widget18TypeScrollBarTouchEv: 0xF64A59EF
+          _ZN3paf6widget6Widget19TypeCompositeButtonEv: 0xE3AFE3D2
+          _ZN3paf6widget6Widget19TypeCompositeDrawerEv: 0x8A9DDAE6
+          _ZN3paf6widget6Widget20PlayAnimationReverseENS1_9AnimationEPFviPS1_iPvES4_: 0xF1176ACC
+          _ZN3paf6widget6Widget20TypeProgressBarTouchEv: 0xD3057352
+          _ZN3paf6widget6Widget20TypeScrollViewParentEv: 0xDA94A4AE
+          _ZN3paf6widget6Widget21RegisterEventCallbackEiPNS1_13EventCallbackEi: 0xFB7FE189
+          _ZN3paf6widget6Widget23UnregisterEventCallbackEiii: 0xB98D49AD
+          _ZN3paf6widget6Widget25RegisterLoopEventCallbackEiPNS1_13EventCallbackE: 0x6E3EEF4E
+          _ZN3paf6widget6Widget27UnregisterLoopEventCallbackEi: 0x8F09D12E
+          _ZN3paf6widget6Widget6EnableEi: 0x8F1A3A59
+          _ZN3paf6widget6Widget7DisableEi: 0xA1173889
+          _ZN3paf6widget6Widget7SetSizeEPK11SceFVector4fiiiii: 0x046AA07D
+          _ZN3paf6widget6Widget7SetZoomEPK11SceFVector4fiiiii: 0xEE467CF8
+          _ZN3paf6widget6Widget7TypeBoxEv: 0x3A28435A
+          _ZN3paf6widget6Widget8GetColorENS1_5Color4TypeEiPS2_: 0xF3281F1C
+          _ZN3paf6widget6Widget8SetColorENS1_5Color4TypeEiiPKS2_: 0xCD20EF38
+          _ZN3paf6widget6Widget8TypeTextEv: 0x45AA2058
+          _ZN3paf6widget6Widget9GetParentEv: 0xCFA1EB7A
+          _ZN3paf6widget6Widget9SetAdjustEiii: 0xCCD58ACB
+          _ZN3paf6widget6Widget9SetEffectENS1_6EffectEi: 0x7602488B
+          _ZN3paf6widget6Widget9SetOptionENS1_6OptionEiii: 0xF2A2E2E6
+          _ZN3paf6widget6Widget9TypePlaneEv: 0xE3700EE7
+          _ZN3paf6widget7NumSpinC1EPNS0_6WidgetEi: 0xD1C8B72E
+          _ZN3paf6widget7TextBoxC1EPNS0_6WidgetEi: 0x931809E8
+          _ZN3paf6widget7TextBoxC2EPNS0_6WidgetEi: 0x7519CFD9
+          _ZN3paf6widget7TextBoxD0Ev: 0x1422C3C8
+          _ZN3paf6widget7TextBoxD1Ev: 0x00F08AA4
+          _ZN3paf6widget7TextBoxD2Ev: 0xA2C93CD2
+          _ZN3paf6widget8CheckBoxC1EPNS0_6WidgetEi: 0xB58B9830
+          _ZN3paf6widget8CheckBoxC2EPNS0_6WidgetEi: 0xF194BCFF
+          _ZN3paf6widget8FileListC1EPNS0_6WidgetEi: 0xFDBD3FCE
+          _ZN3paf6widget8FileListD0Ev: 0xAB56D0A8
+          _ZN3paf6widget8FileListD1Ev: 0x25175236
+          _ZN3paf6widget8FileListD2Ev: 0xE1A3CAF5
+          _ZN3paf6widget8ItemSpinC1EPNS0_6WidgetEi: 0x5A3142CD
+          _ZN3paf6widget8ItemSpinC2EPNS0_6WidgetEi: 0xA4AFCC4B
+          _ZN3paf6widget8ListItemC1EPNS0_6WidgetEi: 0xF49CC5B3
+          _ZN3paf6widget8ListItemC2EPNS0_6WidgetEi: 0x7DFC7EE6
+          _ZN3paf6widget8ListItemD0Ev: 0x81A2F165
+          _ZN3paf6widget8ListItemD1Ev: 0x56621852
+          _ZN3paf6widget8ListItemD2Ev: 0xD2ECBA17
+          _ZN3paf6widget8ListViewC1EPNS0_6WidgetEi: 0xB492AC24
+          _ZN3paf6widget8ListViewC2EPNS0_6WidgetEi: 0xB23FF29F
+          _ZN3paf6widget8ListViewD0Ev: 0xE9894F93
+          _ZN3paf6widget8ListViewD1Ev: 0x380AF118
+          _ZN3paf6widget8ListViewD2Ev: 0xB82D0601
+          _ZN3paf6widget8PageTurnC1EPNS0_6WidgetEi: 0xFAB2F12D
+          _ZN3paf6widget8PageTurnC2EPNS0_6WidgetEi: 0x603C3B86
+          _ZN3paf6widget8PageTurnD0Ev: 0x8A9E7746
+          _ZN3paf6widget8PageTurnD1Ev: 0x4CB32950
+          _ZN3paf6widget8PageTurnD2Ev: 0x78E7525C
+          _ZN3paf6widget8RadioBoxC1EPNS0_6WidgetEi: 0x6038BEDA
+          _ZN3paf6widget8RadioBoxC2EPNS0_6WidgetEi: 0x895230B6
+          _ZN3paf6widget8RichTextC1EPNS0_6WidgetEi: 0x83AFCA07
+          _ZN3paf6widget8RichTextC2EPNS0_6WidgetEi: 0x0F972691
+          _ZN3paf6widget8RichTextD0Ev: 0x8DD27642
+          _ZN3paf6widget8RichTextD1Ev: 0xAAAB3D3A
+          _ZN3paf6widget8RichTextD2Ev: 0xC0821FEB
+          _ZN3paf6widget8SlideBarC1EPNS0_6WidgetEi: 0x2A49B44F
+          _ZN3paf6widget8SlideBarC2EPNS0_6WidgetEi: 0xD848DC3E
+          _ZN3paf6widget8SlideBarD0Ev: 0x471E0031
+          _ZN3paf6widget8SlideBarD1Ev: 0xD10169EB
+          _ZN3paf6widget8SlideBarD2Ev: 0x4A70528D
+          _ZN3paf6widget8SpinBaseC1EPNS0_6WidgetEi: 0x6A8DA1E8
+          _ZN3paf6widget8SpinBaseC2EPNS0_6WidgetEi: 0xF927A409
+          _ZN3paf6widget9AppIcon2DC1EPNS0_6WidgetEi: 0xA80A895D
+          _ZN3paf6widget9AppIcon2DC2EPNS0_6WidgetEi: 0xA95F67A6
+          _ZN3paf6widget9AppIcon2DD0Ev: 0x0EF50FDE
+          _ZN3paf6widget9AppIcon2DD1Ev: 0xE0EF522B
+          _ZN3paf6widget9AppIcon2DD2Ev: 0xBB9EA627
+          _ZN3paf6widget9ScrollBarC1EPNS0_6WidgetEi: 0x3564FD90
+          _ZN3paf6widget9ScrollBarC2EPNS0_6WidgetEi: 0xAD2346F1
+          _ZN3paf6widget9ScrollBarD0Ev: 0x511AE382
+          _ZN3paf6widget9ScrollBarD1Ev: 0x006BF9D8
+          _ZN3paf6widget9ScrollBarD2Ev: 0x9CCC2A09

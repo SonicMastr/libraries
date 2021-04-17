@@ -26,18 +26,6 @@ namespace paf {
 
 		};
 
-		class ThreadOpt
-		{
-		public:
-
-			ThreadOpt();
-
-			SceUInt32 attr;
-			SceInt32 cpuAffinityMask;
-			SceKernelMemBlockType stackMemoryType;
-
-		};
-
 		class Thread
 		{
 		public:
@@ -47,8 +35,22 @@ namespace paf {
 				SCE_PAF_ERROR_THREAD_THREAD_ALREADY_STARTED = 0x80AF0702
 			};
 
+			class Opt
+			{
+			public:
 
-			Thread(SceInt32 initPriority, SceSize stackSize, const char *pName, const ThreadOpt *opt = SCE_NULL);
+				Opt();
+
+				~Opt() { };
+
+				SceUInt32 attr;
+				SceInt32 cpuAffinityMask;
+				SceKernelMemBlockType stackMemoryType;
+
+			};
+
+
+			Thread(SceInt32 initPriority, SceSize stackSize, const char *pName, const Opt *opt = SCE_NULL);
 
 			virtual ~Thread();
 
@@ -202,7 +204,7 @@ namespace paf {
 
 			SceVoid Execute();
 
-			SceUInt32 Size();
+			SceUInt32 GetSize();
 
 		private:
 
@@ -231,6 +233,99 @@ namespace paf {
 			SceUChar8 m_work[0x10];
 
 		};
+
+		//Not usable yet
+		/*class JobQueue
+		{
+		public:
+
+			enum Error
+			{
+				SCE_PAF_ERROR_THREAD_JOBQUEUE_ALREADY_PUSHED = 0x80AF0901,
+				SCE_PAF_ERROR_THREAD_JOBQUEUE_UNK = 0x80AF0902
+			};
+
+			class Opt
+			{
+			public:
+
+				Opt();
+
+				~Opt() { };
+
+				SceInt32 workerPriority;
+				SceSize workerStackSize;
+				SceUInt32 workerNum;
+				Thread::Opt *workerOpt;
+
+			};
+
+			class Item;
+
+			class Request
+			{
+			public:
+
+				typedef void(*RequestEntryFunction)(Item *job);
+
+				Item *job;
+				SceInt32 unk_04;
+				SceInt32 unk_08;
+				RequestEntryFunction entry;
+
+			};
+
+			class Item
+			{
+			public:
+
+				Item(const char *pName);
+
+				virtual ~Item();
+
+				virtual SceVoid SetSomething();
+
+				virtual SceVoid EntryFunction() = 0;
+
+				virtual SceVoid FinishCallback() = 0;
+
+				Request *req;
+
+			private:
+
+				SceUChar8 m_work[0x24];
+
+			};
+
+			typedef void(*QueueEntryFunction)(void *pArgBlock);
+
+			JobQueue(const char *pName, Opt *opt = SCE_NULL);
+
+			~JobQueue();
+
+			static JobQueue *s_defaultJobQueue;
+
+			static SceVoid CreateDefaultJobQueue(Opt *opt);
+
+			static SceVoid DeleteDefaultJobQueue();
+
+			SceInt32 Push(Item *queueItem);
+
+			SceVoid Join();
+
+			SceUInt32 GetSize();
+
+			SceVoid ChangeWorkerPriority(SceInt32 priority);
+
+			SceVoid Execute();
+
+			SceVoid Execute2();
+
+		private:
+
+			SceUChar8 m_work[0x2C];
+
+		};*/
 	}
 }
 

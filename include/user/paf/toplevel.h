@@ -6,11 +6,18 @@
 #define _VDSUITE_USER_PAF_TOPLEVEL_H
 
 #include <kernel.h>
-#include <paf/common.h>
 #include <paf/resource.h>
-#include <paf/widget.h>
 
 namespace paf {
+
+	namespace graphics {
+		class Texture;
+		class MemoryPool;
+	}
+
+	namespace widget {
+		class Widget;
+	}
 
 	class Plugin
 	{
@@ -28,7 +35,7 @@ namespace paf {
 
 			RootWidgetInitParam();
 
-			~RootWidgetInitParam() { } ;
+			~RootWidgetInitParam() { };
 
 			SceInt32 unk_00;
 			SceInt32 unk_04;
@@ -36,13 +43,36 @@ namespace paf {
 			SceUChar8 unk_0C[0x20];
 		};
 
+		class TemplateInitParam
+		{
+		public:
+
+			TemplateInitParam();
+
+			~TemplateInitParam() { };
+
+			SceInt32 unk_00;
+			SceInt32 unk_04;
+		};
+
 		static Plugin *GetByName(const char *pluginName);
 
-		ui::Widget *SetRootWidget(paf::Resource::Element *widgetInfo, RootWidgetInitParam *initParam);
+		static SceVoid LoadTexture(paf::graphics::Texture *tex, Plugin *plugin, paf::Resource::Element *textureSearchParam);
+
+		paf::widget::Widget *SetRootWidget(paf::Resource::Element *widgetInfo, RootWidgetInitParam *initParam);
+
+		paf::widget::Widget *GetRootWidgetByHash(paf::Resource::Element *widgetInfo);
+
+		SceInt32 AddWidgetFromTemplate(paf::widget::Widget *targetRoot, paf::Resource::Element *templateSearchParam, paf::Plugin::TemplateInitParam *param);
+
+		SceUChar8 unk_00[0x4];
+		char *name;
+		SceUChar8 unk_08[0xA8];
+		Resource *resource;
 
 	private:
 
-		SceUChar8 m_unk[0x4]; //size is unknown
+		SceUChar8 m_unk_B4[0x4]; //size is unknown
 
 	};
 
@@ -83,8 +113,8 @@ namespace paf {
 
 			SceUInt32 decodeHeapSize;
 			SceUInt32 defaultPluginHeapSize;
-			SceInt32 unused_68;
-			SceInt32 unused_6C;
+			SceInt32 screenWidth; //unused
+			SceInt32 sceenHeight; //unused
 			ApplicationMode applicationMode;
 			SceInt32 optionalFeatureFlags;
 			SceInt32 language;
@@ -126,7 +156,15 @@ namespace paf {
 			paf::Plugin::PluginCB unloadCB2;
 			paf::String resourcePath;
 
-			SceUChar8 unk_38[0x5C];
+			SceUChar8 unk_38[0x20];
+
+			SceInt32 unk_58;
+
+			SceUChar8 unk_5C[0xC];
+
+			paf::String pluginPath;
+
+			SceUChar8 unk_74[0x20];
 		};
 
 		typedef void(*LoadCRFinishCallback)();
@@ -137,11 +175,19 @@ namespace paf {
 
 		~Framework();
 
+		static SceVoid InitializeDefaultJobQueue();
+
 		static SceUInt32 GetFwLangBySystemLang(SceUInt32 systemLanguage);
 
 		static SceVoid LoadPluginAsync(PluginInitParam *initParam, LoadPluginFinishCallback finishCallback = SCE_NULL, UnloadPluginFinishCallback unloadFinishCallback = SCE_NULL);
 
 		static SceVoid LoadPlugin(PluginInitParam *initParam, LoadPluginFinishCallback finishCallback = SCE_NULL, UnloadPluginFinishCallback unloadFinishCallback = SCE_NULL);
+
+		static Framework *GetInstance();
+
+		static paf::graphics::MemoryPool *GetDefaultGraphicsMemoryPool();
+
+		static SceVoid LoadTexture(paf::graphics::Texture *tex, Framework *fw, paf::Resource::Element *searchParam);
 
 		SceVoid _LoadPluginAsync(PluginInitParam *initParam, LoadPluginFinishCallback finishCallback = SCE_NULL, UnloadPluginFinishCallback unloadFinishCallback = SCE_NULL);
 
@@ -159,10 +205,17 @@ namespace paf {
 
 		Plugin *FindPluginByName(const char *pluginName, SceBool enableSomeCheck = SCE_FALSE);
 
-	private:
+		ApplicationMode GetApplicationMode();
 
-		SceUChar8 m_work[0x7C];
+		SceInt32 Test2(SceFloat32, SceInt32, SceInt32);
 
+		paf::widget::Widget *GetRootWidget();
+
+		SceUChar8 unk_00[0x1C];
+
+		Plugin *crPlugin;
+
+		SceUChar8 unk_20[0x5C];
 	};
 }
 

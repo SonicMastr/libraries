@@ -13,6 +13,10 @@ namespace paf {
 	class String;
 	class WString;
 
+	namespace widget {
+		class Widget;
+	}
+
 	namespace common {
 
 		enum CesFlags
@@ -23,6 +27,8 @@ namespace paf {
 			AllowSrcBufferEnd	= 0x10
 		};
 
+		static paf::widget::Widget *WidgetStateTransition(SceFloat32 delay, paf::widget::Widget *widget, SceUInt32 animationId, SceBool disableOnEnd, SceBool skipAnimation);
+		static paf::widget::Widget *WidgetStateTransitionReverse(SceFloat32 delay, paf::widget::Widget *widget, SceUInt32 animationId, SceBool disableOnEnd, SceBool skipAnimation);
 	}
 
 
@@ -30,14 +36,17 @@ namespace paf {
 	{
 	public:
 
-		String() : data(SCE_NULL), length(0)
-		{
+		String(const char *str);
 
-		}
+		String(const char *str, SceSize strLength);
+
+		String(String *src);
+
+		String();
 
 		~String()
 		{
-			if (data != SCE_NULL)
+			if (length != 0 && *data != 0)
 				delete data;
 		}
 
@@ -56,12 +65,11 @@ namespace paf {
 			if (data == s)
 				return this;
 
-			if (data != SCE_NULL)
+			if (*data != 0)
 				delete data;
 
 			if (srcLength == 0 || s == SCE_NULL || s[0] == 0) {
-				data = SCE_NULL;
-				length = 0;
+				String();
 				return this;
 			}
 
@@ -71,12 +79,13 @@ namespace paf {
 			data[length] = 0;
 
 			return this;
-		}
+		};
 
 		String *Set(const char *s)
 		{
-			return Set(s, sce_paf_strlen(s));
-		}
+			Set(s, sce_paf_strlen(s));
+			return this;
+		};
 
 		String *operator=(const String *s)
 		{
@@ -84,8 +93,7 @@ namespace paf {
 				return this;
 
 			if (s->length == 0) {
-				data = SCE_NULL;
-				length = 0;
+				String();
 				return this;
 			}
 
@@ -126,9 +134,9 @@ namespace paf {
 
 		SceVoid Clear()
 		{
-			if (data != SCE_NULL) {
+			if (length != 0 && data != SCE_NULL) {
 				delete data;
-				data = SCE_NULL;
+				String();
 			}
 		}
 
@@ -150,9 +158,39 @@ namespace paf {
 
 		}
 
+		WString(const SceWChar16 *s, SceSize srcLength) : data(SCE_NULL), length(0)
+		{
+			if (srcLength == 0 || s == SCE_NULL || s[0] == 0) {
+				return;
+			}
+
+			data = new SceWChar16[srcLength + 1];
+			length = srcLength;
+			sce_paf_wmemcpy((wchar_t*)data, (wchar_t*)s, length);
+			data[length] = 0;
+
+			return;
+		}
+
+		WString(const SceWChar16 *s) : data(SCE_NULL), length(0)
+		{
+			SceSize srcLength = sce_paf_wcslen((wchar_t*)s);
+
+			if (srcLength == 0 || s == SCE_NULL || s[0] == 0) {
+				return;
+			}
+
+			data = new SceWChar16[srcLength + 1];
+			length = srcLength;
+			sce_paf_wmemcpy((wchar_t*)data, (wchar_t*)s, length);
+			data[length] = 0;
+
+			return;
+		}
+
 		~WString()
 		{
-			if (data != SCE_NULL)
+			if (length != 0 && data != SCE_NULL)
 				delete data;
 		}
 
@@ -186,12 +224,13 @@ namespace paf {
 			data[length] = 0;
 
 			return this;
-		}
+		};
 
 		WString *Set(const SceWChar16 *s)
 		{
-			return Set(s, sce_paf_wcslen((wchar_t*)s));
-		}
+			Set(s, sce_paf_wcslen((wchar_t *)s));
+			return this;
+		};
 
 		WString *operator=(const WString *s)
 		{
@@ -241,8 +280,11 @@ namespace paf {
 
 		SceVoid Clear()
 		{
-			if (data != SCE_NULL)
+			if (length != 0 && data != SCE_NULL) {
 				delete data;
+				length = 0;
+				data = SCE_NULL;
+			}
 		}
 
 		SceWChar16 *data;
@@ -266,6 +308,8 @@ namespace paf {
 			~Utils();
 
 			static SceVoid AddMainThreadTask(MainThreadTaskEntryFunction entry, ScePVoid pArgBlock);
+
+			static SceVoid RemoveMainThreadTask(MainThreadTaskEntryFunction entry, ScePVoid pArgBlock);
 		};
 
 	}
