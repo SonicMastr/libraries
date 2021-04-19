@@ -61,6 +61,19 @@ int sceNpDrmGetFixedRifName(char *name, SceUInt64 aid);
  * @param[in]  license        - The pointer of license data. see:SceNpDrmLicense
  * @param[out] klicense       - The pointer of klicense output buffer. size is 0x10.
  * @param[out] flags          - The pointer of flags output.
+ * @param[out] lic_start_time - The pointer of license start time output.
+ * @param[out] lic_exp_time   - The pointer of license exp time output.
+ *
+ * @return 0 on success, < 0 on error.
+*/
+int sceNpDrmGetRifPspKey(const void *license, void *klicense, int *flags, SceUInt64 *lic_start_time, SceUInt64 *lic_exp_time);
+
+/**
+ * Get license key info
+ *
+ * @param[in]  license        - The pointer of license data. see:SceNpDrmLicense
+ * @param[out] klicense       - The pointer of klicense output buffer. size is 0x10.
+ * @param[out] flags          - The pointer of flags output.
  * @param[out] sku_flags      - The pointer of sku flags output.
  * @param[out] lic_start_time - The pointer of license start time output.
  * @param[out] lic_exp_time   - The pointer of license exp time output.
