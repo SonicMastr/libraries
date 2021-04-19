@@ -1,0 +1,13 @@
+modules:
+  SceNpKdc:
+    nid: 0x8486104C
+    libraries:
+      SceNpKdc:
+        nid: 0x52115CC3
+        functions:
+          sceNpKdcAbortReq: 0xC3B78C87
+          sceNpKdcActivateConsole: 0xD8903721
+          sceNpKdcDeactivateConsole: 0x23521D81
+          sceNpKdcGetProductRif: 0x78E56B9B
+          sceNpKdcInit: 0x26F8A1B9
+          sceNpKdcTerm: 0x06CB1007
