@@ -34,9 +34,14 @@ modules:
           sceNpDrmPresetRifProvisionalFlag: 0xC070FE89
           sceNpDrmPspEbootSigGen: 0xEF387FC4
           sceNpDrmPspEbootVerify: 0xB6CA3A2C
+          sceNpDrmReadActData: 0xD91C3BCE
           sceNpDrmRemoveActData: 0x8B85A509
           sceNpDrmUpdateAccountId: 0x116FC0D6
+          sceNpDrmUpdateActData: 0x077926F5
           sceNpDrmUpdateDebugSettings: 0xA91C7443
+          sceNpDrmVerifyRif: 0xFE7B17B6
+          sceNpDrmVerifyRifFull: 0xFF63672D
+          sceNpDrmWriteActData: 0x742EBAF4
       SceNpDrmPackage:
         nid: 0x88514DB2
         functions:
