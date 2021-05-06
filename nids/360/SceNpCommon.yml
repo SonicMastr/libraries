@@ -18,5 +18,6 @@ modules:
           sceNpCmpNpId: 0xFB8D82E5
           sceNpCmpNpIdInOrder: 0x6BC8150A
           sceNpCmpOnlineId: 0x8327C26F
+          sceNpGetEnvironment: 0xAD6403E0
           sceNpGetPlatformType: 0xE9A003DE
           sceNpSetPlatformType: 0xE807D0BC
