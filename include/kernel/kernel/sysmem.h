@@ -19,10 +19,13 @@ SCE_CDECL_BEGIN
 #define SCE_KERNEL_MEMBLOCK_TYPE_RW_UNK0                   0x6020D006
 
 typedef enum SceKernelAllocMemBlockAttr {
-	SCE_KERNEL_ALLOC_MEMBLOCK_ATTR_HAS_PADDR          = 0x00000002U,
+	SCE_KERNEL_ALLOC_MEMBLOCK_ATTR_HAS_VBASE          = 0x00000001U,
+	SCE_KERNEL_ALLOC_MEMBLOCK_ATTR_HAS_PBASE          = 0x00000002U,
+	SCE_KERNEL_ALLOC_MEMBLOCK_ATTR_HAS_EXTRA_LOW      = 0x00000008U,
+	SCE_KERNEL_ALLOC_MEMBLOCK_ATTR_HAS_EXTRA_HIGH     = 0x00000010U,
 	SCE_KERNEL_ALLOC_MEMBLOCK_ATTR_HAS_MIRROR_BLOCKID = 0x00000040U,
 	SCE_KERNEL_ALLOC_MEMBLOCK_ATTR_HAS_PID            = 0x00000080U,
-	SCE_KERNEL_ALLOC_MEMBLOCK_ATTR_HAS_PADDR_LIST     = 0x00001000U,
+	SCE_KERNEL_ALLOC_MEMBLOCK_ATTR_HAS_PVECTOR        = 0x00001000U,
 	SCE_KERNEL_ALLOC_MEMBLOCK_ATTR_ALLOW_PARTIAL_OP   = 0x04000000U
 } SceKernelAllocMemBlockAttr;
 
@@ -54,14 +57,14 @@ typedef struct SceKernelAllocMemBlockKernelOpt {
 	SceSize size;                   //!< sizeof(SceKernelAllocMemBlockKernelOpt)
 	SceUInt32 field_4;
 	SceUInt32 attr;                 //!< OR of SceKernelAllocMemBlockAttr
-	SceUInt32 field_C;
-	SceUInt32 paddr;
+	void *vbase;
+	void *pbase;
 	SceSize alignment;
 	SceUInt32 extraLow;
 	SceUInt32 extraHigh;
 	SceUInt32 mirror_blockid;
 	SceUID pid;
-	SceKernelPaddrList *paddr_list;
+	SceKernelPaddrList *pVector;
 	SceUInt32 field_2C;
 	SceUInt32 field_30;
 	SceUInt32 field_34;
