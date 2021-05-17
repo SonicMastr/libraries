@@ -43,6 +43,12 @@ modules:
         functions:
           sceFiosKernelOverlayAdd: 0x2607EE4C
           sceFiosKernelOverlayAddForProcess: 0x17E65A1C
+          sceFiosKernelOverlayDHChstatSync: 0x35E7E75C
+          sceFiosKernelOverlayDHCloseSync: 0xDD7627EC
+          sceFiosKernelOverlayDHOpenSync: 0x3B329E86
+          sceFiosKernelOverlayDHReadSync: 0x28E28A58
+          sceFiosKernelOverlayDHStatSync: 0x2649408B
+          sceFiosKernelOverlayDHSyncSync: 0x990F46A5
           sceFiosKernelOverlayGetInfo: 0x725E6817
           sceFiosKernelOverlayGetInfoForProcess: 0xF1762BC2
           sceFiosKernelOverlayGetList: 0xFF42AAF0
