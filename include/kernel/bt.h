@@ -250,67 +250,73 @@ typedef enum SceBtErrorCode {
 	SCE_BT_ERROR_JEDI_SNIFF_NOT_JEDI                            	 = (int)0x802F3602
 } SceBtErrorCode;
 
+#define SCE_BT_CLASS_COMPUTER	1
+#define SCE_BT_CLASS_PHONE		2
+#define SCE_BT_CLASS_HEADSET	3
+#define SCE_BT_CLASS_SPEAKER	4
+#define SCE_BT_CLASS_MOUSE		5
+#define SCE_BT_CLASS_KEYBOARD	6
+#define SCE_BT_CLASS_PRINTER	7
+#define SCE_BT_CLASS_GAMEPAD	8
+#define SCE_BT_CLASS_REMOTE		9
+
+#define SCE_BT_PROFILE_A2DP		0xC
+#define SCE_BT_PROFILE_AVRCP	0x30
+#define SCE_BT_PROFILE_HID		0xC0
+#define SCE_BT_PROFILE_HSP		0x30000
+
 typedef struct SceBtRegisteredInfo {
-	unsigned char  mac[6];
-	unsigned short unk0;
-	unsigned int   bt_class;
-	unsigned int   unk1;
-	unsigned int   unk2;
-	unsigned short vid;
-	unsigned short pid;
-	unsigned int   unk3;
-	unsigned int   unk4;
-	char           name[128];
-	unsigned char  unk5[0x60];
+	SceUInt64 mac;
+	SceUInt32 bt_class;
+	SceUInt32 bt_profile;
+	SceUInt32 unk10;
+	SceUInt16 vid;
+	SceUInt16 pid;
+	SceUInt32 unk18;
+	SceUInt32 unk1C;
+	char name[0x80];
+	char unkA0[0x60];
 } SceBtRegisteredInfo;
 
 typedef struct SceBtEvent {
-	union {
-		unsigned char data[0x10];
-		struct {
-			unsigned char  id;
-			unsigned char  unk1;
-			unsigned short unk2;
-			unsigned int   unk3;
-			unsigned int   mac0;
-			unsigned int   mac1;
-		};
-	};
+	SceUInt8 id;
+	SceUInt8 unk1;
+	SceUInt16 unk2;
+	SceUInt32 unk4;
+	SceUInt64 mac;
 } SceBtEvent;
 
-typedef void (*SceBtCallback)(int r0, int r1, int r2, int r3);
-
 typedef struct _SceBtHidRequest {
-	uint32_t unk00;
-	uint32_t unk04;
-	uint8_t  type;    //!< 0 = read?, 1 = write?, 2 = feature?, 3 = ?
-	uint8_t  unk09;
-	uint8_t  unk0A;
-	uint8_t  unk0B;
-	void     *buffer;
-	uint32_t length;
-	struct   _SceBtHidRequest *next;
-} __attribute__((packed)) SceBtHidRequest;
+	SceUInt32 unk00;
+	SceUInt32 unk04;
+	SceUInt8 type;		//!< 0 = read?, 1 = write?, 2 = feature?, 3 = ?
+	SceUInt8 unk09;
+	SceUInt8 unk0A;
+	SceUInt8 unk0B;
+	void *buffer;
+	SceUInt32 length;
+	struct _SceBtHidRequest *next;
+} SceBtHidRequest;
 
 int sceBtAvrcpReadVolume(int r0, int r1, int r2, int r3);
 int sceBtAvrcpSendButton(int r0, int r1, int r2, int r3);
 int sceBtAvrcpSendVolume(int r0, int r1, int r2, int r3);
 int sceBtAvrcpSetPlayStatus(int r0, int r1, int r2, int r3);
 int sceBtAvrcpSetTitle(int r0, int r1, int r2, int r3);
-int sceBtDeleteRegisteredInfo(unsigned int mac0, unsigned int mac1);
+int sceBtDeleteRegisteredInfo(SceUInt64 mac);
 int sceBtFreqAudio(int r0, int r1, int r2, int r3);
 int sceBtGetConfiguration(void); // returns 0x0 BT disabled, 0x9 if enabled
-int sceBtGetConnectingInfo(unsigned int mac0, unsigned int mac1); // 1 = disconnected?, 2 = connecting?, 5 = connected?
-int sceBtGetDeviceName(unsigned int mac0, unsigned int mac1, char name[0x79]);
+int sceBtGetConnectingInfo(SceUInt64 mac); // 1 = disconnected?, 2 = connecting?, 5 = connected?
+int sceBtGetDeviceName(SceUInt64 mac, char name[0x79]);
 int sceBtGetInfoForTest(int r0, int r1, int r2, int r3);
 int sceBtGetLastError(void);
 int sceBtGetRegisteredInfo(int device, int unk, SceBtRegisteredInfo *info, SceSize info_size);
 int sceBtGetStatusForTest(int r0, int r1, int r2, int r3);
-int sceBtGetVidPid(unsigned int mac0, unsigned int mac1, unsigned short vid_pid[2]);
+int sceBtGetVidPid(SceUInt64 mac, unsigned short vid_pid[2]);
 int sceBtHfpGetCurrentPhoneNumber(int r0, int r1, int r2, int r3);
 int sceBtHfpRequest(int r0, int r1, int r2, int r3);
-int sceBtHidGetReportDescriptor(unsigned int mac0, unsigned int mac1, void *buffer, SceSize size);
-int sceBtHidTransfer(unsigned int mac0, unsigned int mac1, SceBtHidRequest *request);
+int sceBtHidGetReportDescriptor(SceUInt64 mac, void *buffer, SceSize size);
+int sceBtHidTransfer(SceUInt64 mac, SceBtHidRequest *request);
 int sceBtPushBip(int r0, int r1, int r2, int r3);
 int sceBtPushOpp(int r0, int r1, int r2, int r3);
 int sceBtReadEvent(SceBtEvent *events, int num_events);
@@ -319,8 +325,8 @@ int sceBtRecvBip(int r0, int r1, int r2, int r3);
 int sceBtRecvOpp(int r0, int r1, int r2, int r3);
 int sceBtRecvSpp(int r0, int r1, int r2, int r3);
 int sceBtRegisterCallback(SceUID cb, int unused, int flags1, int flags2); // looks like flags1 is a mask for permitted MACs
-int sceBtReplyPinCode(unsigned int mac0, unsigned int mac1, unsigned char *code, SceSize length);
-int sceBtReplyUserConfirmation(unsigned int mac0, unsigned int mac1, int unk);
+int sceBtReplyPinCode(SceUInt64 mac, unsigned char *code, SceSize length);
+int sceBtReplyUserConfirmation(SceUInt64 mac, int unk);
 int sceBtSendAudio(int r0, int r1, int r2, int r3);
 int sceBtSendL2capEchoRequestForTest(int r0, int r1, int r2, int r3);
 int sceBtSendSpp(int r0, int r1, int r2, int r3);
@@ -331,8 +337,8 @@ int sceBtSetInquiryScan(int r0);
 int sceBtSetL2capEchoResponseBufferForTest(int r0, int r1, int r2, int r3);
 int sceBtSetStatusForTest(int r0, int r1, int r2, int r3);
 int sceBtStartAudio(int r0, int r1, int r2, int r3);
-int sceBtStartConnect(unsigned int mac0, unsigned int mac1); // mac0 can be used as a device index (already paired devices)?
-int sceBtStartDisconnect(unsigned int mac0, unsigned int mac1);
+int sceBtStartConnect(SceUInt64 mac); // mac can be used as a device index (already paired devices)?
+int sceBtStartDisconnect(SceUInt64 mac);
 int sceBtStartInquiry(void);
 int sceBtStopAudio(int r0, int r1, int r2, int r3);
 int sceBtStopInquiry(void);
