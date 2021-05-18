@@ -27,18 +27,31 @@ int _vshSblAimgrGetSMI(int *minver);
 
 int _vshSblAimgrGetConsoleId(char CID[32]);
 
+int _vshIoMount(int id, const char *path, int permission, void *extra);
+
 /**
- * @param[in] id - mount id
- * @param[in] path - mount path
+ * @param[in] id - Mount point ID
+ * @param[in] path - Block device path. Can be NULL.
  * @param[in] permission - 1/RO 2/RW
- * @param[in] buf - work buffer
+ * @param     a4 - Unknown, set to 0
+ * @param     a5 - Unknown, set to 0
+ * @param     a6 - Unknown, set to 0
  *
  * @return 0 >= on success, < 0 on error.
  */
-int _vshIoMount(int id, const char *path, int permission, void *buf);
+static inline int vshIoMount(int id, const char *path, int permission, int a4, int a5, int a6)
+{
+	struct {
+		int a4;
+		int a5;
+		int a6;
+		int unused[3];
+	} extra = {a4, a5, a6, 0, 0, 0};
+	return _vshIoMount(id, path, permission, &extra);
+}
 
 /**
- * @param[in] id - mount id
+ * @param[in] id - Mount point ID
  * @param[in] force - Set to 1 to force umount
  * @param[in] unk2 - Unknown, set 0
  * @param[in] unk3 - Unknown, set 0
