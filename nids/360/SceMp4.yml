@@ -1,0 +1,21 @@
+modules:
+  SceMp4:
+    nid: 0x02E1F96A
+    libraries:
+      SceMp4:
+        nid: 0x8FEACABD
+        functions:
+          sceMp4CloseFile: 0x920623C8
+          sceMp4EnableStream: 0x609E57AD
+          sceMp4GetNextUnit: 0x20A01112
+          sceMp4GetNextUnit2Ref: 0x32A15788
+          sceMp4GetNextUnit3Ref: 0x40C64DC0
+          sceMp4GetNextUnitData: 0xD092A066
+          sceMp4GetStreamInfo: 0x8BE0E3D3
+          sceMp4JumpPTS: 0x96676BA0
+          sceMp4OpenFile: 0x05474AF0
+          sceMp4PTSToTime: 0xA7C09746
+          sceMp4ReleaseBuffer: 0x7B4832FE
+          sceMp4Reset: 0x40351E1A
+          sceMp4StartFileStreaming: 0x30E49E4D
+          sceMp4TimeToPTS: 0x6B69F900
