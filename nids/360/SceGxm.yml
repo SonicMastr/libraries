@@ -271,8 +271,8 @@ modules:
           sceGxmIsWithinScene: 0xB56413BB
           sceGxmMapFragmentUsseMemoryInternal: 0xB9391D22
           sceGxmMapVertexUsseMemoryInternal: 0x5694B569
-          sceGxmSetRazorCallbacks1: 0x56CDD9AD
-          sceGxmSetRazorCallbacks2: 0x3FC5E110
+          sceGxmSetRazorCallbacksForCapture: 0x3FC5E110
+          sceGxmSetRazorCallbacksForTrace: 0x56CDD9AD
           sceGxmUnmapFragmentUsseMemoryInternal: 0xC29B9B82
           sceGxmUnmapVertexUsseMemoryInternal: 0xD7506735
       SceGxmInternalForGles:
