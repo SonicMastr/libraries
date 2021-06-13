@@ -13,6 +13,7 @@ modules:
           PVRSRVCreateDeviceMemContext: 0x1E0A9C4A
           PVRSRVCreateSyncInfoModObj: 0x416C8813
           PVRSRVDestroyDeviceMemContext: 0xB9178277
+          PVRSRVDestroySyncInfoModObj: 0x7DCCBCAF
           PVRSRVDisconnect: 0xA5B14369
           PVRSRVEnumerateDevices: 0x4447D217
           PVRSRVFreeDeviceMem: 0xB6CFD213
@@ -20,9 +21,14 @@ modules:
           PVRSRVFreeUserModeMem: 0x1BE5985A
           PVRSRVGetMiscInfo: 0x73E945A1
           PVRSRVMapMemoryToGpu: 0x56893E98
+          PVRSRVMapMemoryToGpuByUID: 0x0EA7458D
+          PVRSRVModifyCompleteSyncOps: 0x116449D2
           PVRSRVModifyPendingSyncOps: 0x0D27286F
           PVRSRVReleaseMiscInfo: 0xF4735A47
+          PVRSRVSyncOpsFlushToModObj: 0xAAD85460
           PVRSRVUnmapMemoryFromGpu: 0xAD20D1A0
+          PVRSRVUnmapMemoryFromGpuByUID: 0x156A6B70
+          PVRSRVWaitSyncOp: 0x5C3A6DFE
           SGXAddRenderTarget: 0x0162A405
           SGXCreateRenderContext: 0x8A997DBB
           SGXCreateTransferContext: 0xBDE2B9E1
@@ -36,6 +42,7 @@ modules:
           SGXReleaseClientInfo: 0x5273D097
           SGXRemoveRenderTarget: 0xD90B0707
           SGXTransferControlStream: 0x5564C1BE
+          SGXWaitTransfer: 0x7E965369
       SceGpuEs4UserForVsh:
         nid: 0x9E3C99D4
         functions:
