@@ -9,7 +9,6 @@ modules:
           sceKblCpuDisableIrqInterrupts: 0xDDB3A1A8
           sceKblFreeFileSystemCtx: 0x261F2747
           sceKblGetHardwareFlags: 0xD3A516D5
-          sceKblGetMinimumLogLevel: 0xC011935A
           sceKblGetPutcharHandler: 0x9B868276
           sceKblInitDevice: 0xF7AF8690
           sceKblLoadModule: 0x6D7A1F18
@@ -18,6 +17,7 @@ modules:
           sceKblStartModule: 0x9A92436E
           sceKernelCheckDipsw: 0xC8F4DE71
           sceKernelCpuId: 0xB506A10E
+          sceKernelGetDebugLevel: 0xC011935A
           sceKernelPrintf: 0x13A5ABEF
           sceKernelPrintfLevel: 0x752E7EEC
           sceKernelSysrootCorelockLock: 0x807B4437
