@@ -384,7 +384,6 @@ modules:
           sceKernelFindMemBlockByAddr: 0x8A1742F6
           sceKernelFindMemBlockByAddrForDefaultSize: 0xF3BBE2E1
           sceKernelFindMemBlockByAddrForPid: 0x857F1D5A
-          sceKernelFindMemBlockForPid: 0x9F6E45E3
           sceKernelFirstDifferentBlock32User: 0xBDA6E42B
           sceKernelFirstDifferentBlock64User: 0xBB3B02C2
           sceKernelFirstDifferentBlock64UserForPid: 0xE83855FD
@@ -417,6 +416,7 @@ modules:
           sceKernelGetPhysicalMemoryType: 0x0AAA4FDD
           sceKernelGetPidContext: 0x2ECF7944
           sceKernelGetUidClass: 0x85336A1C
+          sceKernelIsAccessibleRangeProc: 0x9F6E45E3
           sceKernelIsPaddrWithinSameSectionForUid: 0xF4AD89D8
           sceKernelKernelUidForUserUid: 0x45D22597
           sceKernelKernelUidForUserUidForClass: 0x184172B1
