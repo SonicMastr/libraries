@@ -369,6 +369,8 @@ int sceKernelMemRangeReleaseForPid(SceUID pid, void *addr, SceSize size);
  */
 int sceKernelMemRangeReleaseWithPerm(SceKernelMemoryRefPerm perm, void *addr, SceSize size);
 
+int sceKernelIsAccessibleRangeProc(SceUID pid, SceKernelMemoryRefPerm perm, void *addr, SceSize size);
+
 SCE_CDECL_END
 
 #endif /* _VDSUITE_KERNEL_KERNEL_SYSMEM_H */
