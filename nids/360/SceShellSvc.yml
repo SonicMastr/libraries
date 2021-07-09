@@ -9,17 +9,22 @@ modules:
       SceShellUtil:
         nid: 0xD2B1C8AE
         functions:
+          sceShellUtilExitToEditMode: 0x71C21A8C
+          sceShellUtilExitToHomePage: 0x6430C45E
+          sceShellUtilExitToLiveBoard: 0x8CAAB23B
           sceShellUtilInitEvents: 0xE8AD11EC
           sceShellUtilLock: 0xA9537233
           sceShellUtilRegisterEventHandler: 0x7B5EDFE7
           sceShellUtilRequestColdReset: 0x636544FB
           sceShellUtilRequestColdResetWithError: 0xBB54D049
           sceShellUtilRequestStandby: 0x8F2F143D
+          sceShellUtilRestartSceShell: 0x9B0EE918
           sceShellUtilSetAirplaneIconMode: 0x96BBF91B
           sceShellUtilSetBGMMode: 0xB65B60CA
           sceShellUtilSetBtIconMode: 0x8B69AD27
           sceShellUtilSetSystemLanguage: 0x040997D6
           sceShellUtilSetTimeText: 0x40DFAC6B
+          sceShellUtilShowStopSign: 0xFB612CA8
           sceShellUtilTextClipboardGetUsedSize: 0xD0DDEDBC
           sceShellUtilTextClipboardRead: 0x1B186905
           sceShellUtilTextClipboardWrite: 0xC4810C56
