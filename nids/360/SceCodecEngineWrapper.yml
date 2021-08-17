@@ -15,3 +15,14 @@ modules:
           _sceCodecEnginePmonStop: 0x04D5F36B
           _sceCodecEngineResetNumRpcCalled: 0x8EFF2DAA
           _sceCodecEngineSetClockFrequency: 0xDE5EF6CC
+      SceCodecEngineWrapperForDriver:
+        nid: 0x51593F20
+        functions:
+          sceCodecEngineWrapperCallGenericThunk: 0x391BD4FD
+          sceCodecEngineWrapperConvertPhysicalToVirtual: 0x1C2BC9F7
+          sceCodecEngineWrapperConvertVirtualToPhysical: 0x47AED6FF
+          sceCodecEngineWrapperGetVThreadProcessingResource: 0x6A1184EA
+          sceCodecEngineWrapperIsProcessSuspended: 0x7492DE05
+          sceCodecEngineWrapperLockProcessSuspendCore: 0xCB8703D8
+          sceCodecEngineWrapperMemcpyChain: 0xD1F94D9D
+          sceCodecEngineWrapperUnlockProcessSuspendCore: 0x091B0231
