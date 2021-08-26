@@ -14,7 +14,7 @@ on:
 env:
   SCE_ROOT_DIR: ${{ github.workspace }}/ci-base/SCE
   SCE_PSP2_SDK_DIR: ${{ github.workspace }}/ci-base/sdk
-  PSP2SNC: ${{ github.workspace }}/ci-base/sdk/host_tools/build/bin/psp2snc.exe
+  PSP2SNC: ${{ github.workspace }}/ci-base/sdk/host_tools/build/bin/psp2snc.exe -Xquit=2
 
 jobs:
 
