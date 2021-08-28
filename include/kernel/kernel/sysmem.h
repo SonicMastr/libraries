@@ -135,7 +135,7 @@ SceClass *sceKernelGetUidHeapClass(void);
 SceClass *sceKernelGetUidMemBlockClass(void);
 
 int sceKernelCreateClass(SceClass *cls, const char *name, void *uidclass, SceSize itemsize, SceClassCallback create, SceClassCallback destroy);
-int sceKernelDeleteUserUid(SceUID pid, SceUID user_uid);
+int scePUIDClose(SceUID pid, SceUID user_uid);
 int sceGUIDClose(SceUID uid);
 int sceKernelFindClassByName(const char *name, SceClass **cls);
 
