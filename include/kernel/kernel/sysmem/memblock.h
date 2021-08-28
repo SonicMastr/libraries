@@ -104,7 +104,7 @@ int sceKernelRemapBlock(SceUID uid, SceKernelMemBlockType type);
 
 int sceKernelMapMemBlock(SceUID uid);
 
-int sceKernelMapUserBlock(const char *name, int permission, int type,
+int sceKernelUserMapWithFlags(const char *name, int permission, int type,
 	const void *user_buf, SceSize size, void **kernel_page,
 	SceSize *kernel_size, unsigned int *kernel_offset);
 
@@ -112,7 +112,7 @@ int sceKernelUserMap(const char *name, int permission, const void *user_buf,
 	SceSize size, void **kernel_page,
 	SceSize *kernel_size, unsigned int *kernel_offset);
 
-int sceKernelMapUserBlockDefaultTypeForPid(int pid, const char *name, int permission,
+int sceKernelUserMapProc(int pid, const char *name, int permission,
 	const void *user_buf, SceSize size, void **kernel_page,
 	SceSize *kernel_size, unsigned int *kernel_offset);
 

@@ -85,13 +85,13 @@ int sceKernelCopyFromUser(void *dst, uintptr_t src, SceSize len);
 int sceKernelCopyToUser(uintptr_t dst, const void *src, SceSize len);
 int sceKernelCopyToUserProcTextDomain(SceUID pid, uintptr_t dst, const void *src, SceSize len);
 
-int sceKernelStrncpyUserToKernel(void *dst, uintptr_t src, SceSize len);
-int sceKernelStrncpyKernelToUser(uintptr_t dst, const void *src, SceSize len);
-int sceKernelStrncpyUserForPid(SceUID pid, void *dst, uintptr_t src, SceSize len);
+int sceKernelStrncpyFromUser(void *dst, uintptr_t src, SceSize len);
+int sceKernelStrncpyToUser(uintptr_t dst, const void *src, SceSize len);
+int sceKernelStrncpyFromUserProc(SceUID pid, void *dst, uintptr_t src, SceSize len);
 
 SceUID scePUIDtoGUID(SceUID pid, SceUID user_uid);
 SceUID scePUIDOpenByGUID(SceUID pid, SceUID kern_uid);
-SceUID sceKernelCreateUidObj(SceClass *cls, const char *name, SceCreateUidObjOpt *opt, SceObjectBase **obj);
+SceUID sceGUIDKernelCreateWithOpt(SceClass *cls, const char *name, SceCreateUidObjOpt *opt, SceObjectBase **obj);
 
 /**
  * Gets an object from a UID.
@@ -116,7 +116,7 @@ int sceGUIDReferObjectWithClass(SceUID uid, SceClass *cls, SceObjectBase **obj);
  *
  * @return 0 on success, < 0 on error.
  */
-int sceKernelUidRetain(SceUID uid);
+int sceGUIDReferObject(SceUID uid);
 
 /**
  * Releases an object referenced by the UID.

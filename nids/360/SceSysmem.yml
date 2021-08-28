@@ -361,11 +361,18 @@ modules:
         nid: 0x6F25E18A
         functions:
           sceGUIDClose: 0x047D32F2
+          sceGUIDCreate: 0x89A44858
           sceGUIDGetClass: 0xC74B0152
+          sceGUIDGetName: 0xA78755EB
+          sceGUIDGetName2: 0xE655852F
           sceGUIDGetObject: 0x0FC24464
+          sceGUIDKernelCreate: 0x56A13E90
           sceGUIDOpenByName: 0xD76E7452
+          sceGUIDReferObject: 0x0F5C84B7
           sceGUIDReferObjectWithClass: 0x00ED6C14
           sceGUIDReferObjectWithClassLevel: 0x77066FD1
+          sceGUIDReferObjectWithLevel: 0xF6DB54BA
+          sceGUIDReferObjectWithSubclass: 0x72A98D17
           sceGUIDReleaseObject: 0x149885C4
           sceKernelAllocHeapMemory: 0x7B4CB60A
           sceKernelAllocHeapMemoryFromGlobalHeap: 0x7750CEA7
@@ -378,11 +385,10 @@ modules:
           sceKernelCopyFromUserProc: 0x605275F8
           sceKernelCopyToUser: 0x6D88EF8A
           sceKernelCopyToUserProc: 0x6B825479
+          sceKernelCopyUser: 0x1BD44DD5
+          sceKernelCopyUserProc: 0x8E086C33
           sceKernelCreateClass: 0x61317102
           sceKernelCreateHeap: 0x9328E0E8
-          sceKernelCreateUidObj2: 0x56A13E90
-          sceKernelCreateUidObjForUid: 0x89A44858
-          sceKernelCreateUserUidForNameWithClass: 0x8DA0BCA5
           sceKernelDecRefCountMemBlock: 0xF50BDC0C
           sceKernelDeleteHeap: 0xD6437637
           sceKernelFindMemBlock: 0x9C78064C
@@ -401,25 +407,14 @@ modules:
           sceKernelGetMemBlockPARange: 0x98C15666
           sceKernelGetMemBlockPAVector: 0x19A51AC7
           sceKernelGetMemBlockVBase: 0xB81CF0A3
-          sceKernelGetNameForUid: 0xA78755EB
-          sceKernelGetNameForUid2: 0xE655852F
-          sceKernelGetObjectForUidForAttr: 0xF6DB54BA
-          sceKernelGetObjectForUidForClassTree: 0x72A98D17
-          sceKernelGetPaddrListForLargePage: 0x08A8A7E8
-          sceKernelGetPaddrListForSmallPage: 0x16844CE6
-          sceKernelGetPaddrPairForLargePage: 0x32257A24
-          sceKernelGetPaddrPairForSmallPage: 0xB3575090
           sceKernelGetPhysicalMemoryType: 0x0AAA4FDD
           sceKernelGetPidContext: 0x2ECF7944
           sceKernelGetUidClass: 0x85336A1C
           sceKernelIncRefCountMemBlock: 0xEAF3849B
           sceKernelIsAccessibleRangeProc: 0x9F6E45E3
           sceKernelIsPaddrWithinSameSectionForUid: 0xF4AD89D8
-          sceKernelKernelUidForUserUidForClass: 0x184172B1
-          sceKernelMapBlockUserVisibleWithFlag: 0x04059C4B
           sceKernelMapMemBlock: 0x58D21746
-          sceKernelMapUserBlock: 0x7D4F8B5F
-          sceKernelMapUserBlockDefaultTypeForPid: 0x0091D74D
+          sceKernelMapMemBlockWithFlags: 0x04059C4B
           sceKernelMemBlockGetInfoEx: 0x24A99FFF
           sceKernelMemBlockGetInfoExForVisibilityLevel: 0xA73CFFEF
           sceKernelMemBlockGetSomeSize: 0x78337B62
@@ -431,24 +426,27 @@ modules:
           sceKernelMemRangeRetain: 0x59A4402F
           sceKernelMemRangeRetainForPid: 0x659586BF
           sceKernelMemRangeRetainWithPerm: 0xBC0A1D60
-          sceKernelMemcpyKernelToUserForPidUnchecked: 0xFED82F2D
-          sceKernelMemcpyUserToUser: 0x1BD44DD5
-          sceKernelMemcpyUserToUserForPid: 0x8E086C33
           sceKernelProcModeVAtoPA: 0x61A67D32
           sceKernelRemapBlock: 0xDFE2C8CB
           sceKernelSetObjectForUid: 0x4CFA4100
-          sceKernelStrncpyKernelToUser: 0x80BD6FEB
-          sceKernelStrncpyUserForPid: 0x75AAF178
-          sceKernelStrncpyUserToKernel: 0xDB3EC244
-          sceKernelStrnlenUser: 0xB429D419
-          sceKernelStrnlenUserForPid: 0x9929EB07
+          sceKernelStrncpyFromUser: 0xDB3EC244
+          sceKernelStrncpyFromUserProc: 0x75AAF178
+          sceKernelStrncpyToUser: 0x80BD6FEB
+          sceKernelStrncpyToUserProc: 0xFED82F2D
+          sceKernelStrnlenFromUser: 0xB429D419
+          sceKernelStrnlenFromUserProc: 0x9929EB07
           sceKernelSwitchPidContext: 0x2D711589
-          sceKernelUidRetain: 0x0F5C84B7
           sceKernelUnmapMemBlock: 0xFFCD9B60
           sceKernelUserMap: 0x278BC201
+          sceKernelUserMapProc: 0x0091D74D
+          sceKernelUserMapWithFlags: 0x7D4F8B5F
           sceKernelUserUnmap: 0x00575B00
           sceKernelVARangeToPARange: 0xAE36C775
+          sceKernelVARangeToPARangeForLargePage: 0x32257A24
+          sceKernelVARangeToPARangeForSmallPage: 0xB3575090
           sceKernelVARangeToPAVector: 0xE68BEEBD
+          sceKernelVARangeToPAVectorForLargePage: 0x08A8A7E8
+          sceKernelVARangeToPAVectorForSmallPage: 0x16844CE6
           sceKernelVAtoPA: 0x8D160E65
           sceKernelVAtoPABySW: 0x65419BD3
           scePUIDClose: 0x84A4AF5E
@@ -458,14 +456,17 @@ modules:
           scePUIDOpenByGUID: 0xBF209859
           scePUIDOpenByGUIDWithFlags: 0xCED1547B
           scePUIDOpenByName: 0x513B9DDD
+          scePUIDOpenByNameWithClass: 0x8DA0BCA5
           scePUIDSetName: 0x12624884
           scePUIDtoGUID: 0x45D22597
+          scePUIDtoGUIDWithClass: 0x184172B1
       SceSysmemForKernel:
         nid: 0x63A519E5
         functions:
           sceGUIDGetObjectWithClass: 0x7ABFA9A7
           sceGUIDGetUIDVectorByClass: 0xEC7D36EF
           sceGUIDKernelCreateWithAttr: 0x53E1FFDE
+          sceGUIDKernelCreateWithOpt: 0xDF0288D7
           sceGUIDOpenByGUID: 0xCF53EEE4
           sceKernelAddressSpaceFreeAllMemBlock: 0x89CE1F31
           sceKernelAddressSpaceSetPhyMemPart: 0x67955EE9
@@ -474,7 +475,6 @@ modules:
           sceKernelAllocSystemCallTable: 0x5FFE4B79
           sceKernelCopyToUserProcTextDomain: 0x30931572
           sceKernelCreateAddressSpace: 0x4A3737F0
-          sceKernelCreateUidObj: 0xDF0288D7
           sceKernelDeleteAddressSpace: 0xF2D7FE3A
           sceKernelFindClassByName: 0x62989905
           sceKernelFreeSimpleMemBlock: 0xA1FFA2C9
