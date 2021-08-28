@@ -41,7 +41,7 @@ typedef struct SceKernelPaddrList {
 	uint32_t size;                  //!< sizeof(SceKernelPaddrList)
 	uint32_t list_size;             //!< Size in elements of the list array
 	uint32_t ret_length;            //!< Total physical size of the memory pairs
-	uint32_t ret_count;             //!< Number of elements of list filled by sceKernelGetPaddrList
+	uint32_t ret_count;             //!< Number of elements of list filled by sceKernelVARangeToPAVector
 	SceKernelAddrPair *list;        //!< Array of physical addresses and their lengths pairs
 } SceKernelPaddrList;
 
@@ -90,7 +90,7 @@ int sceKernelGetMemBlockType(SceUID uid, unsigned int *type);
  *
  * @return SceUID of the memory block on success, < 0 on error.
 */
-SceUID sceKernelFindMemBlockByAddrForPid(SceUID pid, const void *addr, SceSize size);
+SceUID sceKernelFindProcMemBlockByAddr(SceUID pid, const void *addr, SceSize size);
 
 /**
  * Changes the block type
@@ -102,13 +102,13 @@ SceUID sceKernelFindMemBlockByAddrForPid(SceUID pid, const void *addr, SceSize s
  */
 int sceKernelRemapBlock(SceUID uid, SceKernelMemBlockType type);
 
-int sceKernelMapBlockUserVisible(SceUID uid);
+int sceKernelMapMemBlock(SceUID uid);
 
 int sceKernelMapUserBlock(const char *name, int permission, int type,
 	const void *user_buf, SceSize size, void **kernel_page,
 	SceSize *kernel_size, unsigned int *kernel_offset);
 
-int sceKernelMapUserBlockDefaultType(const char *name, int permission, const void *user_buf,
+int sceKernelUserMap(const char *name, int permission, const void *user_buf,
 	SceSize size, void **kernel_page,
 	SceSize *kernel_size, unsigned int *kernel_offset);
 
@@ -124,7 +124,7 @@ int sceKernelMapUserBlockDefaultTypeForPid(int pid, const char *name, int permis
  *
  * @return 0 on success, < 0 on error.
  */
-int sceKernelGetPaddr(const void *addr, uintptr_t *paddr);
+int sceKernelVAtoPA(const void *addr, uintptr_t *paddr);
 
 /**
  * Get the physical address list of a given virtual address range
@@ -134,7 +134,7 @@ int sceKernelGetPaddr(const void *addr, uintptr_t *paddr);
  *
  * @return 0 on success, < 0 on error.
  */
-int sceKernelGetPaddrList(const SceKernelAddrPair *input, SceKernelPaddrList *list);
+int sceKernelVARangeToPAVector(const SceKernelAddrPair *input, SceKernelPaddrList *list);
 
 /**
  * Releases a memblock referenced by the UID.
@@ -145,7 +145,7 @@ int sceKernelGetPaddrList(const SceKernelAddrPair *input, SceKernelPaddrList *li
  *
  * @return 0 on success, < 0 on error.
  */
-int sceKernelMemBlockRelease(SceUID uid);
+int sceKernelUserUnmap(SceUID uid);
 
 /**
  * Retains a memory range

@@ -81,22 +81,22 @@ void *sceKernelAllocHeapMemory(SceUID uid, SceSize size);
 void sceKernelFreeHeapMemory(SceUID uid, void *ptr);
 
 int sceKernelMemcpyUserToKernelForPid(SceUID pid, void *dst, uintptr_t src, SceSize len);
-int sceKernelMemcpyUserToKernel(void *dst, uintptr_t src, SceSize len);
-int sceKernelMemcpyKernelToUser(uintptr_t dst, const void *src, SceSize len);
+int sceKernelCopyFromUser(void *dst, uintptr_t src, SceSize len);
+int sceKernelCopyToUser(uintptr_t dst, const void *src, SceSize len);
 int sceKernelRxMemcpyKernelToUserForPid(SceUID pid, uintptr_t dst, const void *src, SceSize len);
 
 int sceKernelStrncpyUserToKernel(void *dst, uintptr_t src, SceSize len);
 int sceKernelStrncpyKernelToUser(uintptr_t dst, const void *src, SceSize len);
 int sceKernelStrncpyUserForPid(SceUID pid, void *dst, uintptr_t src, SceSize len);
 
-SceUID sceKernelKernelUidForUserUid(SceUID pid, SceUID user_uid);
-SceUID sceKernelCreateUserUid(SceUID pid, SceUID kern_uid);
+SceUID scePUIDtoGUID(SceUID pid, SceUID user_uid);
+SceUID scePUIDOpenByGUID(SceUID pid, SceUID kern_uid);
 SceUID sceKernelCreateUidObj(SceClass *cls, const char *name, SceCreateUidObjOpt *opt, SceObjectBase **obj);
 
 /**
  * Gets an object from a UID.
  *
- * This retains the object internally! You must call `sceKernelUidRelease`
+ * This retains the object internally! You must call `sceGUIDReleaseObject`
  * after you are done using it.
  *
  * @param[in]  uid   The uid
@@ -105,7 +105,7 @@ SceUID sceKernelCreateUidObj(SceClass *cls, const char *name, SceCreateUidObjOpt
  *
  * @return 0 on success, < 0 on error.
  */
-int sceKernelGetObjForUid(SceUID uid, SceClass *cls, SceObjectBase **obj);
+int sceGUIDReferObjectWithClass(SceUID uid, SceClass *cls, SceObjectBase **obj);
 
 /**
  * Retains an object referenced by the UID.
@@ -127,7 +127,7 @@ int sceKernelUidRetain(SceUID uid);
  *
  * @return 0 on success, < 0 on error.
  */
-int sceKernelUidRelease(SceUID uid);
+int sceGUIDReleaseObject(SceUID uid);
 
 SceClass *sceKernelGetUidClass(void);
 SceClass *sceKernelGetUidDLinkClass(void);
@@ -136,7 +136,7 @@ SceClass *sceKernelGetUidMemBlockClass(void);
 
 int sceKernelCreateClass(SceClass *cls, const char *name, void *uidclass, SceSize itemsize, SceClassCallback create, SceClassCallback destroy);
 int sceKernelDeleteUserUid(SceUID pid, SceUID user_uid);
-int sceKernelDeleteUid(SceUID uid);
+int sceGUIDClose(SceUID uid);
 int sceKernelFindClassByName(const char *name, SceClass **cls);
 
 int sceKernelGetPidContext(SceUID pid, SceKernelProcessContext **ctx);
