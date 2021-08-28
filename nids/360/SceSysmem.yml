@@ -363,6 +363,7 @@ modules:
           sceGUIDClose: 0x047D32F2
           sceGUIDGetClass: 0xC74B0152
           sceGUIDGetObject: 0x0FC24464
+          sceGUIDOpenByName: 0xD76E7452
           sceGUIDReferObjectWithClass: 0x00ED6C14
           sceGUIDReferObjectWithClassLevel: 0x77066FD1
           sceGUIDReleaseObject: 0x149885C4
@@ -381,7 +382,6 @@ modules:
           sceKernelCreateHeap: 0x9328E0E8
           sceKernelCreateUidObj2: 0x56A13E90
           sceKernelCreateUidObjForUid: 0x89A44858
-          sceKernelCreateUserUidForName: 0x513B9DDD
           sceKernelCreateUserUidForNameWithClass: 0x8DA0BCA5
           sceKernelDecRefCountMemBlock: 0xF50BDC0C
           sceKernelDeleteHeap: 0xD6437637
@@ -401,10 +401,8 @@ modules:
           sceKernelGetMemBlockPARange: 0x98C15666
           sceKernelGetMemBlockPAVector: 0x19A51AC7
           sceKernelGetMemBlockVBase: 0xB81CF0A3
-          sceKernelGetNameForPidByUid: 0x09896EB7
           sceKernelGetNameForUid: 0xA78755EB
           sceKernelGetNameForUid2: 0xE655852F
-          sceKernelGetObjectForPidForUid: 0xFE6D7FAE
           sceKernelGetObjectForUidForAttr: 0xF6DB54BA
           sceKernelGetObjectForUidForClassTree: 0x72A98D17
           sceKernelGetPaddrListForLargePage: 0x08A8A7E8
@@ -436,7 +434,6 @@ modules:
           sceKernelMemcpyKernelToUserForPidUnchecked: 0xFED82F2D
           sceKernelMemcpyUserToUser: 0x1BD44DD5
           sceKernelMemcpyUserToUserForPid: 0x8E086C33
-          sceKernelOpenUidForName: 0xD76E7452
           sceKernelProcModeVAtoPA: 0x61A67D32
           sceKernelRemapBlock: 0xDFE2C8CB
           sceKernelSetObjectForUid: 0x4CFA4100
@@ -456,8 +453,11 @@ modules:
           sceKernelVAtoPABySW: 0x65419BD3
           scePUIDClose: 0x84A4AF5E
           scePUIDGetClass: 0xE9728A12
+          scePUIDGetName: 0x09896EB7
+          scePUIDGetObject: 0xFE6D7FAE
           scePUIDOpenByGUID: 0xBF209859
           scePUIDOpenByGUIDWithFlags: 0xCED1547B
+          scePUIDOpenByName: 0x513B9DDD
           scePUIDSetName: 0x12624884
           scePUIDtoGUID: 0x45D22597
       SceSysmemForKernel:
