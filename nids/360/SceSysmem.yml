@@ -374,6 +374,7 @@ modules:
           sceKernelAllocMemBlock: 0xC94850C9
           sceKernelAllocMemBlockWithInfo: 0xD44F464D
           sceKernelCopyFromUser: 0xBC996A7A
+          sceKernelCopyFromUserProc: 0x605275F8
           sceKernelCopyToUser: 0x6D88EF8A
           sceKernelCreateClass: 0x61317102
           sceKernelCreateHeap: 0x9328E0E8
@@ -434,7 +435,6 @@ modules:
           sceKernelMemRangeRetainWithPerm: 0xBC0A1D60
           sceKernelMemcpyKernelToUserForPid: 0x6B825479
           sceKernelMemcpyKernelToUserForPidUnchecked: 0xFED82F2D
-          sceKernelMemcpyUserToKernelForPid: 0x605275F8
           sceKernelMemcpyUserToUser: 0x1BD44DD5
           sceKernelMemcpyUserToUserForPid: 0x8E086C33
           sceKernelOpenUidForName: 0xD76E7452
@@ -472,6 +472,7 @@ modules:
           sceKernelAddressSpaceUnmap: 0xCE72839E
           sceKernelAddressSpaceVAtoPA: 0xF2179820
           sceKernelAllocSystemCallTable: 0x5FFE4B79
+          sceKernelCopyToUserProcTextDomain: 0x30931572
           sceKernelCreateAddressSpace: 0x4A3737F0
           sceKernelCreateUidObj: 0xDF0288D7
           sceKernelDeleteAddressSpace: 0xF2D7FE3A
@@ -485,7 +486,6 @@ modules:
           sceKernelGetUidHeapClass: 0x4CCA935D
           sceKernelGetUidMemBlockClass: 0xAF729575
           sceKernelNameHeapGetInfo: 0xE443253B
-          sceKernelRxMemcpyKernelToUserForPid: 0x30931572
           sceKernelSysrootAlloc: 0xC0A4D2F3
           sceKernelUIDEntryHeapGetInfo: 0x686AA15C
       SceSysrootForDriver:

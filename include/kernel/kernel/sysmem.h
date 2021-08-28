@@ -80,10 +80,10 @@ int sceKernelDeleteHeap(SceUID uid);
 void *sceKernelAllocHeapMemory(SceUID uid, SceSize size);
 void sceKernelFreeHeapMemory(SceUID uid, void *ptr);
 
-int sceKernelMemcpyUserToKernelForPid(SceUID pid, void *dst, uintptr_t src, SceSize len);
+int sceKernelCopyFromUserProc(SceUID pid, void *dst, uintptr_t src, SceSize len);
 int sceKernelCopyFromUser(void *dst, uintptr_t src, SceSize len);
 int sceKernelCopyToUser(uintptr_t dst, const void *src, SceSize len);
-int sceKernelRxMemcpyKernelToUserForPid(SceUID pid, uintptr_t dst, const void *src, SceSize len);
+int sceKernelCopyToUserProcTextDomain(SceUID pid, uintptr_t dst, const void *src, SceSize len);
 
 int sceKernelStrncpyUserToKernel(void *dst, uintptr_t src, SceSize len);
 int sceKernelStrncpyKernelToUser(uintptr_t dst, const void *src, SceSize len);
