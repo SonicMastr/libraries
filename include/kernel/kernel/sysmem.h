@@ -129,6 +129,10 @@ int sceGUIDReferObject(SceUID uid);
  */
 int sceGUIDReleaseObject(SceUID uid);
 
+int sceGUIDSet(SceUID guid, SceClass *pClass, const char *name, SceObjectBase *pObject);
+
+int sceGUIDSetName(SceUID guid, const char *name);
+
 SceClass *sceKernelGetUidClass(void);
 SceClass *sceKernelGetUidDLinkClass(void);
 SceClass *sceKernelGetUidHeapClass(void);

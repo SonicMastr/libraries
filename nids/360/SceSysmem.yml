@@ -374,6 +374,7 @@ modules:
           sceGUIDReferObjectWithLevel: 0xF6DB54BA
           sceGUIDReferObjectWithSubclass: 0x72A98D17
           sceGUIDReleaseObject: 0x149885C4
+          sceGUIDSetName: 0x4CFA4100
           sceKernelAllocHeapMemory: 0x7B4CB60A
           sceKernelAllocHeapMemoryFromGlobalHeap: 0x7750CEA7
           sceKernelAllocHeapMemoryFromGlobalHeapWithOpt: 0x0B4ED16A
@@ -428,7 +429,6 @@ modules:
           sceKernelMemRangeRetainWithPerm: 0xBC0A1D60
           sceKernelProcModeVAtoPA: 0x61A67D32
           sceKernelRemapBlock: 0xDFE2C8CB
-          sceKernelSetObjectForUid: 0x4CFA4100
           sceKernelStrncpyFromUser: 0xDB3EC244
           sceKernelStrncpyFromUserProc: 0x75AAF178
           sceKernelStrncpyToUser: 0x80BD6FEB
@@ -468,6 +468,7 @@ modules:
           sceGUIDKernelCreateWithAttr: 0x53E1FFDE
           sceGUIDKernelCreateWithOpt: 0xDF0288D7
           sceGUIDOpenByGUID: 0xCF53EEE4
+          sceGUIDSet: 0xD7B323EB
           sceKernelAddressSpaceFreeAllMemBlock: 0x89CE1F31
           sceKernelAddressSpaceSetPhyMemPart: 0x67955EE9
           sceKernelAddressSpaceUnmap: 0xCE72839E
