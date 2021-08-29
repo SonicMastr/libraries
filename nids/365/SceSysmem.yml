@@ -23,10 +23,11 @@ modules:
       SceSysmemForKernel:
         nid: 0x02451F0F
         functions:
-          sceKernelCreateUidObj: 0xFB6390CE
+          sceGUIDKernelCreateWithOpt: 0xFB6390CE
+          sceGUIDSet: 0xBF275C5A
+          sceKernelCopyToUserProcTextDomain: 0x2995558D
           sceKernelFindClassByName: 0x7D87F706
           sceKernelGetMemBlockType: 0xD44FE44B
-          sceKernelRxMemcpyKernelToUserForPid: 0x2995558D
       SceUartForKernel:
         nid: 0x1CCD9BA3
         functions:

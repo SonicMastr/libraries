@@ -32,7 +32,7 @@ typedef struct SceKernelHeapCreateOpt {
 	SceUInt32 field_18;
 } SceKernelHeapCreateOpt;
 
-typedef struct SceCreateUidObjOpt {
+typedef struct SceGUIDKernelCreateOpt {
 	SceUInt32 flags;
 	SceUInt32 field_4;
 	SceUInt32 field_8;
@@ -40,7 +40,8 @@ typedef struct SceCreateUidObjOpt {
 	SceUInt32 field_10;
 	SceUInt32 field_14;
 	SceUInt32 field_18;
-} SceCreateUidObjOpt;
+	SceUInt32 field_1C;
+} SceGUIDKernelCreateOpt;
 
 typedef enum SceKernelModel {
 	SCE_KERNEL_MODEL_VITA   = 0x10000,
@@ -80,23 +81,23 @@ int sceKernelDeleteHeap(SceUID uid);
 void *sceKernelAllocHeapMemory(SceUID uid, SceSize size);
 void sceKernelFreeHeapMemory(SceUID uid, void *ptr);
 
-int sceKernelMemcpyUserToKernelForPid(SceUID pid, void *dst, uintptr_t src, SceSize len);
-int sceKernelMemcpyUserToKernel(void *dst, uintptr_t src, SceSize len);
-int sceKernelMemcpyKernelToUser(uintptr_t dst, const void *src, SceSize len);
-int sceKernelRxMemcpyKernelToUserForPid(SceUID pid, uintptr_t dst, const void *src, SceSize len);
+int sceKernelCopyFromUserProc(SceUID pid, void *dst, uintptr_t src, SceSize len);
+int sceKernelCopyFromUser(void *dst, uintptr_t src, SceSize len);
+int sceKernelCopyToUser(uintptr_t dst, const void *src, SceSize len);
+int sceKernelCopyToUserProcTextDomain(SceUID pid, uintptr_t dst, const void *src, SceSize len);
 
-int sceKernelStrncpyUserToKernel(void *dst, uintptr_t src, SceSize len);
-int sceKernelStrncpyKernelToUser(uintptr_t dst, const void *src, SceSize len);
-int sceKernelStrncpyUserForPid(SceUID pid, void *dst, uintptr_t src, SceSize len);
+int sceKernelStrncpyFromUser(void *dst, uintptr_t src, SceSize len);
+int sceKernelStrncpyToUser(uintptr_t dst, const void *src, SceSize len);
+int sceKernelStrncpyFromUserProc(SceUID pid, void *dst, uintptr_t src, SceSize len);
 
-SceUID sceKernelKernelUidForUserUid(SceUID pid, SceUID user_uid);
-SceUID sceKernelCreateUserUid(SceUID pid, SceUID kern_uid);
-SceUID sceKernelCreateUidObj(SceClass *cls, const char *name, SceCreateUidObjOpt *opt, SceObjectBase **obj);
+SceUID scePUIDtoGUID(SceUID pid, SceUID puid);
+SceUID scePUIDOpenByGUID(SceUID pid, SceUID guid);
+SceUID sceGUIDKernelCreateWithOpt(SceClass *cls, const char *name, SceGUIDKernelCreateOpt *opt, SceObjectBase **obj);
 
 /**
  * Gets an object from a UID.
  *
- * This retains the object internally! You must call `sceKernelUidRelease`
+ * This retains the object internally! You must call `sceGUIDReleaseObject`
  * after you are done using it.
  *
  * @param[in]  uid   The uid
@@ -105,7 +106,7 @@ SceUID sceKernelCreateUidObj(SceClass *cls, const char *name, SceCreateUidObjOpt
  *
  * @return 0 on success, < 0 on error.
  */
-int sceKernelGetObjForUid(SceUID uid, SceClass *cls, SceObjectBase **obj);
+int sceGUIDReferObjectWithClass(SceUID uid, SceClass *cls, SceObjectBase **obj);
 
 /**
  * Retains an object referenced by the UID.
@@ -116,7 +117,7 @@ int sceKernelGetObjForUid(SceUID uid, SceClass *cls, SceObjectBase **obj);
  *
  * @return 0 on success, < 0 on error.
  */
-int sceKernelUidRetain(SceUID uid);
+int sceGUIDReferObject(SceUID uid);
 
 /**
  * Releases an object referenced by the UID.
@@ -127,7 +128,11 @@ int sceKernelUidRetain(SceUID uid);
  *
  * @return 0 on success, < 0 on error.
  */
-int sceKernelUidRelease(SceUID uid);
+int sceGUIDReleaseObject(SceUID uid);
+
+int sceGUIDSet(SceUID guid, SceClass *pClass, const char *name, SceObjectBase *pObject);
+
+int sceGUIDSetName(SceUID guid, const char *name);
 
 SceClass *sceKernelGetUidClass(void);
 SceClass *sceKernelGetUidDLinkClass(void);
@@ -135,8 +140,8 @@ SceClass *sceKernelGetUidHeapClass(void);
 SceClass *sceKernelGetUidMemBlockClass(void);
 
 int sceKernelCreateClass(SceClass *cls, const char *name, void *uidclass, SceSize itemsize, SceClassCallback create, SceClassCallback destroy);
-int sceKernelDeleteUserUid(SceUID pid, SceUID user_uid);
-int sceKernelDeleteUid(SceUID uid);
+int scePUIDClose(SceUID pid, SceUID puid);
+int sceGUIDClose(SceUID guid);
 int sceKernelFindClassByName(const char *name, SceClass **cls);
 
 int sceKernelGetPidContext(SceUID pid, SceKernelProcessContext **ctx);
