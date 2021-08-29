@@ -32,7 +32,7 @@ typedef struct SceKernelHeapCreateOpt {
 	SceUInt32 field_18;
 } SceKernelHeapCreateOpt;
 
-typedef struct SceCreateUidObjOpt {
+typedef struct SceGUIDKernelCreateOpt {
 	SceUInt32 flags;
 	SceUInt32 field_4;
 	SceUInt32 field_8;
@@ -40,7 +40,8 @@ typedef struct SceCreateUidObjOpt {
 	SceUInt32 field_10;
 	SceUInt32 field_14;
 	SceUInt32 field_18;
-} SceCreateUidObjOpt;
+	SceUInt32 field_1C;
+} SceGUIDKernelCreateOpt;
 
 typedef enum SceKernelModel {
 	SCE_KERNEL_MODEL_VITA   = 0x10000,
@@ -89,9 +90,9 @@ int sceKernelStrncpyFromUser(void *dst, uintptr_t src, SceSize len);
 int sceKernelStrncpyToUser(uintptr_t dst, const void *src, SceSize len);
 int sceKernelStrncpyFromUserProc(SceUID pid, void *dst, uintptr_t src, SceSize len);
 
-SceUID scePUIDtoGUID(SceUID pid, SceUID user_uid);
-SceUID scePUIDOpenByGUID(SceUID pid, SceUID kern_uid);
-SceUID sceGUIDKernelCreateWithOpt(SceClass *cls, const char *name, SceCreateUidObjOpt *opt, SceObjectBase **obj);
+SceUID scePUIDtoGUID(SceUID pid, SceUID puid);
+SceUID scePUIDOpenByGUID(SceUID pid, SceUID guid);
+SceUID sceGUIDKernelCreateWithOpt(SceClass *cls, const char *name, SceGUIDKernelCreateOpt *opt, SceObjectBase **obj);
 
 /**
  * Gets an object from a UID.
@@ -139,8 +140,8 @@ SceClass *sceKernelGetUidHeapClass(void);
 SceClass *sceKernelGetUidMemBlockClass(void);
 
 int sceKernelCreateClass(SceClass *cls, const char *name, void *uidclass, SceSize itemsize, SceClassCallback create, SceClassCallback destroy);
-int scePUIDClose(SceUID pid, SceUID user_uid);
-int sceGUIDClose(SceUID uid);
+int scePUIDClose(SceUID pid, SceUID puid);
+int sceGUIDClose(SceUID guid);
 int sceKernelFindClassByName(const char *name, SceClass **cls);
 
 int sceKernelGetPidContext(SceUID pid, SceKernelProcessContext **ctx);

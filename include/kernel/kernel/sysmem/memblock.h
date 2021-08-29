@@ -32,18 +32,22 @@ typedef enum SceKernelMemoryRefPerm {
 	SCE_KERNEL_MEMORY_REF_PERM_KERN_X	= 0x40,
 } SceKernelMemoryRefPerm;
 
-typedef struct SceKernelAddrPair {
-	uint32_t addr;                  //!< Address
-	uint32_t length;                //!< Length
-} SceKernelAddrPair;
+typedef struct SceKernelAddressRange {
+	uint32_t addr;						//!< Address
+	uint32_t length;					//!< Length
+} SceKernelAddressRange;
 
-typedef struct SceKernelPaddrList {
-	uint32_t size;                  //!< sizeof(SceKernelPaddrList)
-	uint32_t list_size;             //!< Size in elements of the list array
-	uint32_t ret_length;            //!< Total physical size of the memory pairs
-	uint32_t ret_count;             //!< Number of elements of list filled by sceKernelVARangeToPAVector
-	SceKernelAddrPair *list;        //!< Array of physical addresses and their lengths pairs
-} SceKernelPaddrList;
+typedef SceKernelAddressRange SceKernelPARange;
+
+typedef SceKernelAddressRange SceKernelVARange;
+
+typedef struct SceKernelPAVector {
+	SceSize size;						//!< sizeof(SceKernelPAVector)
+	uint32_t nRanges;					//!< Size in elements of the vector
+	uint32_t nDataInVector;				//!< Total physical size of the address ranges
+	uint32_t nTotalSize;				//!< Number of elements of list filled by sceKernelVARangeToPAVector
+	SceKernelPARange *pVector;			//!< Vector of address ranges
+} SceKernelPAVector;
 
 // specific to 3.60
 typedef struct SceKernelAllocMemBlockKernelOpt {
@@ -57,7 +61,7 @@ typedef struct SceKernelAllocMemBlockKernelOpt {
 	SceUInt32 extraHigh;
 	SceUInt32 mirror_blockid;
 	SceUID pid;
-	SceKernelPaddrList *pVector;
+	SceKernelPAVector *pVector;
 	SceUInt32 field_2C;
 	SceUInt32 field_30;
 	SceUInt32 field_34;
@@ -79,7 +83,7 @@ typedef struct SceKernelAllocMemBlockKernelOpt {
  *
  * @return 0 on success, < 0 on error.
 */
-int sceKernelGetMemBlockType(SceUID uid, unsigned int *type);
+int sceKernelGetMemBlockType(SceUID uid, SceKernelMemBlockType *type);
 
 /**
  * Find the SceUID of a memory block for a PID
@@ -104,7 +108,7 @@ int sceKernelRemapBlock(SceUID uid, SceKernelMemBlockType type);
 
 int sceKernelMapMemBlock(SceUID uid);
 
-int sceKernelUserMapWithFlags(const char *name, int permission, int type,
+int sceKernelUserMapWithFlags(const char *name, int permission, int flags,
 	const void *user_buf, SceSize size, void **kernel_page,
 	SceSize *kernel_size, unsigned int *kernel_offset);
 
@@ -129,12 +133,12 @@ int sceKernelVAtoPA(const void *addr, uintptr_t *paddr);
 /**
  * Get the physical address list of a given virtual address range
  *
- * @param[in] input - The virtual address range
- * @param[out] list - The list of physical addresses
+ * @param[in] pRange - The virtual address range
+ * @param[out] pVector - The list of physical addresses
  *
  * @return 0 on success, < 0 on error.
  */
-int sceKernelVARangeToPAVector(const SceKernelAddrPair *input, SceKernelPaddrList *list);
+int sceKernelVARangeToPAVector(const SceKernelVARange *pRange, SceKernelPAVector *pVector);
 
 /**
  * Releases a memblock referenced by the UID.
