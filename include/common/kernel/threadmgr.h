@@ -9,15 +9,26 @@
 
 SCE_CDECL_BEGIN
 
+#define SCE_KERNEL_THREAD_ATTR_NOTIFY_EXCEPTION							0x04000000U
+
+#define SCE_KERNEL_THREAD_OPT_ATTR_STACK_MEMBLOCK_TYPE_1_MASK			0x00000001U
+#define SCE_KERNEL_THREAD_OPT_ATTR_STACK_MEMBLOCK_TYPE_2_MASK			0x00000002U
+#define SCE_KERNEL_THREAD_OPT_ATTR_TLS_MEMBLOCK_TYPE_MASK				0x00000004U
+#define SCE_KERNEL_THREAD_OPT_ATTR_STACK_MEMBLOCK_UID_MASK				0x00000008U
+#define SCE_KERNEL_THREAD_OPT_ATTR_NOTIFY_EXCP_MASK						0x00070000U
+
+// For SceKernelThreadOptParamInternal.notifyExcpMask
+#define SCE_KERNEL_EXCEPTION_TYPE_DABT_PAGE_FAULT						0x00000001U
+#define SCE_KERNEL_EXCEPTION_TYPE_PABT_PAGE_FAULT						0x00000100U
+
 typedef struct _SceKernelThreadOptParamInternal {
-	/** Size of the ::SceKernelThreadOptParam structure. */
-	SceSize               size;
-	SceUInt32             attr;
-	SceKernelMemBlockType memType1;
-	SceKernelMemBlockType memType2;
-	SceInt32              unk0x10;
-	SceInt32              unk0x14;
-	SceInt32              unk0x1C;
+	SceSize						size;
+    SceUInt32					attr;
+    SceKernelMemBlockType		stackMemType1;
+    SceKernelMemBlockType		stackMemType2;
+    SceKernelMemBlockType		tlsMemblockType;
+    SceUID						stackMemblockUID;
+    SceUInt32					notifyExcpMask;
 } SceKernelThreadOptParamInternal;
 
 typedef enum _SceKernelTLS {

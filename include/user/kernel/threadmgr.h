@@ -60,6 +60,8 @@ int sceKernelSendSignal(SceUID thid);
  * Mono thread support functions
  */
 
+typedef SceKernelThreadOptParamInternal SceKernelThreadOptParamForMono;
+
 typedef struct SceKernelThreadContextForMono1 {
 	SceSize size;
 	char unk[0x54];
