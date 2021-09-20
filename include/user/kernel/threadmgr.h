@@ -62,29 +62,19 @@ int sceKernelSendSignal(SceUID thid);
 
 typedef SceKernelThreadOptParamInternal SceKernelThreadOptParamForMono;
 
-typedef struct SceKernelThreadContextForMono1 {
-	SceSize size;
-	char unk[0x54];
-} SceKernelThreadContextForMono1;
-
-typedef struct SceKernelThreadContextForMono2 {
-	SceSize size;
-	char unk[0x104];
-} SceKernelThreadContextForMono2;
-
 int sceKernelSuspendThreadForMono(SceUID threadId);
 
 int sceKernelResumeThreadForMono(SceUID threadId);
 
 int sceKernelGetThreadContextForMono(
 	SceUID threadId,
-	SceKernelThreadContextForMono1* outContext1,
-	SceKernelThreadContextForMono2* outContext2);
+	SceKernelThreadCpuRegisterInfo* pCpuRegisterInfo,
+	SceKernelThreadVfpRegisterInfo* pVfpRegisterInfo);
 
 int sceKernelSetThreadContextForMono(
 	SceUID threadId,
-	SceKernelThreadContextForMono1* inContext1,
-	SceKernelThreadContextForMono2* inContext2);
+	SceKernelThreadCpuRegisterInfo* pCpuRegisterInfo,
+	SceKernelThreadVfpRegisterInfo* pVfpRegisterInfo);
 
 SCE_CDECL_END
 

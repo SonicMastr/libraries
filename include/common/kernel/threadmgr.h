@@ -31,6 +31,24 @@ typedef struct _SceKernelThreadOptParamInternal {
     SceUInt32					notifyExcpMask;
 } SceKernelThreadOptParamInternal;
 
+typedef struct SceKernelThreadCpuRegisterInfo{
+	SceSize		size;
+	SceUInt32	cpsr;
+	SceUInt32	reg[16];
+	SceUInt32	tpidrurw;
+	SceUInt32	teehbr;
+	SceUInt32	sb;
+	SceUInt32	st;
+} SceKernelThreadCpuRegisterInfo;
+
+typedef struct SceKernelThreadVfpRegisterInfo {
+	SceSize		size;
+	SceUInt32	fpscr;
+	struct {
+		SceUInt32	word[4];
+	} reg[16];
+} SceKernelThreadVfpRegisterInfo;
+
 typedef enum _SceKernelTLS {
 	SCE_THREAD_TLS_UNK_0,
 	SCE_THREAD_TLS_ID,
