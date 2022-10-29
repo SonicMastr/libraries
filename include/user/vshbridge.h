@@ -76,6 +76,20 @@ int vshIdStorageWriteLeaf(SceSize leafnum, const void *buf);
  */
 int vshPowerSetPsButtonPushTime(int time);
 
+
+SceUID _vshKernelSearchModuleByName(const char *name, SceUInt64 *unk);
+
+/**
+ * @param[in] name    - Kernel module name
+ *
+ * @return 0 on success, < 0 on error.
+ */
+inline SceUID vshKernelSearchModuleByName(const char *name)
+{
+    SceUInt64 unk = 0;
+    return _vshKernelSearchModuleByName(name, &unk);
+}
+
 int vshSblAimgrIsCEX(void);
 int vshSblAimgrIsDEX(void);
 int vshSblAimgrIsVITA(void);
